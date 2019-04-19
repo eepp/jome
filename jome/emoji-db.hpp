@@ -108,9 +108,9 @@ class EmojiDb
 public:
     explicit EmojiDb(const std::string& dir);
 
-    const std::string& emojiPngPath() const noexcept
+    const std::string& emojisPngPath() const noexcept
     {
-        return _emojiPngPath;
+        return _emojisPngPath;
     }
 
     const std::vector<std::unique_ptr<const EmojiCat>>& cats() const noexcept
@@ -145,7 +145,7 @@ private:
     void _createEmojiPngLocations(const std::string& dir);
 
 private:
-    const std::string _emojiPngPath;
+    const std::string _emojisPngPath;
     std::vector<std::unique_ptr<const EmojiCat>> _cats;
     std::unordered_map<std::string, std::unique_ptr<const Emoji>> _emojis;
     std::unordered_map<std::string, std::unordered_set<const Emoji *>> _keywordEmojis;

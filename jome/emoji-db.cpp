@@ -103,7 +103,7 @@ EmojiCat::EmojiCat(const std::string& id, const std::string& name,
 }
 
 EmojiDb::EmojiDb(const std::string& dir) :
-    _emojiPngPath {dir + '/' + "emojis.png"}
+    _emojisPngPath {dir + '/' + "emojis.png"}
 {
     this->_createEmojis(dir);
     this->_createCats(dir);
