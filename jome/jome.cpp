@@ -6,15 +6,23 @@
  */
 
 #include <QApplication>
+#include <QLabel>
 #include <cstdio>
 
 #include "emoji-db.hpp"
+#include "emoji-images.hpp"
 
 int main(int argc, char **argv)
 {
-    jome::EmojiDb db {JOME_DATA_DIR};
+    QApplication app {argc, argv};
 
-    for (const auto& emoji : db.emojisForKeyword("water")) {
-        printf("%s %s\n", emoji->str().c_str(), emoji->name().c_str());
-    }
+    jome::EmojiDb db {JOME_DATA_DIR};
+    jome::EmojiImages images {db};
+    auto& emoji = db.emojiForStr("🦊");
+
+    QLabel lbl {""};
+    lbl.resize(32, 32);
+    lbl.setPixmap(images.pixmapForEmoji(emoji));
+    lbl.show();
+    return app.exec();
 }
