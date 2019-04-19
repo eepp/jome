@@ -1,0 +1,66 @@
+🎢 Roller Coaster
+🚂 Locomotive
+🚃 Railway Car
+🚄 High-Speed Train
+🚅 Bullet Train
+🚆 Train
+🚇 Metro
+🚈 Light Rail
+🚉 Station
+🚊 Tram
+🚝 Monorail
+🚞 Mountain Railway
+🚋 Tram Car
+🚌 Bus
+🚍 Oncoming Bus
+🚎 Trolleybus
+🚐 Minibus
+🚑 Ambulance
+🚒 Fire Engine
+🚓 Police Car
+🚔 Oncoming Police Car
+🚕 Taxi
+🚖 Oncoming Taxi
+🚗 Automobile
+🚘 Oncoming Automobile
+🚚 Delivery Truck
+🚛 Articulated Lorry
+🚜 Tractor
+🏎 Racing Car
+🏍 Motorcycle
+🛵 Motor Scooter
+🚲 Bicycle
+🛴 Kick Scooter
+🛹 Skateboard
+⛵ Sailboat
+🚤 Speedboat
+🛳 Passenger Ship
+⛴ Ferry
+🛥 Motor Boat
+🚢 Ship
+✈ Airplane
+🛩 Small Airplane
+🛫 Airplane Departure
+🛬 Airplane Arrival
+🚁 Helicopter
+🚟 Suspension Railway
+🚠 Mountain Cableway
+🚡 Aerial Tramway
+🚀 Rocket
+🛸 Flying Saucer
+🚏 Bus Stop
+🛤 Railway Track
+⛽ Fuel Pump
+🚨 Police Car Light
+🚥 Horizontal Traffic Light
+🚦 Vertical Traffic Light
+🛑 Stop Sign
+🚧 Construction
+⚓ Anchor
+💺 Seat
+Ⓜ Circled M
+🅿 P Button
+👨‍✈️ Man Pilot
+👩‍✈️ Woman Pilot
+👨‍🔧 Man Mechanic
+👩‍🔧 Woman Mechanic

@@ -1,0 +1,41 @@
+📱 Mobile Phone
+📲 Mobile Phone With Arrow
+📳 Vibration Mode
+📶 Antenna Bars
+🤳 Selfie
+☎ Telephone
+📞 Telephone Receiver
+📟 Pager
+📠 Fax Machine
+🔋 Battery
+🔌 Electric Plug
+💻 Laptop Computer
+🖥 Desktop Computer
+🖨 Printer
+⌨ Keyboard
+🖱 Computer Mouse
+🖲 Trackball
+🕹 Joystick
+💽 Computer Disk
+💾 Floppy Disk
+💿 Optical Disk
+📀 DVD
+📺 Television
+📷 Camera
+📸 Camera With Flash
+📹 Video Camera
+🎮 Video Game
+🎛 Control Knobs
+🎚 Level Slider
+⚡ High Voltage
+⚛ Atom Symbol
+🔬 Microscope
+🔭 Telescope
+📡 Satellite Antenna
+🚀 Rocket
+🛰 Satellite
+🚄 High-Speed Train
+🏎 Racing Car
+✈ Airplane
+🛩 Small Airplane
+🚁 Helicopter

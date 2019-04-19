@@ -1,0 +1,27 @@
+🙍 Person Frowning
+🙍‍♂️ Man Frowning
+🙍‍♀️ Woman Frowning
+🙎 Person Pouting
+🙎‍♂️ Man Pouting
+🙎‍♀️ Woman Pouting
+🙅 Person Gesturing No
+🙅‍♂️ Man Gesturing No
+🙅‍♀️ Woman Gesturing No
+🙆 Person Gesturing OK
+🙆‍♂️ Man Gesturing OK
+🙆‍♀️ Woman Gesturing OK
+💁 Person Tipping Hand
+💁‍♂️ Man Tipping Hand
+💁‍♀️ Woman Tipping Hand
+🙋 Person Raising Hand
+🙋‍♂️ Man Raising Hand
+🙋‍♀️ Woman Raising Hand
+🙇 Person Bowing
+🙇‍♂️ Man Bowing
+🙇‍♀️ Woman Bowing
+🤦 Person Facepalming
+🤦‍♂️ Man Facepalming
+🤦‍♀️ Woman Facepalming
+🤷 Person Shrugging
+🤷‍♂️ Man Shrugging
+🤷‍♀️ Woman Shrugging

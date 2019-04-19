@@ -1,0 +1,30 @@
+🏥 Hospital
+🥼 Lab Coat
+🧴 Lotion Bottle
+💉 Syringe
+💊 Pill
+🧪 Test Tube
+🧫 Petri Dish
+🧬 DNA
+🔬 Microscope
+⚗ Alembic
+🌡 Thermometer
+💫 Dizzy
+☢ Radioactive
+☣ Biohazard
+😷 Face With Medical Mask
+🤒 Face With Thermometer
+🤕 Face With Head-Bandage
+🤢 Nauseated Face
+🤮 Face Vomiting
+🤧 Sneezing Face
+🥵 Hot Face
+🥶 Cold Face
+🅰 A Button (Blood Type)
+🅱 B Button (Blood Type)
+🆎 AB Button (Blood Type)
+🅾 O Button (Blood Type)
+👨‍⚕️ Man Health Worker
+👩‍⚕️ Woman Health Worker
+👨‍🔬 Man Scientist
+👩‍🔬 Woman Scientist

@@ -1,0 +1,84 @@
+👨‍⚕️ Man Health Worker
+👩‍⚕️ Woman Health Worker
+👨‍🎓 Man Student
+👩‍🎓 Woman Student
+👨‍🏫 Man Teacher
+👩‍🏫 Woman Teacher
+👨‍⚖️ Man Judge
+👩‍⚖️ Woman Judge
+👨‍🌾 Man Farmer
+👩‍🌾 Woman Farmer
+👨‍🍳 Man Cook
+👩‍🍳 Woman Cook
+👨‍🔧 Man Mechanic
+👩‍🔧 Woman Mechanic
+👨‍🏭 Man Factory Worker
+👩‍🏭 Woman Factory Worker
+👨‍💼 Man Office Worker
+👩‍💼 Woman Office Worker
+👨‍🔬 Man Scientist
+👩‍🔬 Woman Scientist
+👨‍💻 Man Technologist
+👩‍💻 Woman Technologist
+👨‍🎤 Man Singer
+👩‍🎤 Woman Singer
+👨‍🎨 Man Artist
+👩‍🎨 Woman Artist
+👨‍✈️ Man Pilot
+👩‍✈️ Woman Pilot
+👨‍🚀 Man Astronaut
+👩‍🚀 Woman Astronaut
+👨‍🚒 Man Firefighter
+👩‍🚒 Woman Firefighter
+👮 Police Officer
+👮‍♂️ Man Police Officer
+👮‍♀️ Woman Police Officer
+🕵 Detective
+🕵️‍♂️ Man Detective
+🕵️‍♀️ Woman Detective
+💂 Guard
+💂‍♂️ Man Guard
+💂‍♀️ Woman Guard
+👷 Construction Worker
+👷‍♂️ Man Construction Worker
+👷‍♀️ Woman Construction Worker
+🤴 Prince
+👸 Princess
+👳 Person Wearing Turban
+👳‍♂️ Man Wearing Turban
+👳‍♀️ Woman Wearing Turban
+👲 Man With Chinese Cap
+🧕 Woman With Headscarf
+🤵 Man in Tuxedo
+👰 Bride With Veil
+🤰 Pregnant Woman
+🤱 Breast-Feeding
+🎅 Santa Claus
+🤶 Mrs. Claus
+🦸 Superhero
+🦸‍♂️ Man Superhero
+🦸‍♀️ Woman Superhero
+🦹 Supervillain
+🦹‍♂️ Man Supervillain
+🦹‍♀️ Woman Supervillain
+🧙 Mage
+🧙‍♂️ Man Mage
+🧙‍♀️ Woman Mage
+🧚 Fairy
+🧚‍♂️ Man Fairy
+🧚‍♀️ Woman Fairy
+🧛 Vampire
+🧛‍♂️ Man Vampire
+🧛‍♀️ Woman Vampire
+🧜 Merperson
+🧜‍♂️ Merman
+🧜‍♀️ Mermaid
+🧝 Elf
+🧝‍♂️ Man Elf
+🧝‍♀️ Woman Elf
+🧞 Genie
+🧞‍♂️ Man Genie
+🧞‍♀️ Woman Genie
+🧟 Zombie
+🧟‍♂️ Man Zombie
+🧟‍♀️ Woman Zombie

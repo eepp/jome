@@ -1,0 +1,31 @@
+⌛ Hourglass Done
+⏳ Hourglass Not Done
+⌚ Watch
+⏰ Alarm Clock
+⏱ Stopwatch
+⏲ Timer Clock
+🕰 Mantelpiece Clock
+🕛 Twelve O’Clock
+🕧 Twelve-Thirty
+🕐 One O’Clock
+🕜 One-Thirty
+🕑 Two O’Clock
+🕝 Two-Thirty
+🕒 Three O’Clock
+🕞 Three-Thirty
+🕓 Four O’Clock
+🕟 Four-Thirty
+🕔 Five O’Clock
+🕠 Five-Thirty
+🕕 Six O’Clock
+🕡 Six-Thirty
+🕖 Seven O’Clock
+🕢 Seven-Thirty
+🕗 Eight O’Clock
+🕣 Eight-Thirty
+🕘 Nine O’Clock
+🕤 Nine-Thirty
+🕙 Ten O’Clock
+🕥 Ten-Thirty
+🕚 Eleven O’Clock
+🕦 Eleven-Thirty

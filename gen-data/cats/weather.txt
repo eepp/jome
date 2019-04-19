@@ -1,0 +1,34 @@
+☀ Sun
+🌞 Sun With Face
+🕶 Sunglasses
+☁ Cloud
+⛅ Sun Behind Cloud
+⛈ Cloud With Lightning and Rain
+🌤 Sun Behind Small Cloud
+🌥 Sun Behind Large Cloud
+🌦 Sun Behind Rain Cloud
+🌧 Cloud With Rain
+🌨 Cloud With Snow
+🌩 Cloud With Lightning
+⚡ High Voltage
+💧 Droplet
+🌊 Water Wave
+💦 Sweat Droplets
+⛱ Umbrella on Ground
+☂ Umbrella
+☔ Umbrella With Rain Drops
+🌂 Closed Umbrella
+🌈 Rainbow
+🌪 Tornado
+🌬 Wind Face
+💨 Dashing Away
+🌀 Cyclone
+🌫 Fog
+❄ Snowflake
+☃ Snowman
+⛄ Snowman Without Snow
+🆒 Cool Button
+🔥 Fire
+🌄 Sunrise Over Mountains
+🌅 Sunrise
+🌇 Sunset

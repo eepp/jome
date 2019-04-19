@@ -1,0 +1,14 @@
+🎼 Musical Score
+🎵 Musical Note
+🎶 Musical Notes
+🎹 Musical Keyboard
+🎸 Guitar
+🎤 Microphone
+🎙 Studio Microphone
+🎷 Saxophone
+🎺 Trumpet
+📯 Postal Horn
+🎻 Violin
+🥁 Drum
+👨‍🎤 Man Singer
+👩‍🎤 Woman Singer

@@ -1,0 +1,35 @@
+👭 Women Holding Hands
+👫 Woman and Man Holding Hands
+👬 Men Holding Hands
+💏 Kiss
+👨‍❤️‍💋‍👨 Kiss: Man, Man
+👩‍❤️‍💋‍👩 Kiss: Woman, Woman
+💑 Couple With Heart
+👨‍❤️‍👨 Couple With Heart: Man, Man
+👩‍❤️‍👩 Couple With Heart: Woman, Woman
+👪 Family
+👨‍👩‍👦 Family: Man, Woman, Boy
+👨‍👩‍👧 Family: Man, Woman, Girl
+👨‍👩‍👧‍👦 Family: Man, Woman, Girl, Boy
+👨‍👩‍👦‍👦 Family: Man, Woman, Boy, Boy
+👨‍👩‍👧‍👧 Family: Man, Woman, Girl, Girl
+👨‍👨‍👦 Family: Man, Man, Boy
+👨‍👨‍👧 Family: Man, Man, Girl
+👨‍👨‍👧‍👦 Family: Man, Man, Girl, Boy
+👨‍👨‍👦‍👦 Family: Man, Man, Boy, Boy
+👨‍👨‍👧‍👧 Family: Man, Man, Girl, Girl
+👩‍👩‍👦 Family: Woman, Woman, Boy
+👩‍👩‍👧 Family: Woman, Woman, Girl
+👩‍👩‍👧‍👦 Family: Woman, Woman, Girl, Boy
+👩‍👩‍👦‍👦 Family: Woman, Woman, Boy, Boy
+👩‍👩‍👧‍👧 Family: Woman, Woman, Girl, Girl
+👨‍👦 Family: Man, Boy
+👨‍👦‍👦 Family: Man, Boy, Boy
+👨‍👧 Family: Man, Girl
+👨‍👧‍👦 Family: Man, Girl, Boy
+👨‍👧‍👧 Family: Man, Girl, Girl
+👩‍👦 Family: Woman, Boy
+👩‍👦‍👦 Family: Woman, Boy, Boy
+👩‍👧 Family: Woman, Girl
+👩‍👧‍👦 Family: Woman, Girl, Boy
+👩‍👧‍👧 Family: Woman, Girl, Girl

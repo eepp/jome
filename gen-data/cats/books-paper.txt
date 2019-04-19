@@ -1,0 +1,27 @@
+📕 Closed Book
+📖 Open Book
+📗 Green Book
+📘 Blue Book
+📙 Orange Book
+📚 Books
+📔 Notebook With Decorative Cover
+📓 Notebook
+📃 Page With Curl
+📜 Scroll
+📄 Page Facing Up
+📰 Newspaper
+🗞 Rolled-Up Newspaper
+📑 Bookmark Tabs
+🔖 Bookmark
+🏷 Label
+🧾 Receipt
+✉ Envelope
+📨 Incoming Envelope
+📩 Envelope With Arrow
+📝 Memo
+📁 File Folder
+📂 Open File Folder
+🗂 Card Index Dividers
+🗒 Spiral Notepad
+📋 Clipboard
+🏮 Red Paper Lantern

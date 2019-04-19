@@ -1,0 +1,41 @@
+👕 T-Shirt
+👖 Jeans
+🧣 Scarf
+👔 Necktie
+🧥 Coat
+🥼 Lab Coat
+👗 Dress
+👘 Kimono
+👙 Bikini
+👚 Woman’s Clothes
+🧤 Gloves
+🧦 Socks
+👛 Purse
+👜 Handbag
+👝 Clutch Bag
+🎒 Backpack
+🧳 Luggage
+💼 Briefcase
+🛍 Shopping Bags
+🌂 Closed Umbrella
+⛱ Umbrella on Ground
+☂ Umbrella
+👓 Glasses
+🕶 Sunglasses
+🥽 Goggles
+👞 Man’s Shoe
+👟 Running Shoe
+🥾 Hiking Boot
+🥿 Flat Shoe
+👠 High-Heeled Shoe
+👡 Woman’s Sandal
+👢 Woman’s Boot
+👑 Crown
+👒 Woman’s Hat
+🎩 Top Hat
+🎓 Graduation Cap
+🧢 Billed Cap
+⛑ Rescue Worker’s Helmet
+💄 Lipstick
+💍 Ring
+🧸 Teddy Bear

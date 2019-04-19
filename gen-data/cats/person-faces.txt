@@ -1,0 +1,23 @@
+👶 Baby
+👼 Baby Angel
+🧒 Child
+👦 Boy
+👧 Girl
+🧑 Person
+👱 Person: Blond Hair
+👨 Man
+🧔 Man: Beard
+👱‍♂️ Man: Blond Hair
+👨‍🦰 Man: Red Hair
+👨‍🦱 Man: Curly Hair
+👨‍🦳 Man: White Hair
+👨‍🦲 Man: Bald
+👩 Woman
+👱‍♀️ Woman: Blond Hair
+👩‍🦰 Woman: Red Hair
+👩‍🦱 Woman: Curly Hair
+👩‍🦳 Woman: White Hair
+👩‍🦲 Woman: Bald
+🧓 Older Person
+👴 Old Man
+👵 Old Woman

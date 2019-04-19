@@ -1,0 +1,97 @@
+# Copyright (C) 2019 Philippe Proulx <eepp.ca>
+#
+# This software may be modified and distributed under the terms
+# of the MIT license. See the LICENSE file for details.
+
+- id: yellow-faces
+  name: Yellow faces
+- id: cat-faces
+  name: Cat faces
+- id: love
+  name: Love
+- id: hands
+  name: Hands
+- id: body-parts-no-hands
+  name: Body parts (no hands)
+- id: person-faces
+  name: Person faces
+- id: person-gestures
+  name: Person gestures
+- id: person-roles
+  name: Person roles
+- id: person-activities
+  name: Person activities
+- id: person-together
+  name: Persons together
+- id: animal-faces
+  name: Animal faces
+- id: animals-no-faces
+  name: Animals (no faces)
+- id: plants
+  name: Plants
+- id: weather
+  name: Meteo
+- id: water
+  name: Water
+- id: fruits
+  name: Fruits
+- id: veggies-nuts
+  name: Veggies & nuts
+- id: prepared-food
+  name: Prepared food
+- id: asian-food
+  name: Asian food
+- id: sweets
+  name: Sweets
+- id: drinking
+  name: Drinking
+- id: city-places
+  name: City places
+- id: nature-places
+  name: Nature places
+- id: space
+  name: Space
+- id: transportation
+  name: Transporation
+- id: time
+  name: Time
+- id: activities-no-sports
+  name: Activities (no sports)
+- id: sports
+  name: Sports
+- id: awards
+  name: Awards
+- id: celebration
+  name: Celebration
+- id: clothing-accessories
+  name: Clothing & accessories
+- id: music
+  name: Music
+- id: audio
+  name: Audio
+- id: video
+  name: Video
+- id: books-paper
+  name: Books & paper
+- id: technology
+  name: Technology
+- id: health
+  name: Health
+- id: danger
+  name: Danger
+- id: money
+  name: Money
+- id: astrology
+  name: Astrology
+- id: religion
+  name: Religion
+- id: arrows
+  name: Arrows
+- id: geometric-symbols
+  name: Geometric symbols
+- id: misc-objects
+  name: Miscellaneous objects
+- id: misc-symbols
+  name: Miscellaneous symbols
+- id: flags
+  name: Flags

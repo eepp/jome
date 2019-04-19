@@ -1,0 +1,32 @@
+⚽ Soccer Ball
+⚾ Baseball
+🥎 Softball
+🏀 Basketball
+🏐 Volleyball
+🏈 American Football
+🏉 Rugby Football
+🎾 Tennis
+🥏 Flying Disc
+🎳 Bowling
+🏏 Cricket Game
+🏑 Field Hockey
+🏒 Ice Hockey
+🥍 Lacrosse
+🏓 Ping Pong
+🏸 Badminton
+🥊 Boxing Glove
+🥋 Martial Arts Uniform
+⛳ Flag in Hole
+⛸ Ice Skate
+🛹 Skateboard
+🎣 Fishing Pole
+🎽 Running Shirt
+🎿 Skis
+🛷 Sled
+🥌 Curling Stone
+🏹 Bow and Arrow
+🎯 Direct Hit
+🏅 Sports Medal
+🥇 1st Place Medal
+🥈 2nd Place Medal
+🥉 3rd Place Medal

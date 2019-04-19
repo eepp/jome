@@ -1,0 +1,35 @@
+🏟 Stadium
+🏛 Classical Building
+🏗 Building Construction
+🏘 Houses
+🏚 Derelict House
+🏠 House
+🏡 House With Garden
+🏢 Office Building
+🏣 Japanese Post Office
+🏤 Post Office
+🏥 Hospital
+🏦 Bank
+🏨 Hotel
+🏩 Love Hotel
+🏪 Convenience Store
+🏫 School
+🏬 Department Store
+🏭 Factory
+🏯 Japanese Castle
+🏰 Castle
+💒 Wedding
+🗼 Tokyo Tower
+🗽 Statue of Liberty
+⛪ Church
+🕌 Mosque
+🕍 Synagogue
+⛩ Shinto Shrine
+🕋 Kaaba
+🏙 Cityscape
+⛲ Fountain
+🌁 Foggy
+🌃 Night With Stars
+🌆 Cityscape at Dusk
+🌉 Bridge at Night
+💈 Barber Pole
