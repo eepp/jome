@@ -123,6 +123,11 @@ public:
         return _emojis;
     }
 
+    const Emoji& emojiForStr(const std::string& str) const
+    {
+        return *_emojis.at(str);
+    }
+
     const std::unordered_set<std::string>& keywords() const noexcept
     {
         return _keywords;
