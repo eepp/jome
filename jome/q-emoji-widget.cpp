@@ -17,6 +17,13 @@ QEmojiWidget::QEmojiWidget(const Emoji& emoji, const QPixmap& pixmap,
     this->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     this->resize(32, 32);
     this->setPixmap(pixmap);
+
+    static const char * const styleSheet =
+        "QLabel:hover {"
+        "  background-color: rgba(0, 0, 0, 0.2);"
+        "}";
+
+    this->setStyleSheet(styleSheet);
 }
 
 } // namespace jome
