@@ -217,7 +217,7 @@ void EmojiDb::_createEmojiPngLocations(const std::string& dir)
 }
 
 void EmojiDb::findEmojis(const std::string& cat, const std::string& needlesStr,
-                         std::vector<const Emoji *>& results)
+                         std::vector<const Emoji *>& results) const
 {
     std::string catTrimmed {cat};
 

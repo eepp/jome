@@ -112,7 +112,7 @@ class EmojiDb
 public:
     explicit EmojiDb(const std::string& dir);
     void findEmojis(const std::string& cat, const std::string& needles,
-                    std::vector<const Emoji *>& results);
+                    std::vector<const Emoji *>& results) const;
 
     const std::string& emojisPngPath() const noexcept
     {
@@ -162,8 +162,8 @@ private:
     std::unordered_map<std::string, std::unordered_set<const Emoji *>> _keywordEmojis;
     std::unordered_set<std::string> _keywords;
     std::unordered_map<const Emoji *, EmojisPngLocation> _emojiPngLocations;
-    std::vector<std::string> _tmpNeedles;
-    std::unordered_set<const Emoji *> _tmpFoundEmojis;
+    mutable std::vector<std::string> _tmpNeedles;
+    mutable std::unordered_set<const Emoji *> _tmpFoundEmojis;
 };
 
 } // namespace jome
