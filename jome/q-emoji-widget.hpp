@@ -23,11 +23,12 @@ class QEmojiWidget :
 
 public:
     explicit QEmojiWidget(const Emoji& emoji, const QPixmap& pixmap,
-                          QWidget *parent = nullptr);
+                          const QPixmap& selPixmap, QWidget *parent = nullptr);
+    void select(bool select);
 
 private:
     const Emoji * const _emoji;
-
+    QLabel *_wSelLabel = nullptr;
 };
 
 } // namespace jome

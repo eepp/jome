@@ -10,7 +10,7 @@
 namespace jome {
 
 QEmojiWidget::QEmojiWidget(const Emoji& emoji, const QPixmap& pixmap,
-                           QWidget * const parent) :
+                           const QPixmap& selPixmap, QWidget * const parent) :
     QLabel {"", parent},
     _emoji {&emoji}
 {
@@ -24,6 +24,19 @@ QEmojiWidget::QEmojiWidget(const Emoji& emoji, const QPixmap& pixmap,
         "}";
 
     this->setStyleSheet(styleSheet);
+    _wSelLabel = new QLabel {"", this};
+    _wSelLabel->resize(32, 32);
+    _wSelLabel->setPixmap(selPixmap);
+    _wSelLabel->hide();
+}
+
+void QEmojiWidget::select(const bool select)
+{
+    if (select) {
+        _wSelLabel->show();
+    } else {
+        _wSelLabel->hide();
+    }
 }
 
 } // namespace jome

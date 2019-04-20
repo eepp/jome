@@ -42,12 +42,3 @@ install (
     TARGETS jome
     RUNTIME DESTINATION bin
 )
-install (
-    FILES
-        "${JOME-DATA-DIR}/emojis.json"
-        "${JOME-DATA-DIR}/emojis-png-locations.json"
-        "${JOME-DATA-DIR}/cats.json"
-        "${JOME-DATA-DIR}/emojis.png"
-    DESTINATION
-        share/jome/data
-)

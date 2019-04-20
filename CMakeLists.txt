@@ -17,5 +17,6 @@ set (CMAKE_CXX_STANDARD_REQUIRED ON)
 set (JOME-DATA-DIR "${CMAKE_CURRENT_BINARY_DIR}/data")
 
 # jome
+add_subdirectory (assets)
 add_subdirectory (gen-data)
 add_subdirectory (jome)

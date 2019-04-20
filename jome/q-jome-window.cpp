@@ -30,6 +30,7 @@ QJomeWindow::QJomeWindow(const EmojiDb& emojiDb) :
     this->setFixedSize(800, 600);
     this->setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
     this->_setMainStyleSheet();
+    this->_createSelPixmal();
     this->_buildUi();
 }
 
@@ -76,6 +77,15 @@ void QJomeWindow::_setMainStyleSheet()
         "}";
 
     this->setStyleSheet(styleSheet);
+}
+
+void QJomeWindow::_createSelPixmal()
+{
+    const auto path = std::string {JOME_DATA_DIR} + "/sel.png";
+
+    QImage image {QString::fromStdString(path)};
+
+    _selPixmap = std::make_unique<QPixmap>(QPixmap::fromImage(std::move(image)));
 }
 
 QListWidget *QJomeWindow::_createCatListWidget()

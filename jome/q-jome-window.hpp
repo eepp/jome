@@ -12,6 +12,7 @@
 #include <QListWidget>
 #include <QScrollArea>
 #include <QGridLayout>
+#include <QPixmap>
 
 #include "emoji-db.hpp"
 #include "emoji-images.hpp"
@@ -32,6 +33,7 @@ private:
     void _setMainStyleSheet();
     void _buildUi();
     QListWidget *_createCatListWidget();
+    void _createSelPixmal();
     void _showAllEmojis();
     void _findEmojis(const std::string& cat, const std::string& needles);
 
@@ -50,7 +52,8 @@ private:
 
         for (const auto& emoji : emojis) {
             auto wEmoji = new QEmojiWidget {*emoji,
-                                            _emojiImages.pixmapForEmoji(*emoji)};
+                                            _emojiImages.pixmapForEmoji(*emoji),
+                                            *_selPixmap};
 
             grid->addWidget(wEmoji, row, col);
             col += 1;
@@ -76,6 +79,7 @@ private:
     QScrollArea *_wEmojisArea = nullptr;
     QWidget *_wAllEmojisAreaWidget = nullptr;
     std::unordered_map<const EmojiCat *, int> _catVertPositions;
+    std::unique_ptr<QPixmap> _selPixmap;
 };
 
 } // namespace jome
