@@ -15,8 +15,8 @@
 #include <QLabel>
 #include <boost/algorithm/string.hpp>
 
-#include "jome-window.hpp"
-#include "cat-list-widget-item.hpp"
+#include "q-jome-window.hpp"
+#include "q-cat-list-widget-item.hpp"
 
 namespace jome {
 

@@ -11,7 +11,7 @@
 
 #include "emoji-db.hpp"
 #include "emoji-images.hpp"
-#include "jome-window.hpp"
+#include "q-jome-window.hpp"
 
 int main(int argc, char **argv)
 {

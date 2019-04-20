@@ -5,8 +5,8 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-#ifndef _JOME_CAT_LIST_WIDGET_ITEM_HPP
-#define _JOME_CAT_LIST_WIDGET_ITEM_HPP
+#ifndef _JOME_Q_CAT_LIST_WIDGET_ITEM_HPP
+#define _JOME_Q_CAT_LIST_WIDGET_ITEM_HPP
 
 #include <QListWidget>
 
@@ -31,4 +31,4 @@ private:
 
 } // namespace jome
 
-#endif // _JOME_CAT_LIST_WIDGET_ITEM_HPP
+#endif // _JOME_Q_CAT_LIST_WIDGET_ITEM_HPP

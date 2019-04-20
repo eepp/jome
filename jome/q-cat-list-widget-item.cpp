@@ -5,7 +5,7 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-#include "cat-list-widget-item.hpp"
+#include "q-cat-list-widget-item.hpp"
 
 namespace jome {
 

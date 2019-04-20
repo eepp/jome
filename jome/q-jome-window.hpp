@@ -5,8 +5,8 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-#ifndef _JOME_JOME_WINDOW_HPP
-#define _JOME_JOME_WINDOW_HPP
+#ifndef _JOME_Q_JOME_WINDOW_HPP
+#define _JOME_Q_JOME_WINDOW_HPP
 
 #include <QDialog>
 #include <QListWidget>
@@ -49,4 +49,4 @@ private:
 
 } // namespace jome
 
-#endif // _JOME_JOME_WINDOW_HPP
+#endif // _JOME_Q_JOME_WINDOW_HPP

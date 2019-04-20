@@ -16,8 +16,8 @@ find_package (Boost 1.58 REQUIRED)
 add_executable (
     jome
     jome.cpp
-    jome-window.cpp
-    cat-list-widget-item.cpp
+    q-jome-window.cpp
+    q-cat-list-widget-item.cpp
     emoji-images.cpp
     emoji-db.cpp
     tinyutf8.cpp
