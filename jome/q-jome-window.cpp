@@ -17,6 +17,7 @@
 
 #include "q-jome-window.hpp"
 #include "q-cat-list-widget-item.hpp"
+#include "q-emoji-widget.hpp"
 
 namespace jome {
 
@@ -145,8 +146,6 @@ void QJomeWindow::_showAllEmojis()
     vbox->setMargin(8);
     vbox->setSpacing(8);
 
-    const auto availWidth = static_cast<unsigned int>(_wEmojisArea->viewport()->width() - 16);
-
     for (const auto& cat : _emojiDb->cats()) {
         auto lbl = new QLabel {QString::fromStdString(cat->name())};
 
@@ -157,31 +156,7 @@ void QJomeWindow::_showAllEmojis()
         auto hbox = new QHBoxLayout;
 
         hbox->setMargin(0);
-
-        auto grid = new QGridLayout;
-
-        grid->setSpacing(8);
-        grid->setMargin(0);
-
-        auto col = 0U;
-        auto row = 0U;
-
-        for (const auto& emoji : cat->emojis()) {
-            auto lbl = new QLabel {""};
-
-            lbl->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-            lbl->resize(32, 32);
-            lbl->setPixmap(_emojiImages.pixmapForEmoji(*emoji));
-            grid->addWidget(lbl, row, col);
-            col += 1;
-
-            if ((col + 1) * (32 + 8) >= availWidth) {
-                col = 0;
-                row += 1;
-            }
-        }
-
-        hbox->addLayout(grid);
+        hbox->addLayout(this->_createEmojiGridLayout(cat->emojis()));
         hbox->addStretch();
         vbox->addLayout(hbox);
         vbox->addSpacing(16);
@@ -221,36 +196,10 @@ void QJomeWindow::_findEmojis(const std::string& cat,
     vbox->setMargin(8);
     vbox->setSpacing(8);
 
-    const auto availWidth = static_cast<unsigned int>(_wEmojisArea->viewport()->width() - 16);
-
     auto hbox = new QHBoxLayout;
 
     hbox->setMargin(0);
-
-    auto grid = new QGridLayout;
-
-    grid->setSpacing(8);
-    grid->setMargin(0);
-
-    auto col = 0U;
-    auto row = 0U;
-
-    for (const auto& emoji : results) {
-        auto lbl = new QLabel {""};
-
-        lbl->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        lbl->resize(32, 32);
-        lbl->setPixmap(_emojiImages.pixmapForEmoji(*emoji));
-        grid->addWidget(lbl, row, col);
-        col += 1;
-
-        if ((col + 1) * (32 + 8) >= availWidth) {
-            col = 0;
-            row += 1;
-        }
-    }
-
-    hbox->addLayout(grid);
+    hbox->addLayout(this->_createEmojiGridLayout(results));
     hbox->addStretch();
     vbox->addLayout(hbox);
     _wEmojisArea->setWidget(areaWidget);

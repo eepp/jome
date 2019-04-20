@@ -18,6 +18,7 @@ add_executable (
     jome.cpp
     q-jome-window.cpp
     q-cat-list-widget-item.cpp
+    q-emoji-widget.cpp
     emoji-images.cpp
     emoji-db.cpp
     tinyutf8.cpp

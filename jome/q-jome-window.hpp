@@ -11,9 +11,11 @@
 #include <QDialog>
 #include <QListWidget>
 #include <QScrollArea>
+#include <QGridLayout>
 
 #include "emoji-db.hpp"
 #include "emoji-images.hpp"
+#include "q-emoji-widget.hpp"
 
 namespace jome {
 
@@ -32,6 +34,35 @@ private:
     QListWidget *_createCatListWidget();
     void _showAllEmojis();
     void _findEmojis(const std::string& cat, const std::string& needles);
+
+private:
+    template <typename ContainerT>
+    QGridLayout *_createEmojiGridLayout(const ContainerT& emojis)
+    {
+        auto grid = new QGridLayout;
+
+        grid->setSpacing(8);
+        grid->setMargin(0);
+
+        auto col = 0U;
+        auto row = 0U;
+        const auto availWidth = static_cast<unsigned int>(_wEmojisArea->viewport()->width() - 16);
+
+        for (const auto& emoji : emojis) {
+            auto wEmoji = new QEmojiWidget {*emoji,
+                                            _emojiImages.pixmapForEmoji(*emoji)};
+
+            grid->addWidget(wEmoji, row, col);
+            col += 1;
+
+            if ((col + 1) * (32 + 8) >= availWidth) {
+                col = 0;
+                row += 1;
+            }
+        }
+
+        return grid;
+    }
 
 private slots:
     void _searchTextChanged(const QString& text);
