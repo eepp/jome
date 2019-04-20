@@ -30,7 +30,7 @@
 - id: plants
   name: Plants
 - id: weather
-  name: Meteo
+  name: Weather
 - id: water
   name: Water
 - id: fruits
