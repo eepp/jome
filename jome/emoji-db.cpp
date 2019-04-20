@@ -8,6 +8,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <cassert>
+#include <boost/algorithm/string.hpp>
 
 #include "emoji-db.hpp"
 #include "simple-json.hpp"
@@ -23,6 +24,16 @@ Emoji::Emoji(const std::string& str, const std::string& name,
     _keywords {std::move(keywords)},
     _hasSkinToneSupport {hasSkinToneSupport}
 {
+}
+
+const std::string& Emoji::lcName() const
+{
+    if (_lcName.empty()) {
+        _lcName = _name;
+        boost::algorithm::to_lower(_lcName);
+    }
+
+    return _lcName;
 }
 
 std::string Emoji::strWithSkinTone(SkinTone skinTone) const
@@ -100,6 +111,16 @@ EmojiCat::EmojiCat(const std::string& id, const std::string& name,
     _name {name},
     _emojis {std::move(emojis)}
 {
+}
+
+const std::string& EmojiCat::lcName() const
+{
+    if (_lcName.empty()) {
+        _lcName = _name;
+        boost::algorithm::to_lower(_lcName);
+    }
+
+    return _lcName;
 }
 
 EmojiDb::EmojiDb(const std::string& dir) :
@@ -192,6 +213,71 @@ void EmojiDb::_createEmojiPngLocations(const std::string& dir)
             static_cast<unsigned int>(valJson.at(0).ToInt()),
             static_cast<unsigned int>(valJson.at(1).ToInt())
         };
+    }
+}
+
+void EmojiDb::findEmojis(const std::string& cat, const std::string& needlesStr,
+                         std::vector<const Emoji *>& results)
+{
+    std::string catTrimmed {cat};
+
+    // split needles string into individual needles
+    _tmpNeedles.clear();
+    boost::split(_tmpNeedles, needlesStr, boost::is_any_of(" "));
+
+    if (_tmpNeedles.empty()) {
+        // nothing to search
+        return;
+    }
+
+    // trim category
+    boost::trim(catTrimmed);
+
+    // this is to avoid duplicate entries in `results`
+    _tmpFoundEmojis.clear();
+
+    for (const auto& cat : _cats) {
+        if (!catTrimmed.empty() && cat->lcName().find(catTrimmed) == std::string::npos) {
+            // we don't want to search this category
+            continue;
+        }
+
+        for (const auto& emoji : cat->emojis()) {
+            bool select = true;
+
+            for (const auto& keyword : emoji->keywords()) {
+                select = true;
+
+                for (const auto& needle : _tmpNeedles) {
+                    if (needle.empty()) {
+                        continue;
+                    }
+
+                    if (keyword.find(needle) == std::string::npos) {
+                        // this keyword does not this needle
+                        select = false;
+                        break;
+                    }
+                }
+
+                if (select) {
+                    break;
+                }
+            }
+
+            if (!select) {
+                // not selected: next emoji
+                continue;
+            }
+
+            if (_tmpFoundEmojis.find(emoji) != std::end(_tmpFoundEmojis)) {
+                // we already have it: next emoji
+                continue;
+            }
+
+            results.push_back(emoji);
+            _tmpFoundEmojis.insert(emoji);
+        }
     }
 }
 

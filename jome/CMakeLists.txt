@@ -9,6 +9,9 @@ set (CMAKE_AUTOMOC ON)
 set (CMAKE_AUTOUIC ON)
 find_package(Qt5Widgets CONFIG REQUIRED)
 
+# Boost
+find_package (Boost 1.58 REQUIRED)
+
 # jome program
 add_executable (
     jome
@@ -22,6 +25,10 @@ target_link_libraries (
     jome
     Qt5::Widgets
     Qt5::Gui
+)
+target_include_directories (
+    jome PRIVATE
+    ${Boost_INCLUDE_DIRS}
 )
 target_compile_definitions (
     jome PRIVATE

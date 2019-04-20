@@ -41,6 +41,7 @@ public:
     Codepoints codepoints() const;
     Codepoints codepointsWithSkinTone(SkinTone skinTone) const;
     std::string strWithSkinTone(SkinTone skinTone) const;
+    const std::string& lcName() const;
 
     const std::string& str() const noexcept
     {
@@ -66,6 +67,7 @@ public:
 private:
     const std::string _str;
     const std::string _name;
+    mutable std::string _lcName;
     const std::unordered_set<std::string> _keywords;
     const bool _hasSkinToneSupport;
 };
@@ -75,6 +77,7 @@ class EmojiCat
 public:
     explicit EmojiCat(const std::string& id, const std::string& name,
                       std::vector<const Emoji *>&& emojis);
+    const std::string& lcName() const;
 
     const std::string& id() const noexcept
     {
@@ -94,6 +97,7 @@ public:
 private:
     const std::string _id;
     const std::string _name;
+    mutable std::string _lcName;
     const std::vector<const Emoji *> _emojis;
 };
 
@@ -107,6 +111,8 @@ class EmojiDb
 {
 public:
     explicit EmojiDb(const std::string& dir);
+    void findEmojis(const std::string& cat, const std::string& needles,
+                    std::vector<const Emoji *>& results);
 
     const std::string& emojisPngPath() const noexcept
     {
@@ -156,6 +162,8 @@ private:
     std::unordered_map<std::string, std::unordered_set<const Emoji *>> _keywordEmojis;
     std::unordered_set<std::string> _keywords;
     std::unordered_map<const Emoji *, EmojisPngLocation> _emojiPngLocations;
+    std::vector<std::string> _tmpNeedles;
+    std::unordered_set<const Emoji *> _tmpFoundEmojis;
 };
 
 } // namespace jome
