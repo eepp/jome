@@ -14,12 +14,51 @@
 #include <QListWidget>
 #include <QLabel>
 #include <QGraphicsTextItem>
+#include <QKeyEvent>
 #include <boost/algorithm/string.hpp>
 
 #include "q-jome-window.hpp"
 #include "q-cat-list-widget-item.hpp"
 
 namespace jome {
+
+QSearchBoxEventFilter::QSearchBoxEventFilter(QObject * const parent) :
+    QObject {parent}
+{
+}
+
+bool QSearchBoxEventFilter::eventFilter(QObject * const obj,
+                                        QEvent * const event)
+{
+    if (event->type() != QEvent::KeyPress) {
+        return QObject::eventFilter(obj, event);
+    }
+
+    auto keyEvent = static_cast<const QKeyEvent *>(event);
+
+    switch (keyEvent->key()) {
+    case Qt::Key_Up:
+        emit this->upKeyPressed();
+        break;
+
+    case Qt::Key_Right:
+        emit this->rightKeyPressed();
+        break;
+
+    case Qt::Key_Down:
+        emit this->downKeyPressed();
+        break;
+
+    case Qt::Key_Left:
+        emit this->leftKeyPressed();
+        break;
+
+    default:
+        return QObject::eventFilter(obj, event);
+    }
+
+    return true;
+}
 
 QJomeWindow::QJomeWindow(const EmojiDb& emojiDb) :
     QDialog {},
@@ -103,6 +142,18 @@ void QJomeWindow::_buildUi()
 
     QObject::connect(searchBox, SIGNAL(textChanged(const QString&)),
                      this, SLOT(_searchTextChanged(const QString&)));
+
+    auto eventFilter = new QSearchBoxEventFilter {this};
+
+    searchBox->installEventFilter(eventFilter);
+    QObject::connect(eventFilter, SIGNAL(upKeyPressed()),
+                     this, SLOT(_searchBoxUpKeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(rightKeyPressed()),
+                     this, SLOT(_searchBoxRightKeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(downKeyPressed()),
+                     this, SLOT(_searchBoxDownKeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(leftKeyPressed()),
+                     this, SLOT(_searchBoxLeftKeyPressed()));
 
     auto mainVbox = new QVBoxLayout;
 
@@ -198,8 +249,6 @@ void QJomeWindow::_findEmojis(const std::string& cat,
                                         _findEmojisGraphicsScene, y);
     }
 
-    _curEmojiGraphicsItems[0]->pos();
-
     _findEmojisGraphicsScene.setSceneRect(0., 0.,
                                           static_cast<qreal>(_wEmojisGraphicsView->width()) - 8., y);
     _wEmojisGraphicsView->setScene(&_findEmojisGraphicsScene);
@@ -288,6 +337,79 @@ void QJomeWindow::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& 
 
     selectedItem->show();
     selectedItem->setPos(_curEmojiGraphicsItems[*index]->pos());
+
+    if (*index == 0) {
+        _wEmojisGraphicsView->verticalScrollBar()->setValue(0);
+    } else {
+        const auto candY = selectedItem->pos().y() + 16. -
+                           static_cast<qreal>(_wEmojisGraphicsView->height()) / 2.;
+        const auto y = std::max(0., candY);
+        _wEmojisGraphicsView->verticalScrollBar()->setValue(static_cast<int>(y));
+    }
+}
+
+void QJomeWindow::_searchBoxUpKeyPressed()
+{
+    if (!_selectedEmojiGraphicsItemIndex) {
+        return;
+    }
+
+    const auto& selectedEmojiGraphicsItem = *_curEmojiGraphicsItems[*_selectedEmojiGraphicsItemIndex];
+    const auto curX = selectedEmojiGraphicsItem.pos().x();
+
+    for (auto i = static_cast<int>(*_selectedEmojiGraphicsItemIndex) - 1; i >= 0; --i) {
+        const auto& emojiGraphicsItem = *_curEmojiGraphicsItems[i];
+
+        if (emojiGraphicsItem.pos().x() == curX) {
+            this->_selectEmojiGraphicsItem(static_cast<unsigned int>(i));
+            return;
+        }
+    }
+}
+
+void QJomeWindow::_searchBoxRightKeyPressed()
+{
+    if (!_selectedEmojiGraphicsItemIndex) {
+        return;
+    }
+
+    if (*_selectedEmojiGraphicsItemIndex + 1 == _curEmojiGraphicsItems.size()) {
+        return;
+    }
+
+    this->_selectEmojiGraphicsItem(*_selectedEmojiGraphicsItemIndex + 1);
+}
+
+void QJomeWindow::_searchBoxDownKeyPressed()
+{
+    if (!_selectedEmojiGraphicsItemIndex) {
+        return;
+    }
+
+    const auto& selectedEmojiGraphicsItem = *_curEmojiGraphicsItems[*_selectedEmojiGraphicsItemIndex];
+    const auto curX = selectedEmojiGraphicsItem.pos().x();
+
+    for (auto i = *_selectedEmojiGraphicsItemIndex + 1; i < _curEmojiGraphicsItems.size(); ++i) {
+        const auto& emojiGraphicsItem = *_curEmojiGraphicsItems[i];
+
+        if (emojiGraphicsItem.pos().x() == curX) {
+            this->_selectEmojiGraphicsItem(i);
+            return;
+        }
+    }
+}
+
+void QJomeWindow::_searchBoxLeftKeyPressed()
+{
+    if (!_selectedEmojiGraphicsItemIndex) {
+        return;
+    }
+
+    if (*_selectedEmojiGraphicsItemIndex == 0) {
+        return;
+    }
+
+    this->_selectEmojiGraphicsItem(*_selectedEmojiGraphicsItemIndex - 1);
 }
 
 } // namespace jome

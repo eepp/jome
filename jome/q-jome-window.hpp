@@ -8,6 +8,8 @@
 #ifndef _JOME_Q_JOME_WINDOW_HPP
 #define _JOME_Q_JOME_WINDOW_HPP
 
+#include <QObject>
+#include <QEvent>
 #include <QDialog>
 #include <QListWidget>
 #include <QScrollArea>
@@ -23,6 +25,24 @@
 
 namespace jome {
 
+class QSearchBoxEventFilter :
+    public QObject
+{
+    Q_OBJECT
+
+public:
+    explicit QSearchBoxEventFilter(QObject *parent);
+
+protected:
+    bool eventFilter(QObject *obj, QEvent *event) override;
+
+signals:
+    void upKeyPressed();
+    void rightKeyPressed();
+    void downKeyPressed();
+    void leftKeyPressed();
+};
+
 class QJomeWindow :
     public QDialog
 {
@@ -32,7 +52,7 @@ public:
     explicit QJomeWindow(const EmojiDb& emojiDb);
 
 private:
-    void showEvent(QShowEvent *event);
+    void showEvent(QShowEvent *event) override;
     void _setMainStyleSheet();
     void _buildUi();
     void _buildAllEmojisGraphicsScene();
@@ -79,6 +99,10 @@ private slots:
     void _searchTextChanged(const QString& text);
     void _catListItemSelectionChanged();
     void _catListItemClicked(QListWidgetItem *item);
+    void _searchBoxUpKeyPressed();
+    void _searchBoxRightKeyPressed();
+    void _searchBoxDownKeyPressed();
+    void _searchBoxLeftKeyPressed();
 
 private:
     const EmojiDb * const _emojiDb;
