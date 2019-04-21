@@ -1,0 +1,66 @@
+= jome
+Philippe Proulx <eepp.ca>
+
+_jome_ is a keyboard centric emoji picker desktop application.
+
+You can also choose an emoji with the mouse, don't worry.
+
+jome is currently only tested on Linux.
+
+
+== Build
+
+You need:
+
+* https://cmake.org/[CMake] ≥ 3.1.0
+* A pass:[C++14] compiler
+* http://www.boost.org/[Boost] ≥ 1.58 (only to build)
+* Qt 5 (_Widgets_ and _Gui_ component)
+* Python 3
+** The `cairo` package
+** The `cairosvg` package
+** The `yaml` package
+
+.Build and install jome
+----
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=release ..
+make -j$(nproc)
+sudo make install
+----
+
+
+== Usage
+
+TODO!
+
+
+== Type the selected emoji
+
+Here's a Bash script which types, using
+https://www.semicomplete.com/projects/xdotool/[xdotool], the selected
+emoji once jome quits:
+
+[source,bash]
+----
+#!/usr/bin/bash
+
+codepoints="$(jome -f cp)"
+
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+
+if [ -z "$codepoints" ]; then
+    exit 1
+fi
+
+xdotool_args=""
+
+for cp in $codepoints; do
+    xdotool_args="$xdotool_args U$cp"
+done
+
+xdotool key --delay 50 $xdotool_args
+----
