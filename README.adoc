@@ -40,6 +40,11 @@ make -j$(nproc)
 sudo make install
 ----
 
+[NOTE]
+You need to _install_ jome for it to find the correct data files. If you
+don't want to install it on your system, use
+`-DCMAKE_INSTALL_PREFIX=path/to/install/directory` when running `cmake`.
+
 
 == Usage
 
