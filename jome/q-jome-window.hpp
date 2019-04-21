@@ -44,6 +44,11 @@ signals:
     void downKeyPressed();
     void leftKeyPressed();
     void enterKeyPressed();
+    void f1KeyPressed();
+    void f2KeyPressed();
+    void f3KeyPressed();
+    void f4KeyPressed();
+    void f5KeyPressed();
 };
 
 class QJomeWindow :
@@ -52,7 +57,7 @@ class QJomeWindow :
     Q_OBJECT
 
 public:
-    using EmojiChosenFunc = std::function<void (const Emoji& emoji)>;
+    using EmojiChosenFunc = std::function<void (const Emoji&, Emoji::SkinTone)>;
 
 public:
     explicit QJomeWindow(const EmojiDb& emojiDb,
@@ -71,6 +76,7 @@ private:
     QGraphicsPixmapItem *_createSelectedGraphicsItem();
     void _updateInfoLabel(const Emoji& emoji);
     const Emoji *_selectedEmoji();
+    void _acceptEmoji(Emoji::SkinTone skinTone);
 
 private:
     template <typename ContainerT>
@@ -113,6 +119,11 @@ private slots:
     void _searchBoxDownKeyPressed();
     void _searchBoxLeftKeyPressed();
     void _searchBoxEnterKeyPressed();
+    void _searchBoxF1KeyPressed();
+    void _searchBoxF2KeyPressed();
+    void _searchBoxF3KeyPressed();
+    void _searchBoxF4KeyPressed();
+    void _searchBoxF5KeyPressed();
 
 private:
     const EmojiDb * const _emojiDb;

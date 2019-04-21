@@ -53,6 +53,26 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj,
         emit this->leftKeyPressed();
         break;
 
+    case Qt::Key_F1:
+        emit this->f1KeyPressed();
+        break;
+
+    case Qt::Key_F2:
+        emit this->f2KeyPressed();
+        break;
+
+    case Qt::Key_F3:
+        emit this->f3KeyPressed();
+        break;
+
+    case Qt::Key_F4:
+        emit this->f4KeyPressed();
+        break;
+
+    case Qt::Key_F5:
+        emit this->f5KeyPressed();
+        break;
+
     case Qt::Key_Enter:
     case Qt::Key_Return:
         emit this->enterKeyPressed();
@@ -166,6 +186,16 @@ void QJomeWindow::_buildUi()
                      this, SLOT(_searchBoxLeftKeyPressed()));
     QObject::connect(eventFilter, SIGNAL(enterKeyPressed()),
                      this, SLOT(_searchBoxEnterKeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(f1KeyPressed()),
+                     this, SLOT(_searchBoxF1KeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(f2KeyPressed()),
+                     this, SLOT(_searchBoxF2KeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(f3KeyPressed()),
+                     this, SLOT(_searchBoxF3KeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(f4KeyPressed()),
+                     this, SLOT(_searchBoxF4KeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(f5KeyPressed()),
+                     this, SLOT(_searchBoxF5KeyPressed()));
 
     auto mainVbox = new QVBoxLayout;
 
@@ -433,10 +463,40 @@ void QJomeWindow::_searchBoxLeftKeyPressed()
 
 void QJomeWindow::_searchBoxEnterKeyPressed()
 {
+    this->_acceptEmoji(Emoji::SkinTone::NONE);
+}
+
+void QJomeWindow::_searchBoxF1KeyPressed()
+{
+    this->_acceptEmoji(Emoji::SkinTone::LIGHT);
+}
+
+void QJomeWindow::_searchBoxF2KeyPressed()
+{
+    this->_acceptEmoji(Emoji::SkinTone::MEDIUM_LIGHT);
+}
+
+void QJomeWindow::_searchBoxF3KeyPressed()
+{
+    this->_acceptEmoji(Emoji::SkinTone::MEDIUM);
+}
+
+void QJomeWindow::_searchBoxF4KeyPressed()
+{
+    this->_acceptEmoji(Emoji::SkinTone::MEDIUM_DARK);
+}
+
+void QJomeWindow::_searchBoxF5KeyPressed()
+{
+    this->_acceptEmoji(Emoji::SkinTone::DARK);
+}
+
+void QJomeWindow::_acceptEmoji(const Emoji::SkinTone skinTone)
+{
     const auto selectedEmoji = this->_selectedEmoji();
 
     if (selectedEmoji) {
-        _emojiChosenFunc(*selectedEmoji);
+        _emojiChosenFunc(*selectedEmoji, skinTone);
     }
 
     this->done(0);

@@ -74,15 +74,35 @@ int main(int argc, char **argv)
 
     const auto params = parseArgs(app, argc, argv);
     const jome::EmojiDb db {JOME_DATA_DIR};
-    jome::QJomeWindow win {db, [&params](const auto& emoji) {
+    jome::QJomeWindow win {db, [&params](const auto& emoji,
+                                         const auto skinTone) {
         switch (params.fmt) {
         case Format::UTF8:
+        {
+            std::string str;
+
+            if (emoji.hasSkinToneSupport()) {
+                str = emoji.strWithSkinTone(skinTone);
+            } else {
+                str = emoji.str();
+            }
+
             std::printf("%s", emoji.str().c_str());
             break;
+        }
 
         case Format::CODEPOINTS_HEX:
         case Format::CODEPOINTS_HEX_U_PREFIX:
-            for (const auto codepoint : emoji.codepoints()) {
+        {
+            jome::Emoji::Codepoints codepoints;
+
+            if (emoji.hasSkinToneSupport()) {
+                codepoints = emoji.codepointsWithSkinTone(skinTone);
+            } else {
+                codepoints = emoji.codepoints();
+            }
+
+            for (const auto codepoint : codepoints) {
                 if (params.fmt == Format::CODEPOINTS_HEX_U_PREFIX) {
                     std::printf("U+%X ", codepoint);
                 } else {
@@ -91,6 +111,7 @@ int main(int argc, char **argv)
             }
 
             break;
+        }
 
         default:
             std::abort();
