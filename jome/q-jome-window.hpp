@@ -49,6 +49,10 @@ signals:
     void f3KeyPressed();
     void f4KeyPressed();
     void f5KeyPressed();
+    void pgUpKeyPressed();
+    void pgDownKeyPressed();
+    void homeKeyPressed();
+    void endKeyPressed();
 };
 
 class QJomeWindow :
@@ -124,6 +128,10 @@ private slots:
     void _searchBoxF3KeyPressed();
     void _searchBoxF4KeyPressed();
     void _searchBoxF5KeyPressed();
+    void _searchBoxPgUpKeyPressed();
+    void _searchBoxPgDownKeyPressed();
+    void _searchBoxHomeKeyPressed();
+    void _searchBoxEndKeyPressed();
 
 private:
     const EmojiDb * const _emojiDb;

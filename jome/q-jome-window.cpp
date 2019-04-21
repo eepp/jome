@@ -73,6 +73,22 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj,
         emit this->f5KeyPressed();
         break;
 
+    case Qt::Key_PageUp:
+        emit this->pgUpKeyPressed();
+        break;
+
+    case Qt::Key_PageDown:
+        emit this->pgDownKeyPressed();
+        break;
+
+    case Qt::Key_Home:
+        emit this->homeKeyPressed();
+        break;
+
+    case Qt::Key_End:
+        emit this->endKeyPressed();
+        break;
+
     case Qt::Key_Enter:
     case Qt::Key_Return:
         emit this->enterKeyPressed();
@@ -196,6 +212,14 @@ void QJomeWindow::_buildUi()
                      this, SLOT(_searchBoxF4KeyPressed()));
     QObject::connect(eventFilter, SIGNAL(f5KeyPressed()),
                      this, SLOT(_searchBoxF5KeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(pgUpKeyPressed()),
+                     this, SLOT(_searchBoxPgUpKeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(pgDownKeyPressed()),
+                     this, SLOT(_searchBoxPgDownKeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(homeKeyPressed()),
+                     this, SLOT(_searchBoxHomeKeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(endKeyPressed()),
+                     this, SLOT(_searchBoxEndKeyPressed()));
 
     auto mainVbox = new QVBoxLayout;
 
@@ -459,6 +483,38 @@ void QJomeWindow::_searchBoxLeftKeyPressed()
     }
 
     this->_selectEmojiGraphicsItem(*_selectedEmojiGraphicsItemIndex - 1);
+}
+
+void QJomeWindow::_searchBoxPgUpKeyPressed()
+{
+    for (auto i = 0U; i < 10; ++i) {
+        this->_searchBoxUpKeyPressed();
+    }
+}
+
+void QJomeWindow::_searchBoxPgDownKeyPressed()
+{
+    for (auto i = 0U; i < 10; ++i) {
+        this->_searchBoxDownKeyPressed();
+    }
+}
+
+void QJomeWindow::_searchBoxHomeKeyPressed()
+{
+    if (_curEmojiGraphicsItems.empty()) {
+        return;
+    }
+
+    this->_selectEmojiGraphicsItem(0);
+}
+
+void QJomeWindow::_searchBoxEndKeyPressed()
+{
+    if (_curEmojiGraphicsItems.empty()) {
+        return;
+    }
+
+    this->_selectEmojiGraphicsItem(_curEmojiGraphicsItems.size() - 1);
 }
 
 void QJomeWindow::_searchBoxEnterKeyPressed()
