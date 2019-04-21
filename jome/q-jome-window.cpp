@@ -13,11 +13,11 @@
 #include <QScrollBar>
 #include <QListWidget>
 #include <QLabel>
+#include <QGraphicsTextItem>
 #include <boost/algorithm/string.hpp>
 
 #include "q-jome-window.hpp"
 #include "q-cat-list-widget-item.hpp"
-#include "q-emoji-widget.hpp"
 
 namespace jome {
 
@@ -104,6 +104,11 @@ QListWidget *QJomeWindow::_createCatListWidget()
     return listWidget;
 }
 
+void QJomeWindow::_setGraphicsSceneStyle(QGraphicsScene& gs)
+{
+    gs.setBackgroundBrush(QColor {"#f8f8f8"});
+}
+
 void QJomeWindow::_buildUi()
 {
     auto searchBox = new QLineEdit;
@@ -116,16 +121,20 @@ void QJomeWindow::_buildUi()
     mainVbox->setMargin(8);
     mainVbox->setSpacing(8);
     mainVbox->addWidget(searchBox);
-    _wEmojisArea = new QScrollArea;
-    _wEmojisArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    _wEmojisArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+    _wEmojisGraphicsView = new QGraphicsView();
+    _wEmojisGraphicsView->setAlignment(Qt::AlignLeft | Qt::AlignTop);
+    _wEmojisGraphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+    _wEmojisGraphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    this->_setGraphicsSceneStyle(_allEmojisGraphicsScene);
+    this->_setGraphicsSceneStyle(_findEmojisGraphicsScene);
     _wCatList = this->_createCatListWidget();
+    this->_wCatList->setCurrentRow(0);
 
     auto bottomHbox = new QHBoxLayout;
 
     bottomHbox->setMargin(0);
     bottomHbox->setSpacing(8);
-    bottomHbox->addWidget(_wEmojisArea);
+    bottomHbox->addWidget(_wEmojisGraphicsView);
     bottomHbox->addWidget(_wCatList);
     mainVbox->addLayout(bottomHbox);
     this->setLayout(mainVbox);
@@ -135,84 +144,63 @@ void QJomeWindow::showEvent(QShowEvent * const event)
 {
     QDialog::showEvent(event);
     _wCatList->setMinimumWidth(_wCatList->sizeHintForColumn(0));
+    this->_buildAllEmojisGraphicsScene();
     this->_showAllEmojis();
-    this->_wCatList->setCurrentRow(0);
+}
+
+void QJomeWindow::_buildAllEmojisGraphicsScene()
+{
+    if (_allEmojisGraphicsSceneBuilt) {
+        return;
+    }
+
+    qreal y = 8.;
+
+    _allEmojisGraphicsScene.setSceneRect(0., 0.,
+                                         static_cast<qreal>(_wEmojisGraphicsView->width()) - 8., 0.);
+    QFont font {"Hack, DejaVu Sans Mono, monospace", 10, QFont::Bold};
+
+    for (const auto& cat : _emojiDb->cats()) {
+        auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()),
+                                                    font);
+
+        item->setPos(8., y);
+        _catVertPositions[cat.get()] = y;
+        y += 24.;
+        this->_addEmojisToGraphicsScene(cat->emojis(),
+                                        _allEmojisGraphicsScene, y);
+    }
+
+    _allEmojisGraphicsScene.setSceneRect(0., 0.,
+                                         static_cast<qreal>(_wEmojisGraphicsView->width()) - 8., y);
+    _allEmojisGraphicsSceneBuilt = true;
 }
 
 void QJomeWindow::_showAllEmojis()
 {
-    if (_wAllEmojisAreaWidget) {
-        _wEmojisArea->setWidget(_wAllEmojisAreaWidget);
-        return;
-    }
-
-    std::unordered_map<const QWidget *, const EmojiCat *> wLabelToCat;
-    _wAllEmojisAreaWidget = new QWidget;
-
-    _wAllEmojisAreaWidget->setStyleSheet("background-color: transparent;");
-
-    auto vbox = new QVBoxLayout {_wAllEmojisAreaWidget};
-
-    vbox->setMargin(8);
-    vbox->setSpacing(8);
-
-    for (const auto& cat : _emojiDb->cats()) {
-        auto lbl = new QLabel {QString::fromStdString(cat->name())};
-
-        lbl->setStyleSheet("font-weight: bold;");
-        wLabelToCat[lbl] = cat.get();
-        vbox->addWidget(lbl);
-
-        auto hbox = new QHBoxLayout;
-
-        hbox->setMargin(0);
-        hbox->addLayout(this->_createEmojiGridLayout(cat->emojis()));
-        hbox->addStretch();
-        vbox->addLayout(hbox);
-        vbox->addSpacing(16);
-    }
-
-    _wEmojisArea->setWidget(_wAllEmojisAreaWidget);
-
-    // keep vertical positions now
-    for (const auto& pair : wLabelToCat) {
-        const auto y = pair.first->pos().y();
-
-        _catVertPositions[pair.second] = y;
-    }
+    _wEmojisGraphicsView->setScene(&_allEmojisGraphicsScene);
 }
 
 void QJomeWindow::_findEmojis(const std::string& cat,
                               const std::string& needles)
 {
-    if (_wAllEmojisAreaWidget) {
-        _wEmojisArea->takeWidget();
-    }
-
-    auto areaWidget = new QWidget;
-
-    areaWidget->setStyleSheet("background-color: transparent;");
-
     std::vector<const Emoji *> results;
 
+    _findEmojisGraphicsScene.clear();
     _emojiDb->findEmojis(cat, needles, results);
+    qreal y = 0.;
 
-    if (results.empty()) {
-        _wEmojisArea->setWidget(areaWidget);
+    _findEmojisGraphicsScene.setSceneRect(0., 0.,
+                                          static_cast<qreal>(_wEmojisGraphicsView->width()) - 8., 0.);
+
+    if (!results.empty()) {
+        y = 8.;
+        this->_addEmojisToGraphicsScene(results, _findEmojisGraphicsScene, y);
     }
 
-    auto vbox = new QVBoxLayout {areaWidget};
-
-    vbox->setMargin(8);
-    vbox->setSpacing(8);
-
-    auto hbox = new QHBoxLayout;
-
-    hbox->setMargin(0);
-    hbox->addLayout(this->_createEmojiGridLayout(results));
-    hbox->addStretch();
-    vbox->addLayout(hbox);
-    _wEmojisArea->setWidget(areaWidget);
+    _findEmojisGraphicsScene.setSceneRect(0., 0.,
+                                          static_cast<qreal>(_wEmojisGraphicsView->width()) - 8., y);
+    _wEmojisGraphicsView->setScene(&_findEmojisGraphicsScene);
 }
 
 void QJomeWindow::_searchTextChanged(const QString& text)
@@ -237,7 +225,7 @@ void QJomeWindow::_searchTextChanged(const QString& text)
 
 void QJomeWindow::_catListItemSelectionChanged()
 {
-    if (_wEmojisArea->widget() != _wAllEmojisAreaWidget) {
+    if (_wEmojisGraphicsView->scene() != &_allEmojisGraphicsScene) {
         return;
     }
 
@@ -248,9 +236,9 @@ void QJomeWindow::_catListItemSelectionChanged()
     }
 
     const auto& item = static_cast<const QCatListWidgetItem&>(*selectedItems[0]);
-    const auto y = std::max(0, _catVertPositions[&item.cat()] - 8);
+    const auto y = std::max(0., _catVertPositions[&item.cat()] - 8);
 
-    _wEmojisArea->verticalScrollBar()->setValue(y);
+    _wEmojisGraphicsView->verticalScrollBar()->setValue(static_cast<int>(y));
 }
 
 void QJomeWindow::_catListItemClicked(QListWidgetItem * const item)

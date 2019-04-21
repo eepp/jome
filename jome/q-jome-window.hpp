@@ -13,10 +13,12 @@
 #include <QScrollArea>
 #include <QGridLayout>
 #include <QPixmap>
+#include <QGraphicsScene>
+#include <QGraphicsView>
 
 #include "emoji-db.hpp"
 #include "emoji-images.hpp"
-#include "q-emoji-widget.hpp"
+#include "q-emoji-graphics-item.hpp"
 
 namespace jome {
 
@@ -32,39 +34,40 @@ private:
     void showEvent(QShowEvent *event);
     void _setMainStyleSheet();
     void _buildUi();
+    void _buildAllEmojisGraphicsScene();
     QListWidget *_createCatListWidget();
     void _createSelPixmal();
     void _showAllEmojis();
+    void _setGraphicsSceneStyle(QGraphicsScene& gs);
     void _findEmojis(const std::string& cat, const std::string& needles);
 
 private:
     template <typename ContainerT>
-    QGridLayout *_createEmojiGridLayout(const ContainerT& emojis)
+    void _addEmojisToGraphicsScene(const ContainerT& emojis, QGraphicsScene& gs,
+                                   qreal& y)
     {
-        auto grid = new QGridLayout;
-
-        grid->setSpacing(8);
-        grid->setMargin(0);
-
-        auto col = 0U;
-        auto row = 0U;
-        const auto availWidth = static_cast<unsigned int>(_wEmojisArea->viewport()->width() - 16);
+        qreal col = 0.;
+        const auto availWidth = gs.width();
+        constexpr auto emojiWidthAndMargin = 32. + 8.;
 
         for (const auto& emoji : emojis) {
-            auto wEmoji = new QEmojiWidget {*emoji,
-                                            _emojiImages.pixmapForEmoji(*emoji),
-                                            *_selPixmap};
+            auto emojiGraphicsItem = new QEmojiGraphicsItem {
+                *emoji, _emojiImages.pixmapForEmoji(*emoji)
+            };
 
-            grid->addWidget(wEmoji, row, col);
+            emojiGraphicsItem->setPos(col * emojiWidthAndMargin + 8., y);
+            gs.addItem(emojiGraphicsItem);
             col += 1;
 
-            if ((col + 1) * (32 + 8) >= availWidth) {
-                col = 0;
-                row += 1;
+            if ((col + 1.) * emojiWidthAndMargin + 8. >= availWidth) {
+                col = 0.;
+                y += emojiWidthAndMargin;
             }
         }
 
-        return grid;
+        if (col != 0.) {
+            y += emojiWidthAndMargin;
+        }
     }
 
 private slots:
@@ -76,9 +79,11 @@ private:
     const EmojiDb * const _emojiDb;
     const EmojiImages _emojiImages;
     QListWidget *_wCatList = nullptr;
-    QScrollArea *_wEmojisArea = nullptr;
-    QWidget *_wAllEmojisAreaWidget = nullptr;
-    std::unordered_map<const EmojiCat *, int> _catVertPositions;
+    bool _allEmojisGraphicsSceneBuilt = false;
+    QGraphicsScene _allEmojisGraphicsScene;
+    QGraphicsScene _findEmojisGraphicsScene;
+    QGraphicsView *_wEmojisGraphicsView = nullptr;
+    std::unordered_map<const EmojiCat *, qreal> _catVertPositions;
     std::unique_ptr<QPixmap> _selPixmap;
 };
 
