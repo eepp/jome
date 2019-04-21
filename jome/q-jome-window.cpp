@@ -30,7 +30,6 @@ QJomeWindow::QJomeWindow(const EmojiDb& emojiDb) :
     this->setFixedSize(800, 600);
     this->setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
     this->_setMainStyleSheet();
-    this->_createSelPixmal();
     this->_buildUi();
 }
 
@@ -53,9 +52,6 @@ void QJomeWindow::_setMainStyleSheet()
         "  border-bottom: 2px solid #ff3366;"
         "  padding: 4px;"
         "}"
-        "QScrollArea {"
-        "  background-color: #f8f8f8;"
-        "}"
         "QListWidget {"
         "  background-color: transparent;"
         "  color: #e0e0e0;"
@@ -77,15 +73,6 @@ void QJomeWindow::_setMainStyleSheet()
         "}";
 
     this->setStyleSheet(styleSheet);
-}
-
-void QJomeWindow::_createSelPixmal()
-{
-    const auto path = std::string {JOME_DATA_DIR} + "/sel.png";
-
-    QImage image {QString::fromStdString(path)};
-
-    _selPixmap = std::make_unique<QPixmap>(QPixmap::fromImage(std::move(image)));
 }
 
 QListWidget *QJomeWindow::_createCatListWidget()
@@ -139,6 +126,10 @@ void QJomeWindow::_buildUi()
     bottomHbox->addWidget(_wCatList);
     mainVbox->addLayout(bottomHbox);
     this->setLayout(mainVbox);
+    _allEmojisGraphicsSceneSelectedItem = this->_createSelectedGraphicsItem();
+    _allEmojisGraphicsScene.addItem(_allEmojisGraphicsSceneSelectedItem);
+    _findEmojisGraphicsSceneSelectedItem = this->_createSelectedGraphicsItem();
+    _findEmojisGraphicsScene.addItem(_findEmojisGraphicsSceneSelectedItem);
 }
 
 void QJomeWindow::showEvent(QShowEvent * const event)
@@ -168,12 +159,12 @@ void QJomeWindow::_buildAllEmojisGraphicsScene()
         _catVertPositions[cat.get()] = y;
         y += 24.;
         this->_addEmojisToGraphicsScene(cat->emojis(),
+                                        _allEmojiGraphicsItems,
                                         _allEmojisGraphicsScene, y);
         y += 8.;
     }
 
     y -= 8.;
-
     _allEmojisGraphicsScene.setSceneRect(0., 0.,
                                          static_cast<qreal>(_wEmojisGraphicsView->width()) - 8., y);
     _allEmojisGraphicsSceneBuilt = true;
@@ -181,7 +172,9 @@ void QJomeWindow::_buildAllEmojisGraphicsScene()
 
 void QJomeWindow::_showAllEmojis()
 {
+    _curEmojiGraphicsItems = _allEmojiGraphicsItems;
     _wEmojisGraphicsView->setScene(&_allEmojisGraphicsScene);
+    this->_selectEmojiGraphicsItem(0);
 }
 
 void QJomeWindow::_findEmojis(const std::string& cat,
@@ -189,7 +182,10 @@ void QJomeWindow::_findEmojis(const std::string& cat,
 {
     std::vector<const Emoji *> results;
 
+    _findEmojisGraphicsScene.removeItem(_findEmojisGraphicsSceneSelectedItem);
     _findEmojisGraphicsScene.clear();
+    _findEmojisGraphicsScene.addItem(_findEmojisGraphicsSceneSelectedItem);
+    _curEmojiGraphicsItems.clear();
     _emojiDb->findEmojis(cat, needles, results);
     qreal y = 0.;
 
@@ -198,12 +194,21 @@ void QJomeWindow::_findEmojis(const std::string& cat,
 
     if (!results.empty()) {
         y = 8.;
-        this->_addEmojisToGraphicsScene(results, _findEmojisGraphicsScene, y);
+        this->_addEmojisToGraphicsScene(results, _curEmojiGraphicsItems,
+                                        _findEmojisGraphicsScene, y);
     }
+
+    _curEmojiGraphicsItems[0]->pos();
 
     _findEmojisGraphicsScene.setSceneRect(0., 0.,
                                           static_cast<qreal>(_wEmojisGraphicsView->width()) - 8., y);
     _wEmojisGraphicsView->setScene(&_findEmojisGraphicsScene);
+
+    if (results.empty()) {
+        this->_selectEmojiGraphicsItem(boost::none);
+    } else {
+        this->_selectEmojiGraphicsItem(0);
+    }
 }
 
 void QJomeWindow::_searchTextChanged(const QString& text)
@@ -247,6 +252,42 @@ void QJomeWindow::_catListItemSelectionChanged()
 void QJomeWindow::_catListItemClicked(QListWidgetItem * const item)
 {
     this->_catListItemSelectionChanged();
+}
+
+QGraphicsPixmapItem *QJomeWindow::_createSelectedGraphicsItem()
+{
+    const auto path = std::string {JOME_DATA_DIR} + "/sel.png";
+
+    QImage image {QString::fromStdString(path)};
+    auto graphicsItem = new QGraphicsPixmapItem {QPixmap::fromImage(std::move(image))};
+
+    graphicsItem->hide();
+    graphicsItem->setEnabled(false);
+    graphicsItem->setZValue(1000.);
+    return graphicsItem;
+}
+
+void QJomeWindow::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& index)
+{
+    QGraphicsPixmapItem *selectedItem;
+
+    if (_wEmojisGraphicsView->scene() == &_allEmojisGraphicsScene) {
+        selectedItem = _allEmojisGraphicsSceneSelectedItem;
+    } else {
+        selectedItem = _findEmojisGraphicsSceneSelectedItem;
+    }
+
+    _selectedEmojiGraphicsItemIndex = index;
+
+    if (!index) {
+        selectedItem->hide();
+        return;
+    }
+
+    assert(*index < _curEmojiGraphicsItems.size());
+
+    selectedItem->show();
+    selectedItem->setPos(_curEmojiGraphicsItems[*index]->pos());
 }
 
 } // namespace jome

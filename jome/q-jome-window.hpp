@@ -15,6 +15,7 @@
 #include <QPixmap>
 #include <QGraphicsScene>
 #include <QGraphicsView>
+#include <boost/optional.hpp>
 
 #include "emoji-db.hpp"
 #include "emoji-images.hpp"
@@ -36,14 +37,17 @@ private:
     void _buildUi();
     void _buildAllEmojisGraphicsScene();
     QListWidget *_createCatListWidget();
-    void _createSelPixmal();
     void _showAllEmojis();
     void _setGraphicsSceneStyle(QGraphicsScene& gs);
     void _findEmojis(const std::string& cat, const std::string& needles);
+    void _selectEmojiGraphicsItem(const boost::optional<unsigned int>& index);
+    QGraphicsPixmapItem *_createSelectedGraphicsItem();
 
 private:
     template <typename ContainerT>
-    void _addEmojisToGraphicsScene(const ContainerT& emojis, QGraphicsScene& gs,
+    void _addEmojisToGraphicsScene(const ContainerT& emojis,
+                                   std::vector<QEmojiGraphicsItem *>& emojiGraphicsItems,
+                                   QGraphicsScene& gs,
                                    qreal& y)
     {
         qreal col = 0.;
@@ -55,6 +59,7 @@ private:
                 *emoji, _emojiImages.pixmapForEmoji(*emoji)
             };
 
+            emojiGraphicsItems.push_back(emojiGraphicsItem);
             emojiGraphicsItem->setPos(col * emojiWidthAndMargin + 8., y);
             gs.addItem(emojiGraphicsItem);
             col += 1;
@@ -84,7 +89,11 @@ private:
     QGraphicsScene _findEmojisGraphicsScene;
     QGraphicsView *_wEmojisGraphicsView = nullptr;
     std::unordered_map<const EmojiCat *, qreal> _catVertPositions;
-    std::unique_ptr<QPixmap> _selPixmap;
+    std::vector<QEmojiGraphicsItem *> _curEmojiGraphicsItems;
+    std::vector<QEmojiGraphicsItem *> _allEmojiGraphicsItems;
+    boost::optional<unsigned int> _selectedEmojiGraphicsItemIndex;
+    QGraphicsPixmapItem *_allEmojisGraphicsSceneSelectedItem = nullptr;
+    QGraphicsPixmapItem *_findEmojisGraphicsSceneSelectedItem = nullptr;
 };
 
 } // namespace jome
