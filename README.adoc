@@ -1,11 +1,21 @@
-= jome
+= jome 😀
 Philippe Proulx <eepp.ca>
 
-_jome_ is a keyboard centric emoji picker desktop application.
+_jome_ is a ⌨ centric emoji picker desktop application.
 
-You can also choose an emoji with the mouse, don't worry.
+You can also pick an emoji with the 🖱, don't worry.
 
-jome is currently only tested on Linux.
+jome has most of the interesting emojis of
+https://emojipedia.org/emoji-11.0/[Emoji{nbsp}11.0].
+
+I'm not a fan of the usual very broad categories of emojis which do not
+intersect so I made my own categories. A given emoji can be found in
+more than one category. For example, 🦈 is found in both the _animals (no
+faces)_ and _water_ categories. I find that it's easier to visually
+search by theme than by very general category. Feel free to suggest more
+categories.
+
+jome is currently only tested on 🐧.
 
 
 == Build
