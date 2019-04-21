@@ -49,10 +49,10 @@ Emoji::Codepoints Emoji::codepointsWithSkinTone(SkinTone skinTone) const
 {
     assert(_hasSkinToneSupport);
 
-    const auto origCodepoints = this->codepoints();
+    auto codepoints = this->codepoints();
 
     if (skinTone == SkinTone::NONE) {
-        return origCodepoints;
+        return codepoints;
     }
 
     Codepoint skinToneCodepoint = 0;
@@ -82,16 +82,7 @@ Emoji::Codepoints Emoji::codepointsWithSkinTone(SkinTone skinTone) const
         std::abort();
     }
 
-    Codepoints codepoints;
-
-    for (const auto codepoint : origCodepoints) {
-        codepoints.push_back(codepoint);
-
-        if (codepoint >= 0x1f000) {
-            codepoints.push_back(skinToneCodepoint);
-        }
-    }
-
+    codepoints.insert(std::begin(codepoints) + 1, skinToneCodepoint);
     return codepoints;
 }
 
