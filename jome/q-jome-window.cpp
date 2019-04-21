@@ -96,7 +96,8 @@ QListWidget *QJomeWindow::_createCatListWidget()
         listWidget->addItem(new QCatListWidgetItem {*cat});
     }
 
-    listWidget->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
+    listWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+    listWidget->setFixedWidth(220);
     QObject::connect(listWidget, SIGNAL(itemSelectionChanged()),
                      this, SLOT(_catListItemSelectionChanged()));
     QObject::connect(listWidget, SIGNAL(itemClicked(QListWidgetItem *)),
@@ -143,7 +144,6 @@ void QJomeWindow::_buildUi()
 void QJomeWindow::showEvent(QShowEvent * const event)
 {
     QDialog::showEvent(event);
-    _wCatList->setMinimumWidth(_wCatList->sizeHintForColumn(0));
     this->_buildAllEmojisGraphicsScene();
     this->_showAllEmojis();
 }
@@ -169,7 +169,10 @@ void QJomeWindow::_buildAllEmojisGraphicsScene()
         y += 24.;
         this->_addEmojisToGraphicsScene(cat->emojis(),
                                         _allEmojisGraphicsScene, y);
+        y += 8.;
     }
+
+    y -= 8.;
 
     _allEmojisGraphicsScene.setSceneRect(0., 0.,
                                          static_cast<qreal>(_wEmojisGraphicsView->width()) - 8., y);
