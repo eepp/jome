@@ -53,6 +53,11 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj,
         emit this->leftKeyPressed();
         break;
 
+    case Qt::Key_Enter:
+    case Qt::Key_Return:
+        emit this->enterKeyPressed();
+        break;
+
     default:
         return QObject::eventFilter(obj, event);
     }
@@ -60,10 +65,12 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj,
     return true;
 }
 
-QJomeWindow::QJomeWindow(const EmojiDb& emojiDb) :
+QJomeWindow::QJomeWindow(const EmojiDb& emojiDb,
+                         const EmojiChosenFunc& emojiChosenFunc) :
     QDialog {},
     _emojiDb {&emojiDb},
-    _emojiImages {emojiDb}
+    _emojiImages {emojiDb},
+    _emojiChosenFunc {emojiChosenFunc}
 {
     this->setWindowTitle("jome");
     this->setFixedSize(800, 600);
@@ -109,6 +116,9 @@ void QJomeWindow::_setMainStyleSheet()
         "QScrollBar::add-line:vertical,"
         "QScrollBar::sub-line:vertical {"
         "  height: 0;"
+        "}"
+        "QLabel {"
+        "  color: #ff3366;"
         "}";
 
     this->setStyleSheet(styleSheet);
@@ -154,6 +164,8 @@ void QJomeWindow::_buildUi()
                      this, SLOT(_searchBoxDownKeyPressed()));
     QObject::connect(eventFilter, SIGNAL(leftKeyPressed()),
                      this, SLOT(_searchBoxLeftKeyPressed()));
+    QObject::connect(eventFilter, SIGNAL(enterKeyPressed()),
+                     this, SLOT(_searchBoxEnterKeyPressed()));
 
     auto mainVbox = new QVBoxLayout;
 
@@ -169,18 +181,21 @@ void QJomeWindow::_buildUi()
     _wCatList = this->_createCatListWidget();
     this->_wCatList->setCurrentRow(0);
 
-    auto bottomHbox = new QHBoxLayout;
+    auto emojisHbox = new QHBoxLayout;
 
-    bottomHbox->setMargin(0);
-    bottomHbox->setSpacing(8);
-    bottomHbox->addWidget(_wEmojisGraphicsView);
-    bottomHbox->addWidget(_wCatList);
-    mainVbox->addLayout(bottomHbox);
+    emojisHbox->setMargin(0);
+    emojisHbox->setSpacing(8);
+    emojisHbox->addWidget(_wEmojisGraphicsView);
+    emojisHbox->addWidget(_wCatList);
+    mainVbox->addLayout(emojisHbox);
     this->setLayout(mainVbox);
     _allEmojisGraphicsSceneSelectedItem = this->_createSelectedGraphicsItem();
     _allEmojisGraphicsScene.addItem(_allEmojisGraphicsSceneSelectedItem);
     _findEmojisGraphicsSceneSelectedItem = this->_createSelectedGraphicsItem();
     _findEmojisGraphicsScene.addItem(_findEmojisGraphicsSceneSelectedItem);
+
+    _wInfoLabel = new QLabel {""};
+    mainVbox->addWidget(_wInfoLabel);
 }
 
 void QJomeWindow::showEvent(QShowEvent * const event)
@@ -335,8 +350,10 @@ void QJomeWindow::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& 
 
     assert(*index < _curEmojiGraphicsItems.size());
 
+    const auto& emojiGraphicsItem = *_curEmojiGraphicsItems[*index];
+
     selectedItem->show();
-    selectedItem->setPos(_curEmojiGraphicsItems[*index]->pos());
+    selectedItem->setPos(emojiGraphicsItem.pos());
 
     if (*index == 0) {
         _wEmojisGraphicsView->verticalScrollBar()->setValue(0);
@@ -346,6 +363,8 @@ void QJomeWindow::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& 
         const auto y = std::max(0., candY);
         _wEmojisGraphicsView->verticalScrollBar()->setValue(static_cast<int>(y));
     }
+
+    this->_updateInfoLabel(emojiGraphicsItem.emoji());
 }
 
 void QJomeWindow::_searchBoxUpKeyPressed()
@@ -410,6 +429,43 @@ void QJomeWindow::_searchBoxLeftKeyPressed()
     }
 
     this->_selectEmojiGraphicsItem(*_selectedEmojiGraphicsItemIndex - 1);
+}
+
+void QJomeWindow::_searchBoxEnterKeyPressed()
+{
+    const auto selectedEmoji = this->_selectedEmoji();
+
+    if (selectedEmoji) {
+        _emojiChosenFunc(*selectedEmoji);
+    }
+
+    this->done(0);
+}
+
+void QJomeWindow::_updateInfoLabel(const Emoji& emoji)
+{
+    QString text;
+
+    text += "<b>";
+    text += emoji.name().c_str();
+    text += "</b> <span style=\"color: #999\">(";
+
+    for (const auto codepoint : emoji.codepoints()) {
+        text += QString::number(codepoint, 16) + ", ";
+    }
+
+    text.truncate(text.size() - 2);
+    text += ")</span>";
+    _wInfoLabel->setText(text);
+}
+
+const Emoji *QJomeWindow::_selectedEmoji()
+{
+    if (!_selectedEmojiGraphicsItemIndex) {
+        return nullptr;
+    }
+
+    return &_curEmojiGraphicsItems[*_selectedEmojiGraphicsItemIndex]->emoji();
 }
 
 } // namespace jome

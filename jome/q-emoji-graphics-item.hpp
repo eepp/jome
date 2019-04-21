@@ -22,6 +22,11 @@ class QEmojiGraphicsItem :
 public:
     explicit QEmojiGraphicsItem(const Emoji& emoji, const QPixmap& pixmap);
 
+    const Emoji& emoji() const noexcept
+    {
+        return *_emoji;
+    }
+
 private:
     const Emoji * const _emoji;
 };

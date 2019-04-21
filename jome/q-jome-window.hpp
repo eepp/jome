@@ -11,6 +11,7 @@
 #include <QObject>
 #include <QEvent>
 #include <QDialog>
+#include <QLabel>
 #include <QListWidget>
 #include <QScrollArea>
 #include <QGridLayout>
@@ -18,6 +19,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <boost/optional.hpp>
+#include <functional>
 
 #include "emoji-db.hpp"
 #include "emoji-images.hpp"
@@ -41,6 +43,7 @@ signals:
     void rightKeyPressed();
     void downKeyPressed();
     void leftKeyPressed();
+    void enterKeyPressed();
 };
 
 class QJomeWindow :
@@ -49,7 +52,11 @@ class QJomeWindow :
     Q_OBJECT
 
 public:
-    explicit QJomeWindow(const EmojiDb& emojiDb);
+    using EmojiChosenFunc = std::function<void (const Emoji& emoji)>;
+
+public:
+    explicit QJomeWindow(const EmojiDb& emojiDb,
+                         const EmojiChosenFunc& emojiChosenFunc);
 
 private:
     void showEvent(QShowEvent *event) override;
@@ -62,6 +69,8 @@ private:
     void _findEmojis(const std::string& cat, const std::string& needles);
     void _selectEmojiGraphicsItem(const boost::optional<unsigned int>& index);
     QGraphicsPixmapItem *_createSelectedGraphicsItem();
+    void _updateInfoLabel(const Emoji& emoji);
+    const Emoji *_selectedEmoji();
 
 private:
     template <typename ContainerT>
@@ -103,11 +112,14 @@ private slots:
     void _searchBoxRightKeyPressed();
     void _searchBoxDownKeyPressed();
     void _searchBoxLeftKeyPressed();
+    void _searchBoxEnterKeyPressed();
 
 private:
     const EmojiDb * const _emojiDb;
     const EmojiImages _emojiImages;
+    const EmojiChosenFunc _emojiChosenFunc;
     QListWidget *_wCatList = nullptr;
+    QLabel *_wInfoLabel = nullptr;
     bool _allEmojisGraphicsSceneBuilt = false;
     QGraphicsScene _allEmojisGraphicsScene;
     QGraphicsScene _findEmojisGraphicsScene;
