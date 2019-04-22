@@ -407,7 +407,8 @@ void QJomeWindow::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& 
     const auto& emojiGraphicsItem = *_curEmojiGraphicsItems[*index];
 
     selectedItem->show();
-    selectedItem->setPos(emojiGraphicsItem.pos());
+    selectedItem->setPos(emojiGraphicsItem.pos().x() - 4.,
+                         emojiGraphicsItem.pos().y() - 4.);
 
     if (*index == 0) {
         _wEmojisGraphicsView->verticalScrollBar()->setValue(0);
