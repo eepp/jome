@@ -198,21 +198,11 @@ emoji once jome quits:
 ----
 #!/usr/bin/bash
 
-codepoints="$(jome -f cp)"
+codepoints="$(jome -f ucp | tr -d +)"
 
-if [ $? -ne 0 ]; then
+if [ $? -ne 0 -o -z "$codepoints" ]; then
     exit 1
 fi
 
-if [ -z "$codepoints" ]; then
-    exit 1
-fi
-
-xdotool_args=""
-
-for cp in $codepoints; do
-    xdotool_args="$xdotool_args U$cp"
-done
-
-xdotool key --delay 50 $xdotool_args
+xdotool key --delay 50 $codepoints
 ----
