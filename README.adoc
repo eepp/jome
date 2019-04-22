@@ -147,9 +147,19 @@ To select an emoji, use the following keys:
 **End**::
     Go to the last emoji.
 
-[[accept-emoji]]To accept the selected emoji, press **Enter**. Depending
-on the <<cl-options,command-line options>>, jome prints the emoji or the
-Unicode codepoints to the standard output and quits.
+[[accept-emoji]]To accept the selected emoji, press:
+
+**Enter**::
+    Accept the selected emoji with the default skin tone
+    (if applicable).
+
+**F1**, **F2**, **F3**, **F4**, **F5**::
+    If the selected emoji supports skin tones, accept the selected
+    emoji with a light, medium-light, medium, medium-dark, or dark
+    skin tone.
+
+Depending on the <<cl-options,command-line options>>, jome prints the
+emoji or the Unicode codepoints to the standard output and quits.
 
 
 [[cl-options]]
