@@ -549,6 +549,22 @@ void QJomeWindow::_searchBoxF5KeyPressed()
     this->_acceptEmoji(Emoji::SkinTone::DARK);
 }
 
+void QJomeWindow::_emojiGraphicsItemPress(const Emoji& emoji)
+{
+    _emojiChosenFunc(emoji, Emoji::SkinTone::NONE);
+    this->done(0);
+}
+
+void QJomeWindow::_emojiGraphicsItemHoverEnter(const Emoji& emoji)
+{
+    this->_updateInfoLabel(&emoji);
+}
+
+void QJomeWindow::_emojiGraphicsItemHoverLeave(const Emoji& emoji)
+{
+    this->_updateInfoLabel(this->_selectedEmoji());
+}
+
 void QJomeWindow::_acceptEmoji(const Emoji::SkinTone skinTone)
 {
     const auto selectedEmoji = this->_selectedEmoji();

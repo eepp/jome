@@ -10,6 +10,7 @@
 
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
+#include <functional>
 
 #include "emoji-db.hpp"
 #include "emoji-images.hpp"
@@ -20,7 +21,13 @@ class QEmojiGraphicsItem :
     public QGraphicsPixmapItem
 {
 public:
-    explicit QEmojiGraphicsItem(const Emoji& emoji, const QPixmap& pixmap);
+    using SelectEmojiFunc = std::function<void (const Emoji& emoji)>;
+
+public:
+    explicit QEmojiGraphicsItem(const Emoji& emoji, const QPixmap& pixmap,
+                                const SelectEmojiFunc& pressFunc,
+                                const SelectEmojiFunc& hoverEnterFunc,
+                                const SelectEmojiFunc& hoverLeaveFunc);
 
     const Emoji& emoji() const noexcept
     {
@@ -28,7 +35,15 @@ public:
     }
 
 private:
+    void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
+    void hoverEnterEvent(QGraphicsSceneHoverEvent *event) override;
+    void hoverLeaveEvent(QGraphicsSceneHoverEvent *event) override;
+
+private:
     const Emoji * const _emoji;
+    const SelectEmojiFunc _pressFunc;
+    const SelectEmojiFunc _hoverEnterFunc;
+    const SelectEmojiFunc _hoverLeaveFunc;
 };
 
 } // namespace jome

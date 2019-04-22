@@ -81,6 +81,9 @@ private:
     void _updateInfoLabel(const Emoji *emoji);
     const Emoji *_selectedEmoji();
     void _acceptEmoji(Emoji::SkinTone skinTone);
+    void _emojiGraphicsItemPress(const Emoji& emoji);
+    void _emojiGraphicsItemHoverEnter(const Emoji& emoji);
+    void _emojiGraphicsItemHoverLeave(const Emoji& emoji);
 
 private:
     template <typename ContainerT>
@@ -94,8 +97,13 @@ private:
         constexpr auto emojiWidthAndMargin = 32. + 8.;
 
         for (const auto& emoji : emojis) {
+            namespace ph = std::placeholders;
+
             auto emojiGraphicsItem = new QEmojiGraphicsItem {
-                *emoji, _emojiImages.pixmapForEmoji(*emoji)
+                *emoji, _emojiImages.pixmapForEmoji(*emoji),
+                std::bind(&QJomeWindow::_emojiGraphicsItemPress, this, ph::_1),
+                std::bind(&QJomeWindow::_emojiGraphicsItemHoverEnter, this, ph::_1),
+                std::bind(&QJomeWindow::_emojiGraphicsItemHoverLeave, this, ph::_1)
             };
 
             emojiGraphicsItems.push_back(emojiGraphicsItem);
