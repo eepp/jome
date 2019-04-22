@@ -1,7 +1,7 @@
 = jome 😀
 Philippe Proulx <eepp.ca>
 
-_jome_ is a ⌨️ centric emoji picker desktop application.
+**jome** (_joh_·_mee_) is a ⌨️ centric emoji picker desktop application.
 
 You can also pick an emoji with the 🖱, don't worry.
 
