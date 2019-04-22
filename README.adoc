@@ -135,14 +135,10 @@ must contain _all_ the search terms.
 
 To select an emoji, use the following keys:
 
-⬅️::
-➡️::
-⬆️::
-⬇️::
+⬅️, ➡️, ⬆️, ⬇️::
     Go left/right/up/down.
 
-**Page ⬆️**::
-**Page ⬇️**::
+**Page ⬆️**, **Page ⬇️**::
     Go up/down 10 rows.
 
 **Home**::
