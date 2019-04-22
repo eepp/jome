@@ -67,9 +67,9 @@ don't want to install it on your system, use
 
 jome's purpose is to help you pick an emoji.
 
-When you accept an emoji (with the ⌨️ or with the 🖱), jome
-prints the UTF-8 emoji to the standard output. It can also print the
-individual Unicode codepoints.
+When you <<accept-emoji,accept>> an emoji (with the ⌨️ or with the 🖱),
+jome prints the UTF-8 emoji to the standard output. It can also print
+the individual Unicode codepoints.
 
 If you just close the window (you can press **Escape** to do this), jome
 prints nothing to the standard output.
@@ -147,8 +147,8 @@ To select an emoji, use the following keys:
 **End**::
     Go to the last emoji.
 
-To accept the selected emoji, press **Enter**. Depending on the
-<<cl-options,command-line options>>, jome prints the emoji or the
+[[accept-emoji]]To accept the selected emoji, press **Enter**. Depending
+on the <<cl-options,command-line options>>, jome prints the emoji or the
 Unicode codepoints to the standard output and quits.
 
 
