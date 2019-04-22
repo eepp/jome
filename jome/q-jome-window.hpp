@@ -78,7 +78,7 @@ private:
     void _findEmojis(const std::string& cat, const std::string& needles);
     void _selectEmojiGraphicsItem(const boost::optional<unsigned int>& index);
     QGraphicsPixmapItem *_createSelectedGraphicsItem();
-    void _updateInfoLabel(const Emoji& emoji);
+    void _updateInfoLabel(const Emoji *emoji);
     const Emoji *_selectedEmoji();
     void _acceptEmoji(Emoji::SkinTone skinTone);
 

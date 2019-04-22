@@ -399,6 +399,7 @@ void QJomeWindow::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& 
 
     if (!index) {
         selectedItem->hide();
+        this->_updateInfoLabel(nullptr);
         return;
     }
 
@@ -419,7 +420,7 @@ void QJomeWindow::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& 
         _wEmojisGraphicsView->verticalScrollBar()->setValue(static_cast<int>(y));
     }
 
-    this->_updateInfoLabel(emojiGraphicsItem.emoji());
+    this->_updateInfoLabel(&emojiGraphicsItem.emoji());
 }
 
 void QJomeWindow::_searchBoxUpKeyPressed()
@@ -559,20 +560,23 @@ void QJomeWindow::_acceptEmoji(const Emoji::SkinTone skinTone)
     this->done(0);
 }
 
-void QJomeWindow::_updateInfoLabel(const Emoji& emoji)
+void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
 {
     QString text;
 
-    text += "<b>";
-    text += emoji.name().c_str();
-    text += "</b> <span style=\"color: #999\">(";
+    if (emoji) {
+        text += "<b>";
+        text += emoji->name().c_str();
+        text += "</b> <span style=\"color: #999\">(";
 
-    for (const auto codepoint : emoji.codepoints()) {
-        text += QString::number(codepoint, 16) + ", ";
+        for (const auto codepoint : emoji->codepoints()) {
+            text += QString::number(codepoint, 16) + ", ";
+        }
+
+        text.truncate(text.size() - 2);
+        text += ")</span>";
     }
 
-    text.truncate(text.size() - 2);
-    text += ")</span>";
     _wInfoLabel->setText(text);
 }
 
