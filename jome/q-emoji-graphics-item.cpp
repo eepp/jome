@@ -23,7 +23,7 @@ QEmojiGraphicsItem::QEmojiGraphicsItem(const Emoji& emoji,
     _hoverLeaveFunc {hoverLeaveFunc}
 {
     this->setAcceptHoverEvents(true);
-    this->setTransformOriginPoint(16., 16.);
+    this->setShapeMode(QGraphicsPixmapItem::BoundingRectShape);
 }
 
 void QEmojiGraphicsItem::mousePressEvent(QGraphicsSceneMouseEvent * const event)
