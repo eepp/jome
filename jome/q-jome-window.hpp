@@ -74,7 +74,8 @@ private:
     QListWidget *_createCatListWidget();
     void _updateInfoLabel(const Emoji *emoji);
     void _findEmojis(const std::string& cat, const std::string& needles);
-    void _acceptEmoji(Emoji::SkinTone skinTone);
+    void _acceptSelectedEmoji(Emoji::SkinTone skinTone);
+    void _acceptEmoji(const Emoji& emoji, Emoji::SkinTone skinTone);
 
 private slots:
     void _searchTextChanged(const QString& text);

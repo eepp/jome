@@ -350,32 +350,32 @@ void QJomeWindow::_searchBoxEndKeyPressed()
 
 void QJomeWindow::_searchBoxEnterKeyPressed()
 {
-    this->_acceptEmoji(Emoji::SkinTone::NONE);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::NONE);
 }
 
 void QJomeWindow::_searchBoxF1KeyPressed()
 {
-    this->_acceptEmoji(Emoji::SkinTone::LIGHT);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::LIGHT);
 }
 
 void QJomeWindow::_searchBoxF2KeyPressed()
 {
-    this->_acceptEmoji(Emoji::SkinTone::MEDIUM_LIGHT);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::MEDIUM_LIGHT);
 }
 
 void QJomeWindow::_searchBoxF3KeyPressed()
 {
-    this->_acceptEmoji(Emoji::SkinTone::MEDIUM);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::MEDIUM);
 }
 
 void QJomeWindow::_searchBoxF4KeyPressed()
 {
-    this->_acceptEmoji(Emoji::SkinTone::MEDIUM_DARK);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::MEDIUM_DARK);
 }
 
 void QJomeWindow::_searchBoxF5KeyPressed()
 {
-    this->_acceptEmoji(Emoji::SkinTone::DARK);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::DARK);
 }
 
 void QJomeWindow::_emojiSelectionChanged(const Emoji * const emoji)
@@ -386,8 +386,7 @@ void QJomeWindow::_emojiSelectionChanged(const Emoji * const emoji)
 
 void QJomeWindow::_emojiClicked(const Emoji& emoji)
 {
-    _emojiChosenFunc(emoji, Emoji::SkinTone::NONE);
-    this->done(0);
+    this->_acceptEmoji(emoji, Emoji::SkinTone::NONE);
 }
 
 void QJomeWindow::_emojiHoverEntered(const Emoji& emoji)
@@ -400,12 +399,19 @@ void QJomeWindow::_emojiHoverLeaved(const Emoji& emoji)
     this->_updateInfoLabel(_selectedEmoji);
 }
 
-void QJomeWindow::_acceptEmoji(const Emoji::SkinTone skinTone)
+void QJomeWindow::_acceptSelectedEmoji(const Emoji::SkinTone skinTone)
 {
     if (_selectedEmoji) {
-        _emojiChosenFunc(*_selectedEmoji, skinTone);
+        this->_acceptEmoji(*_selectedEmoji, skinTone);
     }
 
+    this->done(0);
+}
+
+void QJomeWindow::_acceptEmoji(const Emoji& emoji,
+                               const Emoji::SkinTone skinTone)
+{
+    _emojiChosenFunc(emoji, skinTone);
     this->done(0);
 }
 
