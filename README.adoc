@@ -42,7 +42,7 @@ You need:
 * https://cmake.org/[CMake] ≥ 3.1.0
 * A pass:[C++14] compiler
 * http://www.boost.org/[Boost] ≥ 1.58 (only to build)
-* Qt 5 (_Widgets_ and _Gui_ component)
+* Qt 5 (_Core_, _GUI_, and _Widgets_ modules)
 * Python 3
 ** The `cairo` package
 ** The `cairosvg` package
