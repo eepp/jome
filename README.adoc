@@ -18,6 +18,23 @@ categories.
 jome is currently only tested on 🐧.
 
 
+== Preview
+
+image::screenshots/all.png[]
+
+image::screenshots/palm.png[]
+
+image::screenshots/wom.png[]
+
+image::screenshots/wom-fact.png[]
+
+image::screenshots/transp-cat.png[]
+
+image::screenshots/transp-cat-car.png[]
+
+image::screenshots/transp-cat-car-lig.png[]
+
+
 == Build
 
 You need:
