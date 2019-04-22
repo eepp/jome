@@ -128,7 +128,7 @@
   {
     "no": 19,
     "codes": "263A",
-    "char": "☺",
+    "char": "☺️",
     "name": "smiling face",
     "keywords": "face | outlined | relaxed | smile | smiling face"
   },
@@ -457,7 +457,7 @@
   {
     "no": 66,
     "codes": "2639",
-    "char": "☹",
+    "char": "☹️",
     "name": "frowning face",
     "keywords": "face | frown | frowning face"
   },
@@ -5917,7 +5917,7 @@
   {
     "no": 846,
     "codes": "2600",
-    "char": "☀",
+    "char": "☀️",
     "name": "sun",
     "keywords": "bright | rays | sun | sunny"
   },
@@ -5959,7 +5959,7 @@
   {
     "no": 852,
     "codes": "2601",
-    "char": "☁",
+    "char": "☁️",
     "name": "cloud",
     "keywords": "cloud | weather"
   },
@@ -6064,7 +6064,7 @@
   {
     "no": 867,
     "codes": "2602",
-    "char": "☂",
+    "char": "☂️",
     "name": "umbrella",
     "keywords": "clothing | rain | umbrella"
   },
@@ -6092,14 +6092,14 @@
   {
     "no": 871,
     "codes": "2744",
-    "char": "❄",
+    "char": "❄️",
     "name": "snowflake",
     "keywords": "cold | snow | snowflake"
   },
   {
     "no": 872,
     "codes": "2603",
-    "char": "☃",
+    "char": "☃️",
     "name": "snowman",
     "keywords": "cold | snow | snowman"
   },
@@ -6113,7 +6113,7 @@
   {
     "no": 874,
     "codes": "2604",
-    "char": "☄",
+    "char": "☄️",
     "name": "comet",
     "keywords": "comet | space"
   },
@@ -6582,35 +6582,35 @@
   {
     "no": 941,
     "codes": "2660",
-    "char": "♠",
+    "char": "♠️",
     "name": "spade suit",
     "keywords": "card | game | spade suit"
   },
   {
     "no": 942,
     "codes": "2665",
-    "char": "♥",
+    "char": "♥️",
     "name": "heart suit",
     "keywords": "card | game | heart suit"
   },
   {
     "no": 943,
     "codes": "2666",
-    "char": "♦",
+    "char": "♦️",
     "name": "diamond suit",
     "keywords": "card | diamond suit | game"
   },
   {
     "no": 944,
     "codes": "2663",
-    "char": "♣",
+    "char": "♣️",
     "name": "club suit",
     "keywords": "card | club suit | game"
   },
   {
     "no": 945,
     "codes": "265F",
-    "char": "♟",
+    "char": "♟️",
     "name": "chess pawn",
     "keywords": "chess | chess pawn | dupe | expendable | red shirt\n➯ emojification of pre-existing character"
   },
@@ -7114,7 +7114,7 @@
   {
     "no": 1017,
     "codes": "260E",
-    "char": "☎",
+    "char": "☎️",
     "name": "telephone",
     "keywords": "phone | telephone"
   },
@@ -7177,7 +7177,7 @@
   {
     "no": 1026,
     "codes": "2328",
-    "char": "⌨",
+    "char": "⌨️",
     "name": "keyboard",
     "keywords": "computer | keyboard"
   },
@@ -7534,7 +7534,7 @@
   {
     "no": 1077,
     "codes": "2709",
-    "char": "✉",
+    "char": "✉️",
     "name": "envelope",
     "keywords": "email | envelope | letter"
   },
@@ -7625,14 +7625,14 @@
   {
     "no": 1090,
     "codes": "270F",
-    "char": "✏",
+    "char": "✏️",
     "name": "pencil",
     "keywords": "pencil"
   },
   {
     "no": 1091,
     "codes": "2712",
-    "char": "✒",
+    "char": "✒️",
     "name": "black nib",
     "keywords": "black nib | nib | pen"
   },
@@ -7807,7 +7807,7 @@
   {
     "no": 1116,
     "codes": "2702",
-    "char": "✂",
+    "char": "✂️",
     "name": "scissors",
     "keywords": "cutting | scissors | tool"
   },
@@ -7891,7 +7891,7 @@
   {
     "no": 1128,
     "codes": "2692",
-    "char": "⚒",
+    "char": "⚒️",
     "name": "hammer and pick",
     "keywords": "hammer | hammer and pick | pick | tool"
   },
@@ -7912,7 +7912,7 @@
   {
     "no": 1131,
     "codes": "2694",
-    "char": "⚔",
+    "char": "⚔️",
     "name": "crossed swords",
     "keywords": "crossed | swords | weapon"
   },
@@ -7954,7 +7954,7 @@
   {
     "no": 1137,
     "codes": "2699",
-    "char": "⚙",
+    "char": "⚙️",
     "name": "gear",
     "keywords": "cog | cogwheel | gear | tool"
   },
@@ -7968,7 +7968,7 @@
   {
     "no": 1139,
     "codes": "2696",
-    "char": "⚖",
+    "char": "⚖️",
     "name": "balance scale",
     "keywords": "balance | justice | Libra | scale | zodiac"
   },
@@ -8003,7 +8003,7 @@
   {
     "no": 1144,
     "codes": "2697",
-    "char": "⚗",
+    "char": "⚗️",
     "name": "alembic",
     "keywords": "alembic | chemistry | tool"
   },
@@ -8178,14 +8178,14 @@
   {
     "no": 1169,
     "codes": "26B0",
-    "char": "⚰",
+    "char": "⚰️",
     "name": "coffin",
     "keywords": "coffin | death"
   },
   {
     "no": 1170,
     "codes": "26B1",
-    "char": "⚱",
+    "char": "⚱️",
     "name": "funeral urn",
     "keywords": "ashes | death | funeral | urn"
   },
@@ -8290,7 +8290,7 @@
   {
     "no": 1185,
     "codes": "26A0",
-    "char": "⚠",
+    "char": "⚠️",
     "name": "warning",
     "keywords": "warning"
   },
@@ -8367,112 +8367,112 @@
   {
     "no": 1196,
     "codes": "2622",
-    "char": "☢",
+    "char": "☢️",
     "name": "radioactive",
     "keywords": "radioactive | sign"
   },
   {
     "no": 1197,
     "codes": "2623",
-    "char": "☣",
+    "char": "☣️",
     "name": "biohazard",
     "keywords": "biohazard | sign"
   },
   {
     "no": 1198,
     "codes": "2B06",
-    "char": "⬆",
+    "char": "⬆️",
     "name": "up arrow",
     "keywords": "arrow | cardinal | direction | north | up arrow"
   },
   {
     "no": 1199,
     "codes": "2197",
-    "char": "↗",
+    "char": "↗️",
     "name": "up-right arrow",
     "keywords": "arrow | direction | intercardinal | northeast | up-right arrow"
   },
   {
     "no": 1200,
     "codes": "27A1",
-    "char": "➡",
+    "char": "➡️",
     "name": "right arrow",
     "keywords": "arrow | cardinal | direction | east | right arrow"
   },
   {
     "no": 1201,
     "codes": "2198",
-    "char": "↘",
+    "char": "↘️",
     "name": "down-right arrow",
     "keywords": "arrow | direction | down-right arrow | intercardinal | southeast"
   },
   {
     "no": 1202,
     "codes": "2B07",
-    "char": "⬇",
+    "char": "⬇️",
     "name": "down arrow",
     "keywords": "arrow | cardinal | direction | down | south"
   },
   {
     "no": 1203,
     "codes": "2199",
-    "char": "↙",
+    "char": "↙️",
     "name": "down-left arrow",
     "keywords": "arrow | direction | down-left arrow | intercardinal | southwest"
   },
   {
     "no": 1204,
     "codes": "2B05",
-    "char": "⬅",
+    "char": "⬅️",
     "name": "left arrow",
     "keywords": "arrow | cardinal | direction | left arrow | west"
   },
   {
     "no": 1205,
     "codes": "2196",
-    "char": "↖",
+    "char": "↖️",
     "name": "up-left arrow",
     "keywords": "arrow | direction | intercardinal | northwest | up-left arrow"
   },
   {
     "no": 1206,
     "codes": "2195",
-    "char": "↕",
+    "char": "↕️",
     "name": "up-down arrow",
     "keywords": "arrow | up-down arrow"
   },
   {
     "no": 1207,
     "codes": "2194",
-    "char": "↔",
+    "char": "↔️",
     "name": "left-right arrow",
     "keywords": "arrow | left-right arrow"
   },
   {
     "no": 1208,
     "codes": "21A9",
-    "char": "↩",
+    "char": "↩️",
     "name": "right arrow curving left",
     "keywords": "arrow | right arrow curving left"
   },
   {
     "no": 1209,
     "codes": "21AA",
-    "char": "↪",
+    "char": "↪️",
     "name": "left arrow curving right",
     "keywords": "arrow | left arrow curving right"
   },
   {
     "no": 1210,
     "codes": "2934",
-    "char": "⤴",
+    "char": "⤴️",
     "name": "right arrow curving up",
     "keywords": "arrow | right arrow curving up"
   },
   {
     "no": 1211,
     "codes": "2935",
-    "char": "⤵",
+    "char": "⤵️",
     "name": "right arrow curving down",
     "keywords": "arrow | down | right arrow curving down"
   },
@@ -8535,7 +8535,7 @@
   {
     "no": 1220,
     "codes": "269B",
-    "char": "⚛",
+    "char": "⚛️",
     "name": "atom symbol",
     "keywords": "atheist | atom | atom symbol"
   },
@@ -8549,49 +8549,49 @@
   {
     "no": 1222,
     "codes": "2721",
-    "char": "✡",
+    "char": "✡️",
     "name": "star of David",
     "keywords": "David | Jew | Jewish | religion | star | star of David"
   },
   {
     "no": 1223,
     "codes": "2638",
-    "char": "☸",
+    "char": "☸️",
     "name": "wheel of dharma",
     "keywords": "Buddhist | dharma | religion | wheel | wheel of dharma"
   },
   {
     "no": 1224,
     "codes": "262F",
-    "char": "☯",
+    "char": "☯️",
     "name": "yin yang",
     "keywords": "religion | tao | taoist | yang | yin"
   },
   {
     "no": 1225,
     "codes": "271D",
-    "char": "✝",
+    "char": "✝️",
     "name": "latin cross",
     "keywords": "Christian | cross | latin cross | religion"
   },
   {
     "no": 1226,
     "codes": "2626",
-    "char": "☦",
+    "char": "☦️",
     "name": "orthodox cross",
     "keywords": "Christian | cross | orthodox cross | religion"
   },
   {
     "no": 1227,
     "codes": "262A",
-    "char": "☪",
+    "char": "☪️",
     "name": "star and crescent",
     "keywords": "islam | Muslim | religion | star and crescent"
   },
   {
     "no": 1228,
     "codes": "262E",
-    "char": "☮",
+    "char": "☮️",
     "name": "peace symbol",
     "keywords": "peace | peace symbol"
   },
@@ -8724,7 +8724,7 @@
   {
     "no": 1247,
     "codes": "25B6",
-    "char": "▶",
+    "char": "▶️",
     "name": "play button",
     "keywords": "arrow | play | play button | right | triangle"
   },
@@ -8738,21 +8738,21 @@
   {
     "no": 1249,
     "codes": "23ED",
-    "char": "⏭",
+    "char": "⏭️",
     "name": "next track button",
     "keywords": "arrow | next scene | next track | next track button | triangle"
   },
   {
     "no": 1250,
     "codes": "23EF",
-    "char": "⏯",
+    "char": "⏯️",
     "name": "play or pause button",
     "keywords": "arrow | pause | play | play or pause button | right | triangle"
   },
   {
     "no": 1251,
     "codes": "25C0",
-    "char": "◀",
+    "char": "◀️",
     "name": "reverse button",
     "keywords": "arrow | left | reverse | reverse button | triangle"
   },
@@ -8766,7 +8766,7 @@
   {
     "no": 1253,
     "codes": "23EE",
-    "char": "⏮",
+    "char": "⏮️",
     "name": "last track button",
     "keywords": "arrow | last track button | previous scene | previous track | triangle"
   },
@@ -8822,7 +8822,7 @@
   {
     "no": 1261,
     "codes": "23CF",
-    "char": "⏏",
+    "char": "⏏️",
     "name": "eject button",
     "keywords": "eject | eject button"
   },
@@ -8871,42 +8871,42 @@
   {
     "no": 1268,
     "codes": "2640",
-    "char": "♀",
+    "char": "♀️",
     "name": "female sign",
     "keywords": "female sign | woman"
   },
   {
     "no": 1269,
     "codes": "2642",
-    "char": "♂",
+    "char": "♂️",
     "name": "male sign",
     "keywords": "male sign | man"
   },
   {
     "no": 1270,
     "codes": "2695",
-    "char": "⚕",
+    "char": "⚕️",
     "name": "medical symbol",
     "keywords": "aesculapius | medical symbol | medicine | staff"
   },
   {
     "no": 1271,
     "codes": "267E",
-    "char": "♾",
+    "char": "♾️",
     "name": "infinity",
     "keywords": "forever | infinity | unbounded | universal\n➯ emojification of pre-existing character"
   },
   {
     "no": 1272,
     "codes": "267B",
-    "char": "♻",
+    "char": "♻️",
     "name": "recycling symbol",
     "keywords": "recycle | recycling symbol"
   },
   {
     "no": 1273,
     "codes": "269C",
-    "char": "⚜",
+    "char": "⚜️",
     "name": "fleur-de-lis",
     "keywords": "fleur-de-lis"
   },
@@ -8948,21 +8948,21 @@
   {
     "no": 1279,
     "codes": "2611",
-    "char": "☑",
+    "char": "☑️",
     "name": "ballot box with check",
     "keywords": "ballot | ballot box with check | box | check"
   },
   {
     "no": 1280,
     "codes": "2714",
-    "char": "✔",
+    "char": "✔️",
     "name": "heavy check mark",
     "keywords": "check | heavy check mark | mark"
   },
   {
     "no": 1281,
     "codes": "2716",
-    "char": "✖",
+    "char": "✖️",
     "name": "heavy multiplication x",
     "keywords": "cancel | heavy multiplication x | multiplication | multiply | x"
   },
@@ -9018,42 +9018,42 @@
   {
     "no": 1289,
     "codes": "303D",
-    "char": "〽",
+    "char": "〽️",
     "name": "part alternation mark",
     "keywords": "mark | part | part alternation mark"
   },
   {
     "no": 1290,
     "codes": "2733",
-    "char": "✳",
+    "char": "✳️",
     "name": "eight-spoked asterisk",
     "keywords": "asterisk | eight-spoked asterisk"
   },
   {
     "no": 1291,
     "codes": "2734",
-    "char": "✴",
+    "char": "✴️",
     "name": "eight-pointed star",
     "keywords": "eight-pointed star | star"
   },
   {
     "no": 1292,
     "codes": "2747",
-    "char": "❇",
+    "char": "❇️",
     "name": "sparkle",
     "keywords": "sparkle"
   },
   {
     "no": 1293,
     "codes": "203C",
-    "char": "‼",
+    "char": "‼️",
     "name": "double exclamation mark",
     "keywords": "bangbang | double exclamation mark | exclamation | mark | punctuation"
   },
   {
     "no": 1294,
     "codes": "2049",
-    "char": "⁉",
+    "char": "⁉️",
     "name": "exclamation question mark",
     "keywords": "exclamation | interrobang | mark | punctuation | question"
   },
@@ -9088,28 +9088,28 @@
   {
     "no": 1299,
     "codes": "3030",
-    "char": "〰",
+    "char": "〰️",
     "name": "wavy dash",
     "keywords": "dash | punctuation | wavy"
   },
   {
     "no": 1300,
     "codes": "00A9",
-    "char": "©",
+    "char": "©️",
     "name": "copyright",
     "keywords": "copyright"
   },
   {
     "no": 1301,
     "codes": "00AE",
-    "char": "®",
+    "char": "®️",
     "name": "registered",
     "keywords": "registered"
   },
   {
     "no": 1302,
     "codes": "2122",
-    "char": "™",
+    "char": "™️",
     "name": "trade mark",
     "keywords": "mark | tm | trade mark | trademark"
   },
@@ -9284,7 +9284,7 @@
   {
     "no": 1327,
     "codes": "2139",
-    "char": "ℹ",
+    "char": "ℹ️",
     "name": "information",
     "keywords": "i | information"
   },
@@ -9298,7 +9298,7 @@
   {
     "no": 1329,
     "codes": "24C2",
-    "char": "Ⓜ",
+    "char": "Ⓜ️",
     "name": "circled M",
     "keywords": "circle | circled M | m"
   },
@@ -9522,14 +9522,14 @@
   {
     "no": 1361,
     "codes": "25FC",
-    "char": "◼",
+    "char": "◼️",
     "name": "black medium square",
     "keywords": "black medium square | geometric | square"
   },
   {
     "no": 1362,
     "codes": "25FB",
-    "char": "◻",
+    "char": "◻️",
     "name": "white medium square",
     "keywords": "geometric | square | white medium square"
   },
@@ -9550,14 +9550,14 @@
   {
     "no": 1365,
     "codes": "25AB",
-    "char": "▫",
+    "char": "▫️",
     "name": "white small square",
     "keywords": "geometric | square | white small square"
   },
   {
     "no": 1366,
     "codes": "25AA",
-    "char": "▪",
+    "char": "▪️",
     "name": "black small square",
     "keywords": "black small square | geometric | square"
   },

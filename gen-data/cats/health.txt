@@ -7,11 +7,11 @@
 🧫 Petri Dish
 🧬 DNA
 🔬 Microscope
-⚗ Alembic
+⚗️ Alembic
 🌡 Thermometer
 💫 Dizzy
-☢ Radioactive
-☣ Biohazard
+☢️ Radioactive
+☣️ Biohazard
 😷 Face With Medical Mask
 🤒 Face With Thermometer
 🤕 Face With Head-Bandage

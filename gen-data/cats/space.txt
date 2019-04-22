@@ -15,12 +15,12 @@
 🌙 Crescent Moon
 🌛 First Quarter Moon Face
 🌜 Last Quarter Moon Face
-☀ Sun
+☀️ Sun
 🌞 Sun With Face
 ⭐ Star
 🌟 Glowing Star
 🌠 Shooting Star
-☄ Comet
+☄️ Comet
 ✨ Sparkles
 🌌 Milky Way
 🎑 Moon Viewing Ceremony

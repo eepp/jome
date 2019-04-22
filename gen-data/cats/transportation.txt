@@ -58,7 +58,7 @@
 🚧 Construction
 ⚓ Anchor
 💺 Seat
-Ⓜ Circled M
+Ⓜ️ Circled M
 🅿 P Button
 👨‍✈️ Man Pilot
 👩‍✈️ Woman Pilot

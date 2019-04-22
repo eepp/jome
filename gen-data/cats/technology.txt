@@ -3,7 +3,7 @@
 📳 Vibration Mode
 📶 Antenna Bars
 🤳 Selfie
-☎ Telephone
+☎️ Telephone
 📞 Telephone Receiver
 📟 Pager
 📠 Fax Machine
@@ -12,7 +12,7 @@
 💻 Laptop Computer
 🖥 Desktop Computer
 🖨 Printer
-⌨ Keyboard
+⌨️ Keyboard
 🖱 Computer Mouse
 🖲 Trackball
 🕹 Joystick
@@ -28,7 +28,7 @@
 🎛 Control Knobs
 🎚 Level Slider
 ⚡ High Voltage
-⚛ Atom Symbol
+⚛️ Atom Symbol
 🔬 Microscope
 🔭 Telescope
 📡 Satellite Antenna

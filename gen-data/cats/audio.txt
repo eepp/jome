@@ -19,13 +19,13 @@
 🔀 Shuffle Tracks Button
 🔁 Repeat Button
 🔂 Repeat Single Button
-▶ Play Button
+▶️ Play Button
 ⏩ Fast-Forward Button
-◀ Reverse Button
+◀️ Reverse Button
 ⏪ Fast Reverse Button
 🔼 Upwards Button
 ⏫ Fast Up Button
 🔽 Downwards Button
 ⏬ Fast Down Button
 ⏹ Stop Button
-⏏ Eject Button
+⏏️ Eject Button

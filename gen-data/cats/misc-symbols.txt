@@ -14,10 +14,10 @@
 💈 Barber Pole
 🛑 Stop Sign
 🌀 Cyclone
-♠ Spade Suit
-♥ Heart Suit
-♦ Diamond Suit
-♣ Club Suit
+♠️ Spade Suit
+♥️ Heart Suit
+♦️ Diamond Suit
+♣️ Club Suit
 🃏 Joker
 🀄 Mahjong Red Dragon
 🎴 Flower Playing Cards
@@ -30,7 +30,7 @@
 🚻 Restroom
 🚼 Baby Symbol
 🚾 Water Closet
-⚠ Warning
+⚠️ Warning
 🚸 Children Crossing
 ⛔ No Entry
 🚫 Prohibited
@@ -40,27 +40,27 @@
 🚱 Non-Potable Water
 🚷 No Pedestrians
 🔞 No One Under Eighteen
-☢ Radioactive
-☣ Biohazard
+☢️ Radioactive
+☣️ Biohazard
 🔃 Clockwise Vertical Arrows
 🔄 Counterclockwise Arrows Button
-⚛ Atom Symbol
+⚛️ Atom Symbol
 🎦 Cinema
 🔅 Dim Button
 🔆 Bright Button
 📶 Antenna Bars
 📳 Vibration Mode
 📴 Mobile Phone Off
-♾ Infinity
-♻ Recycling Symbol
+♾️ Infinity
+♻️ Recycling Symbol
 🔱 Trident Emblem
 📛 Name Badge
 🔰 Japanese Symbol for Beginner
 ⭕ Heavy Large Circle
 ✅ White Heavy Check Mark
-☑ Ballot Box With Check
-✔ Heavy Check Mark
-✖ Heavy Multiplication X
+☑️ Ballot Box With Check
+✔️ Heavy Check Mark
+✖️ Heavy Multiplication X
 ❌ Cross Mark
 ❎ Cross Mark Button
 ➕ Heavy Plus Sign
@@ -68,19 +68,19 @@
 ➗ Heavy Division Sign
 ➰ Curly Loop
 ➿ Double Curly Loop
-〽 Part Alternation Mark
-✳ Eight-Spoked Asterisk
-✴ Eight-Pointed Star
-❇ Sparkle
-‼ Double Exclamation Mark
-⁉ Exclamation Question Mark
+〽️ Part Alternation Mark
+✳️ Eight-Spoked Asterisk
+✴️ Eight-Pointed Star
+❇️ Sparkle
+‼️ Double Exclamation Mark
+⁉️ Exclamation Question Mark
 ❓ Question Mark
 ❔ White Question Mark
 ❕ White Exclamation Mark
 ❗ Exclamation Mark
-© Copyright
-® Registered
-™ Trade Mark
+©️ Copyright
+®️ Registered
+™️ Trade Mark
 #️⃣ Keycap Number Sign
 0️⃣ Keycap Digit Zero
 1️⃣ Keycap Digit One
@@ -105,9 +105,9 @@
 🆑 CL Button
 🆒 Cool Button
 🆓 Free Button
-ℹ Information
+ℹ️ Information
 🆔 ID Button
-Ⓜ Circled M
+Ⓜ️ Circled M
 🆕 New Button
 🆖 NG Button
 🆗 OK Button
@@ -138,12 +138,12 @@
 ⚪ White Circle
 ⬛ Black Large Square
 ⬜ White Large Square
-◼ Black Medium Square
-◻ White Medium Square
+◼️ Black Medium Square
+◻️ White Medium Square
 ◾ Black Medium-Small Square
 ◽ White Medium-Small Square
-▪ Black Small Square
-▫ White Small Square
+▪️ Black Small Square
+▫️ White Small Square
 🔶 Large Orange Diamond
 🔷 Large Blue Diamond
 🔸 Small Orange Diamond

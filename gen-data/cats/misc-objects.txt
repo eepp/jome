@@ -46,7 +46,7 @@
 📻 Radio
 📱 Mobile Phone
 📲 Mobile Phone With Arrow
-☎ Telephone
+☎️ Telephone
 📞 Telephone Receiver
 📟 Pager
 📠 Fax Machine
@@ -55,7 +55,7 @@
 💻 Laptop Computer
 🖥 Desktop Computer
 🖨 Printer
-⌨ Keyboard
+⌨️ Keyboard
 🖱 Computer Mouse
 🖲 Trackball
 💽 Computer Disk
@@ -101,7 +101,7 @@
 💸 Money With Wings
 💳 Credit Card
 🧾 Receipt
-✉ Envelope
+✉️ Envelope
 📧 E-Mail
 📨 Incoming Envelope
 📩 Envelope With Arrow
@@ -114,8 +114,8 @@
 📭 Open Mailbox With Lowered Flag
 📮 Postbox
 🗳 Ballot Box With Ballot
-✏ Pencil
-✒ Black Nib
+✏️ Pencil
+✒️ Black Nib
 🖋 Fountain Pen
 🖊 Pen
 🖌 Paintbrush
@@ -139,7 +139,7 @@
 🖇 Linked Paperclips
 📏 Straight Ruler
 📐 Triangular Ruler
-✂ Scissors
+✂️ Scissors
 🗃 Card File Box
 🗄 File Cabinet
 🗑 Wastebasket
@@ -151,22 +151,22 @@
 🗝 Old Key
 🔨 Hammer
 ⛏ Pick
-⚒ Hammer and Pick
+⚒️ Hammer and Pick
 🛠 Hammer and Wrench
 🗡 Dagger
-⚔ Crossed Swords
+⚔️ Crossed Swords
 🔫 Pistol
 🛡 Shield
 🔧 Wrench
 🔩 Nut and Bolt
-⚙ Gear
+⚙️ Gear
 🗜 Clamp
-⚖ Balance Scale
+⚖️ Balance Scale
 🔗 Link
 ⛓ Chains
 🧰 Toolbox
 🧲 Magnet
-⚗ Alembic
+⚗️ Alembic
 🧪 Test Tube
 🧫 Petri Dish
 🧬 DNA
@@ -190,7 +190,7 @@
 🧽 Sponge
 🧯 Fire Extinguisher
 🚬 Cigarette
-⚰ Coffin
-⚱ Funeral Urn
+⚰️ Coffin
+⚱️ Funeral Urn
 🗿 Moai
 🚰 Potable Water

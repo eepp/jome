@@ -16,7 +16,7 @@
 🤩 Star-Struck
 😘 Face Blowing a Kiss
 😗 Kissing Face
-☺ Smiling Face
+☺️ Smiling Face
 😚 Kissing Face With Closed Eyes
 😙 Kissing Face With Smiling Eyes
 😋 Face Savoring Food
@@ -63,7 +63,7 @@
 😕 Confused Face
 😟 Worried Face
 🙁 Slightly Frowning Face
-☹ Frowning Face
+☹️ Frowning Face
 😮 Face With Open Mouth
 😯 Hushed Face
 😲 Astonished Face

@@ -19,7 +19,7 @@
 🛍 Shopping Bags
 🌂 Closed Umbrella
 ⛱ Umbrella on Ground
-☂ Umbrella
+☂️ Umbrella
 👓 Glasses
 🕶 Sunglasses
 🥽 Goggles

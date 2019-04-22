@@ -1,7 +1,7 @@
-☀ Sun
+☀️ Sun
 🌞 Sun With Face
 🕶 Sunglasses
-☁ Cloud
+☁️ Cloud
 ⛅ Sun Behind Cloud
 ⛈ Cloud With Lightning and Rain
 🌤 Sun Behind Small Cloud
@@ -15,7 +15,7 @@
 🌊 Water Wave
 💦 Sweat Droplets
 ⛱ Umbrella on Ground
-☂ Umbrella
+☂️ Umbrella
 ☔ Umbrella With Rain Drops
 🌂 Closed Umbrella
 🌈 Rainbow
@@ -24,8 +24,8 @@
 💨 Dashing Away
 🌀 Cyclone
 🌫 Fog
-❄ Snowflake
-☃ Snowman
+❄️ Snowflake
+☃️ Snowman
 ⛄ Snowman Without Snow
 🆒 Cool Button
 🔥 Fire

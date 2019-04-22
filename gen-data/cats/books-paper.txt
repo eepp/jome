@@ -15,7 +15,7 @@
 🔖 Bookmark
 🏷 Label
 🧾 Receipt
-✉ Envelope
+✉️ Envelope
 📨 Incoming Envelope
 📩 Envelope With Arrow
 📝 Memo

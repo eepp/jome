@@ -1,9 +1,9 @@
 🕳 Hole
 🔪 Kitchen Knife
 🗡 Dagger
-⚔ Crossed Swords
+⚔️ Crossed Swords
 ⛏ Pick
-✂ Scissors
+✂️ Scissors
 📌 Pushpin
 📍 Round Pushpin
 💉 Syringe
@@ -17,5 +17,5 @@
 🚬 Cigarette
 🧯 Fire Extinguisher
 🔫 Pistol
-⚰ Coffin
-⚱ Funeral Urn
+⚰️ Coffin
+⚱️ Funeral Urn
