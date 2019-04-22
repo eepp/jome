@@ -5,22 +5,20 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
+#include <QGraphicsSceneMouseEvent>
 #include <cstdio>
 
 #include "q-emoji-graphics-item.hpp"
+#include "q-emojis-widget.hpp"
 
 namespace jome {
 
 QEmojiGraphicsItem::QEmojiGraphicsItem(const Emoji& emoji,
                                        const QPixmap& pixmap,
-                                       const SelectEmojiFunc& pressFunc,
-                                       const SelectEmojiFunc& hoverEnterFunc,
-                                       const SelectEmojiFunc& hoverLeaveFunc) :
+                                       QEmojisWidget& emojisWidget) :
     QGraphicsPixmapItem {pixmap},
     _emoji {&emoji},
-    _pressFunc {pressFunc},
-    _hoverEnterFunc {hoverEnterFunc},
-    _hoverLeaveFunc {hoverLeaveFunc}
+    _emojisWidget {&emojisWidget}
 {
     this->setAcceptHoverEvents(true);
     this->setShapeMode(QGraphicsPixmapItem::BoundingRectShape);
@@ -28,21 +26,24 @@ QEmojiGraphicsItem::QEmojiGraphicsItem(const Emoji& emoji,
 
 void QEmojiGraphicsItem::mousePressEvent(QGraphicsSceneMouseEvent * const event)
 {
-    _pressFunc(*_emoji);
+    if (event->button() == Qt::LeftButton) {
+        _emojisWidget->_emojiGraphicsItemClicked(*this);
+    }
+
     QGraphicsPixmapItem::mousePressEvent(event);
 }
 
 void QEmojiGraphicsItem::hoverEnterEvent(QGraphicsSceneHoverEvent * const event)
 {
     this->setOpacity(.5);
-    _hoverEnterFunc(*_emoji);
+    _emojisWidget->_emojiGraphicsItemHoverEntered(*this);
     QGraphicsPixmapItem::hoverEnterEvent(event);
 }
 
 void QEmojiGraphicsItem::hoverLeaveEvent(QGraphicsSceneHoverEvent * const event)
 {
     this->setOpacity(1.);
-    _hoverLeaveFunc(*_emoji);
+    _emojisWidget->_emojiGraphicsItemHoverLeaved(*this);
     QGraphicsPixmapItem::hoverLeaveEvent(event);
 }
 

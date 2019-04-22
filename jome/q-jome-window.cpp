@@ -105,7 +105,6 @@ QJomeWindow::QJomeWindow(const EmojiDb& emojiDb,
                          const EmojiChosenFunc& emojiChosenFunc) :
     QDialog {},
     _emojiDb {&emojiDb},
-    _emojiImages {emojiDb},
     _emojiChosenFunc {emojiChosenFunc}
 {
     this->setWindowTitle("jome");
@@ -177,11 +176,6 @@ QListWidget *QJomeWindow::_createCatListWidget()
     return listWidget;
 }
 
-void QJomeWindow::_setGraphicsSceneStyle(QGraphicsScene& gs)
-{
-    gs.setBackgroundBrush(QColor {"#f8f8f8"});
-}
-
 void QJomeWindow::_buildUi()
 {
     auto searchBox = new QLineEdit;
@@ -226,12 +220,15 @@ void QJomeWindow::_buildUi()
     mainVbox->setMargin(8);
     mainVbox->setSpacing(8);
     mainVbox->addWidget(searchBox);
-    _wEmojisGraphicsView = new QGraphicsView();
-    _wEmojisGraphicsView->setAlignment(Qt::AlignLeft | Qt::AlignTop);
-    _wEmojisGraphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-    _wEmojisGraphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    this->_setGraphicsSceneStyle(_allEmojisGraphicsScene);
-    this->_setGraphicsSceneStyle(_findEmojisGraphicsScene);
+    _wEmojis = new QEmojisWidget {nullptr, *_emojiDb};
+    QObject::connect(_wEmojis, SIGNAL(selectionChanged(const Emoji *)),
+                     this, SLOT(_emojiSelectionChanged(const Emoji *)));
+    QObject::connect(_wEmojis, SIGNAL(emojiClicked(const Emoji&)),
+                     this, SLOT(_emojiClicked(const Emoji&)));
+    QObject::connect(_wEmojis, SIGNAL(emojiHoverEntered(const Emoji&)),
+                     this, SLOT(_emojiHoverEntered(const Emoji&)));
+    QObject::connect(_wEmojis, SIGNAL(emojiHoverLeaved(const Emoji&)),
+                     this, SLOT(_emojiHoverLeaved(const Emoji&)));
     _wCatList = this->_createCatListWidget();
     this->_wCatList->setCurrentRow(0);
 
@@ -239,14 +236,10 @@ void QJomeWindow::_buildUi()
 
     emojisHbox->setMargin(0);
     emojisHbox->setSpacing(8);
-    emojisHbox->addWidget(_wEmojisGraphicsView);
+    emojisHbox->addWidget(_wEmojis);
     emojisHbox->addWidget(_wCatList);
     mainVbox->addLayout(emojisHbox);
     this->setLayout(mainVbox);
-    _allEmojisGraphicsSceneSelectedItem = this->_createSelectedGraphicsItem();
-    _allEmojisGraphicsScene.addItem(_allEmojisGraphicsSceneSelectedItem);
-    _findEmojisGraphicsSceneSelectedItem = this->_createSelectedGraphicsItem();
-    _findEmojisGraphicsScene.addItem(_findEmojisGraphicsSceneSelectedItem);
 
     _wInfoLabel = new QLabel {""};
     mainVbox->addWidget(_wInfoLabel);
@@ -255,46 +248,13 @@ void QJomeWindow::_buildUi()
 void QJomeWindow::showEvent(QShowEvent * const event)
 {
     QDialog::showEvent(event);
-    this->_buildAllEmojisGraphicsScene();
-    this->_showAllEmojis();
-}
 
-void QJomeWindow::_buildAllEmojisGraphicsScene()
-{
-    if (_allEmojisGraphicsSceneBuilt) {
-        return;
+    if (!_emojisWidgetBuilt) {
+        _wEmojis->rebuild();
+        _emojisWidgetBuilt = true;
     }
 
-    qreal y = 8.;
-
-    _allEmojisGraphicsScene.setSceneRect(0., 0.,
-                                         static_cast<qreal>(_wEmojisGraphicsView->width()) - 8., 0.);
-    QFont font {"Hack, DejaVu Sans Mono, monospace", 10, QFont::Bold};
-
-    for (const auto& cat : _emojiDb->cats()) {
-        auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()),
-                                                    font);
-
-        item->setPos(8., y);
-        _catVertPositions[cat.get()] = y;
-        y += 24.;
-        this->_addEmojisToGraphicsScene(cat->emojis(),
-                                        _allEmojiGraphicsItems,
-                                        _allEmojisGraphicsScene, y);
-        y += 8.;
-    }
-
-    y -= 8.;
-    _allEmojisGraphicsScene.setSceneRect(0., 0.,
-                                         static_cast<qreal>(_wEmojisGraphicsView->width()) - 8., y);
-    _allEmojisGraphicsSceneBuilt = true;
-}
-
-void QJomeWindow::_showAllEmojis()
-{
-    _curEmojiGraphicsItems = _allEmojiGraphicsItems;
-    _wEmojisGraphicsView->setScene(&_allEmojisGraphicsScene);
-    this->_selectEmojiGraphicsItem(0);
+    _wEmojis->showAllEmojis();
 }
 
 void QJomeWindow::_findEmojis(const std::string& cat,
@@ -302,37 +262,14 @@ void QJomeWindow::_findEmojis(const std::string& cat,
 {
     std::vector<const Emoji *> results;
 
-    _findEmojisGraphicsScene.removeItem(_findEmojisGraphicsSceneSelectedItem);
-    _findEmojisGraphicsScene.clear();
-    _findEmojisGraphicsScene.addItem(_findEmojisGraphicsSceneSelectedItem);
-    _curEmojiGraphicsItems.clear();
     _emojiDb->findEmojis(cat, needles, results);
-    qreal y = 0.;
-
-    _findEmojisGraphicsScene.setSceneRect(0., 0.,
-                                          static_cast<qreal>(_wEmojisGraphicsView->width()) - 8., 0.);
-
-    if (!results.empty()) {
-        y = 8.;
-        this->_addEmojisToGraphicsScene(results, _curEmojiGraphicsItems,
-                                        _findEmojisGraphicsScene, y);
-    }
-
-    _findEmojisGraphicsScene.setSceneRect(0., 0.,
-                                          static_cast<qreal>(_wEmojisGraphicsView->width()) - 8., y);
-    _wEmojisGraphicsView->setScene(&_findEmojisGraphicsScene);
-
-    if (results.empty()) {
-        this->_selectEmojiGraphicsItem(boost::none);
-    } else {
-        this->_selectEmojiGraphicsItem(0);
-    }
+    _wEmojis->showFindResults(results);
 }
 
 void QJomeWindow::_searchTextChanged(const QString& text)
 {
     if (text.isEmpty()) {
-        this->_showAllEmojis();
+        _wEmojis->showAllEmojis();
         return;
     }
 
@@ -351,7 +288,7 @@ void QJomeWindow::_searchTextChanged(const QString& text)
 
 void QJomeWindow::_catListItemSelectionChanged()
 {
-    if (_wEmojisGraphicsView->scene() != &_allEmojisGraphicsScene) {
+    if (!_wEmojis->showingAllEmojis()) {
         return;
     }
 
@@ -362,9 +299,8 @@ void QJomeWindow::_catListItemSelectionChanged()
     }
 
     const auto& item = static_cast<const QCatListWidgetItem&>(*selectedItems[0]);
-    const auto y = std::max(0., _catVertPositions[&item.cat()] - 8);
 
-    _wEmojisGraphicsView->verticalScrollBar()->setValue(static_cast<int>(y));
+    _wEmojis->scrollToCat(item.cat());
 }
 
 void QJomeWindow::_catListItemClicked(QListWidgetItem * const item)
@@ -372,151 +308,44 @@ void QJomeWindow::_catListItemClicked(QListWidgetItem * const item)
     this->_catListItemSelectionChanged();
 }
 
-QGraphicsPixmapItem *QJomeWindow::_createSelectedGraphicsItem()
-{
-    const auto path = std::string {JOME_DATA_DIR} + "/sel.png";
-
-    QImage image {QString::fromStdString(path)};
-    auto graphicsItem = new QGraphicsPixmapItem {QPixmap::fromImage(std::move(image))};
-
-    graphicsItem->hide();
-    graphicsItem->setEnabled(false);
-    graphicsItem->setZValue(1000.);
-    return graphicsItem;
-}
-
-void QJomeWindow::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& index)
-{
-    QGraphicsPixmapItem *selectedItem;
-
-    if (_wEmojisGraphicsView->scene() == &_allEmojisGraphicsScene) {
-        selectedItem = _allEmojisGraphicsSceneSelectedItem;
-    } else {
-        selectedItem = _findEmojisGraphicsSceneSelectedItem;
-    }
-
-    _selectedEmojiGraphicsItemIndex = index;
-
-    if (!index) {
-        selectedItem->hide();
-        this->_updateInfoLabel(nullptr);
-        return;
-    }
-
-    assert(*index < _curEmojiGraphicsItems.size());
-
-    const auto& emojiGraphicsItem = *_curEmojiGraphicsItems[*index];
-
-    selectedItem->show();
-    selectedItem->setPos(emojiGraphicsItem.pos().x() - 4.,
-                         emojiGraphicsItem.pos().y() - 4.);
-
-    if (*index == 0) {
-        _wEmojisGraphicsView->verticalScrollBar()->setValue(0);
-    } else {
-        const auto candY = selectedItem->pos().y() + 16. -
-                           static_cast<qreal>(_wEmojisGraphicsView->height()) / 2.;
-        const auto y = std::max(0., candY);
-        _wEmojisGraphicsView->verticalScrollBar()->setValue(static_cast<int>(y));
-    }
-
-    this->_updateInfoLabel(&emojiGraphicsItem.emoji());
-}
-
 void QJomeWindow::_searchBoxUpKeyPressed()
 {
-    if (!_selectedEmojiGraphicsItemIndex) {
-        return;
-    }
-
-    const auto& selectedEmojiGraphicsItem = *_curEmojiGraphicsItems[*_selectedEmojiGraphicsItemIndex];
-    const auto curX = selectedEmojiGraphicsItem.pos().x();
-
-    for (auto i = static_cast<int>(*_selectedEmojiGraphicsItemIndex) - 1; i >= 0; --i) {
-        const auto& emojiGraphicsItem = *_curEmojiGraphicsItems[i];
-
-        if (emojiGraphicsItem.pos().x() == curX) {
-            this->_selectEmojiGraphicsItem(static_cast<unsigned int>(i));
-            return;
-        }
-    }
+    _wEmojis->selectPreviousRow();
 }
 
 void QJomeWindow::_searchBoxRightKeyPressed()
 {
-    if (!_selectedEmojiGraphicsItemIndex) {
-        return;
-    }
-
-    if (*_selectedEmojiGraphicsItemIndex + 1 == _curEmojiGraphicsItems.size()) {
-        return;
-    }
-
-    this->_selectEmojiGraphicsItem(*_selectedEmojiGraphicsItemIndex + 1);
+    _wEmojis->selectNext();
 }
 
 void QJomeWindow::_searchBoxDownKeyPressed()
 {
-    if (!_selectedEmojiGraphicsItemIndex) {
-        return;
-    }
-
-    const auto& selectedEmojiGraphicsItem = *_curEmojiGraphicsItems[*_selectedEmojiGraphicsItemIndex];
-    const auto curX = selectedEmojiGraphicsItem.pos().x();
-
-    for (auto i = *_selectedEmojiGraphicsItemIndex + 1; i < _curEmojiGraphicsItems.size(); ++i) {
-        const auto& emojiGraphicsItem = *_curEmojiGraphicsItems[i];
-
-        if (emojiGraphicsItem.pos().x() == curX) {
-            this->_selectEmojiGraphicsItem(i);
-            return;
-        }
-    }
+    _wEmojis->selectNextRow();
 }
 
 void QJomeWindow::_searchBoxLeftKeyPressed()
 {
-    if (!_selectedEmojiGraphicsItemIndex) {
-        return;
-    }
-
-    if (*_selectedEmojiGraphicsItemIndex == 0) {
-        return;
-    }
-
-    this->_selectEmojiGraphicsItem(*_selectedEmojiGraphicsItemIndex - 1);
+    _wEmojis->selectPrevious();
 }
 
 void QJomeWindow::_searchBoxPgUpKeyPressed()
 {
-    for (auto i = 0U; i < 10; ++i) {
-        this->_searchBoxUpKeyPressed();
-    }
+    _wEmojis->selectPreviousRow(10);
 }
 
 void QJomeWindow::_searchBoxPgDownKeyPressed()
 {
-    for (auto i = 0U; i < 10; ++i) {
-        this->_searchBoxDownKeyPressed();
-    }
+    _wEmojis->selectNextRow(10);
 }
 
 void QJomeWindow::_searchBoxHomeKeyPressed()
 {
-    if (_curEmojiGraphicsItems.empty()) {
-        return;
-    }
-
-    this->_selectEmojiGraphicsItem(0);
+    _wEmojis->selectFirst();
 }
 
 void QJomeWindow::_searchBoxEndKeyPressed()
 {
-    if (_curEmojiGraphicsItems.empty()) {
-        return;
-    }
-
-    this->_selectEmojiGraphicsItem(_curEmojiGraphicsItems.size() - 1);
+    _wEmojis->selectLast();
 }
 
 void QJomeWindow::_searchBoxEnterKeyPressed()
@@ -549,28 +378,32 @@ void QJomeWindow::_searchBoxF5KeyPressed()
     this->_acceptEmoji(Emoji::SkinTone::DARK);
 }
 
-void QJomeWindow::_emojiGraphicsItemPress(const Emoji& emoji)
+void QJomeWindow::_emojiSelectionChanged(const Emoji * const emoji)
+{
+    _selectedEmoji = emoji;
+    this->_updateInfoLabel(emoji);
+}
+
+void QJomeWindow::_emojiClicked(const Emoji& emoji)
 {
     _emojiChosenFunc(emoji, Emoji::SkinTone::NONE);
     this->done(0);
 }
 
-void QJomeWindow::_emojiGraphicsItemHoverEnter(const Emoji& emoji)
+void QJomeWindow::_emojiHoverEntered(const Emoji& emoji)
 {
     this->_updateInfoLabel(&emoji);
 }
 
-void QJomeWindow::_emojiGraphicsItemHoverLeave(const Emoji& emoji)
+void QJomeWindow::_emojiHoverLeaved(const Emoji& emoji)
 {
-    this->_updateInfoLabel(this->_selectedEmoji());
+    this->_updateInfoLabel(_selectedEmoji);
 }
 
 void QJomeWindow::_acceptEmoji(const Emoji::SkinTone skinTone)
 {
-    const auto selectedEmoji = this->_selectedEmoji();
-
-    if (selectedEmoji) {
-        _emojiChosenFunc(*selectedEmoji, skinTone);
+    if (_selectedEmoji) {
+        _emojiChosenFunc(*_selectedEmoji, skinTone);
     }
 
     this->done(0);
@@ -594,15 +427,6 @@ void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
     }
 
     _wInfoLabel->setText(text);
-}
-
-const Emoji *QJomeWindow::_selectedEmoji()
-{
-    if (!_selectedEmojiGraphicsItemIndex) {
-        return nullptr;
-    }
-
-    return &_curEmojiGraphicsItems[*_selectedEmojiGraphicsItemIndex]->emoji();
 }
 
 } // namespace jome

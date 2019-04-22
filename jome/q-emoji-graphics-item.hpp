@@ -17,6 +17,8 @@
 
 namespace jome {
 
+class QEmojisWidget;
+
 class QEmojiGraphicsItem :
     public QGraphicsPixmapItem
 {
@@ -25,9 +27,7 @@ public:
 
 public:
     explicit QEmojiGraphicsItem(const Emoji& emoji, const QPixmap& pixmap,
-                                const SelectEmojiFunc& pressFunc,
-                                const SelectEmojiFunc& hoverEnterFunc,
-                                const SelectEmojiFunc& hoverLeaveFunc);
+                                QEmojisWidget& emojisWidget);
 
     const Emoji& emoji() const noexcept
     {
@@ -41,9 +41,7 @@ private:
 
 private:
     const Emoji * const _emoji;
-    const SelectEmojiFunc _pressFunc;
-    const SelectEmojiFunc _hoverEnterFunc;
-    const SelectEmojiFunc _hoverLeaveFunc;
+    QEmojisWidget * const _emojisWidget;
 };
 
 } // namespace jome

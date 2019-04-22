@@ -23,7 +23,7 @@
 
 #include "emoji-db.hpp"
 #include "emoji-images.hpp"
-#include "q-emoji-graphics-item.hpp"
+#include "q-emojis-widget.hpp"
 
 namespace jome {
 
@@ -71,56 +71,10 @@ private:
     void showEvent(QShowEvent *event) override;
     void _setMainStyleSheet();
     void _buildUi();
-    void _buildAllEmojisGraphicsScene();
     QListWidget *_createCatListWidget();
-    void _showAllEmojis();
-    void _setGraphicsSceneStyle(QGraphicsScene& gs);
-    void _findEmojis(const std::string& cat, const std::string& needles);
-    void _selectEmojiGraphicsItem(const boost::optional<unsigned int>& index);
-    QGraphicsPixmapItem *_createSelectedGraphicsItem();
     void _updateInfoLabel(const Emoji *emoji);
-    const Emoji *_selectedEmoji();
+    void _findEmojis(const std::string& cat, const std::string& needles);
     void _acceptEmoji(Emoji::SkinTone skinTone);
-    void _emojiGraphicsItemPress(const Emoji& emoji);
-    void _emojiGraphicsItemHoverEnter(const Emoji& emoji);
-    void _emojiGraphicsItemHoverLeave(const Emoji& emoji);
-
-private:
-    template <typename ContainerT>
-    void _addEmojisToGraphicsScene(const ContainerT& emojis,
-                                   std::vector<QEmojiGraphicsItem *>& emojiGraphicsItems,
-                                   QGraphicsScene& gs,
-                                   qreal& y)
-    {
-        qreal col = 0.;
-        const auto availWidth = gs.width();
-        constexpr auto emojiWidthAndMargin = 32. + 8.;
-
-        for (const auto& emoji : emojis) {
-            namespace ph = std::placeholders;
-
-            auto emojiGraphicsItem = new QEmojiGraphicsItem {
-                *emoji, _emojiImages.pixmapForEmoji(*emoji),
-                std::bind(&QJomeWindow::_emojiGraphicsItemPress, this, ph::_1),
-                std::bind(&QJomeWindow::_emojiGraphicsItemHoverEnter, this, ph::_1),
-                std::bind(&QJomeWindow::_emojiGraphicsItemHoverLeave, this, ph::_1)
-            };
-
-            emojiGraphicsItems.push_back(emojiGraphicsItem);
-            emojiGraphicsItem->setPos(col * emojiWidthAndMargin + 8., y);
-            gs.addItem(emojiGraphicsItem);
-            col += 1;
-
-            if ((col + 1.) * emojiWidthAndMargin + 8. >= availWidth) {
-                col = 0.;
-                y += emojiWidthAndMargin;
-            }
-        }
-
-        if (col != 0.) {
-            y += emojiWidthAndMargin;
-        }
-    }
 
 private slots:
     void _searchTextChanged(const QString& text);
@@ -140,23 +94,19 @@ private slots:
     void _searchBoxPgDownKeyPressed();
     void _searchBoxHomeKeyPressed();
     void _searchBoxEndKeyPressed();
+    void _emojiSelectionChanged(const Emoji *emoji);
+    void _emojiClicked(const Emoji& emoji);
+    void _emojiHoverEntered(const Emoji& emoji);
+    void _emojiHoverLeaved(const Emoji& emoji);
 
 private:
     const EmojiDb * const _emojiDb;
-    const EmojiImages _emojiImages;
     const EmojiChosenFunc _emojiChosenFunc;
+    QEmojisWidget *_wEmojis = nullptr;
     QListWidget *_wCatList = nullptr;
     QLabel *_wInfoLabel = nullptr;
-    bool _allEmojisGraphicsSceneBuilt = false;
-    QGraphicsScene _allEmojisGraphicsScene;
-    QGraphicsScene _findEmojisGraphicsScene;
-    QGraphicsView *_wEmojisGraphicsView = nullptr;
-    std::unordered_map<const EmojiCat *, qreal> _catVertPositions;
-    std::vector<QEmojiGraphicsItem *> _curEmojiGraphicsItems;
-    std::vector<QEmojiGraphicsItem *> _allEmojiGraphicsItems;
-    boost::optional<unsigned int> _selectedEmojiGraphicsItemIndex;
-    QGraphicsPixmapItem *_allEmojisGraphicsSceneSelectedItem = nullptr;
-    QGraphicsPixmapItem *_findEmojisGraphicsSceneSelectedItem = nullptr;
+    bool _emojisWidgetBuilt = false;
+    const Emoji *_selectedEmoji = nullptr;
 };
 
 } // namespace jome
