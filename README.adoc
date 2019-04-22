@@ -1,7 +1,7 @@
 = jome 😀
 Philippe Proulx <eepp.ca>
 
-_jome_ is a ⌨ centric emoji picker desktop application.
+_jome_ is a ⌨️ centric emoji picker desktop application.
 
 You can also pick an emoji with the 🖱, don't worry.
 
@@ -65,7 +65,121 @@ don't want to install it on your system, use
 
 == Usage
 
-TODO!
+jome's purpose is to help you pick an emoji.
+
+When you accept an emoji (with the ⌨️ or with the 🖱), jome
+prints the UTF-8 emoji to the standard output. It can also print the
+individual Unicode codepoints.
+
+If you just close the window (you can press **Escape** to do this), jome
+prints nothing to the standard output.
+
+
+=== Interface
+
+image::screenshots/all.png[]
+
+There are four sections:
+
+[[find-box]]Find box (top)::
+    Input box where you can type a query to <<find-emojis,find emojis>>.
+
+Emojis::
+    All emojis (with an empty find box) or find results.
++
+When there's at least one emoji, there's always a selected emoji with a
+red box around it.
++
+Click an emoji to accept it and quit.
++
+Hover an emoji to update the bottom emoji info text temporarily.
+
+Category list::
+    List of available categories.
++
+When all emojis are shown (the find box is empty), click a category
+name to scroll to this emoji category.
+
+Emoji info text (bottom)::
+    Name and Unicode codepoints of the selected or hovered emoji.
+
+
+[[find-emojis]]
+=== 🔍 emojis
+
+The power of jome is its <<find-box,find box>>.
+
+When you launch jome, the find box is focused, and it should stay
+focused unless you're browsing emojis manually with the intention of
+accepting one with the 🖱.
+
+The format of a query is one of:
+
+* `_TERMS_`
+* `_CAT_/`
+* `_CAT_/_TERMS_`
+
+where:
+
+`_CAT_`::
+    Partial name of categories in which to search.
+
+`_TERMS_`::
+    Space-separated list of search terms.
++
+For an emoji to be part of the results, at least one of its keywords
+must contain _all_ the search terms.
+
+
+=== Select and accept an emoji
+
+To select an emoji, use the following keys:
+
+⬅️::
+➡️::
+⬆️::
+⬇️::
+    Go left/right/up/down.
+
+**Page ⬆️**::
+**Page ⬇️**::
+    Go up/down 10 rows.
+
+**Home**::
+    Go to the first emoji.
+
+**End**::
+    Go to the last emoji.
+
+To accept the selected emoji, press **Enter**. Depending on the
+<<cl-options,command-line options>>, jome prints the emoji or the
+Unicode codepoints to the standard output and quits.
+
+
+[[cl-options]]
+=== Command-line options
+
+`-f`::
+    Set the output format:
++
+--
+`utf-8`::
+    UTF-8 emoji.
+
+`cp`::
+    Space-separated Unicode codepoints (hexadecimal).
++
+Example: `1f645 200d 2642 fe0f`
+
+`ucp`::
+    Space-separated Unicode codepoints (hexadecimal) with a `U+`
+    prefix.
++
+Example: `U+1F93C U+200D U+2642 U+FE0F`
+--
+
+`-n`::
+    Do not print a newline after printing the emoji or codepoints.
 
 
 == Type the selected emoji
