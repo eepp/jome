@@ -159,7 +159,7 @@ Unicode codepoints to the standard output and quits.
     Set the output format:
 +
 --
-`utf-8`::
+`utf-8` (default)::
     UTF-8 emoji.
 
 `cp`::
