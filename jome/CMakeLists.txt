@@ -8,6 +8,8 @@ set (CMAKE_INCLUDE_CURRENT_DIR ON)
 set (CMAKE_AUTOMOC ON)
 set (CMAKE_AUTOUIC ON)
 find_package (Qt5Widgets CONFIG REQUIRED)
+find_package (Qt5Gui CONFIG REQUIRED)
+find_package (Qt5Network CONFIG REQUIRED)
 
 # Boost
 find_package (Boost 1.58 REQUIRED)
@@ -20,6 +22,7 @@ add_executable (
     q-cat-list-widget-item.cpp
     q-emoji-graphics-item.cpp
     q-emojis-widget.cpp
+    q-jome-server.cpp
     emoji-images.cpp
     emoji-db.cpp
     tinyutf8.cpp
@@ -29,6 +32,7 @@ target_link_libraries (
     jome
     Qt5::Widgets
     Qt5::Gui
+    Qt5::Network
 )
 target_include_directories (
     jome PRIVATE

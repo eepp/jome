@@ -8,6 +8,8 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QString>
+#include <QProcess>
+#include <QTimer>
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -15,17 +17,20 @@
 #include "emoji-db.hpp"
 #include "emoji-images.hpp"
 #include "q-jome-window.hpp"
+#include "q-jome-server.hpp"
 
 enum class Format {
     UTF8,
     CODEPOINTS_HEX,
-    CODEPOINTS_HEX_U_PREFIX,
 };
 
 struct Params
 {
     Format fmt;
     bool noNewline;
+    std::string serverName;
+    std::string cmd;
+    std::string cpPrefix;
 };
 
 static Params parseArgs(QApplication& app, int argc, char **argv)
@@ -37,9 +42,15 @@ static Params parseArgs(QApplication& app, int argc, char **argv)
     parser.addVersionOption();
 
     QCommandLineOption formatOpt {"f", "Output format", "FORMAT", "utf-8"};
+    QCommandLineOption serverNameOpt {"s", "Server name", "NAME"};
+    QCommandLineOption cmdOpt {"c", "External command", "CMD"};
+    QCommandLineOption cpPrefixOpt {"p", "Codepoint prefix", "CPPREFIX"};
     QCommandLineOption noNlOpt {"n", "Do not output newline"};
 
     parser.addOption(formatOpt);
+    parser.addOption(serverNameOpt);
+    parser.addOption(cmdOpt);
+    parser.addOption(cpPrefixOpt);
     parser.addOption(noNlOpt);
     parser.process(app);
 
@@ -53,20 +64,93 @@ static Params parseArgs(QApplication& app, int argc, char **argv)
         params.fmt = Format::UTF8;
     } else if (fmt == "cp") {
         params.fmt = Format::CODEPOINTS_HEX;
-    } else if (fmt == "ucp") {
-        params.fmt = Format::CODEPOINTS_HEX_U_PREFIX;
     } else {
         std::cerr << "Command-line error: unknown format `" <<
                      fmt.toUtf8().constData() << "`." << std::endl;
         std::exit(1);
     }
 
+    if (parser.isSet(serverNameOpt)) {
+        params.serverName = parser.value(serverNameOpt).toUtf8().constData();
+    }
+
+    if (parser.isSet(cmdOpt)) {
+        params.cmd = parser.value(cmdOpt).toUtf8().constData();
+    }
+
+    if (parser.isSet(cpPrefixOpt)) {
+        params.cpPrefix = parser.value(cpPrefixOpt).toUtf8().constData();
+    }
+
     return params;
+}
+
+static void execCommand(const std::string& cmd, const std::string& arg)
+{
+    QString fullCmd = QString::fromStdString(cmd);
+
+    fullCmd += " ";
+    fullCmd += QString::fromStdString(arg);
+    static_cast<void>(QProcess::execute(fullCmd));
+}
+
+static std::string formatEmoji(const jome::Emoji& emoji,
+                               const jome::Emoji::SkinTone skinTone,
+                               const Format fmt, const std::string& cpPrefix,
+                               const bool noNl)
+{
+    std::string output;
+
+    switch (fmt) {
+    case Format::UTF8:
+    {
+        std::string str;
+
+        if (emoji.hasSkinToneSupport()) {
+            str = emoji.strWithSkinTone(skinTone);
+        } else {
+            str = emoji.str();
+        }
+
+        output = emoji.str();
+        break;
+    }
+
+    case Format::CODEPOINTS_HEX:
+    {
+        jome::Emoji::Codepoints codepoints;
+
+        if (emoji.hasSkinToneSupport()) {
+            codepoints = emoji.codepointsWithSkinTone(skinTone);
+        } else {
+            codepoints = emoji.codepoints();
+        }
+
+        for (const auto codepoint : codepoints) {
+            std::array<char, 32> buf;
+
+            std::sprintf(buf.data(), "%s%x ", cpPrefix.c_str(),
+                         codepoint);
+            output += buf.data();
+        }
+
+        // remove trailing space
+        output.resize(output.size() - 1);
+        break;
+    }
+    }
+
+    if (!noNl) {
+        output += '\n';
+    }
+
+    return output;
 }
 
 int main(int argc, char **argv)
 {
     QApplication app {argc, argv};
+    std::unique_ptr<jome::QJomeServer> server;
 
     app.setApplicationDisplayName("jome");
     app.setApplicationName("jome");
@@ -74,56 +158,79 @@ int main(int argc, char **argv)
 
     const auto params = parseArgs(app, argc, argv);
     const jome::EmojiDb db {JOME_DATA_DIR};
-    jome::QJomeWindow win {db, [&params](const auto& emoji,
-                                         const auto skinTone) {
-        switch (params.fmt) {
-        case Format::UTF8:
-        {
-            std::string str;
+    jome::QJomeWindow win {db};
 
-            if (emoji.hasSkinToneSupport()) {
-                str = emoji.strWithSkinTone(skinTone);
-            } else {
-                str = emoji.str();
-            }
-
-            std::printf("%s", emoji.str().c_str());
-            break;
+    QObject::connect(&win, &jome::QJomeWindow::canceled,
+                     [&params, &app, &server]() {
+        if (server) {
+            // reply to the client at least
+            server->sendToClient("");
         }
 
-        case Format::CODEPOINTS_HEX:
-        case Format::CODEPOINTS_HEX_U_PREFIX:
-        {
-            jome::Emoji::Codepoints codepoints;
+        if (!server) {
+            // TODO: make sure the message is sent before quitting
+            QTimer::singleShot(0, [&app]() {
+                app.exit(1);
+            });
+        }
+    });
+    QObject::connect(&win, &jome::QJomeWindow::emojiChosen,
+                     [&params, &app, &win, &server](const auto& emoji,
+                                                    const auto skinTone) {
+        const auto emojiStr = formatEmoji(emoji, skinTone, params.fmt,
+                                          params.cpPrefix,
+                                          params.noNewline || !params.cmd.empty());
 
-            if (emoji.hasSkinToneSupport()) {
-                codepoints = emoji.codepointsWithSkinTone(skinTone);
-            } else {
-                codepoints = emoji.codepoints();
-            }
+        if (server) {
+            // send response to client
+            server->sendToClient(emojiStr);
+        }
 
-            for (const auto codepoint : codepoints) {
-                if (params.fmt == Format::CODEPOINTS_HEX_U_PREFIX) {
-                    std::printf("U+%X ", codepoint);
-                } else {
-                    std::printf("%x ", codepoint);
+        // print result
+        std::cout << emojiStr;
+        std::cout.flush();
+
+        if (!params.cmd.empty()) {
+            // execute command in 20 ms
+            QTimer::singleShot(20, &app, [&params, &server, &app, emojiStr]() {
+                execCommand(params.cmd, emojiStr);
+
+                if (!server) {
+                    // no server: quit after executing the command
+                    QTimer::singleShot(0, &app, &QApplication::quit);
                 }
+            });
+        } else {
+            if (!server) {
+                // no server: quit now
+                QTimer::singleShot(0, &app, &QApplication::quit);
             }
-
-            break;
         }
 
-        default:
-            std::abort();
-        }
+        // always hide when accepting
+        win.hide();
+    });
 
-        if (!params.noNewline) {
-            std::printf("\n");
-        }
+    if (!params.serverName.empty()) {
+        server = std::make_unique<jome::QJomeServer>(nullptr,
+                                                     params.serverName);
+        QObject::connect(server.get(), &jome::QJomeServer::clientRequested,
+                         [&app, &server, &win](const jome::QJomeServer::Command cmd) {
+            if (cmd == jome::QJomeServer::Command::QUIT) {
+                // reply to client, then quit
+                server->sendToClient("");
 
-        std::fflush(stdout);
-    }};
+                // TODO: make sure the message is sent before quitting
+                QTimer::singleShot(10, &QApplication::quit);
+            } else {
+                win.show();
+            }
+        });
+    }
 
-    win.show();
+    if (!server) {
+        win.show();
+    }
+
     return app.exec();
 }

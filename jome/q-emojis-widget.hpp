@@ -33,6 +33,7 @@ public:
 
 public:
     explicit QEmojisWidget(QWidget *parent, const EmojiDb& emojiDb);
+    ~QEmojisWidget();
     void rebuild();
     void showAllEmojis();
     void showFindResults(const std::vector<const Emoji *>& results);

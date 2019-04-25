@@ -36,6 +36,21 @@ QEmojisWidget::QEmojisWidget(QWidget * const parent,
     this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 }
 
+QEmojisWidget::~QEmojisWidget()
+{
+    /*
+     * Those "selected" graphics scene items could be out of the
+     * scene currently, therefore owned by this.
+     */
+    if (!_findEmojisGraphicsSceneSelectedItem->scene()) {
+        delete _findEmojisGraphicsSceneSelectedItem;
+    }
+
+    if (!_allEmojisGraphicsSceneSelectedItem->scene()) {
+        delete _allEmojisGraphicsSceneSelectedItem;
+    }
+}
+
 void QEmojisWidget::_setGraphicsSceneStyle(QGraphicsScene& gs)
 {
     gs.setBackgroundBrush(QColor {"#f8f8f8"});

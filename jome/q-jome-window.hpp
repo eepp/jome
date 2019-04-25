@@ -61,13 +61,14 @@ class QJomeWindow :
     Q_OBJECT
 
 public:
-    using EmojiChosenFunc = std::function<void (const Emoji&, Emoji::SkinTone)>;
+    explicit QJomeWindow(const EmojiDb& emojiDb);
 
-public:
-    explicit QJomeWindow(const EmojiDb& emojiDb,
-                         const EmojiChosenFunc& emojiChosenFunc);
+signals:
+    void emojiChosen(const Emoji& emoji, Emoji::SkinTone skinTone);
+    void canceled();
 
 private:
+    void closeEvent(QCloseEvent *event) override;
     void showEvent(QShowEvent *event) override;
     void _setMainStyleSheet();
     void _buildUi();
@@ -78,6 +79,8 @@ private:
     void _acceptEmoji(const Emoji& emoji, Emoji::SkinTone skinTone);
 
 private slots:
+    void reject() override;
+    void accept() override;
     void _searchTextChanged(const QString& text);
     void _catListItemSelectionChanged();
     void _catListItemClicked(QListWidgetItem *item);
@@ -102,10 +105,10 @@ private slots:
 
 private:
     const EmojiDb * const _emojiDb;
-    const EmojiChosenFunc _emojiChosenFunc;
     QEmojisWidget *_wEmojis = nullptr;
     QListWidget *_wCatList = nullptr;
     QLabel *_wInfoLabel = nullptr;
+    QLineEdit *_wSearchBox = nullptr;
     bool _emojisWidgetBuilt = false;
     const Emoji *_selectedEmoji = nullptr;
 };

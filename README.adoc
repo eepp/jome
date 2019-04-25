@@ -42,8 +42,8 @@ You need:
 * https://cmake.org/[CMake] ≥ 3.1.0
 * A pass:[C++14] compiler
 * http://www.boost.org/[Boost] ≥ 1.58 (only to build)
-* Qt 5 (_Core_, _GUI_, and _Widgets_ modules)
-* Python 3
+* Qt 5 (_Core_, _GUI_, _Widgets_, and _Network_ modules)
+* Python 3 (only to build)
 ** The `cairo` package
 ** The `cairosvg` package
 ** The `yaml` package
@@ -68,14 +68,28 @@ don't want to install it on your system, use
 jome's purpose is to help you pick an emoji.
 
 When you <<accept-emoji,accept>> an emoji (with the ⌨️ or with the 🖱),
-jome prints the UTF-8 emoji to the standard output. It can also print
-the individual Unicode codepoints.
+jome prints the UTF-8 emoji or the Unicode codepoints (see the
+<<opt-f,`-f` option>>), with an optional prefix (see the <<opt-p,`-p`
+option>>) for each codepoint, to the standard output. Additionally, jome
+can:
 
-If you just close the window (you can press **Escape** to do this), jome
-prints nothing to the standard output.
+* Execute a custom command which gets the UTF-8 emoji or the Unicode
+  codepoints, with an optional prefix for each codepoint, as its
+  last argument(s). See the <<opt-s,`-c` option>>.
+
+* Send the UTF-8 emoji or the Unicode codepoints, with an optional
+  prefix for each codepoint, in response to a client which requested
+  picking an emoji. See the <<opt-s,`-s` option>>.
+
+If you close the window (you can press **Escape** to do this), then jome
+prints nothing to the standard output and executes nothing.
+
+If you don't start jome in <<server-mode,server mode>> (<<opt-s,`-s`
+option>>), then jome immediately quits after you accept an emoji or
+close the window.
 
 
-=== Interface
+=== Graphical interface
 
 image::screenshots/all.png[]
 
@@ -90,7 +104,7 @@ Emojis::
 When there's at least one emoji, there's always a selected emoji with a
 red box around it.
 +
-Click an emoji to accept it and quit.
+Click an emoji to accept it.
 +
 Hover an emoji to update the bottom emoji info text temporarily.
 
@@ -158,15 +172,14 @@ To select an emoji, use the following keys:
     emoji with a light, medium-light, medium, medium-dark, or dark
     skin tone.
 
-Depending on the <<cl-options,command-line options>>, jome prints the
-emoji or the Unicode codepoints to the standard output and quits.
+To cancel, press **Escape** or close the window.
 
 
 [[cl-options]]
 === Command-line options
 
-`-f`::
-    Set the output format:
+[[opt-f]]`-f _FMT_`::
+    Set the output format to `_FMT_`:
 +
 --
 `utf-8` (default)::
@@ -176,33 +189,144 @@ emoji or the Unicode codepoints to the standard output and quits.
     Space-separated Unicode codepoints (hexadecimal).
 +
 Example: `1f645 200d 2642 fe0f`
-
-`ucp`::
-    Space-separated Unicode codepoints (hexadecimal) with a `U+`
-    prefix.
-+
-Example: `U+1F93C U+200D U+2642 U+FE0F`
 --
+
+[[opt-p]]`-p _PREFIX_`::
+    Set the prefix to be prepended to each Unicode codepoint.
++
+For example, with `-f cp` and `-p U+`: `U+1f645 U+200d U+2642 U+fe0f`.
 
 `-n`::
     Do not print a newline after printing the emoji or codepoints.
 
+[[opt-c]]`-c _CMD_`::
+    When you accept an emoji, execute command `_CMD_`.
++
+`_CMD_` is interpreted like a shell does, so you can have arguments too.
++
+`_CMD_` receives the UTF-8 emoji or the Unicode codepoints (depending on
+the `-f` option) with their optional prefix as its last argument(s).
++
+Example with https://www.semicomplete.com/projects/xdotool/[xdotool]:
++
+----
+jome -f cp -p U -c 'xdotool key --delay 20'
+----
 
-== Type the selected emoji
+[[opt-s]]`-s _NAME_`::
+    Start jome in <<server-mode,server mode>> and set the server name
+    to `_NAME_`.
++
+On Unix, this creates the socket file `/tmp/_NAME_` which must
+_not exist_ before starting jome.
 
-Here's a Bash script which types, using
-https://www.semicomplete.com/projects/xdotool/[xdotool], the selected
-emoji once jome quits:
+
+[[server-mode]]
+=== Server mode
+
+jome features a server mode to avoid creating a process (a Qt window can
+be quite long to create) every time you need to pick an emoji. With this
+mode, you can bring up the jome window instantaneously.
+
+To start jome in server mode, use the <<opt-s,`-s` option>> to specify
+the server name:
+
+----
+jome -s mein-server
+----
+
+This creates a local server named `mein-server`. On Unix, it creates the
+socket file `/tmp/mein-server`.
+
+[IMPORTANT]
+--
+On Unix, the server mode won't work if the socket file
+already exists. Remove the file before starting jome in server mode:
+
+----
+rm -f /tmp/mein-server
+jome -s mein-server
+----
+--
+
+When jome starts in server mode, it does not show its window. Instead,
+it waits for a command sent by the client, `jome-ctl`. To show the
+window:
+
+----
+jome-ctl mein-server
+----
+
+When you <<accept-emoji,accept>> an emoji, `jome-ctl` prints what jome
+also prints to the standard output and quits with exit code 0.
+Therefore, the output format of `jome-ctl` is controlled by the
+<<cl-options,options>> passed to `jome`.
+
+If you cancel jome (press **Escape** or close the window), `jome-ctl`
+prints nothing and returns with exit code 1.
+
+In server mode, jome does not quit once you accept an emoji or cancel:
+it hides the window and keeps listening. To make it quit gracefully,
+which also removes the socket file:
+
+----
+jome-ctl mein-server quit
+----
+
+You don't need to use what `jome-ctl` prints to the standard output.
+You can use jome in server mode with the <<opt-c,`-c` option>> to make
+jome execute a command itself. For example:
+
+----
+rm -f mein-server
+jome -s mein-server -f cp -p U -c 'xdotool key --delay 20'
+----
+
+Then, bind a keyboard shortcut to:
+
+----
+jome-ctl mein-server
+----
+
+
+== Type the accepted emoji
+
+Here are Bash scripts to type the accepted emoji with
+https://www.semicomplete.com/projects/xdotool/[xdotool].
+
+
+=== Non server mode
 
 [source,bash]
 ----
 #!/usr/bin/bash
 
-codepoints="$(jome -f ucp | tr -d +)"
+codepoints="$(jome -f cp -p U)"
 
-if [ $? -ne 0 -o -z "$codepoints" ]; then
+if [ $? -ne 0 ]; then
     exit 1
 fi
 
 xdotool key --delay 50 $codepoints
+----
+
+
+=== Server mode
+
+[source,bash]
+----
+#!/usr/bin/bash
+
+socket_name="jome.socket.$(id -u)"
+
+if ! pidof jome &>/dev/null; then
+    rm -f "/tmp/$socket_name"
+    jome -s "$socket_name" -f cp -p U -c 'xdotool key --delay 20' & disown
+
+    while [ ! -e "/tmp/$socket_name" ]; do
+        sleep .1
+    done
+fi
+
+jome-ctl "$socket_name"
 ----
