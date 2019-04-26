@@ -17,9 +17,13 @@ The `cats.yml` file maps category IDs (text file names without the
 `cats.yml` is important as it is the final order of presentation of
 those categories in the eventual UI.
 
-`emoji.json` comes from
-https://github.com/amio/emoji.json[this project] and associates
-emojis to their official Unicode names and keywords.
+`emoji.json` comes from https://github.com/amio/emoji.json[this project]
+and associates emojis to their official Unicode names and keywords. I
+maintain my own version as, for some reason, the
+https://unicode.org/emoji/charts/full-emoji-list.html[official list]
+(from which `emoji.json` is created) lacks many
+https://emojipedia.org/variation-selector-16/[VS-16] characters. Also, I
+added some unofficial keywords to specific emojis.
 
 `with-skin-tone-support.txt` has the same format as a category text
 file. It contains the emojis which support emoji skin tone modifiers.
