@@ -153,11 +153,12 @@ int main(int argc, char **argv)
     std::unique_ptr<jome::QJomeServer> server;
 
     app.setApplicationDisplayName("jome");
+    app.setOrganizationName("jome");
     app.setApplicationName("jome");
     app.setApplicationVersion(JOME_VERSION);
 
     const auto params = parseArgs(app, argc, argv);
-    const jome::EmojiDb db {JOME_DATA_DIR};
+    jome::EmojiDb db {JOME_DATA_DIR};
     jome::QJomeWindow win {db};
 
     QObject::connect(&win, &jome::QJomeWindow::canceled,
@@ -175,8 +176,7 @@ int main(int argc, char **argv)
         }
     });
     QObject::connect(&win, &jome::QJomeWindow::emojiChosen,
-                     [&params, &app, &win, &server](const auto& emoji,
-                                                    const auto skinTone) {
+                     [&](const auto& emoji, const auto skinTone) {
         const auto emojiStr = formatEmoji(emoji, skinTone, params.fmt,
                                           params.cpPrefix,
                                           params.noNewline || !params.cmd.empty());
@@ -209,6 +209,18 @@ int main(int argc, char **argv)
 
         // always hide when accepting
         win.hide();
+
+        // add emoji as recent emoji
+        db.addRecentEmoji(emoji);
+
+        if (server) {
+            /*
+             * Not calling directly because we're potentially within an
+             * event handler which is currently using an emoji graphics
+             * item, so we cannot delete it.
+             */
+            QTimer::singleShot(0, &win, &jome::QJomeWindow::emojiDbChanged);
+        }
     });
 
     if (!params.serverName.empty()) {

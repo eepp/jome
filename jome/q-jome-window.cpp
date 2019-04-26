@@ -448,4 +448,10 @@ void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
     _wInfoLabel->setText(text);
 }
 
+void QJomeWindow::emojiDbChanged()
+{
+    _wEmojis->rebuild();
+    _wEmojis->showAllEmojis();
+}
+
 } // namespace jome

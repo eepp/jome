@@ -104,6 +104,12 @@ EmojiCat::EmojiCat(const std::string& id, const std::string& name,
 {
 }
 
+EmojiCat::EmojiCat(const std::string& id, const std::string& name) :
+    _id {id},
+    _name {name}
+{
+}
+
 const std::string& EmojiCat::lcName() const
 {
     if (_lcName.empty()) {
@@ -119,6 +125,7 @@ EmojiDb::EmojiDb(const std::string& dir) :
 {
     this->_createEmojis(dir);
     this->_createCats(dir);
+    this->_setRecentEmojisCatFromSettings();
     this->_createEmojiPngLocations(dir);
 }
 
@@ -170,6 +177,10 @@ void EmojiDb::_createEmojis(const std::string& dir)
 
 void EmojiDb::_createCats(const std::string& dir)
 {
+    // first, special category: recent emojis
+    _cats.push_back(std::make_unique<EmojiCat>("recent", "Recent"));
+    _recentEmojisCat = _cats.back().get();
+
     const auto catsJson = this->_loadJson(dir, "cats.json");
 
     for (const auto& catJson : catsJson.ArrayRange()) {
@@ -180,12 +191,13 @@ void EmojiDb::_createCats(const std::string& dir)
 
         for (const auto& emojiJson : emojisJson.ArrayRange()) {
             const auto emojiStr = emojiJson.ToString();
+
             emojis.push_back(_emojis[emojiStr].get());
         }
 
-        auto cat = std::make_unique<const EmojiCat>(idJson.ToString(),
-                                                    nameJson.ToString(),
-                                                    std::move(emojis));
+        auto cat = std::make_unique<EmojiCat>(idJson.ToString(),
+                                              nameJson.ToString(),
+                                              std::move(emojis));
 
         _cats.push_back(std::move(cat));
     }
@@ -270,6 +282,76 @@ void EmojiDb::findEmojis(const std::string& cat, const std::string& needlesStr,
             _tmpFoundEmojis.insert(emoji);
         }
     }
+}
+
+void EmojiDb::_updateSettings()
+{
+    QList<QVariant> emojiList;
+
+    for (const auto emoji : _recentEmojisCat->emojis()) {
+        const auto emojiStr = QString::fromStdString(emoji->str());
+
+        emojiList.append(emojiStr);
+    }
+
+    _settings.setValue("recent-emojis", emojiList);
+}
+
+void EmojiDb::_setRecentEmojisCatFromSettings()
+{
+    assert(_recentEmojisCat);
+    _recentEmojisCat->emojis().clear();
+
+    const auto recentEmojisVar = _settings.value("recent-emojis");
+
+    if (!recentEmojisVar.canConvert<QList<QVariant>>()) {
+        return;
+    }
+
+    const auto recentEmojisList = recentEmojisVar.toList();
+
+    for (const auto& emojiStrVar : recentEmojisList) {
+        if (!emojiStrVar.canConvert<QString>()) {
+            continue;
+        }
+
+        const auto emojiStr = emojiStrVar.toString();
+        const auto it = _emojis.find(emojiStr.toUtf8().constData());
+
+        if (it == std::end(_emojis)) {
+            continue;
+        }
+
+        _recentEmojisCat->emojis().push_back(it->second.get());
+    }
+}
+
+void EmojiDb::addRecentEmoji(const Emoji& emoji)
+{
+    assert(_recentEmojisCat);
+
+    auto& emojis = _recentEmojisCat->emojis();
+
+    while (true) {
+        auto existingIt = std::find(std::begin(emojis), std::end(emojis),
+                                    &emoji);
+
+        if (existingIt == std::end(emojis)) {
+            break;
+        }
+
+        emojis.erase(existingIt);
+    }
+
+    emojis.insert(std::begin(emojis), &emoji);
+
+    constexpr auto maxRecentEmojis = 30U;
+
+    if (emojis.size() > maxRecentEmojis) {
+        emojis.resize(maxRecentEmojis);
+    }
+
+    this->_updateSettings();
 }
 
 } // namespace jome

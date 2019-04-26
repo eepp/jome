@@ -113,6 +113,9 @@ Category list::
 +
 When all emojis are shown (the find box is empty), click a category
 name to scroll to this emoji category.
++
+The first category, _Recent_, is a special category with the recently
+accepted emojis.
 
 Emoji info text (bottom)::
     Name and Unicode codepoints of the selected or hovered emoji.

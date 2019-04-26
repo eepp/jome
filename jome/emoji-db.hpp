@@ -13,6 +13,7 @@
 #include <memory>
 #include <unordered_map>
 #include <unordered_set>
+#include <QSettings>
 
 #include "simple-json.hpp"
 
@@ -48,7 +49,6 @@ public:
         return _str;
     }
 
-
     const std::string& name() const noexcept
     {
         return _name;
@@ -75,6 +75,7 @@ private:
 class EmojiCat
 {
 public:
+    explicit EmojiCat(const std::string& id, const std::string& name);
     explicit EmojiCat(const std::string& id, const std::string& name,
                       std::vector<const Emoji *>&& emojis);
     const std::string& lcName() const;
@@ -89,6 +90,11 @@ public:
         return _name;
     }
 
+    std::vector<const Emoji *>& emojis() noexcept
+    {
+        return _emojis;
+    }
+
     const std::vector<const Emoji *>& emojis() const noexcept
     {
         return _emojis;
@@ -98,7 +104,7 @@ private:
     const std::string _id;
     const std::string _name;
     mutable std::string _lcName;
-    const std::vector<const Emoji *> _emojis;
+    std::vector<const Emoji *> _emojis;
 };
 
 struct EmojisPngLocation
@@ -113,13 +119,14 @@ public:
     explicit EmojiDb(const std::string& dir);
     void findEmojis(const std::string& cat, const std::string& needles,
                     std::vector<const Emoji *>& results) const;
+    void addRecentEmoji(const Emoji& emoji);
 
     const std::string& emojisPngPath() const noexcept
     {
         return _emojisPngPath;
     }
 
-    const std::vector<std::unique_ptr<const EmojiCat>>& cats() const noexcept
+    const std::vector<std::unique_ptr<EmojiCat>>& cats() const noexcept
     {
         return _cats;
     }
@@ -154,16 +161,22 @@ private:
     void _createEmojis(const std::string& dir);
     void _createCats(const std::string& dir);
     void _createEmojiPngLocations(const std::string& dir);
+    void _updateSettings();
+    void _setRecentEmojisCatFromSettings();
 
 private:
     const std::string _emojisPngPath;
-    std::vector<std::unique_ptr<const EmojiCat>> _cats;
+    std::vector<std::unique_ptr<EmojiCat>> _cats;
     std::unordered_map<std::string, std::unique_ptr<const Emoji>> _emojis;
     std::unordered_map<std::string, std::unordered_set<const Emoji *>> _keywordEmojis;
     std::unordered_set<std::string> _keywords;
     std::unordered_map<const Emoji *, EmojisPngLocation> _emojiPngLocations;
     mutable std::vector<std::string> _tmpNeedles;
     mutable std::unordered_set<const Emoji *> _tmpFoundEmojis;
+    EmojiCat *_recentEmojisCat = nullptr;
+
+    // TODO: decouple this part from Qt
+    QSettings _settings;
 };
 
 } // namespace jome

@@ -67,6 +67,9 @@ signals:
     void emojiChosen(const Emoji& emoji, Emoji::SkinTone skinTone);
     void canceled();
 
+public slots:
+    void emojiDbChanged();
+
 private:
     void closeEvent(QCloseEvent *event) override;
     void showEvent(QShowEvent *event) override;
