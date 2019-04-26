@@ -21,8 +21,7 @@
 
 namespace jome {
 
-QEmojisWidget::QEmojisWidget(QWidget * const parent,
-                             const EmojiDb& emojiDb) :
+QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb) :
     QGraphicsView {parent},
     _emojiDb {&emojiDb},
     _emojiImages {emojiDb}
@@ -34,6 +33,9 @@ QEmojisWidget::QEmojisWidget(QWidget * const parent,
     this->setAlignment(Qt::AlignLeft | Qt::AlignTop);
     this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+    // margins, 6 emojis, and scrollbar
+    this->setMinimumWidth(8 + (32 + 8) * 7 + 8 + 1);
 }
 
 QEmojisWidget::~QEmojisWidget()
@@ -311,6 +313,31 @@ void QEmojisWidget::selectLast()
 bool QEmojisWidget::showingAllEmojis()
 {
     return this->scene() == &_allEmojisGraphicsScene;
+}
+
+void QEmojisWidget::resizeEvent(QResizeEvent * const event)
+{
+    QGraphicsView::resizeEvent(event);
+
+    // save current index
+    const auto selectedItemIndex = _selectedEmojiGraphicsItemIndex;
+
+    // rebuild the "all emojis" view
+    this->rebuild();
+
+    if (this->showingAllEmojis()) {
+        this->showAllEmojis();
+    } else {
+        std::vector<const Emoji *> results;
+
+        for (const auto item : _curEmojiGraphicsItems) {
+            results.push_back(&item->emoji());
+        }
+
+        this->showFindResults(results);
+    }
+
+    this->_selectEmojiGraphicsItem(selectedItemIndex);
 }
 
 } // namespace jome

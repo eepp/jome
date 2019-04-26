@@ -106,8 +106,7 @@ QJomeWindow::QJomeWindow(const EmojiDb& emojiDb) :
     _emojiDb {&emojiDb}
 {
     this->setWindowTitle("jome");
-    this->setFixedSize(800, 600);
-    this->setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
+    this->resize(800, 600);
     this->_setMainStyleSheet();
     this->_buildUi();
 }

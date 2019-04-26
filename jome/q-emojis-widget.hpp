@@ -53,6 +53,7 @@ signals:
     void emojiClicked(const Emoji& emoji);
 
 private:
+    void resizeEvent(QResizeEvent *event) override;
     void _selectEmojiGraphicsItem(const boost::optional<unsigned int>& index);
     QGraphicsPixmapItem *_createSelectedGraphicsItem();
     void _setGraphicsSceneStyle(QGraphicsScene& gs);
