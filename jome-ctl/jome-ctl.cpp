@@ -23,7 +23,7 @@ static Params parseArgs(QCoreApplication& app, int argc, char **argv)
 {
     QCommandLineParser parser;
 
-    parser.setApplicationDescription("Wake up jome");
+    parser.setApplicationDescription("Control jome");
     parser.addHelpOption();
     parser.addVersionOption();
     parser.addPositionalArgument("SERVER-NAME", "jome server name", "NAME");
@@ -58,7 +58,8 @@ int main(int argc, char **argv)
 {
     QCoreApplication app {argc, argv};
 
-    app.setApplicationName("jome-wake-up");
+    app.setApplicationName("jome-ctl");
+    app.setOrganizationName("jome");
     app.setApplicationVersion(JOME_VERSION);
 
     const auto params = parseArgs(app, argc, argv);
