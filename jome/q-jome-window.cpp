@@ -167,50 +167,50 @@ QListWidget *QJomeWindow::_createCatListWidget()
 
     listWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
     listWidget->setFixedWidth(220);
-    QObject::connect(listWidget, SIGNAL(itemSelectionChanged()),
-                     this, SLOT(_catListItemSelectionChanged()));
-    QObject::connect(listWidget, SIGNAL(itemClicked(QListWidgetItem *)),
-                     this, SLOT(_catListItemClicked(QListWidgetItem *)));
+    QObject::connect(listWidget, &QListWidget::itemSelectionChanged,
+                     this, &QJomeWindow::_catListItemSelectionChanged);
+    QObject::connect(listWidget, &QListWidget::itemClicked,
+                     this, &QJomeWindow::_catListItemClicked);
     return listWidget;
 }
 
 void QJomeWindow::_buildUi()
 {
     _wSearchBox = new QLineEdit;
-    QObject::connect(_wSearchBox, SIGNAL(textChanged(const QString&)),
-                     this, SLOT(_searchTextChanged(const QString&)));
+    QObject::connect(_wSearchBox, &QLineEdit::textChanged,
+                     this, &QJomeWindow::_searchTextChanged);
 
     auto eventFilter = new QSearchBoxEventFilter {this};
 
     _wSearchBox->installEventFilter(eventFilter);
-    QObject::connect(eventFilter, SIGNAL(upKeyPressed()),
-                     this, SLOT(_searchBoxUpKeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(rightKeyPressed()),
-                     this, SLOT(_searchBoxRightKeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(downKeyPressed()),
-                     this, SLOT(_searchBoxDownKeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(leftKeyPressed()),
-                     this, SLOT(_searchBoxLeftKeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(enterKeyPressed()),
-                     this, SLOT(_searchBoxEnterKeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(f1KeyPressed()),
-                     this, SLOT(_searchBoxF1KeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(f2KeyPressed()),
-                     this, SLOT(_searchBoxF2KeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(f3KeyPressed()),
-                     this, SLOT(_searchBoxF3KeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(f4KeyPressed()),
-                     this, SLOT(_searchBoxF4KeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(f5KeyPressed()),
-                     this, SLOT(_searchBoxF5KeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(pgUpKeyPressed()),
-                     this, SLOT(_searchBoxPgUpKeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(pgDownKeyPressed()),
-                     this, SLOT(_searchBoxPgDownKeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(homeKeyPressed()),
-                     this, SLOT(_searchBoxHomeKeyPressed()));
-    QObject::connect(eventFilter, SIGNAL(endKeyPressed()),
-                     this, SLOT(_searchBoxEndKeyPressed()));
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::upKeyPressed,
+                     this, &QJomeWindow::_searchBoxUpKeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::rightKeyPressed,
+                     this, &QJomeWindow::_searchBoxRightKeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::downKeyPressed,
+                     this, &QJomeWindow::_searchBoxDownKeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::leftKeyPressed,
+                     this, &QJomeWindow::_searchBoxLeftKeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::enterKeyPressed,
+                     this, &QJomeWindow::_searchBoxEnterKeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::f1KeyPressed,
+                     this, &QJomeWindow::_searchBoxF1KeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::f2KeyPressed,
+                     this, &QJomeWindow::_searchBoxF2KeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::f3KeyPressed,
+                     this, &QJomeWindow::_searchBoxF3KeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::f4KeyPressed,
+                     this, &QJomeWindow::_searchBoxF4KeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::f5KeyPressed,
+                     this, &QJomeWindow::_searchBoxF5KeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::pgUpKeyPressed,
+                     this, &QJomeWindow::_searchBoxPgUpKeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::pgDownKeyPressed,
+                     this, &QJomeWindow::_searchBoxPgDownKeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::homeKeyPressed,
+                     this, &QJomeWindow::_searchBoxHomeKeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::endKeyPressed,
+                     this, &QJomeWindow::_searchBoxEndKeyPressed);
 
     auto mainVbox = new QVBoxLayout;
 
@@ -218,14 +218,14 @@ void QJomeWindow::_buildUi()
     mainVbox->setSpacing(8);
     mainVbox->addWidget(_wSearchBox);
     _wEmojis = new QEmojisWidget {nullptr, *_emojiDb};
-    QObject::connect(_wEmojis, SIGNAL(selectionChanged(const Emoji *)),
-                     this, SLOT(_emojiSelectionChanged(const Emoji *)));
-    QObject::connect(_wEmojis, SIGNAL(emojiClicked(const Emoji&)),
-                     this, SLOT(_emojiClicked(const Emoji&)));
-    QObject::connect(_wEmojis, SIGNAL(emojiHoverEntered(const Emoji&)),
-                     this, SLOT(_emojiHoverEntered(const Emoji&)));
-    QObject::connect(_wEmojis, SIGNAL(emojiHoverLeaved(const Emoji&)),
-                     this, SLOT(_emojiHoverLeaved(const Emoji&)));
+    QObject::connect(_wEmojis, &QEmojisWidget::selectionChanged,
+                     this, &QJomeWindow::_emojiSelectionChanged);
+    QObject::connect(_wEmojis, &QEmojisWidget::emojiClicked,
+                     this, &QJomeWindow::_emojiClicked);
+    QObject::connect(_wEmojis, &QEmojisWidget::emojiHoverEntered,
+                     this, &QJomeWindow::_emojiHoverEntered);
+    QObject::connect(_wEmojis, &QEmojisWidget::emojiHoverLeaved,
+                     this, &QJomeWindow::_emojiHoverLeaved);
     _wCatList = this->_createCatListWidget();
     this->_wCatList->setCurrentRow(0);
 
