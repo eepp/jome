@@ -5,6 +5,8 @@
 
 - id: yellow-faces
   name: Yellow faces
+- id: other-faces
+  name: Other faces
 - id: cat-faces
   name: Cat faces
 - id: love
