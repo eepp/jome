@@ -261,6 +261,7 @@ void QJomeWindow::showEvent(QShowEvent * const event)
     }
 
     _wEmojis->showAllEmojis();
+    _wSearchBox->clear();
     _wSearchBox->setFocus();
 }
 
