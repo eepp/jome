@@ -203,12 +203,15 @@ For example, with `-f cp` and `-p U+`: `U+1f645 U+200d U+2642 U+fe0f`.
     Do not print a newline after printing the emoji or codepoints.
 
 [[opt-c]]`-c _CMD_`::
-    When you accept an emoji, execute command `_CMD_`.
+    When you accept an emoji, execute command `_CMD_` 20{nbsp}ms
+    _after_ closing the jome window.
 +
-`_CMD_` is interpreted like a shell does, so you can have arguments too.
+jome interprets `_CMD_` like a shell does, so you can have arguments
+too.
 +
 `_CMD_` receives the UTF-8 emoji or the Unicode codepoints (depending on
-the `-f` option) with their optional prefix as its last argument(s).
+the <<opt-f,`-f`>> option) with their optional prefix as its last
+argument(s).
 +
 Example with https://www.semicomplete.com/projects/xdotool/[xdotool]:
 +
