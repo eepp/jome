@@ -60,7 +60,7 @@ sudo make install
 [NOTE]
 You need to _install_ jome for it to find the correct data files. If you
 don't want to install it on your system, use
-`-DCMAKE_INSTALL_PREFIX=path/to/install/directory` when running `cmake`.
+`-DCMAKE_INSTALL_PREFIX=path/to/install/directory` when you run `cmake`.
 
 
 == Usage
@@ -127,7 +127,7 @@ Emoji info text (bottom)::
 The power of jome is its <<find-box,find box>>.
 
 When you launch jome, the find box is focused, and it should stay
-focused unless you're browsing emojis manually with the intention of
+focused unless you browse emojis manually with the intention of
 accepting one with the 🖱.
 
 The format of a query is one of:
@@ -221,7 +221,7 @@ jome -f cp -p U -c 'xdotool key --delay 20'
     to `_NAME_`.
 +
 On Unix, this creates the socket file `/tmp/_NAME_` which must
-_not exist_ before starting jome.
+_not exist_ before you start jome.
 
 
 [[server-mode]]
@@ -244,7 +244,7 @@ socket file `/tmp/mein-server`.
 [IMPORTANT]
 --
 On Unix, the server mode won't work if the socket file
-already exists. Remove the file before starting jome in server mode:
+already exists. Remove the file before you start jome in server mode:
 
 ----
 rm -f /tmp/mein-server
