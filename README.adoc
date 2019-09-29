@@ -213,9 +213,10 @@ too.
 the <<opt-f,`-f`>> option) with their optional prefix as its last
 argument(s).
 +
-Example with https://www.semicomplete.com/projects/xdotool/[xdotool]:
+Examples with https://www.semicomplete.com/projects/xdotool/[xdotool]:
 +
 ----
+jome -c 'xdotool type'
 jome -f cp -p U -c 'xdotool key --delay 20'
 ----
 
@@ -285,7 +286,7 @@ jome execute a command itself. For example:
 
 ----
 rm -f mein-server
-jome -s mein-server -f cp -p U -c 'xdotool key --delay 20'
+jome -s mein-server -c 'xdotool type'
 ----
 
 Then, bind a keyboard shortcut to:
@@ -303,6 +304,8 @@ https://www.semicomplete.com/projects/xdotool/[xdotool].
 
 === Non server mode
 
+With `xdotool key`::
++
 [source,bash]
 ----
 #!/usr/bin/bash
@@ -316,9 +319,26 @@ fi
 xdotool key --delay 20 $codepoints
 ----
 
+With `xdotool type`::
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+emojis="$(jome)"
+
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+
+xdotool $emojis
+----
+
 
 === Server mode
 
+With `xdotool key`::
++
 [source,bash]
 ----
 #!/usr/bin/bash
@@ -328,6 +348,26 @@ socket_name="jome.socket.$(id -u)"
 if ! pidof jome &>/dev/null; then
     rm -f "/tmp/$socket_name"
     jome -s "$socket_name" -f cp -p U -c 'xdotool key --delay 20' & disown
+
+    while [ ! -e "/tmp/$socket_name" ]; do
+        sleep .1
+    done
+fi
+
+jome-ctl "$socket_name"
+----
+
+With `xdotool type`::
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+socket_name="jome.socket.$(id -u)"
+
+if ! pidof jome &>/dev/null; then
+    rm -f "/tmp/$socket_name"
+    jome -s "$socket_name" -c 'xdotool type' & disown
 
     while [ ! -e "/tmp/$socket_name" ]; do
         sleep .1
