@@ -40,9 +40,9 @@ protected:
 
 signals:
     void upKeyPressed();
-    void rightKeyPressed();
+    void rightKeyPressed(bool withCtrl);
     void downKeyPressed();
-    void leftKeyPressed();
+    void leftKeyPressed(bool withCtrl);
     void enterKeyPressed();
     void f1KeyPressed();
     void f2KeyPressed();
@@ -87,9 +87,9 @@ private slots:
     void _catListItemSelectionChanged();
     void _catListItemClicked(QListWidgetItem *item);
     void _searchBoxUpKeyPressed();
-    void _searchBoxRightKeyPressed();
+    void _searchBoxRightKeyPressed(bool withCtrl);
     void _searchBoxDownKeyPressed();
-    void _searchBoxLeftKeyPressed();
+    void _searchBoxLeftKeyPressed(bool withCtrl);
     void _searchBoxEnterKeyPressed();
     void _searchBoxF1KeyPressed();
     void _searchBoxF2KeyPressed();

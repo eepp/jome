@@ -34,7 +34,8 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj,
         return QObject::eventFilter(obj, event);
     }
 
-    auto keyEvent = static_cast<const QKeyEvent *>(event);
+    const auto keyEvent = static_cast<const QKeyEvent *>(event);
+    const bool withCtrl = keyEvent->modifiers() & Qt::ControlModifier;
 
     switch (keyEvent->key()) {
     case Qt::Key_Up:
@@ -42,7 +43,7 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj,
         break;
 
     case Qt::Key_Right:
-        emit this->rightKeyPressed();
+        emit this->rightKeyPressed(withCtrl);
         break;
 
     case Qt::Key_Down:
@@ -50,7 +51,7 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj,
         break;
 
     case Qt::Key_Left:
-        emit this->leftKeyPressed();
+        emit this->leftKeyPressed(withCtrl);
         break;
 
     case Qt::Key_F1:
@@ -328,9 +329,9 @@ void QJomeWindow::_searchBoxUpKeyPressed()
     _wEmojis->selectPreviousRow();
 }
 
-void QJomeWindow::_searchBoxRightKeyPressed()
+void QJomeWindow::_searchBoxRightKeyPressed(const bool withCtrl)
 {
-    _wEmojis->selectNext();
+    _wEmojis->selectNext(withCtrl ? 5 : 1);
 }
 
 void QJomeWindow::_searchBoxDownKeyPressed()
@@ -338,9 +339,9 @@ void QJomeWindow::_searchBoxDownKeyPressed()
     _wEmojis->selectNextRow();
 }
 
-void QJomeWindow::_searchBoxLeftKeyPressed()
+void QJomeWindow::_searchBoxLeftKeyPressed(const bool withCtrl)
 {
-    _wEmojis->selectPrevious();
+    _wEmojis->selectPrevious(withCtrl ? 5 : 1);
 }
 
 void QJomeWindow::_searchBoxPgUpKeyPressed()
