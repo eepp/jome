@@ -107,6 +107,8 @@ red box around it.
 Click an emoji to accept it.
 +
 Hover an emoji to update the bottom emoji info text temporarily.
++
+Use the <<opt-d,`-d` option>> to make the background behind emojis dark.
 
 Category list::
     List of available categories.
