@@ -227,7 +227,7 @@ By default, when you accept an emoji (with the ⌨️ or with the 🖱), jome:
 +
 --
 . Hides its window.
-. **Optional**: Prints the accepted emoji or its codepoints.
+. Prints the accepted emoji or its codepoints.
 . **Optional**: Executes a command (see the <<opt-c,`-c` option>>) after
   20{nbsp}ms.
 . **If not running in server mode**, quits (see the <<opt-s,`-s`
