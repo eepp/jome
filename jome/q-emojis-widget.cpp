@@ -89,12 +89,13 @@ void QEmojisWidget::rebuild()
     _allEmojisGraphicsScene.setSceneRect(0., 0.,
                                          static_cast<qreal>(this->width()) - 8., 0.);
     QFont font {"Hack, DejaVu Sans Mono, monospace", 10, QFont::Bold};
+    const auto rowFirstEmojiX = this->_rowFirstEmojiX(_allEmojisGraphicsScene);
 
     for (const auto& cat : _emojiDb->cats()) {
         auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()),
                                                     font);
 
-        item->setPos(8., y);
+        item->setPos(rowFirstEmojiX, y);
         _catVertPositions[cat.get()] = y;
         y += 24.;
         this->_addEmojisToGraphicsScene(cat->emojis(),

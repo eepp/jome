@@ -15,6 +15,7 @@
 #include <QGraphicsView>
 #include <boost/optional.hpp>
 #include <functional>
+#include <cmath>
 
 #include "emoji-db.hpp"
 #include "emoji-images.hpp"
@@ -62,6 +63,16 @@ private:
     void _emojiGraphicsItemClicked(const QEmojiGraphicsItem& item);
 
 private:
+    qreal _rowFirstEmojiX(const QGraphicsScene& gs) const
+    {
+        const auto availWidth = gs.width() - 8. * 2.;
+        const auto rowEmojiCount = std::floor((availWidth + 8.) / (32. + 8.));
+        const auto emojisTotalWidth = rowEmojiCount * 32. +
+                                      (rowEmojiCount - 1) * 8.;
+
+        return std::floor((availWidth - emojisTotalWidth) / 2.) + 8.;
+    }
+
     template <typename ContainerT>
     void _addEmojisToGraphicsScene(const ContainerT& emojis,
                                    std::vector<QEmojiGraphicsItem *>& emojiGraphicsItems,
@@ -70,6 +81,7 @@ private:
     {
         qreal col = 0.;
         const auto availWidth = gs.width();
+        const auto rowFirstEmojiX = this->_rowFirstEmojiX(gs);
         constexpr auto emojiWidthAndMargin = 32. + 8.;
 
         for (const auto& emoji : emojis) {
@@ -80,11 +92,11 @@ private:
             };
 
             emojiGraphicsItems.push_back(emojiGraphicsItem);
-            emojiGraphicsItem->setPos(col * emojiWidthAndMargin + 8., y);
+            emojiGraphicsItem->setPos(col * emojiWidthAndMargin + rowFirstEmojiX, y);
             gs.addItem(emojiGraphicsItem);
             col += 1;
 
-            if ((col + 1.) * emojiWidthAndMargin + 8. >= availWidth) {
+            if ((col + 1.) * emojiWidthAndMargin + rowFirstEmojiX >= availWidth) {
                 col = 0.;
                 y += emojiWidthAndMargin;
             }
