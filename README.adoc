@@ -1,4 +1,4 @@
-= jome 😀
+= jome 😏
 Philippe Proulx <eepp.ca>
 
 **jome** (_joh_·_mee_) is a ⌨️ centric emoji picker desktop application.
