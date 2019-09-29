@@ -28,6 +28,7 @@ struct Params
 {
     Format fmt;
     bool noNewline;
+    bool noHide;
     std::string serverName;
     std::string cmd;
     std::string cpPrefix;
@@ -46,17 +47,20 @@ static Params parseArgs(QApplication& app, int argc, char **argv)
     QCommandLineOption cmdOpt {"c", "External command", "CMD"};
     QCommandLineOption cpPrefixOpt {"p", "Codepoint prefix", "CPPREFIX"};
     QCommandLineOption noNlOpt {"n", "Do not output newline"};
+    QCommandLineOption noHideOpt {"q", "Do not quit when accepting"};
 
     parser.addOption(formatOpt);
     parser.addOption(serverNameOpt);
     parser.addOption(cmdOpt);
     parser.addOption(cpPrefixOpt);
     parser.addOption(noNlOpt);
+    parser.addOption(noHideOpt);
     parser.process(app);
 
     Params params;
 
     params.noNewline = parser.isSet(noNlOpt);
+    params.noHide = parser.isSet(noHideOpt);
 
     const auto fmt = parser.value(formatOpt);
 
@@ -71,6 +75,12 @@ static Params parseArgs(QApplication& app, int argc, char **argv)
     }
 
     if (parser.isSet(serverNameOpt)) {
+        if (params.noHide) {
+            std::cerr << "Command-line error: cannot specify `-s` and `-k` " <<
+                         "options together." << std::endl;
+            std::exit(1);
+        }
+
         params.serverName = parser.value(serverNameOpt).toUtf8().constData();
     }
 
@@ -195,25 +205,27 @@ int main(int argc, char **argv)
             QTimer::singleShot(20, &app, [&params, &server, &app, emojiStr]() {
                 execCommand(params.cmd, emojiStr);
 
-                if (!server) {
+                if (!server && !params.noHide) {
                     // no server: quit after executing the command
                     QTimer::singleShot(0, &app, &QApplication::quit);
                 }
             });
         } else {
-            if (!server) {
+            if (!server && !params.noHide) {
                 // no server: quit now
                 QTimer::singleShot(0, &app, &QApplication::quit);
             }
         }
 
         // always hide when accepting
-        win.hide();
+        if (!params.noHide) {
+            win.hide();
+        }
 
         // add emoji as recent emoji
         db.addRecentEmoji(emoji);
 
-        if (server) {
+        if (server || params.noHide) {
             /*
              * Not calling directly because we're potentially within an
              * event handler which is currently using an emoji graphics

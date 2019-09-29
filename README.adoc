@@ -85,8 +85,8 @@ If you close the window (you can press **Escape** to do this), then jome
 prints nothing to the standard output and executes nothing.
 
 If you don't start jome in <<server-mode,server mode>> (<<opt-s,`-s`
-option>>), then jome immediately quits after you accept an emoji or
-close the window.
+option>>) and you don't specify the <<opt-q,`-q` option>>, then jome
+immediately quits after you accept an emoji or close the window.
 
 
 === Graphical interface
@@ -220,12 +220,35 @@ $ jome -c 'xdotool type'
 $ jome -f cp -p U -c 'xdotool key --delay 20'
 ----
 
+[[opt-q]]`-q`::
+    Do not quit when you <<accept-emoji,accept>> an emoji.
++
+By default, when you accept an emoji (with the ⌨️ or with the 🖱), jome:
++
+--
+. Hides its window.
+. **Optional**: Prints the accepted emoji or its codepoints.
+. **Optional**: Executes a command (see the <<opt-c,`-c` option>>) after
+  20{nbsp}ms.
+. **If not running in server mode**, quits (see the <<opt-s,`-s`
+  option>>).
+--
++
+With the `-q` option, jome does not hide its window and quit when you
+accept an emoji so that you can make it print multiple emojis and/or
+execute a command multiple times with multiple emojis without restarting
+the application.
++
+You cannot specify the `-q` and <<opt-s,`-s`>> options at the same time.
+
 [[opt-s]]`-s _NAME_`::
     Start jome in <<server-mode,server mode>> and set the server name
     to `_NAME_`.
 +
 On Unix, this creates the socket file `/tmp/_NAME_` which must
 _not exist_ before you start jome.
++
+You cannot specify the `-s` and <<opt-q,`-q`>> options at the same time.
 
 
 [[server-mode]]
@@ -289,7 +312,7 @@ $ rm -f mein-server
 $ jome -s mein-server -c 'xdotool type'
 ----
 
-Then, bind a keyboard shortcut to:
+Then, bind a ⌨️ shortcut to:
 
 ----
 $ jome-ctl mein-server
