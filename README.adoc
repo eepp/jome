@@ -226,18 +226,18 @@ $ jome -f cp -p U -c 'xdotool key --delay 20'
 By default, when you accept an emoji (with the ⌨️ or with the 🖱), jome:
 +
 --
+. Prints the accepted emoji or its codepoints to the standard output.
 . Hides its window.
-. Prints the accepted emoji or its codepoints.
 . **Optional**: Executes a command (see the <<opt-c,`-c` option>>) after
   20{nbsp}ms.
 . **If not running in server mode**, quits (see the <<opt-s,`-s`
   option>>).
 --
 +
-With the `-q` option, jome does not hide its window and quit when you
-accept an emoji so that you can make it print multiple emojis and/or
-execute a command multiple times with multiple emojis without restarting
-the application.
+With the `-q` option, jome does not hide its window and does not quit
+when you accept an emoji so that you can make it print multiple emojis
+and/or execute a command multiple times with multiple emojis without
+restarting the application.
 +
 You cannot specify the `-q` and <<opt-s,`-s`>> options at the same time.
 
