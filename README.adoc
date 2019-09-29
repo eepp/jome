@@ -157,7 +157,7 @@ To select an emoji, use the following keys:
 ⬅️, ➡️, ⬆️, ⬇️::
     Go left/right/up/down.
 
-**Ctrl**+⬅️, **Ctrl**+➡️::
+**Ctrl**pass:[+]⬅️, **Ctrl**pass:[+]➡️::
     Go left/right 5 emojis.
 
 **Page ⬆️**, **Page ⬇️**::
