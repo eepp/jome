@@ -109,6 +109,7 @@ QJomeWindow::QJomeWindow(const EmojiDb& emojiDb) :
     QMainWindow {nullptr, Qt::Dialog},
     _emojiDb {&emojiDb}
 {
+    this->setWindowIcon(QIcon {QString {JOME_DATA_DIR} + "/icon.png"});
     this->setWindowTitle("jome");
     this->resize(800, 600);
     this->_setMainStyleSheet();

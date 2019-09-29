@@ -6,6 +6,7 @@
 install (
     FILES
         "sel.png"
+        "icon.png"
     DESTINATION
         share/jome/data
 )
