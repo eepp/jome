@@ -50,11 +50,11 @@ You need:
 
 .Build and install jome
 ----
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=release ..
-make -j$(nproc)
-sudo make install
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=release ..
+$ make -j$(nproc)
+$ sudo make install
 ----
 
 [NOTE]
@@ -216,8 +216,8 @@ argument(s).
 Examples with https://www.semicomplete.com/projects/xdotool/[xdotool]:
 +
 ----
-jome -c 'xdotool type'
-jome -f cp -p U -c 'xdotool key --delay 20'
+$ jome -c 'xdotool type'
+$ jome -f cp -p U -c 'xdotool key --delay 20'
 ----
 
 [[opt-s]]`-s _NAME_`::
@@ -239,7 +239,7 @@ To start jome in server mode, use the <<opt-s,`-s` option>> to specify
 the server name:
 
 ----
-jome -s mein-server
+$ jome -s mein-server
 ----
 
 This creates a local server named `mein-server`. On Unix, it creates the
@@ -251,8 +251,8 @@ On Unix, the server mode won't work if the socket file
 already exists. Remove the file before you start jome in server mode:
 
 ----
-rm -f /tmp/mein-server
-jome -s mein-server
+$ rm -f /tmp/mein-server
+$ jome -s mein-server
 ----
 --
 
@@ -261,7 +261,7 @@ it waits for a command sent by the client, `jome-ctl`. To show the
 window:
 
 ----
-jome-ctl mein-server
+$ jome-ctl mein-server
 ----
 
 When you <<accept-emoji,accept>> an emoji, `jome-ctl` prints what jome
@@ -277,7 +277,7 @@ it hides the window and keeps listening. To make it quit gracefully,
 which also removes the socket file:
 
 ----
-jome-ctl mein-server quit
+$ jome-ctl mein-server quit
 ----
 
 You don't need to use what `jome-ctl` prints to the standard output.
@@ -285,14 +285,14 @@ You can use jome in server mode with the <<opt-c,`-c` option>> to make
 jome execute a command itself. For example:
 
 ----
-rm -f mein-server
-jome -s mein-server -c 'xdotool type'
+$ rm -f mein-server
+$ jome -s mein-server -c 'xdotool type'
 ----
 
 Then, bind a keyboard shortcut to:
 
 ----
-jome-ctl mein-server
+$ jome-ctl mein-server
 ----
 
 
