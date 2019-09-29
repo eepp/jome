@@ -80,7 +80,7 @@ static Params parseArgs(QApplication& app, int argc, char **argv)
 
     if (parser.isSet(serverNameOpt)) {
         if (params.noHide) {
-            std::cerr << "Command-line error: cannot specify `-s` and `-k` " <<
+            std::cerr << "Command-line error: cannot specify `-s` and `-q` " <<
                          "options together." << std::endl;
             std::exit(1);
         }
