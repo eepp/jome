@@ -94,6 +94,10 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj,
         emit this->enterKeyPressed();
         break;
 
+    case Qt::Key_Escape:
+        emit this->escapeKeyPressed();
+        break;
+
     default:
         return QObject::eventFilter(obj, event);
     }
@@ -102,7 +106,7 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj,
 }
 
 QJomeWindow::QJomeWindow(const EmojiDb& emojiDb) :
-    QDialog {},
+    QMainWindow {nullptr, Qt::Dialog},
     _emojiDb {&emojiDb}
 {
     this->setWindowTitle("jome");
@@ -119,7 +123,7 @@ void QJomeWindow::_setMainStyleSheet()
         "  font-size: 12px;"
         "  border: none;"
         "}"
-        "QDialog {"
+        "QMainWindow {"
         "  background-color: #333;"
         "}"
         "QLineEdit {"
@@ -210,6 +214,8 @@ void QJomeWindow::_buildUi()
                      this, &QJomeWindow::_searchBoxHomeKeyPressed);
     QObject::connect(eventFilter, &QSearchBoxEventFilter::endKeyPressed,
                      this, &QJomeWindow::_searchBoxEndKeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::escapeKeyPressed,
+                     this, &QJomeWindow::_searchBoxEscapeKeyPressed);
 
     auto mainVbox = new QVBoxLayout;
 
@@ -235,25 +241,18 @@ void QJomeWindow::_buildUi()
     emojisHbox->addWidget(_wEmojis);
     emojisHbox->addWidget(_wCatList);
     mainVbox->addLayout(emojisHbox);
-    this->setLayout(mainVbox);
 
+    auto centralWidget = new QWidget;
+
+    centralWidget->setLayout(mainVbox);
+    this->setCentralWidget(centralWidget);
     _wInfoLabel = new QLabel {""};
     mainVbox->addWidget(_wInfoLabel);
 }
 
-void QJomeWindow::reject()
-{
-    this->hide();
-    emit this->canceled();
-}
-
-void QJomeWindow::accept()
-{
-}
-
 void QJomeWindow::showEvent(QShowEvent * const event)
 {
-    QDialog::showEvent(event);
+    QMainWindow::showEvent(event);
 
     if (!_emojisWidgetBuilt) {
         _wEmojis->rebuild();
@@ -363,6 +362,12 @@ void QJomeWindow::_searchBoxEndKeyPressed()
     _wEmojis->selectLast();
 }
 
+void QJomeWindow::_searchBoxEscapeKeyPressed()
+{
+    this->hide();
+    emit this->canceled();
+}
+
 void QJomeWindow::_searchBoxEnterKeyPressed()
 {
     this->_acceptSelectedEmoji(Emoji::SkinTone::NONE);
@@ -425,7 +430,6 @@ void QJomeWindow::_acceptEmoji(const Emoji& emoji,
                                const Emoji::SkinTone skinTone)
 {
     emit this->emojiChosen(emoji, skinTone);
-    this->accept();
 }
 
 void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)

@@ -10,7 +10,7 @@
 
 #include <QObject>
 #include <QEvent>
-#include <QDialog>
+#include <QMainWindow>
 #include <QLabel>
 #include <QListWidget>
 #include <QScrollArea>
@@ -53,10 +53,11 @@ signals:
     void pgDownKeyPressed();
     void homeKeyPressed();
     void endKeyPressed();
+    void escapeKeyPressed();
 };
 
 class QJomeWindow :
-    public QDialog
+    public QMainWindow
 {
     Q_OBJECT
 
@@ -82,8 +83,6 @@ private:
     void _acceptEmoji(const Emoji& emoji, Emoji::SkinTone skinTone);
 
 private slots:
-    void reject() override;
-    void accept() override;
     void _searchTextChanged(const QString& text);
     void _catListItemSelectionChanged();
     void _catListItemClicked(QListWidgetItem *item);
@@ -101,6 +100,7 @@ private slots:
     void _searchBoxPgDownKeyPressed();
     void _searchBoxHomeKeyPressed();
     void _searchBoxEndKeyPressed();
+    void _searchBoxEscapeKeyPressed();
     void _emojiSelectionChanged(const Emoji *emoji);
     void _emojiClicked(const Emoji& emoji);
     void _emojiHoverEntered(const Emoji& emoji);
