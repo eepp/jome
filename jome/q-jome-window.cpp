@@ -107,7 +107,6 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj,
 }
 
 QJomeWindow::QJomeWindow(const EmojiDb& emojiDb) :
-    QMainWindow {nullptr, Qt::Dialog},
     _emojiDb {&emojiDb}
 {
     this->setWindowIcon(QIcon {QString {JOME_DATA_DIR} + "/icon.png"});
