@@ -253,6 +253,9 @@ _not exist_ before you start jome.
 +
 You cannot specify the `-s` and <<opt-q,`-q`>> options at the same time.
 
+[[opt-d]]`-d`::
+    Use a dark background for emojis.
+
 
 [[server-mode]]
 === Server mode

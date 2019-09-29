@@ -33,7 +33,8 @@ public:
     using CatVerticalPositions = std::unordered_map<const EmojiCat *, qreal>;
 
 public:
-    explicit QEmojisWidget(QWidget *parent, const EmojiDb& emojiDb);
+    explicit QEmojisWidget(QWidget *parent, const EmojiDb& emojiDb,
+                           bool darkBg);
     ~QEmojisWidget();
     void rebuild();
     void showAllEmojis();
@@ -118,6 +119,7 @@ private:
     boost::optional<unsigned int> _selectedEmojiGraphicsItemIndex;
     QGraphicsPixmapItem *_allEmojisGraphicsSceneSelectedItem = nullptr;
     QGraphicsPixmapItem *_findEmojisGraphicsSceneSelectedItem = nullptr;
+    bool _darkBg;
 };
 
 } // namespace jome

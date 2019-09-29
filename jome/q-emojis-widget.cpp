@@ -21,10 +21,12 @@
 
 namespace jome {
 
-QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb) :
+QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb,
+                             const bool darkBg) :
     QGraphicsView {parent},
     _emojiDb {&emojiDb},
-    _emojiImages {emojiDb}
+    _emojiImages {emojiDb},
+    _darkBg {darkBg}
 {
     _allEmojisGraphicsSceneSelectedItem = this->_createSelectedGraphicsItem();
     _findEmojisGraphicsSceneSelectedItem = this->_createSelectedGraphicsItem();
@@ -55,7 +57,15 @@ QEmojisWidget::~QEmojisWidget()
 
 void QEmojisWidget::_setGraphicsSceneStyle(QGraphicsScene& gs)
 {
-    gs.setBackgroundBrush(QColor {"#f8f8f8"});
+    QColor bgColor;
+
+    if (_darkBg) {
+        bgColor = "#202020";
+    } else {
+        bgColor = "#f8f8f8";
+    }
+
+    gs.setBackgroundBrush(bgColor);
 }
 
 QGraphicsPixmapItem *QEmojisWidget::_createSelectedGraphicsItem()
@@ -90,11 +100,13 @@ void QEmojisWidget::rebuild()
                                          static_cast<qreal>(this->width()) - 8., 0.);
     QFont font {"Hack, DejaVu Sans Mono, monospace", 10, QFont::Bold};
     const auto rowFirstEmojiX = this->_rowFirstEmojiX(_allEmojisGraphicsScene);
+    const QColor textColor {_darkBg ? "#f8f8f8" : "#202020"};
 
     for (const auto& cat : _emojiDb->cats()) {
         auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()),
                                                     font);
 
+        item->setDefaultTextColor(textColor);
         item->setPos(rowFirstEmojiX, y);
         _catVertPositions[cat.get()] = y;
         y += 24.;

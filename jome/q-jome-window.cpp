@@ -106,14 +106,14 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj,
     return true;
 }
 
-QJomeWindow::QJomeWindow(const EmojiDb& emojiDb) :
+QJomeWindow::QJomeWindow(const EmojiDb& emojiDb, const bool darkBg) :
     _emojiDb {&emojiDb}
 {
     this->setWindowIcon(QIcon {QString {JOME_DATA_DIR} + "/icon.png"});
     this->setWindowTitle("jome");
     this->resize(800, 600);
     this->_setMainStyleSheet();
-    this->_buildUi();
+    this->_buildUi(darkBg);
 }
 
 void QJomeWindow::_setMainStyleSheet()
@@ -178,7 +178,7 @@ QListWidget *QJomeWindow::_createCatListWidget()
     return listWidget;
 }
 
-void QJomeWindow::_buildUi()
+void QJomeWindow::_buildUi(const bool darkBg)
 {
     _wSearchBox = new QLineEdit;
     QObject::connect(_wSearchBox, &QLineEdit::textChanged,
@@ -223,7 +223,7 @@ void QJomeWindow::_buildUi()
     mainVbox->setMargin(8);
     mainVbox->setSpacing(8);
     mainVbox->addWidget(_wSearchBox);
-    _wEmojis = new QEmojisWidget {nullptr, *_emojiDb};
+    _wEmojis = new QEmojisWidget {nullptr, *_emojiDb, darkBg};
     QObject::connect(_wEmojis, &QEmojisWidget::selectionChanged,
                      this, &QJomeWindow::_emojiSelectionChanged);
     QObject::connect(_wEmojis, &QEmojisWidget::emojiClicked,

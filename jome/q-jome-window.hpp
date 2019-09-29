@@ -62,7 +62,7 @@ class QJomeWindow :
     Q_OBJECT
 
 public:
-    explicit QJomeWindow(const EmojiDb& emojiDb);
+    explicit QJomeWindow(const EmojiDb& emojiDb, bool darkBg);
 
 signals:
     void emojiChosen(const Emoji& emoji, Emoji::SkinTone skinTone);
@@ -75,7 +75,7 @@ private:
     void closeEvent(QCloseEvent *event) override;
     void showEvent(QShowEvent *event) override;
     void _setMainStyleSheet();
-    void _buildUi();
+    void _buildUi(bool darkBg);
     QListWidget *_createCatListWidget();
     void _updateInfoLabel(const Emoji *emoji);
     void _findEmojis(const std::string& cat, const std::string& needles);

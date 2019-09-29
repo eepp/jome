@@ -29,6 +29,7 @@ struct Params
     Format fmt;
     bool noNewline;
     bool noHide;
+    bool darkBg;
     std::string serverName;
     std::string cmd;
     std::string cpPrefix;
@@ -48,6 +49,7 @@ static Params parseArgs(QApplication& app, int argc, char **argv)
     QCommandLineOption cpPrefixOpt {"p", "Codepoint prefix", "CPPREFIX"};
     QCommandLineOption noNlOpt {"n", "Do not output newline"};
     QCommandLineOption noHideOpt {"q", "Do not quit when accepting"};
+    QCommandLineOption darkBgOpt {"d", "Use dark emoji background"};
 
     parser.addOption(formatOpt);
     parser.addOption(serverNameOpt);
@@ -55,12 +57,14 @@ static Params parseArgs(QApplication& app, int argc, char **argv)
     parser.addOption(cpPrefixOpt);
     parser.addOption(noNlOpt);
     parser.addOption(noHideOpt);
+    parser.addOption(darkBgOpt);
     parser.process(app);
 
     Params params;
 
     params.noNewline = parser.isSet(noNlOpt);
     params.noHide = parser.isSet(noHideOpt);
+    params.darkBg = parser.isSet(darkBgOpt);
 
     const auto fmt = parser.value(formatOpt);
 
@@ -169,7 +173,7 @@ int main(int argc, char **argv)
 
     const auto params = parseArgs(app, argc, argv);
     jome::EmojiDb db {JOME_DATA_DIR};
-    jome::QJomeWindow win {db};
+    jome::QJomeWindow win {db, params.darkBg};
 
     QObject::connect(&win, &jome::QJomeWindow::canceled,
                      [&params, &app, &server]() {
