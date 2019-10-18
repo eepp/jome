@@ -809,77 +809,77 @@
     "codes": "1F498",
     "char": "💘",
     "name": "heart with arrow",
-    "keywords": "arrow | cupid | heart with arrow"
+    "keywords": "arrow | cupid | heart with arrow | love"
   },
   {
     "no": 117,
     "codes": "1F49D",
     "char": "💝",
     "name": "heart with ribbon",
-    "keywords": "heart with ribbon | ribbon | valentine"
+    "keywords": "heart with ribbon | ribbon | valentine | love"
   },
   {
     "no": 118,
     "codes": "1F496",
     "char": "💖",
     "name": "sparkling heart",
-    "keywords": "excited | sparkle | sparkling heart"
+    "keywords": "excited | sparkle | sparkling heart | love"
   },
   {
     "no": 119,
     "codes": "1F497",
     "char": "💗",
     "name": "growing heart",
-    "keywords": "excited | growing | growing heart | nervous | pulse"
+    "keywords": "excited | growing | growing heart | nervous | pulse | love"
   },
   {
     "no": 120,
     "codes": "1F493",
     "char": "💓",
     "name": "beating heart",
-    "keywords": "beating | beating heart | heartbeat | pulsating"
+    "keywords": "beating | beating heart | heartbeat | pulsating | love"
   },
   {
     "no": 121,
     "codes": "1F49E",
     "char": "💞",
     "name": "revolving hearts",
-    "keywords": "revolving | revolving hearts"
+    "keywords": "revolving | revolving hearts | love"
   },
   {
     "no": 122,
     "codes": "1F495",
     "char": "💕",
     "name": "two hearts",
-    "keywords": "love | two hearts"
+    "keywords": "love | two hearts | love"
   },
   {
     "no": 123,
     "codes": "1F49F",
     "char": "💟",
     "name": "heart decoration",
-    "keywords": "heart | heart decoration"
+    "keywords": "heart | heart decoration | love"
   },
   {
     "no": 124,
     "codes": "2763",
     "char": "❣️",
     "name": "heavy heart exclamation",
-    "keywords": "exclamation | heavy heart exclamation | mark | punctuation"
+    "keywords": "exclamation | heavy heart exclamation | mark | punctuation | love"
   },
   {
     "no": 125,
     "codes": "1F494",
     "char": "💔",
     "name": "broken heart",
-    "keywords": "break | broken | broken heart"
+    "keywords": "break | broken | broken heart | love"
   },
   {
     "no": 126,
     "codes": "2764",
     "char": "❤️",
     "name": "red heart",
-    "keywords": "heart | red heart"
+    "keywords": "heart | red heart | love"
   },
   {
     "no": 127,
@@ -942,7 +942,7 @@
     "codes": "1F4A5",
     "char": "💥",
     "name": "collision",
-    "keywords": "boom | collision | comic"
+    "keywords": "boom | collision | comic | explosion"
   },
   {
     "no": 136,
@@ -3238,7 +3238,7 @@
     "codes": "1F402",
     "char": "🐂",
     "name": "ox",
-    "keywords": "bull | ox | Taurus | zodiac"
+    "keywords": "bull | ox | Taurus | zodiac | beef"
   },
   {
     "no": 464,
@@ -3252,21 +3252,21 @@
     "codes": "1F404",
     "char": "🐄",
     "name": "cow",
-    "keywords": "cow"
+    "keywords": "cow | beef"
   },
   {
     "no": 466,
     "codes": "1F437",
     "char": "🐷",
     "name": "pig face",
-    "keywords": "face | pig"
+    "keywords": "face | pig | pork"
   },
   {
     "no": 467,
     "codes": "1F416",
     "char": "🐖",
     "name": "pig",
-    "keywords": "pig | sow"
+    "keywords": "pig | sow | pork"
   },
   {
     "no": 468,
@@ -3280,7 +3280,7 @@
     "codes": "1F43D",
     "char": "🐽",
     "name": "pig nose",
-    "keywords": "face | nose | pig"
+    "keywords": "face | nose | pig | pork"
   },
   {
     "no": 470,
@@ -3336,7 +3336,7 @@
     "codes": "1F418",
     "char": "🐘",
     "name": "elephant",
-    "keywords": "elephant"
+    "keywords": "elephant | trunk"
   },
   {
     "no": 478,
@@ -3854,7 +3854,7 @@
     "codes": "1F332",
     "char": "🌲",
     "name": "evergreen tree",
-    "keywords": "evergreen tree | tree"
+    "keywords": "evergreen tree | tree | fir | spruce"
   },
   {
     "no": 552,
@@ -3875,7 +3875,7 @@
     "codes": "1F335",
     "char": "🌵",
     "name": "cactus",
-    "keywords": "cactus | plant"
+    "keywords": "cactus | plant | spike | thorn | arizona"
   },
   {
     "no": 555,
@@ -3896,21 +3896,21 @@
     "codes": "2618",
     "char": "☘",
     "name": "shamrock",
-    "keywords": "plant | shamrock"
+    "keywords": "plant | shamrock | ireland"
   },
   {
     "no": 558,
     "codes": "1F340",
     "char": "🍀",
     "name": "four leaf clover",
-    "keywords": "4 | clover | four | four-leaf clover | leaf"
+    "keywords": "4 | clover | four | four-leaf clover | leaf | ireland"
   },
   {
     "no": 559,
     "codes": "1F341",
     "char": "🍁",
     "name": "maple leaf",
-    "keywords": "falling | leaf | maple"
+    "keywords": "falling | leaf | maple | canada"
   },
   {
     "no": 560,
@@ -3931,7 +3931,7 @@
     "codes": "1F347",
     "char": "🍇",
     "name": "grapes",
-    "keywords": "fruit | grape | grapes"
+    "keywords": "fruit | grape | grapes | purple"
   },
   {
     "no": 563,
@@ -3959,7 +3959,7 @@
     "codes": "1F34B",
     "char": "🍋",
     "name": "lemon",
-    "keywords": "citrus | fruit | lemon"
+    "keywords": "citrus | fruit | lemon | yellow"
   },
   {
     "no": 567,
@@ -4162,7 +4162,7 @@
     "codes": "1F96F",
     "char": "🥯",
     "name": "bagel",
-    "keywords": "bagel | bakery | schmear"
+    "keywords": "bagel | bakery | schmear | montreal"
   },
   {
     "no": 596,
@@ -4204,7 +4204,7 @@
     "codes": "1F953",
     "char": "🥓",
     "name": "bacon",
-    "keywords": "bacon | food | meat"
+    "keywords": "bacon | food | meat | breakfast"
   },
   {
     "no": 602,
@@ -4274,7 +4274,7 @@
     "codes": "1F373",
     "char": "🍳",
     "name": "cooking",
-    "keywords": "cooking | egg | frying | pan"
+    "keywords": "cooking | egg | frying | pan | breakfast"
   },
   {
     "no": 612,
@@ -4309,14 +4309,14 @@
     "codes": "1F37F",
     "char": "🍿",
     "name": "popcorn",
-    "keywords": "popcorn"
+    "keywords": "popcorn | movie"
   },
   {
     "no": 617,
     "codes": "1F9C2",
     "char": "🧂",
     "name": "salt",
-    "keywords": "condiment | salt | shaker"
+    "keywords": "condiment | salt | shaker | sodium"
   },
   {
     "no": 618,
@@ -4372,7 +4372,7 @@
     "codes": "1F35D",
     "char": "🍝",
     "name": "spaghetti",
-    "keywords": "pasta | spaghetti"
+    "keywords": "pasta | spaghetti | italian"
   },
   {
     "no": 626,
@@ -4498,7 +4498,7 @@
     "codes": "1F369",
     "char": "🍩",
     "name": "doughnut",
-    "keywords": "dessert | donut | doughnut | sweet"
+    "keywords": "dessert | donut | doughnut | sweet | homer"
   },
   {
     "no": 644,
@@ -4638,7 +4638,7 @@
     "codes": "1F37A",
     "char": "🍺",
     "name": "beer mug",
-    "keywords": "bar | beer | drink | mug"
+    "keywords": "bar | beer | drink | mug | 50"
   },
   {
     "no": 664,
@@ -8054,7 +8054,7 @@
     "codes": "1F489",
     "char": "💉",
     "name": "syringe",
-    "keywords": "medicine | needle | shot | sick | syringe"
+    "keywords": "medicine | needle | shot | sick | syringe | blood"
   },
   {
     "no": 1152,
