@@ -1,7 +1,7 @@
 = jome 😏
 Philippe Proulx <eepp.ca>
 
-**jome** (_joh_·_mee_) is a ⌨️ centric emoji picker desktop application.
+**jome** (_joh_·_mee_) is a ⌨️ centric emoji picker 🖥 application.
 
 You can also pick an emoji with the 🖱, don't worry.
 
@@ -10,9 +10,9 @@ https://emojipedia.org/emoji-11.0/[Emoji{nbsp}11.0].
 
 I'm not a fan of the usual very broad categories of emojis which do not
 intersect so I made my own categories. A given emoji can be found in
-more than one category. For example, 🦈 is found in both the _animals (no
-faces)_ and _water_ categories. I find that it's easier to visually
-search by theme than by very general category. Feel free to suggest more
+more than 1️⃣ category. For example, 🦈 is found in both the _animals (no
+faces)_ and _water_ categories. I find that it's easier to 🔍 👁 by
+theme than by very general category. Feel 🆓 to suggest more
 categories.
 
 jome is currently only tested on 🐧.
@@ -35,20 +35,20 @@ image::screenshots/transp-cat-car.png[]
 image::screenshots/transp-cat-car-lig.png[]
 
 
-== Build
+== 👷
 
 You need:
 
 * https://cmake.org/[CMake] ≥ 3.1.0
 * A pass:[C++14] compiler
-* http://www.boost.org/[Boost] ≥ 1.58 (only to build)
+* http://www.boost.org/[Boost] ≥ 1.58 (only to 👷)
 * Qt 5 (_Core_, _GUI_, _Widgets_, and _Network_ modules)
-* Python 3 (only to build)
-** The `cairo` package
-** The `cairosvg` package
-** The `yaml` package
+* Python 3 (only to 👷)
+** The `cairo` 📦
+** The `cairosvg` 📦
+** The `yaml` 📦
 
-.Build and install jome
+.👷 and install jome
 ----
 $ mkdir build
 $ cd build
@@ -58,7 +58,7 @@ $ sudo make install
 ----
 
 [NOTE]
-You need to _install_ jome for it to find the correct data files. If you
+You need to _install_ jome for it to find the correct data 📄. If you
 don't want to install it on your system, use
 `-DCMAKE_INSTALL_PREFIX=path/to/install/directory` when you run `cmake`.
 
@@ -68,12 +68,12 @@ don't want to install it on your system, use
 jome's purpose is to help you pick an emoji.
 
 When you <<accept-emoji,accept>> an emoji (with the ⌨️ or with the 🖱),
-jome prints the UTF-8 emoji or the Unicode codepoints (see the
+jome 🖨 the UTF-8 emoji or the Unicode codepoints (see the
 <<opt-f,`-f` option>>), with an optional prefix (see the <<opt-p,`-p`
 option>>) for each codepoint, to the standard output. Additionally, jome
 can:
 
-* Execute a custom command which gets the UTF-8 emoji or the Unicode
+* Execute a custom command which receives the UTF-8 emoji or the Unicode
   codepoints, with an optional prefix for each codepoint, as its
   last argument(s). See the <<opt-s,`-c` option>>.
 
@@ -81,8 +81,8 @@ can:
   prefix for each codepoint, in response to a client which requested
   picking an emoji. See the <<opt-s,`-s` option>>.
 
-If you close the window (you can press **Escape** to do this), then jome
-prints nothing to the standard output and executes nothing.
+If you close the window (you can 👇 **Escape** to do this), then jome
+🖨 nothing to the standard output and executes nothing.
 
 If you don't start jome in <<server-mode,server mode>> (<<opt-s,`-s`
 option>>) and you don't specify the <<opt-q,`-q` option>>, then jome
@@ -93,46 +93,46 @@ immediately quits after you accept an emoji or close the window.
 
 image::screenshots/all.png[]
 
-There are four sections:
+There are 4️⃣ sections:
 
-[[find-box]]Find box (top)::
-    Input box where you can type a query to <<find-emojis,find emojis>>.
+[[find-box]]🔍 box (⬆️)::
+    Input box where you can ⌨️ a query to <<find-emojis,🔍 emojis>>.
 
 Emojis::
-    All emojis (with an empty find box) or find results.
+    All emojis (with an empty 🔍 box) or 🔍 results.
 +
-When there's at least one emoji, there's always a selected emoji with a
-red box around it.
+When there's at least 1️⃣ emoji, there's always a selected emoji with a
+🔴 box around it.
 +
-Click an emoji to accept it.
+🖱 an emoji to accept it.
 +
-Hover an emoji to update the bottom emoji info text temporarily.
+Hover an emoji to update the ⬇️ emoji info text temporarily.
 +
 Use the <<opt-d,`-d` option>> to make the background behind emojis dark.
 
 Category list::
     List of available categories.
 +
-When all emojis are shown (the find box is empty), click a category
+When all emojis are 👁 (the 🔍 box is empty), 🖱 a category
 name to scroll to this emoji category.
 +
 The first category, _Recent_, is a special category with the recently
 accepted emojis.
 
-Emoji info text (bottom)::
+Emoji info text (⬇️)::
     Name and Unicode codepoints of the selected or hovered emoji.
 
 
 [[find-emojis]]
 === 🔍 emojis
 
-The power of jome is its <<find-box,find box>>.
+The power of jome is its <<find-box,🔍 box>>.
 
-When you launch jome, the find box is focused, and it should stay
+When you launch jome, the 🔍 box is focused, and it should stay
 focused unless you browse emojis manually with the intention of
 accepting one with the 🖱.
 
-The format of a query is one of:
+The format of a query is 1️⃣ of:
 
 * `_TERMS_`
 * `_CAT_/`
@@ -141,27 +141,27 @@ The format of a query is one of:
 where:
 
 `_CAT_`::
-    Partial name of categories in which to search.
+    Partial name of categories in which to 🔍.
 
 `_TERMS_`::
-    Space-separated list of search terms.
+    Space-separated list of 🔍 terms.
 +
-For an emoji to be part of the results, at least one of its keywords
-must contain _all_ the search terms.
+For an emoji to be part of the results, at least 🔍 of its keywords
+must contain _all_ the 🔍 terms.
 
 
 === Select and accept an emoji
 
-To select an emoji, use the following keys:
+To select an emoji, use the following ⌨️:
 
 ⬅️, ➡️, ⬆️, ⬇️::
-    Go left/right/up/down.
+    Go ⬅️/➡️/⬆️/⬇️.
 
 **Ctrl**pass:[+]⬅️, **Ctrl**pass:[+]➡️::
-    Go left/right 5 emojis.
+    Go ⬅️/➡️ 5️⃣ emojis.
 
 **Page ⬆️**, **Page ⬇️**::
-    Go up/down 10 rows.
+    Go ⬆️/⬇️ 10 rows.
 
 **Home**::
     Go to the first emoji.
@@ -169,7 +169,7 @@ To select an emoji, use the following keys:
 **End**::
     Go to the last emoji.
 
-[[accept-emoji]]To accept the selected emoji, press:
+[[accept-emoji]]To accept the selected emoji, 👇:
 
 **Enter**::
     Accept the selected emoji with the default skin tone
@@ -180,7 +180,7 @@ To select an emoji, use the following keys:
     emoji with a light, medium-light, medium, medium-dark, or dark
     skin tone.
 
-To cancel, press **Escape** or close the window.
+To cancel, 👇 **Escape** or close the window.
 
 
 [[cl-options]]
@@ -205,13 +205,13 @@ Example: `1f645 200d 2642 fe0f`
 For example, with `-f cp` and `-p U+`: `U+1f645 U+200d U+2642 U+fe0f`.
 
 `-n`::
-    Do not print a newline after printing the emoji or codepoints.
+    Do not 🖨 a newline after 🖨 the emoji or codepoints.
 
 [[opt-c]]`-c _CMD_`::
     When you accept an emoji, execute command `_CMD_` 20{nbsp}ms
     _after_ closing the jome window.
 +
-jome interprets `_CMD_` like a shell does, so you can have arguments
+jome interprets `_CMD_` like a 🐚 does, so you can have arguments
 too.
 +
 `_CMD_` receives the UTF-8 emoji or the Unicode codepoints (depending on
@@ -231,7 +231,7 @@ $ jome -f cp -p U -c 'xdotool key --delay 20'
 By default, when you accept an emoji (with the ⌨️ or with the 🖱), jome:
 +
 --
-. Prints the accepted emoji or its codepoints to the standard output.
+. 🖨 the accepted emoji or its codepoints to the standard output.
 . Hides its window.
 . **Optional**: Executes a command (see the <<opt-c,`-c` option>>) after
   20{nbsp}ms.
@@ -240,20 +240,20 @@ By default, when you accept an emoji (with the ⌨️ or with the 🖱), jome:
 --
 +
 With the `-q` option, jome does not hide its window and does not quit
-when you accept an emoji so that you can make it print multiple emojis
-and/or execute a command multiple times with multiple emojis without
+when you accept an emoji so that you can make it 🖨 multiple emojis
+and/or execute a command multiple ⏲ with multiple emojis without
 restarting the application.
 +
-You cannot specify the `-q` and <<opt-s,`-s`>> options at the same time.
+You cannot specify the `-q` and <<opt-s,`-s`>> options at the same ⏲.
 
 [[opt-s]]`-s _NAME_`::
     Start jome in <<server-mode,server mode>> and set the server name
     to `_NAME_`.
 +
-On Unix, this creates the socket file `/tmp/_NAME_` which must
-_not exist_ before you start jome.
+On Unix, this creates the socket 📄 `/tmp/_NAME_` which must _not exist_
+before you start jome.
 +
-You cannot specify the `-s` and <<opt-q,`-q`>> options at the same time.
+You cannot specify the `-s` and <<opt-q,`-q`>> options at the same ⏲.
 
 [[opt-d]]`-d`::
     Use a dark background for emojis.
@@ -263,8 +263,8 @@ You cannot specify the `-s` and <<opt-q,`-q`>> options at the same time.
 === Server mode
 
 jome features a server mode to avoid creating a process (a Qt window can
-be quite long to create) every time you need to pick an emoji. With this
-mode, you can bring up the jome window instantaneously.
+be quite long to create) every ⏲ you need to pick an emoji. With this
+mode, you can 👁 the jome window instantaneously.
 
 To start jome in server mode, use the <<opt-s,`-s` option>> to specify
 the server name:
@@ -274,12 +274,12 @@ $ jome -s mein-server
 ----
 
 This creates a local server named `mein-server`. On Unix, it creates the
-socket file `/tmp/mein-server`.
+socket 📄 `/tmp/mein-server`.
 
 [IMPORTANT]
 --
-On Unix, the server mode won't work if the socket file
-already exists. Remove the file before you start jome in server mode:
+On Unix, the server mode won't work if the socket 📄
+already exists. Remove the 📄 before you start jome in server mode:
 
 ----
 $ rm -f /tmp/mein-server
@@ -287,31 +287,31 @@ $ jome -s mein-server
 ----
 --
 
-When jome starts in server mode, it does not show its window. Instead,
-it waits for a command sent by the client, `jome-ctl`. To show the
+When jome starts in server mode, it does not 👁 its window. Instead,
+it ⌛ for a command sent by the client, `jome-ctl`. To 👁 the
 window:
 
 ----
 $ jome-ctl mein-server
 ----
 
-When you <<accept-emoji,accept>> an emoji, `jome-ctl` prints what jome
-also prints to the standard output and quits with exit code 0.
-Therefore, the output format of `jome-ctl` is controlled by the
+When you <<accept-emoji,accept>> an emoji, `jome-ctl` 🖨 what jome
+also 🖨 to the standard output and quits with exit code 0️⃣.
+Therefore, the output format of `jome-ctl` is 🎛 by the
 <<cl-options,options>> passed to `jome`.
 
 If you cancel jome (press **Escape** or close the window), `jome-ctl`
-prints nothing and returns with exit code 1.
+🖨 nothing and returns with exit code 1️⃣.
 
 In server mode, jome does not quit once you accept an emoji or cancel:
-it hides the window and keeps listening. To make it quit gracefully,
-which also removes the socket file:
+it hides the window and keeps 👂. To make it quit gracefully,
+which also removes the socket 📄:
 
 ----
 $ jome-ctl mein-server quit
 ----
 
-You don't need to use what `jome-ctl` prints to the standard output.
+You don't need to use what `jome-ctl` 🖨 to the standard output.
 You can use jome in server mode with the <<opt-c,`-c` option>> to make
 jome execute a command itself. For example:
 
@@ -327,9 +327,9 @@ $ jome-ctl mein-server
 ----
 
 
-== Type the accepted emoji
+== ⌨️ the accepted emoji
 
-Here are Bash scripts to type the accepted emoji with
+Here are Bash 📜 to ⌨️ the accepted emoji with
 https://www.semicomplete.com/projects/xdotool/[xdotool].
 
 
