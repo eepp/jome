@@ -43,10 +43,6 @@ You need:
 * A pass:[C++14] compiler
 * http://www.boost.org/[Boost] ≥ 1.58 (only to 👷)
 * Qt 5 (_Core_, _GUI_, _Widgets_, and _Network_ modules)
-* Python 3 (only to 👷)
-** The `cairo` 📦
-** The `cairosvg` 📦
-** The `yaml` 📦
 
 .👷 and install jome
 ----

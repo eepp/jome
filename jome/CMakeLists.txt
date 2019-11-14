@@ -27,7 +27,6 @@ add_executable (
     emoji-db.cpp
     tinyutf8.cpp
 )
-add_dependencies (jome data)
 target_link_libraries (
     jome
     Qt5::Widgets
