@@ -356,13 +356,13 @@ With `xdotool type`::
 ----
 #!/usr/bin/bash
 
-emojis="$(jome)"
+emoji="$(jome)"
 
 if [ $? -ne 0 ]; then
     exit 1
 fi
 
-xdotool $emojis
+xdotool type "$emoji"
 ----
 
 
