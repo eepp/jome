@@ -37,7 +37,7 @@ QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb,
     this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     // margins, 6 emojis, and scrollbar
-    this->setMinimumWidth(8 + (32 + 8) * 7 + 8 + 1);
+    this->setMinimumWidth(8 + (_emojiDb->emojiSizeInt() + 8) * 7 + 8 + 1);
 }
 
 QEmojisWidget::~QEmojisWidget()
@@ -70,7 +70,8 @@ void QEmojisWidget::_setGraphicsSceneStyle(QGraphicsScene& gs)
 
 QGraphicsPixmapItem *QEmojisWidget::_createSelectedGraphicsItem()
 {
-    const auto path = std::string {JOME_DATA_DIR} + "/sel.png";
+    const auto path = std::string {JOME_DATA_DIR} + "/sel-" +
+                      std::to_string(_emojiDb->emojiSizeInt()) + ".png";
 
     QImage image {QString::fromStdString(path)};
     auto graphicsItem = new QGraphicsPixmapItem {

@@ -5,7 +5,11 @@
 
 install (
     FILES
-        "sel.png"
+        "sel-16.png"
+        "sel-24.png"
+        "sel-32.png"
+        "sel-40.png"
+        "sel-48.png"
         "icon.png"
     DESTINATION
         share/jome/data

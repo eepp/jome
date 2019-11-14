@@ -67,8 +67,9 @@ private:
     qreal _rowFirstEmojiX(const QGraphicsScene& gs) const
     {
         const auto availWidth = gs.width() - 8. * 2.;
-        const auto rowEmojiCount = std::floor((availWidth + 8.) / (32. + 8.));
-        const auto emojisTotalWidth = rowEmojiCount * 32. +
+        const auto rowEmojiCount = std::floor((availWidth + 8.) /
+                                              (_emojiDb->emojiSizeInt() + 8.));
+        const auto emojisTotalWidth = rowEmojiCount * _emojiDb->emojiSizeInt() +
                                       (rowEmojiCount - 1) * 8.;
 
         return std::floor((availWidth - emojisTotalWidth) / 2.) + 8.;
@@ -83,7 +84,7 @@ private:
         qreal col = 0.;
         const auto availWidth = gs.width();
         const auto rowFirstEmojiX = this->_rowFirstEmojiX(gs);
-        constexpr auto emojiWidthAndMargin = 32. + 8.;
+        const auto emojiWidthAndMargin = _emojiDb->emojiSizeInt() + 8.;
 
         for (const auto& emoji : emojis) {
             namespace ph = std::placeholders;

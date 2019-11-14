@@ -835,7 +835,7 @@ public:
 	utf8_string( const utf8_string& str )
 	{
 		// Copy data
-		std::memcpy( this , &str , sizeof(utf8_string) );
+		std::memcpy( static_cast<void *>(this) , &str , sizeof(utf8_string) );
 
 		// Create a new buffer, if sso is not active
 		if( str.sso_inactive() ){
@@ -852,7 +852,7 @@ public:
 	 * @param	str		The utf8_string to move from
 	 */
 	inline utf8_string( utf8_string&& str ){
-		std::memcpy( this , &str , sizeof(utf8_string) ); // Copy data
+		std::memcpy( static_cast<void *>(this) , &str , sizeof(utf8_string) ); // Copy data
 		str.set_sso_data_len(0); // Reset old string
 	}
 	/**

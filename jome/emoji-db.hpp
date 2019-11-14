@@ -116,10 +116,29 @@ struct EmojisPngLocation
 class EmojiDb
 {
 public:
-    explicit EmojiDb(const std::string& dir);
+    enum class EmojiSize {
+        SIZE_16 = 16,
+        SIZE_24 = 24,
+        SIZE_32 = 32,
+        SIZE_40 = 40,
+        SIZE_48 = 48,
+    };
+
+public:
+    explicit EmojiDb(const std::string& dir, EmojiSize emojiSize);
     void findEmojis(const std::string& cat, const std::string& needles,
                     std::vector<const Emoji *>& results) const;
     void addRecentEmoji(const Emoji& emoji);
+
+    EmojiSize emojiSize() const
+    {
+        return _emojiSize;
+    }
+
+    unsigned int emojiSizeInt() const
+    {
+        return static_cast<unsigned int>(_emojiSize);
+    }
 
     const std::string& emojisPngPath() const noexcept
     {
@@ -165,6 +184,7 @@ private:
     void _setRecentEmojisCatFromSettings();
 
 private:
+    const EmojiSize _emojiSize;
     const std::string _emojisPngPath;
     std::vector<std::unique_ptr<EmojiCat>> _cats;
     std::unordered_map<std::string, std::unique_ptr<const Emoji>> _emojis;

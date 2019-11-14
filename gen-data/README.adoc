@@ -48,11 +48,16 @@ From the category files, it also creates `cats.json` which has the same
 content as `cats.yml`, but each category entry also has its full list of
 emojis.
 
-`create.py` converts the Twemoji SVG files to 32×32 PNG files.
+`create.py` converts the Twemoji SVG files to 16×16, 24×24, 32×32,
+40×40, and 48×48 PNG files.
 
-`create.py` also creates `emojis.png` which is a single PNG file
-containing all the supported emojis in their 32×32 form. The purpose of
-this file is to accelerate the UI, not having to open hundreds of
-individual PNG files. It also creates `emojis-png-locations.json` which
-maps each emoji to its location (top-left corner), in pixels, within
-`emojis.png`.
+`create.py` also creates `emojis-16.png`, `emojis-24.png`,
+`emojis-32.png`, `emojis-40.png`, and `emojis-48.png` which are single
+PNG files containing all the supported emojis in their final form. The
+purpose of this file is to accelerate the UI, not having to open
+hundreds of individual PNG files. It also creates
+`emojis-png-locations-16.json`, `emojis-png-locations-24.json`,
+`emojis-png-locations-32.json`, `emojis-png-locations-40.json`, and
+`emojis-png-locations-48.json` which map each emoji to its location
+(top-left corner), in pixels, within the corresponding `emojis-*.png`
+images.

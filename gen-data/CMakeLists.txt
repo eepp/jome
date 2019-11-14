@@ -6,9 +6,17 @@
 set (
     JOME-DATA-FILES
     "${JOME-DATA-DIR}/emojis.json"
-    "${JOME-DATA-DIR}/emojis-png-locations.json"
     "${JOME-DATA-DIR}/cats.json"
-    "${JOME-DATA-DIR}/emojis.png"
+    "${JOME-DATA-DIR}/emojis-png-locations-16.json"
+    "${JOME-DATA-DIR}/emojis-16.png"
+    "${JOME-DATA-DIR}/emojis-png-locations-24.json"
+    "${JOME-DATA-DIR}/emojis-24.png"
+    "${JOME-DATA-DIR}/emojis-png-locations-32.json"
+    "${JOME-DATA-DIR}/emojis-32.png"
+    "${JOME-DATA-DIR}/emojis-png-locations-40.json"
+    "${JOME-DATA-DIR}/emojis-40.png"
+    "${JOME-DATA-DIR}/emojis-png-locations-48.json"
+    "${JOME-DATA-DIR}/emojis-48.png"
 )
 add_custom_command (
     OUTPUT ${JOME-DATA-FILES}
@@ -22,11 +30,6 @@ add_custom_target (
     VERBATIM
 )
 install (
-    FILES
-        "${JOME-DATA-DIR}/emojis.json"
-        "${JOME-DATA-DIR}/emojis-png-locations.json"
-        "${JOME-DATA-DIR}/cats.json"
-        "${JOME-DATA-DIR}/emojis.png"
-    DESTINATION
-        share/jome/data
+    FILES ${JOME-DATA-FILES}
+    DESTINATION share/jome/data
 )

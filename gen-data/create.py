@@ -157,8 +157,8 @@ def _gen_cats_json(output_dir, categories):
         json.dump(cats_json, f, ensure_ascii=False, indent=2)
 
 
-def _gen_emoji_pngs_from_svgs(output_dir):
-    png_dir = os.path.join(output_dir, 'twemoji-png-32')
+def _gen_emoji_pngs_from_svgs_one_size(output_dir, size):
+    png_dir = os.path.join(output_dir, 'twemoji-png-{}'.format(size))
 
     if os.path.exists(png_dir):
         return
@@ -172,7 +172,12 @@ def _gen_emoji_pngs_from_svgs(output_dir):
         file_name_no_ext = file_name[:-4]
         cairosvg.svg2png(url=os.path.join('twemoji-svg', file_name),
                          write_to=os.path.join(png_dir, '{}.png'.format(file_name_no_ext)),
-                         parent_width=32, parent_height=32)
+                         parent_width=size, parent_height=size)
+
+
+def _gen_emoji_pngs_from_svgs(output_dir, sizes):
+    for size in sizes:
+        _gen_emoji_pngs_from_svgs_one_size(output_dir, size)
 
 
 def _get_emoji_png_file_names(emoji):
@@ -186,13 +191,14 @@ def _get_emoji_png_file_names(emoji):
     return file_names
 
 
-def _gen_emojis_png(output_dir, emoji_descriptors):
+def _gen_emojis_png_one_size(output_dir, emoji_descriptors, size):
     cols = 32
     rows = len(emoji_descriptors) // cols + 1
     locations = {}
     col = 0
     row = 0
-    out_surf = cairo.ImageSurface(cairo.Format.ARGB32, cols * 32, rows * 32)
+    out_surf = cairo.ImageSurface(cairo.Format.ARGB32, cols * size,
+                                  rows * size)
     cr = cairo.Context(out_surf)
 
     for emoji_descr in emoji_descriptors:
@@ -201,7 +207,8 @@ def _gen_emojis_png(output_dir, emoji_descriptors):
         existing_path = None
 
         for file_name in file_names:
-            path = os.path.join(output_dir, 'twemoji-png-32', file_name)
+            path = os.path.join(output_dir, 'twemoji-png-{}'.format(size),
+                                file_name)
 
             if os.path.exists(path):
                 existing_path = path
@@ -210,12 +217,12 @@ def _gen_emojis_png(output_dir, emoji_descriptors):
             _error('Cannot find PNG file for emoji `{}`; candidates are {}.'.format(emoji, file_names))
 
         emoji_surf = cairo.ImageSurface.create_from_png(existing_path)
-        loc_x = col * 32
-        loc_y = row * 32
+        loc_x = col * size
+        loc_y = row * size
         cr.save()
         cr.translate(loc_x, loc_y)
         cr.set_source_surface(emoji_surf)
-        cr.rectangle(0, 0, 32, 32)
+        cr.rectangle(0, 0, size, size)
         cr.fill()
         cr.restore()
         emoji_surf.finish()
@@ -227,11 +234,16 @@ def _gen_emojis_png(output_dir, emoji_descriptors):
         else:
             col += 1
 
-    out_surf.write_to_png(os.path.join(output_dir, 'emojis.png'))
+    out_surf.write_to_png(os.path.join(output_dir, 'emojis-{}.png'.format(size)))
     out_surf.finish()
 
-    with open(os.path.join(output_dir, 'emojis-png-locations.json'), 'w') as f:
+    with open(os.path.join(output_dir, 'emojis-png-locations-{}.json'.format(size)), 'w') as f:
         json.dump(locations, f, ensure_ascii=False, indent=2)
+
+
+def _gen_emojis_png(output_dir, emoji_descriptors, sizes):
+    for size in sizes:
+        _gen_emojis_png_one_size(output_dir, emoji_descriptors, size)
 
 
 def _main(output_dir):
@@ -271,10 +283,11 @@ def _main(output_dir):
     _gen_emojis_json(output_dir, emoji_descriptors)
     print('Creating `cats.json`')
     _gen_cats_json(output_dir, categories)
-    print('Creating `twemoji-png-32`')
-    _gen_emoji_pngs_from_svgs(output_dir)
-    print('Creating `emojis.png` and `emojis-png-locations.json`')
-    _gen_emojis_png(output_dir, emoji_descriptors)
+    sizes = [16, 24, 32, 40, 48]
+    print('Creating `twemoji-png-*` directories')
+    _gen_emoji_pngs_from_svgs(output_dir, sizes)
+    print('Creating `emojis-*.png` and `emojis-png-locations-*.json`')
+    _gen_emojis_png(output_dir, emoji_descriptors, sizes)
 
 
 if __name__ == '__main__':

@@ -120,8 +120,12 @@ const std::string& EmojiCat::lcName() const
     return _lcName;
 }
 
-EmojiDb::EmojiDb(const std::string& dir) :
-    _emojisPngPath {dir + '/' + "emojis.png"}
+EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize) :
+    _emojiSize {emojiSize},
+    _emojisPngPath {
+        dir + '/' + "emojis-" +
+        std::to_string(this->emojiSizeInt()) + ".png"
+    }
 {
     this->_createEmojis(dir);
     this->_createCats(dir);
@@ -205,8 +209,11 @@ void EmojiDb::_createCats(const std::string& dir)
 
 void EmojiDb::_createEmojiPngLocations(const std::string& dir)
 {
-    const auto pngLocationsJson = this->_loadJson(dir,
-                                                  "emojis-png-locations.json");
+    const std::string fileName {
+        "emojis-png-locations-" +
+        std::to_string(this->emojiSizeInt()) + ".json"
+    };
+    const auto pngLocationsJson = this->_loadJson(dir, fileName);
 
     for (const auto& keyValPair : pngLocationsJson.ObjectRange()) {
         const auto& emojiStr = keyValPair.first;

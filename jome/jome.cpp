@@ -33,6 +33,7 @@ struct Params
     std::string serverName;
     std::string cmd;
     std::string cpPrefix;
+    jome::EmojiDb::EmojiSize emojiSize;
 };
 
 static Params parseArgs(QApplication& app, int argc, char **argv)
@@ -50,6 +51,9 @@ static Params parseArgs(QApplication& app, int argc, char **argv)
     QCommandLineOption noNlOpt {"n", "Do not output newline"};
     QCommandLineOption noHideOpt {"q", "Do not quit when accepting"};
     QCommandLineOption darkBgOpt {"d", "Use dark emoji background"};
+    QCommandLineOption emojiWidthOpt {
+        "w", "Emoji width (16, 24, 32, 40, or 48)", "WIDTH"
+    };
 
     parser.addOption(formatOpt);
     parser.addOption(serverNameOpt);
@@ -58,6 +62,7 @@ static Params parseArgs(QApplication& app, int argc, char **argv)
     parser.addOption(noNlOpt);
     parser.addOption(noHideOpt);
     parser.addOption(darkBgOpt);
+    parser.addOption(emojiWidthOpt);
     parser.process(app);
 
     Params params;
@@ -94,6 +99,28 @@ static Params parseArgs(QApplication& app, int argc, char **argv)
 
     if (parser.isSet(cpPrefixOpt)) {
         params.cpPrefix = parser.value(cpPrefixOpt).toUtf8().constData();
+    }
+
+    params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_32;
+
+    if (parser.isSet(emojiWidthOpt)) {
+        const auto val = parser.value(emojiWidthOpt);
+
+        if (val == "16") {
+            params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_16;
+        } else if (val == "24") {
+            params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_24;
+        } else if (val == "32") {
+            params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_32;
+        } else if (val == "40") {
+            params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_40;
+        } else if (val == "48") {
+            params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_48;
+        } else {
+            std::cerr << "Command-line error: unexpected value for `-w`: `" <<
+                         val.toUtf8().constData() << "`." << std::endl;
+            std::exit(1);
+        }
     }
 
     return params;
@@ -172,7 +199,7 @@ int main(int argc, char **argv)
     app.setApplicationVersion(JOME_VERSION);
 
     const auto params = parseArgs(app, argc, argv);
-    jome::EmojiDb db {JOME_DATA_DIR};
+    jome::EmojiDb db {JOME_DATA_DIR, params.emojiSize};
     jome::QJomeWindow win {db, params.darkBg};
 
     QObject::connect(&win, &jome::QJomeWindow::canceled,
