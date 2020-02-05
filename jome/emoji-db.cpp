@@ -291,23 +291,16 @@ void EmojiDb::findEmojis(const std::string& cat, const std::string& needlesStr,
     }
 }
 
-void EmojiDb::_updateSettings()
+void EmojiDb::syncWithSettings()
 {
-    QList<QVariant> emojiList;
-
-    for (const auto emoji : _recentEmojisCat->emojis()) {
-        const auto emojiStr = QString::fromStdString(emoji->str());
-
-        emojiList.append(emojiStr);
-    }
-
-    _settings.setValue("recent-emojis", emojiList);
+    this->_setRecentEmojisCatFromSettings();
 }
 
 void EmojiDb::_setRecentEmojisCatFromSettings()
 {
     assert(_recentEmojisCat);
     _recentEmojisCat->emojis().clear();
+    _settings.sync();
 
     const auto recentEmojisVar = _settings.value("recent-emojis");
 
@@ -335,6 +328,15 @@ void EmojiDb::_setRecentEmojisCatFromSettings()
 
 void EmojiDb::addRecentEmoji(const Emoji& emoji)
 {
+    /*
+     * Refresh the recent emojis category from the settings first as it
+     * is possible that another jome instance updated the settings in
+     * the meantime.
+     *
+     * Then, add the emoji to the recent emojis category, and update the
+     * settings accordingly.
+     */
+    this->_setRecentEmojisCatFromSettings();
     assert(_recentEmojisCat);
 
     auto& emojis = _recentEmojisCat->emojis();
@@ -358,7 +360,17 @@ void EmojiDb::addRecentEmoji(const Emoji& emoji)
         emojis.resize(maxRecentEmojis);
     }
 
-    this->_updateSettings();
+    QList<QVariant> emojiList;
+
+    for (const auto emoji : _recentEmojisCat->emojis()) {
+        const auto emojiStr = QString::fromStdString(emoji->str());
+
+        emojiList.append(emojiStr);
+    }
+
+    // update and write the settings
+    _settings.setValue("recent-emojis", emojiList);
+    _settings.sync();
 }
 
 } // namespace jome

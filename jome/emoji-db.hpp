@@ -129,6 +129,7 @@ public:
     void findEmojis(const std::string& cat, const std::string& needles,
                     std::vector<const Emoji *>& results) const;
     void addRecentEmoji(const Emoji& emoji);
+    void syncWithSettings();
 
     EmojiSize emojiSize() const
     {
@@ -180,7 +181,6 @@ private:
     void _createEmojis(const std::string& dir);
     void _createCats(const std::string& dir);
     void _createEmojiPngLocations(const std::string& dir);
-    void _updateSettings();
     void _setRecentEmojisCatFromSettings();
 
 private:

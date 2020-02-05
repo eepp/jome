@@ -270,7 +270,7 @@ int main(int argc, char **argv)
         server = std::make_unique<jome::QJomeServer>(nullptr,
                                                      params.serverName);
         QObject::connect(server.get(), &jome::QJomeServer::clientRequested,
-                         [&app, &server, &win](const jome::QJomeServer::Command cmd) {
+                         [&app, &server, &win, &db](const jome::QJomeServer::Command cmd) {
             if (cmd == jome::QJomeServer::Command::QUIT) {
                 // reply to client, then quit
                 server->sendToClient("");
@@ -278,6 +278,8 @@ int main(int argc, char **argv)
                 // TODO: make sure the message is sent before quitting
                 QTimer::singleShot(10, &QApplication::quit);
             } else {
+                db.syncWithSettings();
+                QTimer::singleShot(0, &win, &jome::QJomeWindow::emojiDbChanged);
                 win.show();
             }
         });
