@@ -13,7 +13,6 @@
 #include <memory>
 #include <unordered_map>
 #include <unordered_set>
-#include <QSettings>
 
 #include "simple-json.hpp"
 
@@ -128,8 +127,8 @@ public:
     explicit EmojiDb(const std::string& dir, EmojiSize emojiSize);
     void findEmojis(const std::string& cat, const std::string& needles,
                     std::vector<const Emoji *>& results) const;
+    void recentEmojis(std::vector<const Emoji *>&& emojis);
     void addRecentEmoji(const Emoji& emoji);
-    void syncWithSettings();
 
     EmojiSize emojiSize() const
     {
@@ -154,6 +153,11 @@ public:
     const std::unordered_map<std::string, std::unique_ptr<const Emoji>>& emojis() const noexcept
     {
         return _emojis;
+    }
+
+    const EmojiCat& recentEmojisCat() const noexcept
+    {
+        return *_recentEmojisCat;
     }
 
     const Emoji& emojiForStr(const std::string& str) const
@@ -181,7 +185,6 @@ private:
     void _createEmojis(const std::string& dir);
     void _createCats(const std::string& dir);
     void _createEmojiPngLocations(const std::string& dir);
-    void _setRecentEmojisCatFromSettings();
 
 private:
     const EmojiSize _emojiSize;
@@ -194,9 +197,6 @@ private:
     mutable std::vector<std::string> _tmpNeedles;
     mutable std::unordered_set<const Emoji *> _tmpFoundEmojis;
     EmojiCat *_recentEmojisCat = nullptr;
-
-    // TODO: decouple this part from Qt
-    QSettings _settings;
 };
 
 } // namespace jome

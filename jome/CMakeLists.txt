@@ -26,6 +26,7 @@ add_executable (
     emoji-images.cpp
     emoji-db.cpp
     tinyutf8.cpp
+    settings.cpp
 )
 target_link_libraries (
     jome

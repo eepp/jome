@@ -129,7 +129,6 @@ EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize) :
 {
     this->_createEmojis(dir);
     this->_createCats(dir);
-    this->_setRecentEmojisCatFromSettings();
     this->_createEmojiPngLocations(dir);
 }
 
@@ -291,52 +290,14 @@ void EmojiDb::findEmojis(const std::string& cat, const std::string& needlesStr,
     }
 }
 
-void EmojiDb::syncWithSettings()
-{
-    this->_setRecentEmojisCatFromSettings();
-}
-
-void EmojiDb::_setRecentEmojisCatFromSettings()
+void EmojiDb::recentEmojis(std::vector<const Emoji *>&& emojis)
 {
     assert(_recentEmojisCat);
-    _recentEmojisCat->emojis().clear();
-    _settings.sync();
-
-    const auto recentEmojisVar = _settings.value("recent-emojis");
-
-    if (!recentEmojisVar.canConvert<QList<QVariant>>()) {
-        return;
-    }
-
-    const auto recentEmojisList = recentEmojisVar.toList();
-
-    for (const auto& emojiStrVar : recentEmojisList) {
-        if (!emojiStrVar.canConvert<QString>()) {
-            continue;
-        }
-
-        const auto emojiStr = emojiStrVar.toString();
-        const auto it = _emojis.find(emojiStr.toUtf8().constData());
-
-        if (it == std::end(_emojis)) {
-            continue;
-        }
-
-        _recentEmojisCat->emojis().push_back(it->second.get());
-    }
+    _recentEmojisCat->emojis() = std::move(emojis);
 }
 
 void EmojiDb::addRecentEmoji(const Emoji& emoji)
 {
-    /*
-     * Refresh the recent emojis category from the settings first as it
-     * is possible that another jome instance updated the settings in
-     * the meantime.
-     *
-     * Then, add the emoji to the recent emojis category, and update the
-     * settings accordingly.
-     */
-    this->_setRecentEmojisCatFromSettings();
     assert(_recentEmojisCat);
 
     auto& emojis = _recentEmojisCat->emojis();
@@ -359,18 +320,6 @@ void EmojiDb::addRecentEmoji(const Emoji& emoji)
     if (emojis.size() > maxRecentEmojis) {
         emojis.resize(maxRecentEmojis);
     }
-
-    QList<QVariant> emojiList;
-
-    for (const auto emoji : _recentEmojisCat->emojis()) {
-        const auto emojiStr = QString::fromStdString(emoji->str());
-
-        emojiList.append(emojiStr);
-    }
-
-    // update and write the settings
-    _settings.setValue("recent-emojis", emojiList);
-    _settings.sync();
 }
 
 } // namespace jome

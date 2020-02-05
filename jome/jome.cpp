@@ -18,6 +18,7 @@
 #include "emoji-images.hpp"
 #include "q-jome-window.hpp"
 #include "q-jome-server.hpp"
+#include "settings.hpp"
 
 enum class Format {
     UTF8,
@@ -188,6 +189,13 @@ static std::string formatEmoji(const jome::Emoji& emoji,
     return output;
 }
 
+static void showWindow(jome::QJomeWindow& win, jome::EmojiDb& db)
+{
+    jome::updateRecentEmojisFromSettings(db);
+    QTimer::singleShot(0, &win, &jome::QJomeWindow::emojiDbChanged);
+    win.show();
+}
+
 int main(int argc, char **argv)
 {
     QApplication app {argc, argv};
@@ -253,8 +261,17 @@ int main(int argc, char **argv)
             win.hide();
         }
 
+        /*
+         * Update recent emojis from settings first as it's possible
+         * that another jome instance changed them.
+         */
+        jome::updateRecentEmojisFromSettings(db);
+
         // add emoji as recent emoji
         db.addRecentEmoji(emoji);
+
+        // DB changed: update settings accordingly
+        jome::updateSettings(db);
 
         if (server || params.noHide) {
             /*
@@ -278,15 +295,13 @@ int main(int argc, char **argv)
                 // TODO: make sure the message is sent before quitting
                 QTimer::singleShot(10, &QApplication::quit);
             } else {
-                db.syncWithSettings();
-                QTimer::singleShot(0, &win, &jome::QJomeWindow::emojiDbChanged);
-                win.show();
+                showWindow(win, db);
             }
         });
     }
 
     if (!server) {
-        win.show();
+        showWindow(win, db);
     }
 
     return app.exec();
