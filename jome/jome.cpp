@@ -129,10 +129,8 @@ static Params parseArgs(QApplication& app)
 
 static void execCommand(const std::string& cmd, const std::string& arg)
 {
-    QString fullCmd = QString::fromStdString(cmd);
+    const auto fullCmd = QString::fromStdString(cmd) + " " + QString::fromStdString(arg);
 
-    fullCmd += " ";
-    fullCmd += QString::fromStdString(arg);
     static_cast<void>(QProcess::execute(fullCmd));
 }
 
