@@ -146,15 +146,12 @@ static std::string formatEmoji(const jome::Emoji& emoji,
     switch (fmt) {
     case Format::UTF8:
     {
-        std::string str;
-
         if (emoji.hasSkinToneSupport()) {
-            str = emoji.strWithSkinTone(skinTone);
+            output = emoji.strWithSkinTone(skinTone);
         } else {
-            str = emoji.str();
+            output = emoji.str();
         }
 
-        output = emoji.str();
         break;
     }
 

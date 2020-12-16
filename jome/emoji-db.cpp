@@ -40,7 +40,7 @@ std::string Emoji::strWithSkinTone(SkinTone skinTone) const
 {
     assert(_hasSkinToneSupport);
 
-    const auto codepoints = this->codepoints();
+    const auto codepoints = this->codepointsWithSkinTone(skinTone);
 
     return utf8_string {std::begin(codepoints), std::end(codepoints)}.c_str();
 }
