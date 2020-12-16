@@ -20,7 +20,8 @@
 #include "q-jome-server.hpp"
 #include "settings.hpp"
 
-enum class Format {
+enum class Format
+{
     UTF8,
     CODEPOINTS_HEX,
 };
@@ -37,7 +38,7 @@ struct Params
     jome::EmojiDb::EmojiSize emojiSize;
 };
 
-static Params parseArgs(QApplication& app, int argc, char **argv)
+static Params parseArgs(QApplication& app)
 {
     QCommandLineParser parser;
 
@@ -52,9 +53,7 @@ static Params parseArgs(QApplication& app, int argc, char **argv)
     QCommandLineOption noNlOpt {"n", "Do not output newline"};
     QCommandLineOption noHideOpt {"q", "Do not quit when accepting"};
     QCommandLineOption darkBgOpt {"d", "Use dark emoji background"};
-    QCommandLineOption emojiWidthOpt {
-        "w", "Emoji width (16, 24, 32, 40, or 48)", "WIDTH"
-    };
+    QCommandLineOption emojiWidthOpt {"w", "Emoji width (16, 24, 32, 40, or 48)", "WIDTH"};
 
     parser.addOption(formatOpt);
     parser.addOption(serverNameOpt);
@@ -79,15 +78,15 @@ static Params parseArgs(QApplication& app, int argc, char **argv)
     } else if (fmt == "cp") {
         params.fmt = Format::CODEPOINTS_HEX;
     } else {
-        std::cerr << "Command-line error: unknown format `" <<
-                     fmt.toUtf8().constData() << "`." << std::endl;
+        std::cerr << "Command-line error: unknown format `" << fmt.toUtf8().constData() << "`." <<
+                     std::endl;
         std::exit(1);
     }
 
     if (parser.isSet(serverNameOpt)) {
         if (params.noHide) {
-            std::cerr << "Command-line error: cannot specify `-s` and `-q` " <<
-                         "options together." << std::endl;
+            std::cerr << "Command-line error: cannot specify `-s` and `-q` options together." <<
+                         std::endl;
             std::exit(1);
         }
 
@@ -136,10 +135,8 @@ static void execCommand(const std::string& cmd, const std::string& arg)
     static_cast<void>(QProcess::execute(fullCmd));
 }
 
-static std::string formatEmoji(const jome::Emoji& emoji,
-                               const jome::Emoji::SkinTone skinTone,
-                               const Format fmt, const std::string& cpPrefix,
-                               const bool noNl)
+static std::string formatEmoji(const jome::Emoji& emoji, const jome::Emoji::SkinTone skinTone,
+                               const Format fmt, const std::string& cpPrefix, const bool noNl)
 {
     std::string output;
 
@@ -168,8 +165,7 @@ static std::string formatEmoji(const jome::Emoji& emoji,
         for (const auto codepoint : codepoints) {
             std::array<char, 32> buf;
 
-            std::sprintf(buf.data(), "%s%x ", cpPrefix.c_str(),
-                         codepoint);
+            std::sprintf(buf.data(), "%s%x ", cpPrefix.c_str(), codepoint);
             output += buf.data();
         }
 
@@ -203,12 +199,11 @@ int main(int argc, char **argv)
     app.setApplicationName("jome");
     app.setApplicationVersion(JOME_VERSION);
 
-    const auto params = parseArgs(app, argc, argv);
+    const auto params = parseArgs(app);
     jome::EmojiDb db {JOME_DATA_DIR, params.emojiSize};
     jome::QJomeWindow win {db, params.darkBg};
 
-    QObject::connect(&win, &jome::QJomeWindow::canceled,
-                     [&params, &app, &server]() {
+    QObject::connect(&win, &jome::QJomeWindow::canceled, [&params, &app, &server]() {
         if (server) {
             // reply to the client at least
             server->sendToClient("");
@@ -223,8 +218,7 @@ int main(int argc, char **argv)
     });
     QObject::connect(&win, &jome::QJomeWindow::emojiChosen,
                      [&](const auto& emoji, const auto skinTone) {
-        const auto emojiStr = formatEmoji(emoji, skinTone, params.fmt,
-                                          params.cpPrefix,
+        const auto emojiStr = formatEmoji(emoji, skinTone, params.fmt, params.cpPrefix,
                                           params.noNewline || !params.cmd.empty());
 
         if (server) {
@@ -281,8 +275,7 @@ int main(int argc, char **argv)
     });
 
     if (!params.serverName.empty()) {
-        server = std::make_unique<jome::QJomeServer>(nullptr,
-                                                     params.serverName);
+        server = std::make_unique<jome::QJomeServer>(nullptr, params.serverName);
         QObject::connect(server.get(), &jome::QJomeServer::clientRequested,
                          [&app, &server, &win, &db](const jome::QJomeServer::Command cmd) {
             if (cmd == jome::QJomeServer::Command::QUIT) {

@@ -20,7 +20,8 @@ class QJomeServer :
     Q_OBJECT
 
 public:
-    enum class Command {
+    enum class Command
+    {
         PICK,
         QUIT,
     };

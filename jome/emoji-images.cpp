@@ -23,9 +23,7 @@ void EmojiImages::_createPixmaps(const EmojiDb& db)
         const auto emoji = emojiPngLocation.first;
         const auto& pngLoc = emojiPngLocation.second;
         const auto emojiSize = db.emojiSizeInt();
-        auto pixmap = std::make_unique<QPixmap>(emojisPixmap.copy(pngLoc.x,
-                                                                  pngLoc.y,
-                                                                  emojiSize,
+        auto pixmap = std::make_unique<QPixmap>(emojisPixmap.copy(pngLoc.x, pngLoc.y, emojiSize,
                                                                   emojiSize));
         _emojiPixmaps[emoji] = std::move(pixmap);
     }

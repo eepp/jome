@@ -17,8 +17,7 @@
 namespace jome {
 
 Emoji::Emoji(const std::string& str, const std::string& name,
-             std::unordered_set<std::string>&& keywords,
-             const bool hasSkinToneSupport) :
+             std::unordered_set<std::string>&& keywords, const bool hasSkinToneSupport) :
     _str {str},
     _name {name},
     _keywords {std::move(keywords)},
@@ -36,7 +35,7 @@ const std::string& Emoji::lcName() const
     return _lcName;
 }
 
-std::string Emoji::strWithSkinTone(SkinTone skinTone) const
+std::string Emoji::strWithSkinTone(const SkinTone skinTone) const
 {
     assert(_hasSkinToneSupport);
 
@@ -45,7 +44,7 @@ std::string Emoji::strWithSkinTone(SkinTone skinTone) const
     return utf8_string {std::begin(codepoints), std::end(codepoints)}.c_str();
 }
 
-Emoji::Codepoints Emoji::codepointsWithSkinTone(SkinTone skinTone) const
+Emoji::Codepoints Emoji::codepointsWithSkinTone(const SkinTone skinTone) const
 {
     assert(_hasSkinToneSupport);
 
@@ -91,8 +90,7 @@ Emoji::Codepoints Emoji::codepoints() const
     Codepoints codepoints;
     const utf8_string utf8Str {_str};
 
-    std::copy(std::begin(utf8Str), std::end(utf8Str),
-              std::back_inserter(codepoints));
+    std::copy(std::begin(utf8Str), std::end(utf8Str), std::back_inserter(codepoints));
     return codepoints;
 }
 
@@ -122,10 +120,7 @@ const std::string& EmojiCat::lcName() const
 
 EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize) :
     _emojiSize {emojiSize},
-    _emojisPngPath {
-        dir + '/' + "emojis-" +
-        std::to_string(this->emojiSizeInt()) + ".png"
-    }
+    _emojisPngPath {dir + '/' + "emojis-" + std::to_string(this->emojiSizeInt()) + ".png"}
 {
     this->_createEmojis(dir);
     this->_createCats(dir);
@@ -135,8 +130,7 @@ EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize) :
 json::JSON EmojiDb::_loadJson(const std::string& dir, const std::string& file)
 {
     std::ifstream f {dir + '/' + file};
-    std::string str {std::istreambuf_iterator<char> {f},
-                     std::istreambuf_iterator<char> {}};
+    std::string str {std::istreambuf_iterator<char> {f}, std::istreambuf_iterator<char> {}};
     return json::JSON::Load(str);
 }
 
@@ -156,10 +150,8 @@ void EmojiDb::_createEmojis(const std::string& dir)
             keywords.insert(kw.ToString());
         }
 
-        auto emoji = std::make_unique<const Emoji>(emojiStr,
-                                                   nameJson.ToString(),
-                                                   std::move(keywords),
-                                                   hasSkinToneSupport);
+        auto emoji = std::make_unique<const Emoji>(emojiStr, nameJson.ToString(),
+                                                   std::move(keywords), hasSkinToneSupport);
 
         for (const auto& keyword : emoji->keywords()) {
             _keywords.insert(keyword);
@@ -198,8 +190,7 @@ void EmojiDb::_createCats(const std::string& dir)
             emojis.push_back(_emojis[emojiStr].get());
         }
 
-        auto cat = std::make_unique<EmojiCat>(idJson.ToString(),
-                                              nameJson.ToString(),
+        auto cat = std::make_unique<EmojiCat>(idJson.ToString(), nameJson.ToString(),
                                               std::move(emojis));
 
         _cats.push_back(std::move(cat));
@@ -209,8 +200,7 @@ void EmojiDb::_createCats(const std::string& dir)
 void EmojiDb::_createEmojiPngLocations(const std::string& dir)
 {
     const std::string fileName {
-        "emojis-png-locations-" +
-        std::to_string(this->emojiSizeInt()) + ".json"
+        "emojis-png-locations-" + std::to_string(this->emojiSizeInt()) + ".json"
     };
     const auto pngLocationsJson = this->_loadJson(dir, fileName);
 
@@ -303,8 +293,7 @@ void EmojiDb::addRecentEmoji(const Emoji& emoji)
     auto& emojis = _recentEmojisCat->emojis();
 
     while (true) {
-        auto existingIt = std::find(std::begin(emojis), std::end(emojis),
-                                    &emoji);
+        auto existingIt = std::find(std::begin(emojis), std::end(emojis), &emoji);
 
         if (existingIt == std::end(emojis)) {
             break;

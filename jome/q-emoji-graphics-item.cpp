@@ -13,8 +13,7 @@
 
 namespace jome {
 
-QEmojiGraphicsItem::QEmojiGraphicsItem(const Emoji& emoji,
-                                       const QPixmap& pixmap,
+QEmojiGraphicsItem::QEmojiGraphicsItem(const Emoji& emoji, const QPixmap& pixmap,
                                        QEmojisWidget& emojisWidget) :
     QGraphicsPixmapItem {pixmap},
     _emoji {&emoji},

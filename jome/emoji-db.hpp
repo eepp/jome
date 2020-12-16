@@ -25,7 +25,8 @@ public:
     using Codepoints = std::vector<Codepoint>;
 
 public:
-    enum class SkinTone {
+    enum class SkinTone
+    {
         NONE,
         LIGHT,
         MEDIUM_LIGHT,
@@ -36,8 +37,7 @@ public:
 
 public:
     explicit Emoji(const std::string& str, const std::string& name,
-                   std::unordered_set<std::string>&& keywords,
-                   bool hasSkinToneSupport);
+                   std::unordered_set<std::string>&& keywords, bool hasSkinToneSupport);
     Codepoints codepoints() const;
     Codepoints codepointsWithSkinTone(SkinTone skinTone) const;
     std::string strWithSkinTone(SkinTone skinTone) const;
@@ -115,7 +115,8 @@ struct EmojisPngLocation
 class EmojiDb
 {
 public:
-    enum class EmojiSize {
+    enum class EmojiSize
+    {
         SIZE_16 = 16,
         SIZE_24 = 24,
         SIZE_32 = 32,

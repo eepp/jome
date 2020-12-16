@@ -21,8 +21,7 @@
 
 namespace jome {
 
-QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb,
-                             const bool darkBg) :
+QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb, const bool darkBg) :
     QGraphicsView {parent},
     _emojiDb {&emojiDb},
     _emojiImages {emojiDb},
@@ -97,29 +96,25 @@ void QEmojisWidget::rebuild()
 
     qreal y = 8.;
 
-    _allEmojisGraphicsScene.setSceneRect(0., 0.,
-                                         static_cast<qreal>(this->width()) - 8., 0.);
+    _allEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - 8., 0.);
     QFont font {"Hack, DejaVu Sans Mono, monospace", 10, QFont::Bold};
     const auto rowFirstEmojiX = this->_rowFirstEmojiX(_allEmojisGraphicsScene);
     const QColor textColor {_darkBg ? "#f8f8f8" : "#202020"};
 
     for (const auto& cat : _emojiDb->cats()) {
-        auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()),
-                                                    font);
+        auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()), font);
 
         item->setDefaultTextColor(textColor);
         item->setPos(rowFirstEmojiX, y);
         _catVertPositions[cat.get()] = y;
         y += 24.;
-        this->_addEmojisToGraphicsScene(cat->emojis(),
-                                        _allEmojiGraphicsItems,
+        this->_addEmojisToGraphicsScene(cat->emojis(), _allEmojiGraphicsItems,
                                         _allEmojisGraphicsScene, y);
         y += 8.;
     }
 
     y -= 8.;
-    _allEmojisGraphicsScene.setSceneRect(0., 0.,
-                                         static_cast<qreal>(this->width()) - 8., y);
+    _allEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - 8., y);
 }
 
 void QEmojisWidget::showAllEmojis()
@@ -141,8 +136,7 @@ void QEmojisWidget::showFindResults(const std::vector<const Emoji *>& results)
 
     qreal y = 0.;
 
-    _findEmojisGraphicsScene.setSceneRect(0., 0.,
-                                          static_cast<qreal>(this->width()) - 8., 0.);
+    _findEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - 8., 0.);
 
     if (!results.empty()) {
         y = 8.;
@@ -150,8 +144,7 @@ void QEmojisWidget::showFindResults(const std::vector<const Emoji *>& results)
                                         _findEmojisGraphicsScene, y);
     }
 
-    _findEmojisGraphicsScene.setSceneRect(0., 0.,
-                                          static_cast<qreal>(this->width()) - 8., y);
+    _findEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - 8., y);
     this->setScene(&_findEmojisGraphicsScene);
 
     if (results.empty()) {

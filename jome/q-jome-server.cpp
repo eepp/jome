@@ -15,8 +15,7 @@ namespace jome {
 QJomeServer::QJomeServer(QObject * const parent, const std::string& name) :
     QObject {parent}
 {
-    QObject::connect(&_server, &QLocalServer::newConnection,
-                     this, &QJomeServer::_newConnection);
+    QObject::connect(&_server, &QLocalServer::newConnection, this, &QJomeServer::_newConnection);
     _server.listen(QString::fromStdString(name));
 }
 
@@ -28,8 +27,7 @@ void QJomeServer::_newConnection()
         return;
     }
 
-    QObject::connect(socket, &QLocalSocket::disconnected,
-                     socket, &QLocalSocket::deleteLater);
+    QObject::connect(socket, &QLocalSocket::disconnected, socket, &QLocalSocket::deleteLater);
 
     if (_socket) {
         // we should probably be able to handle more than one
@@ -38,10 +36,8 @@ void QJomeServer::_newConnection()
     }
 
     _socket = socket;
-    QObject::connect(socket, &QLocalSocket::disconnected,
-                     this, &QJomeServer::_socketDisconnected);
-    QObject::connect(socket, &QLocalSocket::readyRead,
-                     this, &QJomeServer::_socketReadyRead);
+    QObject::connect(socket, &QLocalSocket::disconnected, this, &QJomeServer::_socketDisconnected);
+    QObject::connect(socket, &QLocalSocket::readyRead, this, &QJomeServer::_socketReadyRead);
     _tmpData.clear();
 }
 

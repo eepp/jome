@@ -67,8 +67,7 @@ private:
     qreal _rowFirstEmojiX(const QGraphicsScene& gs) const
     {
         const auto availWidth = gs.width() - 8. * 2.;
-        const auto rowEmojiCount = std::floor((availWidth + 8.) /
-                                              (_emojiDb->emojiSizeInt() + 8.));
+        const auto rowEmojiCount = std::floor((availWidth + 8.) / (_emojiDb->emojiSizeInt() + 8.));
         const auto emojisTotalWidth = rowEmojiCount * _emojiDb->emojiSizeInt() +
                                       (rowEmojiCount - 1) * 8.;
 
@@ -78,8 +77,7 @@ private:
     template <typename ContainerT>
     void _addEmojisToGraphicsScene(const ContainerT& emojis,
                                    std::vector<QEmojiGraphicsItem *>& emojiGraphicsItems,
-                                   QGraphicsScene& gs,
-                                   qreal& y)
+                                   QGraphicsScene& gs, qreal& y)
     {
         qreal col = 0.;
         const auto availWidth = gs.width();

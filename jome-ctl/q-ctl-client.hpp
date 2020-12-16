@@ -19,7 +19,8 @@ class QCtlClient :
     Q_OBJECT
 
 public:
-    enum class Command {
+    enum class Command
+    {
         PICK,
         QUIT,
     };
