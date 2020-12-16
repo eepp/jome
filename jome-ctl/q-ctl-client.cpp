@@ -57,6 +57,7 @@ void QCtlClient::_socketReadyRead()
         char byte;
         const auto count = _socket.read(&byte, 1);
 
+        static_cast<void>(count);
         assert(count == 1);
 
         if (byte == '\0') {
@@ -69,7 +70,7 @@ void QCtlClient::_socketReadyRead()
     }
 }
 
-void QCtlClient::_socketError(const QLocalSocket::LocalSocketError socketError)
+void QCtlClient::_socketError(const QLocalSocket::LocalSocketError)
 {
     emit this->error();
 }

@@ -315,7 +315,7 @@ void QJomeWindow::_catListItemSelectionChanged()
     _wEmojis->scrollToCat(item.cat());
 }
 
-void QJomeWindow::_catListItemClicked(QListWidgetItem * const item)
+void QJomeWindow::_catListItemClicked(QListWidgetItem * const)
 {
     this->_catListItemSelectionChanged();
 }
@@ -412,7 +412,7 @@ void QJomeWindow::_emojiHoverEntered(const Emoji& emoji)
     this->_updateInfoLabel(&emoji);
 }
 
-void QJomeWindow::_emojiHoverLeaved(const Emoji& emoji)
+void QJomeWindow::_emojiHoverLeaved(const Emoji&)
 {
     this->_updateInfoLabel(_selectedEmoji);
 }

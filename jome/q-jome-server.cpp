@@ -54,6 +54,7 @@ void QJomeServer::_socketReadyRead()
         char byte;
         const auto count = _socket->read(&byte, 1);
 
+        static_cast<void>(count);
         assert(count == 1);
 
         if (byte == '\0') {
