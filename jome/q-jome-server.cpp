@@ -74,7 +74,7 @@ void QJomeServer::_socketReadyRead()
 
 void QJomeServer::sendToClient(const std::string& str)
 {
-    if (_socket->state() != QLocalSocket::ConnectedState) {
+    if (!_socket || _socket->state() != QLocalSocket::ConnectedState) {
         return;
     }
 
