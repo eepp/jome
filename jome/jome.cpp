@@ -47,14 +47,14 @@ static Params parseArgs(QApplication& app)
     parser.addHelpOption();
     parser.addVersionOption();
 
-    QCommandLineOption formatOpt {"f", "Output format (`utf-8` or `cp`)", "FORMAT", "utf-8"};
-    QCommandLineOption serverNameOpt {"s", "Server name", "NAME"};
-    QCommandLineOption cmdOpt {"c", "External command", "CMD"};
-    QCommandLineOption cpPrefixOpt {"p", "Codepoint prefix", "CPPREFIX"};
-    QCommandLineOption noNlOpt {"n", "Do not output newline"};
-    QCommandLineOption noHideOpt {"q", "Do not quit when accepting"};
-    QCommandLineOption darkBgOpt {"d", "Use dark emoji background"};
-    QCommandLineOption emojiWidthOpt {"w", "Emoji width (16, 24, 32, 40, or 48)", "WIDTH"};
+    const QCommandLineOption formatOpt {"f", "Output format (`utf-8` or `cp`)", "FORMAT", "utf-8"};
+    const QCommandLineOption serverNameOpt {"s", "Server name", "NAME"};
+    const QCommandLineOption cmdOpt {"c", "External command", "CMD"};
+    const QCommandLineOption cpPrefixOpt {"p", "Codepoint prefix", "CPPREFIX"};
+    const QCommandLineOption noNlOpt {"n", "Do not output newline"};
+    const QCommandLineOption noHideOpt {"q", "Do not quit when accepting"};
+    const QCommandLineOption darkBgOpt {"d", "Use dark emoji background"};
+    const QCommandLineOption emojiWidthOpt {"w", "Emoji width (16, 24, 32, 40, or 48)", "WIDTH"};
 
     parser.addOption(formatOpt);
     parser.addOption(serverNameOpt);
