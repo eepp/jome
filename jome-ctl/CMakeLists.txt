@@ -23,6 +23,10 @@ target_compile_definitions (
     jome-ctl PRIVATE
     "-DJOME_VERSION=\"${PROJECT_VERSION}\""
 )
+target_compile_options (
+    jome-ctl PRIVATE
+    -Wall -Wextra -Wno-deprecated-declarations
+)
 install (
     TARGETS jome-ctl
     RUNTIME DESTINATION bin

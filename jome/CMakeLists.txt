@@ -43,6 +43,10 @@ target_compile_definitions (
     "-DJOME_VERSION=\"${PROJECT_VERSION}\""
     "-DJOME_DATA_DIR=\"${CMAKE_INSTALL_PREFIX}/share/jome/data\""
 )
+target_compile_options (
+    jome PRIVATE
+    -Wall -Wextra -Wno-deprecated-declarations
+)
 install (
     TARGETS jome
     RUNTIME DESTINATION bin
