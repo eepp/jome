@@ -46,7 +46,7 @@ static Params parseArgs(QApplication& app)
     parser.addHelpOption();
     parser.addVersionOption();
 
-    QCommandLineOption formatOpt {"f", "Output format", "FORMAT", "utf-8"};
+    QCommandLineOption formatOpt {"f", "Output format (`utf-8` or `cp`)", "FORMAT", "utf-8"};
     QCommandLineOption serverNameOpt {"s", "Server name", "NAME"};
     QCommandLineOption cmdOpt {"c", "External command", "CMD"};
     QCommandLineOption cpPrefixOpt {"p", "Codepoint prefix", "CPPREFIX"};
