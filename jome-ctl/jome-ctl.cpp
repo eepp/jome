@@ -21,7 +21,7 @@ struct Params
 
 namespace {
 
-Params parseArgs(QCoreApplication& app, int argc, char **argv)
+Params parseArgs(QCoreApplication& app)
 {
     QCommandLineParser parser;
 
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
     app.setOrganizationName("jome");
     app.setApplicationVersion(JOME_VERSION);
 
-    const auto params = parseArgs(app, argc, argv);
+    const auto params = parseArgs(app);
 
     jome::QCtlClient client {nullptr, params.serverName};
 
