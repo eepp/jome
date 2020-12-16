@@ -39,7 +39,9 @@ struct Params
     jome::EmojiDb::EmojiSize emojiSize;
 };
 
-static Params parseArgs(QApplication& app)
+namespace {
+
+Params parseArgs(QApplication& app)
 {
     QCommandLineParser parser;
 
@@ -127,15 +129,15 @@ static Params parseArgs(QApplication& app)
     return params;
 }
 
-static void execCommand(const std::string& cmd, const std::string& arg)
+void execCommand(const std::string& cmd, const std::string& arg)
 {
     const auto fullCmd = QString::fromStdString(cmd) + " " + QString::fromStdString(arg);
 
     static_cast<void>(QProcess::execute(fullCmd));
 }
 
-static std::string formatEmoji(const jome::Emoji& emoji, const jome::Emoji::SkinTone skinTone,
-                               const Format fmt, const std::string& cpPrefix, const bool noNl)
+std::string formatEmoji(const jome::Emoji& emoji, const jome::Emoji::SkinTone skinTone,
+                        const Format fmt, const std::string& cpPrefix, const bool noNl)
 {
     std::string output;
 
@@ -181,12 +183,14 @@ static std::string formatEmoji(const jome::Emoji& emoji, const jome::Emoji::Skin
     return output;
 }
 
-static void showWindow(jome::QJomeWindow& win, jome::EmojiDb& db)
+void showWindow(jome::QJomeWindow& win, jome::EmojiDb& db)
 {
     jome::updateRecentEmojisFromSettings(db);
     QTimer::singleShot(0, &win, &jome::QJomeWindow::emojiDbChanged);
     win.show();
 }
+
+} // namespace
 
 int main(int argc, char **argv)
 {

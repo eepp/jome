@@ -19,7 +19,9 @@ struct Params
     std::string serverName;
 };
 
-static Params parseArgs(QCoreApplication& app, int argc, char **argv)
+namespace {
+
+Params parseArgs(QCoreApplication& app, int argc, char **argv)
 {
     QCommandLineParser parser;
 
@@ -53,6 +55,8 @@ static Params parseArgs(QCoreApplication& app, int argc, char **argv)
 
     return params;
 }
+
+} // namespace
 
 int main(int argc, char **argv)
 {
