@@ -29,7 +29,7 @@ Params parseArgs(QCoreApplication& app)
     parser.addHelpOption();
     parser.addVersionOption();
     parser.addPositionalArgument("SERVER-NAME", "jome server name", "NAME");
-    parser.addPositionalArgument("CMD", "Command", "CMD");
+    parser.addPositionalArgument("CMD", "Command (`pick` or `quit`)", "CMD");
     parser.process(app);
 
     Params params;
