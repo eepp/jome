@@ -13,6 +13,7 @@
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
+#include <boost/optional.hpp>
 
 #include "emoji-db.hpp"
 #include "emoji-images.hpp"
@@ -32,8 +33,8 @@ struct Params
     bool noNewline;
     bool noHide;
     bool darkBg;
-    std::string serverName;
-    std::string cmd;
+    boost::optional<std::string> serverName;
+    boost::optional<std::string> cmd;
     std::string cpPrefix;
     jome::EmojiDb::EmojiSize emojiSize;
 };
@@ -219,7 +220,7 @@ int main(int argc, char **argv)
     QObject::connect(&win, &jome::QJomeWindow::emojiChosen,
                      [&](const auto& emoji, const auto skinTone) {
         const auto emojiStr = formatEmoji(emoji, skinTone, params.fmt, params.cpPrefix,
-                                          params.noNewline || !params.cmd.empty());
+                                          params.noNewline || params.cmd);
 
         if (server) {
             // send response to client
@@ -230,10 +231,10 @@ int main(int argc, char **argv)
         std::cout << emojiStr;
         std::cout.flush();
 
-        if (!params.cmd.empty()) {
+        if (params.cmd) {
             // execute command in 20 ms
             QTimer::singleShot(20, &app, [&params, &server, &app, emojiStr]() {
-                execCommand(params.cmd, emojiStr);
+                execCommand(*params.cmd, emojiStr);
 
                 if (!server && !params.noHide) {
                     // no server: quit after executing the command
@@ -274,8 +275,8 @@ int main(int argc, char **argv)
         }
     });
 
-    if (!params.serverName.empty()) {
-        server = std::make_unique<jome::QJomeServer>(nullptr, params.serverName);
+    if (params.serverName) {
+        server = std::make_unique<jome::QJomeServer>(nullptr, *params.serverName);
         QObject::connect(server.get(), &jome::QJomeServer::clientRequested,
                          [&app, &server, &win, &db](const jome::QJomeServer::Command cmd) {
             if (cmd == jome::QJomeServer::Command::QUIT) {
