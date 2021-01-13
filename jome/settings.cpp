@@ -30,7 +30,8 @@ void updateRecentEmojisFromSettings(EmojiDb& db)
             continue;
         }
 
-        const auto emojiStr = emojiStrVar.toString().toUtf8().constData();
+        const auto byteArray = emojiStrVar.toString().toUtf8();
+        const auto emojiStr = byteArray.constData();
 
         recentEmojis.push_back(&db.emojiForStr(emojiStr));
     }
