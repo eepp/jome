@@ -65,7 +65,7 @@ public:
     explicit QJomeWindow(const EmojiDb& emojiDb, bool darkBg);
 
 signals:
-    void emojiChosen(const Emoji& emoji, Emoji::SkinTone skinTone);
+    void emojiChosen(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone);
     void canceled();
 
 public slots:
@@ -79,8 +79,8 @@ private:
     QListWidget *_createCatListWidget();
     void _updateInfoLabel(const Emoji *emoji);
     void _findEmojis(const std::string& cat, const std::string& needles);
-    void _acceptSelectedEmoji(Emoji::SkinTone skinTone);
-    void _acceptEmoji(const Emoji& emoji, Emoji::SkinTone skinTone);
+    void _acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone);
+    void _acceptEmoji(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone);
 
 private slots:
     void _searchTextChanged(const QString& text);

@@ -368,7 +368,7 @@ void QJomeWindow::_searchBoxEscapeKeyPressed()
 
 void QJomeWindow::_searchBoxEnterKeyPressed()
 {
-    this->_acceptSelectedEmoji(Emoji::SkinTone::NONE);
+    this->_acceptSelectedEmoji(boost::none);
 }
 
 void QJomeWindow::_searchBoxF1KeyPressed()
@@ -404,7 +404,7 @@ void QJomeWindow::_emojiSelectionChanged(const Emoji * const emoji)
 
 void QJomeWindow::_emojiClicked(const Emoji& emoji)
 {
-    this->_acceptEmoji(emoji, Emoji::SkinTone::NONE);
+    this->_acceptEmoji(emoji, boost::none);
 }
 
 void QJomeWindow::_emojiHoverEntered(const Emoji& emoji)
@@ -417,7 +417,7 @@ void QJomeWindow::_emojiHoverLeaved(const Emoji&)
     this->_updateInfoLabel(_selectedEmoji);
 }
 
-void QJomeWindow::_acceptSelectedEmoji(const Emoji::SkinTone skinTone)
+void QJomeWindow::_acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone)
 {
     if (_selectedEmoji) {
         this->_acceptEmoji(*_selectedEmoji, skinTone);
@@ -425,7 +425,7 @@ void QJomeWindow::_acceptSelectedEmoji(const Emoji::SkinTone skinTone)
 }
 
 void QJomeWindow::_acceptEmoji(const Emoji& emoji,
-                               const Emoji::SkinTone skinTone)
+                               const boost::optional<Emoji::SkinTone>& skinTone)
 {
     emit this->emojiChosen(emoji, skinTone);
 }

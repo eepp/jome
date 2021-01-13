@@ -136,16 +136,17 @@ void execCommand(const std::string& cmd, const std::string& arg)
     static_cast<void>(QProcess::execute(fullCmd));
 }
 
-std::string formatEmoji(const jome::Emoji& emoji, const jome::Emoji::SkinTone skinTone,
-                        const Format fmt, const std::string& cpPrefix, const bool noNl)
+std::string formatEmoji(const jome::Emoji& emoji,
+                        const boost::optional<jome::Emoji::SkinTone>& skinTone, const Format fmt,
+                        const std::string& cpPrefix, const bool noNl)
 {
     std::string output;
 
     switch (fmt) {
     case Format::UTF8:
     {
-        if (emoji.hasSkinToneSupport()) {
-            output = emoji.strWithSkinTone(skinTone);
+        if (skinTone && emoji.hasSkinToneSupport()) {
+            output = emoji.strWithSkinTone(*skinTone);
         } else {
             output = emoji.str();
         }
@@ -157,8 +158,8 @@ std::string formatEmoji(const jome::Emoji& emoji, const jome::Emoji::SkinTone sk
     {
         jome::Emoji::Codepoints codepoints;
 
-        if (emoji.hasSkinToneSupport()) {
-            codepoints = emoji.codepointsWithSkinTone(skinTone);
+        if (skinTone && emoji.hasSkinToneSupport()) {
+            codepoints = emoji.codepointsWithSkinTone(*skinTone);
         } else {
             codepoints = emoji.codepoints();
         }
@@ -220,7 +221,7 @@ int main(int argc, char **argv)
         }
     });
     QObject::connect(&win, &jome::QJomeWindow::emojiChosen,
-                     [&](const auto& emoji, const auto skinTone) {
+                     [&](const auto& emoji, const auto& skinTone) {
         const auto emojiStr = formatEmoji(emoji, skinTone, params.fmt, params.cpPrefix,
                                           params.noNewline || params.cmd);
 

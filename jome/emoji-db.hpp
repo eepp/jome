@@ -27,7 +27,6 @@ public:
 public:
     enum class SkinTone
     {
-        NONE,
         LIGHT,
         MEDIUM_LIGHT,
         MEDIUM,

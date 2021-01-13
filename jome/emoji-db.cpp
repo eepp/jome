@@ -49,11 +49,6 @@ Emoji::Codepoints Emoji::codepointsWithSkinTone(const SkinTone skinTone) const
     assert(_hasSkinToneSupport);
 
     auto codepoints = this->codepoints();
-
-    if (skinTone == SkinTone::NONE) {
-        return codepoints;
-    }
-
     Codepoint skinToneCodepoint = 0;
 
     switch (skinTone) {
