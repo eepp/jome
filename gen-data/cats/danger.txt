@@ -2,8 +2,10 @@
 🔪 Kitchen Knife
 🗡 Dagger
 ⚔️ Crossed Swords
+🪓 Axe
 ⛏ Pick
 ✂️ Scissors
+🪒 Razor
 📌 Pushpin
 📍 Round Pushpin
 💉 Syringe

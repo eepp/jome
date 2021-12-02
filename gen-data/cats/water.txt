@@ -1,6 +1,7 @@
 💦 Sweat Droplets
 💧 Droplet
 🌊 Water Wave
+🧊 Ice
 ⛈ Cloud With Lightning and Rain
 🌦 Sun Behind Rain Cloud
 🌧 Cloud With Rain
@@ -41,6 +42,7 @@
 🐡 Blowfish
 🦈 Shark
 🐙 Octopus
+🦦 Otter
 🐚 Spiral Shell
 🎣 Fishing Pole
 ⚓ Anchor

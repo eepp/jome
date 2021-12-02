@@ -77,6 +77,7 @@
 💡 Light Bulb
 🔦 Flashlight
 🏮 Red Paper Lantern
+🪔 Diya Lamp
 📔 Notebook With Decorative Cover
 📕 Closed Book
 📖 Open Book
@@ -150,6 +151,7 @@
 🔑 Key
 🗝 Old Key
 🔨 Hammer
+🪓 Axe
 ⛏ Pick
 ⚒️ Hammer and Pick
 🛠 Hammer and Wrench
@@ -162,6 +164,7 @@
 ⚙️ Gear
 🗜 Clamp
 ⚖️ Balance Scale
+🦯 White Cane
 🔗 Link
 ⛓ Chains
 🧰 Toolbox
@@ -174,13 +177,18 @@
 🔭 Telescope
 📡 Satellite Antenna
 💉 Syringe
+🩸 Drop of Blood
 💊 Pill
+🩹 Adhesive Bandage
+🩺 Stethoscope
 🚪 Door
 🛏 Bed
 🛋 Couch and Lamp
+🪑 Chair
 🚽 Toilet
 🚿 Shower
 🛁 Bathtub
+🪒 Razor
 🧴 Lotion Bottle
 🧷 Safety Pin
 🧹 Broom

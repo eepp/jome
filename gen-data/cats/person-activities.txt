@@ -55,6 +55,21 @@
 🚶 Person Walking
 🚶‍♂️ Man Walking
 🚶‍♀️ Woman Walking
+🧍 Person Standing
+🧍‍♂️ Man Standing
+🧍‍♀️ Woman Standing
+🧎 Person Kneeling
+🧎‍♂️ Man Kneeling
+🧎‍♀️ Woman Kneeling
+🧑‍🦯 Person with White Cane
+👨‍🦯 Man with White Cane
+👩‍🦯 Woman with White Cane
+🧑‍🦼 Person in Motorized Wheelchair
+👨‍🦼 Man in Motorized Wheelchair
+👩‍🦼 Woman in Motorized Wheelchair
+🧑‍🦽 Person in Manual Wheelchair
+👨‍🦽 Man in Manual Wheelchair
+👩‍🦽 Woman in Manual Wheelchair
 🏃 Person Running
 🏃‍♂️ Man Running
 🏃‍♀️ Woman Running

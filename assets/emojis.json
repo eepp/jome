@@ -536,6 +536,16 @@
     ],
     "has-skin-tone-support": false
   },
+  "🥱": {
+    "name": "Yawning face",
+    "keywords": [
+      "bored",
+      "tired",
+      "yawn",
+      "yawning face"
+    ],
+    "has-skin-tone-support": false
+  },
   "😷": {
     "name": "Face with medical mask",
     "keywords": [
@@ -1305,6 +1315,14 @@
     ],
     "has-skin-tone-support": false
   },
+  "🤎": {
+    "name": "Brown heart",
+    "keywords": [
+      "brown",
+      "heart"
+    ],
+    "has-skin-tone-support": false
+  },
   "🖤": {
     "name": "Black heart",
     "keywords": [
@@ -1312,6 +1330,14 @@
       "wicked",
       "black heart",
       "black"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🤍": {
+    "name": "White heart",
+    "keywords": [
+      "heart",
+      "white"
     ],
     "has-skin-tone-support": false
   },
@@ -1568,6 +1594,14 @@
       "perfect",
       "ok hand",
       "ok"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🤏": {
+    "name": "Pinching hand",
+    "keywords": [
+      "pinching hand",
+      "small amount"
     ],
     "has-skin-tone-support": true
   },
@@ -1868,6 +1902,24 @@
     ],
     "has-skin-tone-support": true
   },
+  "🦾": {
+    "name": "Mechanical arm",
+    "keywords": [
+      "accessibility",
+      "mechanical arm",
+      "prosthetic"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🦿": {
+    "name": "Mechanical leg",
+    "keywords": [
+      "accessibility",
+      "mechanical leg",
+      "prosthetic"
+    ],
+    "has-skin-tone-support": false
+  },
   "🦵": {
     "name": "Leg",
     "keywords": [
@@ -1891,6 +1943,15 @@
     "keywords": [
       "ear",
       "body"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🦻": {
+    "name": "Ear with hearing aid",
+    "keywords": [
+      "accessibility",
+      "ear with hearing aid",
+      "hard of hearing"
     ],
     "has-skin-tone-support": true
   },
@@ -2033,6 +2094,47 @@
       "blond",
       "blond-haired person",
       "person: blond hair"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🦰": {
+    "name": "Person: red hair",
+    "keywords": [
+      "red hair",
+      "ginger",
+      "red hair",
+      "redhead"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🦱": {
+    "name": "Person: curly hair",
+    "keywords": [
+      "afro",
+      "curly",
+      "curly hair",
+      "ringlets"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🦳": {
+    "name": "Person: white hair",
+    "keywords": [
+      "gray",
+      "hair",
+      "old",
+      "white"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🦲": {
+    "name": "Person: bald",
+    "keywords": [
+      "bald",
+      "chemotherapy",
+      "hairless",
+      "no hair",
+      "shaven"
     ],
     "has-skin-tone-support": true
   },
@@ -2381,6 +2483,33 @@
     ],
     "has-skin-tone-support": true
   },
+  "🧏": {
+    "name": "Deaf person",
+    "keywords": [
+      "accessibility",
+      "deaf",
+      "deaf person",
+      "ear",
+      "hear"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧏‍♂️": {
+    "name": "Deaf man",
+    "keywords": [
+      "deaf",
+      "man"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧏‍♀️": {
+    "name": "Deaf woman",
+    "keywords": [
+      "deaf",
+      "woman"
+    ],
+    "has-skin-tone-support": true
+  },
   "🙇": {
     "name": "Person bowing",
     "keywords": [
@@ -2486,6 +2615,16 @@
     ],
     "has-skin-tone-support": true
   },
+  "🧑‍⚕️": {
+    "name": "Health worker",
+    "keywords": [
+      "doctor",
+      "healthcare",
+      "nurse",
+      "therapist"
+    ],
+    "has-skin-tone-support": true
+  },
   "👨‍⚕️": {
     "name": "Man health worker",
     "keywords": [
@@ -2510,6 +2649,14 @@
     ],
     "has-skin-tone-support": true
   },
+  "🧑‍🎓": {
+    "name": "Student",
+    "keywords": [
+      "graduate",
+      "student"
+    ],
+    "has-skin-tone-support": true
+  },
   "👨‍🎓": {
     "name": "Man student",
     "keywords": [
@@ -2527,6 +2674,15 @@
       "student",
       "woman student",
       "graduate"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🏫": {
+    "name": "Teacher",
+    "keywords": [
+      "instructor",
+      "professor",
+      "teacher"
     ],
     "has-skin-tone-support": true
   },
@@ -2552,6 +2708,14 @@
     ],
     "has-skin-tone-support": true
   },
+  "🧑‍⚖️": {
+    "name": "Judge",
+    "keywords": [
+      "judge",
+      "scales"
+    ],
+    "has-skin-tone-support": true
+  },
   "👨‍⚖️": {
     "name": "Man judge",
     "keywords": [
@@ -2569,6 +2733,15 @@
       "woman",
       "scales",
       "judge"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🌾": {
+    "name": "Farmer",
+    "keywords": [
+      "farmer",
+      "gardener",
+      "rancher"
     ],
     "has-skin-tone-support": true
   },
@@ -2594,6 +2767,14 @@
     ],
     "has-skin-tone-support": true
   },
+  "🧑‍🍳": {
+    "name": "Cook",
+    "keywords": [
+      "chef",
+      "cook"
+    ],
+    "has-skin-tone-support": true
+  },
   "👨‍🍳": {
     "name": "Man cook",
     "keywords": [
@@ -2611,6 +2792,16 @@
       "chef",
       "woman cook",
       "woman"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🔧": {
+    "name": "Mechanic",
+    "keywords": [
+      "electrician",
+      "mechanic",
+      "plumber",
+      "tradesperson"
     ],
     "has-skin-tone-support": true
   },
@@ -2638,6 +2829,16 @@
     ],
     "has-skin-tone-support": true
   },
+  "🧑‍🏭": {
+    "name": "Factory worker",
+    "keywords": [
+      "assembly",
+      "factory",
+      "industrial",
+      "worker"
+    ],
+    "has-skin-tone-support": true
+  },
   "👨‍🏭": {
     "name": "Man factory worker",
     "keywords": [
@@ -2662,6 +2863,16 @@
     ],
     "has-skin-tone-support": true
   },
+  "🧑‍💼": {
+    "name": "Office worker",
+    "keywords": [
+      "architect",
+      "business",
+      "manager",
+      "white-collar"
+    ],
+    "has-skin-tone-support": true
+  },
   "👨‍💼": {
     "name": "Man office worker",
     "keywords": [
@@ -2683,6 +2894,17 @@
       "architect",
       "woman office worker",
       "woman"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🔬": {
+    "name": "Scientist",
+    "keywords": [
+      "biologist",
+      "chemist",
+      "engineer",
+      "physicist",
+      "scientist"
     ],
     "has-skin-tone-support": true
   },
@@ -2712,6 +2934,17 @@
     ],
     "has-skin-tone-support": true
   },
+  "🧑‍💻": {
+    "name": "Technologist",
+    "keywords": [
+      "coder",
+      "developer",
+      "inventor",
+      "software",
+      "technologist"
+    ],
+    "has-skin-tone-support": true
+  },
   "👨‍💻": {
     "name": "Man technologist",
     "keywords": [
@@ -2735,6 +2968,17 @@
       "technologist",
       "developer",
       "woman"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🎤": {
+    "name": "Singer",
+    "keywords": [
+      "actor",
+      "entertainer",
+      "rock",
+      "singer",
+      "star"
     ],
     "has-skin-tone-support": true
   },
@@ -2764,6 +3008,14 @@
     ],
     "has-skin-tone-support": true
   },
+  "🧑‍🎨": {
+    "name": "Artist",
+    "keywords": [
+      "artist",
+      "palette"
+    ],
+    "has-skin-tone-support": true
+  },
   "👨‍🎨": {
     "name": "Man artist",
     "keywords": [
@@ -2781,6 +3033,14 @@
       "woman",
       "woman artist",
       "artist"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍✈️": {
+    "name": "Pilot",
+    "keywords": [
+      "pilot",
+      "plane"
     ],
     "has-skin-tone-support": true
   },
@@ -2804,6 +3064,14 @@
     ],
     "has-skin-tone-support": true
   },
+  "🧑‍🚀": {
+    "name": "Astronaut",
+    "keywords": [
+      "astronaut",
+      "rocket"
+    ],
+    "has-skin-tone-support": true
+  },
   "👨‍🚀": {
     "name": "Man astronaut",
     "keywords": [
@@ -2821,6 +3089,14 @@
       "astronaut",
       "woman",
       "woman astronaut"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🚒": {
+    "name": "Firefighter",
+    "keywords": [
+      "firefighter",
+      "firetruck"
     ],
     "has-skin-tone-support": true
   },
@@ -3890,6 +4166,140 @@
     ],
     "has-skin-tone-support": true
   },
+  "🧍": {
+    "name": "Person standing",
+    "keywords": [
+      "person standing",
+      "stand",
+      "standing"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧍‍♂️": {
+    "name": "Man standing",
+    "keywords": [
+      "man",
+      "standing"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧍‍♀️": {
+    "name": "Woman standing",
+    "keywords": [
+      "standing",
+      "woman"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧎": {
+    "name": "Person kneeling",
+    "keywords": [
+      "kneel",
+      "kneeling",
+      "person kneeling"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧎‍♂️": {
+    "name": "Man kneeling",
+    "keywords": [
+      "kneeling",
+      "man"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧎‍♀️": {
+    "name": "Woman kneeling",
+    "keywords": [
+      "kneeling",
+      "woman"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🦯": {
+    "name": "Person with white cane",
+    "keywords": [
+      "accessibility",
+      "blind"
+    ],
+    "has-skin-tone-support": true
+  },
+  "👨‍🦯": {
+    "name": "Man with white cane",
+    "keywords": [
+      "accessibility",
+      "blind",
+      "man",
+      "man with probing cane"
+    ],
+    "has-skin-tone-support": true
+  },
+  "👩‍🦯": {
+    "name": "Woman with white cane",
+    "keywords": [
+      "accessibility",
+      "blind",
+      "woman",
+      "woman with probing cane"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🦼": {
+    "name": "Person in motorized wheelchair",
+    "keywords": [
+      "accessibility",
+      "wheelchair"
+    ],
+    "has-skin-tone-support": true
+  },
+  "👨‍🦼": {
+    "name": "Man in motorized wheelchair",
+    "keywords": [
+      "accessibility",
+      "man",
+      "man in motorized wheelchair",
+      "wheelchair"
+    ],
+    "has-skin-tone-support": true
+  },
+  "👩‍🦼": {
+    "name": "Woman in motorized wheelchair",
+    "keywords": [
+      "accessibility",
+      "wheelchair",
+      "woman",
+      "woman in motorized wheelchair"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🧑‍🦽": {
+    "name": "Person in manual wheelchair",
+    "keywords": [
+      "accessibility",
+      "wheelchair"
+    ],
+    "has-skin-tone-support": true
+  },
+  "👨‍🦽": {
+    "name": "Man in manual wheelchair",
+    "keywords": [
+      "accessibility",
+      "man",
+      "man in manual wheelchair",
+      "wheelchair"
+    ],
+    "has-skin-tone-support": true
+  },
+  "👩‍🦽": {
+    "name": "Woman in manual wheelchair",
+    "keywords": [
+      "accessibility",
+      "wheelchair",
+      "woman",
+      "woman in manual wheelchair"
+    ],
+    "has-skin-tone-support": true
+  },
   "🏃": {
     "name": "Person running",
     "keywords": [
@@ -4027,6 +4437,18 @@
       "bathtub"
     ],
     "has-skin-tone-support": true
+  },
+  "🧑‍🤝‍🧑": {
+    "name": "People holding hands",
+    "keywords": [
+      "couple",
+      "hand",
+      "hold",
+      "holding hands",
+      "people holding hands",
+      "person"
+    ],
+    "has-skin-tone-support": false
   },
   "👭": {
     "name": "Women holding hands",
@@ -4522,6 +4944,14 @@
     ],
     "has-skin-tone-support": false
   },
+  "🐨": {
+    "name": "Koala",
+    "keywords": [
+      "koala",
+      "bear"
+    ],
+    "has-skin-tone-support": false
+  },
   "🐸": {
     "name": "Frog face",
     "keywords": [
@@ -4555,11 +4985,39 @@
     ],
     "has-skin-tone-support": false
   },
+  "🦧": {
+    "name": "Orangutan",
+    "keywords": [
+      "ape",
+      "orangutan"
+    ],
+    "has-skin-tone-support": false
+  },
   "🐕": {
     "name": "Dog",
     "keywords": [
       "pet",
       "dog"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🦮": {
+    "name": "Guide dog",
+    "keywords": [
+      "accessibility",
+      "blind",
+      "guide",
+      "guide dog"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🐕‍🦺": {
+    "name": "Service dog",
+    "keywords": [
+      "accessibility",
+      "assistance",
+      "dog",
+      "service"
     ],
     "has-skin-tone-support": false
   },
@@ -4814,11 +5272,29 @@
     ],
     "has-skin-tone-support": false
   },
-  "🐨": {
-    "name": "Koala",
+  "🦥": {
+    "name": "Sloth",
     "keywords": [
-      "koala",
-      "bear"
+      "lazy",
+      "sloth",
+      "slow"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🦦": {
+    "name": "Otter",
+    "keywords": [
+      "fishing",
+      "otter",
+      "playful"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🦨": {
+    "name": "Skunk",
+    "keywords": [
+      "skunk",
+      "stink"
     ],
     "has-skin-tone-support": false
   },
@@ -4964,6 +5440,15 @@
       "owl",
       "wise",
       "bird"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🦩": {
+    "name": "Flamingo",
+    "keywords": [
+      "flamboyant",
+      "flamingo",
+      "tropical"
     ],
     "has-skin-tone-support": false
   },
@@ -5124,6 +5609,53 @@
     ],
     "has-skin-tone-support": false
   },
+  "🦀": {
+    "name": "Crab",
+    "keywords": [
+      "crab",
+      "cancer",
+      "zodiac"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🦞": {
+    "name": "Lobster",
+    "keywords": [
+      "bisque",
+      "claws",
+      "seafood",
+      "lobster"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🦐": {
+    "name": "Shrimp",
+    "keywords": [
+      "food",
+      "small",
+      "shrimp",
+      "shellfish"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🦑": {
+    "name": "Squid",
+    "keywords": [
+      "food",
+      "molusc",
+      "squid"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🦪": {
+    "name": "Oyster",
+    "keywords": [
+      "diving",
+      "oyster",
+      "pearl"
+    ],
+    "has-skin-tone-support": false
+  },
   "🐌": {
     "name": "Snail",
     "keywords": [
@@ -5230,44 +5762,6 @@
       "microbe",
       "amoeba",
       "virus"
-    ],
-    "has-skin-tone-support": false
-  },
-  "🦀": {
-    "name": "Crab",
-    "keywords": [
-      "crab",
-      "cancer",
-      "zodiac"
-    ],
-    "has-skin-tone-support": false
-  },
-  "🦞": {
-    "name": "Lobster",
-    "keywords": [
-      "bisque",
-      "claws",
-      "seafood",
-      "lobster"
-    ],
-    "has-skin-tone-support": false
-  },
-  "🦐": {
-    "name": "Shrimp",
-    "keywords": [
-      "food",
-      "small",
-      "shrimp",
-      "shellfish"
-    ],
-    "has-skin-tone-support": false
-  },
-  "🦑": {
-    "name": "Squid",
-    "keywords": [
-      "food",
-      "molusc",
-      "squid"
     ],
     "has-skin-tone-support": false
   },
@@ -5805,6 +6299,16 @@
     ],
     "has-skin-tone-support": false
   },
+  "🧊": {
+    "name": "Ice",
+    "keywords": [
+      "cold",
+      "ice",
+      "ice cube",
+      "iceberg"
+    ],
+    "has-skin-tone-support": false
+  },
   "🆒": {
     "name": "COOL button",
     "keywords": [
@@ -6248,6 +6752,22 @@
     ],
     "has-skin-tone-support": false
   },
+  "🧄": {
+    "name": "Garlic",
+    "keywords": [
+      "flavoring",
+      "garlic"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🧅": {
+    "name": "Onion",
+    "keywords": [
+      "flavoring",
+      "onion"
+    ],
+    "has-skin-tone-support": false
+  },
   "🥜": {
     "name": "Peanuts",
     "keywords": [
@@ -6316,6 +6836,16 @@
       "pancakes",
       "crêpe",
       "pancake"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🧇": {
+    "name": "Waffle",
+    "keywords": [
+      "breakfast",
+      "indecisive",
+      "iron",
+      "waffle"
     ],
     "has-skin-tone-support": false
   },
@@ -6443,6 +6973,15 @@
     ],
     "has-skin-tone-support": false
   },
+  "🧆": {
+    "name": "Falafel",
+    "keywords": [
+      "chickpea",
+      "falafel",
+      "meatball"
+    ],
+    "has-skin-tone-support": false
+  },
   "🍳": {
     "name": "Cooking",
     "keywords": [
@@ -6502,6 +7041,14 @@
     "keywords": [
       "movie",
       "popcorn"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🧈": {
+    "name": "Butter",
+    "keywords": [
+      "butter",
+      "dairy"
     ],
     "has-skin-tone-support": false
   },
@@ -6999,6 +7546,25 @@
       "malt",
       "water",
       "juice"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🧃": {
+    "name": "Beverage box",
+    "keywords": [
+      "beverage",
+      "box",
+      "juice",
+      "straw",
+      "sweet"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🧉": {
+    "name": "Mate",
+    "keywords": [
+      "drink",
+      "mate"
     ],
     "has-skin-tone-support": false
   },
@@ -7540,6 +8106,15 @@
     ],
     "has-skin-tone-support": false
   },
+  "🪐": {
+    "name": "Ringed planet",
+    "keywords": [
+      "ringed planet",
+      "saturn",
+      "saturnine"
+    ],
+    "has-skin-tone-support": false
+  },
   "⭐": {
     "name": "Star",
     "keywords": [
@@ -7934,6 +8509,30 @@
     ],
     "has-skin-tone-support": false
   },
+  "🦽": {
+    "name": "Manual wheelchair",
+    "keywords": [
+      "accessibility",
+      "manual wheelchair"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🦼": {
+    "name": "Motorized wheelchair",
+    "keywords": [
+      "accessibility",
+      "motorized wheelchair"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🛺": {
+    "name": "Auto rickshaw",
+    "keywords": [
+      "auto rickshaw",
+      "tuk tuk"
+    ],
+    "has-skin-tone-support": false
+  },
   "🚲": {
     "name": "Bicycle",
     "keywords": [
@@ -7997,6 +8596,16 @@
       "landing",
       "aeroplane",
       "arriving"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪂": {
+    "name": "Parachute",
+    "keywords": [
+      "hang-glide",
+      "parachute",
+      "parasail",
+      "skydive"
     ],
     "has-skin-tone-support": false
   },
@@ -8555,6 +9164,24 @@
     ],
     "has-skin-tone-support": false
   },
+  "🪀": {
+    "name": "Yo-yo",
+    "keywords": [
+      "fluctuate",
+      "toy",
+      "yo-yo"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪁": {
+    "name": "Kite",
+    "keywords": [
+      "fly",
+      "kite",
+      "soar"
+    ],
+    "has-skin-tone-support": false
+  },
   "🎱": {
     "name": "Pool 8 ball",
     "keywords": [
@@ -8613,7 +9240,7 @@
       "dupe",
       "expendable",
       "chess pawn",
-      "red shirt\n➯ emojification of pre-existing character"
+      "red shirt"
     ],
     "has-skin-tone-support": false
   },
@@ -8751,6 +9378,16 @@
     "keywords": [
       "cigarette",
       "smoking"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🤿": {
+    "name": "Diving mask",
+    "keywords": [
+      "diving",
+      "diving mask",
+      "scuba",
+      "snorkeling"
     ],
     "has-skin-tone-support": false
   },
@@ -9237,6 +9874,15 @@
     ],
     "has-skin-tone-support": false
   },
+  "🦺": {
+    "name": "Safety vest",
+    "keywords": [
+      "emergency",
+      "safety",
+      "vest"
+    ],
+    "has-skin-tone-support": false
+  },
   "👗": {
     "name": "Dress",
     "keywords": [
@@ -9250,6 +9896,44 @@
     "keywords": [
       "clothing",
       "kimono"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🥻": {
+    "name": "Sari",
+    "keywords": [
+      "clothing",
+      "dress",
+      "sari"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🩱": {
+    "name": "One-piece swimsuit",
+    "keywords": [
+      "bathing suit",
+      "one-piece swimsuit"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🩲": {
+    "name": "Briefs",
+    "keywords": [
+      "bathing suit",
+      "briefs",
+      "one-piece",
+      "swimsuit",
+      "underwear"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🩳": {
+    "name": "Shorts",
+    "keywords": [
+      "bathing suit",
+      "pants",
+      "shorts",
+      "underwear"
     ],
     "has-skin-tone-support": false
   },
@@ -9426,6 +10110,15 @@
       "woman’s sandal",
       "sandal",
       "woman"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🩰": {
+    "name": "Ballet shoes",
+    "keywords": [
+      "ballet",
+      "ballet shoes",
+      "dance"
     ],
     "has-skin-tone-support": false
   },
@@ -9624,6 +10317,15 @@
       "music",
       "violin",
       "instrument"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪕": {
+    "name": "Banjo",
+    "keywords": [
+      "banjo",
+      "music",
+      "stringed"
     ],
     "has-skin-tone-support": false
   },
@@ -10429,6 +11131,18 @@
     ],
     "has-skin-tone-support": false
   },
+  "🩸": {
+    "name": "Drop of blood",
+    "keywords": [
+      "bleed",
+      "blood donation",
+      "drop of blood",
+      "injury",
+      "medicine",
+      "menstruation"
+    ],
+    "has-skin-tone-support": false
+  },
   "💊": {
     "name": "Pill",
     "keywords": [
@@ -10436,6 +11150,24 @@
       "sick",
       "doctor",
       "medicine"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🩹": {
+    "name": "Adhesive bandage",
+    "keywords": [
+      "adhesive bandage",
+      "bandage"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🩺": {
+    "name": "Stethoscope",
+    "keywords": [
+      "doctor",
+      "heart",
+      "medicine",
+      "stethoscope"
     ],
     "has-skin-tone-support": false
   },
@@ -10591,6 +11323,17 @@
     ],
     "has-skin-tone-support": false
   },
+  "🪓": {
+    "name": "Axe",
+    "keywords": [
+      "axe",
+      "chop",
+      "hatchet",
+      "split",
+      "wood"
+    ],
+    "has-skin-tone-support": false
+  },
   "⛏": {
     "name": "Pick",
     "keywords": [
@@ -10606,6 +11349,15 @@
       "scissors",
       "cutting",
       "tool"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪒": {
+    "name": "Razor",
+    "keywords": [
+      "razor",
+      "sharp",
+      "shave"
     ],
     "has-skin-tone-support": false
   },
@@ -11105,6 +11857,14 @@
     ],
     "has-skin-tone-support": false
   },
+  "🛕": {
+    "name": "Hindu temple",
+    "keywords": [
+      "hindu",
+      "temple"
+    ],
+    "has-skin-tone-support": false
+  },
   "📿": {
     "name": "Prayer beads",
     "keywords": [
@@ -11353,6 +12113,30 @@
     ],
     "has-skin-tone-support": false
   },
+  "🟠": {
+    "name": "Orange circle",
+    "keywords": [
+      "circle",
+      "orange"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟡": {
+    "name": "Yellow circle",
+    "keywords": [
+      "circle",
+      "yellow"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟢": {
+    "name": "Green circle",
+    "keywords": [
+      "circle",
+      "green"
+    ],
+    "has-skin-tone-support": false
+  },
   "🔵": {
     "name": "Blue circle",
     "keywords": [
@@ -11360,6 +12144,22 @@
       "blue circle",
       "circle",
       "blue"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟣": {
+    "name": "Purple circle",
+    "keywords": [
+      "circle",
+      "purple"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟤": {
+    "name": "Brown circle",
+    "keywords": [
+      "brown",
+      "circle"
     ],
     "has-skin-tone-support": false
   },
@@ -11387,6 +12187,62 @@
       "o",
       "circle",
       "heavy large circle"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟥": {
+    "name": "Red square",
+    "keywords": [
+      "red",
+      "square"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟧": {
+    "name": "Orange square",
+    "keywords": [
+      "orange",
+      "square"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟨": {
+    "name": "Yellow square",
+    "keywords": [
+      "square",
+      "yellow"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟩": {
+    "name": "Green square",
+    "keywords": [
+      "green",
+      "square"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟦": {
+    "name": "Blue square",
+    "keywords": [
+      "blue",
+      "square"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟪": {
+    "name": "Purple square",
+    "keywords": [
+      "purple",
+      "square"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟫": {
+    "name": "Brown square",
+    "keywords": [
+      "brown",
+      "square"
     ],
     "has-skin-tone-support": false
   },
@@ -11767,6 +12623,15 @@
       "tool",
       "flashlight",
       "electric"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪔": {
+    "name": "Diya lamp",
+    "keywords": [
+      "diya",
+      "lamp",
+      "oil"
     ],
     "has-skin-tone-support": false
   },
@@ -12207,6 +13072,15 @@
     ],
     "has-skin-tone-support": false
   },
+  "🦯": {
+    "name": "White cane",
+    "keywords": [
+      "accessibility",
+      "blind",
+      "probing cane"
+    ],
+    "has-skin-tone-support": false
+  },
   "🔗": {
     "name": "Link",
     "keywords": [
@@ -12265,6 +13139,15 @@
       "hotel",
       "couch and lamp",
       "lamp"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪑": {
+    "name": "Chair",
+    "keywords": [
+      "chair",
+      "seat",
+      "sit"
     ],
     "has-skin-tone-support": false
   },
@@ -12671,8 +13554,7 @@
     "keywords": [
       "forever",
       "infinity",
-      "universal\n➯ emojification of pre-existing character",
-      "unbounded"
+      "universal"
     ],
     "has-skin-tone-support": false
   },

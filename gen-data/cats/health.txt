@@ -2,7 +2,10 @@
 🥼 Lab Coat
 🧴 Lotion Bottle
 💉 Syringe
+🩸 Drop of Blood
 💊 Pill
+🩹 Adhesive Bandage
+🩺 Stethoscope
 🧪 Test Tube
 🧫 Petri Dish
 🧬 DNA
@@ -24,7 +27,9 @@
 🅱 B Button (Blood Type)
 🆎 AB Button (Blood Type)
 🅾 O Button (Blood Type)
+🧑‍⚕️ Health Worker
 👨‍⚕️ Man Health Worker
 👩‍⚕️ Woman Health Worker
+🧑‍🔬 Scientist
 👨‍🔬 Man Scientist
 👩‍🔬 Woman Scientist

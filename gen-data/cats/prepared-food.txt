@@ -4,6 +4,7 @@
 🥨 Pretzel
 🥯 Bagel
 🥞 Pancakes
+🧇 Waffle
 🧀 Cheese Wedge
 🍖 Meat on Bone
 🍗 Poultry Leg
@@ -17,11 +18,13 @@
 🌮 Taco
 🌯 Burrito
 🥙 Stuffed Flatbread
+🧆 Falafel
 🍳 Cooking
 🥘 Shallow Pan of Food
 🍲 Pot of Food
 🥣 Bowl With Spoon
 🥗 Green Salad
 🍿 Popcorn
+🧈 Butter
 🧂 Salt
 🥫 Canned Food

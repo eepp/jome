@@ -7,8 +7,11 @@
 🍷 Wine Glass
 🍸 Cocktail Glass
 🍹 Tropical Drink
+🧊 Ice
 🍺 Beer Mug
 🍻 Clinking Beer Mugs
 🥂 Clinking Glasses
 🥃 Tumbler Glass
 🥤 Cup With Straw
+🧃 Beverage Box
+🧉 Mate

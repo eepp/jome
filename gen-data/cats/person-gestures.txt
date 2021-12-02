@@ -16,6 +16,9 @@
 🙋 Person Raising Hand
 🙋‍♂️ Man Raising Hand
 🙋‍♀️ Woman Raising Hand
+🧏 Deaf Person
+🧏‍♂️ Deaf Man
+🧏‍♀️ Deaf Woman
 🙇 Person Bowing
 🙇‍♂️ Man Bowing
 🙇‍♀️ Woman Bowing

@@ -234,3 +234,43 @@
 🧝 Elf
 🧝‍♂️ Man Elf
 🧝‍♀️ Woman Elf
+🤏 Pinching Hand
+🦻 Ear with Hearing Aid
+🧏 Deaf Person
+🧏‍♂️ Deaf Man
+🧏‍♀️ Deaf Woman
+🧍 Person Standing
+🧍‍♂️ Man Standing
+🧍‍♀️ Woman Standing
+🧎 Person Kneeling
+🧎‍♂️ Man Kneeling
+🧎‍♀️ Woman Kneeling
+👨‍🦯 Man with White Cane
+👩‍🦯 Woman with White Cane
+👨‍🦼 Man in Motorized Wheelchair
+👩‍🦼 Woman in Motorized Wheelchair
+👨‍🦽 Man in Manual Wheelchair
+👩‍🦽 Woman in Manual Wheelchair
+🧑‍🦰 Person: Red Hair
+🧑‍🦱 Person: Curly Hair
+🧑‍🦳 Person: White Hair
+🧑‍🦲 Person: Bald
+🧑‍⚕️ Health Worker
+🧑‍🎓 Student
+🧑‍🏫 Teacher
+🧑‍⚖️ Judge
+🧑‍🌾 Farmer
+🧑‍🍳 Cook
+🧑‍🔧 Mechanic
+🧑‍🏭 Factory Worker
+🧑‍💼 Office Worker
+🧑‍🔬 Scientist
+🧑‍💻 Technologist
+🧑‍🎤 Singer
+🧑‍🎨 Artist
+🧑‍✈️ Pilot
+🧑‍🚀 Astronaut
+🧑‍🚒 Firefighter
+🧑‍🦯 Person with White Cane
+🧑‍🦼 Person in Motorized Wheelchair
+🧑‍🦽 Person in Manual Wheelchair

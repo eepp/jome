@@ -17,5 +17,6 @@
 🐰 Rabbit Face
 🐻 Bear Face
 🐼 Panda Face
+🐨 Koala
 🐸 Frog Face
 🐲 Dragon Face

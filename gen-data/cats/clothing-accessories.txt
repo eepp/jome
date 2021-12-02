@@ -4,8 +4,13 @@
 👔 Necktie
 🧥 Coat
 🥼 Lab Coat
+🦺 Safety Vest
 👗 Dress
 👘 Kimono
+🥻 Sari
+🩱 One-Piece Swimsuit
+🩲 Briefs
+🩳 Shorts
 👙 Bikini
 👚 Woman’s Clothes
 🧤 Gloves
@@ -23,12 +28,14 @@
 👓 Glasses
 🕶 Sunglasses
 🥽 Goggles
+🤿 Diving Mask
 👞 Man’s Shoe
 👟 Running Shoe
 🥾 Hiking Boot
 🥿 Flat Shoe
 👠 High-Heeled Shoe
 👡 Woman’s Sandal
+🩰 Ballet Shoes
 👢 Woman’s Boot
 👑 Crown
 👒 Woman’s Hat

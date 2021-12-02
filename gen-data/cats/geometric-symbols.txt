@@ -1,8 +1,20 @@
 🔴 Red Circle
+🟠 Orange Circle
+🟡 Yellow Circle
+🟢 Green Circle
 🔵 Blue Circle
+🟣 Purple Circle
+🟤 Brown Circle
 ⚫ Black Circle
 ⚪ White Circle
 ⭕ Heavy Large Circle
+🟥 Red Square
+🟧 Orange Square
+🟨 Yellow Square
+🟩 Green Square
+🟦 Blue Square
+🟪 Purple Square
+🟫 Brown Square
 ⬛ Black Large Square
 ⬜ White Large Square
 ◼️ Black Medium Square

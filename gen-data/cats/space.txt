@@ -17,6 +17,7 @@
 🌜 Last Quarter Moon Face
 ☀️ Sun
 🌞 Sun With Face
+🪐 Ringed Planet
 ⭐ Star
 🌟 Glowing Star
 🌠 Shooting Star
@@ -29,5 +30,6 @@
 🛸 Flying Saucer
 🛰 Satellite
 🚀 Rocket
+🧑‍🚀 Astronaut
 👨‍🚀 Man Astronaut
 👩‍🚀 Woman Astronaut

@@ -29,6 +29,9 @@
 🏎 Racing Car
 🏍 Motorcycle
 🛵 Motor Scooter
+🦽 Manual Wheelchair
+🦼 Motorized Wheelchair
+🛺 Auto Rickshaw
 🚲 Bicycle
 🛴 Kick Scooter
 🛹 Skateboard
@@ -42,6 +45,7 @@
 🛩 Small Airplane
 🛫 Airplane Departure
 🛬 Airplane Arrival
+🪂 Parachute
 🚁 Helicopter
 🚟 Suspension Railway
 🚠 Mountain Cableway
@@ -60,7 +64,9 @@
 💺 Seat
 Ⓜ️ Circled M
 🅿 P Button
+🧑‍✈️ Pilot
 👨‍✈️ Man Pilot
 👩‍✈️ Woman Pilot
+🧑‍🔧 Mechanic
 👨‍🔧 Man Mechanic
 👩‍🔧 Woman Mechanic

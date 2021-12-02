@@ -3,6 +3,8 @@
 🎟 Admission Tickets
 🎫 Ticket
 🎯 Direct Hit
+🪀 Yo-Yo
+🪁 Kite
 🎱 Pool 8 Ball
 🎮 Video Game
 🎰 Slot Machine
@@ -26,3 +28,4 @@
 🎇 Sparkler
 🚬 Cigarette
 🎣 Fishing Pole
+🤿 Diving Mask

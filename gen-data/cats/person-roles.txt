@@ -1,34 +1,50 @@
+🧑‍⚕️ Health Worker
 👨‍⚕️ Man Health Worker
 👩‍⚕️ Woman Health Worker
+🧑‍🎓 Student
 👨‍🎓 Man Student
 👩‍🎓 Woman Student
+🧑‍🏫 Teacher
 👨‍🏫 Man Teacher
 👩‍🏫 Woman Teacher
+🧑‍⚖️ Judge
 👨‍⚖️ Man Judge
 👩‍⚖️ Woman Judge
+🧑‍🌾 Farmer
 👨‍🌾 Man Farmer
 👩‍🌾 Woman Farmer
+🧑‍🍳 Cook
 👨‍🍳 Man Cook
 👩‍🍳 Woman Cook
+🧑‍🔧 Mechanic
 👨‍🔧 Man Mechanic
 👩‍🔧 Woman Mechanic
+🧑‍🏭 Factory Worker
 👨‍🏭 Man Factory Worker
 👩‍🏭 Woman Factory Worker
+🧑‍💼 Office Worker
 👨‍💼 Man Office Worker
 👩‍💼 Woman Office Worker
+🧑‍🔬 Scientist
 👨‍🔬 Man Scientist
 👩‍🔬 Woman Scientist
+🧑‍💻 Technologist
 👨‍💻 Man Technologist
 👩‍💻 Woman Technologist
+🧑‍🎤 Singer
 👨‍🎤 Man Singer
 👩‍🎤 Woman Singer
+🧑‍🎨 Artist
 👨‍🎨 Man Artist
 👩‍🎨 Woman Artist
+🧑‍✈️ Pilot
 👨‍✈️ Man Pilot
 👩‍✈️ Woman Pilot
+🧑‍🚀 Astronaut
 👨‍🚀 Man Astronaut
 👩‍🚀 Woman Astronaut
-👨‍🚒 Man Firefighter
+🧑‍🚒 Firefighter
+👨‍🚒 Man Firefighte
 👩‍🚒 Woman Firefighter
 👮 Police Officer
 👮‍♂️ Man Police Officer

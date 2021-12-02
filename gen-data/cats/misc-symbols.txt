@@ -133,9 +133,21 @@
 🈺 Japanese “Open for Business” Button
 🈵 Japanese “No Vacancy” Button
 🔴 Red Circle
+🟠 Orange Circle
+🟡 Yellow Circle
+🟢 Green Circle
 🔵 Blue Circle
+🟣 Purple Circle
+🟤 Brown Circle
 ⚫ Black Circle
 ⚪ White Circle
+🟥 Red Square
+🟧 Orange Square
+🟨 Yellow Square
+🟩 Green Square
+🟦 Blue Square
+🟪 Purple Square
+🟫 Brown Square
 ⬛ Black Large Square
 ⬜ White Large Square
 ◼️ Black Medium Square

@@ -44,6 +44,7 @@
 😪 Sleepy Face
 🤤 Drooling Face
 😴 Sleeping Face
+🥱 Yawning Face
 😷 Face With Medical Mask
 🤒 Face With Thermometer
 🤕 Face With Head-Bandage

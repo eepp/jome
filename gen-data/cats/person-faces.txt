@@ -5,6 +5,10 @@
 👧 Girl
 🧑 Person
 👱 Person: Blond Hair
+🧑‍🦰 Person: Red Hair
+🧑‍🦱 Person: Curly Hair
+🧑‍🦳 Person: White Hair
+🧑‍🦲 Person: Bald
 👨 Man
 🧔 Man: Beard
 👱‍♂️ Man: Blond Hair

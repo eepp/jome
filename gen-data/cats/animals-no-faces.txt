@@ -1,6 +1,9 @@
 🐒 Monkey
 🦍 Gorilla
+🦧 Orangutan
 🐕 Dog
+🦮 Guide Dog
+🐕‍🦺 Service Dog
 🐩 Poodle
 🦝 Raccoon
 🐈 Cat
@@ -30,7 +33,9 @@
 🐿 Chipmunk
 🦔 Hedgehog
 🦇 Bat
-🐨 Koala
+🦥 Sloth
+🦦 Otter
+🦨 Skunk
 🦘 Kangaroo
 🦡 Badger
 🐾 Paw Prints
@@ -47,6 +52,7 @@
 🦆 Duck
 🦢 Swan
 🦉 Owl
+🦩 Flamingo
 🦚 Peacock
 🦜 Parrot
 🐊 Crocodile
@@ -65,6 +71,11 @@
 🦈 Shark
 🐙 Octopus
 🐚 Spiral Shell
+🦀 Crab
+🦞 Lobster
+🦐 Shrimp
+🦑 Squid
+🦪 Oyster
 🐌 Snail
 🦋 Butterfly
 🐛 Bug
@@ -77,7 +88,3 @@
 🦂 Scorpion
 🦟 Mosquito
 🦠 Microbe
-🦀 Crab
-🦞 Lobster
-🦐 Shrimp
-🦑 Squid
