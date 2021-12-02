@@ -1,0 +1,6412 @@
+#️⃣
+Keycap: #
+keycap: # | keycap
+
+0️⃣
+Keycap: 0
+keycap: 0 | keycap
+
+1️⃣
+Keycap: 1
+keycap: 1 | keycap
+
+2️⃣
+Keycap: 2
+keycap: 2 | keycap
+
+3️⃣
+Keycap: 3
+keycap: 3 | keycap
+
+4️⃣
+Keycap: 4
+keycap | keycap: 4
+
+5️⃣
+Keycap: 5
+keycap: 5 | keycap
+
+6️⃣
+Keycap: 6
+keycap: 6 | keycap
+
+7️⃣
+Keycap: 7
+keycap: 7 | keycap
+
+8️⃣
+Keycap: 8
+keycap: 8 | keycap
+
+9️⃣
+Keycap: 9
+keycap | keycap: 9
+
+©️
+Copyright
+copyright
+
+®️
+Registered
+registered
+
+‼️
+Double exclamation mark
+mark | exclamation | double exclamation mark | punctuation | bangbang
+
+⁉️
+Exclamation question mark
+mark | exclamation question mark | exclamation | punctuation | question | interrobang
+
+™️
+Trade mark
+mark | trade mark | tm | trademark
+
+ℹ️
+Information
+information | i
+
+↔️
+Left-right arrow
+arrow | left-right arrow
+
+↕️
+Up-down arrow
+arrow | up-down arrow
+
+↖️
+Up-left arrow
+intercardinal | arrow | up-left arrow | direction | northwest
+
+↗️
+Up-right arrow
+northeast | up-right arrow | intercardinal | arrow | direction
+
+↘️
+Down-right arrow
+down-right arrow | intercardinal | arrow | southeast | direction
+
+↙️
+Down-left arrow
+intercardinal | down-left arrow | arrow | southwest | direction
+
+↩️
+Right arrow curving left
+right arrow curving left | arrow
+
+↪️
+Left arrow curving right
+arrow | left arrow curving right
+
+⌚
+Watch
+watch | clock
+
+⌛
+Hourglass done
+timer | sand | hourglass done
+
+⌨️
+Keyboard
+keyboard | computer
+
+⏏️
+Eject button
+eject button | eject
+
+⏩
+Fast-forward button
+fast | arrow | forward | double | fast-forward button
+
+⏪
+Fast reverse button
+fast reverse button | arrow | double | rewind
+
+⏫
+Fast up button
+arrow | double | fast up button
+
+⏬
+Fast down button
+arrow | down | double | fast down button
+
+⏰
+Alarm clock
+alarm | clock | alarm clock
+
+⏱
+Stopwatch
+clock | stopwatch
+
+⏲
+Timer clock
+timer | timer clock | clock
+
+⏳
+Hourglass not done
+hourglass not done | timer | hourglass | sand
+
+⏹
+Stop button
+square | stop | stop button
+
+Ⓜ️
+Circled M
+m | circle | circled m
+
+▪️
+Black small square
+geometric | black small square | square
+
+▫️
+White small square
+geometric | square | white small square
+
+▶️
+Play button
+play button | arrow | play | right | triangle
+
+◀️
+Reverse button
+arrow | reverse button | reverse | left | triangle
+
+◻️
+White medium square
+geometric | square | white medium square
+
+◼️
+Black medium square
+geometric | square | black medium square
+
+◽
+White medium-small square
+geometric | square | white medium-small square
+
+◾
+Black medium-small square
+black medium-small square | square | geometric
+
+☀️
+Sun
+bright | sun | sunny | rays
+
+☁️
+Cloud
+weather | cloud
+
+☂️
+Umbrella
+clothing | rain | umbrella
+
+☃️
+Snowman
+cold | snowman | snow
+
+☄️
+Comet
+comet | space
+
+☎️
+Telephone
+phone | telephone
+
+☑️
+Ballot box with check
+ballot box with check | box | ballot | check
+
+☔
+Umbrella with rain drops
+clothing | umbrella with rain drops | drop | umbrella | rain
+
+☕
+Hot beverage
+hot | coffee | steaming | beverage | tea | hot beverage | drink
+
+☘
+Shamrock
+plant | shamrock | ireland
+
+☝
+Index pointing up
+hand | up | finger | index pointing up | point | index
+
+☠️
+Skull and crossbones
+skull | monster | face | death | crossbones | skull and crossbones
+
+☢️
+Radioactive
+sign | radioactive
+
+☣️
+Biohazard
+biohazard | sign
+
+☦️
+Orthodox cross
+cross | religion | christian | orthodox cross
+
+☪️
+Star and crescent
+religion | islam | star and crescent | muslim
+
+☮️
+Peace symbol
+peace | peace symbol
+
+☯️
+Yin yang
+religion | yin yang | yin | tao | taoist | yang
+
+☸️
+Wheel of dharma
+dharma | religion | buddhist | wheel of dharma | wheel
+
+☹️
+Frowning face
+sad | frown | face | frowning face
+
+☺️
+Smiling face
+smiling face | outlined | shy | face | relaxed | smile | happy
+
+♈
+Aries
+ram | aries | zodiac
+
+♉
+Taurus
+ox | taurus | bull | zodiac
+
+♊
+Gemini
+twins | gemini | zodiac
+
+♋
+Cancer
+crab | cancer | zodiac
+
+♌
+Leo
+lion | leo | zodiac
+
+♍
+Virgo
+virgo | zodiac
+
+♎
+Libra
+libra | justice | scales | zodiac | balance
+
+♏
+Scorpio
+zodiac | scorpio | scorpion | scorpius
+
+♐
+Sagittarius
+sagittarius | zodiac | archer
+
+♑
+Capricorn
+zodiac | goat | capricorn
+
+♒
+Aquarius
+aquarius | water | bearer | zodiac
+
+♓
+Pisces
+pisces | fish | zodiac
+
+♟️
+Chess pawn
+chess | dupe | expendable | chess pawn | red shirt
+
+♠️
+Spade suit
+game | card | spade suit
+
+♣️
+Club suit
+game | card | club suit
+
+♥️
+Heart suit
+heart suit | game | card
+
+♦️
+Diamond suit
+diamond suit | game | card
+
+♨
+Hot springs
+hot | springs | steaming | hotsprings | hot springs
+
+♻️
+Recycling symbol
+recycle | recycling symbol
+
+♾️
+Infinity
+forever | infinity | universal
+
+♿
+Wheelchair symbol
+wheelchair symbol | access
+
+⚒️
+Hammer and pick
+tool | pick | hammer | hammer and pick
+
+⚓
+Anchor
+tool | anchor | ship
+
+⚔️
+Crossed swords
+swords | weapon | crossed swords | crossed
+
+⚖️
+Balance scale
+libra | justice | zodiac | balance | balance scale | scale
+
+⚗️
+Alembic
+tool | chemistry | alembic
+
+⚙️
+Gear
+tool | gear | cog | cogwheel
+
+⚛️
+Atom symbol
+atom | atheist | atom symbol
+
+⚠️
+Warning
+warning
+
+⚡
+High voltage
+voltage | danger | zap | high voltage | electric | lightning
+
+⚪
+White circle
+geometric | white circle | circle
+
+⚫
+Black circle
+black circle | geometric | circle
+
+⚰️
+Coffin
+death | coffin
+
+⚱️
+Funeral urn
+ashes | funeral | death | urn | funeral urn
+
+⚽
+Soccer ball
+soccer ball | ball | football | soccer
+
+⚾
+Baseball
+ball | baseball
+
+⛄
+Snowman without snow
+cold | snowman without snow | snowman | snow
+
+⛅
+Sun behind cloud
+sun | cloud | sun behind cloud
+
+⛈
+Cloud with lightning and rain
+thunder | cloud with lightning and rain | rain | cloud
+
+⛎
+Ophiuchus
+snake | zodiac | bearer | serpent | ophiuchus
+
+⛏
+Pick
+mining | pick | tool
+
+⛑
+Rescue worker’s helmet
+aid | cross | face | rescue worker’s helmet | hat | helmet
+
+⛓
+Chains
+chains | chain
+
+⛔
+No entry
+traffic | no | entry | no entry | forbidden | not | prohibited
+
+⛩
+Shinto shrine
+religion | shinto shrine | shinto | shrine
+
+⛪
+Church
+church | cross | religion | christian
+
+⛰
+Mountain
+mountain
+
+⛱
+Umbrella on ground
+umbrella on ground | sun | rain | umbrella
+
+⛲
+Fountain
+fountain
+
+⛳
+Flag in hole
+golf | hole | flag in hole
+
+⛴
+Ferry
+boat | ferry | passenger
+
+⛵
+Sailboat
+yacht | boat | sailboat | resort | sea
+
+⛷
+Skier
+ski | skier | snow
+
+⛸
+Ice skate
+ice skate | skate | ice
+
+⛹
+Person bouncing ball
+ball | person bouncing ball
+
+⛹️‍♀️
+Woman bouncing ball
+woman bouncing ball | ball | woman
+
+⛹️‍♂️
+Man bouncing ball
+man bouncing ball | ball | man
+
+⛺
+Tent
+camping | tent
+
+⛽
+Fuel pump
+gas | fuelpump | pump | station | fuel pump | fuel | diesel
+
+✂️
+Scissors
+scissors | cutting | tool
+
+✅
+White heavy check mark
+mark | white heavy check mark | check
+
+✈
+Airplane
+airplane | aeroplane
+
+✉️
+Envelope
+envelope | letter | email
+
+✊
+Raised fist
+hand | punch | clenched | raised fist | fist
+
+✋
+Raised hand
+hand | stop | raised hand
+
+✌
+Victory hand
+hand | victory | victory hand | peace | v
+
+✍
+Writing hand
+hand | write | writing hand
+
+✏️
+Pencil
+pencil
+
+✒️
+Black nib
+nib | black nib | pen
+
+✔️
+Heavy check mark
+mark | check | heavy check mark
+
+✖️
+Heavy multiplication x
+multiplication | cancel | x | heavy multiplication x | multiply
+
+✝️
+Latin cross
+latin cross | cross | religion | christian
+
+✡️
+Star of David
+religion | star | david | jew | star of david | jewish
+
+✨
+Sparkles
+sparkles | star | sparkle
+
+✳️
+Eight-spoked asterisk
+asterisk | eight-spoked asterisk
+
+✴️
+Eight-pointed star
+star | eight-pointed star
+
+❄️
+Snowflake
+cold | snowflake | snow
+
+❇️
+Sparkle
+sparkle
+
+❌
+Cross mark
+mark | multiplication | cancel | x | cross mark | multiply
+
+❎
+Cross mark button
+mark | square | cross mark button
+
+❓
+Question mark
+mark | punctuation | question | question mark
+
+❔
+White question mark
+mark | outlined | white question mark | punctuation | question
+
+❕
+White exclamation mark
+mark | outlined | white exclamation mark | exclamation | punctuation
+
+❗
+Exclamation mark
+mark | exclamation mark | punctuation | exclamation
+
+❣️
+Heavy heart exclamation
+mark | love | heavy heart exclamation | exclamation | punctuation
+
+❤️
+Red heart
+red heart | heart | love
+
+➕
+Heavy plus sign
+math | heavy plus sign | plus
+
+➖
+Heavy minus sign
+math | heavy minus sign | minus
+
+➗
+Heavy division sign
+heavy division sign | math | division
+
+➡️
+Right arrow
+arrow | right arrow | east | direction | cardinal
+
+➰
+Curly loop
+loop | curl | curly loop
+
+➿
+Double curly loop
+double curly loop | double | curl | loop
+
+⤴️
+Right arrow curving up
+arrow | right arrow curving up
+
+⤵️
+Right arrow curving down
+arrow | down | right arrow curving down
+
+⬅️
+Left arrow
+left arrow | arrow | west | direction | cardinal
+
+⬆️
+Up arrow
+north | up arrow | arrow | direction | cardinal
+
+⬇️
+Down arrow
+down arrow | south | down | arrow | direction | cardinal
+
+⬛
+Black large square
+geometric | black large square | square
+
+⬜
+White large square
+geometric | square | white large square
+
+⭐
+Star
+star
+
+⭕
+Heavy large circle
+o | circle | heavy large circle
+
+〽️
+Part alternation mark
+mark | part | part alternation mark
+
+㊗
+Japanese “congratulations” button
+祝 | japanese “congratulations” button | japanese | “congratulations” | ideograph
+
+㊙
+Japanese “secret” button
+japanese “secret” button | “secret” | japanese | ideograph | 秘
+
+🀄
+Mahjong red dragon
+mahjong | game | red | mahjong red dragon
+
+🃏
+Joker
+wildcard | joker | card | game
+
+🅰
+A button (blood type)
+a | a button (blood type) | blood type
+
+🅱
+B button (blood type)
+b | blood type | b button (blood type)
+
+🅾
+O button (blood type)
+o | blood type | o button (blood type)
+
+🅿
+P button
+parking | p button
+
+🆎
+AB button (blood type)
+blood type | ab | ab button (blood type)
+
+🆑
+CL button
+cl button | cl
+
+🆒
+COOL button
+cool | cool button
+
+🆓
+FREE button
+free button | free
+
+🆔
+ID button
+id button | id | identity
+
+🆕
+NEW button
+new button | new
+
+🆖
+NG button
+ng | ng button
+
+🆗
+OK button
+ok button | ok
+
+🆘
+SOS button
+sos button | sos | help
+
+🆙
+UP! button
+mark | up | up! button
+
+🆚
+VS button
+vs button | versus | vs
+
+🇦🇨
+Flag: Ascension Island
+flag | flag: ascension island
+
+🇦🇩
+Flag: Andorra
+flag: andorra | flag
+
+🇦🇪
+Flag: United Arab Emirates
+flag: united arab emirates | flag
+
+🇦🇫
+Flag: Afghanistan
+flag: afghanistan | flag
+
+🇦🇬
+Flag: Antigua & Barbuda
+flag | flag: antigua & barbuda
+
+🇦🇮
+Flag: Anguilla
+flag: anguilla | flag
+
+🇦🇱
+Flag: Albania
+flag: albania | flag
+
+🇦🇲
+Flag: Armenia
+flag: armenia | flag
+
+🇦🇴
+Flag: Angola
+flag | flag: angola
+
+🇦🇶
+Flag: Antarctica
+flag | flag: antarctica
+
+🇦🇷
+Flag: Argentina
+flag: argentina | flag
+
+🇦🇸
+Flag: American Samoa
+flag | flag: american samoa
+
+🇦🇹
+Flag: Austria
+flag: austria | flag
+
+🇦🇺
+Flag: Australia
+flag | flag: australia
+
+🇦🇼
+Flag: Aruba
+flag: aruba | flag
+
+🇦🇽
+Flag: Åland Islands
+flag: åland islands | flag
+
+🇦🇿
+Flag: Azerbaijan
+flag | flag: azerbaijan
+
+🇧🇦
+Flag: Bosnia & Herzegovina
+flag | flag: bosnia & herzegovina
+
+🇧🇧
+Flag: Barbados
+flag: barbados | flag
+
+🇧🇩
+Flag: Bangladesh
+flag: bangladesh | flag
+
+🇧🇪
+Flag: Belgium
+flag: belgium | flag
+
+🇧🇫
+Flag: Burkina Faso
+flag: burkina faso | flag
+
+🇧🇬
+Flag: Bulgaria
+flag | flag: bulgaria
+
+🇧🇭
+Flag: Bahrain
+flag: bahrain | flag
+
+🇧🇮
+Flag: Burundi
+flag: burundi | flag
+
+🇧🇯
+Flag: Benin
+flag: benin | flag
+
+🇧🇱
+Flag: St. Barthélemy
+flag | flag: st. barthélemy
+
+🇧🇲
+Flag: Bermuda
+flag: bermuda | flag
+
+🇧🇳
+Flag: Brunei
+flag: brunei | flag
+
+🇧🇴
+Flag: Bolivia
+flag | flag: bolivia
+
+🇧🇶
+Flag: Caribbean Netherlands
+flag: caribbean netherlands | flag
+
+🇧🇷
+Flag: Brazil
+flag: brazil | flag
+
+🇧🇸
+Flag: Bahamas
+flag | flag: bahamas
+
+🇧🇹
+Flag: Bhutan
+flag | flag: bhutan
+
+🇧🇻
+Flag: Bouvet Island
+flag: bouvet island | flag
+
+🇧🇼
+Flag: Botswana
+flag | flag: botswana
+
+🇧🇾
+Flag: Belarus
+flag | flag: belarus
+
+🇧🇿
+Flag: Belize
+flag: belize | flag
+
+🇨🇦
+Flag: Canada
+flag: canada | flag
+
+🇨🇨
+Flag: Cocos (Keeling) Islands
+flag | flag: cocos (keeling) islands
+
+🇨🇩
+Flag: Congo - Kinshasa
+flag | flag: congo - kinshasa
+
+🇨🇫
+Flag: Central African Republic
+flag: central african republic | flag
+
+🇨🇬
+Flag: Congo - Brazzaville
+flag: congo - brazzaville | flag
+
+🇨🇭
+Flag: Switzerland
+flag: switzerland | flag
+
+🇨🇮
+Flag: Côte d’Ivoire
+flag: côte d’ivoire | flag
+
+🇨🇰
+Flag: Cook Islands
+flag: cook islands | flag
+
+🇨🇱
+Flag: Chile
+flag | flag: chile
+
+🇨🇲
+Flag: Cameroon
+flag | flag: cameroon
+
+🇨🇳
+Flag: China
+flag | flag: china
+
+🇨🇴
+Flag: Colombia
+flag: colombia | flag
+
+🇨🇵
+Flag: Clipperton Island
+flag: clipperton island | flag
+
+🇨🇷
+Flag: Costa Rica
+flag: costa rica | flag
+
+🇨🇺
+Flag: Cuba
+flag | flag: cuba
+
+🇨🇻
+Flag: Cape Verde
+flag: cape verde | flag
+
+🇨🇼
+Flag: Curaçao
+flag | flag: curaçao
+
+🇨🇽
+Flag: Christmas Island
+flag: christmas island | flag
+
+🇨🇾
+Flag: Cyprus
+flag | flag: cyprus
+
+🇨🇿
+Flag: Czechia
+flag | flag: czechia
+
+🇩🇪
+Flag: Germany
+flag | flag: germany
+
+🇩🇬
+Flag: Diego Garcia
+flag | flag: diego garcia
+
+🇩🇯
+Flag: Djibouti
+flag: djibouti | flag
+
+🇩🇰
+Flag: Denmark
+flag: denmark | flag
+
+🇩🇲
+Flag: Dominica
+flag | flag: dominica
+
+🇩🇴
+Flag: Dominican Republic
+flag: dominican republic | flag
+
+🇩🇿
+Flag: Algeria
+flag | flag: algeria
+
+🇪🇦
+Flag: Ceuta & Melilla
+flag | flag: ceuta & melilla
+
+🇪🇨
+Flag: Ecuador
+flag: ecuador | flag
+
+🇪🇪
+Flag: Estonia
+flag | flag: estonia
+
+🇪🇬
+Flag: Egypt
+flag | flag: egypt
+
+🇪🇭
+Flag: Western Sahara
+flag: western sahara | flag
+
+🇪🇷
+Flag: Eritrea
+flag | flag: eritrea
+
+🇪🇸
+Flag: Spain
+flag: spain | flag
+
+🇪🇹
+Flag: Ethiopia
+flag | flag: ethiopia
+
+🇪🇺
+Flag: European Union
+flag | flag: european union
+
+🇫🇮
+Flag: Finland
+flag: finland | flag
+
+🇫🇯
+Flag: Fiji
+flag: fiji | flag
+
+🇫🇰
+Flag: Falkland Islands
+flag: falkland islands | flag
+
+🇫🇲
+Flag: Micronesia
+flag: micronesia | flag
+
+🇫🇴
+Flag: Faroe Islands
+flag: faroe islands | flag
+
+🇫🇷
+Flag: France
+flag | flag: france
+
+🇬🇦
+Flag: Gabon
+flag | flag: gabon
+
+🇬🇧
+Flag: United Kingdom
+flag | flag: united kingdom
+
+🇬🇩
+Flag: Grenada
+flag | flag: grenada
+
+🇬🇪
+Flag: Georgia
+flag: georgia | flag
+
+🇬🇫
+Flag: French Guiana
+flag | flag: french guiana
+
+🇬🇬
+Flag: Guernsey
+flag: guernsey | flag
+
+🇬🇭
+Flag: Ghana
+flag: ghana | flag
+
+🇬🇮
+Flag: Gibraltar
+flag | flag: gibraltar
+
+🇬🇱
+Flag: Greenland
+flag: greenland | flag
+
+🇬🇲
+Flag: Gambia
+flag | flag: gambia
+
+🇬🇳
+Flag: Guinea
+flag: guinea | flag
+
+🇬🇵
+Flag: Guadeloupe
+flag: guadeloupe | flag
+
+🇬🇶
+Flag: Equatorial Guinea
+flag: equatorial guinea | flag
+
+🇬🇷
+Flag: Greece
+flag | flag: greece
+
+🇬🇸
+Flag: South Georgia & South Sandwich Islands
+flag | flag: south georgia & south sandwich islands
+
+🇬🇹
+Flag: Guatemala
+flag: guatemala | flag
+
+🇬🇺
+Flag: Guam
+flag | flag: guam
+
+🇬🇼
+Flag: Guinea-Bissau
+flag: guinea-bissau | flag
+
+🇬🇾
+Flag: Guyana
+flag | flag: guyana
+
+🇭🇰
+Flag: Hong Kong SAR China
+flag: hong kong sar china | flag
+
+🇭🇲
+Flag: Heard & McDonald Islands
+flag | flag: heard & mcdonald islands
+
+🇭🇳
+Flag: Honduras
+flag: honduras | flag
+
+🇭🇷
+Flag: Croatia
+flag: croatia | flag
+
+🇭🇹
+Flag: Haiti
+flag | flag: haiti
+
+🇭🇺
+Flag: Hungary
+flag | flag: hungary
+
+🇮🇨
+Flag: Canary Islands
+flag: canary islands | flag
+
+🇮🇩
+Flag: Indonesia
+flag | flag: indonesia
+
+🇮🇪
+Flag: Ireland
+flag: ireland | flag
+
+🇮🇱
+Flag: Israel
+flag: israel | flag
+
+🇮🇲
+Flag: Isle of Man
+flag: isle of man | flag
+
+🇮🇳
+Flag: India
+flag: india | flag
+
+🇮🇴
+Flag: British Indian Ocean Territory
+flag: british indian ocean territory | flag
+
+🇮🇶
+Flag: Iraq
+flag | flag: iraq
+
+🇮🇷
+Flag: Iran
+flag | flag: iran
+
+🇮🇸
+Flag: Iceland
+flag: iceland | flag
+
+🇮🇹
+Flag: Italy
+flag | flag: italy
+
+🇯🇪
+Flag: Jersey
+flag | flag: jersey
+
+🇯🇲
+Flag: Jamaica
+flag | flag: jamaica
+
+🇯🇴
+Flag: Jordan
+flag | flag: jordan
+
+🇯🇵
+Flag: Japan
+flag | flag: japan
+
+🇰🇪
+Flag: Kenya
+flag: kenya | flag
+
+🇰🇬
+Flag: Kyrgyzstan
+flag: kyrgyzstan | flag
+
+🇰🇭
+Flag: Cambodia
+flag: cambodia | flag
+
+🇰🇮
+Flag: Kiribati
+flag: kiribati | flag
+
+🇰🇲
+Flag: Comoros
+flag: comoros | flag
+
+🇰🇳
+Flag: St. Kitts & Nevis
+flag: st. kitts & nevis | flag
+
+🇰🇵
+Flag: North Korea
+flag: north korea | flag
+
+🇰🇷
+Flag: South Korea
+flag: south korea | flag
+
+🇰🇼
+Flag: Kuwait
+flag: kuwait | flag
+
+🇰🇾
+Flag: Cayman Islands
+flag: cayman islands | flag
+
+🇰🇿
+Flag: Kazakhstan
+flag | flag: kazakhstan
+
+🇱🇦
+Flag: Laos
+flag: laos | flag
+
+🇱🇧
+Flag: Lebanon
+flag: lebanon | flag
+
+🇱🇨
+Flag: St. Lucia
+flag: st. lucia | flag
+
+🇱🇮
+Flag: Liechtenstein
+flag: liechtenstein | flag
+
+🇱🇰
+Flag: Sri Lanka
+flag | flag: sri lanka
+
+🇱🇷
+Flag: Liberia
+flag: liberia | flag
+
+🇱🇸
+Flag: Lesotho
+flag: lesotho | flag
+
+🇱🇹
+Flag: Lithuania
+flag: lithuania | flag
+
+🇱🇺
+Flag: Luxembourg
+flag | flag: luxembourg
+
+🇱🇻
+Flag: Latvia
+flag: latvia | flag
+
+🇱🇾
+Flag: Libya
+flag | flag: libya
+
+🇲🇦
+Flag: Morocco
+flag | flag: morocco
+
+🇲🇨
+Flag: Monaco
+flag | flag: monaco
+
+🇲🇩
+Flag: Moldova
+flag: moldova | flag
+
+🇲🇪
+Flag: Montenegro
+flag | flag: montenegro
+
+🇲🇫
+Flag: St. Martin
+flag: st. martin | flag
+
+🇲🇬
+Flag: Madagascar
+flag: madagascar | flag
+
+🇲🇭
+Flag: Marshall Islands
+flag: marshall islands | flag
+
+🇲🇰
+Flag: Macedonia
+flag: macedonia | flag
+
+🇲🇱
+Flag: Mali
+flag | flag: mali
+
+🇲🇲
+Flag: Myanmar (Burma)
+flag: myanmar (burma) | flag
+
+🇲🇳
+Flag: Mongolia
+flag: mongolia | flag
+
+🇲🇴
+Flag: Macau SAR China
+flag | flag: macau sar china
+
+🇲🇵
+Flag: Northern Mariana Islands
+flag | flag: northern mariana islands
+
+🇲🇶
+Flag: Martinique
+flag: martinique | flag
+
+🇲🇷
+Flag: Mauritania
+flag: mauritania | flag
+
+🇲🇸
+Flag: Montserrat
+flag: montserrat | flag
+
+🇲🇹
+Flag: Malta
+flag | flag: malta
+
+🇲🇺
+Flag: Mauritius
+flag: mauritius | flag
+
+🇲🇻
+Flag: Maldives
+flag | flag: maldives
+
+🇲🇼
+Flag: Malawi
+flag | flag: malawi
+
+🇲🇽
+Flag: Mexico
+flag | flag: mexico
+
+🇲🇾
+Flag: Malaysia
+flag | flag: malaysia
+
+🇲🇿
+Flag: Mozambique
+flag: mozambique | flag
+
+🇳🇦
+Flag: Namibia
+flag | flag: namibia
+
+🇳🇨
+Flag: New Caledonia
+flag: new caledonia | flag
+
+🇳🇪
+Flag: Niger
+flag | flag: niger
+
+🇳🇫
+Flag: Norfolk Island
+flag | flag: norfolk island
+
+🇳🇬
+Flag: Nigeria
+flag | flag: nigeria
+
+🇳🇮
+Flag: Nicaragua
+flag: nicaragua | flag
+
+🇳🇱
+Flag: Netherlands
+flag: netherlands | flag
+
+🇳🇴
+Flag: Norway
+flag: norway | flag
+
+🇳🇵
+Flag: Nepal
+flag | flag: nepal
+
+🇳🇷
+Flag: Nauru
+flag: nauru | flag
+
+🇳🇺
+Flag: Niue
+flag: niue | flag
+
+🇳🇿
+Flag: New Zealand
+flag: new zealand | flag
+
+🇴🇲
+Flag: Oman
+flag: oman | flag
+
+🇵🇦
+Flag: Panama
+flag: panama | flag
+
+🇵🇪
+Flag: Peru
+flag: peru | flag
+
+🇵🇫
+Flag: French Polynesia
+flag: french polynesia | flag
+
+🇵🇬
+Flag: Papua New Guinea
+flag | flag: papua new guinea
+
+🇵🇭
+Flag: Philippines
+flag | flag: philippines
+
+🇵🇰
+Flag: Pakistan
+flag: pakistan | flag
+
+🇵🇱
+Flag: Poland
+flag | flag: poland
+
+🇵🇲
+Flag: St. Pierre & Miquelon
+flag: st. pierre & miquelon | flag
+
+🇵🇳
+Flag: Pitcairn Islands
+flag | flag: pitcairn islands
+
+🇵🇷
+Flag: Puerto Rico
+flag | flag: puerto rico
+
+🇵🇸
+Flag: Palestinian Territories
+flag | flag: palestinian territories
+
+🇵🇹
+Flag: Portugal
+flag | flag: portugal
+
+🇵🇼
+Flag: Palau
+flag: palau | flag
+
+🇵🇾
+Flag: Paraguay
+flag | flag: paraguay
+
+🇶🇦
+Flag: Qatar
+flag | flag: qatar
+
+🇷🇪
+Flag: Réunion
+flag | flag: réunion
+
+🇷🇴
+Flag: Romania
+flag: romania | flag
+
+🇷🇸
+Flag: Serbia
+flag | flag: serbia
+
+🇷🇺
+Flag: Russia
+flag: russia | flag
+
+🇷🇼
+Flag: Rwanda
+flag: rwanda | flag
+
+🇸🇦
+Flag: Saudi Arabia
+flag: saudi arabia | flag
+
+🇸🇧
+Flag: Solomon Islands
+flag: solomon islands | flag
+
+🇸🇨
+Flag: Seychelles
+flag: seychelles | flag
+
+🇸🇩
+Flag: Sudan
+flag | flag: sudan
+
+🇸🇪
+Flag: Sweden
+flag: sweden | flag
+
+🇸🇬
+Flag: Singapore
+flag: singapore | flag
+
+🇸🇭
+Flag: St. Helena
+flag: st. helena | flag
+
+🇸🇮
+Flag: Slovenia
+flag: slovenia | flag
+
+🇸🇯
+Flag: Svalbard & Jan Mayen
+flag: svalbard & jan mayen | flag
+
+🇸🇰
+Flag: Slovakia
+flag: slovakia | flag
+
+🇸🇱
+Flag: Sierra Leone
+flag: sierra leone | flag
+
+🇸🇲
+Flag: San Marino
+flag | flag: san marino
+
+🇸🇳
+Flag: Senegal
+flag: senegal | flag
+
+🇸🇴
+Flag: Somalia
+flag: somalia | flag
+
+🇸🇷
+Flag: Suriname
+flag: suriname | flag
+
+🇸🇸
+Flag: South Sudan
+flag | flag: south sudan
+
+🇸🇹
+Flag: São Tomé & Príncipe
+flag: são tomé & príncipe | flag
+
+🇸🇻
+Flag: El Salvador
+flag: el salvador | flag
+
+🇸🇽
+Flag: Sint Maarten
+flag: sint maarten | flag
+
+🇸🇾
+Flag: Syria
+flag | flag: syria
+
+🇸🇿
+Flag: Swaziland
+flag: swaziland | flag
+
+🇹🇦
+Flag: Tristan da Cunha
+flag | flag: tristan da cunha
+
+🇹🇨
+Flag: Turks & Caicos Islands
+flag: turks & caicos islands | flag
+
+🇹🇩
+Flag: Chad
+flag | flag: chad
+
+🇹🇫
+Flag: French Southern Territories
+flag: french southern territories | flag
+
+🇹🇬
+Flag: Togo
+flag: togo | flag
+
+🇹🇭
+Flag: Thailand
+flag: thailand | flag
+
+🇹🇯
+Flag: Tajikistan
+flag: tajikistan | flag
+
+🇹🇰
+Flag: Tokelau
+flag | flag: tokelau
+
+🇹🇱
+Flag: Timor-Leste
+flag: timor-leste | flag
+
+🇹🇲
+Flag: Turkmenistan
+flag: turkmenistan | flag
+
+🇹🇳
+Flag: Tunisia
+flag | flag: tunisia
+
+🇹🇴
+Flag: Tonga
+flag: tonga | flag
+
+🇹🇷
+Flag: Turkey
+flag | flag: turkey
+
+🇹🇹
+Flag: Trinidad & Tobago
+flag: trinidad & tobago | flag
+
+🇹🇻
+Flag: Tuvalu
+flag: tuvalu | flag
+
+🇹🇼
+Flag: Taiwan
+flag | flag: taiwan
+
+🇹🇿
+Flag: Tanzania
+flag: tanzania | flag
+
+🇺🇦
+Flag: Ukraine
+flag: ukraine | flag
+
+🇺🇬
+Flag: Uganda
+flag: uganda | flag
+
+🇺🇲
+Flag: U.S. Outlying Islands
+flag | flag: u.s. outlying islands
+
+🇺🇳
+Flag: United Nations
+flag: united nations | flag
+
+🇺🇸
+Flag: United States
+flag | flag: united states
+
+🇺🇾
+Flag: Uruguay
+flag: uruguay | flag
+
+🇺🇿
+Flag: Uzbekistan
+flag | flag: uzbekistan
+
+🇻🇦
+Flag: Vatican City
+flag | flag: vatican city
+
+🇻🇨
+Flag: St. Vincent & Grenadines
+flag | flag: st. vincent & grenadines
+
+🇻🇪
+Flag: Venezuela
+flag: venezuela | flag
+
+🇻🇬
+Flag: British Virgin Islands
+flag | flag: british virgin islands
+
+🇻🇮
+Flag: U.S. Virgin Islands
+flag | flag: u.s. virgin islands
+
+🇻🇳
+Flag: Vietnam
+flag: vietnam | flag
+
+🇻🇺
+Flag: Vanuatu
+flag: vanuatu | flag
+
+🇼🇫
+Flag: Wallis & Futuna
+flag: wallis & futuna | flag
+
+🇼🇸
+Flag: Samoa
+flag | flag: samoa
+
+🇽🇰
+Flag: Kosovo
+flag | flag: kosovo
+
+🇾🇪
+Flag: Yemen
+flag: yemen | flag
+
+🇾🇹
+Flag: Mayotte
+flag: mayotte | flag
+
+🇿🇦
+Flag: South Africa
+flag: south africa | flag
+
+🇿🇲
+Flag: Zambia
+flag | flag: zambia
+
+🇿🇼
+Flag: Zimbabwe
+flag | flag: zimbabwe
+
+🈁
+Japanese “here” button
+katakana | “here” | japanese | japanese “here” button | ココ
+
+🈂
+Japanese “service charge” button
+katakana | “service charge” | japanese | japanese “service charge” button | サ
+
+🈚
+Japanese “free of charge” button
+japanese | 無 | japanese “free of charge” button | ideograph | “free of charge”
+
+🈯
+Japanese “reserved” button
+指 | japanese | japanese “reserved” button | “reserved” | ideograph
+
+🈲
+Japanese “prohibited” button
+japanese | japanese “prohibited” button | 禁 | “prohibited” | ideograph
+
+🈳
+Japanese “vacancy” button
+空 | japanese “vacancy” button | japanese | ideograph | “vacancy”
+
+🈴
+Japanese “passing grade” button
+japanese “passing grade” button | japanese | “passing grade” | ideograph | 合
+
+🈵
+Japanese “no vacancy” button
+満 | japanese | “no vacancy” | ideograph | japanese “no vacancy” button
+
+🈶
+Japanese “not free of charge” button
+japanese | 有 | “not free of charge” | ideograph | japanese “not free of charge” button
+
+🈷
+Japanese “monthly amount” button
+japanese | “monthly amount” | 月 | ideograph | japanese “monthly amount” button
+
+🈸
+Japanese “application” button
+“application” | 申 | japanese | ideograph | japanese “application” button
+
+🈹
+Japanese “discount” button
+“discount” | japanese “discount” button | japanese | 割 | ideograph
+
+🈺
+Japanese “open for business” button
+japanese “open for business” button | japanese | “open for business” | ideograph | 営
+
+🉐
+Japanese “bargain” button
+得 | japanese | japanese “bargain” button | ideograph | “bargain”
+
+🉑
+Japanese “acceptable” button
+japanese “acceptable” button | japanese | 可 | ideograph | “acceptable”
+
+🌀
+Cyclone
+hurricane | dizzy | twister | cyclone | typhoon
+
+🌁
+Foggy
+fog | foggy
+
+🌂
+Closed umbrella
+clothing | closed umbrella | rain | umbrella
+
+🌃
+Night with stars
+night with stars | night | star
+
+🌄
+Sunrise over mountains
+mountain | sun | sunrise | morning | sunrise over mountains
+
+🌅
+Sunrise
+sunrise | sun | morning
+
+🌆
+Cityscape at dusk
+evening | landscape | dusk | cityscape at dusk | city | sunset
+
+🌇
+Sunset
+dusk | sun | sunset
+
+🌈
+Rainbow
+rainbow | rain
+
+🌉
+Bridge at night
+bridge | night | bridge at night
+
+🌊
+Water wave
+water | ocean | water wave | wave
+
+🌋
+Volcano
+volcano | mountain | eruption
+
+🌌
+Milky way
+milky way | space
+
+🌍
+Globe showing Europe-Africa
+europe | globe showing europe-africa | earth | globe | world | africa
+
+🌎
+Globe showing Americas
+globe showing americas | earth | globe | americas | world
+
+🌏
+Globe showing Asia-Australia
+globe showing asia-australia | australia | earth | globe | asia | world
+
+🌐
+Globe with meridians
+meridians | earth | globe | world | globe with meridians
+
+🌑
+New moon
+moon | new moon | dark
+
+🌒
+Waxing crescent moon
+moon | waxing crescent moon | waxing | crescent
+
+🌓
+First quarter moon
+first quarter moon | moon | quarter
+
+🌔
+Waxing gibbous moon
+waxing | moon | waxing gibbous moon | gibbous
+
+🌕
+Full moon
+full | moon | full moon
+
+🌖
+Waning gibbous moon
+moon | waning | gibbous | waning gibbous moon
+
+🌗
+Last quarter moon
+moon | quarter | last quarter moon
+
+🌘
+Waning crescent moon
+moon | waning | waning crescent moon | crescent
+
+🌙
+Crescent moon
+moon | crescent moon | crescent
+
+🌚
+New moon face
+moon | face | new moon face
+
+🌛
+First quarter moon face
+moon | quarter | first quarter moon face | face
+
+🌜
+Last quarter moon face
+last quarter moon face | quarter | face | moon
+
+🌝
+Full moon face
+full | face | bright | moon | full moon face
+
+🌞
+Sun with face
+face | bright | sun | sun with face
+
+🌟
+Glowing star
+star | glittery | glowing star | glow | sparkle | shining
+
+🌠
+Shooting star
+shooting star | shooting | star | falling
+
+🌡
+Thermometer
+weather | thermometer
+
+🌤
+Sun behind small cloud
+sun | sun behind small cloud | cloud
+
+🌥
+Sun behind large cloud
+sun | sun behind large cloud | cloud
+
+🌦
+Sun behind rain cloud
+sun | sun behind rain cloud | rain | cloud
+
+🌧
+Cloud with rain
+cloud | rain | cloud with rain
+
+🌨
+Cloud with snow
+cold | cloud | cloud with snow | snow
+
+🌩
+Cloud with lightning
+cloud with lightning | cloud | lightning
+
+🌪
+Tornado
+whirlwind | tornado | cloud
+
+🌫
+Fog
+fog | cloud
+
+🌬
+Wind face
+wind face | blow | face | cloud | wind
+
+🌭
+Hot dog
+sausage | hot dog | hotdog | frankfurter
+
+🌮
+Taco
+taco | mexican
+
+🌯
+Burrito
+burrito | wrap | mexican
+
+🌰
+Chestnut
+chestnut | plant
+
+🌱
+Seedling
+seedling | young
+
+🌲
+Evergreen tree
+fir | evergreen tree | tree | spruce
+
+🌳
+Deciduous tree
+deciduous tree | deciduous | tree | shedding
+
+🌴
+Palm tree
+palm | tree | palm tree
+
+🌵
+Cactus
+plant | spike | thorn | cactus | arizona
+
+🌶
+Hot pepper
+hot | pepper | hot pepper
+
+🌷
+Tulip
+flower | tulip
+
+🌸
+Cherry blossom
+cherry blossom | blossom | flower | cherry
+
+🌹
+Rose
+rose | flower
+
+🌺
+Hibiscus
+flower | hibiscus
+
+🌻
+Sunflower
+sun | sunflower | flower
+
+🌼
+Blossom
+blossom | flower
+
+🌽
+Ear of corn
+maze | corn | maize | ear of corn | ear
+
+🌾
+Sheaf of rice
+ear | sheaf of rice | rice | grain
+
+🌿
+Herb
+leaf | herb
+
+🍀
+Four leaf clover
+leaf | four | 4 | clover | four leaf clover | ireland | four-leaf clover
+
+🍁
+Maple leaf
+leaf | canada | maple | maple leaf | falling
+
+🍂
+Fallen leaf
+leaf | fallen leaf | falling
+
+🍃
+Leaf fluttering in wind
+leaf | blow | flutter | leaf fluttering in wind | wind
+
+🍄
+Mushroom
+toadstool | mushroom
+
+🍅
+Tomato
+vegetable | fruit | tomato
+
+🍆
+Eggplant
+aubergine | eggplant | vegetable
+
+🍇
+Grapes
+grape | fruit | grapes | purple
+
+🍈
+Melon
+fruit | melon
+
+🍉
+Watermelon
+fruit | watermelon
+
+🍊
+Tangerine
+fruit | tangerine | orange
+
+🍋
+Lemon
+fruit | lemon | yellow | citrus
+
+🍌
+Banana
+fruit | banana
+
+🍍
+Pineapple
+pineapple | fruit
+
+🍎
+Red apple
+apple | fruit | red | red apple
+
+🍏
+Green apple
+apple | fruit | green apple | green
+
+🍐
+Pear
+pear | fruit
+
+🍑
+Peach
+peach | fruit
+
+🍒
+Cherries
+cherry | red | berries | fruit | cherries
+
+🍓
+Strawberry
+berry | fruit | strawberry
+
+🍔
+Hamburger
+burger | hamburger
+
+🍕
+Pizza
+cheese | slice | pizza
+
+🍖
+Meat on bone
+meat | meat on bone | bone
+
+🍗
+Poultry leg
+leg | drumstick | chicken | poultry | bone | poultry leg
+
+🍘
+Rice cracker
+cracker | rice | rice cracker
+
+🍙
+Rice ball
+ball | japanese | rice | rice ball
+
+🍚
+Cooked rice
+cooked | rice | cooked rice
+
+🍛
+Curry rice
+curry rice | rice | curry
+
+🍜
+Steaming bowl
+bowl | steaming | ramen | noodle | steaming bowl
+
+🍝
+Spaghetti
+italian | spaghetti | pasta
+
+🍞
+Bread
+bread | loaf
+
+🍟
+French fries
+fries | french fries | french
+
+🍠
+Roasted sweet potato
+sweet | potato | roasted sweet potato | roasted
+
+🍡
+Dango
+dessert | japanese | dango | skewer | stick | sweet
+
+🍢
+Oden
+seafood | oden | skewer | kebab | stick
+
+🍣
+Sushi
+sushi
+
+🍤
+Fried shrimp
+prawn | fried shrimp | fried | tempura | shrimp
+
+🍥
+Fish cake with swirl
+fish | fish cake with swirl | cake | swirl | pastry
+
+🍦
+Soft ice cream
+dessert | soft ice cream | icecream | cream | soft | sweet | ice
+
+🍧
+Shaved ice
+dessert | shaved ice | shaved | sweet | ice
+
+🍨
+Ice cream
+dessert | cream | ice cream | sweet | ice
+
+🍩
+Doughnut
+doughnut | dessert | homer | sweet | donut
+
+🍪
+Cookie
+dessert | sweet | cookie
+
+🍫
+Chocolate bar
+chocolate | dessert | chocolate bar | bar | sweet
+
+🍬
+Candy
+dessert | sweet | candy
+
+🍭
+Lollipop
+dessert | sweet | lollipop | candy
+
+🍮
+Custard
+dessert | sweet | pudding | custard
+
+🍯
+Honey pot
+pot | honey pot | honey | honeypot | sweet
+
+🍰
+Shortcake
+dessert | cake | shortcake | pastry | sweet | slice
+
+🍱
+Bento box
+bento box | box | bento
+
+🍲
+Pot of food
+pot | pot of food | stew
+
+🍳
+Cooking
+breakfast | cooking | frying | egg | pan
+
+🍵
+Teacup without handle
+teacup without handle | teacup | beverage | tea | cup | drink
+
+🍶
+Sake
+sake | bottle | bar | beverage | cup | drink
+
+🍷
+Wine glass
+glass | wine | bar | wine glass | beverage | drink
+
+🍸
+Cocktail glass
+cocktail glass | glass | bar | cocktail | drink
+
+🍹
+Tropical drink
+bar | tropical drink | tropical | drink
+
+🍺
+Beer mug
+beer mug | beer | bar | mug | 50 | drink
+
+🍻
+Clinking beer mugs
+clinking beer mugs | beer | clink | bar | mug | drink
+
+🍼
+Baby bottle
+baby bottle | bottle | baby | milk | drink
+
+🍾
+Bottle with popping cork
+bottle | bottle with popping cork | popping | bar | cork | drink
+
+🍿
+Popcorn
+movie | popcorn
+
+🎀
+Ribbon
+ribbon | celebration
+
+🎁
+Wrapped gift
+celebration | gift | wrapped | box | wrapped gift | present
+
+🎂
+Birthday cake
+birthday cake | birthday | dessert | cake | celebration | pastry | sweet
+
+🎄
+Christmas tree
+christmas tree | celebration | christmas | tree
+
+🎅
+Santa Claus
+santa | celebration | santa claus | claus | father | christmas
+
+🎆
+Fireworks
+fireworks | celebration
+
+🎇
+Sparkler
+sparkler | celebration | fireworks | sparkle
+
+🎈
+Balloon
+celebration | balloon
+
+🎉
+Party popper
+party popper | celebration | party | popper | tada
+
+🎊
+Confetti ball
+confetti | ball | celebration | confetti ball
+
+🎋
+Tanabata tree
+japanese | celebration | tree | tanabata tree | banner
+
+🎌
+Crossed flags
+crossed flags | cross | celebration | japanese | crossed
+
+🎍
+Pine decoration
+japanese | celebration | bamboo | pine | pine decoration
+
+🎎
+Japanese dolls
+japanese dolls | japanese | celebration | festival | doll
+
+🎏
+Carp streamer
+streamer | celebration | carp | carp streamer
+
+🎐
+Wind chime
+chime | bell | celebration | wind chime | wind
+
+🎑
+Moon viewing ceremony
+moon | ceremony | celebration | moon viewing ceremony
+
+🎒
+Backpack
+bag | school | backpack | satchel | rucksack
+
+🎓
+Graduation cap
+clothing | graduation | celebration | cap | graduation cap | hat
+
+🎖
+Military medal
+military | celebration | military medal | medal
+
+🎗
+Reminder ribbon
+reminder ribbon | celebration | reminder | ribbon
+
+🎙
+Studio microphone
+microphone | studio microphone | studio | music | mic
+
+🎚
+Level slider
+music | level slider | level | slider
+
+🎛
+Control knobs
+control | music | control knobs | knobs
+
+🎞
+Film frames
+movie | film frames | cinema | frames | film
+
+🎟
+Admission tickets
+admission | admission tickets | ticket
+
+🎠
+Carousel horse
+horse | carousel | carousel horse
+
+🎡
+Ferris wheel
+amusement park | wheel | ferris | ferris wheel
+
+🎢
+Roller coaster
+amusement park | roller | roller coaster | coaster
+
+🎣
+Fishing pole
+fishing pole | fish | pole
+
+🎤
+Microphone
+microphone | karaoke | mic
+
+🎥
+Movie camera
+camera | movie | movie camera | cinema
+
+🎦
+Cinema
+movie | camera | film | cinema
+
+🎧
+Headphone
+headphone | earbud
+
+🎨
+Artist palette
+art | palette | museum | painting | artist palette
+
+🎩
+Top hat
+clothing | tophat | top | hat | top hat
+
+🎪
+Circus tent
+circus | circus tent | tent
+
+🎫
+Ticket
+admission | ticket
+
+🎬
+Clapper board
+movie | clapper | clapper board
+
+🎭
+Performing arts
+performing | performing arts | art | mask | theatre | theater
+
+🎮
+Video game
+controller | game | video game
+
+🎯
+Direct hit
+hit | game | bullseye | target | dart | direct hit
+
+🎰
+Slot machine
+slot machine | game | slot
+
+🎱
+Pool 8 ball
+8 | eight | pool 8 ball | game | ball | billiard
+
+🎲
+Game die
+game die | dice | die | game
+
+🎳
+Bowling
+ball | game | bowling
+
+🎴
+Flower playing cards
+flower | flower playing cards | japanese | game | card | playing
+
+🎵
+Musical note
+music | note | musical note
+
+🎶
+Musical notes
+music | note | musical notes | notes
+
+🎷
+Saxophone
+music | saxophone | instrument | sax
+
+🎸
+Guitar
+music | instrument | guitar
+
+🎹
+Musical keyboard
+piano | keyboard | music | musical keyboard | instrument
+
+🎺
+Trumpet
+music | trumpet | instrument
+
+🎻
+Violin
+music | violin | instrument
+
+🎼
+Musical score
+music | score | musical score
+
+🎽
+Running shirt
+sash | athletics | shirt | running | running shirt
+
+🎾
+Tennis
+racquet | ball | tennis
+
+🎿
+Skis
+ski | skis | snow
+
+🏀
+Basketball
+basketball | hoop | ball
+
+🏁
+Chequered flag
+chequered | chequered flag | racing | checkered
+
+🏂
+Snowboarder
+snowboard | snowboarder | ski | snow
+
+🏃
+Person running
+marathon | running | person running
+
+🏃‍♀️
+Woman running
+woman running | racing | running | marathon | woman
+
+🏃‍♂️
+Man running
+man running | racing | running | man | marathon
+
+🏄
+Person surfing
+person surfing | surfing
+
+🏄‍♀️
+Woman surfing
+woman | surfing | woman surfing
+
+🏄‍♂️
+Man surfing
+man surfing | man | surfing
+
+🏅
+Sports medal
+medal | sports medal
+
+🏆
+Trophy
+trophy | prize
+
+🏇
+Horse racing
+racehorse | horse racing | horse | racing | jockey
+
+🏈
+American football
+american | ball | american football | football
+
+🏉
+Rugby football
+rugby football | ball | football | rugby
+
+🏊
+Person swimming
+swim | person swimming
+
+🏊‍♀️
+Woman swimming
+woman | woman swimming | swim
+
+🏊‍♂️
+Man swimming
+swim | man | man swimming
+
+🏋
+Person lifting weights
+weight | lifter | person lifting weights
+
+🏋️‍♀️
+Woman lifting weights
+woman lifting weights | weight lifter | woman
+
+🏋️‍♂️
+Man lifting weights
+man | weight lifter | man lifting weights
+
+🏌
+Person golfing
+ball | golf | person golfing
+
+🏌️‍♀️
+Woman golfing
+golf | woman golfing | woman
+
+🏌️‍♂️
+Man golfing
+golf | man golfing | man
+
+🏍
+Motorcycle
+racing | motorcycle
+
+🏎
+Racing car
+car | racing car | racing
+
+🏏
+Cricket game
+cricket game | ball | bat | game
+
+🏐
+Volleyball
+ball | game | volleyball
+
+🏑
+Field hockey
+game | ball | stick | field | field hockey | hockey
+
+🏒
+Ice hockey
+puck | ice hockey | game | stick | hockey | ice
+
+🏓
+Ping pong
+table tennis | ping pong | paddle | game | bat | ball
+
+🏔
+Snow-capped mountain
+mountain | cold | snow | snow-capped mountain
+
+🏕
+Camping
+camping
+
+🏖
+Beach with umbrella
+beach with umbrella | umbrella | beach
+
+🏗
+Building construction
+building construction | construction
+
+🏘
+Houses
+houses
+
+🏙
+Cityscape
+cityscape | city
+
+🏚
+Derelict house
+derelict house | derelict | house
+
+🏛
+Classical building
+classical building | classical
+
+🏜
+Desert
+desert
+
+🏝
+Desert island
+desert | desert island | island
+
+🏞
+National park
+park | national park
+
+🏟
+Stadium
+stadium
+
+🏠
+House
+home | house
+
+🏡
+House with garden
+garden | home | house | house with garden
+
+🏢
+Office building
+building | office building
+
+🏣
+Japanese post office
+japanese | post | japanese post office
+
+🏤
+Post office
+post office | post | european
+
+🏥
+Hospital
+medicine | doctor | hospital
+
+🏦
+Bank
+bank | building
+
+🏧
+ATM sign
+automated | atm | atm sign | bank | teller
+
+🏨
+Hotel
+hotel | building
+
+🏩
+Love hotel
+love hotel | hotel | love
+
+🏪
+Convenience store
+convenience store | store | convenience
+
+🏫
+School
+school | building
+
+🏬
+Department store
+department | store | department store
+
+🏭
+Factory
+building | factory
+
+🏮
+Red paper lantern
+lantern | light | red | red paper lantern | bar
+
+🏯
+Japanese castle
+castle | japanese | japanese castle
+
+🏰
+Castle
+castle | european
+
+🏳
+White flag
+waving | white flag
+
+🏳️‍🌈
+Rainbow flag
+rainbow | rainbow flag
+
+🏴
+Black flag
+waving | black flag
+
+🏴‍☠️
+Pirate flag
+plunder | treasure | pirate | pirate flag | jolly roger
+
+🏴󠁧󠁢󠁥󠁮󠁧󠁿
+Flag: England
+flag: england | flag
+
+🏴󠁧󠁢󠁳󠁣󠁴󠁿
+Flag: Scotland
+flag | flag: scotland
+
+🏴󠁧󠁢󠁷󠁬󠁳󠁿
+Flag: Wales
+flag | flag: wales
+
+🏵
+Rosette
+rosette | plant
+
+🏷
+Label
+label
+
+🏸
+Badminton
+racquet | birdie | badminton | game | shuttlecock
+
+🏹
+Bow and arrow
+bow and arrow | arrow | sagittarius | bow | archer | zodiac
+
+🏺
+Amphora
+jug | cooking | aquarius | amphora | zodiac | drink
+
+🐀
+Rat
+rat
+
+🐁
+Mouse
+mouse
+
+🐂
+Ox
+bull | ox | taurus | zodiac | beef
+
+🐃
+Water buffalo
+water | water buffalo | buffalo
+
+🐄
+Cow
+beef | cow
+
+🐅
+Tiger
+tiger
+
+🐆
+Leopard
+leopard
+
+🐇
+Rabbit
+pet | rabbit | bunny
+
+🐈
+Cat
+meow | pet | cat
+
+🐉
+Dragon
+fairy tale | dragon
+
+🐊
+Crocodile
+crocodile
+
+🐋
+Whale
+whale
+
+🐌
+Snail
+snail
+
+🐍
+Snake
+snake | zodiac | bearer | serpent | ophiuchus
+
+🐎
+Horse
+horse | equestrian | racing | racehorse
+
+🐏
+Ram
+sheep | male | aries | zodiac | ram
+
+🐐
+Goat
+zodiac | goat | capricorn
+
+🐑
+Ewe
+sheep | female | ewe
+
+🐒
+Monkey
+monkey
+
+🐓
+Rooster
+rooster | bird
+
+🐔
+Chicken
+chicken | bird
+
+🐕
+Dog
+pet | dog
+
+🐖
+Pig
+pork | pig | sow
+
+🐗
+Boar
+pig | boar
+
+🐘
+Elephant
+trunk | elephant
+
+🐙
+Octopus
+octopus
+
+🐚
+Spiral shell
+spiral shell | spiral | shell
+
+🐛
+Bug
+insect | bug
+
+🐜
+Ant
+insect | ant
+
+🐝
+Honeybee
+insect | bee | honeybee
+
+🐞
+Lady beetle
+lady beetle | beetle | ladybug | insect | ladybird
+
+🐟
+Fish
+pisces | fish | zodiac
+
+🐠
+Tropical fish
+tropical fish | fish | tropical
+
+🐡
+Blowfish
+blowfish | fish
+
+🐢
+Turtle
+terrapin | turtle | tortoise
+
+🐣
+Hatching chick
+bird | hatching | hatching chick | baby | chick
+
+🐤
+Baby chick
+chick | bird | baby | baby chick
+
+🐥
+Front-facing baby chick
+chick | bird | front-facing baby chick | baby
+
+🐦
+Bird
+bird
+
+🐧
+Penguin
+bird | penguin
+
+🐨
+Koala
+koala | bear
+
+🐩
+Poodle
+dog | poodle
+
+🐪
+Camel
+camel | dromedary | hump
+
+🐫
+Two-hump camel
+camel | hump | bactrian | two-hump camel
+
+🐬
+Dolphin
+flipper | dolphin
+
+🐭
+Mouse face
+mouse | face | mouse face
+
+🐮
+Cow face
+face | cow | cow face
+
+🐯
+Tiger face
+tiger face | face | tiger
+
+🐰
+Rabbit face
+pet | face | bunny | rabbit face | rabbit
+
+🐱
+Cat face
+pet | face | cat | meow | cat face
+
+🐲
+Dragon face
+face | dragon | dragon face | fairy tale
+
+🐳
+Spouting whale
+whale | spouting whale | spouting | face
+
+🐴
+Horse face
+horse | face | horse face
+
+🐵
+Monkey face
+monkey | monkey face | face
+
+🐶
+Dog face
+pet | dog | face | dog face
+
+🐷
+Pig face
+pork | pig face | pig | face
+
+🐸
+Frog face
+face | frog face | frog
+
+🐹
+Hamster face
+face | pet | hamster face | hamster
+
+🐺
+Wolf face
+wolf face | face | wolf
+
+🐻
+Bear face
+bear face | face | bear
+
+🐼
+Panda face
+panda | face | panda face
+
+🐽
+Pig nose
+nose | pig nose | face | pork | pig
+
+🐾
+Paw prints
+paw prints | print | paw | feet
+
+🐿
+Chipmunk
+chipmunk | squirrel
+
+👀
+Eyes
+eye | eyes | face
+
+👁
+Eye
+eye | body
+
+👁️‍🗨️
+Eye in speech bubble
+eye | eye in speech bubble | speech bubble | witness
+
+👂
+Ear
+ear | body
+
+👃
+Nose
+nose | body
+
+👄
+Mouth
+lips | mouth
+
+👅
+Tongue
+tongue | body
+
+👆
+Backhand index pointing up
+hand | up | finger | backhand | point | backhand index pointing up
+
+👇
+Backhand index pointing down
+hand | down | finger | backhand | point | backhand index pointing down
+
+👈
+Backhand index pointing left
+hand | backhand index pointing left | finger | backhand | point | index
+
+👉
+Backhand index pointing right
+hand | finger | backhand | point | backhand index pointing right | index
+
+👊
+Oncoming fist
+hand | oncoming fist | punch | clenched | fist
+
+👋
+Waving hand
+hand | waving | waving hand | wave
+
+👌
+OK hand
+hand | perfect | ok hand | ok
+
+👍
+Thumbs up
+hand | up | +1 | thumb | thumbs up | yes
+
+👎
+Thumbs down
+hand | no | thumbs down | down | thumb | -1
+
+👏
+Clapping hands
+hand | clap | clapping hands
+
+👐
+Open hands
+hand | open hands | open
+
+👑
+Crown
+clothing | crown | queen | king
+
+👒
+Woman’s hat
+clothing | woman | hat | woman’s hat
+
+👓
+Glasses
+clothing | eye | eyeglasses | eyewear | glasses
+
+👔
+Necktie
+clothing | tie | necktie
+
+👕
+T-shirt
+clothing | shirt | t-shirt | tshirt
+
+👖
+Jeans
+clothing | pants | jeans | trousers
+
+👗
+Dress
+clothing | dress
+
+👘
+Kimono
+clothing | kimono
+
+👙
+Bikini
+clothing | bikini | swim
+
+👚
+Woman’s clothes
+woman’s clothes | clothing | woman
+
+👛
+Purse
+clothing | coin | purse
+
+👜
+Handbag
+clothing | handbag | purse | bag
+
+👝
+Clutch bag
+clothing | pouch | clutch bag | bag
+
+👞
+Man’s shoe
+clothing | shoe | man | man’s shoe
+
+👟
+Running shoe
+running shoe | clothing | shoe | sneaker | athletic
+
+👠
+High-heeled shoe
+clothing | shoe | high-heeled shoe | heel | woman
+
+👡
+Woman’s sandal
+clothing | shoe | woman’s sandal | sandal | woman
+
+👢
+Woman’s boot
+clothing | boot | shoe | woman’s boot | woman
+
+👣
+Footprints
+clothing | print | footprint | footprints
+
+👤
+Bust in silhouette
+bust in silhouette | bust | silhouette
+
+👥
+Busts in silhouette
+busts in silhouette | bust | silhouette
+
+👦
+Boy
+young | boy
+
+👧
+Girl
+girl | young | virgo | zodiac
+
+👨
+Man
+adult | man
+
+👨‍⚕️
+Man health worker
+nurse | doctor | therapist | healthcare | man health worker | man
+
+👨‍⚖️
+Man judge
+man | justice | scales | man judge
+
+👨‍✈️
+Man pilot
+man pilot | man | pilot | plane
+
+👨‍❤️‍👨
+Couple with heart: man, man
+love | couple | couple with heart | couple with heart: man, man | man
+
+👨‍❤️‍💋‍👨
+Kiss: man, man
+kiss | man | kiss: man, man | couple
+
+👨‍🌾
+Man farmer
+farmer | gardener | rancher | man | man farmer
+
+👨‍🍳
+Man cook
+cook | man cook | man | chef
+
+👨‍🎓
+Man student
+student | man student | man | graduate
+
+👨‍🎤
+Man singer
+star | singer | man | actor | entertainer | man singer | rock
+
+👨‍🎨
+Man artist
+man | man artist | palette | artist
+
+👨‍🏫
+Man teacher
+instructor | man teacher | teacher | professor | man
+
+👨‍🏭
+Man factory worker
+worker | factory | industrial | man factory worker | assembly | man
+
+👨‍👦
+Family: man, boy
+family: man, boy | family | man | boy
+
+👨‍👦‍👦
+Family: man, boy, boy
+family: man, boy, boy | family | man | boy
+
+👨‍👧
+Family: man, girl
+girl | family: man, girl | family | man
+
+👨‍👧‍👦
+Family: man, girl, boy
+man | family: man, girl, boy | girl | family | boy
+
+👨‍👧‍👧
+Family: man, girl, girl
+girl | family | man | family: man, girl, girl
+
+👨‍👨‍👦
+Family: man, man, boy
+family | family: man, man, boy | boy | man
+
+👨‍👨‍👦‍👦
+Family: man, man, boy, boy
+family | man | boy | family: man, man, boy, boy
+
+👨‍👨‍👧
+Family: man, man, girl
+girl | family | man | family: man, man, girl
+
+👨‍👨‍👧‍👦
+Family: man, man, girl, boy
+family: man, man, girl, boy | man | girl | family | boy
+
+👨‍👨‍👧‍👧
+Family: man, man, girl, girl
+family: man, man, girl, girl | family | girl | man
+
+👨‍👩‍👦
+Family: man, woman, boy
+family: man, woman, boy | man | family | boy | woman
+
+👨‍👩‍👦‍👦
+Family: man, woman, boy, boy
+man | family: man, woman, boy, boy | family | boy | woman
+
+👨‍👩‍👧
+Family: man, woman, girl
+family: man, woman, girl | man | girl | family | woman
+
+👨‍👩‍👧‍👦
+Family: man, woman, girl, boy
+man | family: man, woman, girl, boy | girl | family | boy | woman
+
+👨‍👩‍👧‍👧
+Family: man, woman, girl, girl
+family: man, woman, girl, girl | man | girl | family | woman
+
+👨‍💻
+Man technologist
+man technologist | inventor | coder | software | technologist | developer | man
+
+👨‍💼
+Man office worker
+manager | white-collar | man office worker | business | architect | man
+
+👨‍🔧
+Man mechanic
+man mechanic | electrician | tradesperson | mechanic | plumber | man
+
+👨‍🔬
+Man scientist
+physicist | chemist | biologist | man scientist | scientist | engineer | man
+
+👨‍🚀
+Man astronaut
+astronaut | rocket | man | man astronaut
+
+👨‍🚒
+Man firefighter
+firetruck | man | man firefighter | firefighter
+
+👨‍🦰
+Man: red hair
+red hair | man: red hair | adult | man
+
+👨‍🦱
+Man: curly hair
+man: curly hair | adult | man | curly hair
+
+👨‍🦲
+Man: bald
+man: bald | adult | bald | man
+
+👨‍🦳
+Man: white hair
+man: white hair | adult | man | white hair
+
+👩
+Woman
+adult | woman
+
+👩‍⚕️
+Woman health worker
+nurse | doctor | therapist | healthcare | woman health worker | woman
+
+👩‍⚖️
+Woman judge
+woman judge | woman | scales | judge
+
+👩‍✈️
+Woman pilot
+plane | pilot | woman pilot | woman
+
+👩‍❤️‍👩
+Couple with heart: woman, woman
+couple with heart: woman, woman | love | couple | couple with heart | woman
+
+👩‍❤️‍💋‍👩
+Kiss: woman, woman
+kiss | kiss: woman, woman | woman | couple
+
+👩‍🌾
+Woman farmer
+farmer | gardener | rancher | woman farmer | woman
+
+👩‍🍳
+Woman cook
+cook | chef | woman cook | woman
+
+👩‍🎓
+Woman student
+woman | student | woman student | graduate
+
+👩‍🎤
+Woman singer
+star | singer | actor | entertainer | woman singer | woman | rock
+
+👩‍🎨
+Woman artist
+palette | woman | woman artist | artist
+
+👩‍🏫
+Woman teacher
+instructor | teacher | woman teacher | professor | woman
+
+👩‍🏭
+Woman factory worker
+worker | factory | industrial | woman factory worker | assembly | woman
+
+👩‍👦
+Family: woman, boy
+family: woman, boy | family | boy | woman
+
+👩‍👦‍👦
+Family: woman, boy, boy
+family: woman, boy, boy | family | boy | woman
+
+👩‍👧
+Family: woman, girl
+girl | family | woman | family: woman, girl
+
+👩‍👧‍👦
+Family: woman, girl, boy
+family: woman, girl, boy | girl | family | boy | woman
+
+👩‍👧‍👧
+Family: woman, girl, girl
+family: woman, girl, girl | family | girl | woman
+
+👩‍👩‍👦
+Family: woman, woman, boy
+family | family: woman, woman, boy | boy | woman
+
+👩‍👩‍👦‍👦
+Family: woman, woman, boy, boy
+family | family: woman, woman, boy, boy | boy | woman
+
+👩‍👩‍👧
+Family: woman, woman, girl
+girl | family | family: woman, woman, girl | woman
+
+👩‍👩‍👧‍👦
+Family: woman, woman, girl, boy
+family: woman, woman, girl, boy | girl | family | boy | woman
+
+👩‍👩‍👧‍👧
+Family: woman, woman, girl, girl
+girl | family: woman, woman, girl, girl | family | woman
+
+👩‍💻
+Woman technologist
+woman technologist | inventor | coder | software | technologist | developer | woman
+
+👩‍💼
+Woman office worker
+manager | white-collar | business | architect | woman office worker | woman
+
+👩‍🔧
+Woman mechanic
+electrician | tradesperson | mechanic | plumber | woman mechanic | woman
+
+👩‍🔬
+Woman scientist
+physicist | chemist | biologist | woman scientist | scientist | engineer | woman
+
+👩‍🚀
+Woman astronaut
+rocket | astronaut | woman | woman astronaut
+
+👩‍🚒
+Woman firefighter
+firetruck | woman firefighter | woman | firefighter
+
+👩‍🦰
+Woman: red hair
+woman: red hair | adult | red hair | woman
+
+👩‍🦱
+Woman: curly hair
+adult | woman: curly hair | woman | curly hair
+
+👩‍🦲
+Woman: bald
+adult | bald | woman: bald | woman
+
+👩‍🦳
+Woman: white hair
+woman: white hair | adult | white hair | woman
+
+👪
+Family
+family
+
+👫
+Woman and man holding hands
+hand | woman and man holding hands | couple | hold | holding hands | man | woman
+
+👬
+Men holding hands
+gemini | couple | holding hands | twins | men holding hands | zodiac | men | man
+
+👭
+Women holding hands
+hand | couple | women | holding hands | women holding hands
+
+👮
+Police officer
+officer | cop | police | police officer
+
+👮‍♀️
+Woman police officer
+police | woman police officer | officer | cop | woman
+
+👮‍♂️
+Man police officer
+police | man police officer | officer | man | cop
+
+👯
+People with bunny ears
+partying | dancer | people with bunny ears | bunny ear
+
+👯‍♀️
+Women with bunny ears
+partying | women | women with bunny ears | dancer | bunny ear
+
+👯‍♂️
+Men with bunny ears
+partying | dancer | men with bunny ears | bunny ear | men
+
+👰
+Bride with veil
+bride | bride with veil | veil | wedding
+
+👱
+Person: blond hair
+blond | blond-haired person | person: blond hair
+
+👱‍♀️
+Woman: blond hair
+blonde | woman: blond hair | woman | blond-haired woman
+
+👱‍♂️
+Man: blond hair
+blond | man: blond hair | man | blond-haired man
+
+👲
+Man with Chinese cap
+gua pi mao | man with chinese cap | man | hat
+
+👳
+Person wearing turban
+person wearing turban | turban
+
+👳‍♀️
+Woman wearing turban
+woman wearing turban | turban | woman
+
+👳‍♂️
+Man wearing turban
+man wearing turban | man | turban
+
+👴
+Old man
+adult | man | old man | old
+
+👵
+Old woman
+adult | old | woman | old woman
+
+👶
+Baby
+young | baby
+
+👷
+Construction worker
+construction worker | construction | worker | hat
+
+👷‍♀️
+Woman construction worker
+woman construction worker | construction | worker | woman
+
+👷‍♂️
+Man construction worker
+man construction worker | worker | man | construction
+
+👸
+Princess
+princess | fairy tale | fantasy
+
+👹
+Ogre
+ogre | fantasy | monster | face | creature | fairy tale | troll
+
+👺
+Goblin
+fantasy | monster | face | goblin | creature | fairy tale
+
+👻
+Ghost
+fantasy | monster | face | boo | creature | ghost | fairy tale
+
+👼
+Baby angel
+fantasy | face | angel | baby | fairy tale | baby angel
+
+👽
+Alien
+alien | fantasy | face | creature | extraterrestrial | ufo
+
+👾
+Alien monster
+alien | monster | face | creature | extraterrestrial | alien monster | ufo
+
+💀
+Skull
+skull | monster | face | death | fairy tale
+
+💁
+Person tipping hand
+hand | help | person tipping hand | sassy | information | tipping
+
+💁‍♀️
+Woman tipping hand
+sassy | woman tipping hand | tipping hand | woman
+
+💁‍♂️
+Man tipping hand
+man tipping hand | man | sassy | tipping hand
+
+💂
+Guard
+guard
+
+💂‍♀️
+Woman guard
+woman | guard | woman guard
+
+💂‍♂️
+Man guard
+man guard | man | guard
+
+💃
+Woman dancing
+woman dancing | dancing | woman
+
+💄
+Lipstick
+lipstick | cosmetics | makeup
+
+💅
+Nail polish
+nail polish | manicure | nail | care | polish | cosmetics
+
+💆
+Person getting massage
+salon | face | person getting massage | massage
+
+💆‍♀️
+Woman getting massage
+woman getting massage | woman | face | massage
+
+💆‍♂️
+Man getting massage
+massage | man | face | man getting massage
+
+💇
+Person getting haircut
+parlor | beauty | person getting haircut | barber | haircut
+
+💇‍♀️
+Woman getting haircut
+woman | woman getting haircut | haircut
+
+💇‍♂️
+Man getting haircut
+haircut | man | man getting haircut
+
+💈
+Barber pole
+barber | barber pole | haircut | pole
+
+💉
+Syringe
+needle | blood | syringe | sick | shot | medicine
+
+💊
+Pill
+pill | sick | doctor | medicine
+
+💋
+Kiss mark
+lips | kiss mark | kiss
+
+💌
+Love letter
+love | heart | love letter | mail | letter
+
+💍
+Ring
+ring | diamond
+
+💎
+Gem stone
+gem | diamond | gem stone | jewel
+
+💏
+Kiss
+kiss | couple
+
+💐
+Bouquet
+bouquet | flower
+
+💑
+Couple with heart
+couple with heart | love | couple
+
+💒
+Wedding
+chapel | wedding | romance
+
+💓
+Beating heart
+beating | love | beating heart | pulsating | heartbeat
+
+💔
+Broken heart
+broken heart | break | love | broken
+
+💕
+Two hearts
+two hearts | love
+
+💖
+Sparkling heart
+love | sparkling heart | excited | sparkle
+
+💗
+Growing heart
+love | growing | growing heart | nervous | pulse | excited
+
+💘
+Heart with arrow
+arrow | heart with arrow | cupid | love
+
+💙
+Blue heart
+blue heart | blue
+
+💚
+Green heart
+green heart | green
+
+💛
+Yellow heart
+yellow heart | yellow
+
+💜
+Purple heart
+purple heart | purple
+
+💝
+Heart with ribbon
+heart with ribbon | ribbon | love | valentine
+
+💞
+Revolving hearts
+revolving | revolving hearts | love
+
+💟
+Heart decoration
+heart | heart decoration | love
+
+💠
+Diamond with a dot
+inside | comic | diamond with a dot | geometric | diamond
+
+💡
+Light bulb
+light | light bulb | idea | comic | bulb | electric
+
+💢
+Anger symbol
+anger symbol | angry | mad | comic
+
+💣
+Bomb
+bomb | comic
+
+💤
+Zzz
+sleep | comic | zzz
+
+💥
+Collision
+boom | explosion | comic | collision
+
+💦
+Sweat droplets
+sweat droplets | splashing | sweat | comic | water
+
+💧
+Droplet
+drop | sweat | comic | cold | droplet
+
+💨
+Dashing away
+dash | running | dashing away | comic
+
+💩
+Pile of poo
+dung | monster | poop | face | pile of poo | shit | poo | caca
+
+💪
+Flexed biceps
+flex | flexed biceps | muscle | comic | biceps
+
+💫
+Dizzy
+star | comic | dizzy
+
+💬
+Speech balloon
+speech | comic | bubble | dialog | balloon | speech balloon
+
+💭
+Thought balloon
+thought balloon | comic | bubble | thought | balloon
+
+💮
+White flower
+white flower | flower
+
+💯
+Hundred points
+score | hundred points | hundred | full | 100 | perfect
+
+💰
+Money bag
+money bag | bag | dollar | money | moneybag
+
+💳
+Credit card
+credit | card | money | credit card
+
+💴
+Yen banknote
+note | yen banknote | yen | banknote | money | bill | currency
+
+💵
+Dollar banknote
+note | dollar | banknote | dollar banknote | money | bill | currency
+
+💶
+Euro banknote
+note | banknote | euro | money | euro banknote | bill | currency
+
+💷
+Pound banknote
+pound banknote | note | pound | banknote | money | bill | currency
+
+💸
+Money with wings
+money with wings | fly | banknote | money | bill | wings
+
+💺
+Seat
+chair | seat
+
+💻
+Laptop computer
+laptop computer | personal | pc | computer
+
+💼
+Briefcase
+briefcase
+
+💽
+Computer disk
+computer disk | disk | computer | optical | minidisk
+
+💾
+Floppy disk
+floppy | disk | computer | floppy disk
+
+💿
+Optical disk
+disk | computer | optical | optical disk | cd
+
+📀
+Dvd
+disk | dvd | computer | optical | blu-ray
+
+📁
+File folder
+file | folder | file folder
+
+📂
+Open file folder
+open file folder | open | folder | file
+
+📃
+Page with curl
+document | curl | page | page with curl
+
+📄
+Page facing up
+page facing up | document | page
+
+📅
+Calendar
+date | calendar
+
+📆
+Tear-off calendar
+tear-off calendar | calendar
+
+📇
+Card index
+card | card index | rolodex | index
+
+📈
+Chart increasing
+trend | upward | chart increasing | chart | graph | growth
+
+📉
+Chart decreasing
+trend | down | chart | graph | chart decreasing
+
+📊
+Bar chart
+bar | chart | graph | bar chart
+
+📋
+Clipboard
+clipboard
+
+📌
+Pushpin
+pushpin | pin
+
+📍
+Round pushpin
+pushpin | round pushpin | pin
+
+📎
+Paperclip
+paperclip
+
+📏
+Straight ruler
+straight edge | straight ruler | ruler
+
+📐
+Triangular ruler
+triangular ruler | set | triangle | ruler
+
+📑
+Bookmark tabs
+mark | bookmark tabs | tabs | marker | bookmark
+
+📓
+Notebook
+notebook
+
+📔
+Notebook with decorative cover
+book | notebook | cover | notebook with decorative cover | decorated
+
+📕
+Closed book
+closed book | closed | book
+
+📖
+Open book
+book | open book | open
+
+📗
+Green book
+book | green book | green
+
+📘
+Blue book
+book | blue book | blue
+
+📙
+Orange book
+book | orange | orange book
+
+📚
+Books
+book | books
+
+📛
+Name badge
+badge | name badge | name
+
+📜
+Scroll
+scroll | paper
+
+📝
+Memo
+pencil | memo
+
+📞
+Telephone receiver
+phone | telephone | telephone receiver | receiver
+
+📟
+Pager
+pager
+
+📠
+Fax machine
+fax | fax machine
+
+📡
+Satellite antenna
+satellite | satellite antenna | antenna | dish
+
+📢
+Loudspeaker
+loudspeaker | public address | loud
+
+📣
+Megaphone
+cheering | megaphone
+
+📤
+Outbox tray
+sent | mail | letter | outbox | tray | box | outbox tray
+
+📥
+Inbox tray
+inbox tray | receive | mail | letter | tray | box | inbox
+
+📦
+Package
+package | parcel | box
+
+📧
+E-mail
+mail | e-mail | email | letter
+
+📨
+Incoming envelope
+incoming envelope | incoming | receive | letter | envelope | e-mail | email
+
+📩
+Envelope with arrow
+envelope with arrow | arrow | envelope | outgoing | e-mail | email
+
+📪
+Closed mailbox with lowered flag
+postbox | lowered | mail | mailbox | closed | closed mailbox with lowered flag
+
+📫
+Closed mailbox with raised flag
+postbox | mail | mailbox | closed | closed mailbox with raised flag
+
+📬
+Open mailbox with raised flag
+postbox | mail | mailbox | open mailbox with raised flag | open
+
+📭
+Open mailbox with lowered flag
+postbox | lowered | mail | open mailbox with lowered flag | mailbox | open
+
+📮
+Postbox
+mailbox | postbox | mail
+
+📯
+Postal horn
+postal horn | postal | post | horn
+
+📰
+Newspaper
+newspaper | paper | news
+
+📱
+Mobile phone
+cell | mobile phone | phone | mobile | telephone
+
+📲
+Mobile phone with arrow
+cell | receive | phone | arrow | mobile phone with arrow | mobile
+
+📳
+Vibration mode
+cell | vibration mode | vibration | phone | mobile | telephone | mode
+
+📴
+Mobile phone off
+cell | phone | mobile | telephone | mobile phone off | off
+
+📶
+Antenna bars
+cell | phone | antenna bars | bar | mobile | antenna
+
+📷
+Camera
+camera | video
+
+📸
+Camera with flash
+camera with flash | camera | flash | video
+
+📹
+Video camera
+camera | video camera | video
+
+📺
+Television
+tv | television | video
+
+📻
+Radio
+radio | video
+
+📼
+Videocassette
+tape | vhs | videocassette | video
+
+📽
+Film projector
+film projector | video | movie | projector | cinema | film
+
+📿
+Prayer beads
+clothing | religion | necklace | prayer beads | beads | prayer
+
+🔀
+Shuffle tracks button
+arrow | crossed | shuffle tracks button
+
+🔁
+Repeat button
+arrow | repeat button | repeat | clockwise
+
+🔂
+Repeat single button
+repeat single button | arrow | once | clockwise
+
+🔃
+Clockwise vertical arrows
+arrow | clockwise vertical arrows | reload | clockwise
+
+🔄
+Counterclockwise arrows button
+withershins | counterclockwise arrows button | arrow | counterclockwise | anticlockwise
+
+🔅
+Dim button
+dim | brightness | dim button | low
+
+🔆
+Bright button
+bright | bright button | brightness
+
+🔇
+Muted speaker
+silent | mute | speaker | quiet | muted speaker
+
+🔈
+Speaker low volume
+speaker low volume | soft
+
+🔉
+Speaker medium volume
+speaker medium volume | medium
+
+🔊
+Speaker high volume
+speaker high volume | loud
+
+🔋
+Battery
+battery
+
+🔌
+Electric plug
+plug | electric plug | electric | electricity
+
+🔍
+Magnifying glass tilted left
+magnifying glass tilted left | glass | tool | search | magnifying
+
+🔎
+Magnifying glass tilted right
+magnifying glass tilted right | glass | tool | search | magnifying
+
+🔏
+Locked with pen
+pen | privacy | nib | locked with pen | ink | lock
+
+🔐
+Locked with key
+key | closed | secure | locked with key | lock
+
+🔑
+Key
+password | key | lock
+
+🔒
+Locked
+closed | locked
+
+🔓
+Unlocked
+unlock | open | unlocked | lock
+
+🔔
+Bell
+bell
+
+🔕
+Bell with slash
+silent | bell | mute | forbidden | bell with slash | quiet
+
+🔖
+Bookmark
+mark | bookmark
+
+🔗
+Link
+link
+
+🔙
+BACK arrow
+back arrow | arrow | back
+
+🔚
+END arrow
+arrow | end arrow | end
+
+🔛
+ON! arrow
+arrow | on | on! arrow | mark
+
+🔜
+SOON arrow
+soon arrow | arrow | soon
+
+🔝
+TOP arrow
+arrow | up | top arrow | top
+
+🔞
+No one under eighteen
+no one under eighteen | age restriction | eighteen | underage | prohibited | 18
+
+🔟
+Keycap: 10
+keycap: 10 | keycap
+
+🔠
+Input latin uppercase
+latin | letters | input | uppercase | abcd | input latin uppercase
+
+🔡
+Input latin lowercase
+input latin lowercase | latin | letters | input | abcd | lowercase
+
+🔢
+Input numbers
+input | numbers | input numbers | 1234
+
+🔣
+Input symbols
+input symbols | input | 〒♪&%
+
+🔤
+Input latin letters
+latin | input latin letters | letters | abc | input | alphabet
+
+🔥
+Fire
+tool | fire | flame
+
+🔦
+Flashlight
+light | torch | tool | flashlight | electric
+
+🔧
+Wrench
+tool | wrench | spanner
+
+🔨
+Hammer
+tool | hammer
+
+🔩
+Nut and bolt
+tool | nut and bolt | nut | bolt
+
+🔪
+Kitchen knife
+knife | kitchen knife | tool | cooking | weapon | hocho
+
+🔫
+Pistol
+handgun | tool | pistol | gun | weapon | revolver
+
+🔬
+Microscope
+tool | science | microscope
+
+🔭
+Telescope
+tool | science | telescope
+
+🔮
+Crystal ball
+crystal ball | fantasy | crystal | tool | fortune | ball | fairy tale
+
+🔰
+Japanese symbol for beginner
+leaf | japanese | chevron | japanese symbol for beginner | beginner
+
+🔱
+Trident emblem
+trident emblem | tool | anchor | ship | trident | emblem
+
+🔲
+Black square button
+button | geometric | square | black square button
+
+🔳
+White square button
+button | outlined | square | geometric | white square button
+
+🔴
+Red circle
+red circle | circle | geometric | red
+
+🔵
+Blue circle
+geometric | blue circle | circle | blue
+
+🔶
+Large orange diamond
+large orange diamond | diamond | orange | geometric
+
+🔷
+Large blue diamond
+diamond | geometric | large blue diamond | blue
+
+🔸
+Small orange diamond
+diamond | orange | geometric | small orange diamond
+
+🔹
+Small blue diamond
+small blue diamond | diamond | geometric | blue
+
+🔺
+Red triangle pointed up
+geometric | red | red triangle pointed up
+
+🔻
+Red triangle pointed down
+down | geometric | red | red triangle pointed down
+
+🔼
+Upwards button
+upwards button | arrow | button | red
+
+🔽
+Downwards button
+button | red | downwards button | down | arrow
+
+🕉
+Om
+religion | om | hindu
+
+🕊
+Dove
+bird | dove | peace | fly
+
+🕋
+Kaaba
+kaaba | religion | islam | muslim
+
+🕌
+Mosque
+religion | islam | mosque | muslim
+
+🕍
+Synagogue
+synagogue | religion | jew | temple | jewish
+
+🕐
+One o’clock
+o’clock | 1 | one | 1:00 | 00 | clock | one o’clock
+
+🕑
+Two o’clock
+two | o’clock | two o’clock | 2 | 00 | clock | 2:00
+
+🕒
+Three o’clock
+o’clock | 3:00 | three o’clock | 3 | 00 | clock | three
+
+🕓
+Four o’clock
+o’clock | four | four o’clock | 4 | 4:00 | 00 | clock
+
+🕔
+Five o’clock
+o’clock | 5 | five o’clock | 5:00 | five | 00 | clock
+
+🕕
+Six o’clock
+o’clock | six o’clock | six | 6:00 | 6 | 00 | clock
+
+🕖
+Seven o’clock
+seven o’clock | o’clock | 7:00 | 7 | seven | 00 | clock
+
+🕗
+Eight o’clock
+8:00 | 8 | o’clock | eight | eight o’clock | 00 | clock
+
+🕘
+Nine o’clock
+nine | o’clock | 9:00 | nine o’clock | 9 | 00 | clock
+
+🕙
+Ten o’clock
+o’clock | ten | ten o’clock | 10 | 10:00 | 00 | clock
+
+🕚
+Eleven o’clock
+o’clock | eleven o’clock | 11 | 11:00 | 00 | clock | eleven
+
+🕛
+Twelve o’clock
+12 | o’clock | twelve | 12:00 | 00 | clock | twelve o’clock
+
+🕜
+One-thirty
+one | 1 | thirty | 1:30 | one-thirty | clock
+
+🕝
+Two-thirty
+two-thirty | two | thirty | 2 | clock | 2:30
+
+🕞
+Three-thirty
+three-thirty | 3 | thirty | 3:30 | clock | three
+
+🕟
+Four-thirty
+four | 4 | four-thirty | thirty | 4:30 | clock
+
+🕠
+Five-thirty
+five-thirty | 5 | five | thirty | clock | 5:30
+
+🕡
+Six-thirty
+six-thirty | thirty | six | 6 | clock | 6:30
+
+🕢
+Seven-thirty
+thirty | 7 | seven-thirty | seven | 7:30 | clock
+
+🕣
+Eight-thirty
+eight-thirty | 8:30 | 8 | eight | thirty | clock
+
+🕤
+Nine-thirty
+nine | thirty | 9 | 9:30 | nine-thirty | clock
+
+🕥
+Ten-thirty
+ten | thirty | ten-thirty | 10:30 | 10 | clock
+
+🕦
+Eleven-thirty
+thirty | 11 | 11:30 | eleven-thirty | clock | eleven
+
+🕧
+Twelve-thirty
+12 | 12:30 | twelve | thirty | twelve-thirty | clock
+
+🕯
+Candle
+candle | light
+
+🕰
+Mantelpiece clock
+mantelpiece clock | clock
+
+🕳
+Hole
+hole
+
+🕴
+Man in suit levitating
+suit | man | business | man in suit levitating
+
+🕵
+Detective
+spy | detective | sleuth
+
+🕵️‍♀️
+Woman detective
+woman detective | spy | detective | sleuth | woman
+
+🕵️‍♂️
+Man detective
+man detective | spy | detective | sleuth | man
+
+🕶
+Sunglasses
+eye | eyewear | glasses | sunglasses | dark
+
+🕷
+Spider
+insect | spider
+
+🕸
+Spider web
+web | spider | spider web
+
+🕹
+Joystick
+game | video game | joystick
+
+🕺
+Man dancing
+man dancing | man | dance
+
+🖇
+Linked paperclips
+linked paperclips | paperclip | link
+
+🖊
+Pen
+ballpoint | pen
+
+🖋
+Fountain pen
+fountain | pen | fountain pen
+
+🖌
+Paintbrush
+painting | paintbrush
+
+🖍
+Crayon
+crayon
+
+🖐
+Hand with fingers splayed
+hand | finger | hand with fingers splayed | splayed
+
+🖕
+Middle finger
+hand | finger | middle finger
+
+🖖
+Vulcan salute
+vulcan salute | hand | spock | finger | vulcan
+
+🖤
+Black heart
+evil | wicked | black heart | black
+
+🖥
+Desktop computer
+desktop | desktop computer | computer
+
+🖨
+Printer
+printer | computer
+
+🖱
+Computer mouse
+computer | computer mouse
+
+🖲
+Trackball
+computer | trackball
+
+🖼
+Framed picture
+picture | art | museum | frame | painting | framed picture
+
+🗂
+Card index dividers
+dividers | card | index | card index dividers
+
+🗃
+Card file box
+file | box | card | card file box
+
+🗄
+File cabinet
+file | cabinet | file cabinet | filing
+
+🗑
+Wastebasket
+wastebasket
+
+🗒
+Spiral notepad
+note | spiral notepad | pad | spiral
+
+🗓
+Spiral calendar
+spiral calendar | calendar | pad | spiral
+
+🗜
+Clamp
+tool | compress | clamp | vice
+
+🗝
+Old key
+old | clue | key | old key | lock
+
+🗞
+Rolled-up newspaper
+newspaper | news | rolled-up newspaper | paper | rolled
+
+🗡
+Dagger
+weapon | dagger | knife
+
+🗣
+Speaking head
+head | silhouette | speaking | speak | face | speaking head
+
+🗯
+Right anger bubble
+bubble | angry | mad | balloon | right anger bubble
+
+🗳
+Ballot box with ballot
+box | ballot box with ballot | ballot
+
+🗺
+World map
+world | world map | map
+
+🗻
+Mount fuji
+mountain | fuji | mount fuji
+
+🗼
+Tokyo tower
+tokyo | tokyo tower | tower
+
+🗽
+Statue of Liberty
+statue of liberty | liberty | statue
+
+🗾
+Map of Japan
+map of japan | japan | map
+
+🗿
+Moai
+face | moai | moyai | statue
+
+😀
+Grinning face
+grinning face | face | yay | grin | happy
+
+😁
+Beaming face with smiling eyes
+eye | lol | ha ha | face | smile | grin | haha | beaming face with smiling eyes | happy
+
+😂
+Face with tears of joy
+lol | ha ha | face | tear | haha | face with tears of joy | laugh | joy
+
+😃
+Grinning face with big eyes
+grinning face with big eyes | face | smile | yay | open | mouth | happy
+
+😄
+Grinning face with smiling eyes
+eye | lol | ha ha | haha | face | smile | grinning face with smiling eyes | open | happy | mouth | laugh
+
+😅
+Grinning face with sweat
+lol | ha ha | haha | face | smile | sweat | cold | open | grinning face with sweat
+
+😆
+Grinning squinting face
+lol | ha ha | face | grinning squinting face | smile | satisfied | xd | haha | mouth | laugh
+
+😇
+Smiling face with halo
+smiling face with halo | fantasy | face | angel | halo | innocent | happy
+
+😉
+Winking face
+wink | face | winking face
+
+😊
+Smiling face with smiling eyes
+eye | face | smiling face with smiling eyes | smile | yay | blush | happy
+
+😋
+Face savoring food
+miam | delicious | face | smile | yum | face savoring food | savouring
+
+😌
+Relieved face
+relieved | face | relieved face
+
+😍
+Smiling face with heart-eyes
+eye | love | face | smile | smiling face with heart-eyes
+
+😎
+Smiling face with sunglasses
+sun | face | bright | sunglasses | smiling face with sunglasses | cool
+
+😏
+Smirking face
+hehe | smirk | face | smirking face | he he | lenny
+
+😐
+Neutral face
+meh | face | deadpan | neutral face | huh | neutral
+
+😑
+Expressionless face
+meh | face | inexpressive | expressionless | expressionless face | unexpressive
+
+😒
+Unamused face
+meh | unamused face | face | unhappy | unamused
+
+😓
+Downcast face with sweat
+cold | face | sweat | downcast face with sweat
+
+😔
+Pensive face
+pensive | sad | dejected | pensive face | face
+
+😕
+Confused face
+confused | face | meh | confused face
+
+😖
+Confounded face
+face | confounded | confounded face
+
+😗
+Kissing face
+kissing face | face | kiss | whistle
+
+😘
+Face blowing a kiss
+face blowing a kiss | face | kiss
+
+😙
+Kissing face with smiling eyes
+eye | kissing face with smiling eyes | face | smile | whistle | kiss
+
+😚
+Kissing face with closed eyes
+eye | face | closed | kissing face with closed eyes | whistle | kiss
+
+😛
+Face with tongue
+tongue | face | face with tongue
+
+😜
+Winking face with tongue
+eye | winking face with tongue | joke | face | tongue | wink
+
+😝
+Squinting face with tongue
+eye | lol | horrible | ha ha | squinting face with tongue | face | taste | tongue | xd | haha
+
+😞
+Disappointed face
+face | disappointed face | disappointed | sad
+
+😟
+Worried face
+worried | sad | face | worried face
+
+😠
+Angry face
+face | angry | mad | angry face | grr
+
+😡
+Pouting face
+red | pouting face | face | rage | angry | mad | grr | pouting
+
+😢
+Crying face
+sad | face | crying face | tear | cry
+
+😣
+Persevering face
+persevering face | persevere | face
+
+😤
+Face with steam from nose
+won | face | triumph | face with steam from nose | grr
+
+😥
+Sad but relieved face
+relieved | face | sad but relieved face | disappointed | whew
+
+😦
+Frowning face with open mouth
+afraid | frowning face with open mouth | what | frown | face | open | wtf | mouth
+
+😧
+Anguished face
+anguished face | face | anguished
+
+😨
+Fearful face
+fearful | face | scared | fear | fearful face
+
+😩
+Weary face
+weary | tired | face | weary face
+
+😪
+Sleepy face
+sleep | face | sleepy face
+
+😫
+Tired face
+face | tired | tired face
+
+😬
+Grimacing face
+face | grimacing face | grimace
+
+😭
+Loudly crying face
+loudly crying face | sad | face | tear | sob | cry
+
+😮
+Face with open mouth
+sympathy | surprised | oh | face | open | face with open mouth | wtf | mouth
+
+😯
+Hushed face
+surprised | oh | face | stunned | hushed | wtf | hushed face
+
+😰
+Anxious face with sweat
+rushed | face | sweat | cold | anxious face with sweat | blue
+
+😱
+Face screaming in fear
+face screaming in fear | afraid | munch | face | scream | scared | fear
+
+😲
+Astonished face
+shocked | astonished | surprised | oh | face | wtf | astonished face | totally
+
+😳
+Flushed face
+dazed | flushed face | surprised | oh | face | flushed | wtf
+
+😴
+Sleeping face
+sleeping face | sleep | face | zzz
+
+😵
+Dizzy face
+lsd | dizzy face | face | dizzy
+
+😶
+Face without mouth
+silent | face without mouth | face | huh | quiet | mouth
+
+😷
+Face with medical mask
+face with medical mask | sick | doctor | face | cold | mask
+
+😸
+Grinning cat face with smiling eyes
+eye | face | cat | smile | yay | meow | grin | grinning cat face with smiling eyes | happy
+
+😹
+Cat face with tears of joy
+lol | cat face with tears of joy | ha ha | face | cat | tear | meow | haha | laugh | joy
+
+😺
+Grinning cat face
+open | face | cat | smile | yay | meow | grinning cat face | mouth | happy
+
+😻
+Smiling cat face with heart-eyes
+eye | love | face | cat | smile | meow | smiling cat face with heart-eyes
+
+😼
+Cat face with wry smile
+cat face with wry smile | face | cat | smile | wry | meow | ironic
+
+😽
+Kissing cat face
+eye | kissing cat face | face | cat | meow | whistle | kiss
+
+😾
+Pouting cat face
+face | cat | meow | pouting cat face | angry | pouting
+
+😿
+Crying cat face
+crying cat face | sad | face | cat | tear | meow | cry
+
+🙀
+Weary cat face
+afraid | surprised | oh | face | cat | meow | weary cat face | weary | wtf
+
+🙁
+Slightly frowning face
+frown | slightly frowning face | face | sad
+
+🙂
+Slightly smiling face
+face | smile | slightly smiling face | happy | smiley
+
+🙃
+Upside-down face
+happy | upside-down face | face | upside-down
+
+🙄
+Face with rolling eyes
+face | face with rolling eyes | eyeroll | rolling | eyes
+
+🙅
+Person gesturing NO
+hand | gesture | forbidden | prohibited | person gesturing no
+
+🙅‍♀️
+Woman gesturing NO
+hand | gesture | forbidden | woman gesturing no | prohibited | woman
+
+🙅‍♂️
+Man gesturing NO
+hand | gesture | man | forbidden | prohibited | man gesturing no
+
+🙆
+Person gesturing OK
+hand | person gesturing ok | ok | gesture
+
+🙆‍♀️
+Woman gesturing OK
+hand | ok | gesture | woman | woman gesturing ok
+
+🙆‍♂️
+Man gesturing OK
+hand | ok | gesture | man | man gesturing ok
+
+🙇
+Person bowing
+gesture | apology | sorry | bow | person bowing
+
+🙇‍♀️
+Woman bowing
+favor | bowing | gesture | apology | sorry | woman bowing | woman
+
+🙇‍♂️
+Man bowing
+favor | man bowing | bowing | gesture | apology | sorry | man
+
+🙈
+See-no-evil monkey
+evil | see | face | see-no-evil monkey | forbidden | monkey
+
+🙉
+Hear-no-evil monkey
+evil | hear | face | forbidden | hear-no-evil monkey | monkey
+
+🙊
+Speak-no-evil monkey
+evil | speak-no-evil monkey | speak | face | forbidden | monkey
+
+🙋
+Person raising hand
+hand | raised | gesture | person raising hand | happy
+
+🙋‍♀️
+Woman raising hand
+woman raising hand | raising hand | woman | gesture
+
+🙋‍♂️
+Man raising hand
+man raising hand | raising hand | man | gesture
+
+🙌
+Raising hands
+hand | hooray | raised | gesture | raising hands | celebration
+
+🙍
+Person frowning
+person frowning | frown | gesture
+
+🙍‍♀️
+Woman frowning
+woman | woman frowning | gesture | frowning
+
+🙍‍♂️
+Man frowning
+man frowning | gesture | man | frowning
+
+🙎
+Person pouting
+person pouting | pouting | gesture
+
+🙎‍♀️
+Woman pouting
+woman | woman pouting | pouting | gesture
+
+🙎‍♂️
+Man pouting
+gesture | man | pouting | man pouting
+
+🙏
+Folded hands
+hand | thanks | ask | pray | please | folded hands
+
+🚀
+Rocket
+rocket | space
+
+🚁
+Helicopter
+helicopter | vehicle
+
+🚂
+Locomotive
+engine | steam | railway | train | locomotive
+
+🚃
+Railway car
+tram | railway | railway car | car | train | trolleybus | electric
+
+🚄
+High-speed train
+shinkansen | high-speed train | railway | speed | train
+
+🚅
+Bullet train
+shinkansen | railway | speed | bullet | train | bullet train
+
+🚆
+Train
+railway | train
+
+🚇
+Metro
+subway | metro
+
+🚈
+Light rail
+railway | light rail
+
+🚉
+Station
+railway | train | station
+
+🚊
+Tram
+tram | trolleybus
+
+🚋
+Tram car
+tram car | car | trolleybus | tram
+
+🚌
+Bus
+bus | vehicle
+
+🚍
+Oncoming bus
+oncoming | bus | oncoming bus
+
+🚎
+Trolleybus
+trolley | bus | tram | trolleybus
+
+🚏
+Bus stop
+bus | bus stop | stop | busstop
+
+🚐
+Minibus
+bus | minibus
+
+🚑
+Ambulance
+vehicle | ambulance
+
+🚒
+Fire engine
+engine | truck | fire | fire engine
+
+🚓
+Police car
+car | police | patrol | police car
+
+🚔
+Oncoming police car
+oncoming | car | oncoming police car | police
+
+🚕
+Taxi
+taxi | vehicle
+
+🚖
+Oncoming taxi
+oncoming | oncoming taxi | taxi
+
+🚗
+Automobile
+automobile | car
+
+🚘
+Oncoming automobile
+oncoming | automobile | car | oncoming automobile
+
+🚚
+Delivery truck
+truck | delivery | delivery truck
+
+🚛
+Articulated lorry
+articulated lorry | truck | lorry | semi
+
+🚜
+Tractor
+tractor | vehicle
+
+🚝
+Monorail
+monorail | vehicle
+
+🚞
+Mountain railway
+mountain | car | mountain railway | railway
+
+🚟
+Suspension railway
+railway | suspension | suspension railway
+
+🚠
+Mountain cableway
+mountain | mountain cableway | cable | gondola
+
+🚡
+Aerial tramway
+aerial tramway | cable | tramway | car | aerial | gondola
+
+🚢
+Ship
+boat | ship | passenger
+
+🚣
+Person rowing boat
+boat | rowboat | person rowing boat
+
+🚣‍♀️
+Woman rowing boat
+woman rowing boat | rowboat | boat | woman
+
+🚣‍♂️
+Man rowing boat
+man rowing boat | boat | man | rowboat
+
+🚤
+Speedboat
+boat | speedboat
+
+🚥
+Horizontal traffic light
+signal | horizontal traffic light | traffic | light
+
+🚦
+Vertical traffic light
+signal | traffic | light | vertical traffic light
+
+🚧
+Construction
+construction | barrier
+
+🚨
+Police car light
+police | light | beacon | car | revolving | police car light
+
+🚩
+Triangular flag
+triangular flag | post
+
+🚪
+Door
+door
+
+🚫
+Prohibited
+no | entry | forbidden | not | prohibited
+
+🚬
+Cigarette
+cigarette | smoking
+
+🚭
+No smoking
+smoking | no | forbidden | not | no smoking | prohibited
+
+🚮
+Litter in bin sign
+litter | litter bin | litter in bin sign
+
+🚯
+No littering
+no | no littering | forbidden | litter | not | prohibited
+
+🚰
+Potable water
+water | drinking | potable | potable water
+
+🚱
+Non-potable water
+non-potable | water | non-potable water | non-drinking
+
+🚲
+Bicycle
+bike | bicycle
+
+🚳
+No bicycles
+no | no bicycles | forbidden | bicycle | bike | prohibited
+
+🚴
+Person biking
+bicycle | person biking | cyclist | biking
+
+🚴‍♀️
+Woman biking
+bicycle | woman biking | cyclist | woman | biking
+
+🚴‍♂️
+Man biking
+bicycle | man biking | cyclist | man | biking
+
+🚵
+Person mountain biking
+mountain | person mountain biking | bicyclist | bicycle | cyclist | bike
+
+🚵‍♀️
+Woman mountain biking
+mountain | woman mountain biking | bicycle | cyclist | bike | woman | biking
+
+🚵‍♂️
+Man mountain biking
+man mountain biking | mountain | bicycle | cyclist | bike | man
+
+🚶
+Person walking
+hike | walking | walk | person walking
+
+🚶‍♀️
+Woman walking
+hike | woman walking | walk | woman
+
+🚶‍♂️
+Man walking
+hike | man | walk | man walking
+
+🚷
+No pedestrians
+no | no pedestrians | forbidden | not | pedestrian | prohibited
+
+🚸
+Children crossing
+traffic | crossing | children crossing | child | pedestrian
+
+🚹
+Men’s room
+wc | lavatory | man | restroom | men’s room
+
+🚺
+Women’s room
+wc | lavatory | restroom | women’s room | woman
+
+🚻
+Restroom
+restroom | lavatory | wc
+
+🚼
+Baby symbol
+baby symbol | changing | baby
+
+🚽
+Toilet
+toilet
+
+🚾
+Water closet
+wc | closet | lavatory | water closet | restroom | water
+
+🚿
+Shower
+water | shower
+
+🛀
+Person taking bath
+person taking bath | bath | bathtub
+
+🛁
+Bathtub
+bathtub | bath
+
+🛂
+Passport control
+control | passport | passport control
+
+🛃
+Customs
+customs
+
+🛄
+Baggage claim
+baggage | baggage claim | claim
+
+🛅
+Left luggage
+baggage | locker | luggage | left luggage
+
+🛋
+Couch and lamp
+couch | hotel | couch and lamp | lamp
+
+🛌
+Person in bed
+person in bed | hotel | sleep
+
+🛍
+Shopping bags
+shopping bags | hotel | shopping | bag
+
+🛎
+Bellhop bell
+bellhop bell | hotel | bell | bellhop
+
+🛏
+Bed
+bed | hotel | sleep
+
+🛐
+Place of worship
+worship | place of worship | religion
+
+🛑
+Stop sign
+stop sign | sign | octagonal | stop
+
+🛠
+Hammer and wrench
+hammer and wrench | wrench | tool | spanner | hammer
+
+🛡
+Shield
+weapon | shield
+
+🛢
+Oil drum
+drum | oil | oil drum
+
+🛤
+Railway track
+railway | train | railway track
+
+🛥
+Motor boat
+boat | motorboat | motor boat
+
+🛩
+Small airplane
+small airplane | airplane | aeroplane
+
+🛫
+Airplane departure
+airplane | departure | airplane departure | aeroplane | check-in | departures
+
+🛬
+Airplane arrival
+airplane | arrivals | airplane arrival | landing | aeroplane | arriving
+
+🛰
+Satellite
+satellite | space
+
+🛳
+Passenger ship
+ship | passenger ship | passenger
+
+🛴
+Kick scooter
+kick | kick scooter | scooter
+
+🛵
+Motor scooter
+scooter | motor scooter | motor
+
+🛷
+Sled
+luge | sledge | sled | toboggan | sleigh
+
+🛸
+Flying saucer
+flying saucer | ufo
+
+🛹
+Skateboard
+board | skateboard
+
+🤐
+Zipper-mouth face
+face | zipper-mouth face | zipper | shhh | mouth
+
+🤑
+Money-mouth face
+money-mouth face | face | money | cash | mouth
+
+🤒
+Face with thermometer
+thermometer | ill | sick | face | face with thermometer
+
+🤓
+Nerd face
+face | geek | nerd face | nerd
+
+🤔
+Thinking face
+skeptical | hmm | thinking face | face | thinking
+
+🤕
+Face with head-bandage
+bandage | injury | face | hurt | face with head-bandage
+
+🤖
+Robot face
+monster | robot | robot face | face
+
+🤗
+Hugging face
+hugging face | hugging | face | hug
+
+🤘
+Sign of the horns
+hand | sign of the horns | metallica | finger | rock-on | horns
+
+🤙
+Call me hand
+hand | call me hand | call
+
+🤚
+Raised back of hand
+raised back of hand | raised | backhand
+
+🤛
+Left-facing fist
+leftwards | fist | left-facing fist
+
+🤜
+Right-facing fist
+right-facing fist | rightwards | fist
+
+🤝
+Handshake
+hand | agreement | handshake | meeting | shake
+
+🤞
+Crossed fingers
+hand | crossed fingers | cross | finger | luck
+
+🤟
+Love-you gesture
+hand | ily | love-you gesture
+
+🤠
+Cowboy hat face
+cowboy | cowboy hat face | cowgirl | face | hat
+
+🤡
+Clown face
+face | clown face | clown
+
+🤢
+Nauseated face
+nauseated | vomit | nauseated face | face
+
+🤣
+Rolling on the floor laughing
+lol | ha ha | face | rofl | rolling on the floor laughing | xd | haha | rolling | floor | laugh
+
+🤤
+Drooling face
+drooling | drooling face | face
+
+🤥
+Lying face
+lying face | face | lie | pinocchio
+
+🤦
+Person facepalming
+face | person facepalming | exasperation | palm | disbelief
+
+🤦‍♀️
+Woman facepalming
+facepalm | woman facepalming | exasperation | woman | disbelief
+
+🤦‍♂️
+Man facepalming
+man facepalming | facepalm | exasperation | man | disbelief
+
+🤧
+Sneezing face
+face | sneeze | cold | sneezing face | gesundheit
+
+🤨
+Face with raised eyebrow
+skeptical | skeptic | disbelief | disapproval | mild surprise | scepticism | distrust | face with raised eyebrow
+
+🤩
+Star-struck
+star-struck | star | face | grinning | starry-eyed | eyes
+
+🤪
+Zany face
+eye | small | goofy | large | zany face
+
+🤫
+Shushing face
+shushing face | quiet | shush
+
+🤬
+Face with symbols on mouth
+grr | face with symbols on mouth | cursing | swearing
+
+🤭
+Face with hand over mouth
+sudden realization | face with hand over mouth | surprise | whoops | shock
+
+🤮
+Face vomiting
+vomit | sick | face vomiting
+
+🤯
+Exploding head
+shocked | exploding head | boom
+
+🤰
+Pregnant woman
+pregnant woman | woman | pregnant
+
+🤱
+Breast-feeding
+breast | breast-feeding | nursing | baby
+
+🤲
+Palms up together
+cupped hands | prayer | palms up together
+
+🤳
+Selfie
+selfie | camera | phone
+
+🤴
+Prince
+prince
+
+🤵
+Man in tuxedo
+man in tuxedo | man | tuxedo | groom
+
+🤶
+Mrs. Claus
+mrs. claus | celebration | claus | mrs. | mother | christmas
+
+🤷
+Person shrugging
+ignorance | doubt | shrug | indifference | person shrugging
+
+🤷‍♀️
+Woman shrugging
+woman shrugging | ignorance | doubt | shrug | indifference | woman
+
+🤷‍♂️
+Man shrugging
+ignorance | doubt | man shrugging | shrug | indifference | man
+
+🤸
+Person cartwheeling
+gymnastics | cartwheel | person cartwheeling
+
+🤸‍♀️
+Woman cartwheeling
+gymnastics | woman cartwheeling | cartwheel | woman
+
+🤸‍♂️
+Man cartwheeling
+gymnastics | man cartwheeling | man | cartwheel
+
+🤹
+Person juggling
+person juggling | skill | multitask | juggle | balance
+
+🤹‍♀️
+Woman juggling
+multitask | juggling | woman juggling | woman
+
+🤹‍♂️
+Man juggling
+multitask | juggling | man | man juggling
+
+🤼
+People wrestling
+wrestle | wrestler | people wrestling
+
+🤼‍♀️
+Women wrestling
+women wrestling | women | wrestle
+
+🤼‍♂️
+Men wrestling
+men | men wrestling | wrestle
+
+🤽
+Person playing water polo
+water | person playing water polo | polo
+
+🤽‍♀️
+Woman playing water polo
+water polo | woman | woman playing water polo
+
+🤽‍♂️
+Man playing water polo
+man playing water polo | man | water polo
+
+🤾
+Person playing handball
+ball | handball | person playing handball
+
+🤾‍♀️
+Woman playing handball
+woman playing handball | handball | woman
+
+🤾‍♂️
+Man playing handball
+man | handball | man playing handball
+
+🥀
+Wilted flower
+wilted | wilted flower | flower
+
+🥁
+Drum
+music | drumsticks | drum
+
+🥂
+Clinking glasses
+celebrate | glass | clink | clinking glasses | drink
+
+🥃
+Tumbler glass
+glass | tumbler glass | tumbler | liquor | whisky | shot
+
+🥇
+1st place medal
+1st place medal | medal | first | gold
+
+🥈
+2nd place medal
+silver | second | medal | 2nd place medal
+
+🥉
+3rd place medal
+bronze | medal | third | 3rd place medal
+
+🥊
+Boxing glove
+boxing glove | glove | boxing
+
+🥋
+Martial arts uniform
+karate | taekwondo | martial arts uniform | martial arts | uniform | judo
+
+🥌
+Curling stone
+curling stone | game | rock
+
+🥍
+Lacrosse
+lacrosse | ball | stick | goal
+
+🥎
+Softball
+underarm | ball | softball | glove
+
+🥏
+Flying disc
+ultimate | flying disc
+
+🥐
+Croissant
+croissant | crescent roll | french | food | bread
+
+🥑
+Avocado
+food | fruit | avocado
+
+🥒
+Cucumber
+food | pickle | cucumber | vegetable
+
+🥓
+Bacon
+food | bacon | meat | breakfast
+
+🥔
+Potato
+food | potato | vegetable
+
+🥕
+Carrot
+food | carrot | vegetable
+
+🥖
+Baguette bread
+baguette bread | baguette | french | food | bread
+
+🥗
+Green salad
+food | salad | green salad | green
+
+🥘
+Shallow pan of food
+pan | casserole | paella | food | shallow pan of food | shallow
+
+🥙
+Stuffed flatbread
+stuffed | kebab | falafel | food | gyro | stuffed flatbread | flatbread
+
+🥛
+Glass of milk
+milk | glass of milk | glass | drink
+
+🥜
+Peanuts
+peanuts | peanut | nut | vegetable | food
+
+🥝
+Kiwi fruit
+food | kiwi | fruit | kiwi fruit
+
+🥞
+Pancakes
+hotcake | food | pancakes | crêpe | pancake
+
+🥟
+Dumpling
+jiaozi | potsticker | gyōza | pierogi | empanada | dumpling
+
+🥠
+Fortune cookie
+prophecy | fortune cookie
+
+🥡
+Takeout box
+oyster pail | takeout box
+
+🥣
+Bowl with spoon
+cereal | breakfast | congee | oatmeal | porridge | bowl with spoon
+
+🥤
+Cup with straw
+soft drink | soda | cup with straw | malt | water | juice
+
+🥥
+Coconut
+palm | piña colada | coconut
+
+🥦
+Broccoli
+broccoli | wild cabbage
+
+🥧
+Pie
+fruit | filling | pastry | meat | pie
+
+🥨
+Pretzel
+twisted | convoluted | pretzel
+
+🥩
+Cut of meat
+cut of meat | steak | chop | lambchop | porkchop
+
+🥪
+Sandwich
+sandwich | bread
+
+🥫
+Canned food
+canned food | can
+
+🥬
+Leafy green
+kale | leafy green | lettuce | cabbage | bok choy
+
+🥭
+Mango
+tropical | fruit | shaker | mango
+
+🥮
+Moon cake
+autumn | moon cake | yuèbǐng | festival
+
+🥯
+Bagel
+bagel | schmear | montreal | bakery
+
+🥰
+Smiling face with 3 hearts
+in love | crush | smiling face with 3 hearts | adore
+
+🥳
+Partying face
+party | celebration | horn | partying face | yay | hat
+
+🥴
+Woozy face
+uneven eyes | intoxicated | dizzy | drunk | tipsy | woozy face | wavy mouth
+
+🥵
+Hot face
+hot face | hot | red-faced | feverish | sweating | heat stroke
+
+🥶
+Cold face
+blue-faced | cold face | icicles | cold | freezing | frostbite
+
+🥺
+Pleading face
+pleading face | mercy | begging | puppy eyes | please
+
+🥼
+Lab coat
+scientist | doctor | experiment | lab coat
+
+🥽
+Goggles
+goggles | eye protection | swimming | welding
+
+🥾
+Hiking boot
+boot | backpacking | camping | hiking | hiking boot
+
+🥿
+Flat shoe
+slipper | ballet flat | slip-on | flat shoe
+
+🦀
+Crab
+crab | cancer | zodiac
+
+🦁
+Lion face
+lion | leo | face | zodiac | lion face
+
+🦂
+Scorpion
+scorpio | scorpion | zodiac
+
+🦃
+Turkey
+turkey | bird
+
+🦄
+Unicorn face
+unicorn | unicorn face | face
+
+🦅
+Eagle
+bird | eagle
+
+🦆
+Duck
+bird | duck
+
+🦇
+Bat
+bat | vampire
+
+🦈
+Shark
+fish | shark
+
+🦉
+Owl
+owl | wise | bird
+
+🦊
+Fox face
+fox | face | fox face
+
+🦋
+Butterfly
+insect | butterfly | pretty
+
+🦍
+Gorilla
+gorilla
+
+🦎
+Lizard
+reptile | lizard
+
+🦏
+Rhinoceros
+rhinoceros
+
+🦐
+Shrimp
+food | small | shrimp | shellfish
+
+🦑
+Squid
+food | molusc | squid
+
+🦒
+Giraffe
+giraffe | spots
+
+🦓
+Zebra
+zebra | stripe
+
+🦔
+Hedgehog
+spiny | hedgehog
+
+🦕
+Sauropod
+brachiosaurus | sauropod | diplodocus | brontosaurus
+
+🦖
+T-Rex
+tyrannosaurus rex | t-rex
+
+🦗
+Cricket
+grasshopper | orthoptera | cricket
+
+🦘
+Kangaroo
+joey | jump | australia | kangaroo | marsupial
+
+🦙
+Llama
+wool | alpaca | llama | guanaco | vicuña
+
+🦚
+Peacock
+ostentatious | bird | proud | peahen | peacock
+
+🦛
+Hippopotamus
+hippo | hippopotamus
+
+🦜
+Parrot
+parrot | talk | bird | pirate
+
+🦝
+Raccoon
+raccoon | curious | sly
+
+🦞
+Lobster
+bisque | claws | seafood | lobster
+
+🦟
+Mosquito
+virus | fever | insect | malaria | disease | mosquito
+
+🦠
+Microbe
+bacteria | microbe | amoeba | virus
+
+🦡
+Badger
+badger | honey badger | pester
+
+🦢
+Swan
+swan | bird | ugly duckling | cygnet
+
+🦴
+Bone
+skeleton | bone
+
+🦵
+Leg
+leg | kick | limb
+
+🦶
+Foot
+foot | stomp | kick
+
+🦷
+Tooth
+dentist | tooth
+
+🦸
+Superhero
+good | superpowers | hero | superhero | superpower | heroine
+
+🦸‍♀️
+Woman superhero
+woman | good | woman superhero | hero | superpower | heroine
+
+🦸‍♂️
+Man superhero
+good | man superhero | hero | man | superpower
+
+🦹
+Supervillain
+evil | superpowers | supervillain | villain | criminal | bad | superpower
+
+🦹‍♀️
+Woman supervillain
+woman | evil | villain | criminal | woman supervillain | superpower
+
+🦹‍♂️
+Man supervillain
+evil | man supervillain | villain | criminal | man | superpower
+
+🧀
+Cheese wedge
+cheese | cheese wedge
+
+🧁
+Cupcake
+sweet | cupcake | bakery
+
+🧂
+Salt
+sodium | shaker | condiment | salt
+
+🧐
+Face with monocle
+inspect | stuffy | face with monocle | wealthy
+
+🧑
+Person
+gender-neutral | adult | person | unspecified gender
+
+🧒
+Child
+child | gender-neutral | young | unspecified gender
+
+🧓
+Older person
+gender-neutral | adult | old | older person | unspecified gender
+
+🧔
+Man: beard
+bewhiskered | person | beard | man: beard
+
+🧕
+Woman with headscarf
+woman with headscarf | hijab | head kerchief | mantilla | headscarf | bandana | tichel
+
+🧖
+Person in steamy room
+sauna | hamam | steam room | steambath | person in steamy room
+
+🧖‍♀️
+Woman in steamy room
+steam room | woman in steamy room | sauna
+
+🧖‍♂️
+Man in steamy room
+steam room | man in steamy room | sauna
+
+🧗
+Person climbing
+person climbing | climber
+
+🧗‍♀️
+Woman climbing
+woman climbing | climber
+
+🧗‍♂️
+Man climbing
+man climbing | climber
+
+🧘
+Person in lotus position
+meditation | serenity | yoga | person in lotus position
+
+🧘‍♀️
+Woman in lotus position
+woman in lotus position | meditation | yoga
+
+🧘‍♂️
+Man in lotus position
+man in lotus position | meditation | yoga
+
+🧙
+Mage
+mage | sorcerer | sorceress | witch | wizard
+
+🧙‍♀️
+Woman mage
+witch | sorceress | woman mage
+
+🧙‍♂️
+Man mage
+man mage | sorcerer | wizard
+
+🧚
+Fairy
+puck | oberon | fairy | titania
+
+🧚‍♀️
+Woman fairy
+woman fairy | titania
+
+🧚‍♂️
+Man fairy
+man fairy | puck | oberon
+
+🧛
+Vampire
+dracula | vampire | undead
+
+🧛‍♀️
+Woman vampire
+woman vampire | undead
+
+🧛‍♂️
+Man vampire
+dracula | man vampire | undead
+
+🧜
+Merperson
+mermaid | merperson | merwoman | merman
+
+🧜‍♀️
+Mermaid
+mermaid | merwoman
+
+🧜‍♂️
+Merman
+triton | merman
+
+🧝
+Elf
+elf | magical | lotr style
+
+🧝‍♀️
+Woman elf
+magical | woman elf
+
+🧝‍♂️
+Man elf
+magical | man elf
+
+🧞
+Genie
+(non-human color) | djinn | genie
+
+🧞‍♀️
+Woman genie
+woman genie | djinn
+
+🧞‍♂️
+Man genie
+man genie | djinn
+
+🧟
+Zombie
+walking dead | zombie | (non-human color) | undead
+
+🧟‍♀️
+Woman zombie
+woman zombie | walking dead | undead
+
+🧟‍♂️
+Man zombie
+walking dead | man zombie | undead
+
+🧠
+Brain
+brain | intelligent
+
+🧡
+Orange heart
+orange | orange heart
+
+🧢
+Billed cap
+baseball cap | billed cap
+
+🧣
+Scarf
+scarf | neck
+
+🧤
+Gloves
+gloves | hand
+
+🧥
+Coat
+coat | jacket
+
+🧦
+Socks
+stocking | socks
+
+🧧
+Red envelope
+lai see | hóngbāo | gift | money | good luck | red envelope
+
+🧨
+Firecracker
+firecracker | dynamite | fireworks | explosive
+
+🧩
+Jigsaw
+clue | puzzle | interlocking | piece | jigsaw
+
+🧪
+Test tube
+chemistry | lab | chemist | science | experiment | test tube
+
+🧫
+Petri dish
+petri dish | biology | lab | bacteria | biologist | culture
+
+🧬
+Dna
+gene | biologist | genetics | evolution | dna | life
+
+🧭
+Compass
+compass | orienteering | magnetic | navigation
+
+🧮
+Abacus
+abacus | calculation
+
+🧯
+Fire extinguisher
+quench | extinguish | fire | fire extinguisher
+
+🧰
+Toolbox
+tool | toolbox | chest | mechanic
+
+🧱
+Brick
+wall | clay | brick | bricks | mortar
+
+🧲
+Magnet
+attraction | magnetic | magnet | horseshoe
+
+🧳
+Luggage
+luggage | travel | packing
+
+🧴
+Lotion bottle
+lotion | moisturizer | lotion bottle | sunscreen | shampoo
+
+🧵
+Thread
+needle | string | sewing | thread | spool
+
+🧶
+Yarn
+ball | crochet | yarn | knit
+
+🧷
+Safety pin
+punk rock | safety pin | diaper
+
+🧸
+Teddy bear
+toy | teddy bear | plaything | plush | stuffed
+
+🧹
+Broom
+cleaning | witch | broom | sweeping
+
+🧺
+Basket
+basket | farming | laundry | picnic
+
+🧻
+Roll of paper
+paper towels | roll of paper | toilet paper
+
+🧼
+Soap
+cleaning | soapdish | lather | bathing | bar | soap
+
+🧽
+Sponge
+porous | cleaning | absorbing | sponge
+
+🧾
+Receipt
+bookkeeping | accounting | evidence | receipt | proof
+
+🧿
+Nazar amulet
+bead | nazar amulet | nazar | talisman | charm | evil-eye
+

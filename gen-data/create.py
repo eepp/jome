@@ -56,25 +56,6 @@ class _Category:
         return self._emojis
 
 
-class _EmojiJsonEntry:
-    def __init__(self, emoji, name, keywords):
-        self._emoji = emoji
-        self._name = name
-        self._keywords = keywords
-
-    @property
-    def emoji(self):
-        return self._emoji
-
-    @property
-    def name(self):
-        return self._name
-
-    @property
-    def keywords(self):
-        return self._keywords
-
-
 def _error(msg):
     print('Error: {}'.format(msg), file=sys.stderr)
     sys.exit(1)
@@ -104,29 +85,35 @@ def _extract_cat_emojis(cat_id):
     return _extract_emojis_from_file('cats/{}.txt'.format(cat_id))
 
 
-def _get_emoji_json_entries():
-    with open('emoji.json') as f:
-        emoji_json = json.load(f)
+def _get_all_emoji_descriptors():
+    emojis_with_skin_tone_support = set(_extract_emojis_from_file('with-skin-tone-support.txt'))
 
-    entries = {}
+    with open('emojis.txt') as f:
+        emojis_txt = f.read()
 
-    for entry in emoji_json:
-        emoji = entry['char']
-        name = entry['name'][0].upper() + entry['name'][1:]
-        keywords = set([name.lower()])
-        prev_codepoint = None
+    blocks = re.split(r'\n{2,}', emojis_txt)
+    emoji_descrs = {}
 
-        for keyword in entry['keywords'].split('|'):
-            keywords.add(keyword.strip().lower())
+    for block in blocks:
+        block = block.strip()
 
-        entries[emoji] = _EmojiJsonEntry(emoji, name, list(keywords))
+        if len(block) == 0:
+            continue
 
-    return entries
+        lines = block.split('\n')
+        assert len(lines) == 3
+        emoji = lines[0].strip()
+        name = lines[1].strip()
+        kws = [kw.strip() for kw in lines[2].split('|')]
+        emoji_descrs[emoji] = _EmojiDescriptor(emoji, name, kws,
+                                               emoji in emojis_with_skin_tone_support)
+
+    return emoji_descrs
 
 
 def _get_cats_yml():
     with open('cats.yml') as f:
-        return yaml.load(f)
+        return yaml.load(f, Loader=yaml.Loader)
 
 
 def _gen_emojis_json(output_dir, emoji_descriptors):
@@ -248,12 +235,11 @@ def _gen_emojis_png(output_dir, emoji_descriptors, sizes):
 
 def _main(output_dir):
     os.makedirs(output_dir, exist_ok=True)
-    emoji_json_entries = _get_emoji_json_entries()
+    all_emoji_descrs = _get_all_emoji_descriptors()
     cats_yml = _get_cats_yml()
     emoji_descriptors = []
     categories = []
     done_emojis = set()
-    emojis_with_skin_tone_support = set(_extract_emojis_from_file('with-skin-tone-support.txt'))
 
     for cat_yml in cats_yml:
         cat_id = cat_yml['id']
@@ -263,15 +249,10 @@ def _main(output_dir):
 
         for emoji in emojis:
             if emoji not in done_emojis:
-                if emoji not in emoji_json_entries:
+                if emoji not in all_emoji_descrs:
                     _error('Cannot find `{}` in `emoji.json`.'.format(emoji))
 
-                emoji_json_entry = emoji_json_entries[emoji]
-                has_skin_tone_support = emoji in emojis_with_skin_tone_support
-                emoji_descr = _EmojiDescriptor(emoji, emoji_json_entry.name,
-                                               emoji_json_entry.keywords,
-                                               has_skin_tone_support)
-                emoji_descriptors.append(emoji_descr)
+                emoji_descriptors.append(all_emoji_descrs[emoji])
                 done_emojis.add(emoji)
 
             if emoji not in cat.emojis:
