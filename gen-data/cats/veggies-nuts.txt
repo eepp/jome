@@ -1,4 +1,5 @@
 🍅 Tomato
+🫒 Olive
 🥥 Coconut
 🥑 Avocado
 🍆 Eggplant
@@ -6,6 +7,7 @@
 🥕 Carrot
 🌽 Ear of Corn
 🌶 Hot Pepper
+🫑 Bell Pepper
 🥒 Cucumber
 🥬 Leafy Green
 🥦 Broccoli

@@ -37,6 +37,7 @@
 🐳 Spouting Whale
 🐋 Whale
 🐬 Dolphin
+🦭 Seal
 🐟 Fish
 🐠 Tropical Fish
 🐡 Blowfish

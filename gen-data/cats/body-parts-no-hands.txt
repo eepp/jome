@@ -9,6 +9,8 @@
 🦻 Ear with Hearing Aid
 👃 Nose
 🧠 Brain
+🫀 Anatomical Heart
+🫁 Lungs
 🦷 Tooth
 🦴 Bone
 👀 Eyes

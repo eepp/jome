@@ -30,6 +30,7 @@
 🚻 Restroom
 🚼 Baby Symbol
 🚾 Water Closet
+🛗 Elevator
 ⚠️ Warning
 🚸 Children Crossing
 ⛔ No Entry
@@ -51,6 +52,9 @@
 📶 Antenna Bars
 📳 Vibration Mode
 📴 Mobile Phone Off
+♀️ Female Sign
+♂️ Male Sign
+⚧️ Transgender Symbol
 ♾️ Infinity
 ♻️ Recycling Symbol
 🔱 Trident Emblem
@@ -168,5 +172,6 @@
 🗣 Speaking Head
 👤 Bust in Silhouette
 👥 Busts in Silhouette
+🫂 People Hugging
 💥 Collision
 💫 Dizzy

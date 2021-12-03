@@ -6,11 +6,13 @@
 🎤 Microphone
 🎙 Studio Microphone
 🎷 Saxophone
+🪗 Accordion
 🎺 Trumpet
 📯 Postal Horn
 🎻 Violin
 🪕 Banjo
 🥁 Drum
+🪘 Long Drum
 🧑‍🎤 Singer
 👨‍🎤 Man Singer
 👩‍🎤 Woman Singer

@@ -1,6 +1,7 @@
 🏟 Stadium
 🏛 Classical Building
 🏗 Building Construction
+🛖 Hut
 🏘 Houses
 🏚 Derelict House
 🏠 House

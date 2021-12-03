@@ -23,6 +23,7 @@
 🚖 Oncoming Taxi
 🚗 Automobile
 🚘 Oncoming Automobile
+🛻 Pickup Truck
 🚚 Delivery Truck
 🚛 Articulated Lorry
 🚜 Tractor
@@ -35,6 +36,7 @@
 🚲 Bicycle
 🛴 Kick Scooter
 🛹 Skateboard
+🛼 Roller Skate
 ⛵ Sailboat
 🚤 Speedboat
 🛳 Passenger Ship

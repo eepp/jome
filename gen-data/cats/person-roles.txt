@@ -55,6 +55,7 @@
 💂 Guard
 💂‍♂️ Man Guard
 💂‍♀️ Woman Guard
+🥷 Ninja
 👷 Construction Worker
 👷‍♂️ Man Construction Worker
 👷‍♀️ Woman Construction Worker
@@ -65,12 +66,20 @@
 👳‍♀️ Woman Wearing Turban
 👲 Man With Chinese Cap
 🧕 Woman With Headscarf
-🤵 Man in Tuxedo
-👰 Bride With Veil
+🤵 Person in Tuxedo
+🤵‍♂️ Man in Tuxedo
+🤵‍♀️ Woman in Tuxedo
+👰 Person With Veil
+👰‍♂️ Man with Veil
+👰‍♀️ Woman with Veil
 🤰 Pregnant Woman
 🤱 Breast-Feeding
+👩‍🍼 Woman Feeding Baby
+👨‍🍼 Man Feeding Baby
+🧑‍🍼 Person Feeding Baby
 🎅 Santa Claus
 🤶 Mrs. Claus
+🧑‍🎄 Mx Claus
 🦸 Superhero
 🦸‍♂️ Man Superhero
 🦸‍♀️ Woman Superhero

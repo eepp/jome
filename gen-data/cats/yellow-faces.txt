@@ -19,6 +19,7 @@
 ☺️ Smiling Face
 😚 Kissing Face With Closed Eyes
 😙 Kissing Face With Smiling Eyes
+🥲 Smiling Face with Tear
 😋 Face Savoring Food
 😛 Face With Tongue
 😜 Winking Face With Tongue
@@ -34,10 +35,12 @@
 😐 Neutral Face
 😑 Expressionless Face
 😶 Face Without Mouth
+😶‍🌫️ Face in Clouds
 😏 Smirking Face
 😒 Unamused Face
 🙄 Face With Rolling Eyes
 😬 Grimacing Face
+😮‍💨 Face Exhaling
 🤥 Lying Face
 😌 Relieved Face
 😔 Pensive Face
@@ -55,9 +58,11 @@
 🥶 Cold Face
 🥴 Woozy Face
 😵 Dizzy Face
+😵‍💫 Face with Spiral Eyes
 🤯 Exploding Head
 🤠 Cowboy Hat Face
 🥳 Partying Face
+🥸 Disguised Face
 😎 Smiling Face With Sunglasses
 🤓 Nerd Face
 🧐 Face With Monocle

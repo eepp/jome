@@ -7,10 +7,12 @@
 🐩 Poodle
 🦝 Raccoon
 🐈 Cat
+🐈‍⬛ Black Cat
 🐅 Tiger
 🐆 Leopard
 🐎 Horse
 🦓 Zebra
+🦬 Bison
 🐂 Ox
 🐃 Water Buffalo
 🐄 Cow
@@ -25,12 +27,14 @@
 🦙 Llama
 🦒 Giraffe
 🐘 Elephant
+🦣 Mammoth
 🦏 Rhinoceros
 🦛 Hippopotamus
 🐁 Mouse
 🐀 Rat
 🐇 Rabbit
 🐿 Chipmunk
+🦫 Beaver
 🦔 Hedgehog
 🦇 Bat
 🦥 Sloth
@@ -52,6 +56,8 @@
 🦆 Duck
 🦢 Swan
 🦉 Owl
+🦤 Dodo
+🪶 Feather
 🦩 Flamingo
 🦚 Peacock
 🦜 Parrot
@@ -65,6 +71,7 @@
 🐳 Spouting Whale
 🐋 Whale
 🐬 Dolphin
+🦭 Seal
 🐟 Fish
 🐠 Tropical Fish
 🐡 Blowfish
@@ -81,10 +88,14 @@
 🐛 Bug
 🐜 Ant
 🐝 Honeybee
+🪲 Beetle
 🐞 Lady Beetle
 🦗 Cricket
+🪳 Cockroach
 🕷 Spider
 🕸 Spider Web
 🦂 Scorpion
 🦟 Mosquito
+🪰 Fly
+🪱 Worm
 🦠 Microbe

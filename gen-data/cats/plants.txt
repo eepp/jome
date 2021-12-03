@@ -9,11 +9,13 @@
 🌼 Blossom
 🌷 Tulip
 🌱 Seedling
+🪴 Potted Plant
 🌲 Evergreen Tree
 🎄 Christmas Tree
 🌳 Deciduous Tree
 🌴 Palm Tree
 🎋 Tanabata Tree
+🪵 Wood
 🎍 Pine Decoration
 🌵 Cactus
 🌾 Sheaf of Rice

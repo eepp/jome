@@ -4,19 +4,21 @@
 👦 Boy
 👧 Girl
 🧑 Person
+🧔 Person: Beard
 👱 Person: Blond Hair
 🧑‍🦰 Person: Red Hair
 🧑‍🦱 Person: Curly Hair
 🧑‍🦳 Person: White Hair
 🧑‍🦲 Person: Bald
 👨 Man
-🧔 Man: Beard
+🧔‍♂️ Man: Beard
 👱‍♂️ Man: Blond Hair
 👨‍🦰 Man: Red Hair
 👨‍🦱 Man: Curly Hair
 👨‍🦳 Man: White Hair
 👨‍🦲 Man: Bald
 👩 Woman
+🧔‍♀️ Woman: Beard
 👱‍♀️ Woman: Blond Hair
 👩‍🦰 Woman: Red Hair
 👩‍🦱 Woman: Curly Hair

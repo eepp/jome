@@ -19,6 +19,7 @@
 👜 Handbag
 👝 Clutch Bag
 🎒 Backpack
+🩴 Thong Sandal
 🧳 Luggage
 💼 Briefcase
 🛍 Shopping Bags
@@ -42,6 +43,7 @@
 🎩 Top Hat
 🎓 Graduation Cap
 🧢 Billed Cap
+🪖 Military Helmet
 ⛑ Rescue Worker’s Helmet
 💄 Lipstick
 💍 Ring

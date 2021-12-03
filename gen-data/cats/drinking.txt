@@ -1,6 +1,7 @@
 🍼 Baby Bottle
 🥛 Glass of Milk
 ☕ Hot Beverage
+🫖 Teapot
 🍵 Teacup Without Handle
 🍶 Sake
 🍾 Bottle With Popping Cork
@@ -13,5 +14,6 @@
 🥂 Clinking Glasses
 🥃 Tumbler Glass
 🥤 Cup With Straw
+🧋 Bubble Tea
 🧃 Beverage Box
 🧉 Mate

@@ -2,6 +2,7 @@
 🥐 Croissant
 🥖 Baguette Bread
 🥨 Pretzel
+🫓 Flatbread
 🥯 Bagel
 🥞 Pancakes
 🧇 Waffle
@@ -17,11 +18,13 @@
 🥪 Sandwich
 🌮 Taco
 🌯 Burrito
+🫔 Tamale
 🥙 Stuffed Flatbread
 🧆 Falafel
 🍳 Cooking
 🥘 Shallow Pan of Food
 🍲 Pot of Food
+🫕 Fondue
 🥣 Bowl With Spoon
 🥗 Green Salad
 🍿 Popcorn

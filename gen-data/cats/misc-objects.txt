@@ -6,6 +6,8 @@
 🗺 World Map
 🧭 Compass
 🧱 Brick
+🪨 Rock
+🪵 Wood
 💈 Barber Pole
 🛢 Oil Drum
 🛎 Bellhop Bell
@@ -30,9 +32,12 @@
 🎀 Ribbon
 🎁 Wrapped Gift
 🔮 Crystal Ball
+🪄 Magic Wand
 🧿 Nazar Amulet
 🕹 Joystick
 🧸 Teddy Bear
+🪅 Piñata
+🪆 Nesting Dolls
 🖼 Framed Picture
 🧵 Thread
 🧶 Yarn
@@ -95,6 +100,7 @@
 🔖 Bookmark
 🏷 Label
 💰 Money Bag
+🪙 Coin
 💴 Yen Banknote
 💵 Dollar Banknote
 💶 Euro Banknote
@@ -158,8 +164,11 @@
 🗡 Dagger
 ⚔️ Crossed Swords
 🔫 Pistol
+🪃 Boomerang
 🛡 Shield
+🪚 Carpentry Saw
 🔧 Wrench
+🪛 Screwdriver
 🔩 Nut and Bolt
 ⚙️ Gear
 🗜 Clamp
@@ -167,8 +176,10 @@
 🦯 White Cane
 🔗 Link
 ⛓ Chains
+🪝 Hook
 🧰 Toolbox
 🧲 Magnet
+🪜 Ladder
 ⚗️ Alembic
 🧪 Test Tube
 🧫 Petri Dish
@@ -182,23 +193,32 @@
 🩹 Adhesive Bandage
 🩺 Stethoscope
 🚪 Door
+🛗 Elevator
+🪞 Mirror
+🪟 Window
 🛏 Bed
 🛋 Couch and Lamp
 🪑 Chair
 🚽 Toilet
+🪠 Plunger
 🚿 Shower
 🛁 Bathtub
+🪤 Mouse Trap
 🪒 Razor
 🧴 Lotion Bottle
 🧷 Safety Pin
 🧹 Broom
 🧺 Basket
 🧻 Roll of Paper
+🪣 Bucket
 🧼 Soap
+🪥 Toothbrush
 🧽 Sponge
 🧯 Fire Extinguisher
 🚬 Cigarette
 ⚰️ Coffin
+🪦 Headstone
 ⚱️ Funeral Urn
 🗿 Moai
+🪧 Placard
 🚰 Potable Water
