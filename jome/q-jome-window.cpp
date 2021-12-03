@@ -427,6 +427,10 @@ void QJomeWindow::_acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& s
 void QJomeWindow::_acceptEmoji(const Emoji& emoji,
                                const boost::optional<Emoji::SkinTone>& skinTone)
 {
+    if (skinTone && !emoji.hasSkinToneSupport()) {
+        return;
+    }
+
     emit this->emojiChosen(emoji, skinTone);
 }
 
