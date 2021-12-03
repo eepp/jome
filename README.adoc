@@ -415,3 +415,50 @@ fi
 
 jome-ctl "$socket_name"
 ----
+
+== Build
+
+To build and install jome:
+
+. Make sure you have:
+
+Build time dependencies::: {empty}
++
+--
+* A {cpp}-14 compiler
+* CMake{nbsp}≥{nbsp}3.1
+* Qt 5 development tools
+* Boost{nbsp}≥{nbsp}1.58
+--
+
+Run time dependency:::
+    Qt 5
+
+. Create a build directory and make it your current working directory:
++
+----
+$ mkdir build
+$ cd build
+----
+
+. Create the build files:
++
+----
+$ cmake .. -DCMAKE_BUILD_TYPE=release
+----
++
+See the
+https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html[`CMAKE_INSTALL_PREFIX`]
+CMake variable to control the installation prefix.
+
+. Build jome:
++
+----
+$ make
+----
+
+. Install jome:
++
+----
+$ sudo make install
+----
