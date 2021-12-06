@@ -22,7 +22,7 @@ https://github.com/unicode-org/cldr[Unicode CLDR] project. I maintain my
 own database as, for some reason, the official emoji list lacks many
 https://emojipedia.org/variation-selector-16/[VS-16] characters. Also, I
 added some unofficial keywords to specific emojis. The format of each
-block of `emojis.json` is:
+block of `emojis.txt` is:
 
 First line::
     The emoji.
