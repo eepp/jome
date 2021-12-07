@@ -191,6 +191,9 @@ To cancel, 👇 **Escape** or close the window.
 To go to the https://emojipedia.org/[Emojipedia] 📃 of the
 <<select,selected>> emoji, 👇 **F12**.
 
+To go to the Emojipedia 📃 of any emoji with the 🖱, right-click it and
+click "`Go to Emojipedia page`".
+
 [[cl-options]]
 === Command-line options
 

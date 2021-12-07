@@ -19,6 +19,7 @@
 
 #include "q-jome-window.hpp"
 #include "q-cat-list-widget-item.hpp"
+#include "emojipedia.hpp"
 
 namespace jome {
 
@@ -435,13 +436,6 @@ void QJomeWindow::_acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& s
     }
 }
 
-void QJomeWindow::_requestSelectedEmojiInfo()
-{
-    if (_selectedEmoji) {
-        emit this->emojiInfoRequested(*_selectedEmoji);
-    }
-}
-
 void QJomeWindow::_acceptEmoji(const Emoji& emoji,
                                const boost::optional<Emoji::SkinTone>& skinTone)
 {
@@ -450,6 +444,18 @@ void QJomeWindow::_acceptEmoji(const Emoji& emoji,
     }
 
     emit this->emojiChosen(emoji, skinTone);
+}
+
+void QJomeWindow::_requestSelectedEmojiInfo()
+{
+    if (_selectedEmoji) {
+        this->_requestEmojiInfo(*_selectedEmoji);
+    }
+}
+
+void QJomeWindow::_requestEmojiInfo(const Emoji& emoji)
+{
+    gotoEmojipediaPage(emoji);
 }
 
 void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)

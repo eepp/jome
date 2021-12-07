@@ -67,7 +67,6 @@ public:
 
 signals:
     void emojiChosen(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone);
-    void emojiInfoRequested(const Emoji& emoji);
     void canceled();
 
 public slots:
@@ -82,8 +81,9 @@ private:
     void _updateInfoLabel(const Emoji *emoji);
     void _findEmojis(const std::string& cat, const std::string& needles);
     void _acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone);
-    void _requestSelectedEmojiInfo();
     void _acceptEmoji(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone);
+    void _requestSelectedEmojiInfo();
+    void _requestEmojiInfo(const Emoji& emoji);
 
 private slots:
     void _searchTextChanged(const QString& text);
