@@ -73,6 +73,10 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj, QEvent * const even
         emit this->f5KeyPressed();
         break;
 
+    case Qt::Key_F12:
+        emit this->f12KeyPressed();
+        break;
+
     case Qt::Key_PageUp:
         emit this->pgUpKeyPressed();
         break;
@@ -206,6 +210,8 @@ void QJomeWindow::_buildUi(const bool darkBg)
                      &QJomeWindow::_searchBoxF4KeyPressed);
     QObject::connect(eventFilter, &QSearchBoxEventFilter::f5KeyPressed, this,
                      &QJomeWindow::_searchBoxF5KeyPressed);
+    QObject::connect(eventFilter, &QSearchBoxEventFilter::f12KeyPressed, this,
+                     &QJomeWindow::_searchBoxF12KeyPressed);
     QObject::connect(eventFilter, &QSearchBoxEventFilter::pgUpKeyPressed, this,
                      &QJomeWindow::_searchBoxPgUpKeyPressed);
     QObject::connect(eventFilter, &QSearchBoxEventFilter::pgDownKeyPressed, this,
@@ -396,6 +402,11 @@ void QJomeWindow::_searchBoxF5KeyPressed()
     this->_acceptSelectedEmoji(Emoji::SkinTone::DARK);
 }
 
+void QJomeWindow::_searchBoxF12KeyPressed()
+{
+    this->_requestSelectedEmojiInfo();
+}
+
 void QJomeWindow::_emojiSelectionChanged(const Emoji * const emoji)
 {
     _selectedEmoji = emoji;
@@ -421,6 +432,13 @@ void QJomeWindow::_acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& s
 {
     if (_selectedEmoji) {
         this->_acceptEmoji(*_selectedEmoji, skinTone);
+    }
+}
+
+void QJomeWindow::_requestSelectedEmojiInfo()
+{
+    if (_selectedEmoji) {
+        emit this->emojiInfoRequested(*_selectedEmoji);
     }
 }
 

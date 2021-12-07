@@ -7,9 +7,11 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QDesktopServices>
 #include <QString>
 #include <QProcess>
 #include <QTimer>
+#include <QUrl>
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -276,6 +278,12 @@ int main(int argc, char **argv)
              */
             QTimer::singleShot(0, &win, &jome::QJomeWindow::emojiDbChanged);
         }
+    });
+    QObject::connect(&win, &jome::QJomeWindow::emojiInfoRequested,
+                     [&](const auto& emoji) {
+        QDesktopServices::openUrl(QUrl {
+            QString {"https://emojipedia.org/"} + QString::fromStdString(emoji.str())
+        });
     });
 
     if (params.serverName) {

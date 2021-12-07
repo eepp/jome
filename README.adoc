@@ -152,6 +152,7 @@ For an emoji to be part of the results, at least 🔍 of its keywords
 must contain _all_ the 🔍 terms.
 
 
+[[select]]
 === Select and accept an emoji
 
 To select an emoji, use the following ⌨️:
@@ -184,6 +185,11 @@ To select an emoji, use the following ⌨️:
 
 To cancel, 👇 **Escape** or close the window.
 
+
+=== Go to Emojipedia page
+
+To go to the https://emojipedia.org/[Emojipedia] 📃 of the
+<<select,selected>> emoji, 👇 **F12**.
 
 [[cl-options]]
 === Command-line options

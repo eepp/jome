@@ -49,6 +49,7 @@ signals:
     void f3KeyPressed();
     void f4KeyPressed();
     void f5KeyPressed();
+    void f12KeyPressed();
     void pgUpKeyPressed();
     void pgDownKeyPressed();
     void homeKeyPressed();
@@ -66,6 +67,7 @@ public:
 
 signals:
     void emojiChosen(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone);
+    void emojiInfoRequested(const Emoji& emoji);
     void canceled();
 
 public slots:
@@ -80,6 +82,7 @@ private:
     void _updateInfoLabel(const Emoji *emoji);
     void _findEmojis(const std::string& cat, const std::string& needles);
     void _acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone);
+    void _requestSelectedEmojiInfo();
     void _acceptEmoji(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone);
 
 private slots:
@@ -96,6 +99,7 @@ private slots:
     void _searchBoxF3KeyPressed();
     void _searchBoxF4KeyPressed();
     void _searchBoxF5KeyPressed();
+    void _searchBoxF12KeyPressed();
     void _searchBoxPgUpKeyPressed();
     void _searchBoxPgDownKeyPressed();
     void _searchBoxHomeKeyPressed();
