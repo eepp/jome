@@ -1,7 +1,7 @@
 [
   {
-    "id": "yellow-faces",
-    "name": "Yellow faces",
+    "id": "main-smileys",
+    "name": "Main smileys",
     "emojis": [
       "😀",
       "😃",
@@ -101,8 +101,8 @@
     ]
   },
   {
-    "id": "other-faces",
-    "name": "Other faces",
+    "id": "other-smileys",
+    "name": "Other smileys",
     "emojis": [
       "💀",
       "☠️",
@@ -117,8 +117,8 @@
     ]
   },
   {
-    "id": "cat-faces",
-    "name": "Cat faces",
+    "id": "cat-smileys",
+    "name": "Cat smileys",
     "emojis": [
       "😺",
       "😸",
