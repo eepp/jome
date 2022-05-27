@@ -1085,6 +1085,28 @@
     ],
     "has-skin-tone-support": false
   },
+  "😈": {
+    "name": "Smiling face with horns",
+    "keywords": [
+      "devil",
+      "devil horns",
+      "happy devil",
+      "purple devil",
+      "red devil"
+    ],
+    "has-skin-tone-support": false
+  },
+  "👿": {
+    "name": "Angry face with horns",
+    "keywords": [
+      "devil",
+      "devil horns",
+      "sad devil",
+      "purple devil",
+      "purple goblin"
+    ],
+    "has-skin-tone-support": false
+  },
   "💀": {
     "name": "Skull",
     "keywords": [

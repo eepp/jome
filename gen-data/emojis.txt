@@ -3686,6 +3686,14 @@ alien | fantasy | face | creature | extraterrestrial | ufo
 Alien monster
 alien | monster | face | creature | extraterrestrial | alien monster | ufo
 
+😈
+Smiling face with horns
+devil | devil horns | happy devil | purple devil | red devil
+
+👿
+Angry face with horns
+devil | devil horns | sad devil | purple devil | purple goblin
+
 💀
 Skull
 skull | monster | face | death | fairy tale
