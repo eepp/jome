@@ -13,6 +13,7 @@
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
+#include <array>
 #include <boost/optional.hpp>
 
 #include "emoji-db.hpp"
