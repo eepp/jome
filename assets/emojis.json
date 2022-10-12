@@ -11920,6 +11920,13 @@
     ],
     "has-skin-tone-support": false
   },
+  "🩼": {
+    "name": "Crutch",
+    "keywords": [
+      "crutch"
+    ],
+    "has-skin-tone-support": false
+  },
   "🩸": {
     "name": "Drop of blood",
     "keywords": [
@@ -14244,13 +14251,6 @@
       "ball",
       "mirror ball",
       "disco ball"
-    ],
-    "has-skin-tone-support": false
-  },
-  "🩼": {
-    "name": "Crutch",
-    "keywords": [
-      "crutch"
     ],
     "has-skin-tone-support": false
   },
