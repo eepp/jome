@@ -53,3 +53,4 @@
 ⛴ Ferry
 🛥 Motor Boat
 🚢 Ship
+🫧 Bubbles

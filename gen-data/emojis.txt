@@ -7117,3 +7117,151 @@ beard | man | man: beard
 🧔‍♀️
 Woman: beard
 beard | woman | woman: beard
+
+🫠
+Melting Face
+melting | melting face
+
+🫢
+Face with Open Eyes and Hand Over Mouth
+open eyes | hand over mouth | hand on mouth | hand covering mouth | face with open eyes and hand over mouth | astonished
+
+🫣
+Face with Peeking Eye
+peeking eye | peeking | face with peeking eye
+
+🫡
+Saluting Face
+salute | saluting | saluting face
+
+🫥
+Dotted Line Face
+dotted | dotted line | dotted linea face
+
+🫤
+Face with Diagonal Mouth
+diagonal | diagonal mouth | face with diagonal mouth
+
+🥹
+Face Holding Back Tears
+tears | sad | cry | face holding back tears
+
+🫱
+Rightwards Hand
+right hand | right pointing hand | rightwards hand | hand
+
+🫲
+Leftwards Hand
+left hand | left pointing hand | leftwards hand | hand
+
+🫳
+Palm Down Hand
+palm | hand | palm down hand
+
+🫴
+Palm Up Hand
+palm | hand | palm up hand
+
+🫰
+Hand with Index Finger and Thumb Crossed
+cross | fingers crossed | hand | hand with index finger and thumb crossed
+
+🫵
+Index Pointing at the Viewer
+you | pointing | index pointing at the viewer | pointing at you
+
+🫶
+Heart Hands
+heart | hand | heart hands
+
+🫦
+Biting Lip
+biting | lip | biting lip
+
+🫅
+Person with Crown
+crown | king | person with a crown | birthday
+
+🫃
+Pregnant Man
+pregnant | man | pregnant man
+
+🫄
+Pregnant Person
+pregnant | person | pregnant person
+
+🧌
+Troll
+troll | monster
+
+🪸
+Coral
+coral | plant | sea
+
+🪷
+Lotus
+lotus | flower
+
+🪹
+Empty Nest
+nest | empty | birds nest
+
+🪺
+Nest with Eggs
+nest | nest with eggs | eggs | birds nest with eggs
+
+🫘
+Beans
+beans | vegetable
+
+🫗
+Pouring Liquid
+pouring | liquid | pouring liquid
+
+🫙
+Jar
+jar | empty jar
+
+🛝
+Playground Slide
+slide | playground | playground slide
+
+🛞
+Wheel
+wheel
+
+🛟
+Ring Buoy
+ring buoy | buoy
+
+🪬
+Hamsa
+hamse
+
+🪩
+Mirror Ball
+mirror | ball | mirror ball | disco ball
+
+🪫
+Low Battery
+low | battery | low battery
+
+🩼
+Crutch
+crutch
+
+🩻
+X-Ray
+x-ray
+
+🫧
+Bubbles
+bubbles
+
+🪪
+Identification Card
+id | identification card
+
+🟰
+Heavy Equals Sign
+heavy equals sign | equals sign | sign

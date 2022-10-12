@@ -31,3 +31,10 @@
 🙏 Folded Hands
 ✍ Writing Hand
 💅 Nail Polish
+🫱 Rightwards Hand
+🫲 Leftwards Hand
+🫳 Palm Down Hand
+🫴 Palm Up Hand
+🫰 Hand with Index Finger and Thumb Crossed
+🫵 Index Pointing at the Viewer
+🫶 Heart Hands

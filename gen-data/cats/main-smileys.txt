@@ -93,3 +93,10 @@
 😡 Pouting Face
 😠 Angry Face
 🤬 Face With Symbols on Mouth
+🫠 Melting Face
+🫢 Face with Open Eyes and Hand Over Mouth
+🫣 Face with Peeking Eye
+🫡 Saluting Face
+🫥 Dotted Line Face
+🫤 Face with Diagonal Mouth
+🥹 Face Holding Back Tears

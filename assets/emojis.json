@@ -1085,6 +1085,72 @@
     ],
     "has-skin-tone-support": false
   },
+  "🫠": {
+    "name": "Melting Face",
+    "keywords": [
+      "melting",
+      "melting face"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫢": {
+    "name": "Face with Open Eyes and Hand Over Mouth",
+    "keywords": [
+      "open eyes",
+      "hand over mouth",
+      "hand on mouth",
+      "hand covering mouth",
+      "face with open eyes and hand over mouth",
+      "astonished"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫣": {
+    "name": "Face with Peeking Eye",
+    "keywords": [
+      "peeking eye",
+      "peeking",
+      "face with peeking eye"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫡": {
+    "name": "Saluting Face",
+    "keywords": [
+      "salute",
+      "saluting",
+      "saluting face"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫥": {
+    "name": "Dotted Line Face",
+    "keywords": [
+      "dotted",
+      "dotted line",
+      "dotted linea face"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫤": {
+    "name": "Face with Diagonal Mouth",
+    "keywords": [
+      "diagonal",
+      "diagonal mouth",
+      "face with diagonal mouth"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🥹": {
+    "name": "Face Holding Back Tears",
+    "keywords": [
+      "tears",
+      "sad",
+      "cry",
+      "face holding back tears"
+    ],
+    "has-skin-tone-support": false
+  },
   "😈": {
     "name": "Smiling face with horns",
     "keywords": [
@@ -1175,6 +1241,14 @@
       "goblin",
       "creature",
       "fairy tale"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🧌": {
+    "name": "Troll",
+    "keywords": [
+      "troll",
+      "monster"
     ],
     "has-skin-tone-support": false
   },
@@ -2005,6 +2079,73 @@
     ],
     "has-skin-tone-support": true
   },
+  "🫱": {
+    "name": "Rightwards Hand",
+    "keywords": [
+      "right hand",
+      "right pointing hand",
+      "rightwards hand",
+      "hand"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫲": {
+    "name": "Leftwards Hand",
+    "keywords": [
+      "left hand",
+      "left pointing hand",
+      "leftwards hand",
+      "hand"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫳": {
+    "name": "Palm Down Hand",
+    "keywords": [
+      "palm",
+      "hand",
+      "palm down hand"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫴": {
+    "name": "Palm Up Hand",
+    "keywords": [
+      "palm",
+      "hand",
+      "palm up hand"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫰": {
+    "name": "Hand with Index Finger and Thumb Crossed",
+    "keywords": [
+      "cross",
+      "fingers crossed",
+      "hand",
+      "hand with index finger and thumb crossed"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫵": {
+    "name": "Index Pointing at the Viewer",
+    "keywords": [
+      "you",
+      "pointing",
+      "index pointing at the viewer",
+      "pointing at you"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫶": {
+    "name": "Heart Hands",
+    "keywords": [
+      "heart",
+      "hand",
+      "heart hands"
+    ],
+    "has-skin-tone-support": false
+  },
   "💋": {
     "name": "Kiss mark",
     "keywords": [
@@ -2171,6 +2312,15 @@
       "print",
       "footprint",
       "footprints"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫦": {
+    "name": "Biting Lip",
+    "keywords": [
+      "biting",
+      "lip",
+      "biting lip"
     ],
     "has-skin-tone-support": false
   },
@@ -2456,6 +2606,16 @@
       "old woman"
     ],
     "has-skin-tone-support": true
+  },
+  "🫅": {
+    "name": "Person with Crown",
+    "keywords": [
+      "crown",
+      "king",
+      "person with a crown",
+      "birthday"
+    ],
+    "has-skin-tone-support": false
   },
   "🙍": {
     "name": "Person frowning",
@@ -3538,6 +3698,24 @@
       "pregnant"
     ],
     "has-skin-tone-support": true
+  },
+  "🫃": {
+    "name": "Pregnant Man",
+    "keywords": [
+      "pregnant",
+      "man",
+      "pregnant man"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫄": {
+    "name": "Pregnant Person",
+    "keywords": [
+      "pregnant",
+      "person",
+      "pregnant person"
+    ],
+    "has-skin-tone-support": false
   },
   "🤱": {
     "name": "Breast-feeding",
@@ -6401,6 +6579,23 @@
     ],
     "has-skin-tone-support": false
   },
+  "🪸": {
+    "name": "Coral",
+    "keywords": [
+      "coral",
+      "plant",
+      "sea"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪷": {
+    "name": "Lotus",
+    "keywords": [
+      "lotus",
+      "flower"
+    ],
+    "has-skin-tone-support": false
+  },
   "☀️": {
     "name": "Sun",
     "keywords": [
@@ -6897,6 +7092,13 @@
     ],
     "has-skin-tone-support": false
   },
+  "🫧": {
+    "name": "Bubbles",
+    "keywords": [
+      "bubbles"
+    ],
+    "has-skin-tone-support": false
+  },
   "🍇": {
     "name": "Grapes",
     "keywords": [
@@ -7190,6 +7392,14 @@
       "nut",
       "vegetable",
       "food"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫘": {
+    "name": "Beans",
+    "keywords": [
+      "beans",
+      "vegetable"
     ],
     "has-skin-tone-support": false
   },
@@ -9908,6 +10118,15 @@
     ],
     "has-skin-tone-support": false
   },
+  "🫗": {
+    "name": "Pouring Liquid",
+    "keywords": [
+      "pouring",
+      "liquid",
+      "pouring liquid"
+    ],
+    "has-skin-tone-support": false
+  },
   "⚽": {
     "name": "Soccer ball",
     "keywords": [
@@ -11803,6 +12022,13 @@
     ],
     "has-skin-tone-support": false
   },
+  "🩻": {
+    "name": "X-Ray",
+    "keywords": [
+      "x-ray"
+    ],
+    "has-skin-tone-support": false
+  },
   "☢️": {
     "name": "Radioactive",
     "keywords": [
@@ -12490,6 +12716,13 @@
       "ship",
       "trident",
       "emblem"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪬": {
+    "name": "Hamsa",
+    "keywords": [
+      "hamse"
     ],
     "has-skin-tone-support": false
   },
@@ -13280,6 +13513,14 @@
     ],
     "has-skin-tone-support": false
   },
+  "🪪": {
+    "name": "Identification Card",
+    "keywords": [
+      "id",
+      "identification card"
+    ],
+    "has-skin-tone-support": false
+  },
   "📧": {
     "name": "E-mail",
     "keywords": [
@@ -13951,6 +14192,65 @@
       "placard",
       "protest",
       "sign"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪹": {
+    "name": "Empty Nest",
+    "keywords": [
+      "nest",
+      "empty",
+      "birds nest"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪺": {
+    "name": "Nest with Eggs",
+    "keywords": [
+      "nest",
+      "nest with eggs",
+      "eggs",
+      "birds nest with eggs"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫙": {
+    "name": "Jar",
+    "keywords": [
+      "jar",
+      "empty jar"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🛞": {
+    "name": "Wheel",
+    "keywords": [
+      "wheel"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🛟": {
+    "name": "Ring Buoy",
+    "keywords": [
+      "ring buoy",
+      "buoy"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪩": {
+    "name": "Mirror Ball",
+    "keywords": [
+      "mirror",
+      "ball",
+      "mirror ball",
+      "disco ball"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🩼": {
+    "name": "Crutch",
+    "keywords": [
+      "crutch"
     ],
     "has-skin-tone-support": false
   },
@@ -14913,6 +15213,24 @@
       "hug",
       "people hugging",
       "thanks"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪫": {
+    "name": "Low Battery",
+    "keywords": [
+      "low",
+      "battery",
+      "low battery"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟰": {
+    "name": "Heavy Equals Sign",
+    "keywords": [
+      "heavy equals sign",
+      "equals sign",
+      "sign"
     ],
     "has-skin-tone-support": false
   },

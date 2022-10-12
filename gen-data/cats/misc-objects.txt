@@ -107,6 +107,7 @@
 💷 Pound Banknote
 💸 Money With Wings
 💳 Credit Card
+🪪 Identification Card
 🧾 Receipt
 ✉️ Envelope
 📧 E-Mail
@@ -222,3 +223,10 @@
 🗿 Moai
 🪧 Placard
 🚰 Potable Water
+🪹 Empty Nest
+🪺 Nest with Eggs
+🫙 Jar
+🛞 Wheel
+🛟 Ring Buoy
+🪩 Mirror Ball
+🩼 Crutch

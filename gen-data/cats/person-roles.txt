@@ -73,6 +73,8 @@
 👰‍♂️ Man with Veil
 👰‍♀️ Woman with Veil
 🤰 Pregnant Woman
+🫃 Pregnant Man
+🫄 Pregnant Person
 🤱 Breast-Feeding
 👩‍🍼 Woman Feeding Baby
 👨‍🍼 Man Feeding Baby

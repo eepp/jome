@@ -13,6 +13,7 @@
 ⚗️ Alembic
 🌡 Thermometer
 💫 Dizzy
+🩻 X-Ray
 ☢️ Radioactive
 ☣️ Biohazard
 😷 Face With Medical Mask

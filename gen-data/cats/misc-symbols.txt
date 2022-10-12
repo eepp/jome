@@ -175,3 +175,5 @@
 🫂 People Hugging
 💥 Collision
 💫 Dizzy
+🪫 Low Battery
+🟰 Heavy Equals Sign
