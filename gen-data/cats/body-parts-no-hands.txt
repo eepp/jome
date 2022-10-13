@@ -5,6 +5,7 @@
 🦿 Mechanical Leg
 🦵 Leg
 🦶 Foot
+👣 Footprints
 👂 Ear
 🦻 Ear with Hearing Aid
 👃 Nose
@@ -17,4 +18,4 @@
 👁 Eye
 👅 Tongue
 👄 Mouth
-👣 Footprints
+🫦 Biting lip

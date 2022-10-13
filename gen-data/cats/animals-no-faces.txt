@@ -50,6 +50,8 @@
 🐤 Baby Chick
 🐥 Front-Facing Baby Chick
 🐦 Bird
+🪹 Empty Nest
+🪺 Nest with Eggs
 🐧 Penguin
 🕊 Dove
 🦅 Eagle
@@ -78,6 +80,7 @@
 🦈 Shark
 🐙 Octopus
 🐚 Spiral Shell
+🪸 Coral
 🦀 Crab
 🦞 Lobster
 🦐 Shrimp

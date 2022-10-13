@@ -5,7 +5,9 @@
 🩸 Drop of Blood
 💊 Pill
 🩹 Adhesive Bandage
+🩼 Crutch
 🩺 Stethoscope
+🩻 X-ray
 🧪 Test Tube
 🧫 Petri Dish
 🧬 DNA

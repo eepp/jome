@@ -1,6 +1,7 @@
 💐 Bouquet
 🌸 Cherry Blossom
 💮 White Flower
+🪷 Lotus
 🏵 Rosette
 🌹 Rose
 🥀 Wilted Flower
@@ -25,5 +26,7 @@
 🍁 Maple Leaf
 🍂 Fallen Leaf
 🍃 Leaf Fluttering in Wind
+🪹 Empty nest
+🪺 Nest with eggs
 🍄 Mushroom
 🌰 Chestnut

@@ -8,6 +8,7 @@
 😂 Face With Tears of Joy
 🙂 Slightly Smiling Face
 🙃 Upside-Down Face
+🫠 Melting Face
 😉 Winking Face
 😊 Smiling Face With Smiling Eyes
 😇 Smiling Face With Halo
@@ -28,13 +29,17 @@
 🤑 Money-Mouth Face
 🤗 Hugging Face
 🤭 Face With Hand Over Mouth
+🫢 Face with open eyes and hand over mouth
+🫣 Face with peeking eye
 🤫 Shushing Face
 🤔 Thinking Face
+🫡 Saluting face
 🤐 Zipper-Mouth Face
 🤨 Face With Raised Eyebrow
 😐 Neutral Face
 😑 Expressionless Face
 😶 Face Without Mouth
+🫥 Dotted line face
 😶‍🌫️ Face in Clouds
 😏 Smirking Face
 😒 Unamused Face
@@ -67,6 +72,7 @@
 🤓 Nerd Face
 🧐 Face With Monocle
 😕 Confused Face
+🫤 Face with diagonal mouth
 😟 Worried Face
 🙁 Slightly Frowning Face
 ☹️ Frowning Face
@@ -75,6 +81,7 @@
 😲 Astonished Face
 😳 Flushed Face
 🥺 Pleading Face
+🥹 Face holding back tears
 😦 Frowning Face With Open Mouth
 😧 Anguished Face
 😨 Fearful Face

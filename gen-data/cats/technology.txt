@@ -8,6 +8,7 @@
 📟 Pager
 📠 Fax Machine
 🔋 Battery
+🪫 Low battery
 🔌 Electric Plug
 💻 Laptop Computer
 🖥 Desktop Computer

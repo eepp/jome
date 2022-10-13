@@ -137,6 +137,14 @@
     ],
     "has-skin-tone-support": false
   },
+  "🫠": {
+    "name": "Melting face",
+    "keywords": [
+      "melting",
+      "melting face"
+    ],
+    "has-skin-tone-support": false
+  },
   "😉": {
     "name": "Winking face",
     "keywords": [
@@ -367,6 +375,27 @@
     ],
     "has-skin-tone-support": false
   },
+  "🫢": {
+    "name": "Face with open eyes and hand over mouth",
+    "keywords": [
+      "open eyes",
+      "hand over mouth",
+      "hand on mouth",
+      "hand covering mouth",
+      "face with open eyes and hand over mouth",
+      "astonished"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫣": {
+    "name": "Face with peeking eye",
+    "keywords": [
+      "peeking eye",
+      "peeking",
+      "face with peeking eye"
+    ],
+    "has-skin-tone-support": false
+  },
   "🤫": {
     "name": "Shushing face",
     "keywords": [
@@ -384,6 +413,15 @@
       "thinking face",
       "face",
       "thinking"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫡": {
+    "name": "Saluting face",
+    "keywords": [
+      "salute",
+      "saluting",
+      "saluting face"
     ],
     "has-skin-tone-support": false
   },
@@ -445,6 +483,15 @@
       "huh",
       "quiet",
       "mouth"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫥": {
+    "name": "Dotted line face",
+    "keywords": [
+      "dotted",
+      "dotted line",
+      "dotted linea face"
     ],
     "has-skin-tone-support": false
   },
@@ -794,6 +841,15 @@
     ],
     "has-skin-tone-support": false
   },
+  "🫤": {
+    "name": "Face with diagonal mouth",
+    "keywords": [
+      "diagonal",
+      "diagonal mouth",
+      "face with diagonal mouth"
+    ],
+    "has-skin-tone-support": false
+  },
   "😟": {
     "name": "Worried face",
     "keywords": [
@@ -886,6 +942,16 @@
       "begging",
       "puppy eyes",
       "please"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🥹": {
+    "name": "Face holding back tears",
+    "keywords": [
+      "tears",
+      "sad",
+      "cry",
+      "face holding back tears"
     ],
     "has-skin-tone-support": false
   },
@@ -1435,6 +1501,15 @@
     ],
     "has-skin-tone-support": false
   },
+  "🫶": {
+    "name": "Heart hands",
+    "keywords": [
+      "heart",
+      "hand",
+      "heart hands"
+    ],
+    "has-skin-tone-support": true
+  },
   "💏": {
     "name": "Kiss",
     "keywords": [
@@ -1708,6 +1783,44 @@
     ],
     "has-skin-tone-support": true
   },
+  "🫱": {
+    "name": "Rightwards hand",
+    "keywords": [
+      "right hand",
+      "right pointing hand",
+      "rightwards hand",
+      "hand"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🫲": {
+    "name": "Leftwards hand",
+    "keywords": [
+      "left hand",
+      "left pointing hand",
+      "leftwards hand",
+      "hand"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🫳": {
+    "name": "Palm down hand",
+    "keywords": [
+      "palm",
+      "hand",
+      "palm down hand"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🫴": {
+    "name": "Palm up hand",
+    "keywords": [
+      "palm",
+      "hand",
+      "palm up hand"
+    ],
+    "has-skin-tone-support": true
+  },
   "👌": {
     "name": "OK hand",
     "keywords": [
@@ -1756,6 +1869,16 @@
       "cross",
       "finger",
       "luck"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🫰": {
+    "name": "Hand with index finger and thumb crossed",
+    "keywords": [
+      "cross",
+      "fingers crossed",
+      "hand",
+      "hand with index finger and thumb crossed"
     ],
     "has-skin-tone-support": true
   },
@@ -1855,6 +1978,16 @@
       "index pointing up",
       "point",
       "index"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🫵": {
+    "name": "Index pointing at the viewer",
+    "keywords": [
+      "you",
+      "pointing",
+      "index pointing at the viewer",
+      "pointing at you"
     ],
     "has-skin-tone-support": true
   },
@@ -2070,6 +2203,16 @@
     ],
     "has-skin-tone-support": true
   },
+  "👣": {
+    "name": "Footprints",
+    "keywords": [
+      "clothing",
+      "print",
+      "footprint",
+      "footprints"
+    ],
+    "has-skin-tone-support": false
+  },
   "👂": {
     "name": "Ear",
     "keywords": [
@@ -2164,13 +2307,12 @@
     ],
     "has-skin-tone-support": false
   },
-  "👣": {
-    "name": "Footprints",
+  "🫦": {
+    "name": "Biting lip",
     "keywords": [
-      "clothing",
-      "print",
-      "footprint",
-      "footprints"
+      "biting",
+      "lip",
+      "biting lip"
     ],
     "has-skin-tone-support": false
   },
@@ -3410,6 +3552,16 @@
     ],
     "has-skin-tone-support": true
   },
+  "🫅": {
+    "name": "Person with crown",
+    "keywords": [
+      "crown",
+      "king",
+      "person with a crown",
+      "birthday"
+    ],
+    "has-skin-tone-support": true
+  },
   "🤴": {
     "name": "Prince",
     "keywords": [
@@ -3536,6 +3688,24 @@
       "pregnant woman",
       "woman",
       "pregnant"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🫃": {
+    "name": "Pregnant man",
+    "keywords": [
+      "pregnant",
+      "man",
+      "pregnant man"
+    ],
+    "has-skin-tone-support": true
+  },
+  "🫄": {
+    "name": "Pregnant person",
+    "keywords": [
+      "pregnant",
+      "person",
+      "pregnant person"
     ],
     "has-skin-tone-support": true
   },
@@ -3866,6 +4036,14 @@
       "woman zombie",
       "walking dead",
       "undead"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🧌": {
+    "name": "Troll",
+    "keywords": [
+      "troll",
+      "monster"
     ],
     "has-skin-tone-support": false
   },
@@ -5683,6 +5861,25 @@
     ],
     "has-skin-tone-support": false
   },
+  "🪹": {
+    "name": "Empty nest",
+    "keywords": [
+      "nest",
+      "empty",
+      "birds nest"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪺": {
+    "name": "Nest with eggs",
+    "keywords": [
+      "nest",
+      "nest with eggs",
+      "eggs",
+      "birds nest with eggs"
+    ],
+    "has-skin-tone-support": false
+  },
   "🐧": {
     "name": "Penguin",
     "keywords": [
@@ -5931,6 +6128,15 @@
     ],
     "has-skin-tone-support": false
   },
+  "🪸": {
+    "name": "Coral",
+    "keywords": [
+      "coral",
+      "plant",
+      "sea"
+    ],
+    "has-skin-tone-support": false
+  },
   "🦀": {
     "name": "Crab",
     "keywords": [
@@ -6149,6 +6355,14 @@
     "name": "White flower",
     "keywords": [
       "white flower",
+      "flower"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪷": {
+    "name": "Lotus",
+    "keywords": [
+      "lotus",
       "flower"
     ],
     "has-skin-tone-support": false
@@ -6806,6 +7020,13 @@
     ],
     "has-skin-tone-support": false
   },
+  "🫧": {
+    "name": "Bubbles",
+    "keywords": [
+      "bubbles"
+    ],
+    "has-skin-tone-support": false
+  },
   "🏖": {
     "name": "Beach with umbrella",
     "keywords": [
@@ -7190,6 +7411,14 @@
       "nut",
       "vegetable",
       "food"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫘": {
+    "name": "Beans",
+    "keywords": [
+      "beans",
+      "vegetable"
     ],
     "has-skin-tone-support": false
   },
@@ -7990,6 +8219,15 @@
       "liquor",
       "whisky",
       "shot"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🫗": {
+    "name": "Pouring liquid",
+    "keywords": [
+      "pouring",
+      "liquid",
+      "pouring liquid"
     ],
     "has-skin-tone-support": false
   },
@@ -9173,6 +9411,13 @@
     ],
     "has-skin-tone-support": false
   },
+  "🛞": {
+    "name": "Wheel",
+    "keywords": [
+      "wheel"
+    ],
+    "has-skin-tone-support": false
+  },
   "🚨": {
     "name": "Police car light",
     "keywords": [
@@ -9220,6 +9465,14 @@
     "keywords": [
       "construction",
       "barrier"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🛟": {
+    "name": "Ring buoy",
+    "keywords": [
+      "ring buoy",
+      "buoy"
     ],
     "has-skin-tone-support": false
   },
@@ -9842,6 +10095,15 @@
       "horse",
       "carousel",
       "carousel horse"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🛝": {
+    "name": "Playground slide",
+    "keywords": [
+      "slide",
+      "playground",
+      "playground slide"
     ],
     "has-skin-tone-support": false
   },
@@ -11589,6 +11851,15 @@
     ],
     "has-skin-tone-support": false
   },
+  "🪫": {
+    "name": "Low battery",
+    "keywords": [
+      "low",
+      "battery",
+      "low battery"
+    ],
+    "has-skin-tone-support": false
+  },
   "🔌": {
     "name": "Electric plug",
     "keywords": [
@@ -11742,6 +12013,13 @@
     ],
     "has-skin-tone-support": false
   },
+  "🩼": {
+    "name": "Crutch",
+    "keywords": [
+      "crutch"
+    ],
+    "has-skin-tone-support": false
+  },
   "🩺": {
     "name": "Stethoscope",
     "keywords": [
@@ -11749,6 +12027,13 @@
       "heart",
       "medicine",
       "stethoscope"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🩻": {
+    "name": "X-ray",
+    "keywords": [
+      "x-ray"
     ],
     "has-skin-tone-support": false
   },
@@ -13033,6 +13318,14 @@
     ],
     "has-skin-tone-support": false
   },
+  "🫙": {
+    "name": "Jar",
+    "keywords": [
+      "jar",
+      "empty jar"
+    ],
+    "has-skin-tone-support": false
+  },
   "🏺": {
     "name": "Amphora",
     "keywords": [
@@ -13187,6 +13480,13 @@
     ],
     "has-skin-tone-support": false
   },
+  "🪬": {
+    "name": "Hamsa",
+    "keywords": [
+      "hamse"
+    ],
+    "has-skin-tone-support": false
+  },
   "🪅": {
     "name": "Piñata",
     "keywords": [
@@ -13194,6 +13494,16 @@
       "party",
       "piñata",
       "pinata"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🪩": {
+    "name": "Mirror ball",
+    "keywords": [
+      "mirror",
+      "ball",
+      "mirror ball",
+      "disco ball"
     ],
     "has-skin-tone-support": false
   },
@@ -13965,6 +14275,14 @@
     ],
     "has-skin-tone-support": false
   },
+  "🪪": {
+    "name": "Identification card",
+    "keywords": [
+      "id",
+      "identification card"
+    ],
+    "has-skin-tone-support": false
+  },
   "🛂": {
     "name": "Passport control",
     "keywords": [
@@ -14461,6 +14779,15 @@
       "heavy division sign",
       "math",
       "division"
+    ],
+    "has-skin-tone-support": false
+  },
+  "🟰": {
+    "name": "Heavy equals sign",
+    "keywords": [
+      "heavy equals sign",
+      "equals sign",
+      "sign"
     ],
     "has-skin-tone-support": false
   },

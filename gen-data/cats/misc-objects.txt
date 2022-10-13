@@ -2,6 +2,7 @@
 🕳 Hole
 💣 Bomb
 🔪 Kitchen Knife
+🫙 Jar
 🏺 Amphora
 🗺 World Map
 🧭 Compass
@@ -34,9 +35,11 @@
 🔮 Crystal Ball
 🪄 Magic Wand
 🧿 Nazar Amulet
+🪬 Hamsa
 🕹 Joystick
 🧸 Teddy Bear
 🪅 Piñata
+🪩 Mirror ball
 🪆 Nesting Dolls
 🖼 Framed Picture
 🧵 Thread
@@ -56,6 +59,7 @@
 📟 Pager
 📠 Fax Machine
 🔋 Battery
+🪫 Low battery
 🔌 Electric Plug
 💻 Laptop Computer
 🖥 Desktop Computer
@@ -191,7 +195,9 @@
 🩸 Drop of Blood
 💊 Pill
 🩹 Adhesive Bandage
+🩼 Crutch
 🩺 Stethoscope
+🩻 X-ray
 🚪 Door
 🛗 Elevator
 🪞 Mirror
@@ -212,6 +218,7 @@
 🧻 Roll of Paper
 🪣 Bucket
 🧼 Soap
+🫧 Bubbles
 🪥 Toothbrush
 🧽 Sponge
 🧯 Fire Extinguisher
@@ -221,4 +228,5 @@
 ⚱️ Funeral Urn
 🗿 Moai
 🪧 Placard
+🪪 Identification card
 🚰 Potable Water

@@ -70,6 +70,7 @@
 ➕ Heavy Plus Sign
 ➖ Heavy Minus Sign
 ➗ Heavy Division Sign
+🟰 Heavy equals sign
 ➰ Curly Loop
 ➿ Double Curly Loop
 〽️ Part Alternation Mark

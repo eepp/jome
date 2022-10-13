@@ -17,6 +17,7 @@
 🛀 Person Taking Bath
 👙 Bikini
 🧼 Soap
+🫧 Bubbles
 🏖 Beach With Umbrella
 🏝 Desert Island
 🏄 Person Surfing
@@ -45,6 +46,7 @@
 🐙 Octopus
 🦦 Otter
 🐚 Spiral Shell
+🪸 Coral
 🎣 Fishing Pole
 ⚓ Anchor
 ⛵ Sailboat

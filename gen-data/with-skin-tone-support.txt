@@ -286,3 +286,13 @@
 🧑‍🎄 Mx Claus
 🧔‍♂️ Man: Beard
 🧔‍♀️ Woman: Beard
+🫱 Rightwards Hand
+🫲 Leftwards Hand
+🫳 Palm Down Hand
+🫴 Palm Up Hand
+🫰 Hand with Index Finger and Thumb Crossed
+🫵 Index Pointing at the Viewer
+🫶 Heart Hands
+🫅 Person with Crown
+🫃 Pregnant Man
+🫄 Pregnant Person

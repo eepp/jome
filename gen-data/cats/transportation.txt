@@ -57,12 +57,14 @@
 🚏 Bus Stop
 🛤 Railway Track
 ⛽ Fuel Pump
+🛞 Wheel
 🚨 Police Car Light
 🚥 Horizontal Traffic Light
 🚦 Vertical Traffic Light
 🛑 Stop Sign
 🚧 Construction
 ⚓ Anchor
+🛟 Ring buoy
 💺 Seat
 Ⓜ️ Circled M
 🅿 P Button
