@@ -9872,6 +9872,17 @@
     ],
     "has-skin-tone-support": false
   },
+  "🎃": {
+    "name": "Jack-o'-lantern",
+    "keywords": [
+      "celebration",
+      "halloween",
+      "jack",
+      "jack-o'-lantern",
+      "lantern"
+    ],
+    "has-skin-tone-support": false
+  },
   "🎆": {
     "name": "Fireworks",
     "keywords": [

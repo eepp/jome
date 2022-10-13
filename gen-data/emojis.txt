@@ -2362,6 +2362,10 @@ christmas tree | celebration | christmas | tree
 Santa Claus
 santa | celebration | santa claus | claus | father | christmas
 
+🎃
+Jack-o'-lantern
+celebration | halloween | jack | jack-o'-lantern | lantern
+
 🎆
 Fireworks
 fireworks | celebration
