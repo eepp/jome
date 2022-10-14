@@ -17,12 +17,12 @@ The `cats.yml` file maps category IDs (text file names without the
 `cats.yml` is important as it is the final order of presentation of
 those categories in the eventual UI.
 
-The data from `emojis.txt` comes from the
+The data from the `emojis-*.txt` files comes from the
 https://github.com/unicode-org/cldr[Unicode CLDR] project. I maintain my
 own database as, for some reason, the official emoji list lacks many
 https://emojipedia.org/variation-selector-16/[VS-16] characters. Also, I
 added some unofficial keywords to specific emojis. The format of each
-block of `emojis.txt` is:
+block of `emojis-*.txt` is:
 
 First line::
     The emoji.
@@ -48,9 +48,9 @@ The `create.py` script creates the required files for the UI in the
 specified directory.
 
 From the category files, it knows the supported emojis. It combines this
-with the data from `emojis.txt` and `with-skin-tone-support.txt` to
-create `emojis.json`. This is a map (emoji to info) for each supported
-emoji.
+with the data from the `emojis-*.txt` and `with-skin-tone-support.txt`
+files to create `emojis.json`. This is a map (emoji to info) for each
+supported emoji.
 
 From the category files, it also creates `cats.json` which has the same
 content as `cats.yml`, but each category entry also has its full list of

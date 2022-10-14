@@ -122,7 +122,8 @@ The first category, _Recent_, is a special category with the recently
 accepted emojis.
 
 Emoji info text (⬇️)::
-    Name and Unicode codepoints of the selected or hovered emoji.
+    Name, Unicode codepoints, and Emoji version of the selected or
+    hovered emoji.
 
 
 [[find-emojis]]

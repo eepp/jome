@@ -14,11 +14,12 @@ import os.path
 
 
 class _EmojiDescriptor:
-    def __init__(self, emoji, name, keywords, has_skin_tone_support):
+    def __init__(self, emoji, name, keywords, has_skin_tone_support, version):
         self._emoji = emoji
         self._name = name
         self._keywords = keywords
         self._has_skin_tone_support = has_skin_tone_support
+        self._version = version
 
     @property
     def emoji(self):
@@ -35,6 +36,10 @@ class _EmojiDescriptor:
     @property
     def has_skin_tone_support(self):
         return self._has_skin_tone_support
+
+    @property
+    def version(self):
+        return self._version
 
 
 class _Category:
@@ -85,10 +90,10 @@ def _extract_cat_emojis(cat_id):
     return _extract_emojis_from_file('cats/{}.txt'.format(cat_id))
 
 
-def _get_all_emoji_descriptors():
+def _get_emoji_descriptors(version):
     emojis_with_skin_tone_support = set(_extract_emojis_from_file('with-skin-tone-support.txt'))
 
-    with open('emojis.txt') as f:
+    with open(f'emojis-{version}.txt') as f:
         emojis_txt = f.read()
 
     blocks = re.split(r'\n{2,}', emojis_txt)
@@ -106,7 +111,32 @@ def _get_all_emoji_descriptors():
         name = lines[1].strip()
         kws = [kw.strip() for kw in lines[2].split('|')]
         emoji_descrs[emoji] = _EmojiDescriptor(emoji, name, kws,
-                                               emoji in emojis_with_skin_tone_support)
+                                               emoji in emojis_with_skin_tone_support,
+                                               version)
+
+    return emoji_descrs
+
+
+def _get_all_emoji_descriptors():
+    emoji_descrs = {}
+    versions = [
+        '0.6',
+        '0.7',
+        '1.0',
+        '2.0',
+        '3.0',
+        '4.0',
+        '5.0',
+        '11.0',
+        '12.0',
+        '12.1',
+        '13.0',
+        '13.1',
+        '14.0',
+    ]
+
+    for version in versions:
+        emoji_descrs.update(_get_emoji_descriptors(version))
 
     return emoji_descrs
 
@@ -124,6 +154,7 @@ def _gen_emojis_json(output_dir, emoji_descriptors):
             'name': emoji_descriptor.name,
             'keywords': emoji_descriptor.keywords,
             'has-skin-tone-support': emoji_descriptor.has_skin_tone_support,
+            'version': emoji_descriptor.version,
         }
 
     with open(os.path.join(output_dir, 'emojis.json'), 'w') as f:

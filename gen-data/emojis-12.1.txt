@@ -1,0 +1,92 @@
+🧑‍🦰
+Person: red hair
+red hair | ginger | red hair | redhead
+
+🧑‍🦱
+Person: curly hair
+afro | curly | curly hair | ringlets
+
+🧑‍🦳
+Person: white hair
+gray | hair | old | white
+
+🧑‍🦲
+Person: bald
+bald | chemotherapy | hairless | no hair | shaven
+
+🧑‍⚕️
+Health worker
+doctor | healthcare | nurse | therapist
+
+🧑‍🎓
+Student
+graduate | student
+
+🧑‍🏫
+Teacher
+instructor | professor | teacher
+
+🧑‍⚖️
+Judge
+judge | scales
+
+🧑‍🌾
+Farmer
+farmer | gardener | rancher
+
+🧑‍🍳
+Cook
+chef | cook
+
+🧑‍🔧
+Mechanic
+electrician | mechanic | plumber | tradesperson
+
+🧑‍🏭
+Factory worker
+assembly | factory | industrial | worker
+
+🧑‍💼
+Office worker
+architect | business | manager | white-collar
+
+🧑‍🔬
+Scientist
+biologist | chemist | engineer | physicist | scientist
+
+🧑‍💻
+Technologist
+coder | developer | inventor | software | technologist
+
+🧑‍🎤
+Singer
+actor | entertainer | rock | singer | star
+
+🧑‍🎨
+Artist
+artist | palette
+
+🧑‍✈️
+Pilot
+pilot | plane
+
+🧑‍🚀
+Astronaut
+astronaut | rocket
+
+🧑‍🚒
+Firefighter
+firefighter | firetruck
+
+🧑‍🦯
+Person with white cane
+accessibility | blind
+
+🧑‍🦼
+Person in motorized wheelchair
+accessibility | wheelchair
+
+🧑‍🦽
+Person in manual wheelchair
+accessibility | wheelchair
+

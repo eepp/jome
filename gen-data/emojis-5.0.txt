@@ -1,0 +1,312 @@
+🏴󠁧󠁢󠁥󠁮󠁧󠁿
+Flag: England
+flag: england | flag
+
+🏴󠁧󠁢󠁳󠁣󠁴󠁿
+Flag: Scotland
+flag | flag: scotland
+
+🏴󠁧󠁢󠁷󠁬󠁳󠁿
+Flag: Wales
+flag | flag: wales
+
+🛷
+Sled
+luge | sledge | sled | toboggan | sleigh
+
+🛸
+Flying saucer
+flying saucer | ufo
+
+🤟
+Love-you gesture
+hand | ily | love-you gesture
+
+🤨
+Face with raised eyebrow
+skeptical | skeptic | disbelief | disapproval | mild surprise | scepticism | distrust | face with raised eyebrow
+
+🤩
+Star-struck
+star-struck | star | face | grinning | starry-eyed | eyes
+
+🤪
+Zany face
+eye | small | goofy | large | zany face
+
+🤫
+Shushing face
+shushing face | quiet | shush
+
+🤬
+Face with symbols on mouth
+grr | face with symbols on mouth | cursing | swearing
+
+🤭
+Face with hand over mouth
+sudden realization | face with hand over mouth | surprise | whoops | shock
+
+🤮
+Face vomiting
+vomit | sick | face vomiting
+
+🤯
+Exploding head
+shocked | exploding head | boom
+
+🤱
+Breast-feeding
+breast | breast-feeding | nursing | baby
+
+🤲
+Palms up together
+cupped hands | prayer | palms up together
+
+🥌
+Curling stone
+curling stone | game | rock
+
+🥟
+Dumpling
+jiaozi | potsticker | gyōza | pierogi | empanada | dumpling
+
+🥠
+Fortune cookie
+prophecy | fortune cookie
+
+🥡
+Takeout box
+oyster pail | takeout box
+
+🥣
+Bowl with spoon
+cereal | breakfast | congee | oatmeal | porridge | bowl with spoon
+
+🥤
+Cup with straw
+soft drink | soda | cup with straw | malt | water | juice
+
+🥥
+Coconut
+palm | piña colada | coconut
+
+🥦
+Broccoli
+broccoli | wild cabbage
+
+🥧
+Pie
+fruit | filling | pastry | meat | pie
+
+🥨
+Pretzel
+twisted | convoluted | pretzel
+
+🥩
+Cut of meat
+cut of meat | steak | chop | lambchop | porkchop
+
+🥪
+Sandwich
+sandwich | bread
+
+🥫
+Canned food
+canned food | can
+
+🦒
+Giraffe
+giraffe | spots
+
+🦓
+Zebra
+zebra | stripe
+
+🦔
+Hedgehog
+spiny | hedgehog
+
+🦕
+Sauropod
+brachiosaurus | sauropod | diplodocus | brontosaurus
+
+🦖
+T-Rex
+tyrannosaurus rex | t-rex
+
+🦗
+Cricket
+grasshopper | orthoptera | cricket
+
+🧐
+Face with monocle
+inspect | stuffy | face with monocle | wealthy
+
+🧑
+Person
+gender-neutral | adult | person | unspecified gender
+
+🧒
+Child
+child | gender-neutral | young | unspecified gender
+
+🧓
+Older person
+gender-neutral | adult | old | older person | unspecified gender
+
+🧔
+Man: beard
+bewhiskered | person | beard | man: beard
+
+🧕
+Woman with headscarf
+woman with headscarf | hijab | head kerchief | mantilla | headscarf | bandana | tichel
+
+🧖
+Person in steamy room
+sauna | hamam | steam room | steambath | person in steamy room
+
+🧖‍♀️
+Woman in steamy room
+steam room | woman in steamy room | sauna
+
+🧖‍♂️
+Man in steamy room
+steam room | man in steamy room | sauna
+
+🧗
+Person climbing
+person climbing | climber
+
+🧗‍♀️
+Woman climbing
+woman climbing | climber
+
+🧗‍♂️
+Man climbing
+man climbing | climber
+
+🧘
+Person in lotus position
+meditation | serenity | yoga | person in lotus position
+
+🧘‍♀️
+Woman in lotus position
+woman in lotus position | meditation | yoga
+
+🧘‍♂️
+Man in lotus position
+man in lotus position | meditation | yoga
+
+🧙
+Mage
+mage | sorcerer | sorceress | witch | wizard
+
+🧙‍♀️
+Woman mage
+witch | sorceress | woman mage
+
+🧙‍♂️
+Man mage
+man mage | sorcerer | wizard
+
+🧚
+Fairy
+puck | oberon | fairy | titania
+
+🧚‍♀️
+Woman fairy
+woman fairy | titania
+
+🧚‍♂️
+Man fairy
+man fairy | puck | oberon
+
+🧛
+Vampire
+dracula | vampire | undead
+
+🧛‍♀️
+Woman vampire
+woman vampire | undead
+
+🧛‍♂️
+Man vampire
+dracula | man vampire | undead
+
+🧜
+Merperson
+mermaid | merperson | merwoman | merman
+
+🧜‍♀️
+Mermaid
+mermaid | merwoman
+
+🧜‍♂️
+Merman
+triton | merman
+
+🧝
+Elf
+elf | magical | lotr style
+
+🧝‍♀️
+Woman elf
+magical | woman elf
+
+🧝‍♂️
+Man elf
+magical | man elf
+
+🧞
+Genie
+(non-human color) | djinn | genie
+
+🧞‍♀️
+Woman genie
+woman genie | djinn
+
+🧞‍♂️
+Man genie
+man genie | djinn
+
+🧟
+Zombie
+walking dead | zombie | (non-human color) | undead
+
+🧟‍♀️
+Woman zombie
+woman zombie | walking dead | undead
+
+🧟‍♂️
+Man zombie
+walking dead | man zombie | undead
+
+🧠
+Brain
+brain | intelligent
+
+🧡
+Orange heart
+orange | orange heart
+
+🧢
+Billed cap
+baseball cap | billed cap
+
+🧣
+Scarf
+scarf | neck
+
+🧤
+Gloves
+gloves | hand
+
+🧥
+Coat
+coat | jacket
+
+🧦
+Socks
+stocking | socks
+

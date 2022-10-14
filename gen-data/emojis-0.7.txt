@@ -1,0 +1,532 @@
+⏹
+Stop button
+square | stop | stop button
+
+☂️
+Umbrella
+clothing | rain | umbrella
+
+☃️
+Snowman
+cold | snowman | snow
+
+☪️
+Star and crescent
+religion | islam | star and crescent | muslim
+
+☯️
+Yin yang
+religion | yin yang | yin | tao | taoist | yang
+
+☸️
+Wheel of dharma
+dharma | religion | buddhist | wheel of dharma | wheel
+
+☹️
+Frowning face
+sad | frown | face | frowning face
+
+⛈
+Cloud with lightning and rain
+thunder | cloud with lightning and rain | rain | cloud
+
+⛏
+Pick
+mining | pick | tool
+
+⛑
+Rescue worker’s helmet
+aid | cross | face | rescue worker’s helmet | hat | helmet
+
+⛓
+Chains
+chains | chain
+
+⛩
+Shinto shrine
+religion | shinto shrine | shinto | shrine
+
+⛰
+Mountain
+mountain
+
+⛱
+Umbrella on ground
+umbrella on ground | sun | rain | umbrella
+
+⛴
+Ferry
+boat | ferry | passenger
+
+⛷
+Skier
+ski | skier | snow
+
+⛸
+Ice skate
+ice skate | skate | ice
+
+⛹
+Person bouncing ball
+ball | person bouncing ball
+
+✍
+Writing hand
+hand | write | writing hand
+
+✝️
+Latin cross
+latin cross | cross | religion | christian
+
+✡️
+Star of David
+religion | star | david | jew | star of david | jewish
+
+🌍
+Globe showing Europe-Africa
+europe | globe showing europe-africa | earth | globe | world | africa
+
+🌎
+Globe showing Americas
+globe showing americas | earth | globe | americas | world
+
+🌜
+Last quarter moon face
+last quarter moon face | quarter | face | moon
+
+🌡
+Thermometer
+weather | thermometer
+
+🌤
+Sun behind small cloud
+sun | sun behind small cloud | cloud
+
+🌥
+Sun behind large cloud
+sun | sun behind large cloud | cloud
+
+🌦
+Sun behind rain cloud
+sun | sun behind rain cloud | rain | cloud
+
+🌧
+Cloud with rain
+cloud | rain | cloud with rain
+
+🌨
+Cloud with snow
+cold | cloud | cloud with snow | snow
+
+🌩
+Cloud with lightning
+cloud with lightning | cloud | lightning
+
+🌪
+Tornado
+whirlwind | tornado | cloud
+
+🌫
+Fog
+fog | cloud
+
+🌬
+Wind face
+wind face | blow | face | cloud | wind
+
+🌶
+Hot pepper
+hot | pepper | hot pepper
+
+🎖
+Military medal
+military | celebration | military medal | medal
+
+🎗
+Reminder ribbon
+reminder ribbon | celebration | reminder | ribbon
+
+🎙
+Studio microphone
+microphone | studio microphone | studio | music | mic
+
+🎚
+Level slider
+music | level slider | level | slider
+
+🎛
+Control knobs
+control | music | control knobs | knobs
+
+🎞
+Film frames
+movie | film frames | cinema | frames | film
+
+🎟
+Admission tickets
+admission | admission tickets | ticket
+
+🏋
+Person lifting weights
+weight | lifter | person lifting weights
+
+🏌
+Person golfing
+ball | golf | person golfing
+
+🏍
+Motorcycle
+racing | motorcycle
+
+🏎
+Racing car
+car | racing car | racing
+
+🏔
+Snow-capped mountain
+mountain | cold | snow | snow-capped mountain
+
+🏕
+Camping
+camping
+
+🏖
+Beach with umbrella
+beach with umbrella | umbrella | beach
+
+🏗
+Building construction
+building construction | construction
+
+🏘
+Houses
+houses
+
+🏙
+Cityscape
+cityscape | city
+
+🏚
+Derelict house
+derelict house | derelict | house
+
+🏛
+Classical building
+classical building | classical
+
+🏜
+Desert
+desert
+
+🏝
+Desert island
+desert | desert island | island
+
+🏞
+National park
+park | national park
+
+🏟
+Stadium
+stadium
+
+🏳
+White flag
+waving | white flag
+
+🏵
+Rosette
+rosette | plant
+
+🏷
+Label
+label
+
+🐈
+Cat
+meow | pet | cat
+
+🐕
+Dog
+pet | dog
+
+🐿
+Chipmunk
+chipmunk | squirrel
+
+👁
+Eye
+eye | body
+
+📬
+Open mailbox with raised flag
+postbox | mail | mailbox | open mailbox with raised flag | open
+
+📭
+Open mailbox with lowered flag
+postbox | lowered | mail | open mailbox with lowered flag | mailbox | open
+
+📽
+Film projector
+film projector | video | movie | projector | cinema | film
+
+🔈
+Speaker low volume
+speaker low volume | soft
+
+🕉
+Om
+religion | om | hindu
+
+🕊
+Dove
+bird | dove | peace | fly
+
+🕜
+One-thirty
+one | 1 | thirty | 1:30 | one-thirty | clock
+
+🕝
+Two-thirty
+two-thirty | two | thirty | 2 | clock | 2:30
+
+🕞
+Three-thirty
+three-thirty | 3 | thirty | 3:30 | clock | three
+
+🕟
+Four-thirty
+four | 4 | four-thirty | thirty | 4:30 | clock
+
+🕠
+Five-thirty
+five-thirty | 5 | five | thirty | clock | 5:30
+
+🕡
+Six-thirty
+six-thirty | thirty | six | 6 | clock | 6:30
+
+🕢
+Seven-thirty
+thirty | 7 | seven-thirty | seven | 7:30 | clock
+
+🕣
+Eight-thirty
+eight-thirty | 8:30 | 8 | eight | thirty | clock
+
+🕤
+Nine-thirty
+nine | thirty | 9 | 9:30 | nine-thirty | clock
+
+🕥
+Ten-thirty
+ten | thirty | ten-thirty | 10:30 | 10 | clock
+
+🕦
+Eleven-thirty
+thirty | 11 | 11:30 | eleven-thirty | clock | eleven
+
+🕧
+Twelve-thirty
+12 | 12:30 | twelve | thirty | twelve-thirty | clock
+
+🕯
+Candle
+candle | light
+
+🕰
+Mantelpiece clock
+mantelpiece clock | clock
+
+🕳
+Hole
+hole
+
+🕴
+Man in suit levitating
+suit | man | business | man in suit levitating
+
+🕵
+Detective
+spy | detective | sleuth
+
+🕶
+Sunglasses
+eye | eyewear | glasses | sunglasses | dark
+
+🕷
+Spider
+insect | spider
+
+🕸
+Spider web
+web | spider | spider web
+
+🕹
+Joystick
+game | video game | joystick
+
+🖇
+Linked paperclips
+linked paperclips | paperclip | link
+
+🖊
+Pen
+ballpoint | pen
+
+🖋
+Fountain pen
+fountain | pen | fountain pen
+
+🖌
+Paintbrush
+painting | paintbrush
+
+🖍
+Crayon
+crayon
+
+🖐
+Hand with fingers splayed
+hand | finger | hand with fingers splayed | splayed
+
+🖥
+Desktop computer
+desktop | desktop computer | computer
+
+🖨
+Printer
+printer | computer
+
+🖱
+Computer mouse
+computer | computer mouse
+
+🖲
+Trackball
+computer | trackball
+
+🖼
+Framed picture
+picture | art | museum | frame | painting | framed picture
+
+🗂
+Card index dividers
+dividers | card | index | card index dividers
+
+🗃
+Card file box
+file | box | card | card file box
+
+🗄
+File cabinet
+file | cabinet | file cabinet | filing
+
+🗑
+Wastebasket
+wastebasket
+
+🗒
+Spiral notepad
+note | spiral notepad | pad | spiral
+
+🗓
+Spiral calendar
+spiral calendar | calendar | pad | spiral
+
+🗜
+Clamp
+tool | compress | clamp | vice
+
+🗝
+Old key
+old | clue | key | old key | lock
+
+🗞
+Rolled-up newspaper
+newspaper | news | rolled-up newspaper | paper | rolled
+
+🗡
+Dagger
+weapon | dagger | knife
+
+🗣
+Speaking head
+head | silhouette | speaking | speak | face | speaking head
+
+🗯
+Right anger bubble
+bubble | angry | mad | balloon | right anger bubble
+
+🗳
+Ballot box with ballot
+box | ballot box with ballot | ballot
+
+🗺
+World map
+world | world map | map
+
+😐
+Neutral face
+meh | face | deadpan | neutral face | huh | neutral
+
+🚍
+Oncoming bus
+oncoming | bus | oncoming bus
+
+🚔
+Oncoming police car
+oncoming | car | oncoming police car | police
+
+🚘
+Oncoming automobile
+oncoming | automobile | car | oncoming automobile
+
+🛋
+Couch and lamp
+couch | hotel | couch and lamp | lamp
+
+🛍
+Shopping bags
+shopping bags | hotel | shopping | bag
+
+🛎
+Bellhop bell
+bellhop bell | hotel | bell | bellhop
+
+🛏
+Bed
+bed | hotel | sleep
+
+🛠
+Hammer and wrench
+hammer and wrench | wrench | tool | spanner | hammer
+
+🛡
+Shield
+weapon | shield
+
+🛢
+Oil drum
+drum | oil | oil drum
+
+🛤
+Railway track
+railway | train | railway track
+
+🛥
+Motor boat
+boat | motorboat | motor boat
+
+🛩
+Small airplane
+small airplane | airplane | aeroplane
+
+🛰
+Satellite
+satellite | space
+
+🛳
+Passenger ship
+ship | passenger ship | passenger
+

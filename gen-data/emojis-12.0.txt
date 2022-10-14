@@ -1,0 +1,300 @@
+🥱
+Yawning face
+bored | tired | yawn | yawning face
+
+🤎
+Brown heart
+brown | heart
+
+🤍
+White heart
+heart | white
+
+🤏
+Pinching hand
+pinching hand | small amount
+
+🦾
+Mechanical arm
+accessibility | mechanical arm | prosthetic
+
+🦿
+Mechanical leg
+accessibility | mechanical leg | prosthetic
+
+🦻
+Ear with hearing aid
+accessibility | ear with hearing aid | hard of hearing
+
+🧏
+Deaf person
+accessibility | deaf | deaf person | ear | hear
+
+🧏‍♂️
+Deaf man
+deaf | man
+
+🧏‍♀️
+Deaf woman
+deaf | woman
+
+🧍
+Person standing
+person standing | stand | standing
+
+🧍‍♂️
+Man standing
+man | standing
+
+🧍‍♀️
+Woman standing
+standing | woman
+
+🧎
+Person kneeling
+kneel | kneeling | person kneeling
+
+🧎‍♂️
+Man kneeling
+kneeling | man
+
+🧎‍♀️
+Woman kneeling
+kneeling | woman
+
+👨‍🦯
+Man with white cane
+accessibility | blind | man | man with probing cane
+
+👩‍🦯
+Woman with white cane
+accessibility | blind | woman | woman with probing cane
+
+👨‍🦼
+Man in motorized wheelchair
+accessibility | man | man in motorized wheelchair | wheelchair
+
+👩‍🦼
+Woman in motorized wheelchair
+accessibility | wheelchair | woman | woman in motorized wheelchair
+
+👨‍🦽
+Man in manual wheelchair
+accessibility | man | man in manual wheelchair | wheelchair
+
+👩‍🦽
+Woman in manual wheelchair
+accessibility | wheelchair | woman | woman in manual wheelchair
+
+🧑‍🤝‍🧑
+People holding hands
+couple | hand | hold | holding hands | people holding hands | person
+
+🦧
+Orangutan
+ape | orangutan
+
+🦮
+Guide dog
+accessibility | blind | guide | guide dog
+
+🐕‍🦺
+Service dog
+accessibility | assistance | dog | service
+
+🦥
+Sloth
+lazy | sloth | slow
+
+🦦
+Otter
+fishing | otter | playful
+
+🦨
+Skunk
+skunk | stink
+
+🦩
+Flamingo
+flamboyant | flamingo | tropical
+
+🧄
+Garlic
+flavoring | garlic
+
+🧅
+Onion
+flavoring | onion
+
+🧇
+Waffle
+breakfast | indecisive | iron | waffle
+
+🧆
+Falafel
+chickpea | falafel | meatball
+
+🧈
+Butter
+butter | dairy
+
+🦪
+Oyster
+diving | oyster | pearl
+
+🧃
+Beverage box
+beverage | box | juice | straw | sweet
+
+🧉
+Mate
+drink | mate
+
+🧊
+Ice
+cold | ice | ice cube | iceberg
+
+🛕
+Hindu temple
+hindu | temple
+
+🦽
+Manual wheelchair
+accessibility | manual wheelchair
+
+🦼
+Motorized wheelchair
+accessibility | motorized wheelchair
+
+🛺
+Auto rickshaw
+auto rickshaw | tuk tuk
+
+🪂
+Parachute
+hang-glide | parachute | parasail | skydive
+
+🪐
+Ringed planet
+ringed planet | saturn | saturnine
+
+🤿
+Diving mask
+diving | diving mask | scuba | snorkeling
+
+🪀
+Yo-yo
+fluctuate | toy | yo-yo
+
+🪁
+Kite
+fly | kite | soar
+
+🦺
+Safety vest
+emergency | safety | vest
+
+🥻
+Sari
+clothing | dress | sari
+
+🩱
+One-piece swimsuit
+bathing suit | one-piece swimsuit
+
+🩲
+Briefs
+bathing suit | briefs | one-piece | swimsuit | underwear
+
+🩳
+Shorts
+bathing suit | pants | shorts | underwear
+
+🩰
+Ballet shoes
+ballet | ballet shoes | dance
+
+🪕
+Banjo
+banjo | music | stringed
+
+🪔
+Diya lamp
+diya | lamp | oil
+
+🪓
+Axe
+axe | chop | hatchet | split | wood
+
+🦯
+White cane
+accessibility | blind | probing cane
+
+🩸
+Drop of blood
+bleed | blood donation | drop of blood | injury | medicine | menstruation
+
+🩹
+Adhesive bandage
+adhesive bandage | bandage
+
+🩺
+Stethoscope
+doctor | heart | medicine | stethoscope
+
+🪑
+Chair
+chair | seat | sit
+
+🪒
+Razor
+razor | sharp | shave
+
+🟠
+Orange circle
+circle | orange
+
+🟡
+Yellow circle
+circle | yellow
+
+🟢
+Green circle
+circle | green
+
+🟣
+Purple circle
+circle | purple
+
+🟤
+Brown circle
+brown | circle
+
+🟥
+Red square
+red | square
+
+🟧
+Orange square
+orange | square
+
+🟨
+Yellow square
+square | yellow
+
+🟩
+Green square
+green | square
+
+🟦
+Blue square
+blue | square
+
+🟪
+Purple square
+purple | square
+
+🟫
+Brown square
+brown | square
+

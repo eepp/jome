@@ -240,7 +240,7 @@ void QJomeWindow::_buildUi(const bool darkBg)
     _wCatList = this->_createCatListWidget();
     this->_wCatList->setCurrentRow(0);
 
-    auto emojisHbox = new QHBoxLayout;
+    const auto emojisHbox = new QHBoxLayout;
 
     emojisHbox->setMargin(0);
     emojisHbox->setSpacing(8);
@@ -248,12 +248,20 @@ void QJomeWindow::_buildUi(const bool darkBg)
     emojisHbox->addWidget(_wCatList);
     mainVbox->addLayout(emojisHbox);
 
-    auto centralWidget = new QWidget;
+    const auto centralWidget = new QWidget;
 
     centralWidget->setLayout(mainVbox);
     this->setCentralWidget(centralWidget);
+
+    const auto infoHbox = new QHBoxLayout;
+
     _wInfoLabel = new QLabel {""};
-    mainVbox->addWidget(_wInfoLabel);
+    infoHbox->addWidget(_wInfoLabel);
+    _wVersionLabel = new QLabel {""};
+    _wVersionLabel->setFixedWidth(80);
+    _wVersionLabel->setAlignment(Qt::AlignRight);
+    infoHbox->addWidget(_wVersionLabel);
+    mainVbox->addLayout(infoHbox);
 }
 
 void QJomeWindow::showEvent(QShowEvent * const event)
@@ -411,7 +419,7 @@ void QJomeWindow::_searchBoxF12KeyPressed()
 void QJomeWindow::_emojiSelectionChanged(const Emoji * const emoji)
 {
     _selectedEmoji = emoji;
-    this->_updateInfoLabel(emoji);
+    this->_updateBottomLabels(emoji);
 }
 
 void QJomeWindow::_emojiClicked(const Emoji& emoji)
@@ -421,12 +429,12 @@ void QJomeWindow::_emojiClicked(const Emoji& emoji)
 
 void QJomeWindow::_emojiHoverEntered(const Emoji& emoji)
 {
-    this->_updateInfoLabel(&emoji);
+    this->_updateBottomLabels(&emoji);
 }
 
 void QJomeWindow::_emojiHoverLeaved(const Emoji&)
 {
-    this->_updateInfoLabel(_selectedEmoji);
+    this->_updateBottomLabels(_selectedEmoji);
 }
 
 void QJomeWindow::_acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone)
@@ -458,6 +466,12 @@ void QJomeWindow::_requestEmojiInfo(const Emoji& emoji)
     gotoEmojipediaPage(emoji);
 }
 
+void QJomeWindow::_updateBottomLabels(const Emoji * const emoji)
+{
+    this->_updateInfoLabel(emoji);
+    this->_updateVersionLabel(emoji);
+}
+
 void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
 {
     QString text;
@@ -476,6 +490,70 @@ void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
     }
 
     _wInfoLabel->setText(text);
+}
+
+namespace {
+
+QString emojiVersionStr(const EmojiVersion version)
+{
+    switch (version) {
+    case EmojiVersion::V_0_6:
+        return "0.6";
+
+    case EmojiVersion::V_0_7:
+        return "0.7";
+
+    case EmojiVersion::V_1_0:
+        return "1.0";
+
+    case EmojiVersion::V_2_0:
+        return "2.0";
+
+    case EmojiVersion::V_3_0:
+        return "3.0";
+
+    case EmojiVersion::V_4_0:
+        return "4.0";
+
+    case EmojiVersion::V_5_0:
+        return "5.0";
+
+    case EmojiVersion::V_11_0:
+        return "11.0";
+
+    case EmojiVersion::V_12_0:
+        return "12.0";
+
+    case EmojiVersion::V_12_1:
+        return "12.1";
+
+    case EmojiVersion::V_13_0:
+        return "13.0";
+
+    case EmojiVersion::V_13_1:
+        return "13.1";
+
+    case EmojiVersion::V_14_0:
+        return "14.0";
+
+    default:
+        std::abort();
+    }
+}
+
+} // namespace
+
+void QJomeWindow::_updateVersionLabel(const Emoji * const emoji)
+{
+    QString text;
+
+    if (emoji) {
+        text += "<span style=\"color: #2ecc71\">Emoji <b>";
+        text += emojiVersionStr(emoji->version());
+        text += "</b></span>";
+    }
+
+    _wVersionLabel->setText(text);
 }
 
 void QJomeWindow::emojiDbChanged()

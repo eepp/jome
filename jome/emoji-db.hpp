@@ -18,6 +18,23 @@
 
 namespace jome {
 
+enum class EmojiVersion
+{
+    V_0_6,
+    V_0_7,
+    V_1_0,
+    V_2_0,
+    V_3_0,
+    V_4_0,
+    V_5_0,
+    V_11_0,
+    V_12_0,
+    V_12_1,
+    V_13_0,
+    V_13_1,
+    V_14_0,
+};
+
 class Emoji
 {
 public:
@@ -36,7 +53,8 @@ public:
 
 public:
     explicit Emoji(const std::string& str, const std::string& name,
-                   std::unordered_set<std::string>&& keywords, bool hasSkinToneSupport);
+                   std::unordered_set<std::string>&& keywords, bool hasSkinToneSupport,
+                   EmojiVersion version);
     Codepoints codepoints() const;
     Codepoints codepointsWithSkinTone(SkinTone skinTone) const;
     std::string strWithSkinTone(SkinTone skinTone) const;
@@ -62,12 +80,18 @@ public:
         return _hasSkinToneSupport;
     }
 
+    EmojiVersion version() const noexcept
+    {
+        return _version;
+    }
+
 private:
     const std::string _str;
     const std::string _name;
     mutable std::string _lcName;
     const std::unordered_set<std::string> _keywords;
     const bool _hasSkinToneSupport;
+    const EmojiVersion _version;
 };
 
 class EmojiCat

@@ -17,11 +17,13 @@
 namespace jome {
 
 Emoji::Emoji(const std::string& str, const std::string& name,
-             std::unordered_set<std::string>&& keywords, const bool hasSkinToneSupport) :
+             std::unordered_set<std::string>&& keywords, const bool hasSkinToneSupport,
+             const EmojiVersion version) :
     _str {str},
     _name {name},
     _keywords {std::move(keywords)},
-    _hasSkinToneSupport {hasSkinToneSupport}
+    _hasSkinToneSupport {hasSkinToneSupport},
+    _version {version}
 {
 }
 
@@ -129,6 +131,44 @@ json::JSON EmojiDb::_loadJson(const std::string& dir, const std::string& file)
     return json::JSON::Load(str);
 }
 
+namespace {
+
+EmojiVersion versionFromJson(const json::JSON& versionJson)
+{
+    const auto str = versionJson.ToString();
+
+    if (str == "0.6") {
+        return EmojiVersion::V_0_6;
+    } else if (str == "0.7") {
+        return EmojiVersion::V_0_7;
+    } else if (str == "1.0") {
+        return EmojiVersion::V_1_0;
+    } else if (str == "2.0") {
+        return EmojiVersion::V_2_0;
+    } else if (str == "3.0") {
+        return EmojiVersion::V_3_0;
+    } else if (str == "4.0") {
+        return EmojiVersion::V_4_0;
+    } else if (str == "5.0") {
+        return EmojiVersion::V_5_0;
+    } else if (str == "11.0") {
+        return EmojiVersion::V_11_0;
+    } else if (str == "12.0") {
+        return EmojiVersion::V_12_0;
+    } else if (str == "12.1") {
+        return EmojiVersion::V_12_1;
+    } else if (str == "13.0") {
+        return EmojiVersion::V_13_0;
+    } else if (str == "13.1") {
+        return EmojiVersion::V_13_1;
+    } else {
+        assert(str == "14.0");
+        return EmojiVersion::V_14_0;
+    }
+}
+
+} // namespace
+
 void EmojiDb::_createEmojis(const std::string& dir)
 {
     const auto emojisJson = this->_loadJson(dir, "emojis.json");
@@ -139,6 +179,7 @@ void EmojiDb::_createEmojis(const std::string& dir)
         const auto& nameJson = valJson.at("name");
         const auto& hasSkinToneSupport = valJson.at("has-skin-tone-support").ToBool();
         const auto& keywordsJson = valJson.at("keywords");
+        const auto& versionJson = valJson.at("version");
         std::unordered_set<std::string> keywords;
 
         for (const auto& kw : keywordsJson.ArrayRange()) {
@@ -146,7 +187,8 @@ void EmojiDb::_createEmojis(const std::string& dir)
         }
 
         auto emoji = std::make_unique<const Emoji>(emojiStr, nameJson.ToString(),
-                                                   std::move(keywords), hasSkinToneSupport);
+                                                   std::move(keywords), hasSkinToneSupport,
+                                                   versionFromJson(versionJson));
 
         for (const auto& keyword : emoji->keywords()) {
             _keywords.insert(keyword);

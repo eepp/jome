@@ -1,0 +1,308 @@
+♟️
+Chess pawn
+chess | dupe | expendable | chess pawn | red shirt
+
+♾️
+Infinity
+forever | infinity | universal
+
+🏴‍☠️
+Pirate flag
+plunder | treasure | pirate | pirate flag | jolly roger
+
+👨‍🦰
+Man: red hair
+red hair | man: red hair | adult | man
+
+👨‍🦱
+Man: curly hair
+man: curly hair | adult | man | curly hair
+
+👨‍🦲
+Man: bald
+man: bald | adult | bald | man
+
+👨‍🦳
+Man: white hair
+man: white hair | adult | man | white hair
+
+👩‍🦰
+Woman: red hair
+woman: red hair | adult | red hair | woman
+
+👩‍🦱
+Woman: curly hair
+adult | woman: curly hair | woman | curly hair
+
+👩‍🦲
+Woman: bald
+adult | bald | woman: bald | woman
+
+👩‍🦳
+Woman: white hair
+woman: white hair | adult | white hair | woman
+
+🛹
+Skateboard
+board | skateboard
+
+🥍
+Lacrosse
+lacrosse | ball | stick | goal
+
+🥎
+Softball
+underarm | ball | softball | glove
+
+🥏
+Flying disc
+ultimate | flying disc
+
+🥬
+Leafy green
+kale | leafy green | lettuce | cabbage | bok choy
+
+🥭
+Mango
+tropical | fruit | shaker | mango
+
+🥮
+Moon cake
+autumn | moon cake | yuèbǐng | festival
+
+🥯
+Bagel
+bagel | schmear | montreal | bakery
+
+🥰
+Smiling face with 3 hearts
+in love | crush | smiling face with 3 hearts | adore
+
+🥳
+Partying face
+party | celebration | horn | partying face | yay | hat
+
+🥴
+Woozy face
+uneven eyes | intoxicated | dizzy | drunk | tipsy | woozy face | wavy mouth
+
+🥵
+Hot face
+hot face | hot | red-faced | feverish | sweating | heat stroke
+
+🥶
+Cold face
+blue-faced | cold face | icicles | cold | freezing | frostbite
+
+🥺
+Pleading face
+pleading face | mercy | begging | puppy eyes | please
+
+🥼
+Lab coat
+scientist | doctor | experiment | lab coat
+
+🥽
+Goggles
+goggles | eye protection | swimming | welding
+
+🥾
+Hiking boot
+boot | backpacking | camping | hiking | hiking boot
+
+🥿
+Flat shoe
+slipper | ballet flat | slip-on | flat shoe
+
+🦘
+Kangaroo
+joey | jump | australia | kangaroo | marsupial
+
+🦙
+Llama
+wool | alpaca | llama | guanaco | vicuña
+
+🦚
+Peacock
+ostentatious | bird | proud | peahen | peacock
+
+🦛
+Hippopotamus
+hippo | hippopotamus
+
+🦜
+Parrot
+parrot | talk | bird | pirate
+
+🦝
+Raccoon
+raccoon | curious | sly
+
+🦞
+Lobster
+bisque | claws | seafood | lobster
+
+🦟
+Mosquito
+virus | fever | insect | malaria | disease | mosquito
+
+🦠
+Microbe
+bacteria | microbe | amoeba | virus
+
+🦡
+Badger
+badger | honey badger | pester
+
+🦢
+Swan
+swan | bird | ugly duckling | cygnet
+
+🦴
+Bone
+skeleton | bone
+
+🦵
+Leg
+leg | kick | limb
+
+🦶
+Foot
+foot | stomp | kick
+
+🦷
+Tooth
+dentist | tooth
+
+🦸
+Superhero
+good | superpowers | hero | superhero | superpower | heroine
+
+🦸‍♀️
+Woman superhero
+woman | good | woman superhero | hero | superpower | heroine
+
+🦸‍♂️
+Man superhero
+good | man superhero | hero | man | superpower
+
+🦹
+Supervillain
+evil | superpowers | supervillain | villain | criminal | bad | superpower
+
+🦹‍♀️
+Woman supervillain
+woman | evil | villain | criminal | woman supervillain | superpower
+
+🦹‍♂️
+Man supervillain
+evil | man supervillain | villain | criminal | man | superpower
+
+🧁
+Cupcake
+sweet | cupcake | bakery
+
+🧂
+Salt
+sodium | shaker | condiment | salt
+
+🧧
+Red envelope
+lai see | hóngbāo | gift | money | good luck | red envelope
+
+🧨
+Firecracker
+firecracker | dynamite | fireworks | explosive
+
+🧩
+Jigsaw
+clue | puzzle | interlocking | piece | jigsaw
+
+🧪
+Test tube
+chemistry | lab | chemist | science | experiment | test tube
+
+🧫
+Petri dish
+petri dish | biology | lab | bacteria | biologist | culture
+
+🧬
+Dna
+gene | biologist | genetics | evolution | dna | life
+
+🧭
+Compass
+compass | orienteering | magnetic | navigation
+
+🧮
+Abacus
+abacus | calculation
+
+🧯
+Fire extinguisher
+quench | extinguish | fire | fire extinguisher
+
+🧰
+Toolbox
+tool | toolbox | chest | mechanic
+
+🧱
+Brick
+wall | clay | brick | bricks | mortar
+
+🧲
+Magnet
+attraction | magnetic | magnet | horseshoe
+
+🧳
+Luggage
+luggage | travel | packing
+
+🧴
+Lotion bottle
+lotion | moisturizer | lotion bottle | sunscreen | shampoo
+
+🧵
+Thread
+needle | string | sewing | thread | spool
+
+🧶
+Yarn
+ball | crochet | yarn | knit
+
+🧷
+Safety pin
+punk rock | safety pin | diaper
+
+🧸
+Teddy bear
+toy | teddy bear | plaything | plush | stuffed
+
+🧹
+Broom
+cleaning | witch | broom | sweeping
+
+🧺
+Basket
+basket | farming | laundry | picnic
+
+🧻
+Roll of paper
+paper towels | roll of paper | toilet paper
+
+🧼
+Soap
+cleaning | soapdish | lather | bathing | bar | soap
+
+🧽
+Sponge
+porous | cleaning | absorbing | sponge
+
+🧾
+Receipt
+bookkeeping | accounting | evidence | receipt | proof
+
+🧿
+Nazar amulet
+bead | nazar amulet | nazar | talisman | charm | evil-eye
+
