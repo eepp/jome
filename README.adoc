@@ -48,19 +48,20 @@ You need:
 * http://www.boost.org/[Boost] ≥ 1.58 (only to 🏗)
 * Qt 5 (_Core_, _GUI_, _Widgets_, and _Network_ modules)
 
-.🏗 and install jome
+.🏗 jome
 ----
-$ mkdir build
-$ cd build
-$ cmake -DCMAKE_BUILD_TYPE=release ..
-$ make -j$(nproc)
-$ sudo make install
+$ mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=release .. && make -j$(nproc)
 ----
 
 [NOTE]
 You need to _install_ jome for it to find the correct data 📄. If you
 don't want to install it on your system, use
 `-DCMAKE_INSTALL_PREFIX=path/to/install/directory` when you run `cmake`.
+
+.Install jome
+----
+$ sudo make install
+----
 
 
 == Usage
