@@ -64,6 +64,16 @@ $ sudo make install
 ----
 
 
+== Install on Arch Linux
+
+To install on Arch Linux from the
+https://aur.archlinux.org/packages/jome-git[jome-git] AUR package:
+
+----
+$ yay -Sy jome-git
+----
+
+
 == Usage
 
 jome's purpose is to help you _pick_ an emoji.
