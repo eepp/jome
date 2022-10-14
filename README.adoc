@@ -149,7 +149,7 @@ where:
 `_TERMS_`::
     Space-separated list of 🔍 terms.
 +
-For an emoji to be part of the results, at least 🔍 of its keywords
+For an emoji to be part of the results, at least 1️⃣ of its keywords
 must contain _all_ the 🔍 terms.
 
 
