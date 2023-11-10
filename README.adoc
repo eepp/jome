@@ -84,9 +84,12 @@ jome 🖨 the UTF-8 emoji or the Unicode codepoints (see the
 <<opt-p,`-p`{nbsp}option>>) for each codepoint, to the standard output.
 Additionally, jome can:
 
+* Copy the UTF-8 emoji or the Unicode codepoints to the clipboard. See
+  the <<opt-b,`-b`{nbsp}option>>.
+
 * Execute a custom command which receives the UTF-8 emoji or the Unicode
   codepoints, with an optional prefix for each codepoint, as its
-  last argument(s). See the <<opt-s,`-c`{nbsp}option>>.
+  last argument(s). See the <<opt-c,`-c`{nbsp}option>>.
 
 * Send the UTF-8 emoji or the Unicode codepoints, with an optional
   prefix for each codepoint, in response to a client which requested
@@ -248,6 +251,10 @@ $ jome -c 'xdotool type'
 $ jome -f cp -p U -c 'xdotool key --delay 20'
 ----
 
+[[opt-b]]`-b`::
+    When you accept an emoji, copy the UTF-8 emoji or the Unicode
+    codepoints (depending on the <<opt-f,`-f`{nbsp}option>>) to the 📋.
+
 [[opt-q]]`-q`::
     Do not quit when you <<accept-emoji,accept>> an emoji.
 +
@@ -256,6 +263,8 @@ By default, when you accept an emoji (with the ⌨️ or with the 🖱), jome:
 --
 . 🖨 the accepted emoji or its codepoints to the standard output.
 . Hides its 🪟.
+. **Optional**: Copies the accepted emoji/codepoints to the
+  clipboard (see the <<opt-b,`-b`{nbsp}option>>).
 . **Optional**: Executes a command (see the <<opt-c,`-c`{nbsp}option>>)
   after 20{nbsp}ms.
 . **If not running in server mode**, quits (see the

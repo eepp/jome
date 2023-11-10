@@ -6,6 +6,7 @@
  */
 
 #include <QApplication>
+#include <QClipboard>
 #include <QCommandLineParser>
 #include <QString>
 #include <QProcess>
@@ -34,6 +35,7 @@ struct Params
     bool noNewline;
     bool noHide;
     bool darkBg;
+    bool copyToClipboard;
     boost::optional<std::string> serverName;
     boost::optional<std::string> cmd;
     std::string cpPrefix;
@@ -53,6 +55,7 @@ Params parseArgs(QApplication& app)
     const QCommandLineOption formatOpt {"f", "Output format (`utf-8` or `cp`)", "FORMAT", "utf-8"};
     const QCommandLineOption serverNameOpt {"s", "Server name", "NAME"};
     const QCommandLineOption cmdOpt {"c", "External command", "CMD"};
+    const QCommandLineOption copyToClipboardOpt {"b", "Copy the accepted emoji to the clipboard"};
     const QCommandLineOption cpPrefixOpt {"p", "Codepoint prefix", "CPPREFIX"};
     const QCommandLineOption noNlOpt {"n", "Do not output newline"};
     const QCommandLineOption noHideOpt {"q", "Do not quit when accepting"};
@@ -62,6 +65,7 @@ Params parseArgs(QApplication& app)
     parser.addOption(formatOpt);
     parser.addOption(serverNameOpt);
     parser.addOption(cmdOpt);
+    parser.addOption(copyToClipboardOpt);
     parser.addOption(cpPrefixOpt);
     parser.addOption(noNlOpt);
     parser.addOption(noHideOpt);
@@ -74,6 +78,7 @@ Params parseArgs(QApplication& app)
     params.noNewline = parser.isSet(noNlOpt);
     params.noHide = parser.isSet(noHideOpt);
     params.darkBg = parser.isSet(darkBgOpt);
+    params.copyToClipboard = parser.isSet(copyToClipboardOpt);
 
     const auto fmt = parser.value(formatOpt);
 
@@ -234,6 +239,10 @@ int main(int argc, char **argv)
         // print result
         std::cout << emojiStr;
         std::cout.flush();
+
+        if (params.copyToClipboard) {
+            QGuiApplication::clipboard()->setText(QString::fromStdString(emojiStr));
+        }
 
         if (params.cmd) {
             // execute command in 20 ms
