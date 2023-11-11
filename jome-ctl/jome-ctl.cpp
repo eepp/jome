@@ -33,16 +33,17 @@ Params parseArgs(QCoreApplication& app)
     parser.process(app);
 
     Params params;
+    const auto posArgs = parser.positionalArguments();
 
-    if (parser.positionalArguments().isEmpty()) {
+    if (posArgs.isEmpty()) {
         std::cerr << "Command-line error: missing server name." << std::endl;
         std::exit(1);
     }
 
     params.serverName = parser.positionalArguments().first().toUtf8().constData();
 
-    if (parser.positionalArguments().size() >= 2) {
-        const auto& cmd = parser.positionalArguments()[1];
+    if (posArgs.size() >= 2) {
+        const auto& cmd = posArgs[1];
 
         if (cmd == "quit") {
             params.cmd = jome::QCtlClient::Command::QUIT;
