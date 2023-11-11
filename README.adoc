@@ -92,13 +92,13 @@ Additionally, jome can:
   prefix for each codepoint, in response to a client which requested
   picking an emoji. See the <<opt-s,`-s`{nbsp}option>>.
 
-If you close the window (you can 👇 **Escape** to do this), then jome
-🖨 nothing to the standard output and executes nothing.
+If you close the 🪟 (you can 👇 **Escape** to do this), then jome 🖨
+nothing to the standard output and executes nothing.
 
 If you don't start jome in <<server-mode,server mode>>
 (<<opt-s,`-s`{nbsp}option>>) and you don't specify the
 <<opt-q,`-q`{nbsp}option>>, then jome immediately quits after you accept
-an emoji or close the window.
+an emoji or close the 🪟.
 
 
 === Graphical interface
@@ -195,7 +195,7 @@ To select an emoji, use the following ⌨️:
     emoji with a light, medium-light, medium, medium-dark, or dark
     skin tone.
 
-To cancel, 👇 **Escape** or close the window.
+To cancel, 👇 **Escape** or close the 🪟.
 
 
 === Go to Emojipedia page
@@ -232,7 +232,7 @@ For example, with `-f cp` and `-p U+`: `U+1f645 U+200d U+2642 U+fe0f`.
 
 [[opt-c]]`-c _CMD_`::
     When you accept an emoji, execute command `_CMD_` 20{nbsp}ms
-    _after_ closing the jome window.
+    _after_ closing the jome 🪟.
 +
 jome interprets `_CMD_` like a 🐚 does, so you can have arguments
 too.
@@ -255,14 +255,14 @@ By default, when you accept an emoji (with the ⌨️ or with the 🖱), jome:
 +
 --
 . 🖨 the accepted emoji or its codepoints to the standard output.
-. Hides its window.
+. Hides its 🪟.
 . **Optional**: Executes a command (see the <<opt-c,`-c`{nbsp}option>>)
   after 20{nbsp}ms.
 . **If not running in server mode**, quits (see the
   <<opt-s,`-s`{nbsp}option>>).
 --
 +
-With the `-q`{nbsp}option, jome does not hide its window and does not quit
+With the `-q`{nbsp}option, jome does not hide its 🪟 and does not quit
 when you accept an emoji so that you can make it 🖨 multiple emojis
 and/or execute a command multiple ⏲ with multiple emojis without
 restarting the application.
@@ -291,9 +291,9 @@ You cannot specify the `-s` and <<opt-q,`-q`>>{nbsp}options at the same
 [[server-mode]]
 === Server mode
 
-jome features a server mode to avoid creating a process (a Qt window can
+jome features a server mode to avoid creating a process (a Qt 🪟 can
 be quite long to create) every ⏲ you need to pick an emoji. With this
-mode, you can 👁 the jome window instantaneously.
+mode, you can 👁 the jome 🪟 instantaneously.
 
 To start jome in server mode, use the <<opt-s,`-s`{nbsp}option>> to
 specify the server name:
@@ -316,9 +316,9 @@ $ jome -s mein-server
 ----
 --
 
-When jome starts in server mode, it does not 👁 its window. Instead,
+When jome starts in server mode, it does not 👁 its 🪟. Instead,
 it ⌛ for a command sent by the client, `jome-ctl`. To 👁 the
-window:
+🪟:
 
 ----
 $ jome-ctl mein-server
@@ -329,11 +329,11 @@ also 🖨 to the standard output and quits with exit code 0️⃣.
 Therefore, the output format of `jome-ctl` is 🎛 by the
 <<cl-options,options>> passed to `jome`.
 
-If you cancel jome (press **Escape** or close the window), `jome-ctl`
+If you cancel jome (press **Escape** or close the 🪟), `jome-ctl`
 🖨 nothing and returns with exit code 1️⃣.
 
 In server mode, jome does not quit once you accept an emoji or cancel:
-it hides the window and keeps 👂. To make it quit gracefully,
+it hides the 🪟 and keeps 👂. To make it quit gracefully,
 which also removes the socket 📄:
 
 ----
