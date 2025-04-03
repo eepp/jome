@@ -12,7 +12,7 @@ find_package (Qt5Gui CONFIG REQUIRED)
 find_package (Qt5Network CONFIG REQUIRED)
 
 # Boost
-find_package (Boost 1.58 REQUIRED)
+find_package (Boost 1.70 REQUIRED)
 
 # jome program
 add_executable (
@@ -34,10 +34,10 @@ target_link_libraries (
     Qt5::Widgets
     Qt5::Gui
     Qt5::Network
+    Boost::boost
 )
 target_include_directories (
     jome PRIVATE
-    ${Boost_INCLUDE_DIRS}
 )
 target_compile_definitions (
     jome PRIVATE
