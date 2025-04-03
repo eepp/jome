@@ -95,8 +95,9 @@ Additionally, jome can:
   prefix for each codepoint, in response to a client which requested
   picking an emoji. See the <<opt-s,`-s`{nbsp}option>>.
 
-If you close the 🪟 (you can 👇 **Escape** to do this), then jome 🖨
-nothing to the standard output and executes nothing.
+If you close the 🪟 (you can 👇 **Escape** or **Ctrl**pass:[+]**C**
+to do this), then jome 🖨 nothing to the standard output
+and executes nothing.
 
 If you don't start jome in <<server-mode,server mode>>
 (<<opt-s,`-s`{nbsp}option>>) and you don't specify the
@@ -198,7 +199,7 @@ To select an emoji, use the following ⌨️:
     emoji with a light, medium-light, medium, medium-dark, or dark
     skin tone.
 
-To cancel, 👇 **Escape** or close the 🪟.
+To cancel, 👇 **Escape** or **Ctrl**pass:[+]**C**, or close the 🪟.
 
 
 === Go to Emojipedia page
@@ -338,8 +339,8 @@ also 🖨 to the standard output and quits with exit code 0️⃣.
 Therefore, the output format of `jome-ctl` is 🎛 by the
 <<cl-options,options>> passed to `jome`.
 
-If you cancel jome (press **Escape** or close the 🪟), `jome-ctl`
-🖨 nothing and returns with exit code 1️⃣.
+If you cancel jome (👇 **Escape** or **Ctrl**pass:[+]**C**, or
+close the 🪟), `jome-ctl` 🖨 nothing and returns with exit code 1️⃣.
 
 In server mode, jome does not quit once you accept an emoji or cancel:
 it hides the 🪟 and keeps 👂. To make it quit gracefully,

@@ -103,6 +103,15 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj, QEvent * const even
         emit this->escapeKeyPressed();
         break;
 
+    case Qt::Key_C:
+        if (withCtrl) {
+            emit this->escapeKeyPressed();
+        } else {
+            return QObject::eventFilter(obj, event);
+        }
+
+        break;
+
     default:
         return QObject::eventFilter(obj, event);
     }
