@@ -371,7 +371,7 @@ Here are Bash 📜 to ⌨️ the accepted emoji with
 https://www.semicomplete.com/projects/xdotool/[xdotool].
 
 
-=== Non server mode
+=== Direct mode
 
 With `xdotool key`::
 +
@@ -379,9 +379,9 @@ With `xdotool key`::
 ----
 #!/usr/bin/bash
 
-codepoints="$(jome -f cp -p U)"
+codepoints=$(jome -f cp -p U)
 
-if [ $? -ne 0 ]; then
+if (($? != 0)); then
     exit 1
 fi
 
@@ -394,9 +394,9 @@ With `xdotool type`::
 ----
 #!/usr/bin/bash
 
-emoji="$(jome)"
+emoji=$(jome)
 
-if [ $? -ne 0 ]; then
+if (($? != 0)); then
     exit 1
 fi
 
@@ -412,18 +412,22 @@ With `xdotool key`::
 ----
 #!/usr/bin/bash
 
-socket_name="jome.socket.$(id -u)"
+socket_name=jome.socket.$(id -u)
 
-if ! pidof jome &>/dev/null; then
-    rm -f "/tmp/$socket_name"
-    jome -s "$socket_name" -f cp -p U -c 'xdotool key --delay 20' & disown
+if [[ ! -e "/tmp/$socket_name" ]]; then
+    jome -s "$socket_name" -n -w48 -f cp -p U & disown
 
-    while [ ! -e "/tmp/$socket_name" ]; do
+    until [[ -e "/tmp/$socket_name" ]]; do
         sleep .1
     done
 fi
 
-jome-ctl "$socket_name"
+emoji=$(jome-ctl "$socket_name")
+
+if (($? == 0)); then
+    sleep .02
+    xdotool key --delay 20 "$emoji"
+fi
 ----
 
 With `xdotool type`::
@@ -432,16 +436,20 @@ With `xdotool type`::
 ----
 #!/usr/bin/bash
 
-socket_name="jome.socket.$(id -u)"
+socket_name=jome.socket.$(id -u)
 
-if ! pidof jome &>/dev/null; then
-    rm -f "/tmp/$socket_name"
-    jome -s "$socket_name" -c 'xdotool type' & disown
+if [[ ! -e "/tmp/$socket_name" ]]; then
+    jome -s "$socket_name" -n -w48 & disown
 
-    while [ ! -e "/tmp/$socket_name" ]; do
+    until [[ -e "/tmp/$socket_name" ]]; do
         sleep .1
     done
 fi
 
-jome-ctl "$socket_name"
+emoji=$(jome-ctl "$socket_name")
+
+if (($? == 0)); then
+    sleep .02
+    xdotool type "$emoji"
+fi
 ----
