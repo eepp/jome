@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Philippe Proulx <eepp.ca>
+ * Copyright (C) 2019-2025 Philippe Proulx <eepp.ca>
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -14,21 +14,21 @@
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
-#include <array>
 #include <boost/optional.hpp>
 
 #include "emoji-db.hpp"
 #include "q-jome-window.hpp"
 #include "q-jome-server.hpp"
 #include "settings.hpp"
+#include "utils.hpp"
 
 enum class Format
 {
-    UTF8,
-    CODEPOINTS_HEX,
+    Utf8,
+    CodepointsHex,
 };
 
-struct Params
+struct Params final
 {
     Format fmt;
     bool noNewline;
@@ -79,15 +79,17 @@ Params parseArgs(QApplication& app)
     params.darkBg = parser.isSet(darkBgOpt);
     params.copyToClipboard = parser.isSet(copyToClipboardOpt);
 
-    const auto fmt = parser.value(formatOpt);
+    {
+        const auto fmt = parser.value(formatOpt);
 
-    if (fmt == "utf-8") {
-        params.fmt = Format::UTF8;
-    } else if (fmt == "cp") {
-        params.fmt = Format::CODEPOINTS_HEX;
-    } else {
-        std::cerr << "Command-line error: unknown format `" << fmt.toUtf8().constData() << "`.\n";
-        std::exit(1);
+        if (fmt == "utf-8") {
+            params.fmt = Format::Utf8;
+        } else if (fmt == "cp") {
+            params.fmt = Format::CodepointsHex;
+        } else {
+            std::cerr << "Command-line error: unknown format `" << fmt.toUtf8().constData() << "`.\n";
+            std::exit(1);
+        }
     }
 
     if (parser.isSet(serverNameOpt)) {
@@ -107,21 +109,21 @@ Params parseArgs(QApplication& app)
         params.cpPrefix = parser.value(cpPrefixOpt).toUtf8().constData();
     }
 
-    params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_32;
+    params.emojiSize = jome::EmojiDb::EmojiSize::Size32;
 
     if (parser.isSet(emojiWidthOpt)) {
         const auto val = parser.value(emojiWidthOpt);
 
         if (val == "16") {
-            params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_16;
+            params.emojiSize = jome::EmojiDb::EmojiSize::Size16;
         } else if (val == "24") {
-            params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_24;
+            params.emojiSize = jome::EmojiDb::EmojiSize::Size24;
         } else if (val == "32") {
-            params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_32;
+            params.emojiSize = jome::EmojiDb::EmojiSize::Size32;
         } else if (val == "40") {
-            params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_40;
+            params.emojiSize = jome::EmojiDb::EmojiSize::Size40;
         } else if (val == "48") {
-            params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_48;
+            params.emojiSize = jome::EmojiDb::EmojiSize::Size48;
         } else {
             std::cerr << "Command-line error: unexpected value for `-w`: `" <<
                          val.toUtf8().constData() << "`.\n";
@@ -146,7 +148,7 @@ std::string formatEmoji(const jome::Emoji& emoji,
     std::string output;
 
     switch (fmt) {
-    case Format::UTF8:
+    case Format::Utf8:
     {
         if (skinTone && emoji.hasSkinToneSupport()) {
             output = emoji.strWithSkinTone(*skinTone);
@@ -157,21 +159,20 @@ std::string formatEmoji(const jome::Emoji& emoji,
         break;
     }
 
-    case Format::CODEPOINTS_HEX:
+    case Format::CodepointsHex:
     {
-        jome::Emoji::Codepoints codepoints;
-
-        if (skinTone && emoji.hasSkinToneSupport()) {
-            codepoints = emoji.codepointsWithSkinTone(*skinTone);
-        } else {
-            codepoints = emoji.codepoints();
-        }
+        const auto codepoints = jome::call([skinTone, &emoji] {
+            if (skinTone && emoji.hasSkinToneSupport()) {
+                return emoji.codepointsWithSkinTone(*skinTone);
+            } else {
+                return emoji.codepoints();
+            }
+        });
 
         for (const auto codepoint : codepoints) {
-            std::array<char, 32> buf;
-
-            std::sprintf(buf.data(), "%s%x ", cpPrefix.c_str(), codepoint);
-            output += buf.data();
+            output += cpPrefix;
+            output += QString::number(codepoint, 16).toStdString();
+            output += ' ';
         }
 
         // remove trailing space
@@ -223,6 +224,7 @@ int main(int argc, char **argv)
             });
         }
     });
+
     QObject::connect(&win, &jome::QJomeWindow::emojiChosen,
                      [&](const auto& emoji, const auto& skinTone) {
         const auto emojiStr = formatEmoji(emoji, skinTone, params.fmt, params.cpPrefix,
@@ -287,6 +289,7 @@ int main(int argc, char **argv)
 
     if (params.serverName) {
         server = std::make_unique<jome::QJomeServer>(nullptr, *params.serverName);
+
         QObject::connect(server.get(), &jome::QJomeServer::clientRequested,
                          [&server, &win, &db](const jome::QJomeServer::Command cmd) {
             if (cmd == jome::QJomeServer::Command::QUIT) {

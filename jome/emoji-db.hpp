@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Philippe Proulx <eepp.ca>
+ * Copyright (C) 2019-2025 Philippe Proulx <eepp.ca>
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -34,7 +34,7 @@ enum class EmojiVersion
     V_14_0,
 };
 
-class Emoji
+class Emoji final
 {
 public:
     using Codepoint = unsigned int;
@@ -43,17 +43,18 @@ public:
 public:
     enum class SkinTone
     {
-        LIGHT,
-        MEDIUM_LIGHT,
-        MEDIUM,
-        MEDIUM_DARK,
-        DARK,
+        Light,
+        MediumLight,
+        Medium,
+        MediumDark,
+        Dark,
     };
 
 public:
     explicit Emoji(std::string str, std::string name,
                    std::unordered_set<std::string>&& keywords, bool hasSkinToneSupport,
                    EmojiVersion version);
+
     Codepoints codepoints() const;
     Codepoints codepointsWithSkinTone(SkinTone skinTone) const;
     std::string strWithSkinTone(SkinTone skinTone) const;
@@ -93,12 +94,14 @@ private:
     const EmojiVersion _version;
 };
 
-class EmojiCat
+class EmojiCat final
 {
 public:
     explicit EmojiCat(std::string id, std::string name);
+
     explicit EmojiCat(std::string id, std::string name,
                       std::vector<const Emoji *>&& emojis);
+
     const std::string& lcName() const;
 
     const std::string& id() const noexcept
@@ -128,28 +131,30 @@ private:
     std::vector<const Emoji *> _emojis;
 };
 
-struct EmojisPngLocation
+struct EmojisPngLocation final
 {
     unsigned int x;
     unsigned int y;
 };
 
-class EmojiDb
+class EmojiDb final
 {
 public:
     enum class EmojiSize
     {
-        SIZE_16 = 16,
-        SIZE_24 = 24,
-        SIZE_32 = 32,
-        SIZE_40 = 40,
-        SIZE_48 = 48,
+        Size16 = 16,
+        Size24 = 24,
+        Size32 = 32,
+        Size40 = 40,
+        Size48 = 48,
     };
 
 public:
     explicit EmojiDb(const std::string& dir, EmojiSize emojiSize);
+
     void findEmojis(const std::string& cat, const std::string& needles,
                     std::vector<const Emoji *>& results) const;
+
     void recentEmojis(std::vector<const Emoji *>&& emojis);
     void addRecentEmoji(const Emoji& emoji);
 

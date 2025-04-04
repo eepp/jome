@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Philippe Proulx <eepp.ca>
+ * Copyright (C) 2019-2025 Philippe Proulx <eepp.ca>
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -22,7 +22,7 @@
 
 namespace jome {
 
-class QEmojisWidget :
+class QEmojisWidget final :
     public QGraphicsView
 {
     Q_OBJECT
@@ -35,6 +35,7 @@ public:
 public:
     explicit QEmojisWidget(QWidget *parent, const EmojiDb& emojiDb,
                            bool darkBg);
+
     ~QEmojisWidget();
     void rebuild();
     void showAllEmojis();
@@ -80,11 +81,10 @@ private:
                                    QGraphicsScene& gs, qreal& y)
     {
         qreal col = 0.;
-        const auto availWidth = gs.width();
         const auto rowFirstEmojiX = this->_rowFirstEmojiX(gs);
         const auto emojiWidthAndMargin = _emojiDb->emojiSizeInt() + 8.;
 
-        for (const auto& emoji : emojis) {
+        for (auto& emoji : emojis) {
             auto emojiGraphicsItem = new QEmojiGraphicsItem {
                 *emoji, _emojiImages.pixmapForEmoji(*emoji), *this
             };
@@ -94,7 +94,7 @@ private:
             gs.addItem(emojiGraphicsItem);
             col += 1;
 
-            if ((col + 1.) * emojiWidthAndMargin + rowFirstEmojiX >= availWidth) {
+            if ((col + 1.) * emojiWidthAndMargin + rowFirstEmojiX >= gs.width()) {
                 col = 0.;
                 y += emojiWidthAndMargin;
             }

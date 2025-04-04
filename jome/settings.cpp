@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Philippe Proulx <eepp.ca>
+ * Copyright (C) 2019-2025 Philippe Proulx <eepp.ca>
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -9,14 +9,13 @@
 #include <vector>
 
 #include "settings.hpp"
+#include "utils.hpp"
 
 namespace jome {
 
 void updateRecentEmojisFromSettings(EmojiDb& db)
 {
-    std::vector<const Emoji *> recentEmojis;
     QSettings settings;
-
     const auto recentEmojisVar = settings.value("recent-emojis");
 
     if (!recentEmojisVar.canConvert<QList<QVariant>>()) {
@@ -24,6 +23,7 @@ void updateRecentEmojisFromSettings(EmojiDb& db)
     }
 
     const auto recentEmojisList = recentEmojisVar.toList();
+    std::vector<const Emoji *> recentEmojis;
 
     for (const auto& emojiStrVar : recentEmojisList) {
         if (!emojiStrVar.canConvert<QString>()) {
@@ -41,13 +41,17 @@ void updateRecentEmojisFromSettings(EmojiDb& db)
 
 void updateSettings(const EmojiDb& db)
 {
-    QList<QVariant> emojiList;
+    const auto emojiList = call([&db] {
+        QList<QVariant> emojiList;
 
-    for (const auto emoji : db.recentEmojisCat().emojis()) {
-        const auto emojiStr = QString::fromStdString(emoji->str());
+        for (const auto emoji : db.recentEmojisCat().emojis()) {
+            const auto emojiStr = QString::fromStdString(emoji->str());
 
-        emojiList.append(emojiStr);
-    }
+            emojiList.append(emojiStr);
+        }
+
+        return emojiList;
+    });
 
     // update settings and write immediately
     QSettings settings;

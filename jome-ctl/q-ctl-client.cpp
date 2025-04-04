@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Philippe Proulx <eepp.ca>
+ * Copyright (C) 2019-2025 Philippe Proulx <eepp.ca>
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -40,11 +40,11 @@ void QCtlClient::_sendString(const std::string& str)
 void QCtlClient::_socketConnected()
 {
     switch (_curCmd) {
-    case Command::PICK:
+    case Command::Pick:
         this->_sendString("pick");
         break;
 
-    case Command::QUIT:
+    case Command::Quit:
         this->_sendString("quit");
         break;
     }
@@ -54,10 +54,13 @@ void QCtlClient::_socketReadyRead()
 {
     while (_socket.bytesAvailable() > 0) {
         char byte;
-        const auto count = _socket.read(&byte, 1);
 
-        static_cast<void>(count);
-        assert(count == 1);
+        {
+            const auto count = _socket.read(&byte, 1);
+
+            static_cast<void>(count);
+            assert(count == 1);
+        }
 
         if (byte == '\0') {
             // end of message

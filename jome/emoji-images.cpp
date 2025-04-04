@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Philippe Proulx <eepp.ca>
+ * Copyright (C) 2019-2025 Philippe Proulx <eepp.ca>
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -16,16 +16,16 @@ EmojiImages::EmojiImages(const EmojiDb& db)
 
 void EmojiImages::_createPixmaps(const EmojiDb& db)
 {
-    QImage image {QString::fromStdString(db.emojisPngPath())};
-    auto emojisPixmap = QPixmap::fromImage(std::move(image));
+    auto emojisPixmap = QPixmap::fromImage(QImage {QString::fromStdString(db.emojisPngPath())});
 
-    for (const auto& emojiPngLocation : db.emojiPngLocations()) {
-        const auto emoji = emojiPngLocation.first;
-        const auto& pngLoc = emojiPngLocation.second;
+    for (auto& emojiPngLocation : db.emojiPngLocations()) {
+        auto& pngLoc = emojiPngLocation.second;
         const auto emojiSize = db.emojiSizeInt();
-        auto pixmap = std::make_unique<QPixmap>(emojisPixmap.copy(pngLoc.x, pngLoc.y, emojiSize,
-                                                                  emojiSize));
-        _emojiPixmaps[emoji] = std::move(pixmap);
+
+        _emojiPixmaps[emojiPngLocation.first] = std::make_unique<QPixmap>(emojisPixmap.copy(pngLoc.x,
+                                                                                            pngLoc.y,
+                                                                                            emojiSize,
+                                                                                            emojiSize));
     }
 }
 

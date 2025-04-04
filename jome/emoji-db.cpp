@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Philippe Proulx <eepp.ca>
+ * Copyright (C) 2019-2025 Philippe Proulx <eepp.ca>
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -13,6 +13,7 @@
 #include <boost/algorithm/string.hpp>
 #include <nlohmann/json.hpp>
 
+#include "utils.hpp"
 #include "emoji-db.hpp"
 
 namespace jome {
@@ -49,43 +50,40 @@ Emoji::Codepoints Emoji::codepointsWithSkinTone(const SkinTone skinTone) const
     assert(_hasSkinToneSupport);
 
     auto codepoints = this->codepoints();
-    Codepoint skinToneCodepoint = 0;
 
-    switch (skinTone) {
-    case SkinTone::LIGHT:
-        skinToneCodepoint = 0x1f3fb;
-        break;
+    codepoints.insert(codepoints.begin() + 1, call([skinTone] {
+        switch (skinTone) {
+        case SkinTone::Light:
+            return 0x1f3fb;
 
-    case SkinTone::MEDIUM_LIGHT:
-        skinToneCodepoint = 0x1f3fc;
-        break;
+        case SkinTone::MediumLight:
+            return 0x1f3fc;
 
-    case SkinTone::MEDIUM:
-        skinToneCodepoint = 0x1f3fd;
-        break;
+        case SkinTone::Medium:
+            return 0x1f3fd;
 
-    case SkinTone::MEDIUM_DARK:
-        skinToneCodepoint = 0x1f3fe;
-        break;
+        case SkinTone::MediumDark:
+            return 0x1f3fe;
 
-    case SkinTone::DARK:
-        skinToneCodepoint = 0x1f3ff;
-        break;
+        case SkinTone::Dark:
+            return 0x1f3ff;
 
-    default:
-        std::abort();
-    }
+        default:
+            std::abort();
+        }
+    }));
 
-    codepoints.insert(codepoints.begin() + 1, skinToneCodepoint);
     return codepoints;
 }
 
 Emoji::Codepoints Emoji::codepoints() const
 {
-    const auto qCodepoints = QString::fromStdString(_str).toUcs4();
     Codepoints codepoints;
 
-    std::copy(qCodepoints.begin(), qCodepoints.end(), std::back_inserter(codepoints));
+    for (const auto qcp : QString::fromStdString(_str).toUcs4()) {
+        codepoints.push_back(qcp);
+    }
+
     return codepoints;
 }
 
@@ -125,71 +123,64 @@ EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize) :
 nlohmann::json EmojiDb::_loadJson(const std::string& dir, const std::string& file)
 {
     std::ifstream f {dir + '/' + file};
-
     nlohmann::json json;
 
     f >> json;
     return json;
 }
 
-namespace {
-
-EmojiVersion versionFromJson(const nlohmann::json& versionJson)
-{
-    const auto str = versionJson.get<std::string>();
-
-    if (str == "0.6") {
-        return EmojiVersion::V_0_6;
-    } else if (str == "0.7") {
-        return EmojiVersion::V_0_7;
-    } else if (str == "1.0") {
-        return EmojiVersion::V_1_0;
-    } else if (str == "2.0") {
-        return EmojiVersion::V_2_0;
-    } else if (str == "3.0") {
-        return EmojiVersion::V_3_0;
-    } else if (str == "4.0") {
-        return EmojiVersion::V_4_0;
-    } else if (str == "5.0") {
-        return EmojiVersion::V_5_0;
-    } else if (str == "11.0") {
-        return EmojiVersion::V_11_0;
-    } else if (str == "12.0") {
-        return EmojiVersion::V_12_0;
-    } else if (str == "12.1") {
-        return EmojiVersion::V_12_1;
-    } else if (str == "13.0") {
-        return EmojiVersion::V_13_0;
-    } else if (str == "13.1") {
-        return EmojiVersion::V_13_1;
-    } else {
-        assert(str == "14.0");
-        return EmojiVersion::V_14_0;
-    }
-}
-
-} // namespace
-
 void EmojiDb::_createEmojis(const std::string& dir)
 {
     const auto jsonEmojis = this->_loadJson(dir, "emojis.json");
 
     for (auto& emojiKeyJsonValPair : jsonEmojis.items()) {
-        auto& emojiStr = emojiKeyJsonValPair.key();
-        auto& jsonVal = emojiKeyJsonValPair.value();
-        auto& jsonKeywords = jsonVal.at("keywords");
-        auto& jsonVersion = jsonVal.at("version");
-        std::unordered_set<std::string> keywords;
+        auto emoji = call([&emojiKeyJsonValPair] {
+            auto& jsonVal = emojiKeyJsonValPair.value();
 
-        for (auto& kw : jsonKeywords) {
-            keywords.insert(kw);
-        }
+            return std::make_unique<const Emoji>(emojiKeyJsonValPair.key(),
+                                                 jsonVal.at("name"),
+                                                 call([&jsonVal] {
+                                                     std::unordered_set<std::string> keywords;
 
-        auto emoji = std::make_unique<const Emoji>(emojiStr,
-                                                   jsonVal.at("name"),
-                                                   std::move(keywords),
-                                                   jsonVal.at("has-skin-tone-support"),
-                                                   versionFromJson(jsonVersion));
+                                                     for (auto& kw : jsonVal.at("keywords")) {
+                                                        keywords.insert(kw);
+                                                     }
+
+                                                     return keywords;
+                                                 }), jsonVal.at("has-skin-tone-support"),
+                                                 call([&jsonVal] {
+                                                     const auto str = jsonVal.at("version").get<std::string>();
+
+                                                     if (str == "0.6") {
+                                                         return EmojiVersion::V_0_6;
+                                                     } else if (str == "0.7") {
+                                                         return EmojiVersion::V_0_7;
+                                                     } else if (str == "1.0") {
+                                                         return EmojiVersion::V_1_0;
+                                                     } else if (str == "2.0") {
+                                                         return EmojiVersion::V_2_0;
+                                                     } else if (str == "3.0") {
+                                                         return EmojiVersion::V_3_0;
+                                                     } else if (str == "4.0") {
+                                                         return EmojiVersion::V_4_0;
+                                                     } else if (str == "5.0") {
+                                                         return EmojiVersion::V_5_0;
+                                                     } else if (str == "11.0") {
+                                                         return EmojiVersion::V_11_0;
+                                                     } else if (str == "12.0") {
+                                                         return EmojiVersion::V_12_0;
+                                                     } else if (str == "12.1") {
+                                                         return EmojiVersion::V_12_1;
+                                                     } else if (str == "13.0") {
+                                                         return EmojiVersion::V_13_0;
+                                                     } else if (str == "13.1") {
+                                                         return EmojiVersion::V_13_1;
+                                                     } else {
+                                                         assert(str == "14.0");
+                                                         return EmojiVersion::V_14_0;
+                                                     }
+                                                 }));
+        });
 
         for (auto& keyword : emoji->keywords()) {
             _keywords.insert(keyword);
@@ -204,7 +195,7 @@ void EmojiDb::_createEmojis(const std::string& dir)
             it->second.insert(emoji.get());
         }
 
-        _emojis[emojiStr] = std::move(emoji);
+        _emojis[emoji->str()] = std::move(emoji);
     }
 }
 
@@ -217,17 +208,18 @@ void EmojiDb::_createCats(const std::string& dir)
     const auto jsonCats = this->_loadJson(dir, "cats.json");
 
     for (auto& jsonCat : jsonCats) {
-        auto& jsonEmojis = jsonCat.at("emojis");
-        std::vector<const Emoji *> emojis;
+        _cats.push_back(call([this, &jsonCat] {
+            return std::make_unique<EmojiCat>(jsonCat.at("id"), jsonCat.at("name"),
+                                              call([this, &jsonCat] {
+                                                  std::vector<const Emoji *> emojis;
 
-        for (auto& jsonEmoji : jsonEmojis) {
-            emojis.push_back(_emojis[jsonEmoji].get());
-        }
+                                                  for (auto& jsonEmoji : jsonCat.at("emojis")) {
+                                                      emojis.push_back(_emojis[jsonEmoji].get());
+                                                  }
 
-        auto cat = std::make_unique<EmojiCat>(jsonCat.at("id"), jsonCat.at("name"),
-                                              std::move(emojis));
-
-        _cats.push_back(std::move(cat));
+                                                  return emojis;
+                                              }));
+        }));
     }
 }
 
@@ -251,8 +243,6 @@ void EmojiDb::_createEmojiPngLocations(const std::string& dir)
 void EmojiDb::findEmojis(const std::string& cat, const std::string& needlesStr,
                          std::vector<const Emoji *>& results) const
 {
-    std::string catTrimmed {cat};
-
     // split needles string into individual needles
     _tmpNeedles.clear();
     boost::split(_tmpNeedles, needlesStr, boost::is_any_of(" "));
@@ -263,24 +253,29 @@ void EmojiDb::findEmojis(const std::string& cat, const std::string& needlesStr,
     }
 
     // trim category
-    boost::trim(catTrimmed);
+    const auto catTrimmed = call([&cat] {
+        std::string catTrimmed {cat};
+
+        boost::trim(catTrimmed);
+        return catTrimmed;
+    });
 
     // this is to avoid duplicate entries in `results`
     _tmpFoundEmojis.clear();
 
-    for (const auto& cat : _cats) {
+    for (auto& cat : _cats) {
         if (!catTrimmed.empty() && cat->lcName().find(catTrimmed) == std::string::npos) {
             // we don't want to search this category
             continue;
         }
 
-        for (const auto& emoji : cat->emojis()) {
-            bool select = true;
+        for (auto& emoji : cat->emojis()) {
+            auto select = true;
 
-            for (const auto& keyword : emoji->keywords()) {
+            for (auto& keyword : emoji->keywords()) {
                 select = true;
 
-                for (const auto& needle : _tmpNeedles) {
+                for (auto& needle : _tmpNeedles) {
                     if (needle.empty()) {
                         continue;
                     }
@@ -337,7 +332,7 @@ void EmojiDb::addRecentEmoji(const Emoji& emoji)
 
     emojis.insert(emojis.begin(), &emoji);
 
-    constexpr auto maxRecentEmojis = 30U;
+    static constexpr auto maxRecentEmojis = 30U;
 
     if (emojis.size() > maxRecentEmojis) {
         emojis.resize(maxRecentEmojis);

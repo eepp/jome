@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Philippe Proulx <eepp.ca>
+ * Copyright (C) 2019-2025 Philippe Proulx <eepp.ca>
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -13,9 +13,9 @@
 
 #include "q-ctl-client.hpp"
 
-struct Params
+struct Params final
 {
-    jome::QCtlClient::Command cmd = jome::QCtlClient::Command::PICK;
+    jome::QCtlClient::Command cmd = jome::QCtlClient::Command::Pick;
     std::string serverName;
 };
 
@@ -43,10 +43,10 @@ Params parseArgs(QCoreApplication& app)
     params.serverName = parser.positionalArguments().first().toUtf8().constData();
 
     if (posArgs.size() >= 2) {
-        const auto& cmd = posArgs[1];
+        auto& cmd = posArgs[1];
 
         if (cmd == "quit") {
-            params.cmd = jome::QCtlClient::Command::QUIT;
+            params.cmd = jome::QCtlClient::Command::Quit;
         } else if (cmd != "pick") {
             std::cerr << "Command-line error: unknown command `" <<
                          cmd.toUtf8().constData() << "`.\n";
@@ -68,12 +68,11 @@ int main(int argc, char **argv)
     app.setApplicationVersion(JOME_VERSION);
 
     const auto params = parseArgs(app);
-
     jome::QCtlClient client {nullptr, params.serverName};
 
     QObject::connect(&client, &jome::QCtlClient::serverReplied,
                      [&params, &app](const std::string& str) {
-        if (params.cmd == jome::QCtlClient::Command::PICK) {
+        if (params.cmd == jome::QCtlClient::Command::Pick) {
             std::cout << str;
             std::cout.flush();
         }
@@ -81,6 +80,7 @@ int main(int argc, char **argv)
         // ignore response for other commands, just quit
         QTimer::singleShot(0, &app, &QCoreApplication::quit);
     });
+
     QObject::connect(&client, &jome::QCtlClient::error, [&app]() {
         // just quit
         QTimer::singleShot(0, &app, [&app]() {

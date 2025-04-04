@@ -18,7 +18,7 @@ namespace jome {
 
 class QEmojisWidget;
 
-class QEmojiGraphicsItem :
+class QEmojiGraphicsItem final :
     public QGraphicsPixmapItem
 {
 public:

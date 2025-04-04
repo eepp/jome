@@ -51,10 +51,13 @@ void QJomeServer::_socketReadyRead()
 
     while (_socket->bytesAvailable() > 0) {
         char byte;
-        const auto count = _socket->read(&byte, 1);
 
-        static_cast<void>(count);
-        assert(count == 1);
+        {
+            const auto count = _socket->read(&byte, 1);
+
+            static_cast<void>(count);
+            assert(count == 1);
+        }
 
         if (byte == '\0') {
             if (_tmpData == "pick") {

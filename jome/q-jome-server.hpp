@@ -14,7 +14,7 @@
 
 namespace jome {
 
-class QJomeServer :
+class QJomeServer final :
     public QObject
 {
     Q_OBJECT

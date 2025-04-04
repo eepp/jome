@@ -14,7 +14,7 @@
 
 namespace jome {
 
-class QCatListWidgetItem :
+class QCatListWidgetItem final :
     public QListWidgetItem
 {
 public:

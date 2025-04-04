@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Philippe Proulx <eepp.ca>
+ * Copyright (C) 2019-2025 Philippe Proulx <eepp.ca>
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -20,6 +20,7 @@
 #include "q-jome-window.hpp"
 #include "q-cat-list-widget-item.hpp"
 #include "emojipedia.hpp"
+#include "utils.hpp"
 
 namespace jome {
 
@@ -249,18 +250,22 @@ void QJomeWindow::_buildUi(const bool darkBg)
     _wCatList = this->_createCatListWidget();
     this->_wCatList->setCurrentRow(0);
 
-    const auto emojisHbox = new QHBoxLayout;
+    {
+        const auto emojisHbox = new QHBoxLayout;
 
-    emojisHbox->setMargin(0);
-    emojisHbox->setSpacing(8);
-    emojisHbox->addWidget(_wEmojis);
-    emojisHbox->addWidget(_wCatList);
-    mainVbox->addLayout(emojisHbox);
+        emojisHbox->setMargin(0);
+        emojisHbox->setSpacing(8);
+        emojisHbox->addWidget(_wEmojis);
+        emojisHbox->addWidget(_wCatList);
+        mainVbox->addLayout(emojisHbox);
+    }
 
-    const auto centralWidget = new QWidget;
+    {
+        const auto centralWidget = new QWidget;
 
-    centralWidget->setLayout(mainVbox);
-    this->setCentralWidget(centralWidget);
+        centralWidget->setLayout(mainVbox);
+        this->setCentralWidget(centralWidget);
+    }
 
     const auto infoHbox = new QHBoxLayout;
 
@@ -397,27 +402,27 @@ void QJomeWindow::_searchBoxEnterKeyPressed()
 
 void QJomeWindow::_searchBoxF1KeyPressed()
 {
-    this->_acceptSelectedEmoji(Emoji::SkinTone::LIGHT);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::Light);
 }
 
 void QJomeWindow::_searchBoxF2KeyPressed()
 {
-    this->_acceptSelectedEmoji(Emoji::SkinTone::MEDIUM_LIGHT);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::MediumLight);
 }
 
 void QJomeWindow::_searchBoxF3KeyPressed()
 {
-    this->_acceptSelectedEmoji(Emoji::SkinTone::MEDIUM);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::Medium);
 }
 
 void QJomeWindow::_searchBoxF4KeyPressed()
 {
-    this->_acceptSelectedEmoji(Emoji::SkinTone::MEDIUM_DARK);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::MediumDark);
 }
 
 void QJomeWindow::_searchBoxF5KeyPressed()
 {
-    this->_acceptSelectedEmoji(Emoji::SkinTone::DARK);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::Dark);
 }
 
 void QJomeWindow::_searchBoxF12KeyPressed()
@@ -501,68 +506,65 @@ void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
     _wInfoLabel->setText(text);
 }
 
-namespace {
-
-QString emojiVersionStr(const EmojiVersion version)
-{
-    switch (version) {
-    case EmojiVersion::V_0_6:
-        return "0.6";
-
-    case EmojiVersion::V_0_7:
-        return "0.7";
-
-    case EmojiVersion::V_1_0:
-        return "1.0";
-
-    case EmojiVersion::V_2_0:
-        return "2.0";
-
-    case EmojiVersion::V_3_0:
-        return "3.0";
-
-    case EmojiVersion::V_4_0:
-        return "4.0";
-
-    case EmojiVersion::V_5_0:
-        return "5.0";
-
-    case EmojiVersion::V_11_0:
-        return "11.0";
-
-    case EmojiVersion::V_12_0:
-        return "12.0";
-
-    case EmojiVersion::V_12_1:
-        return "12.1";
-
-    case EmojiVersion::V_13_0:
-        return "13.0";
-
-    case EmojiVersion::V_13_1:
-        return "13.1";
-
-    case EmojiVersion::V_14_0:
-        return "14.0";
-
-    default:
-        std::abort();
-    }
-}
-
-} // namespace
-
 void QJomeWindow::_updateVersionLabel(const Emoji * const emoji)
 {
-    QString text;
+    _wVersionLabel->setText(call([emoji] {
+        QString text;
 
-    if (emoji) {
-        text += "<span style=\"color: #2ecc71\">Emoji <b>";
-        text += emojiVersionStr(emoji->version());
-        text += "</b></span>";
-    }
+        if (emoji) {
+            text += "<span style=\"color: #2ecc71\">Emoji <b>";
 
-    _wVersionLabel->setText(text);
+            text += call([emoji] {
+                switch (emoji->version()) {
+                case EmojiVersion::V_0_6:
+                    return "0.6";
+
+                case EmojiVersion::V_0_7:
+                    return "0.7";
+
+                case EmojiVersion::V_1_0:
+                    return "1.0";
+
+                case EmojiVersion::V_2_0:
+                    return "2.0";
+
+                case EmojiVersion::V_3_0:
+                    return "3.0";
+
+                case EmojiVersion::V_4_0:
+                    return "4.0";
+
+                case EmojiVersion::V_5_0:
+                    return "5.0";
+
+                case EmojiVersion::V_11_0:
+                    return "11.0";
+
+                case EmojiVersion::V_12_0:
+                    return "12.0";
+
+                case EmojiVersion::V_12_1:
+                    return "12.1";
+
+                case EmojiVersion::V_13_0:
+                    return "13.0";
+
+                case EmojiVersion::V_13_1:
+                    return "13.1";
+
+                case EmojiVersion::V_14_0:
+                    return "14.0";
+
+                default:
+                    std::abort();
+                }
+            });
+
+            text += "</b></span>";
+        }
+
+        return text;
+    }));
 }
 
 void QJomeWindow::emojiDbChanged()

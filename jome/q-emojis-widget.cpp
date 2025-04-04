@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Philippe Proulx <eepp.ca>
+ * Copyright (C) 2019-2025 Philippe Proulx <eepp.ca>
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
@@ -18,6 +18,7 @@
 #include <boost/algorithm/string.hpp>
 
 #include "q-emojis-widget.hpp"
+#include "utils.hpp"
 
 namespace jome {
 
@@ -56,25 +57,16 @@ QEmojisWidget::~QEmojisWidget()
 
 void QEmojisWidget::_setGraphicsSceneStyle(QGraphicsScene& gs)
 {
-    QColor bgColor;
-
-    if (_darkBg) {
-        bgColor = "#202020";
-    } else {
-        bgColor = "#f8f8f8";
-    }
-
-    gs.setBackgroundBrush(bgColor);
+    gs.setBackgroundBrush(QColor {_darkBg ? "#202020" : "#f8f8f8"});
 }
 
 QGraphicsPixmapItem *QEmojisWidget::_createSelectedGraphicsItem()
 {
-    const auto path = std::string {JOME_DATA_DIR} + "/sel-" +
-                      std::to_string(_emojiDb->emojiSizeInt()) + ".png";
-
-    QImage image {QString::fromStdString(path)};
     auto graphicsItem = new QGraphicsPixmapItem {
-        QPixmap::fromImage(std::move(image))
+        QPixmap::fromImage(QImage {
+            QString::fromStdString(std::string {JOME_DATA_DIR} + "/sel-" +
+                                   std::to_string(_emojiDb->emojiSizeInt()) + ".png")
+        })
     };
 
     graphicsItem->hide();
@@ -93,18 +85,17 @@ void QEmojisWidget::rebuild()
     _allEmojisGraphicsScene.addItem(_allEmojisGraphicsSceneSelectedItem);
     _allEmojiGraphicsItems.clear();
     _catVertPositions.clear();
+    _allEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - 8., 0.);
 
+    const auto rowFirstEmojiX = this->_rowFirstEmojiX(_allEmojisGraphicsScene);
     qreal y = 8.;
 
-    _allEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - 8., 0.);
-    QFont font {"Hack, DejaVu Sans Mono, monospace", 10, QFont::Bold};
-    const auto rowFirstEmojiX = this->_rowFirstEmojiX(_allEmojisGraphicsScene);
-    const QColor textColor {_darkBg ? "#f8f8f8" : "#202020"};
-
     for (const auto& cat : _emojiDb->cats()) {
-        auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()), font);
+        auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()),
+                                                    QFont {"Hack, DejaVu Sans Mono, monospace",
+                                                           10, QFont::Bold});
 
-        item->setDefaultTextColor(textColor);
+        item->setDefaultTextColor(QColor {_darkBg ? "#f8f8f8" : "#202020"});
         item->setPos(rowFirstEmojiX, y);
         _catVertPositions[cat.get()] = y;
         y += 24.;
@@ -133,10 +124,9 @@ void QEmojisWidget::showFindResults(const std::vector<const Emoji *>& results)
     _findEmojisGraphicsScene.clear();
     _findEmojisGraphicsScene.addItem(_findEmojisGraphicsSceneSelectedItem);
     _curEmojiGraphicsItems.clear();
+    _findEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - 8., 0.);
 
     qreal y = 0.;
-
-    _findEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - 8., 0.);
 
     if (!results.empty()) {
         y = 8.;
@@ -171,13 +161,13 @@ void QEmojisWidget::_emojiGraphicsItemClicked(const QEmojiGraphicsItem& item)
 
 void QEmojisWidget::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& index)
 {
-    QGraphicsPixmapItem *selectedItem = nullptr;
-
-    if (this->showingAllEmojis()) {
-        selectedItem = _allEmojisGraphicsSceneSelectedItem;
-    } else {
-        selectedItem = _findEmojisGraphicsSceneSelectedItem;
-    }
+    const auto selectedItem = call([this] {
+        if (this->showingAllEmojis()) {
+            return _allEmojisGraphicsSceneSelectedItem;
+        } else {
+            return _findEmojisGraphicsSceneSelectedItem;
+        }
+    });
 
     assert(selectedItem);
     assert(selectedItem->scene());
@@ -216,9 +206,8 @@ void QEmojisWidget::scrollToCat(const EmojiCat& cat)
         return;
     }
 
-    const auto y = std::max(0., _catVertPositions[&cat] - 8);
-
-    this->verticalScrollBar()->setValue(static_cast<int>(y));
+    this->verticalScrollBar()->setValue(static_cast<int>(std::max(0.,
+                                                                  _catVertPositions[&cat] - 8)));
 }
 
 void QEmojisWidget::selectNext(const unsigned int count)
@@ -227,7 +216,7 @@ void QEmojisWidget::selectNext(const unsigned int count)
         return;
     }
 
-    for (auto i = 0U; i < count; i++) {
+    for (auto i = 0U; i < count; ++i) {
         if (*_selectedEmojiGraphicsItemIndex + 1 == _curEmojiGraphicsItems.size()) {
             return;
         }
@@ -242,7 +231,7 @@ void QEmojisWidget::selectPrevious(const unsigned int count)
         return;
     }
 
-    for (auto i = 0U; i < count; i++) {
+    for (auto i = 0U; i < count; ++i) {
         if (*_selectedEmojiGraphicsItemIndex == 0) {
             return;
         }
@@ -261,7 +250,7 @@ void QEmojisWidget::selectPreviousRow(const unsigned int count)
     const auto curX = selectedEmojiGraphicsItem.pos().x();
     auto index = *_selectedEmojiGraphicsItemIndex;
 
-    for (auto i = 0U; i < count; i++) {
+    for (auto i = 0U; i < count; ++i) {
         for (auto eI = static_cast<int>(index) - 1; eI >= 0; --eI) {
             const auto& emojiGraphicsItem = *_curEmojiGraphicsItems[eI];
 
@@ -285,7 +274,7 @@ void QEmojisWidget::selectNextRow(const unsigned int count)
     const auto curX = selectedEmojiGraphicsItem.pos().x();
     auto index = *_selectedEmojiGraphicsItemIndex;
 
-    for (auto i = 0U; i < count; i++) {
+    for (auto i = 0U; i < count; ++i) {
         for (auto eI = index + 1; eI < _curEmojiGraphicsItems.size(); ++eI) {
             const auto& emojiGraphicsItem = *_curEmojiGraphicsItems[eI];
 
