@@ -215,10 +215,13 @@ click "`Go to Emojipedia page`".
 [[cl-options]]
 === Command-line options
 
-[[opt-f]]`-f _FMT_`::
-    Set the output format to `_FMT_`:
-+
---
+[%header,cols="1d,3a"]
+|===
+|Option |Description
+
+|[[opt-f]]`-f _FMT_`
+|Set the output format to `_FMT_`:
+
 `utf-8` (default)::
     UTF-8 emoji.
 
@@ -226,44 +229,48 @@ click "`Go to Emojipedia page`".
     Space-separated Unicode codepoints (hexadecimal).
 +
 Example: `1f645 200d 2642 fe0f`
---
-
-[[opt-p]]`-p _PREFIX_`::
-    Set the prefix to be prepended to each Unicode codepoint.
 +
-For example, with `-f cp` and `-p U+`: `U+1f645 U+200d U+2642 U+fe0f`.
+Prepend a prefix to each codepoint with <<opt-p,`-p`>>.
 
-`-n`::
-    Do not 🖨 a newline after 🖨 the emoji or codepoints.
+|[[opt-p]]`-p _PREFIX_`
+|Set the prefix to be prepended to each Unicode codepoint with
+`-f cp`.
 
-[[opt-c]]`-c _CMD_`::
-    When you accept an emoji, execute command `_CMD_` 20{nbsp}ms
-    _after_ closing the jome 🪟.
-+
-jome interprets `_CMD_` like a 🐚 does, so you can have arguments
-too.
-+
+For example, with `-f cp` and `-p U+`:
+
+----
+U+1f645 U+200d U+2642 U+fe0f
+----
+
+|`-n`
+|Do not 🖨 a newline after 🖨 the emoji or codepoints.
+
+|[[opt-c]]`-c _CMD_`
+|When you accept an emoji, execute command `_CMD_` 20{nbsp}ms
+_after_ closing the jome 🪟.
+
+jome interprets `_CMD_` like a 🐚 does, so you can have arguments too.
+
 `_CMD_` receives the UTF-8 emoji or the Unicode codepoints (depending on
 the <<opt-f,`-f`{nbsp}option>>) with their optional prefix as its last
 argument(s).
-+
+
 Examples with https://www.semicomplete.com/projects/xdotool/[xdotool]:
-+
+
 ----
 $ jome -c 'xdotool type'
 $ jome -f cp -p U -c 'xdotool key --delay 20'
 ----
 
-[[opt-b]]`-b`::
-    When you accept an emoji, copy the UTF-8 emoji or the Unicode
-    codepoints (depending on the <<opt-f,`-f`{nbsp}option>>) to the 📋.
+|[[opt-b]]`-b`
+|When you accept an emoji, copy the UTF-8 emoji or the Unicode
+codepoints (depending on the <<opt-f,`-f`{nbsp}option>>) to the 📋.
 
-[[opt-q]]`-q`::
-    Do not quit when you <<accept-emoji,accept>> an emoji.
-+
+|[[opt-q]]`-q`
+|Do not quit when you <<accept-emoji,accept>> an emoji.
+
 By default, when you accept an emoji (with the ⌨️ or with the 🖱), jome:
-+
---
+
 . 🖨 the accepted emoji or its codepoints to the standard output.
 . Hides its 🪟.
 . **Optional**: Copies the accepted emoji/codepoints to the
@@ -272,38 +279,38 @@ By default, when you accept an emoji (with the ⌨️ or with the 🖱), jome:
   after 20{nbsp}ms.
 . **If not running in server mode**, quits (see the
   <<opt-s,`-s`{nbsp}option>>).
---
-+
+
 With the `-q`{nbsp}option, jome does not hide its 🪟 and does not quit
 when you accept an emoji so that you can make it 🖨 multiple emojis
 and/or execute a command multiple ⏲ with multiple emojis without
 restarting the application.
-+
-You cannot specify the `-q` and <<opt-s,`-s`>>{nbsp}options at the same
-⏲.
 
-[[opt-s]]`-s _NAME_`::
-    Start jome in <<server-mode,server mode>> and set the server name
-    to `_NAME_`.
-+
+You cannot specify the `-q` and <<opt-s,`-s`>>{nbsp}options at the
+same{nbsp}⏲.
+
+|[[opt-s]]`-s _NAME_`
+|Start jome in <<server-mode,server mode>> and set the server name
+to `_NAME_`.
+
 On Unix, this creates the socket 📄 `/tmp/_NAME_` which must _not exist_
 before you start jome.
-+
-You cannot specify the `-s` and <<opt-q,`-q`>>{nbsp}options at the same
-⏲.
 
-[[opt-d]]`-d`::
-    Use a dark background for emojis.
+You cannot specify the `-s` and <<opt-q,`-q`>>{nbsp}options at the
+same{nbsp}⏲.
 
-[[opt-w]]`-w _WIDTH_`::
-    Set the width of individual emojis to `_WIDTH_`{nbsp}pixels, amongst
-    16, 24, 32 (default), 40, or 48.
+|[[opt-d]]`-d`
+|Use a dark background for emojis.
 
-[[opt-P]]`-P _PERIOD_`::
-    Set the flashing period of the selection square to
-    `_PERIOD_`{nbsp}ms (greater or equal than 32).
-+
+|[[opt-w]]`-w _WIDTH_`
+|Set the width of individual emojis to `_WIDTH_`{nbsp}pixels, amongst
+16, 24, 32 (default), 40, or 48.
+
+|[[opt-P]]`-P _PERIOD_`
+|Set the flashing period of the selection square to
+`_PERIOD_`{nbsp}ms (greater than or equal to 32).
+
 The selection square doesn't flash by default.
+|===
 
 
 [[server-mode]]
