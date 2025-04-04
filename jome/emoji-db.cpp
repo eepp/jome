@@ -76,7 +76,7 @@ Emoji::Codepoints Emoji::codepointsWithSkinTone(const SkinTone skinTone) const
         std::abort();
     }
 
-    codepoints.insert(std::begin(codepoints) + 1, skinToneCodepoint);
+    codepoints.insert(codepoints.begin() + 1, skinToneCodepoint);
     return codepoints;
 }
 
@@ -85,7 +85,7 @@ Emoji::Codepoints Emoji::codepoints() const
     const auto qCodepoints = QString::fromStdString(_str).toUcs4();
     Codepoints codepoints;
 
-    std::copy(std::begin(qCodepoints), std::end(qCodepoints), std::back_inserter(codepoints));
+    std::copy(qCodepoints.begin(), qCodepoints.end(), std::back_inserter(codepoints));
     return codepoints;
 }
 
@@ -196,7 +196,7 @@ void EmojiDb::_createEmojis(const std::string& dir)
 
             auto it = _keywordEmojis.find(keyword);
 
-            if (it == std::end(_keywordEmojis)) {
+            if (it == _keywordEmojis.end()) {
                 it = _keywordEmojis.insert(std::make_pair(keyword,
                                                           decltype(_keywordEmojis)::mapped_type {})).first;
             }
@@ -302,7 +302,7 @@ void EmojiDb::findEmojis(const std::string& cat, const std::string& needlesStr,
                 continue;
             }
 
-            if (_tmpFoundEmojis.find(emoji) != std::end(_tmpFoundEmojis)) {
+            if (_tmpFoundEmojis.find(emoji) != _tmpFoundEmojis.end()) {
                 // we already have it: next emoji
                 continue;
             }
@@ -326,16 +326,16 @@ void EmojiDb::addRecentEmoji(const Emoji& emoji)
     auto& emojis = _recentEmojisCat->emojis();
 
     while (true) {
-        auto existingIt = std::find(std::begin(emojis), std::end(emojis), &emoji);
+        auto existingIt = std::find(emojis.begin(), emojis.end(), &emoji);
 
-        if (existingIt == std::end(emojis)) {
+        if (existingIt == emojis.end()) {
             break;
         }
 
         emojis.erase(existingIt);
     }
 
-    emojis.insert(std::begin(emojis), &emoji);
+    emojis.insert(emojis.begin(), &emoji);
 
     constexpr auto maxRecentEmojis = 30U;
 
