@@ -17,7 +17,7 @@ namespace jome {
 void gotoEmojipediaPage(const Emoji& emoji)
 {
     QDesktopServices::openUrl(QUrl {
-        QString {"https://emojipedia.org/"} + QString::fromStdString(emoji.str())
+        QString {"https://emojipedia.org/search?q="} + QString::fromStdString(emoji.str())
     });
 }
 
