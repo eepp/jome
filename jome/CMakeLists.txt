@@ -14,6 +14,11 @@ find_package (Qt5Network CONFIG REQUIRED)
 # Boost
 find_package (Boost 1.70 REQUIRED)
 
+# JSON for Modern C++
+include (FetchContent)
+FetchContent_Declare (nlohmann URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz)
+FetchContent_MakeAvailable (nlohmann)
+
 # jome program
 add_executable (
     jome
@@ -34,6 +39,7 @@ target_link_libraries (
     Qt5::Gui
     Qt5::Network
     Boost::boost
+    nlohmann_json::nlohmann_json
 )
 target_include_directories (
     jome PRIVATE

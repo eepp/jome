@@ -11,9 +11,9 @@
 #include <QString>
 #include <QVector>
 #include <boost/algorithm/string.hpp>
+#include <nlohmann/json.hpp>
 
 #include "emoji-db.hpp"
-#include "simple-json.hpp"
 
 namespace jome {
 
@@ -122,18 +122,21 @@ EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize) :
     this->_createEmojiPngLocations(dir);
 }
 
-json::JSON EmojiDb::_loadJson(const std::string& dir, const std::string& file)
+nlohmann::json EmojiDb::_loadJson(const std::string& dir, const std::string& file)
 {
     std::ifstream f {dir + '/' + file};
-    std::string str {std::istreambuf_iterator<char> {f}, std::istreambuf_iterator<char> {}};
-    return json::JSON::Load(str);
+
+    nlohmann::json json;
+
+    f >> json;
+    return json;
 }
 
 namespace {
 
-EmojiVersion versionFromJson(const json::JSON& versionJson)
+EmojiVersion versionFromJson(const nlohmann::json& versionJson)
 {
-    const auto str = versionJson.ToString();
+    const auto str = versionJson.get<std::string>();
 
     if (str == "0.6") {
         return EmojiVersion::V_0_6;
@@ -169,26 +172,26 @@ EmojiVersion versionFromJson(const json::JSON& versionJson)
 
 void EmojiDb::_createEmojis(const std::string& dir)
 {
-    const auto emojisJson = this->_loadJson(dir, "emojis.json");
+    const auto jsonEmojis = this->_loadJson(dir, "emojis.json");
 
-    for (const auto& keyValPair : emojisJson.ObjectRange()) {
-        const auto& emojiStr = keyValPair.first;
-        const auto& valJson = keyValPair.second;
-        const auto& nameJson = valJson.at("name");
-        const auto& hasSkinToneSupport = valJson.at("has-skin-tone-support").ToBool();
-        const auto& keywordsJson = valJson.at("keywords");
-        const auto& versionJson = valJson.at("version");
+    for (auto& emojiKeyJsonValPair : jsonEmojis.items()) {
+        auto& emojiStr = emojiKeyJsonValPair.key();
+        auto& jsonVal = emojiKeyJsonValPair.value();
+        auto& jsonKeywords = jsonVal.at("keywords");
+        auto& jsonVersion = jsonVal.at("version");
         std::unordered_set<std::string> keywords;
 
-        for (const auto& kw : keywordsJson.ArrayRange()) {
-            keywords.insert(kw.ToString());
+        for (auto& kw : jsonKeywords) {
+            keywords.insert(kw);
         }
 
-        auto emoji = std::make_unique<const Emoji>(emojiStr, nameJson.ToString(),
-                                                   std::move(keywords), hasSkinToneSupport,
-                                                   versionFromJson(versionJson));
+        auto emoji = std::make_unique<const Emoji>(emojiStr,
+                                                   jsonVal.at("name"),
+                                                   std::move(keywords),
+                                                   jsonVal.at("has-skin-tone-support"),
+                                                   versionFromJson(jsonVersion));
 
-        for (const auto& keyword : emoji->keywords()) {
+        for (auto& keyword : emoji->keywords()) {
             _keywords.insert(keyword);
 
             auto it = _keywordEmojis.find(keyword);
@@ -211,21 +214,17 @@ void EmojiDb::_createCats(const std::string& dir)
     _cats.push_back(std::make_unique<EmojiCat>("recent", "Recent"));
     _recentEmojisCat = _cats.back().get();
 
-    const auto catsJson = this->_loadJson(dir, "cats.json");
+    const auto jsonCats = this->_loadJson(dir, "cats.json");
 
-    for (const auto& catJson : catsJson.ArrayRange()) {
-        const auto& idJson = catJson.at("id");
-        const auto& nameJson = catJson.at("name");
-        const auto& emojisJson = catJson.at("emojis");
+    for (auto& jsonCat : jsonCats) {
+        auto& jsonEmojis = jsonCat.at("emojis");
         std::vector<const Emoji *> emojis;
 
-        for (const auto& emojiJson : emojisJson.ArrayRange()) {
-            const auto emojiStr = emojiJson.ToString();
-
-            emojis.push_back(_emojis[emojiStr].get());
+        for (auto& jsonEmoji : jsonEmojis) {
+            emojis.push_back(_emojis[jsonEmoji].get());
         }
 
-        auto cat = std::make_unique<EmojiCat>(idJson.ToString(), nameJson.ToString(),
+        auto cat = std::make_unique<EmojiCat>(jsonCat.at("id"), jsonCat.at("name"),
                                               std::move(emojis));
 
         _cats.push_back(std::move(cat));
@@ -239,13 +238,12 @@ void EmojiDb::_createEmojiPngLocations(const std::string& dir)
     };
     const auto pngLocationsJson = this->_loadJson(dir, fileName);
 
-    for (const auto& keyValPair : pngLocationsJson.ObjectRange()) {
-        const auto& emojiStr = keyValPair.first;
-        const auto& valJson = keyValPair.second;
+    for (auto& keyJsonValPair : pngLocationsJson.items()) {
+        auto& jsonLoc = keyJsonValPair.value();
 
-        _emojiPngLocations[_emojis[emojiStr].get()] = {
-            static_cast<unsigned int>(valJson.at(0).ToInt()),
-            static_cast<unsigned int>(valJson.at(1).ToInt())
+        _emojiPngLocations[_emojis[keyJsonValPair.key()].get()] = {
+            static_cast<unsigned int>(jsonLoc.at(0)),
+            static_cast<unsigned int>(jsonLoc.at(1))
         };
     }
 }
