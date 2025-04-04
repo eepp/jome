@@ -337,6 +337,8 @@ void QEmojisWidget::resizeEvent(QResizeEvent * const event)
     } else {
         std::vector<const Emoji *> results;
 
+        results.reserve(_curEmojiGraphicsItems.size());
+
         for (const auto item : _curEmojiGraphicsItems) {
             results.push_back(&item->emoji());
         }

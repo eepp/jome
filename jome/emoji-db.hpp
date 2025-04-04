@@ -52,7 +52,7 @@ public:
     };
 
 public:
-    explicit Emoji(const std::string& str, const std::string& name,
+    explicit Emoji(std::string str, std::string name,
                    std::unordered_set<std::string>&& keywords, bool hasSkinToneSupport,
                    EmojiVersion version);
     Codepoints codepoints() const;
@@ -97,8 +97,8 @@ private:
 class EmojiCat
 {
 public:
-    explicit EmojiCat(const std::string& id, const std::string& name);
-    explicit EmojiCat(const std::string& id, const std::string& name,
+    explicit EmojiCat(std::string id, std::string name);
+    explicit EmojiCat(std::string id, std::string name,
                       std::vector<const Emoji *>&& emojis);
     const std::string& lcName() const;
 

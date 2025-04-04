@@ -86,15 +86,13 @@ Params parseArgs(QApplication& app)
     } else if (fmt == "cp") {
         params.fmt = Format::CODEPOINTS_HEX;
     } else {
-        std::cerr << "Command-line error: unknown format `" << fmt.toUtf8().constData() << "`." <<
-                     std::endl;
+        std::cerr << "Command-line error: unknown format `" << fmt.toUtf8().constData() << "`.\n";
         std::exit(1);
     }
 
     if (parser.isSet(serverNameOpt)) {
         if (params.noHide) {
-            std::cerr << "Command-line error: cannot specify `-s` and `-q` options together." <<
-                         std::endl;
+            std::cerr << "Command-line error: cannot specify `-s` and `-q` options together.\n";
             std::exit(1);
         }
 
@@ -126,7 +124,7 @@ Params parseArgs(QApplication& app)
             params.emojiSize = jome::EmojiDb::EmojiSize::SIZE_48;
         } else {
             std::cerr << "Command-line error: unexpected value for `-w`: `" <<
-                         val.toUtf8().constData() << "`." << std::endl;
+                         val.toUtf8().constData() << "`.\n";
             std::exit(1);
         }
     }
@@ -212,7 +210,7 @@ int main(int argc, char **argv)
     jome::EmojiDb db {JOME_DATA_DIR, params.emojiSize};
     jome::QJomeWindow win {db, params.darkBg};
 
-    QObject::connect(&win, &jome::QJomeWindow::canceled, [&params, &app, &server]() {
+    QObject::connect(&win, &jome::QJomeWindow::canceled, [&app, &server]() {
         if (server) {
             // reply to the client at least
             server->sendToClient("");
@@ -290,7 +288,7 @@ int main(int argc, char **argv)
     if (params.serverName) {
         server = std::make_unique<jome::QJomeServer>(nullptr, *params.serverName);
         QObject::connect(server.get(), &jome::QJomeServer::clientRequested,
-                         [&app, &server, &win, &db](const jome::QJomeServer::Command cmd) {
+                         [&server, &win, &db](const jome::QJomeServer::Command cmd) {
             if (cmd == jome::QJomeServer::Command::QUIT) {
                 // reply to client, then quit
                 server->sendToClient("");

@@ -26,6 +26,7 @@ class QEmojisWidget :
     public QGraphicsView
 {
     Q_OBJECT
+
     friend class QEmojiGraphicsItem;
 
 public:
@@ -84,8 +85,6 @@ private:
         const auto emojiWidthAndMargin = _emojiDb->emojiSizeInt() + 8.;
 
         for (const auto& emoji : emojis) {
-            namespace ph = std::placeholders;
-
             auto emojiGraphicsItem = new QEmojiGraphicsItem {
                 *emoji, _emojiImages.pixmapForEmoji(*emoji), *this
             };

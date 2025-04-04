@@ -36,7 +36,7 @@ Params parseArgs(QCoreApplication& app)
     const auto posArgs = parser.positionalArguments();
 
     if (posArgs.isEmpty()) {
-        std::cerr << "Command-line error: missing server name." << std::endl;
+        std::cerr << "Command-line error: missing server name.\n";
         std::exit(1);
     }
 
@@ -49,7 +49,7 @@ Params parseArgs(QCoreApplication& app)
             params.cmd = jome::QCtlClient::Command::QUIT;
         } else if (cmd != "pick") {
             std::cerr << "Command-line error: unknown command `" <<
-                         cmd.toUtf8().constData() << "`." << std::endl;
+                         cmd.toUtf8().constData() << "`.\n";
             std::exit(1);
         }
     }

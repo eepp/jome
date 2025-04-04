@@ -17,11 +17,11 @@
 
 namespace jome {
 
-Emoji::Emoji(const std::string& str, const std::string& name,
+Emoji::Emoji(std::string str, std::string name,
              std::unordered_set<std::string>&& keywords, const bool hasSkinToneSupport,
              const EmojiVersion version) :
-    _str {str},
-    _name {name},
+    _str {std::move(str)},
+    _name {std::move(name)},
     _keywords {std::move(keywords)},
     _hasSkinToneSupport {hasSkinToneSupport},
     _version {version}
@@ -89,17 +89,17 @@ Emoji::Codepoints Emoji::codepoints() const
     return codepoints;
 }
 
-EmojiCat::EmojiCat(const std::string& id, const std::string& name,
+EmojiCat::EmojiCat(std::string id, std::string name,
                    std::vector<const Emoji *>&& emojis) :
-    _id {id},
-    _name {name},
+    _id {std::move(id)},
+    _name {std::move(name)},
     _emojis {std::move(emojis)}
 {
 }
 
-EmojiCat::EmojiCat(const std::string& id, const std::string& name) :
-    _id {id},
-    _name {name}
+EmojiCat::EmojiCat(std::string id, std::string name) :
+    _id {std::move(id)},
+    _name {std::move(name)}
 {
 }
 
