@@ -52,16 +52,16 @@ Params parseArgs(QApplication& app)
     parser.addHelpOption();
     parser.addVersionOption();
 
-    const QCommandLineOption formatOpt {"f", "Output format (`utf-8` or `cp`)", "FORMAT", "utf-8"};
-    const QCommandLineOption serverNameOpt {"s", "Server name", "NAME"};
-    const QCommandLineOption cmdOpt {"c", "External command", "CMD"};
-    const QCommandLineOption copyToClipboardOpt {"b", "Copy the accepted emoji to the clipboard"};
-    const QCommandLineOption cpPrefixOpt {"p", "Codepoint prefix", "CPPREFIX"};
-    const QCommandLineOption noNlOpt {"n", "Do not output newline"};
-    const QCommandLineOption noHideOpt {"q", "Do not quit when accepting"};
-    const QCommandLineOption darkBgOpt {"d", "Use dark emoji background"};
-    const QCommandLineOption emojiWidthOpt {"w", "Emoji width (16, 24, 32, 40, or 48)", "WIDTH"};
-    const QCommandLineOption selectedEmojiFlashPeriod {"P", "Selected emoji flashing period (ms)", "PERIOD"};
+    const QCommandLineOption formatOpt {"f", "Set output format to <FORMAT> (`utf-8` or `cp`)", "FORMAT", "utf-8"};
+    const QCommandLineOption serverNameOpt {"s", "Set server name to <NAME>.", "NAME"};
+    const QCommandLineOption cmdOpt {"c", "Execute external command <CMD> with accepted emoji.", "CMD"};
+    const QCommandLineOption copyToClipboardOpt {"b", "Copy the accepted emoji to the clipboard."};
+    const QCommandLineOption cpPrefixOpt {"p", "Set codepoint prefix to <CPPREFIX>.", "CPPREFIX"};
+    const QCommandLineOption noNlOpt {"n", "Do not output newline."};
+    const QCommandLineOption noHideOpt {"q", "Do not quit when accepting."};
+    const QCommandLineOption darkBgOpt {"d", "Use dark emoji background."};
+    const QCommandLineOption emojiWidthOpt {"w", "Set emoji width to <WIDTH> px (16, 24, 32, 40, or 48).", "WIDTH"};
+    const QCommandLineOption selectedEmojiFlashPeriod {"P", "Set selected emoji flashing period to <PERIOD> ms.", "PERIOD"};
 
     parser.addOption(formatOpt);
     parser.addOption(serverNameOpt);
