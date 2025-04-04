@@ -25,7 +25,6 @@ add_executable (
     q-jome-server.cpp
     emoji-images.cpp
     emoji-db.cpp
-    tinyutf8.cpp
     settings.cpp
     emojipedia.cpp
 )

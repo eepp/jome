@@ -38,7 +38,7 @@ enum class EmojiVersion
 class Emoji
 {
 public:
-    using Codepoint = char32_t;
+    using Codepoint = unsigned int;
     using Codepoints = std::vector<Codepoint>;
 
 public:

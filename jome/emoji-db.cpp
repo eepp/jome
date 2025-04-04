@@ -8,11 +8,12 @@
 #include <fstream>
 #include <cstdlib>
 #include <cassert>
+#include <QString>
+#include <QVector>
 #include <boost/algorithm/string.hpp>
 
 #include "emoji-db.hpp"
 #include "simple-json.hpp"
-#include "tinyutf8.hpp"
 
 namespace jome {
 
@@ -40,10 +41,7 @@ const std::string& Emoji::lcName() const
 std::string Emoji::strWithSkinTone(const SkinTone skinTone) const
 {
     assert(_hasSkinToneSupport);
-
-    const auto codepoints = this->codepointsWithSkinTone(skinTone);
-
-    return utf8_string {std::begin(codepoints), std::end(codepoints)}.c_str();
+    return QString::fromUcs4(this->codepointsWithSkinTone(skinTone).data()).toStdString();
 }
 
 Emoji::Codepoints Emoji::codepointsWithSkinTone(const SkinTone skinTone) const
@@ -84,10 +82,10 @@ Emoji::Codepoints Emoji::codepointsWithSkinTone(const SkinTone skinTone) const
 
 Emoji::Codepoints Emoji::codepoints() const
 {
+    const auto qCodepoints = QString::fromStdString(_str).toUcs4();
     Codepoints codepoints;
-    const utf8_string utf8Str {_str};
 
-    std::copy(std::begin(utf8Str), std::end(utf8Str), std::back_inserter(codepoints));
+    std::copy(std::begin(qCodepoints), std::end(qCodepoints), std::back_inserter(codepoints));
     return codepoints;
 }
 
