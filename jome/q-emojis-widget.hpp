@@ -13,6 +13,7 @@
 #include <QPixmap>
 #include <QGraphicsScene>
 #include <QGraphicsView>
+#include <QTimer>
 #include <boost/optional.hpp>
 #include <cmath>
 
@@ -34,7 +35,8 @@ public:
 
 public:
     explicit QEmojisWidget(QWidget *parent, const EmojiDb& emojiDb,
-                           bool darkBg);
+                           bool darkBg,
+                           const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
 
     ~QEmojisWidget();
     void rebuild();
@@ -63,6 +65,9 @@ private:
     void _emojiGraphicsItemHoverEntered(const QEmojiGraphicsItem& item);
     void _emojiGraphicsItemHoverLeaved(const QEmojiGraphicsItem& item);
     void _emojiGraphicsItemClicked(const QEmojiGraphicsItem& item);
+
+private slots:
+    void _selectedItemFlashTimerTimeout();
 
 private:
     qreal _rowFirstEmojiX(const QGraphicsScene& gs) const
@@ -116,6 +121,7 @@ private:
     boost::optional<unsigned int> _selectedEmojiGraphicsItemIndex;
     QGraphicsPixmapItem *_allEmojisGraphicsSceneSelectedItem = nullptr;
     QGraphicsPixmapItem *_findEmojisGraphicsSceneSelectedItem = nullptr;
+    QTimer _selectedItemFlashTimer;
     bool _darkBg;
 };
 

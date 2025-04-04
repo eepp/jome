@@ -16,13 +16,15 @@
 #include <QGraphicsTextItem>
 #include <QKeyEvent>
 #include <boost/algorithm/string.hpp>
+#include <qobject.h>
 
 #include "q-emojis-widget.hpp"
 #include "utils.hpp"
 
 namespace jome {
 
-QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb, const bool darkBg) :
+QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb, const bool darkBg,
+                             const boost::optional<unsigned int>& selectedEmojiFlashPeriod) :
     QGraphicsView {parent},
     _emojiDb {&emojiDb},
     _emojiImages {emojiDb},
@@ -32,6 +34,13 @@ QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb, con
     _findEmojisGraphicsSceneSelectedItem = this->_createSelectedGraphicsItem();
     this->_setGraphicsSceneStyle(_allEmojisGraphicsScene);
     this->_setGraphicsSceneStyle(_findEmojisGraphicsScene);
+
+    if (selectedEmojiFlashPeriod) {
+        QObject::connect(&_selectedItemFlashTimer, &QTimer::timeout,
+                         this, &QEmojisWidget::_selectedItemFlashTimerTimeout);
+        _selectedItemFlashTimer.start(*selectedEmojiFlashPeriod / 2);
+    }
+
     this->setAlignment(Qt::AlignLeft | Qt::AlignTop);
     this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -52,6 +61,17 @@ QEmojisWidget::~QEmojisWidget()
 
     if (!_allEmojisGraphicsSceneSelectedItem->scene()) {
         delete _allEmojisGraphicsSceneSelectedItem;
+    }
+}
+
+void QEmojisWidget::_selectedItemFlashTimerTimeout()
+{
+    if (_allEmojisGraphicsSceneSelectedItem) {
+        _allEmojisGraphicsSceneSelectedItem->setVisible(!_allEmojisGraphicsSceneSelectedItem->isVisible());
+    }
+
+    if (_findEmojisGraphicsSceneSelectedItem) {
+        _findEmojisGraphicsSceneSelectedItem->setVisible(!_findEmojisGraphicsSceneSelectedItem->isVisible());
     }
 }
 

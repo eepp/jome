@@ -39,6 +39,7 @@ struct Params final
     boost::optional<std::string> cmd;
     std::string cpPrefix;
     jome::EmojiDb::EmojiSize emojiSize;
+    boost::optional<unsigned int> selectedEmojiFlashPeriod;
 };
 
 namespace {
@@ -60,6 +61,7 @@ Params parseArgs(QApplication& app)
     const QCommandLineOption noHideOpt {"q", "Do not quit when accepting"};
     const QCommandLineOption darkBgOpt {"d", "Use dark emoji background"};
     const QCommandLineOption emojiWidthOpt {"w", "Emoji width (16, 24, 32, 40, or 48)", "WIDTH"};
+    const QCommandLineOption selectedEmojiFlashPeriod {"P", "Selected emoji flashing period (ms)", "PERIOD"};
 
     parser.addOption(formatOpt);
     parser.addOption(serverNameOpt);
@@ -70,6 +72,7 @@ Params parseArgs(QApplication& app)
     parser.addOption(noHideOpt);
     parser.addOption(darkBgOpt);
     parser.addOption(emojiWidthOpt);
+    parser.addOption(selectedEmojiFlashPeriod);
     parser.process(app);
 
     Params params;
@@ -129,6 +132,20 @@ Params parseArgs(QApplication& app)
                          val.toUtf8().constData() << "`.\n";
             std::exit(1);
         }
+    }
+
+    if (parser.isSet(selectedEmojiFlashPeriod)) {
+        bool ok;
+        const auto strVal = parser.value(selectedEmojiFlashPeriod);
+        const auto val = strVal.toUInt(&ok);
+
+        if (!ok || val < 32) {
+            std::cerr << "Command-line error: unexpected value for `-P`: `" <<
+                         strVal.toUtf8().constData() << "`.\n";
+            std::exit(1);
+        }
+
+        params.selectedEmojiFlashPeriod = val;
     }
 
     return params;
@@ -209,7 +226,7 @@ int main(int argc, char **argv)
 
     const auto params = parseArgs(app);
     jome::EmojiDb db {JOME_DATA_DIR, params.emojiSize};
-    jome::QJomeWindow win {db, params.darkBg};
+    jome::QJomeWindow win {db, params.darkBg, params.selectedEmojiFlashPeriod};
 
     QObject::connect(&win, &jome::QJomeWindow::canceled, [&app, &server]() {
         if (server) {

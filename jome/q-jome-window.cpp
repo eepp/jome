@@ -16,6 +16,7 @@
 #include <QGraphicsTextItem>
 #include <QKeyEvent>
 #include <boost/algorithm/string.hpp>
+#include <boost/optional/optional.hpp>
 
 #include "q-jome-window.hpp"
 #include "q-cat-list-widget-item.hpp"
@@ -120,14 +121,15 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj, QEvent * const even
     return true;
 }
 
-QJomeWindow::QJomeWindow(const EmojiDb& emojiDb, const bool darkBg) :
+QJomeWindow::QJomeWindow(const EmojiDb& emojiDb, const bool darkBg,
+                         const boost::optional<unsigned int>& selectedEmojiFlashPeriod) :
     _emojiDb {&emojiDb}
 {
     this->setWindowIcon(QIcon {QString {JOME_DATA_DIR} + "/icon.png"});
     this->setWindowTitle("jome");
     this->resize(800, 600);
     this->_setMainStyleSheet();
-    this->_buildUi(darkBg);
+    this->_buildUi(darkBg, selectedEmojiFlashPeriod);
 }
 
 void QJomeWindow::_setMainStyleSheet()
@@ -192,7 +194,8 @@ QListWidget *QJomeWindow::_createCatListWidget()
     return listWidget;
 }
 
-void QJomeWindow::_buildUi(const bool darkBg)
+void QJomeWindow::_buildUi(const bool darkBg,
+                           const boost::optional<unsigned int>& selectedEmojiFlashPeriod)
 {
     _wSearchBox = new QLineEdit;
     QObject::connect(_wSearchBox, &QLineEdit::textChanged,
@@ -239,7 +242,7 @@ void QJomeWindow::_buildUi(const bool darkBg)
     mainVbox->setMargin(8);
     mainVbox->setSpacing(8);
     mainVbox->addWidget(_wSearchBox);
-    _wEmojis = new QEmojisWidget {nullptr, *_emojiDb, darkBg};
+    _wEmojis = new QEmojisWidget {nullptr, *_emojiDb, darkBg, selectedEmojiFlashPeriod};
     QObject::connect(_wEmojis, &QEmojisWidget::selectionChanged, this,
                      &QJomeWindow::_emojiSelectionChanged);
     QObject::connect(_wEmojis, &QEmojisWidget::emojiClicked, this, &QJomeWindow::_emojiClicked);

@@ -61,7 +61,8 @@ class QJomeWindow final :
     Q_OBJECT
 
 public:
-    explicit QJomeWindow(const EmojiDb& emojiDb, bool darkBg);
+    explicit QJomeWindow(const EmojiDb& emojiDb, bool darkBg,
+                         const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
 
 signals:
     void emojiChosen(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone);
@@ -74,7 +75,7 @@ private:
     void closeEvent(QCloseEvent *event) override;
     void showEvent(QShowEvent *event) override;
     void _setMainStyleSheet();
-    void _buildUi(bool darkBg);
+    void _buildUi(bool darkBg, const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
     QListWidget *_createCatListWidget();
     void _updateBottomLabels(const Emoji *emoji);
     void _updateInfoLabel(const Emoji *emoji);

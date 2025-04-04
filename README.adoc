@@ -299,6 +299,12 @@ You cannot specify the `-s` and <<opt-q,`-q`>>{nbsp}options at the same
     Set the width of individual emojis to `_WIDTH_`{nbsp}pixels, amongst
     16, 24, 32 (default), 40, or 48.
 
+[[opt-P]]`-P _PERIOD_`::
+    Set the flashing period of the selection square to
+    `_PERIOD_`{nbsp}ms (greater or equal than 32).
++
+The selection square doesn't flash by default.
+
 
 [[server-mode]]
 === Server mode
