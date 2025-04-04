@@ -13,7 +13,6 @@
 #include <functional>
 
 #include "emoji-db.hpp"
-#include "emoji-images.hpp"
 
 namespace jome {
 

@@ -9,7 +9,6 @@
 #define _JOME_SETTINGS_HPP
 
 #include <QSettings>
-#include <vector>
 
 #include "emoji-db.hpp"
 

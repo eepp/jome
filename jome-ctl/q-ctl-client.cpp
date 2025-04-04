@@ -6,7 +6,6 @@
  */
 
 #include <cassert>
-#include <iostream>
 
 #include "q-ctl-client.hpp"
 

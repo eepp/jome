@@ -6,7 +6,6 @@
  */
 
 #include <cassert>
-#include <iostream>
 
 #include "q-jome-server.hpp"
 

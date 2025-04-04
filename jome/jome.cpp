@@ -18,7 +18,6 @@
 #include <boost/optional.hpp>
 
 #include "emoji-db.hpp"
-#include "emoji-images.hpp"
 #include "q-jome-window.hpp"
 #include "q-jome-server.hpp"
 #include "settings.hpp"

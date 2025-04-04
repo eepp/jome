@@ -14,7 +14,6 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <boost/optional.hpp>
-#include <functional>
 #include <cmath>
 
 #include "emoji-db.hpp"

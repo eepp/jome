@@ -19,10 +19,8 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <boost/optional.hpp>
-#include <functional>
 
 #include "emoji-db.hpp"
-#include "emoji-images.hpp"
 #include "q-emojis-widget.hpp"
 
 namespace jome {
