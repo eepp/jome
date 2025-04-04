@@ -8,7 +8,7 @@ Philippe Proulx <eepp.ca>
 
 You can also pick an emoji with the 🖱, don't worry.
 
-jome has most of the interesting emojis of
+jome has most of the interesting emojis of up to
 https://emojipedia.org/emoji-14.0/[Emoji{nbsp}14.0].
 
 I'm not a fan of the usual very broad categories of emojis which do not
