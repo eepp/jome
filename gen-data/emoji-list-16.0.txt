@@ -740,7 +740,7 @@ cross | crossed | finger | fingers | hand | luck
 
 U+1FAF0
 hand with index finger and thumb crossed
-&lt;3 | crossed | expensive | finger | hand | heart | index | love | money | snap | thumb
+<3 | crossed | expensive | finger | hand | heart | index | love | money | snap | thumb
 
 U+1F91F
 love-you gesture
@@ -816,7 +816,7 @@ celebration | gesture | hand | hands | hooray | praise | raised | raising
 
 U+1FAF6
 heart hands
-&lt;3 | hands | heart | love | you
+<3 | hands | heart | love | you
 
 U+1F450
 open hands
