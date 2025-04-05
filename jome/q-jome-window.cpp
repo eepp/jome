@@ -125,7 +125,7 @@ QJomeWindow::QJomeWindow(const EmojiDb& emojiDb, const bool darkBg,
                          const boost::optional<unsigned int>& selectedEmojiFlashPeriod) :
     _emojiDb {&emojiDb}
 {
-    this->setWindowIcon(QIcon {QString {JOME_DATA_DIR} + "/icon.png"});
+    this->setWindowIcon(QIcon {qFmtFormat("{}/icon.png", JOME_DATA_DIR)});
     this->setWindowTitle("jome");
     this->resize(800, 600);
     this->_setMainStyleSheet();
@@ -494,12 +494,10 @@ void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
     QString text;
 
     if (emoji) {
-        text += "<b>";
-        text += emoji->name().c_str();
-        text += "</b> <span style=\"color: #999\">(";
+        text += qFmtFormat("<b>{}</b> <span style=\"color: #999\">(", emoji->name().c_str());
 
         for (const auto codepoint : emoji->codepoints()) {
-            text += QString::number(codepoint, 16) + ", ";
+            text += qFmtFormat("{:x}, ", codepoint);
         }
 
         text.truncate(text.size() - 2);

@@ -19,6 +19,10 @@ include (FetchContent)
 FetchContent_Declare (nlohmann URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz)
 FetchContent_MakeAvailable (nlohmann)
 
+# {fmt}
+FetchContent_Declare (fmt URL https://github.com/fmtlib/fmt/releases/download/11.1.4/fmt-11.1.4.zip)
+FetchContent_MakeAvailable (fmt)
+
 # jome program
 add_executable (
     jome
@@ -40,6 +44,7 @@ target_link_libraries (
     Qt5::Network
     Boost::boost
     nlohmann_json::nlohmann_json
+    fmt::fmt
 )
 target_include_directories (
     jome PRIVATE

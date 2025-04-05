@@ -8,8 +8,10 @@
 #ifndef _JOME_UTILS_HPP
 #define _JOME_UTILS_HPP
 
+#include <QString>
 #include <functional>
 #include <utility>
+#include <fmt/format.h>
 
 namespace jome {
 
@@ -23,6 +25,12 @@ template <typename FuncT, typename... ArgTs>
 auto call(FuncT func, ArgTs&&...args) -> decltype(std::ref(func)(std::forward<ArgTs>(args)...))
 {
     return std::ref(func)(std::forward<ArgTs>(args)...);
+}
+
+template <typename... ArgTs>
+QString qFmtFormat(fmt::format_string<ArgTs...> fmt, ArgTs&&... args)
+{
+    return QString::fromStdString(fmt::format(fmt, std::forward<ArgTs>(args)...));
 }
 
 } // namespace jome

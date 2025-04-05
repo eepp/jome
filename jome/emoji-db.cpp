@@ -12,6 +12,7 @@
 #include <QVector>
 #include <boost/algorithm/string.hpp>
 #include <nlohmann/json.hpp>
+#include <fmt/format.h>
 
 #include "utils.hpp"
 #include "emoji-db.hpp"
@@ -113,7 +114,7 @@ const std::string& EmojiCat::lcName() const
 
 EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize) :
     _emojiSize {emojiSize},
-    _emojisPngPath {dir + '/' + "emojis-" + std::to_string(this->emojiSizeInt()) + ".png"}
+    _emojisPngPath {fmt::format("{}/emojis-{}.png", dir, this->emojiSizeInt())}
 {
     this->_createEmojis(dir);
     this->_createCats(dir);
@@ -225,9 +226,7 @@ void EmojiDb::_createCats(const std::string& dir)
 
 void EmojiDb::_createEmojiPngLocations(const std::string& dir)
 {
-    const std::string fileName {
-        "emojis-png-locations-" + std::to_string(this->emojiSizeInt()) + ".json"
-    };
+    const auto fileName = fmt::format("emojis-png-locations-{}.json", this->emojiSizeInt());
     const auto pngLocationsJson = this->_loadJson(dir, fileName);
 
     for (auto& keyJsonValPair : pngLocationsJson.items()) {

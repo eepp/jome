@@ -48,6 +48,8 @@ You need:
 * http://www.boost.org/[Boost] ≥ 1.70 (only to 🏗)
 * https://json.nlohmann.me/[JSON for Modern C++] (only to 🏗,
   automatically 📥 by CMake)
+* https://fmt.dev/[pass:[{fmt}]] (only to 🏗,
+  automatically 📥 by CMake)
 * Qt 5 (_Core_, _GUI_, _Widgets_, and _Network_ modules)
 
 .🏗 jome

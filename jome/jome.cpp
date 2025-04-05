@@ -15,6 +15,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <boost/optional.hpp>
+#include <fmt/format.h>
 
 #include "emoji-db.hpp"
 #include "q-jome-window.hpp"
@@ -153,9 +154,7 @@ Params parseArgs(QApplication& app)
 
 void execCommand(const std::string& cmd, const std::string& arg)
 {
-    const auto fullCmd = QString::fromStdString(cmd) + " " + QString::fromStdString(arg);
-
-    static_cast<void>(QProcess::execute(fullCmd));
+    static_cast<void>(QProcess::execute(jome::qFmtFormat("{} {}", cmd, arg)));
 }
 
 std::string formatEmoji(const jome::Emoji& emoji,
@@ -187,9 +186,7 @@ std::string formatEmoji(const jome::Emoji& emoji,
         });
 
         for (const auto codepoint : codepoints) {
-            output += cpPrefix;
-            output += QString::number(codepoint, 16).toStdString();
-            output += ' ';
+            output += fmt::format("{}{:x} ", cpPrefix, codepoint);
         }
 
         // remove trailing space

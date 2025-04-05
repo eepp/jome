@@ -11,13 +11,14 @@
 
 #include "emojipedia.hpp"
 #include "emoji-db.hpp"
+#include "utils.hpp"
 
 namespace jome {
 
 void gotoEmojipediaPage(const Emoji& emoji)
 {
     QDesktopServices::openUrl(QUrl {
-        QString {"https://emojipedia.org/search?q="} + QString::fromStdString(emoji.str())
+        qFmtFormat("https://emojipedia.org/search?q={}", emoji.str())
     });
 }
 
