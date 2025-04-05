@@ -16,7 +16,6 @@
 #include <QGraphicsTextItem>
 #include <QKeyEvent>
 #include <boost/algorithm/string.hpp>
-#include <qobject.h>
 
 #include "q-emojis-widget.hpp"
 #include "utils.hpp"
