@@ -5,15 +5,22 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
+#include <boost/optional/optional.hpp>
 #include <fstream>
 #include <cstdlib>
 #include <cassert>
 #include <QString>
 #include <QVector>
+#include <QStandardPaths>
+#include <QtDebug>
+#include <QFile>
 #include <boost/algorithm/string.hpp>
 #include <nlohmann/json.hpp>
 #include <fmt/format.h>
+#include <qglobal.h>
+#include <qstandardpaths.h>
 
+#include "nlohmann/json_fwd.hpp"
 #include "utils.hpp"
 #include "emoji-db.hpp"
 
@@ -123,13 +130,156 @@ EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize) :
 
 namespace {
 
-nlohmann::json loadJson(const std::string& dir, const std::string& file)
+nlohmann::json loadJson(const std::string& path)
 {
-    std::ifstream f {dir + '/' + file};
+    std::ifstream f {path};
     nlohmann::json json;
 
     f >> json;
     return json;
+}
+
+nlohmann::json loadJson(const std::string& dir, const std::string& file)
+{
+    return loadJson(fmt::format("{}/{}", dir, file));
+}
+
+void warnNoUserEmojiKeywords(const QString& path, const std::string& msg)
+{
+    qWarning().noquote() << qFmtFormat("{}: {}", path.toStdString(), msg);
+    qWarning() << "jome will continue without user emoji keywords";
+}
+
+nlohmann::json loadUserEmojisJson()
+{
+    const auto path = qFmtFormat("{}/{}",
+                                 QStandardPaths::standardLocations(QStandardPaths::ConfigLocation).first().toStdString(),
+                                 "jome/emojis.json");
+
+    if (!QFile::exists(path)) {
+        // this is an optional file
+        return nlohmann::json::object();
+    }
+
+    auto jsonUserEmojis = call([&path]() -> boost::optional<nlohmann::json> {
+        try {
+            return loadJson(path.toStdString());
+        } catch (const nlohmann::json::exception& exc) {
+            warnNoUserEmojiKeywords(path, fmt::format("failed to load JSON file: {}", exc.what()));
+            return boost::none;
+        }
+    });
+
+    if (!jsonUserEmojis) {
+        return nlohmann::json::object();
+    }
+
+    // validate
+    if (!jsonUserEmojis->is_object()) {
+        warnNoUserEmojiKeywords(path, "expecting a root JSON object");
+        return nlohmann::json::object();
+    }
+
+    for (const auto& keyJsonValPair : jsonUserEmojis->items()) {
+        if (!keyJsonValPair.value().is_object()) {
+            warnNoUserEmojiKeywords(path, fmt::format("emoji `{}`: expecting an object",
+                                                      keyJsonValPair.key()));
+            return nlohmann::json::object();
+        }
+
+        const auto validateKeywords = [&keyJsonValPair, &path](const std::string& key) {
+            const auto it = keyJsonValPair.value().find(key);
+
+            if (it == keyJsonValPair.value().end()) {
+                return true;
+            }
+
+            if (!it->is_array()) {
+                warnNoUserEmojiKeywords(path, fmt::format("emoji `{}`: `{}`: expecting an array",
+                                                          keyJsonValPair.key(), key));
+                return false;
+            }
+
+            for (const auto& jsonKeyword : *it) {
+                if (!jsonKeyword.is_string()) {
+                    warnNoUserEmojiKeywords(path, fmt::format("emoji `{}`: `{}`: expecting an array of strings",
+                                                              keyJsonValPair.key(), key));
+                    return false;
+                }
+            }
+
+            return true;
+        };
+
+        if (!validateKeywords("keywords")) {
+            return nlohmann::json::object();
+        }
+
+        if (!validateKeywords("extra-keywords")) {
+            return nlohmann::json::object();
+        }
+    }
+
+    return *jsonUserEmojis;
+}
+
+std::unordered_set<std::string> strSetFromJsonStrArray(const nlohmann::json& jsonArray)
+{
+    assert(jsonArray.is_array());
+
+    std::unordered_set<std::string> set;
+
+    for (auto& jsonStr : jsonArray) {
+        assert(jsonStr.is_string());
+        set.insert(jsonStr);
+    }
+
+    return set;
+}
+
+std::unordered_set<std::string> effectiveEmojiKeywords(const std::string& emojiStr,
+                                                       const nlohmann::json& jsonKeywords,
+                                                       const nlohmann::json& jsonUserEmojis)
+{
+    const auto it = jsonUserEmojis.find(emojiStr);
+    auto jsonUserKeywords = nlohmann::json::array();
+    auto jsonUserExtraKeywords = nlohmann::json::array();
+
+    if (it != jsonUserEmojis.end()) {
+        {
+            const auto jsonKeywordsIt = it->find("keywords");
+
+            if (jsonKeywordsIt != it->end()) {
+                jsonUserKeywords = *jsonKeywordsIt;
+            }
+        }
+
+        {
+            const auto jsonKeywordsIt = it->find("extra-keywords");
+
+            if (jsonKeywordsIt != it->end()) {
+                jsonUserExtraKeywords = *jsonKeywordsIt;
+            }
+        }
+    }
+
+    std::unordered_set<std::string> keywords;
+
+    if (jsonUserKeywords.empty()) {
+        // start with default keywords
+        keywords = strSetFromJsonStrArray(jsonKeywords);
+    } else {
+        // start with user keywords
+        keywords = strSetFromJsonStrArray(jsonUserKeywords);
+    }
+
+    {
+        const auto userExtraKeywords = strSetFromJsonStrArray(jsonUserExtraKeywords);
+
+        keywords.insert(userExtraKeywords.begin(), userExtraKeywords.end());
+    }
+
+    return keywords;
 }
 
 } // namespace
@@ -137,22 +287,18 @@ nlohmann::json loadJson(const std::string& dir, const std::string& file)
 void EmojiDb::_createEmojis(const std::string& dir)
 {
     const auto jsonEmojis = loadJson(dir, "emojis.json");
+    const auto jsonUserEmojis = loadUserEmojisJson();
 
     for (auto& emojiKeyJsonValPair : jsonEmojis.items()) {
-        auto emoji = call([&emojiKeyJsonValPair] {
+        auto emoji = call([&emojiKeyJsonValPair, &jsonUserEmojis] {
             auto& jsonVal = emojiKeyJsonValPair.value();
 
             return std::make_unique<const Emoji>(emojiKeyJsonValPair.key(),
                                                  jsonVal.at("name"),
-                                                 call([&jsonVal] {
-                                                     std::unordered_set<std::string> keywords;
-
-                                                     for (auto& kw : jsonVal.at("keywords")) {
-                                                        keywords.insert(kw);
-                                                     }
-
-                                                     return keywords;
-                                                 }), jsonVal.at("has-skin-tone-support"),
+                                                 effectiveEmojiKeywords(emojiKeyJsonValPair.key(),
+                                                                        jsonVal.at("keywords"),
+                                                                        jsonUserEmojis),
+                                                 jsonVal.at("has-skin-tone-support"),
                                                  call([&jsonVal] {
                                                      const auto str = jsonVal.at("version").get<std::string>();
 

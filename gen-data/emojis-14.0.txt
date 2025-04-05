@@ -1,148 +1,147 @@
 🫠
 Melting face
-melting | melting face
+disappear | dissolve | embarrassed | face | haha | heat | hot | liquid | lol | melt | melting | melting face | sarcasm | sarcastic
 
 🫢
 Face with open eyes and hand over mouth
-open eyes | hand over mouth | hand on mouth | hand covering mouth | face with open eyes and hand over mouth | astonished
+amazement | awe | disbelief | embarrass | eyes | face | face with open eyes and hand over mouth | gasp | hand | mouth | omg | open | over | quiet | scared | shock | surprise
 
 🫣
 Face with peeking eye
-peeking eye | peeking | face with peeking eye
+captivated | embarrass | eye | face | face with peeking eye | hide | hiding | peek | peeking | peep | scared | shy | stare
 
 🫡
 Saluting face
-salute | saluting | saluting face
+face | good | luck | ma'am | ok | respect | salute | saluting | saluting face | sir | troops | yes
 
 🫥
 Dotted line face
-dotted | dotted line | dotted linea face
+depressed | disappear | dotted | dotted line face | face | hidden | hide | introvert | invisible | line | meh | whatever | wtv
 
 🫤
 Face with diagonal mouth
-diagonal | diagonal mouth | face with diagonal mouth
+confused | confusion | diagonal | disappointed | doubt | doubtful | face | face with diagonal mouth | frustrated | frustration | meh | mouth | skeptical | unsure | whatever | wtv
 
 🥹
 Face holding back tears
-tears | sad | cry | face holding back tears
+admiration | aww | back | cry | embarrassed | face | face holding back tears | feelings | grateful | gratitude | holding | joy | please | proud | resist | sad | tears
 
 🫱
 Rightwards hand
-right hand | right pointing hand | rightwards hand | hand
+hand | handshake | hold | reach | right | rightward | rightwards | rightwards hand | shake
 
 🫲
 Leftwards hand
-left hand | left pointing hand | leftwards hand | hand
+hand | handshake | hold | left | leftward | leftwards | leftwards hand | reach | shake
 
 🫳
 Palm down hand
-palm | hand | palm down hand
+dismiss | down | drop | dropped | hand | palm | palm down hand | pick | shoo | up
 
 🫴
 Palm up hand
-palm | hand | palm up hand
+beckon | catch | come | hand | hold | know | lift | me | offer | palm | palm up hand | tell
 
 🫰
 Hand with index finger and thumb crossed
-cross | fingers crossed | hand | hand with index finger and thumb crossed
+&lt;3 | crossed | expensive | finger | hand | hand with index finger and thumb crossed | heart | index | love | money | snap | thumb
 
 🫵
 Index pointing at the viewer
-you | pointing | index pointing at the viewer | pointing at you
+at | finger | hand | index | index pointing at the viewer | pointing | poke | viewer | you
 
 🫶
 Heart hands
-heart | hand | heart hands
+&lt;3 | hands | heart | heart hands | love | you
 
 🫦
 Biting lip
-biting | lip | biting lip
+anxious | bite | biting | biting lip | fear | flirt | flirting | kiss | lip | lipstick | nervous | sexy | uncomfortable | worried | worry
 
 🫅
 Person with crown
-crown | king | person with a crown | birthday
+crown | monarch | noble | person | person with crown | regal | royal | royalty
 
 🫃
 Pregnant man
-pregnant | man | pregnant man
+belly | bloated | full | man | overeat | pregnant | pregnant man
 
 🫄
 Pregnant person
-pregnant | person | pregnant person
+belly | bloated | full | overeat | person | pregnant | pregnant person | stuffed
 
 🧌
 Troll
-troll | monster
+fairy | fantasy | monster | tale | troll | trolling
 
 🪸
 Coral
-coral | plant | sea
+change | climate | coral | ocean | reef | sea
 
 🪷
 Lotus
-lotus | flower
+beauty | buddhism | calm | flower | hinduism | lotus | peace | purity | serenity
 
 🪹
 Empty nest
-nest | empty | birds nest
+branch | empty | empty nest | home | nest | nesting
 
 🪺
 Nest with eggs
-nest | nest with eggs | eggs | birds nest with eggs
+bird | branch | egg | eggs | nest | nest with eggs | nesting
 
 🫘
 Beans
-beans | vegetable
+beans | food | kidney | legume | small
 
 🫗
 Pouring liquid
-pouring | liquid | pouring liquid
+accident | drink | empty | glass | liquid | oops | pour | pouring | pouring liquid | spill | water
 
 🫙
 Jar
-jar | empty jar
+condiment | container | empty | jar | nothing | sauce | store
 
 🛝
 Playground slide
-slide | playground | playground slide
+amusement | park | play | playground | playground slide | playing | slide | sliding | theme
 
 🛞
 Wheel
-wheel
+car | circle | tire | turn | vehicle | wheel
 
 🛟
 Ring buoy
-ring buoy | buoy
+buoy | float | life | lifesaver | preserver | rescue | ring | ring buoy | safety | save | saver | swim
 
 🪬
 Hamsa
-hamse
+amulet | fatima | fortune | guide | hamsa | hand | mary | miriam | palm | protect | protection
 
 🪩
 Mirror ball
-mirror | ball | mirror ball | disco ball
+ball | dance | disco | glitter | mirror | mirror ball | party
 
 🪫
 Low battery
-low | battery | low battery
+battery | drained | electronic | energy | low | low battery | power
 
 🩼
 Crutch
-crutch
+aid | cane | crutch | disability | help | hurt | injured | mobility | stick
 
 🩻
 X-ray
-x-ray
+bones | doctor | medical | skeleton | skull | x-ray | xray
 
 🫧
 Bubbles
-bubbles
+bubble | bubbles | burp | clean | floating | pearl | soap | underwater
 
 🪪
 Identification card
-id | identification card
+card | credentials | document | id | identification | identification card | license | security
 
 🟰
 Heavy equals sign
-heavy equals sign | equals sign | sign
-
+answer | equal | equality | equals | heavy | heavy equals sign | math | sign

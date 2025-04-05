@@ -1,60 +1,83 @@
 // Render with Asciidoctor
 
 = What's happening here?
+Philippe Proulx
+5 April 2025
+
+This README explains how to generate the assets of jome.
 
 == Input
 
-The emojis are categorized in text files in `cats`.
+The input files are:
 
+`pass:[cats/*.txt]`::
+    Emoji categorization.
++
 Each text file is a category, and a single emoji can be in more than one
 category.
-
++
 Each line of those text files is an emoji followed by space followed by
-its name, although this specific name is not used.
+its name, although this specific name isn't used.
 
-The `cats.yml` file maps category IDs (text file names without the
-`.txt` extension) to category names. The order of the categories in
-`cats.yml` is important as it is the final order of presentation of
-those categories in the eventual UI.
+`cats.yml`::
+    Maps category IDs (text file names without the `.txt` extension)
+    to category names.
++
+The order of the categories is important as it's the final order of
+presentation of those categories in the eventual UI.
 
-The data from the `pass:[emojis-*.txt]` files comes from the
-https://github.com/unicode-org/cldr[Unicode CLDR] project. I maintain my
-own database as, for some reason, the official emoji list lacks many
-https://emojipedia.org/variation-selector-16/[VS-16] characters. Also, I
-added some unofficial keywords to specific emojis. The format of each
-block of `pass:[emojis-*.txt]` is:
+`pass:[emojis-*.txt]`::
+    Emoji names and keywords for a given Emoji standard version.
++
+The data in those files comes (manually) from
+`emoji-list-16.0.txt`, which is a plain text version of the table
+of Unicode's
+https://www.unicode.org/emoji/charts/emoji-list.html[Emoji List,{nbsp}v16.0].
+For some reason, the CLDR data doesn't contain all the keywords that
+this table holds. If you know where to find the raw source of this,
+please tell me!
++
+The format of each block of `pass:[emojis-*.txt]` is:
 
-First line::
+[horizontal]
+First line:::
     The emoji.
 
-Second line::
+Second line:::
     The name of the emoji (capitalized).
 
-Third line::
+Third line:::
     The `|`-separated keywords of the emoji (lowercase).
 
-`with-skin-tone-support.txt` has the same format as a category text
-file. It contains the emojis which support emoji skin tone modifiers.
+`with-skin-tone-support.txt`::
+    Emojis with skin tone modifier support.
++
+Same format as a category text file.
 
-`twemoji-svg` contains the SVG files of the
-https://github.com/twitter/twemoji[Twitter emoji] project (see its
-license, `twemoji-LICENSE-GRAPHICS`). Each file name is a dash-separated
-list of codepoints (hexadecimal) used to create the emoji sequence
-followed by `.svg`.
+`twemoji-svg`::
+    The SVG files of the
+    https://github.com/twitter/twemoji[Twitter emoji] project
+    (see its license, `twemoji-LICENSE-GRAPHICS`).
++
+Each file name is a dash-separated list of codepoints (hexadecimal) used
+to create the emoji sequence followed by `.svg`.
 
 == Output
 
 The `create.py` script creates the required files for the UI in the
 specified directory.
 
-From the category files, it knows the supported emojis. It combines this
-with the data from the `pass:[emojis-*.txt]` and
-`with-skin-tone-support.txt` files to create `emojis.json`. This is a
-map (emoji to info) for each supported emoji.
+To run `create.py`, you need Pycairo, CairoSVG, and PyYAML.
 
-From the category files, it also creates `cats.json` which has the same
-content as `cats.yml`, but each category entry also has its full list of
-emojis.
+From the category files in `cats`:
+
+* It knows the supported emojis. It
+  combines this with the data from the `pass:[emojis-*.txt]` and
+  `with-skin-tone-support.txt` files to create `emojis.json`. This is a
+  map (emoji to info) for each supported emoji.
+
+* It also creates `cats.json` which has the same content as `cats.yml`,
+  but each category entry also has its full list of emojis.
 
 `create.py` converts the Twemoji SVG files to 16×16, 24×24, 32×32,
 40×40, and 48×48 PNG files.

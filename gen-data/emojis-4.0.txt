@@ -1,448 +1,447 @@
 ⛹️‍♀️
 Woman bouncing ball
-woman bouncing ball | ball | woman
+athletic | ball | basketball | bouncing | championship | dribble | net | player | throw | woman | woman bouncing ball
 
 ⛹️‍♂️
 Man bouncing ball
-man bouncing ball | ball | man
+athletic | ball | basketball | bouncing | championship | dribble | man | man bouncing ball | net | player | throw
 
 🇺🇳
 Flag: United Nations
-flag: united nations | flag
+flag | flag: united nations
 
 🏃‍♀️
 Woman running
-woman running | racing | running | marathon | woman
+fast | hurry | marathon | move | quick | race | racing | run | rush | speed | woman | woman running
 
 🏃‍♂️
 Man running
-man running | racing | running | man | marathon
+fast | hurry | man | man running | marathon | move | quick | race | racing | run | rush | speed
 
 🏄‍♀️
 Woman surfing
-woman | surfing | woman surfing
+beach | ocean | person | sport | surf | surfer | surfing | swell | waves | woman surfing
 
 🏄‍♂️
 Man surfing
-man surfing | man | surfing
+beach | man | man surfing | ocean | sport | surf | surfer | surfing | swell | waves
 
 🏊‍♀️
 Woman swimming
-woman | woman swimming | swim
+freestyle | man | sport | swim | swimmer | swimming | triathlon | woman swimming
 
 🏊‍♂️
 Man swimming
-swim | man | man swimming
+freestyle | man | man swimming | sport | swim | swimmer | swimming | triathlon
 
 🏋️‍♀️
 Woman lifting weights
-woman lifting weights | weight lifter | woman
+barbell | bodybuilder | deadlift | lifter | lifting | powerlifting | weight | weightlifter | weights | woman | woman lifting weights | workout
 
 🏋️‍♂️
 Man lifting weights
-man | weight lifter | man lifting weights
+barbell | bodybuilder | deadlift | lifter | lifting | man | man lifting weights | powerlifting | weight | weightlifter | weights | workout
 
 🏌️‍♀️
 Woman golfing
-golf | woman golfing | woman
+ball | birdie | caddy | driving | golf | golfing | green | pga | putt | range | tee | woman | woman golfing
 
 🏌️‍♂️
 Man golfing
-golf | man golfing | man
+ball | birdie | caddy | driving | golf | golfing | green | man | man golfing | pga | putt | range | tee
 
 🏳️‍🌈
 Rainbow flag
-rainbow | rainbow flag
+bisexual | flag | gay | genderqueer | glbt | glbtq | lesbian | lgbt | lgbtq | lgbtqia | pride | queer | rainbow | rainbow flag | trans | transgender
 
 👨‍⚕️
 Man health worker
-nurse | doctor | therapist | healthcare | man health worker | man
+doctor | health | healthcare | man | man health worker | nurse | therapist | worker
 
 👨‍⚖️
 Man judge
-man | justice | scales | man judge
+judge | justice | law | man | man judge | scales
 
 👨‍✈️
 Man pilot
-man pilot | man | pilot | plane
+man | man pilot | pilot | plane
 
 👨‍🌾
 Man farmer
-farmer | gardener | rancher | man | man farmer
+farmer | gardener | man | man farmer | rancher
 
 👨‍🍳
 Man cook
-cook | man cook | man | chef
+chef | cook | man | man cook
 
 👨‍🎓
 Man student
-student | man student | man | graduate
+graduate | man | man student | student
 
 👨‍🎤
 Man singer
-star | singer | man | actor | entertainer | man singer | rock
+actor | entertainer | man | man singer | rock | rockstar | singer | star
 
 👨‍🎨
 Man artist
-man | man artist | palette | artist
+artist | man | man artist | palette
 
 👨‍🏫
 Man teacher
-instructor | man teacher | teacher | professor | man
+instructor | lecturer | man | man teacher | professor | teacher
 
 👨‍🏭
 Man factory worker
-worker | factory | industrial | man factory worker | assembly | man
+assembly | factory | industrial | man | man factory worker | worker
 
 👨‍👦
 Family: man, boy
-family: man, boy | family | man | boy
+boy | child | family | family: man, boy | man
 
 👨‍👦‍👦
 Family: man, boy, boy
-family: man, boy, boy | family | man | boy
+boy | child | family | family: man, boy, boy | man
 
 👨‍👧
 Family: man, girl
-girl | family: man, girl | family | man
+child | family | family: man, girl | girl | man
 
 👨‍👧‍👦
 Family: man, girl, boy
-man | family: man, girl, boy | girl | family | boy
+boy | child | family | family: man, girl, boy | girl | man
 
 👨‍👧‍👧
 Family: man, girl, girl
-girl | family | man | family: man, girl, girl
+child | family | family: man, girl, girl | girl | man
 
 👨‍💻
 Man technologist
-man technologist | inventor | coder | software | technologist | developer | man
+coder | computer | developer | inventor | man | man technologist | software | technologist
 
 👨‍💼
 Man office worker
-manager | white-collar | man office worker | business | architect | man
+architect | business | man | man office worker | manager | office | white-collar | worker
 
 👨‍🔧
 Man mechanic
-man mechanic | electrician | tradesperson | mechanic | plumber | man
+electrician | man | man mechanic | mechanic | plumber | tradesperson
 
 👨‍🔬
 Man scientist
-physicist | chemist | biologist | man scientist | scientist | engineer | man
+biologist | chemist | engineer | man | man scientist | mathematician | physicist | scientist
 
 👨‍🚀
 Man astronaut
-astronaut | rocket | man | man astronaut
+astronaut | man | man astronaut | rocket | space
 
 👨‍🚒
 Man firefighter
-firetruck | man | man firefighter | firefighter
+fire | firefighter | firetruck | man | man firefighter
 
 👩‍⚕️
 Woman health worker
-nurse | doctor | therapist | healthcare | woman health worker | woman
+doctor | health | healthcare | nurse | therapist | woman | woman health worker | worker
 
 👩‍⚖️
 Woman judge
-woman judge | woman | scales | judge
+judge | justice | law | scales | woman | woman judge
 
 👩‍✈️
 Woman pilot
-plane | pilot | woman pilot | woman
+pilot | plane | woman | woman pilot
 
 👩‍🌾
 Woman farmer
-farmer | gardener | rancher | woman farmer | woman
+farmer | gardener | rancher | woman | woman farmer
 
 👩‍🍳
 Woman cook
-cook | chef | woman cook | woman
+chef | cook | woman | woman cook
 
 👩‍🎓
 Woman student
-woman | student | woman student | graduate
+graduate | student | woman | woman student
 
 👩‍🎤
 Woman singer
-star | singer | actor | entertainer | woman singer | woman | rock
+actor | entertainer | rock | rockstar | singer | star | woman | woman singer
 
 👩‍🎨
 Woman artist
-palette | woman | woman artist | artist
+artist | palette | woman | woman artist
 
 👩‍🏫
 Woman teacher
-instructor | teacher | woman teacher | professor | woman
+instructor | lecturer | professor | teacher | woman | woman teacher
 
 👩‍🏭
 Woman factory worker
-worker | factory | industrial | woman factory worker | assembly | woman
+assembly | factory | industrial | woman | woman factory worker | worker
 
 👩‍👦
 Family: woman, boy
-family: woman, boy | family | boy | woman
+boy | child | family | family: woman, boy | woman
 
 👩‍👦‍👦
 Family: woman, boy, boy
-family: woman, boy, boy | family | boy | woman
+boy | child | family | family: woman, boy, boy | woman
 
 👩‍👧
 Family: woman, girl
-girl | family | woman | family: woman, girl
+child | family | family: woman, girl | girl | woman
 
 👩‍👧‍👦
 Family: woman, girl, boy
-family: woman, girl, boy | girl | family | boy | woman
+boy | child | family | family: woman, girl, boy | girl | woman
 
 👩‍👧‍👧
 Family: woman, girl, girl
-family: woman, girl, girl | family | girl | woman
+child | family | family: woman, girl, girl | girl | woman
 
 👩‍💻
 Woman technologist
-woman technologist | inventor | coder | software | technologist | developer | woman
+coder | computer | developer | inventor | software | technologist | woman | woman technologist
 
 👩‍💼
 Woman office worker
-manager | white-collar | business | architect | woman office worker | woman
+architect | business | manager | office | white-collar | woman | woman office worker | worker
 
 👩‍🔧
 Woman mechanic
-electrician | tradesperson | mechanic | plumber | woman mechanic | woman
+electrician | mechanic | plumber | tradesperson | woman | woman mechanic
 
 👩‍🔬
 Woman scientist
-physicist | chemist | biologist | woman scientist | scientist | engineer | woman
+biologist | chemist | engineer | mathematician | physicist | scientist | woman | woman scientist
 
 👩‍🚀
 Woman astronaut
-rocket | astronaut | woman | woman astronaut
+astronaut | rocket | space | woman | woman astronaut
 
 👩‍🚒
 Woman firefighter
-firetruck | woman firefighter | woman | firefighter
+fire | firefighter | firetruck | woman | woman firefighter
 
 👮‍♀️
 Woman police officer
-police | woman police officer | officer | cop | woman
+apprehend | arrest | citation | cop | law | officer | over | police | pulled | undercover | woman | woman police officer
 
 👮‍♂️
 Man police officer
-police | man police officer | officer | man | cop
+apprehend | arrest | citation | cop | law | man | man police officer | officer | over | police | pulled | undercover
 
 👯‍♀️
 Women with bunny ears
-partying | women | women with bunny ears | dancer | bunny ear
+bestie | bff | bunny | counterpart | dancer | double | ear | identical | pair | party | partying | people | soulmate | twin | twinsies | women | women with bunny ears
 
 👯‍♂️
 Men with bunny ears
-partying | dancer | men with bunny ears | bunny ear | men
+bestie | bff | bunny | counterpart | dancer | double | ear | identical | men | men with bunny ears | pair | party | partying | people | soulmate | twin | twinsies
 
 👱‍♀️
 Woman: blond hair
-blonde | woman: blond hair | woman | blond-haired woman
+blond | blond-haired | blonde | hair | woman | woman: blond hair
 
 👱‍♂️
 Man: blond hair
-blond | man: blond hair | man | blond-haired man
+blond | blond-haired | hair | man | man: blond hair
 
 👳‍♀️
 Woman wearing turban
-woman wearing turban | turban | woman
+turban | wearing | woman | woman wearing turban
 
 👳‍♂️
 Man wearing turban
-man wearing turban | man | turban
+man | man wearing turban | turban | wearing
 
 👷‍♀️
 Woman construction worker
-woman construction worker | construction | worker | woman
+build | construction | fix | hardhat | hat | man | rebuild | remodel | repair | woman | woman construction worker | work | worker
 
 👷‍♂️
 Man construction worker
-man construction worker | worker | man | construction
+build | construction | fix | hardhat | hat | man | man construction worker | rebuild | remodel | repair | work | worker
 
 💁‍♀️
 Woman tipping hand
-sassy | woman tipping hand | tipping hand | woman
+fetch | flick | flip | gossip | hand | sarcasm | sarcastic | sassy | seriously | tipping | whatever | woman | woman tipping hand
 
 💁‍♂️
 Man tipping hand
-man tipping hand | man | sassy | tipping hand
+fetch | flick | flip | gossip | hand | man | man tipping hand | sarcasm | sarcastic | sassy | seriously | tipping | whatever
 
 💂‍♀️
 Woman guard
-woman | guard | woman guard
+buckingham | guard | helmet | london | palace | woman | woman guard
 
 💂‍♂️
 Man guard
-man guard | man | guard
+buckingham | guard | helmet | london | man | man guard | palace
 
 💆‍♀️
 Woman getting massage
-woman getting massage | woman | face | massage
+face | getting | headache | massage | relax | relaxing | salon | soothe | spa | tension | therapy | treatment | woman | woman getting massage
 
 💆‍♂️
 Man getting massage
-massage | man | face | man getting massage
+face | getting | headache | man | man getting massage | massage | relax | relaxing | salon | soothe | spa | tension | therapy | treatment
 
 💇‍♀️
 Woman getting haircut
-woman | woman getting haircut | haircut
+barber | beauty | chop | cosmetology | cut | groom | hair | haircut | parlor | person | shears | style | woman | woman getting haircut
 
 💇‍♂️
 Man getting haircut
-haircut | man | man getting haircut
+barber | beauty | chop | cosmetology | cut | groom | hair | haircut | man | man getting haircut | parlor | person | shears | style
 
 ♂️
 Male sign
-male sign | man
+male | male sign | man | sign
 
 ♀️
 Female sign
-female sign | woman
+female | female sign | sign | woman
 
 🕵️‍♀️
 Woman detective
-woman detective | spy | detective | sleuth | woman
+detective | sleuth | spy | woman | woman detective
 
 🕵️‍♂️
 Man detective
-man detective | spy | detective | sleuth | man
+detective | man | man detective | sleuth | spy
 
 🙅‍♀️
 Woman gesturing NO
-hand | gesture | forbidden | woman gesturing no | prohibited | woman
+forbidden | gesture | hand | no | not | prohibit | woman | woman gesturing no
 
 🙅‍♂️
 Man gesturing NO
-hand | gesture | man | forbidden | prohibited | man gesturing no
+forbidden | gesture | hand | man | man gesturing no | no | not | prohibit
 
 🙆‍♀️
 Woman gesturing OK
-hand | ok | gesture | woman | woman gesturing ok
+exercise | gesture | gesturing | hand | ok | omg | woman | woman gesturing ok
 
 🙆‍♂️
 Man gesturing OK
-hand | ok | gesture | man | man gesturing ok
+exercise | gesture | gesturing | hand | man | man gesturing ok | ok | omg
 
 🙇‍♀️
 Woman bowing
-favor | bowing | gesture | apology | sorry | woman bowing | woman
+apology | ask | beg | bow | bowing | favor | forgive | gesture | meditate | meditation | pity | regret | sorry | woman | woman bowing
 
 🙇‍♂️
 Man bowing
-favor | man bowing | bowing | gesture | apology | sorry | man
+apology | ask | beg | bow | bowing | favor | forgive | gesture | man | man bowing | meditate | meditation | pity | regret | sorry
 
 🙋‍♀️
 Woman raising hand
-woman raising hand | raising hand | woman | gesture
+gesture | hand | here | know | me | pick | question | raise | raising | woman | woman raising hand
 
 🙋‍♂️
 Man raising hand
-man raising hand | raising hand | man | gesture
+gesture | hand | here | know | man | man raising hand | me | pick | question | raise | raising
 
 🙍‍♀️
 Woman frowning
-woman | woman frowning | gesture | frowning
+annoyed | disappointed | disgruntled | disturbed | frown | frowning | frustrated | gesture | irritated | upset | woman | woman frowning
 
 🙍‍♂️
 Man frowning
-man frowning | gesture | man | frowning
+annoyed | disappointed | disgruntled | disturbed | frown | frowning | frustrated | gesture | irritated | man | man frowning | upset
 
 🙎‍♀️
 Woman pouting
-woman | woman pouting | pouting | gesture
+disappointed | downtrodden | frown | grimace | pouting | scowl | sulk | upset | whine | woman | woman pouting
 
 🙎‍♂️
 Man pouting
-gesture | man | pouting | man pouting
+disappointed | downtrodden | frown | grimace | man | man pouting | pouting | scowl | sulk | upset | whine
 
 🚣‍♀️
 Woman rowing boat
-woman rowing boat | rowboat | boat | woman
+boat | canoe | cruise | fishing | lake | oar | paddle | raft | river | row | rowboat | rowing | woman | woman rowing boat
 
 🚣‍♂️
 Man rowing boat
-man rowing boat | boat | man | rowboat
+boat | canoe | cruise | fishing | lake | man | man rowing boat | oar | paddle | raft | river | row | rowboat | rowing
 
 🚴‍♀️
 Woman biking
-bicycle | woman biking | cyclist | woman | biking
+bicycle | bicyclist | bike | biking | cycle | cyclist | riding | sport | woman | woman biking
 
 🚴‍♂️
 Man biking
-bicycle | man biking | cyclist | man | biking
+bicycle | bicyclist | bike | biking | cycle | cyclist | man | man biking | riding | sport
 
 🚵‍♀️
 Woman mountain biking
-mountain | woman mountain biking | bicycle | cyclist | bike | woman | biking
+bicycle | bicyclist | bike | biking | cycle | cyclist | mountain | riding | sport | woman | woman mountain biking
 
 🚵‍♂️
 Man mountain biking
-man mountain biking | mountain | bicycle | cyclist | bike | man
+bicycle | bicyclist | bike | biking | cycle | cyclist | man | man mountain biking | mountain | riding | sport
 
 🚶‍♀️
 Woman walking
-hike | woman walking | walk | woman
+amble | gait | hike | man | pace | pedestrian | stride | stroll | walk | walking | woman | woman walking
 
 🚶‍♂️
 Man walking
-hike | man | walk | man walking
+amble | gait | hike | man | man walking | pace | pedestrian | stride | stroll | walk | walking
 
 🤦‍♀️
 Woman facepalming
-facepalm | woman facepalming | exasperation | woman | disbelief
+again | bewilder | disbelief | exasperation | facepalm | no | not | oh | omg | shock | smh | woman | woman facepalming
 
 🤦‍♂️
 Man facepalming
-man facepalming | facepalm | exasperation | man | disbelief
+again | bewilder | disbelief | exasperation | facepalm | man | man facepalming | no | not | oh | omg | shock | smh
 
 🤷‍♀️
 Woman shrugging
-woman shrugging | ignorance | doubt | shrug | indifference | woman
+doubt | dunno | guess | idk | ignorance | indifference | knows | maybe | shrug | shrugging | whatever | who | woman | woman shrugging
 
 🤷‍♂️
 Man shrugging
-ignorance | doubt | man shrugging | shrug | indifference | man
+doubt | dunno | guess | idk | ignorance | indifference | knows | man | man shrugging | maybe | shrug | shrugging | whatever | who
 
 🤸‍♀️
 Woman cartwheeling
-gymnastics | woman cartwheeling | cartwheel | woman
+active | cartwheel | cartwheeling | excited | flip | gymnastics | happy | somersault | woman | woman cartwheeling
 
 🤸‍♂️
 Man cartwheeling
-gymnastics | man cartwheeling | man | cartwheel
+active | cartwheel | cartwheeling | excited | flip | gymnastics | happy | man | man cartwheeling | somersault
 
 🤹‍♀️
 Woman juggling
-multitask | juggling | woman juggling | woman
+act | balance | balancing | handle | juggle | juggling | manage | multitask | skill | woman | woman juggling
 
 🤹‍♂️
 Man juggling
-multitask | juggling | man | man juggling
+act | balance | balancing | handle | juggle | juggling | man | man juggling | manage | multitask | skill
 
 🤼‍♀️
 Women wrestling
-women wrestling | women | wrestle
+combat | duel | grapple | ring | tournament | women | women wrestling | wrestle | wrestling
 
 🤼‍♂️
 Men wrestling
-men | men wrestling | wrestle
+combat | duel | grapple | men | men wrestling | ring | tournament | wrestle | wrestling
 
 🤽‍♀️
 Woman playing water polo
-water polo | woman | woman playing water polo
+playing | polo | sport | swimming | water | waterpolo | woman | woman playing water polo
 
 🤽‍♂️
 Man playing water polo
-man playing water polo | man | water polo
+man | man playing water polo | playing | polo | sport | swimming | water | waterpolo
 
 🤾‍♀️
 Woman playing handball
-woman playing handball | handball | woman
+athletics | ball | catch | chuck | handball | hurl | lob | pitch | playing | sport | throw | toss | woman | woman playing handball
 
 🤾‍♂️
 Man playing handball
-man | handball | man playing handball
-
+athletics | ball | catch | chuck | handball | hurl | lob | man | man playing handball | pitch | playing | sport | throw | toss

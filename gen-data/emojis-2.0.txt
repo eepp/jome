@@ -4,15 +4,15 @@ flag | flag: ascension island
 
 🇦🇩
 Flag: Andorra
-flag: andorra | flag
+flag | flag: andorra
 
 🇦🇪
 Flag: United Arab Emirates
-flag: united arab emirates | flag
+flag | flag: united arab emirates
 
 🇦🇫
 Flag: Afghanistan
-flag: afghanistan | flag
+flag | flag: afghanistan
 
 🇦🇬
 Flag: Antigua & Barbuda
@@ -20,15 +20,15 @@ flag | flag: antigua & barbuda
 
 🇦🇮
 Flag: Anguilla
-flag: anguilla | flag
+flag | flag: anguilla
 
 🇦🇱
 Flag: Albania
-flag: albania | flag
+flag | flag: albania
 
 🇦🇲
 Flag: Armenia
-flag: armenia | flag
+flag | flag: armenia
 
 🇦🇴
 Flag: Angola
@@ -40,7 +40,7 @@ flag | flag: antarctica
 
 🇦🇷
 Flag: Argentina
-flag: argentina | flag
+flag | flag: argentina
 
 🇦🇸
 Flag: American Samoa
@@ -48,7 +48,7 @@ flag | flag: american samoa
 
 🇦🇹
 Flag: Austria
-flag: austria | flag
+flag | flag: austria
 
 🇦🇺
 Flag: Australia
@@ -56,11 +56,11 @@ flag | flag: australia
 
 🇦🇼
 Flag: Aruba
-flag: aruba | flag
+flag | flag: aruba
 
 🇦🇽
 Flag: Åland Islands
-flag: åland islands | flag
+flag | flag: åland islands
 
 🇦🇿
 Flag: Azerbaijan
@@ -72,19 +72,19 @@ flag | flag: bosnia & herzegovina
 
 🇧🇧
 Flag: Barbados
-flag: barbados | flag
+flag | flag: barbados
 
 🇧🇩
 Flag: Bangladesh
-flag: bangladesh | flag
+flag | flag: bangladesh
 
 🇧🇪
 Flag: Belgium
-flag: belgium | flag
+flag | flag: belgium
 
 🇧🇫
 Flag: Burkina Faso
-flag: burkina faso | flag
+flag | flag: burkina faso
 
 🇧🇬
 Flag: Bulgaria
@@ -92,15 +92,15 @@ flag | flag: bulgaria
 
 🇧🇭
 Flag: Bahrain
-flag: bahrain | flag
+flag | flag: bahrain
 
 🇧🇮
 Flag: Burundi
-flag: burundi | flag
+flag | flag: burundi
 
 🇧🇯
 Flag: Benin
-flag: benin | flag
+flag | flag: benin
 
 🇧🇱
 Flag: St. Barthélemy
@@ -108,11 +108,11 @@ flag | flag: st. barthélemy
 
 🇧🇲
 Flag: Bermuda
-flag: bermuda | flag
+flag | flag: bermuda
 
 🇧🇳
 Flag: Brunei
-flag: brunei | flag
+flag | flag: brunei
 
 🇧🇴
 Flag: Bolivia
@@ -120,11 +120,11 @@ flag | flag: bolivia
 
 🇧🇶
 Flag: Caribbean Netherlands
-flag: caribbean netherlands | flag
+flag | flag: caribbean netherlands
 
 🇧🇷
 Flag: Brazil
-flag: brazil | flag
+flag | flag: brazil
 
 🇧🇸
 Flag: Bahamas
@@ -136,7 +136,7 @@ flag | flag: bhutan
 
 🇧🇻
 Flag: Bouvet Island
-flag: bouvet island | flag
+flag | flag: bouvet island
 
 🇧🇼
 Flag: Botswana
@@ -148,11 +148,11 @@ flag | flag: belarus
 
 🇧🇿
 Flag: Belize
-flag: belize | flag
+flag | flag: belize
 
 🇨🇦
 Flag: Canada
-flag: canada | flag
+flag | flag: canada
 
 🇨🇨
 Flag: Cocos (Keeling) Islands
@@ -164,23 +164,23 @@ flag | flag: congo - kinshasa
 
 🇨🇫
 Flag: Central African Republic
-flag: central african republic | flag
+flag | flag: central african republic
 
 🇨🇬
 Flag: Congo - Brazzaville
-flag: congo - brazzaville | flag
+flag | flag: congo - brazzaville
 
 🇨🇭
 Flag: Switzerland
-flag: switzerland | flag
+flag | flag: switzerland
 
 🇨🇮
-Flag: Côte d’Ivoire
-flag: côte d’ivoire | flag
+Flag: Côte d'Ivoire
+flag | flag: côte d'ivoire
 
 🇨🇰
 Flag: Cook Islands
-flag: cook islands | flag
+flag | flag: cook islands
 
 🇨🇱
 Flag: Chile
@@ -192,15 +192,15 @@ flag | flag: cameroon
 
 🇨🇴
 Flag: Colombia
-flag: colombia | flag
+flag | flag: colombia
 
 🇨🇵
 Flag: Clipperton Island
-flag: clipperton island | flag
+flag | flag: clipperton island
 
 🇨🇷
 Flag: Costa Rica
-flag: costa rica | flag
+flag | flag: costa rica
 
 🇨🇺
 Flag: Cuba
@@ -208,7 +208,7 @@ flag | flag: cuba
 
 🇨🇻
 Flag: Cape Verde
-flag: cape verde | flag
+flag | flag: cape verde
 
 🇨🇼
 Flag: Curaçao
@@ -216,7 +216,7 @@ flag | flag: curaçao
 
 🇨🇽
 Flag: Christmas Island
-flag: christmas island | flag
+flag | flag: christmas island
 
 🇨🇾
 Flag: Cyprus
@@ -232,11 +232,11 @@ flag | flag: diego garcia
 
 🇩🇯
 Flag: Djibouti
-flag: djibouti | flag
+flag | flag: djibouti
 
 🇩🇰
 Flag: Denmark
-flag: denmark | flag
+flag | flag: denmark
 
 🇩🇲
 Flag: Dominica
@@ -244,7 +244,7 @@ flag | flag: dominica
 
 🇩🇴
 Flag: Dominican Republic
-flag: dominican republic | flag
+flag | flag: dominican republic
 
 🇩🇿
 Flag: Algeria
@@ -256,7 +256,7 @@ flag | flag: ceuta & melilla
 
 🇪🇨
 Flag: Ecuador
-flag: ecuador | flag
+flag | flag: ecuador
 
 🇪🇪
 Flag: Estonia
@@ -268,7 +268,7 @@ flag | flag: egypt
 
 🇪🇭
 Flag: Western Sahara
-flag: western sahara | flag
+flag | flag: western sahara
 
 🇪🇷
 Flag: Eritrea
@@ -284,23 +284,23 @@ flag | flag: european union
 
 🇫🇮
 Flag: Finland
-flag: finland | flag
+flag | flag: finland
 
 🇫🇯
 Flag: Fiji
-flag: fiji | flag
+flag | flag: fiji
 
 🇫🇰
 Flag: Falkland Islands
-flag: falkland islands | flag
+flag | flag: falkland islands
 
 🇫🇲
 Flag: Micronesia
-flag: micronesia | flag
+flag | flag: micronesia
 
 🇫🇴
 Flag: Faroe Islands
-flag: faroe islands | flag
+flag | flag: faroe islands
 
 🇬🇦
 Flag: Gabon
@@ -312,7 +312,7 @@ flag | flag: grenada
 
 🇬🇪
 Flag: Georgia
-flag: georgia | flag
+flag | flag: georgia
 
 🇬🇫
 Flag: French Guiana
@@ -320,11 +320,11 @@ flag | flag: french guiana
 
 🇬🇬
 Flag: Guernsey
-flag: guernsey | flag
+flag | flag: guernsey
 
 🇬🇭
 Flag: Ghana
-flag: ghana | flag
+flag | flag: ghana
 
 🇬🇮
 Flag: Gibraltar
@@ -332,7 +332,7 @@ flag | flag: gibraltar
 
 🇬🇱
 Flag: Greenland
-flag: greenland | flag
+flag | flag: greenland
 
 🇬🇲
 Flag: Gambia
@@ -340,15 +340,15 @@ flag | flag: gambia
 
 🇬🇳
 Flag: Guinea
-flag: guinea | flag
+flag | flag: guinea
 
 🇬🇵
 Flag: Guadeloupe
-flag: guadeloupe | flag
+flag | flag: guadeloupe
 
 🇬🇶
 Flag: Equatorial Guinea
-flag: equatorial guinea | flag
+flag | flag: equatorial guinea
 
 🇬🇷
 Flag: Greece
@@ -360,7 +360,7 @@ flag | flag: south georgia & south sandwich islands
 
 🇬🇹
 Flag: Guatemala
-flag: guatemala | flag
+flag | flag: guatemala
 
 🇬🇺
 Flag: Guam
@@ -368,7 +368,7 @@ flag | flag: guam
 
 🇬🇼
 Flag: Guinea-Bissau
-flag: guinea-bissau | flag
+flag | flag: guinea-bissau
 
 🇬🇾
 Flag: Guyana
@@ -376,7 +376,7 @@ flag | flag: guyana
 
 🇭🇰
 Flag: Hong Kong SAR China
-flag: hong kong sar china | flag
+flag | flag: hong kong sar china
 
 🇭🇲
 Flag: Heard & McDonald Islands
@@ -384,11 +384,11 @@ flag | flag: heard & mcdonald islands
 
 🇭🇳
 Flag: Honduras
-flag: honduras | flag
+flag | flag: honduras
 
 🇭🇷
 Flag: Croatia
-flag: croatia | flag
+flag | flag: croatia
 
 🇭🇹
 Flag: Haiti
@@ -400,7 +400,7 @@ flag | flag: hungary
 
 🇮🇨
 Flag: Canary Islands
-flag: canary islands | flag
+flag | flag: canary islands
 
 🇮🇩
 Flag: Indonesia
@@ -408,23 +408,23 @@ flag | flag: indonesia
 
 🇮🇪
 Flag: Ireland
-flag: ireland | flag
+flag | flag: ireland
 
 🇮🇱
 Flag: Israel
-flag: israel | flag
+flag | flag: israel
 
 🇮🇲
 Flag: Isle of Man
-flag: isle of man | flag
+flag | flag: isle of man
 
 🇮🇳
 Flag: India
-flag: india | flag
+flag | flag: india
 
 🇮🇴
 Flag: British Indian Ocean Territory
-flag: british indian ocean territory | flag
+flag | flag: british indian ocean territory
 
 🇮🇶
 Flag: Iraq
@@ -436,7 +436,7 @@ flag | flag: iran
 
 🇮🇸
 Flag: Iceland
-flag: iceland | flag
+flag | flag: iceland
 
 🇯🇪
 Flag: Jersey
@@ -452,39 +452,39 @@ flag | flag: jordan
 
 🇰🇪
 Flag: Kenya
-flag: kenya | flag
+flag | flag: kenya
 
 🇰🇬
 Flag: Kyrgyzstan
-flag: kyrgyzstan | flag
+flag | flag: kyrgyzstan
 
 🇰🇭
 Flag: Cambodia
-flag: cambodia | flag
+flag | flag: cambodia
 
 🇰🇮
 Flag: Kiribati
-flag: kiribati | flag
+flag | flag: kiribati
 
 🇰🇲
 Flag: Comoros
-flag: comoros | flag
+flag | flag: comoros
 
 🇰🇳
 Flag: St. Kitts & Nevis
-flag: st. kitts & nevis | flag
+flag | flag: st. kitts & nevis
 
 🇰🇵
 Flag: North Korea
-flag: north korea | flag
+flag | flag: north korea
 
 🇰🇼
 Flag: Kuwait
-flag: kuwait | flag
+flag | flag: kuwait
 
 🇰🇾
 Flag: Cayman Islands
-flag: cayman islands | flag
+flag | flag: cayman islands
 
 🇰🇿
 Flag: Kazakhstan
@@ -492,19 +492,19 @@ flag | flag: kazakhstan
 
 🇱🇦
 Flag: Laos
-flag: laos | flag
+flag | flag: laos
 
 🇱🇧
 Flag: Lebanon
-flag: lebanon | flag
+flag | flag: lebanon
 
 🇱🇨
 Flag: St. Lucia
-flag: st. lucia | flag
+flag | flag: st. lucia
 
 🇱🇮
 Flag: Liechtenstein
-flag: liechtenstein | flag
+flag | flag: liechtenstein
 
 🇱🇰
 Flag: Sri Lanka
@@ -512,15 +512,15 @@ flag | flag: sri lanka
 
 🇱🇷
 Flag: Liberia
-flag: liberia | flag
+flag | flag: liberia
 
 🇱🇸
 Flag: Lesotho
-flag: lesotho | flag
+flag | flag: lesotho
 
 🇱🇹
 Flag: Lithuania
-flag: lithuania | flag
+flag | flag: lithuania
 
 🇱🇺
 Flag: Luxembourg
@@ -528,7 +528,7 @@ flag | flag: luxembourg
 
 🇱🇻
 Flag: Latvia
-flag: latvia | flag
+flag | flag: latvia
 
 🇱🇾
 Flag: Libya
@@ -544,7 +544,7 @@ flag | flag: monaco
 
 🇲🇩
 Flag: Moldova
-flag: moldova | flag
+flag | flag: moldova
 
 🇲🇪
 Flag: Montenegro
@@ -552,19 +552,19 @@ flag | flag: montenegro
 
 🇲🇫
 Flag: St. Martin
-flag: st. martin | flag
+flag | flag: st. martin
 
 🇲🇬
 Flag: Madagascar
-flag: madagascar | flag
+flag | flag: madagascar
 
 🇲🇭
 Flag: Marshall Islands
-flag: marshall islands | flag
+flag | flag: marshall islands
 
 🇲🇰
-Flag: Macedonia
-flag: macedonia | flag
+Flag: North Macedonia
+flag | flag: north macedonia
 
 🇲🇱
 Flag: Mali
@@ -572,15 +572,15 @@ flag | flag: mali
 
 🇲🇲
 Flag: Myanmar (Burma)
-flag: myanmar (burma) | flag
+flag | flag: myanmar (burma)
 
 🇲🇳
 Flag: Mongolia
-flag: mongolia | flag
+flag | flag: mongolia
 
 🇲🇴
-Flag: Macau SAR China
-flag | flag: macau sar china
+Flag: Macao SAR China
+flag | flag: macao sar china
 
 🇲🇵
 Flag: Northern Mariana Islands
@@ -588,15 +588,15 @@ flag | flag: northern mariana islands
 
 🇲🇶
 Flag: Martinique
-flag: martinique | flag
+flag | flag: martinique
 
 🇲🇷
 Flag: Mauritania
-flag: mauritania | flag
+flag | flag: mauritania
 
 🇲🇸
 Flag: Montserrat
-flag: montserrat | flag
+flag | flag: montserrat
 
 🇲🇹
 Flag: Malta
@@ -604,7 +604,7 @@ flag | flag: malta
 
 🇲🇺
 Flag: Mauritius
-flag: mauritius | flag
+flag | flag: mauritius
 
 🇲🇻
 Flag: Maldives
@@ -624,7 +624,7 @@ flag | flag: malaysia
 
 🇲🇿
 Flag: Mozambique
-flag: mozambique | flag
+flag | flag: mozambique
 
 🇳🇦
 Flag: Namibia
@@ -632,7 +632,7 @@ flag | flag: namibia
 
 🇳🇨
 Flag: New Caledonia
-flag: new caledonia | flag
+flag | flag: new caledonia
 
 🇳🇪
 Flag: Niger
@@ -648,15 +648,15 @@ flag | flag: nigeria
 
 🇳🇮
 Flag: Nicaragua
-flag: nicaragua | flag
+flag | flag: nicaragua
 
 🇳🇱
 Flag: Netherlands
-flag: netherlands | flag
+flag | flag: netherlands
 
 🇳🇴
 Flag: Norway
-flag: norway | flag
+flag | flag: norway
 
 🇳🇵
 Flag: Nepal
@@ -664,31 +664,31 @@ flag | flag: nepal
 
 🇳🇷
 Flag: Nauru
-flag: nauru | flag
+flag | flag: nauru
 
 🇳🇺
 Flag: Niue
-flag: niue | flag
+flag | flag: niue
 
 🇳🇿
 Flag: New Zealand
-flag: new zealand | flag
+flag | flag: new zealand
 
 🇴🇲
 Flag: Oman
-flag: oman | flag
+flag | flag: oman
 
 🇵🇦
 Flag: Panama
-flag: panama | flag
+flag | flag: panama
 
 🇵🇪
 Flag: Peru
-flag: peru | flag
+flag | flag: peru
 
 🇵🇫
 Flag: French Polynesia
-flag: french polynesia | flag
+flag | flag: french polynesia
 
 🇵🇬
 Flag: Papua New Guinea
@@ -700,7 +700,7 @@ flag | flag: philippines
 
 🇵🇰
 Flag: Pakistan
-flag: pakistan | flag
+flag | flag: pakistan
 
 🇵🇱
 Flag: Poland
@@ -708,7 +708,7 @@ flag | flag: poland
 
 🇵🇲
 Flag: St. Pierre & Miquelon
-flag: st. pierre & miquelon | flag
+flag | flag: st. pierre & miquelon
 
 🇵🇳
 Flag: Pitcairn Islands
@@ -728,7 +728,7 @@ flag | flag: portugal
 
 🇵🇼
 Flag: Palau
-flag: palau | flag
+flag | flag: palau
 
 🇵🇾
 Flag: Paraguay
@@ -744,7 +744,7 @@ flag | flag: réunion
 
 🇷🇴
 Flag: Romania
-flag: romania | flag
+flag | flag: romania
 
 🇷🇸
 Flag: Serbia
@@ -752,19 +752,19 @@ flag | flag: serbia
 
 🇷🇼
 Flag: Rwanda
-flag: rwanda | flag
+flag | flag: rwanda
 
 🇸🇦
 Flag: Saudi Arabia
-flag: saudi arabia | flag
+flag | flag: saudi arabia
 
 🇸🇧
 Flag: Solomon Islands
-flag: solomon islands | flag
+flag | flag: solomon islands
 
 🇸🇨
 Flag: Seychelles
-flag: seychelles | flag
+flag | flag: seychelles
 
 🇸🇩
 Flag: Sudan
@@ -772,31 +772,31 @@ flag | flag: sudan
 
 🇸🇪
 Flag: Sweden
-flag: sweden | flag
+flag | flag: sweden
 
 🇸🇬
 Flag: Singapore
-flag: singapore | flag
+flag | flag: singapore
 
 🇸🇭
 Flag: St. Helena
-flag: st. helena | flag
+flag | flag: st. helena
 
 🇸🇮
 Flag: Slovenia
-flag: slovenia | flag
+flag | flag: slovenia
 
 🇸🇯
 Flag: Svalbard & Jan Mayen
-flag: svalbard & jan mayen | flag
+flag | flag: svalbard & jan mayen
 
 🇸🇰
 Flag: Slovakia
-flag: slovakia | flag
+flag | flag: slovakia
 
 🇸🇱
 Flag: Sierra Leone
-flag: sierra leone | flag
+flag | flag: sierra leone
 
 🇸🇲
 Flag: San Marino
@@ -804,15 +804,15 @@ flag | flag: san marino
 
 🇸🇳
 Flag: Senegal
-flag: senegal | flag
+flag | flag: senegal
 
 🇸🇴
 Flag: Somalia
-flag: somalia | flag
+flag | flag: somalia
 
 🇸🇷
 Flag: Suriname
-flag: suriname | flag
+flag | flag: suriname
 
 🇸🇸
 Flag: South Sudan
@@ -820,23 +820,23 @@ flag | flag: south sudan
 
 🇸🇹
 Flag: São Tomé & Príncipe
-flag: são tomé & príncipe | flag
+flag | flag: são tomé & príncipe
 
 🇸🇻
 Flag: El Salvador
-flag: el salvador | flag
+flag | flag: el salvador
 
 🇸🇽
 Flag: Sint Maarten
-flag: sint maarten | flag
+flag | flag: sint maarten
 
 🇸🇾
 Flag: Syria
 flag | flag: syria
 
 🇸🇿
-Flag: Swaziland
-flag: swaziland | flag
+Flag: Eswatini
+flag | flag: eswatini
 
 🇹🇦
 Flag: Tristan da Cunha
@@ -844,7 +844,7 @@ flag | flag: tristan da cunha
 
 🇹🇨
 Flag: Turks & Caicos Islands
-flag: turks & caicos islands | flag
+flag | flag: turks & caicos islands
 
 🇹🇩
 Flag: Chad
@@ -852,19 +852,19 @@ flag | flag: chad
 
 🇹🇫
 Flag: French Southern Territories
-flag: french southern territories | flag
+flag | flag: french southern territories
 
 🇹🇬
 Flag: Togo
-flag: togo | flag
+flag | flag: togo
 
 🇹🇭
 Flag: Thailand
-flag: thailand | flag
+flag | flag: thailand
 
 🇹🇯
 Flag: Tajikistan
-flag: tajikistan | flag
+flag | flag: tajikistan
 
 🇹🇰
 Flag: Tokelau
@@ -872,11 +872,11 @@ flag | flag: tokelau
 
 🇹🇱
 Flag: Timor-Leste
-flag: timor-leste | flag
+flag | flag: timor-leste
 
 🇹🇲
 Flag: Turkmenistan
-flag: turkmenistan | flag
+flag | flag: turkmenistan
 
 🇹🇳
 Flag: Tunisia
@@ -884,19 +884,19 @@ flag | flag: tunisia
 
 🇹🇴
 Flag: Tonga
-flag: tonga | flag
+flag | flag: tonga
 
 🇹🇷
-Flag: Turkey
-flag | flag: turkey
+Flag: Türkiye
+flag | flag: türkiye
 
 🇹🇹
 Flag: Trinidad & Tobago
-flag: trinidad & tobago | flag
+flag | flag: trinidad & tobago
 
 🇹🇻
 Flag: Tuvalu
-flag: tuvalu | flag
+flag | flag: tuvalu
 
 🇹🇼
 Flag: Taiwan
@@ -904,15 +904,15 @@ flag | flag: taiwan
 
 🇹🇿
 Flag: Tanzania
-flag: tanzania | flag
+flag | flag: tanzania
 
 🇺🇦
 Flag: Ukraine
-flag: ukraine | flag
+flag | flag: ukraine
 
 🇺🇬
 Flag: Uganda
-flag: uganda | flag
+flag | flag: uganda
 
 🇺🇲
 Flag: U.S. Outlying Islands
@@ -920,7 +920,7 @@ flag | flag: u.s. outlying islands
 
 🇺🇾
 Flag: Uruguay
-flag: uruguay | flag
+flag | flag: uruguay
 
 🇺🇿
 Flag: Uzbekistan
@@ -936,7 +936,7 @@ flag | flag: st. vincent & grenadines
 
 🇻🇪
 Flag: Venezuela
-flag: venezuela | flag
+flag | flag: venezuela
 
 🇻🇬
 Flag: British Virgin Islands
@@ -948,15 +948,15 @@ flag | flag: u.s. virgin islands
 
 🇻🇳
 Flag: Vietnam
-flag: vietnam | flag
+flag | flag: vietnam
 
 🇻🇺
 Flag: Vanuatu
-flag: vanuatu | flag
+flag | flag: vanuatu
 
 🇼🇫
 Flag: Wallis & Futuna
-flag: wallis & futuna | flag
+flag | flag: wallis & futuna
 
 🇼🇸
 Flag: Samoa
@@ -968,15 +968,15 @@ flag | flag: kosovo
 
 🇾🇪
 Flag: Yemen
-flag: yemen | flag
+flag | flag: yemen
 
 🇾🇹
 Flag: Mayotte
-flag: mayotte | flag
+flag | flag: mayotte
 
 🇿🇦
 Flag: South Africa
-flag: south africa | flag
+flag | flag: south africa
 
 🇿🇲
 Flag: Zambia
@@ -988,81 +988,80 @@ flag | flag: zimbabwe
 
 👁️‍🗨️
 Eye in speech bubble
-eye | eye in speech bubble | speech bubble | witness
+balloon | bubble | eye | eye in speech bubble | speech | witness
 
 👨‍❤️‍👨
 Couple with heart: man, man
-love | couple | couple with heart | couple with heart: man, man | man
+anniversary | babe | bae | couple | couple with heart: man, man | dating | heart | kiss | love | man | person | relationship | romance | together | you
 
 👨‍❤️‍💋‍👨
 Kiss: man, man
-kiss | man | kiss: man, man | couple
+anniversary | babe | bae | couple | date | dating | heart | kiss | kiss: man, man | love | man | mwah | person | romance | together | xoxo
 
 👨‍👨‍👦
 Family: man, man, boy
-family | family: man, man, boy | boy | man
+boy | child | family | family: man, man, boy | man
 
 👨‍👨‍👦‍👦
 Family: man, man, boy, boy
-family | man | boy | family: man, man, boy, boy
+boy | child | family | family: man, man, boy, boy | man
 
 👨‍👨‍👧
 Family: man, man, girl
-girl | family | man | family: man, man, girl
+child | family | family: man, man, girl | girl | man
 
 👨‍👨‍👧‍👦
 Family: man, man, girl, boy
-family: man, man, girl, boy | man | girl | family | boy
+boy | child | family | family: man, man, girl, boy | girl | man
 
 👨‍👨‍👧‍👧
 Family: man, man, girl, girl
-family: man, man, girl, girl | family | girl | man
+child | family | family: man, man, girl, girl | girl | man
 
 👨‍👩‍👦
 Family: man, woman, boy
-family: man, woman, boy | man | family | boy | woman
+boy | child | family | family: man, woman, boy | man | woman
 
 👨‍👩‍👦‍👦
 Family: man, woman, boy, boy
-man | family: man, woman, boy, boy | family | boy | woman
+boy | child | family | family: man, woman, boy, boy | man | woman
 
 👨‍👩‍👧
 Family: man, woman, girl
-family: man, woman, girl | man | girl | family | woman
+child | family | family: man, woman, girl | girl | man | woman
 
 👨‍👩‍👧‍👦
 Family: man, woman, girl, boy
-man | family: man, woman, girl, boy | girl | family | boy | woman
+boy | child | family | family: man, woman, girl, boy | girl | man | woman
 
 👨‍👩‍👧‍👧
 Family: man, woman, girl, girl
-family: man, woman, girl, girl | man | girl | family | woman
+child | family | family: man, woman, girl, girl | girl | man | woman
 
 👩‍❤️‍👩
 Couple with heart: woman, woman
-couple with heart: woman, woman | love | couple | couple with heart | woman
+anniversary | babe | bae | couple | couple with heart: woman, woman | dating | heart | kiss | love | person | relationship | romance | together | woman | you
 
 👩‍❤️‍💋‍👩
 Kiss: woman, woman
-kiss | kiss: woman, woman | woman | couple
+anniversary | babe | bae | couple | date | dating | heart | kiss | kiss: woman, woman | love | mwah | person | romance | together | woman | xoxo
 
 👩‍👩‍👦
 Family: woman, woman, boy
-family | family: woman, woman, boy | boy | woman
+boy | child | family | family: woman, woman, boy | woman
 
 👩‍👩‍👦‍👦
 Family: woman, woman, boy, boy
-family | family: woman, woman, boy, boy | boy | woman
+boy | child | family | family: woman, woman, boy, boy | woman
 
 👩‍👩‍👧
 Family: woman, woman, girl
-girl | family | family: woman, woman, girl | woman
+child | family | family: woman, woman, girl | girl | woman
 
 👩‍👩‍👧‍👦
 Family: woman, woman, girl, boy
-family: woman, woman, girl, boy | girl | family | boy | woman
+boy | child | family | family: woman, woman, girl, boy | girl | woman
 
 👩‍👩‍👧‍👧
 Family: woman, woman, girl, girl
-girl | family: woman, woman, girl, girl | family | woman
-
+child | family | family: woman, woman, girl, girl | girl | woman

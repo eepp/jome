@@ -1,22 +1,22 @@
 🧑‍🦰
 Person: red hair
-red hair | ginger | red hair | redhead
+adult | person | person: red hair | red hair
 
 🧑‍🦱
 Person: curly hair
-afro | curly | curly hair | ringlets
+adult | curly hair | person | person: curly hair
 
 🧑‍🦳
 Person: white hair
-gray | hair | old | white
+adult | person | person: white hair | white hair
 
 🧑‍🦲
 Person: bald
-bald | chemotherapy | hairless | no hair | shaven
+adult | bald | person | person: bald
 
 🧑‍⚕️
 Health worker
-doctor | healthcare | nurse | therapist
+doctor | health | health worker | healthcare | nurse | therapist | worker
 
 🧑‍🎓
 Student
@@ -24,11 +24,11 @@ graduate | student
 
 🧑‍🏫
 Teacher
-instructor | professor | teacher
+instructor | lecturer | professor | teacher
 
 🧑‍⚖️
 Judge
-judge | scales
+judge | justice | law | scales
 
 🧑‍🌾
 Farmer
@@ -44,23 +44,23 @@ electrician | mechanic | plumber | tradesperson
 
 🧑‍🏭
 Factory worker
-assembly | factory | industrial | worker
+assembly | factory | factory worker | industrial | worker
 
 🧑‍💼
 Office worker
-architect | business | manager | white-collar
+architect | business | manager | office | office worker | white-collar | worker
 
 🧑‍🔬
 Scientist
-biologist | chemist | engineer | physicist | scientist
+biologist | chemist | engineer | mathematician | physicist | scientist
 
 🧑‍💻
 Technologist
-coder | developer | inventor | software | technologist
+coder | computer | developer | inventor | software | technologist
 
 🧑‍🎤
 Singer
-actor | entertainer | rock | singer | star
+actor | entertainer | rock | rockstar | singer | star
 
 🧑‍🎨
 Artist
@@ -72,21 +72,20 @@ pilot | plane
 
 🧑‍🚀
 Astronaut
-astronaut | rocket
+astronaut | rocket | space
 
 🧑‍🚒
 Firefighter
-firefighter | firetruck
+fire | firefighter | firetruck
 
 🧑‍🦯
 Person with white cane
-accessibility | blind
+accessibility | blind | cane | person | person with white cane | probing | white
 
 🧑‍🦼
 Person in motorized wheelchair
-accessibility | wheelchair
+accessibility | motorized | person | person in motorized wheelchair | wheelchair
 
 🧑‍🦽
 Person in manual wheelchair
-accessibility | wheelchair
-
+accessibility | manual | person | person in manual wheelchair | wheelchair

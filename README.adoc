@@ -1,8 +1,17 @@
-= jome 😏
-Philippe Proulx <eepp.ca>
+ifdef::env-github[]
+:toc: macro
+endif::env-github[]
+
+ifndef::env-github[]
 :toc: left
+endif::env-github[]
+
 :icons: font
 :nofooter:
+
+= jome 😏
+Philippe Proulx <eepp.ca>
+5 April 2025
 
 **jome** (_joh_·_mee_) is a ⌨️ centric emoji picker 🖥 application.
 
@@ -208,11 +217,58 @@ To cancel, 👇 **Escape** or **Ctrl**pass:[+]**C**, or close the 🪟.
 
 === Go to Emojipedia page
 
-To go to the https://emojipedia.org/[Emojipedia] 📃 of the
+To go to the https://emojipedia.org/[Emojipedia] 🌐 of the
 <<select,selected>> emoji, 👇 **F12**.
 
-To go to the Emojipedia 📃 of any emoji with the 🖱, right-click it and
+To go to the Emojipedia 🌐 of any emoji with the 🖱, right-click it and
 click "`Go to Emojipedia page`".
+
+
+=== User-defined emoji keywords
+
+You can either replace or ➕ the built-in list of keywords which
+jome searches when 🔍 emojis.
+
+To set user-defined keywords, create an `emojis.json` 📄 within:
+
+[horizontal]
+On 🐧::
+    `~/.config/jome/`
+
+On 🍎::
+    `~/Library/Preferences/jome`
+
+On 🪟::
+    `C:/Users/__USERNAME__/AppData/Local/jome` (probably) or
+    `C:/ProgramData/jome`
+
+`emojis.json` must contain a JSON object where 🔑 are emojis and
+values are objects. Each value may contain one of:
+
+`keywords`::
+    An array of keywords which replaces the built-in keywords entirely
+    for this emoji.
+
+`extra-keywords`::
+    An array of keywords which ➕ either the built-in keywords
+    or the keywords of the `keywords` entry for this emoji.
+
+Example:
+
+[source,json]
+----
+{
+  "🍁": {
+    "extra-keywords": ["canada", "laurentides"]
+  },
+  "😃": {
+    "keywords": ["yay", "hourra"]
+  },
+  "🚬": {
+    "extra-keywords": ["claude poirier"]
+  }
+}
+----
 
 [[cl-options]]
 === Command-line options
