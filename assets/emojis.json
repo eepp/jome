@@ -970,6 +970,32 @@
     "has-skin-tone-support": false,
     "version": "15.0"
   },
+  "🙂‍↔️": {
+    "name": "Head shaking horizontally",
+    "keywords": [
+      "head",
+      "head shaking horizontally",
+      "horizontally",
+      "no",
+      "shake",
+      "shaking"
+    ],
+    "has-skin-tone-support": false,
+    "version": "15.1"
+  },
+  "🙂‍↕️": {
+    "name": "Head shaking vertically",
+    "keywords": [
+      "head",
+      "head shaking vertically",
+      "nod",
+      "shaking",
+      "vertically",
+      "yes"
+    ],
+    "has-skin-tone-support": false,
+    "version": "15.1"
+  },
   "😌": {
     "name": "Relieved face",
     "keywords": [
@@ -7364,6 +7390,62 @@
     "has-skin-tone-support": true,
     "version": "4.0"
   },
+  "🚶‍➡️": {
+    "name": "Person walking facing right",
+    "keywords": [
+      "amble",
+      "gait",
+      "hike",
+      "man",
+      "pace",
+      "pedestrian",
+      "person",
+      "person walking facing right",
+      "stride",
+      "stroll",
+      "walk",
+      "walking"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
+  "🚶‍♂️‍➡️": {
+    "name": "Man walking facing right",
+    "keywords": [
+      "amble",
+      "gait",
+      "hike",
+      "man",
+      "man walking facing right",
+      "pace",
+      "pedestrian",
+      "stride",
+      "stroll",
+      "walk",
+      "walking"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
+  "🚶‍♀️‍➡️": {
+    "name": "Woman walking facing right",
+    "keywords": [
+      "amble",
+      "gait",
+      "hike",
+      "man",
+      "pace",
+      "pedestrian",
+      "stride",
+      "stroll",
+      "walk",
+      "walking",
+      "woman",
+      "woman walking facing right"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
   "🧍": {
     "name": "Person standing",
     "keywords": [
@@ -7433,6 +7515,42 @@
     "has-skin-tone-support": true,
     "version": "12.0"
   },
+  "🧎‍➡️": {
+    "name": "Person kneeling facing right",
+    "keywords": [
+      "kneel",
+      "kneeling",
+      "knees",
+      "person",
+      "person kneeling facing right"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
+  "🧎‍♂️‍➡️": {
+    "name": "Man kneeling facing right",
+    "keywords": [
+      "kneel",
+      "kneeling",
+      "knees",
+      "man",
+      "man kneeling facing right"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
+  "🧎‍♀️‍➡️": {
+    "name": "Woman kneeling facing right",
+    "keywords": [
+      "kneel",
+      "kneeling",
+      "knees",
+      "woman",
+      "woman kneeling facing right"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
   "🧑‍🦯": {
     "name": "Person with white cane",
     "keywords": [
@@ -7475,6 +7593,48 @@
     "has-skin-tone-support": true,
     "version": "12.0"
   },
+  "🧑‍🦯‍➡️": {
+    "name": "Person with white cane facing right",
+    "keywords": [
+      "accessibility",
+      "blind",
+      "cane",
+      "person",
+      "person with white cane facing right",
+      "probing",
+      "white"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
+  "👨‍🦯‍➡️": {
+    "name": "Man with white cane facing right",
+    "keywords": [
+      "accessibility",
+      "blind",
+      "cane",
+      "man",
+      "man with white cane facing right",
+      "probing",
+      "white"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
+  "👩‍🦯‍➡️": {
+    "name": "Woman with white cane facing right",
+    "keywords": [
+      "accessibility",
+      "blind",
+      "cane",
+      "probing",
+      "white",
+      "woman",
+      "woman with white cane facing right"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
   "🧑‍🦼": {
     "name": "Person in motorized wheelchair",
     "keywords": [
@@ -7511,6 +7671,42 @@
     "has-skin-tone-support": true,
     "version": "12.0"
   },
+  "🧑‍🦼‍➡️": {
+    "name": "Person in motorized wheelchair facing right",
+    "keywords": [
+      "accessibility",
+      "motorized",
+      "person",
+      "person in motorized wheelchair facing right",
+      "wheelchair"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
+  "👨‍🦼‍➡️": {
+    "name": "Man in motorized wheelchair facing right",
+    "keywords": [
+      "accessibility",
+      "man",
+      "man in motorized wheelchair facing right",
+      "motorized",
+      "wheelchair"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
+  "👩‍🦼‍➡️": {
+    "name": "Woman in motorized wheelchair facing right",
+    "keywords": [
+      "accessibility",
+      "motorized",
+      "wheelchair",
+      "woman",
+      "woman in motorized wheelchair facing right"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
   "🧑‍🦽": {
     "name": "Person in manual wheelchair",
     "keywords": [
@@ -7546,6 +7742,42 @@
     ],
     "has-skin-tone-support": true,
     "version": "12.0"
+  },
+  "🧑‍🦽‍➡️": {
+    "name": "Person in manual wheelchair facing right",
+    "keywords": [
+      "accessibility",
+      "manual",
+      "person",
+      "person in manual wheelchair facing right",
+      "wheelchair"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
+  "👨‍🦽‍➡️": {
+    "name": "Man in manual wheelchair facing right",
+    "keywords": [
+      "accessibility",
+      "man",
+      "man in manual wheelchair facing right",
+      "manual",
+      "wheelchair"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
+  "👩‍🦽‍➡️": {
+    "name": "Woman in manual wheelchair facing right",
+    "keywords": [
+      "accessibility",
+      "manual",
+      "wheelchair",
+      "woman",
+      "woman in manual wheelchair facing right"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
   },
   "🏃": {
     "name": "Person running",
@@ -7603,6 +7835,63 @@
     ],
     "has-skin-tone-support": true,
     "version": "4.0"
+  },
+  "🏃‍➡️": {
+    "name": "Person running facing right",
+    "keywords": [
+      "fast",
+      "hurry",
+      "marathon",
+      "move",
+      "person",
+      "person running facing right",
+      "quick",
+      "race",
+      "racing",
+      "run",
+      "rush",
+      "speed"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
+  "🏃‍♂️‍➡️": {
+    "name": "Man running facing right",
+    "keywords": [
+      "fast",
+      "hurry",
+      "man",
+      "man running facing right",
+      "marathon",
+      "move",
+      "quick",
+      "race",
+      "racing",
+      "run",
+      "rush",
+      "speed"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
+  },
+  "🏃‍♀️‍➡️": {
+    "name": "Woman running facing right",
+    "keywords": [
+      "fast",
+      "hurry",
+      "marathon",
+      "move",
+      "quick",
+      "race",
+      "racing",
+      "run",
+      "rush",
+      "speed",
+      "woman",
+      "woman running facing right"
+    ],
+    "has-skin-tone-support": true,
+    "version": "15.1"
   },
   "💃": {
     "name": "Woman dancing",
@@ -7907,6 +8196,50 @@
     ],
     "has-skin-tone-support": false,
     "version": "0.6"
+  },
+  "🧑‍🧑‍🧒": {
+    "name": "Family: adult, adult, child",
+    "keywords": [
+      "adult",
+      "child",
+      "family",
+      "family: adult, adult, child"
+    ],
+    "has-skin-tone-support": false,
+    "version": "15.1"
+  },
+  "🧑‍🧑‍🧒‍🧒": {
+    "name": "Family: adult, adult, child, child",
+    "keywords": [
+      "adult",
+      "child",
+      "family",
+      "family: adult, adult, child, child"
+    ],
+    "has-skin-tone-support": false,
+    "version": "15.1"
+  },
+  "🧑‍🧒": {
+    "name": "Family: adult, child",
+    "keywords": [
+      "adult",
+      "child",
+      "family",
+      "family: adult, child"
+    ],
+    "has-skin-tone-support": false,
+    "version": "15.1"
+  },
+  "🧑‍🧒‍🧒": {
+    "name": "Family: adult, child, child",
+    "keywords": [
+      "adult",
+      "child",
+      "family",
+      "family: adult, child, child"
+    ],
+    "has-skin-tone-support": false,
+    "version": "15.1"
   },
   "👨‍👩‍👦": {
     "name": "Family: man, woman, boy",
@@ -9265,6 +9598,29 @@
     ],
     "has-skin-tone-support": false,
     "version": "3.0"
+  },
+  "🐦‍🔥": {
+    "name": "Phoenix",
+    "keywords": [
+      "ascend",
+      "ascension",
+      "emerge",
+      "fantasy",
+      "firebird",
+      "glory",
+      "immortal",
+      "phoenix",
+      "rebirth",
+      "reincarnation",
+      "reinvent",
+      "renewal",
+      "revival",
+      "revive",
+      "rise",
+      "transform"
+    ],
+    "has-skin-tone-support": false,
+    "version": "15.1"
   },
   "🦆": {
     "name": "Duck",
@@ -11010,6 +11366,29 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
+  "🍋‍🟩": {
+    "name": "Lime",
+    "keywords": [
+      "acidity",
+      "citrus",
+      "cocktail",
+      "fruit",
+      "garnish",
+      "key",
+      "lime",
+      "margarita",
+      "mojito",
+      "refreshing",
+      "salsa",
+      "sour",
+      "tangy",
+      "tequila",
+      "tropical",
+      "zest"
+    ],
+    "has-skin-tone-support": false,
+    "version": "15.1"
+  },
   "🍌": {
     "name": "Banana",
     "keywords": [
@@ -11330,6 +11709,30 @@
     ],
     "has-skin-tone-support": false,
     "version": "15.0"
+  },
+  "🍄‍🟫": {
+    "name": "Brown mushroom",
+    "keywords": [
+      "brown mushroom",
+      "food",
+      "fungi",
+      "fungus",
+      "mushroom",
+      "nature",
+      "pizza",
+      "portobello",
+      "shiitake",
+      "shroom",
+      "spore",
+      "sprout",
+      "toppings",
+      "truffle",
+      "vegetable",
+      "vegetarian",
+      "veggie"
+    ],
+    "has-skin-tone-support": false,
+    "version": "15.1"
   },
   "🥜": {
     "name": "Peanuts",
@@ -20072,6 +20475,20 @@
     ],
     "has-skin-tone-support": false,
     "version": "0.7"
+  },
+  "⛓️‍💥": {
+    "name": "Broken chain",
+    "keywords": [
+      "break",
+      "breaking",
+      "broken",
+      "broken chain",
+      "chain",
+      "cuffs",
+      "freedom"
+    ],
+    "has-skin-tone-support": false,
+    "version": "15.1"
   },
   "🪝": {
     "name": "Hook",

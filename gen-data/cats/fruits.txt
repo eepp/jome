@@ -3,6 +3,7 @@
 🍉 Watermelon
 🍊 Tangerine
 🍋 Lemon
+🍋‍🟩 Lime
 🍌 Banana
 🍍 Pineapple
 🥭 Mango

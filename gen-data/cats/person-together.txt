@@ -9,6 +9,10 @@
 👨‍❤️‍👨 Couple With Heart: Man, Man
 👩‍❤️‍👩 Couple With Heart: Woman, Woman
 👪 Family
+🧑‍🧑‍🧒 Family: adult, adult, child
+🧑‍🧑‍🧒‍🧒 Family: adult, adult, child, child
+🧑‍🧒 Family: adult, child
+🧑‍🧒‍🧒 Family: adult, child, child
 👨‍👩‍👦 Family: Man, Woman, Boy
 👨‍👩‍👧 Family: Man, Woman, Girl
 👨‍👩‍👧‍👦 Family: Man, Woman, Girl, Boy

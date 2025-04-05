@@ -134,6 +134,7 @@ def _get_all_emoji_descriptors():
         '13.1',
         '14.0',
         '15.0',
+        '15.1',
     ]
 
     for version in versions:

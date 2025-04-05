@@ -298,3 +298,21 @@
 🫄 Pregnant Person
 🫷 Leftwards pushing hand
 🫸 Rightwards pushing hand
+🚶‍➡️ Person walking facing right
+🚶‍♀️‍➡️ Woman walking facing right
+🚶‍♂️‍➡️ Man walking facing right
+🧎‍➡️ Person kneeling facing right
+🧎‍♀️‍➡️ Woman kneeling facing right
+🧎‍♂️‍➡️ Man kneeling facing right
+🧑‍🦯‍➡️ Person with white cane facing right
+👨‍🦯‍➡️ Man with white cane facing right
+👩‍🦯‍➡️ Woman with white cane facing right
+🧑‍🦼‍➡️ Person in motorized wheelchair facing right
+👨‍🦼‍➡️ Man in motorized wheelchair facing right
+👩‍🦼‍➡️ Woman in motorized wheelchair facing right
+🧑‍🦽‍➡️ Person in manual wheelchair facing right
+👨‍🦽‍➡️ Man in manual wheelchair facing right
+👩‍🦽‍➡️ Woman in manual wheelchair facing right
+🏃‍➡️ Person running facing right
+🏃‍♀️‍➡️ Woman running facing right
+🏃‍♂️‍➡️ Man running facing right

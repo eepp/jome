@@ -48,6 +48,8 @@
 😮‍💨 Face Exhaling
 🤥 Lying Face
 🫨 Shaking face
+🙂‍↔️ Head shaking horizontally
+🙂‍↕️ Head shaking vertically
 😌 Relieved Face
 😔 Pensive Face
 😪 Sleepy Face

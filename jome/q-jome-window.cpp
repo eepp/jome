@@ -559,6 +559,9 @@ void QJomeWindow::_updateVersionLabel(const Emoji * const emoji)
                 case EmojiVersion::V_15_0:
                     return "15.0";
 
+                case EmojiVersion::V_15_1:
+                    return "15.1";
+
                 default:
                     std::abort();
                 }

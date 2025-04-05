@@ -55,24 +55,42 @@
 🚶 Person Walking
 🚶‍♂️ Man Walking
 🚶‍♀️ Woman Walking
+🚶‍➡️ Person walking facing right
+🚶‍♂️‍➡️ Man walking facing right
+🚶‍♀️‍➡️ Woman walking facing right
 🧍 Person Standing
 🧍‍♂️ Man Standing
 🧍‍♀️ Woman Standing
 🧎 Person Kneeling
 🧎‍♂️ Man Kneeling
 🧎‍♀️ Woman Kneeling
+🧎‍➡️ Person kneeling facing right
+🧎‍♂️‍➡️ Man kneeling facing right
+🧎‍♀️‍➡️ Woman kneeling facing right
 🧑‍🦯 Person with White Cane
 👨‍🦯 Man with White Cane
 👩‍🦯 Woman with White Cane
+🧑‍🦯‍➡️ Person with white cane facing right
+👨‍🦯‍➡️ Man with white cane facing right
+👩‍🦯‍➡️ Woman with white cane facing right
 🧑‍🦼 Person in Motorized Wheelchair
 👨‍🦼 Man in Motorized Wheelchair
 👩‍🦼 Woman in Motorized Wheelchair
+🧑‍🦼‍➡️ Person in motorized wheelchair facing right
+👨‍🦼‍➡️ Man in motorized wheelchair facing right
+👩‍🦼‍➡️ Woman in motorized wheelchair facing right
 🧑‍🦽 Person in Manual Wheelchair
 👨‍🦽 Man in Manual Wheelchair
 👩‍🦽 Woman in Manual Wheelchair
+🧑‍🦽‍➡️ Person in manual wheelchair facing right
+👨‍🦽‍➡️ Man in manual wheelchair facing right
+👩‍🦽‍➡️ Woman in manual wheelchair facing right
 🏃 Person Running
 🏃‍♂️ Man Running
 🏃‍♀️ Woman Running
+🏃‍➡️ Person running facing right
+🏃‍♂️‍➡️ Man running facing right
+🏃‍♀️‍➡️ Woman running facing right
 💃 Woman Dancing
 🕺 Man Dancing
 🕴 Man in Suit Levitating

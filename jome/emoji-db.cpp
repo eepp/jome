@@ -328,9 +328,11 @@ void EmojiDb::_createEmojis(const std::string& dir)
                                                          return EmojiVersion::V_13_1;
                                                      } else if (str == "14.0") {
                                                          return EmojiVersion::V_14_0;
-                                                     } else {
-                                                         assert(str == "15.0");
+                                                     } else if (str == "15.0") {
                                                          return EmojiVersion::V_15_0;
+                                                     } else {
+                                                         assert(str == "15.1");
+                                                         return EmojiVersion::V_15_1;
                                                      }
                                                  }));
         });
