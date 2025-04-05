@@ -283,7 +283,7 @@ def _main(output_dir):
         for emoji in emojis:
             if emoji not in done_emojis:
                 if emoji not in all_emoji_descrs:
-                    _error('Cannot find `{}` in the `emojis-*.txt` files.'.format(emoji))
+                    _error('Category `{}`: cannot find `{}` in the `emojis-*.txt` files.'.format(cat_id, emoji))
 
                 emoji_descriptors.append(all_emoji_descrs[emoji])
                 done_emojis.add(emoji)
