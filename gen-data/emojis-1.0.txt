@@ -6,11 +6,11 @@ computer | keyboard
 Eject button
 button | eject | eject button
 
-⏱
+⏱️
 Stopwatch
 clock | stopwatch | time
 
-⏲
+⏲️
 Timer clock
 clock | timer | timer clock
 
@@ -18,7 +18,7 @@ clock | timer | timer clock
 Comet
 comet | space
 
-☘
+☘️
 Shamrock
 irish | plant | shamrock
 
@@ -661,3 +661,19 @@ face | unicorn
 🧀
 Cheese wedge
 cheese | cheese wedge | wedge
+
+📵
+No mobile phones
+cell | forbidden | mobile | no | no mobile phones | not | phone | phones | prohibited | telephone
+
+🕎
+Menorah
+candelabrum | candlestick | hanukkah | jewish | judaism | menorah | religion
+
+⏯️
+Play or pause button
+arrow | button | pause | play | play or pause button | right | triangle
+
+⚜️
+Fleur-de-lis
+fleur-de-lis | knights

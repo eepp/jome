@@ -49,7 +49,7 @@
 👮 Police Officer
 👮‍♂️ Man Police Officer
 👮‍♀️ Woman Police Officer
-🕵 Detective
+🕵️ Detective
 🕵️‍♂️ Man Detective
 🕵️‍♀️ Woman Detective
 💂 Guard

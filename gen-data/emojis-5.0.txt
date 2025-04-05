@@ -309,3 +309,7 @@ brr | bundle | coat | cold | jacket | up
 🧦
 Socks
 socks | stocking
+
+🥢
+Chopsticks
+chopsticks | hashi | jeotgarak | kuaizi

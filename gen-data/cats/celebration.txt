@@ -19,7 +19,7 @@
 📯 Postal Horn
 🎈 Balloon
 📰 Newspaper
-㊗ Japanese “Congratulations” Button
+㊗️ Japanese “Congratulations” Button
 ❕ White Exclamation Mark
 ❗ Exclamation Mark
 ‼️ Double Exclamation Mark

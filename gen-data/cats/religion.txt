@@ -1,4 +1,6 @@
 ✡️ Star of David
+🔯 Dotted six-pointed star
+🕎 Menorah
 🪯 Khanda
 ☸️ Wheel of Dharma
 ☯️ Yin Yang
@@ -7,13 +9,13 @@
 ☪️ Star and Crescent
 ☮️ Peace Symbol
 🛐 Place of Worship
-🕉 Om
+🕉️ Om
 ⛪ Church
 💒 Wedding
 🕌 Mosque
 🕍 Synagogue
 🛕 Hindu Temple
-⛩ Shinto Shrine
+⛩️ Shinto Shrine
 🕋 Kaaba
 🙏 Folded Hands
 🪽 Wing

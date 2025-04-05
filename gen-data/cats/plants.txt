@@ -2,7 +2,7 @@
 🌸 Cherry Blossom
 💮 White Flower
 🪷 Lotus
-🏵 Rosette
+🏵️ Rosette
 🌹 Rose
 🥀 Wilted Flower
 🌺 Hibiscus
@@ -22,7 +22,7 @@
 🌵 Cactus
 🌾 Sheaf of Rice
 🌿 Herb
-☘ Shamrock
+☘️ Shamrock
 🍀 Four Leaf Clover
 🍁 Maple Leaf
 🍂 Fallen Leaf

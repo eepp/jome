@@ -13,6 +13,7 @@
 🫏 Donkey
 🐎 Horse
 🦓 Zebra
+🦌 Deer
 🦬 Bison
 🐂 Ox
 🐃 Water Buffalo
@@ -34,7 +35,7 @@
 🐁 Mouse
 🐀 Rat
 🐇 Rabbit
-🐿 Chipmunk
+🐿️ Chipmunk
 🦫 Beaver
 🦔 Hedgehog
 🦇 Bat
@@ -55,7 +56,7 @@
 🪹 Empty Nest
 🪺 Nest with Eggs
 🐧 Penguin
-🕊 Dove
+🕊️ Dove
 🦅 Eagle
 🐦‍🔥 Phoenix
 🦆 Duck
@@ -101,8 +102,8 @@
 🐞 Lady Beetle
 🦗 Cricket
 🪳 Cockroach
-🕷 Spider
-🕸 Spider Web
+🕷️ Spider
+🕸️ Spider Web
 🦂 Scorpion
 🦟 Mosquito
 🪰 Fly

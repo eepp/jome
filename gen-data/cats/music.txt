@@ -4,7 +4,7 @@
 🎹 Musical Keyboard
 🎸 Guitar
 🎤 Microphone
-🎙 Studio Microphone
+🎙️ Studio Microphone
 🎷 Saxophone
 🪗 Accordion
 🎺 Trumpet

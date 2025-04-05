@@ -6,14 +6,15 @@
 📚 Books
 📔 Notebook With Decorative Cover
 📓 Notebook
+📒 Ledger
 📃 Page With Curl
 📜 Scroll
 📄 Page Facing Up
 📰 Newspaper
-🗞 Rolled-Up Newspaper
+🗞️ Rolled-Up Newspaper
 📑 Bookmark Tabs
 🔖 Bookmark
-🏷 Label
+🏷️ Label
 🧾 Receipt
 ✉️ Envelope
 📨 Incoming Envelope
@@ -21,7 +22,7 @@
 📝 Memo
 📁 File Folder
 📂 Open File Folder
-🗂 Card Index Dividers
-🗒 Spiral Notepad
+🗂️ Card Index Dividers
+🗒️ Spiral Notepad
 📋 Clipboard
 🏮 Red Paper Lantern

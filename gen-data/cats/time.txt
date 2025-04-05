@@ -2,9 +2,9 @@
 ⏳ Hourglass Not Done
 ⌚ Watch
 ⏰ Alarm Clock
-⏱ Stopwatch
-⏲ Timer Clock
-🕰 Mantelpiece Clock
+⏱️ Stopwatch
+⏲️ Timer Clock
+🕰️ Mantelpiece Clock
 🕛 Twelve O’Clock
 🕧 Twelve-Thirty
 🕐 One O’Clock

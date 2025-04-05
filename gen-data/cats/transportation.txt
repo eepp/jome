@@ -23,12 +23,13 @@
 🚖 Oncoming Taxi
 🚗 Automobile
 🚘 Oncoming Automobile
+🚙 Sport utility vehicle
 🛻 Pickup Truck
 🚚 Delivery Truck
 🚛 Articulated Lorry
 🚜 Tractor
-🏎 Racing Car
-🏍 Motorcycle
+🏎️ Racing Car
+🏍️ Motorcycle
 🛵 Motor Scooter
 🦽 Manual Wheelchair
 🦼 Motorized Wheelchair
@@ -37,14 +38,16 @@
 🛴 Kick Scooter
 🛹 Skateboard
 🛼 Roller Skate
+🛒 Shopping cart
 ⛵ Sailboat
+🛶 Canoe
 🚤 Speedboat
-🛳 Passenger Ship
-⛴ Ferry
-🛥 Motor Boat
+🛳️ Passenger Ship
+⛴️ Ferry
+🛥️ Motor Boat
 🚢 Ship
-✈ Airplane
-🛩 Small Airplane
+✈️ Airplane
+🛩️ Small Airplane
 🛫 Airplane Departure
 🛬 Airplane Arrival
 🪂 Parachute
@@ -55,7 +58,8 @@
 🚀 Rocket
 🛸 Flying Saucer
 🚏 Bus Stop
-🛤 Railway Track
+🛣️ Motorway
+🛤️ Railway Track
 ⛽ Fuel Pump
 🛞 Wheel
 🚨 Police Car Light
@@ -67,7 +71,7 @@
 🛟 Ring buoy
 💺 Seat
 Ⓜ️ Circled M
-🅿 P Button
+🅿️ P Button
 🧑‍✈️ Pilot
 👨‍✈️ Man Pilot
 👩‍✈️ Woman Pilot

@@ -2532,6 +2532,30 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "👩‍❤️‍💋‍👨": {
+    "name": "Kiss: woman, man",
+    "keywords": [
+      "anniversary",
+      "babe",
+      "bae",
+      "couple",
+      "date",
+      "dating",
+      "heart",
+      "kiss",
+      "kiss: woman, man",
+      "love",
+      "man",
+      "mwah",
+      "person",
+      "romance",
+      "together",
+      "woman",
+      "xoxo"
+    ],
+    "has-skin-tone-support": false,
+    "version": "2.0"
+  },
   "👨‍❤️‍💋‍👨": {
     "name": "Kiss: man, man",
     "keywords": [
@@ -2598,6 +2622,29 @@
     ],
     "has-skin-tone-support": false,
     "version": "0.6"
+  },
+  "👩‍❤️‍👨": {
+    "name": "Couple with heart: woman, man",
+    "keywords": [
+      "anniversary",
+      "babe",
+      "bae",
+      "couple",
+      "couple with heart: woman, man",
+      "dating",
+      "heart",
+      "kiss",
+      "love",
+      "man",
+      "person",
+      "relationship",
+      "romance",
+      "together",
+      "woman",
+      "you"
+    ],
+    "has-skin-tone-support": false,
+    "version": "2.0"
   },
   "👨‍❤️‍👨": {
     "name": "Couple with heart: man, man",
@@ -2936,7 +2983,7 @@
     "has-skin-tone-support": true,
     "version": "3.0"
   },
-  "🖐": {
+  "🖐️": {
     "name": "Hand with fingers splayed",
     "keywords": [
       "finger",
@@ -2947,7 +2994,7 @@
       "splayed",
       "stop"
     ],
-    "has-skin-tone-support": true,
+    "has-skin-tone-support": false,
     "version": "0.7"
   },
   "✋": {
@@ -3152,7 +3199,7 @@
     "has-skin-tone-support": true,
     "version": "12.0"
   },
-  "✌": {
+  "✌️": {
     "name": "Victory hand",
     "keywords": [
       "hand",
@@ -3161,7 +3208,7 @@
       "victory",
       "victory hand"
     ],
-    "has-skin-tone-support": true,
+    "has-skin-tone-support": false,
     "version": "0.6"
   },
   "🤞": {
@@ -3311,7 +3358,7 @@
     "has-skin-tone-support": true,
     "version": "0.6"
   },
-  "☝": {
+  "☝️": {
     "name": "Index pointing up",
     "keywords": [
       "finger",
@@ -3323,7 +3370,7 @@
       "this",
       "up"
     ],
-    "has-skin-tone-support": true,
+    "has-skin-tone-support": false,
     "version": "0.6"
   },
   "🫵": {
@@ -3543,7 +3590,7 @@
     "has-skin-tone-support": true,
     "version": "0.6"
   },
-  "✍": {
+  "✍️": {
     "name": "Writing hand",
     "keywords": [
       "hand",
@@ -3551,7 +3598,7 @@
       "writing",
       "writing hand"
     ],
-    "has-skin-tone-support": true,
+    "has-skin-tone-support": false,
     "version": "0.7"
   },
   "💅": {
@@ -3794,7 +3841,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "👁": {
+  "👁️": {
     "name": "Eye",
     "keywords": [
       "1",
@@ -5413,14 +5460,14 @@
     "has-skin-tone-support": true,
     "version": "4.0"
   },
-  "🕵": {
+  "🕵️": {
     "name": "Detective",
     "keywords": [
       "detective",
       "sleuth",
       "spy"
     ],
-    "has-skin-tone-support": true,
+    "has-skin-tone-support": false,
     "version": "0.7"
   },
   "🕵️‍♂️": {
@@ -6414,6 +6461,18 @@
     "has-skin-tone-support": true,
     "version": "5.0"
   },
+  "🤺": {
+    "name": "Person fencing",
+    "keywords": [
+      "fencer",
+      "fencing",
+      "person",
+      "person fencing",
+      "sword"
+    ],
+    "has-skin-tone-support": false,
+    "version": "3.0"
+  },
   "🏇": {
     "name": "Horse racing",
     "keywords": [
@@ -6428,14 +6487,14 @@
     "has-skin-tone-support": true,
     "version": "1.0"
   },
-  "⛷": {
+  "⛷️": {
     "name": "Skier",
     "keywords": [
       "ski",
       "skier",
       "snow"
     ],
-    "has-skin-tone-support": true,
+    "has-skin-tone-support": false,
     "version": "0.7"
   },
   "🏂": {
@@ -6450,7 +6509,7 @@
     "has-skin-tone-support": true,
     "version": "0.6"
   },
-  "🏌": {
+  "🏌️": {
     "name": "Person golfing",
     "keywords": [
       "ball",
@@ -6467,7 +6526,7 @@
       "range",
       "tee"
     ],
-    "has-skin-tone-support": true,
+    "has-skin-tone-support": false,
     "version": "0.7"
   },
   "🏌️‍♂️": {
@@ -6669,7 +6728,7 @@
     "has-skin-tone-support": true,
     "version": "4.0"
   },
-  "⛹": {
+  "⛹️": {
     "name": "Person bouncing ball",
     "keywords": [
       "athletic",
@@ -6684,7 +6743,7 @@
       "player",
       "throw"
     ],
-    "has-skin-tone-support": true,
+    "has-skin-tone-support": false,
     "version": "0.7"
   },
   "⛹️‍♂️": {
@@ -6723,7 +6782,7 @@
     "has-skin-tone-support": true,
     "version": "4.0"
   },
-  "🏋": {
+  "🏋️": {
     "name": "Person lifting weights",
     "keywords": [
       "barbell",
@@ -6739,7 +6798,7 @@
       "weights",
       "workout"
     ],
-    "has-skin-tone-support": true,
+    "has-skin-tone-support": false,
     "version": "0.7"
   },
   "🏋️‍♂️": {
@@ -7933,7 +7992,7 @@
     "has-skin-tone-support": true,
     "version": "3.0"
   },
-  "🕴": {
+  "🕴️": {
     "name": "Person in suit levitating",
     "keywords": [
       "business",
@@ -7942,7 +8001,7 @@
       "person in suit levitating",
       "suit"
     ],
-    "has-skin-tone-support": true,
+    "has-skin-tone-support": false,
     "version": "0.7"
   },
   "👯": {
@@ -8882,7 +8941,6 @@
       "dragon",
       "dragon face",
       "face",
-      "fairy",
       "fairytale",
       "tale"
     ],
@@ -9070,6 +9128,15 @@
     ],
     "has-skin-tone-support": false,
     "version": "5.0"
+  },
+  "🦌": {
+    "name": "Deer",
+    "keywords": [
+      "animal",
+      "deer"
+    ],
+    "has-skin-tone-support": false,
+    "version": "3.0"
   },
   "🦬": {
     "name": "Bison",
@@ -9326,7 +9393,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🐿": {
+  "🐿️": {
     "name": "Chipmunk",
     "keywords": [
       "animal",
@@ -9576,7 +9643,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🕊": {
+  "🕊️": {
     "name": "Dove",
     "keywords": [
       "bird",
@@ -10165,7 +10232,7 @@
     "has-skin-tone-support": false,
     "version": "13.0"
   },
-  "🕷": {
+  "🕷️": {
     "name": "Spider",
     "keywords": [
       "animal",
@@ -10175,7 +10242,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🕸": {
+  "🕸️": {
     "name": "Spider web",
     "keywords": [
       "spider",
@@ -10304,7 +10371,7 @@
     "has-skin-tone-support": false,
     "version": "14.0"
   },
-  "🏵": {
+  "🏵️": {
     "name": "Rosette",
     "keywords": [
       "plant",
@@ -10558,7 +10625,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "☘": {
+  "☘️": {
     "name": "Shamrock",
     "keywords": [
       "irish",
@@ -10672,7 +10739,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🕶": {
+  "🕶️": {
     "name": "Sunglasses",
     "keywords": [
       "dark",
@@ -10706,7 +10773,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "⛈": {
+  "⛈️": {
     "name": "Cloud with lightning and rain",
     "keywords": [
       "cloud",
@@ -10719,7 +10786,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🌤": {
+  "🌤️": {
     "name": "Sun behind small cloud",
     "keywords": [
       "behind",
@@ -10731,7 +10798,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🌥": {
+  "🌥️": {
     "name": "Sun behind large cloud",
     "keywords": [
       "behind",
@@ -10743,7 +10810,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🌦": {
+  "🌦️": {
     "name": "Sun behind rain cloud",
     "keywords": [
       "behind",
@@ -10756,7 +10823,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🌧": {
+  "🌧️": {
     "name": "Cloud with rain",
     "keywords": [
       "cloud",
@@ -10767,7 +10834,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🌨": {
+  "🌨️": {
     "name": "Cloud with snow",
     "keywords": [
       "cloud",
@@ -10779,7 +10846,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🌩": {
+  "🌩️": {
     "name": "Cloud with lightning",
     "keywords": [
       "cloud",
@@ -10860,7 +10927,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "⛱": {
+  "⛱️": {
     "name": "Umbrella on ground",
     "keywords": [
       "ground",
@@ -10931,7 +10998,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🌪": {
+  "🌪️": {
     "name": "Tornado",
     "keywords": [
       "cloud",
@@ -10942,7 +11009,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🌬": {
+  "🌬️": {
     "name": "Wind face",
     "keywords": [
       "blow",
@@ -10987,7 +11054,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🌫": {
+  "🌫️": {
     "name": "Fog",
     "keywords": [
       "cloud",
@@ -11198,7 +11265,7 @@
     "has-skin-tone-support": false,
     "version": "14.0"
   },
-  "🏖": {
+  "🏖️": {
     "name": "Beach with umbrella",
     "keywords": [
       "beach",
@@ -11208,7 +11275,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🏝": {
+  "🏝️": {
     "name": "Desert island",
     "keywords": [
       "desert",
@@ -11254,6 +11321,15 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "🛶": {
+    "name": "Canoe",
+    "keywords": [
+      "boat",
+      "canoe"
+    ],
+    "has-skin-tone-support": false,
+    "version": "3.0"
+  },
   "🚤": {
     "name": "Speedboat",
     "keywords": [
@@ -11269,7 +11345,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🛳": {
+  "🛳️": {
     "name": "Passenger ship",
     "keywords": [
       "passenger",
@@ -11279,7 +11355,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "⛴": {
+  "⛴️": {
     "name": "Ferry",
     "keywords": [
       "boat",
@@ -11289,7 +11365,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🛥": {
+  "🛥️": {
     "name": "Motor boat",
     "keywords": [
       "boat",
@@ -11599,7 +11675,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🌶": {
+  "🌶️": {
     "name": "Hot pepper",
     "keywords": [
       "hot",
@@ -12026,6 +12102,16 @@
     "has-skin-tone-support": false,
     "version": "3.0"
   },
+  "🥚": {
+    "name": "Egg",
+    "keywords": [
+      "breakfast",
+      "egg",
+      "food"
+    ],
+    "has-skin-tone-support": false,
+    "version": "3.0"
+  },
   "🧆": {
     "name": "Falafel",
     "keywords": [
@@ -12372,6 +12458,17 @@
       "pail",
       "takeout",
       "takeout box"
+    ],
+    "has-skin-tone-support": false,
+    "version": "5.0"
+  },
+  "🥢": {
+    "name": "Chopsticks",
+    "keywords": [
+      "chopsticks",
+      "hashi",
+      "jeotgarak",
+      "kuaizi"
     ],
     "has-skin-tone-support": false,
     "version": "5.0"
@@ -12876,7 +12973,7 @@
     "has-skin-tone-support": false,
     "version": "12.0"
   },
-  "🏟": {
+  "🏟️": {
     "name": "Stadium",
     "keywords": [
       "stadium"
@@ -12884,7 +12981,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🏛": {
+  "🏛️": {
     "name": "Classical building",
     "keywords": [
       "building",
@@ -12894,7 +12991,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🏗": {
+  "🏗️": {
     "name": "Building construction",
     "keywords": [
       "building",
@@ -12918,7 +13015,7 @@
     "has-skin-tone-support": false,
     "version": "13.0"
   },
-  "🏘": {
+  "🏘️": {
     "name": "Houses",
     "keywords": [
       "house",
@@ -12927,7 +13024,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🏚": {
+  "🏚️": {
     "name": "Derelict house",
     "keywords": [
       "derelict",
@@ -13167,7 +13264,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "⛩": {
+  "⛩️": {
     "name": "Shinto shrine",
     "keywords": [
       "religion",
@@ -13191,7 +13288,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🏙": {
+  "🏙️": {
     "name": "Cityscape",
     "keywords": [
       "city",
@@ -13270,7 +13367,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🏔": {
+  "🏔️": {
     "name": "Snow-capped mountain",
     "keywords": [
       "cold",
@@ -13282,7 +13379,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "⛰": {
+  "⛰️": {
     "name": "Mountain",
     "keywords": [
       "mountain"
@@ -13313,7 +13410,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🏕": {
+  "🏕️": {
     "name": "Camping",
     "keywords": [
       "camping"
@@ -13321,7 +13418,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🏜": {
+  "🏜️": {
     "name": "Desert",
     "keywords": [
       "desert"
@@ -13329,7 +13426,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🏞": {
+  "🏞️": {
     "name": "National park",
     "keywords": [
       "national",
@@ -13715,7 +13812,7 @@
     "has-skin-tone-support": false,
     "version": "5.0"
   },
-  "🛰": {
+  "🛰️": {
     "name": "Satellite",
     "keywords": [
       "satellite",
@@ -14039,6 +14136,21 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
+  "🚙": {
+    "name": "Sport utility vehicle",
+    "keywords": [
+      "car",
+      "drive",
+      "recreational",
+      "sport",
+      "sport utility vehicle",
+      "sportutility",
+      "utility",
+      "vehicle"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.6"
+  },
   "🛻": {
     "name": "Pickup truck",
     "keywords": [
@@ -14092,7 +14204,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🏎": {
+  "🏎️": {
     "name": "Racing car",
     "keywords": [
       "car",
@@ -14103,7 +14215,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🏍": {
+  "🏍️": {
     "name": "Motorcycle",
     "keywords": [
       "motorcycle",
@@ -14207,7 +14319,18 @@
     "has-skin-tone-support": false,
     "version": "13.0"
   },
-  "✈": {
+  "🛒": {
+    "name": "Shopping cart",
+    "keywords": [
+      "cart",
+      "shopping",
+      "shopping cart",
+      "trolley"
+    ],
+    "has-skin-tone-support": false,
+    "version": "3.0"
+  },
+  "✈️": {
     "name": "Airplane",
     "keywords": [
       "aeroplane",
@@ -14221,7 +14344,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🛩": {
+  "🛩️": {
     "name": "Small airplane",
     "keywords": [
       "aeroplane",
@@ -14334,7 +14457,17 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🛤": {
+  "🛣️": {
+    "name": "Motorway",
+    "keywords": [
+      "highway",
+      "motorway",
+      "road"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.7"
+  },
+  "🛤️": {
     "name": "Railway track",
     "keywords": [
       "railway",
@@ -14480,7 +14613,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🅿": {
+  "🅿️": {
     "name": "P button",
     "keywords": [
       "button",
@@ -14546,7 +14679,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "⏱": {
+  "⏱️": {
     "name": "Stopwatch",
     "keywords": [
       "clock",
@@ -14556,7 +14689,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "⏲": {
+  "⏲️": {
     "name": "Timer clock",
     "keywords": [
       "clock",
@@ -14566,7 +14699,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🕰": {
+  "🕰️": {
     "name": "Mantelpiece clock",
     "keywords": [
       "clock",
@@ -14933,7 +15066,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🎗": {
+  "🎗️": {
     "name": "Reminder ribbon",
     "keywords": [
       "celebration",
@@ -14944,7 +15077,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🎟": {
+  "🎟️": {
     "name": "Admission tickets",
     "keywords": [
       "admission",
@@ -15257,7 +15390,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🕹": {
+  "🕹️": {
     "name": "Joystick",
     "keywords": [
       "game",
@@ -15491,6 +15624,16 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
+  "🥅": {
+    "name": "Goal net",
+    "keywords": [
+      "goal",
+      "goal net",
+      "net"
+    ],
+    "has-skin-tone-support": false,
+    "version": "3.0"
+  },
   "🥍": {
     "name": "Lacrosse",
     "keywords": [
@@ -15568,7 +15711,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "⛸": {
+  "⛸️": {
     "name": "Ice skate",
     "keywords": [
       "ice",
@@ -15695,7 +15838,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🎖": {
+  "🎖️": {
     "name": "Military medal",
     "keywords": [
       "award",
@@ -15740,7 +15883,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "㊗": {
+  "㊗️": {
     "name": "Japanese “congratulations” button",
     "keywords": [
       "button",
@@ -16237,7 +16380,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🛍": {
+  "🛍️": {
     "name": "Shopping bags",
     "keywords": [
       "bag",
@@ -16509,7 +16652,7 @@
     "has-skin-tone-support": false,
     "version": "13.0"
   },
-  "⛑": {
+  "⛑️": {
     "name": "Rescue worker's helmet",
     "keywords": [
       "aid",
@@ -16639,7 +16782,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🎙": {
+  "🎙️": {
     "name": "Studio microphone",
     "keywords": [
       "mic",
@@ -16864,7 +17007,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🎚": {
+  "🎚️": {
     "name": "Level slider",
     "keywords": [
       "level",
@@ -16875,7 +17018,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🎛": {
+  "🎛️": {
     "name": "Control knobs",
     "keywords": [
       "control",
@@ -16963,6 +17106,44 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "⏸️": {
+    "name": "Pause button",
+    "keywords": [
+      "bar",
+      "button",
+      "double",
+      "pause",
+      "pause button",
+      "vertical"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.7"
+  },
+  "⏯️": {
+    "name": "Play or pause button",
+    "keywords": [
+      "arrow",
+      "button",
+      "pause",
+      "play",
+      "play or pause button",
+      "right",
+      "triangle"
+    ],
+    "has-skin-tone-support": false,
+    "version": "1.0"
+  },
+  "⏺️": {
+    "name": "Record button",
+    "keywords": [
+      "button",
+      "circle",
+      "record",
+      "record button"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.7"
+  },
   "⏩": {
     "name": "Fast-forward button",
     "keywords": [
@@ -16976,6 +17157,20 @@
     ],
     "has-skin-tone-support": false,
     "version": "0.6"
+  },
+  "⏭️": {
+    "name": "Next track button",
+    "keywords": [
+      "arrow",
+      "button",
+      "next",
+      "next track button",
+      "scene",
+      "track",
+      "triangle"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.7"
   },
   "◀️": {
     "name": "Reverse button",
@@ -17003,6 +17198,21 @@
     ],
     "has-skin-tone-support": false,
     "version": "0.6"
+  },
+  "⏮️": {
+    "name": "Last track button",
+    "keywords": [
+      "arrow",
+      "button",
+      "last",
+      "last track button",
+      "previous",
+      "scene",
+      "track",
+      "triangle"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.7"
   },
   "🔼": {
     "name": "Upwards button",
@@ -17056,7 +17266,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "⏹": {
+  "⏹️": {
     "name": "Stop button",
     "keywords": [
       "button",
@@ -17102,7 +17312,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "📽": {
+  "📽️": {
     "name": "Film projector",
     "keywords": [
       "cinema",
@@ -17141,7 +17351,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🎞": {
+  "🎞️": {
     "name": "Film frames",
     "keywords": [
       "cinema",
@@ -17301,6 +17511,15 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "📒": {
+    "name": "Ledger",
+    "keywords": [
+      "ledger",
+      "notebook"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.6"
+  },
   "📃": {
     "name": "Page with curl",
     "keywords": [
@@ -17335,7 +17554,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🗞": {
+  "🗞️": {
     "name": "Rolled-up newspaper",
     "keywords": [
       "news",
@@ -17369,7 +17588,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🏷": {
+  "🏷️": {
     "name": "Label",
     "keywords": [
       "label",
@@ -17471,7 +17690,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🗂": {
+  "🗂️": {
     "name": "Card index dividers",
     "keywords": [
       "card",
@@ -17482,7 +17701,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🗒": {
+  "🗒️": {
     "name": "Spiral notepad",
     "keywords": [
       "note",
@@ -17548,6 +17767,23 @@
     ],
     "has-skin-tone-support": false,
     "version": "0.6"
+  },
+  "📵": {
+    "name": "No mobile phones",
+    "keywords": [
+      "cell",
+      "forbidden",
+      "mobile",
+      "no",
+      "no mobile phones",
+      "not",
+      "phone",
+      "phones",
+      "prohibited",
+      "telephone"
+    ],
+    "has-skin-tone-support": false,
+    "version": "1.0"
   },
   "📳": {
     "name": "Vibration mode",
@@ -17668,7 +17904,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🖥": {
+  "🖥️": {
     "name": "Desktop computer",
     "keywords": [
       "computer",
@@ -17679,7 +17915,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🖨": {
+  "🖨️": {
     "name": "Printer",
     "keywords": [
       "computer",
@@ -17697,7 +17933,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🖱": {
+  "🖱️": {
     "name": "Computer mouse",
     "keywords": [
       "computer",
@@ -17707,7 +17943,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🖲": {
+  "🖲️": {
     "name": "Trackball",
     "keywords": [
       "computer",
@@ -17821,6 +18057,19 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "⚕️": {
+    "name": "Medical symbol",
+    "keywords": [
+      "aesculapius",
+      "medical",
+      "medical symbol",
+      "medicine",
+      "staff",
+      "symbol"
+    ],
+    "has-skin-tone-support": false,
+    "version": "4.0"
+  },
   "🩹": {
     "name": "Adhesive bandage",
     "keywords": [
@@ -17925,7 +18174,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🌡": {
+  "🌡️": {
     "name": "Thermometer",
     "keywords": [
       "thermometer",
@@ -17965,7 +18214,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🅰": {
+  "🅰️": {
     "name": "A button (blood type)",
     "keywords": [
       "a button (blood type)",
@@ -17976,7 +18225,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🅱": {
+  "🅱️": {
     "name": "B button (blood type)",
     "keywords": [
       "b",
@@ -18000,7 +18249,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🅾": {
+  "🅾️": {
     "name": "O button (blood type)",
     "keywords": [
       "blood",
@@ -18012,7 +18261,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🕳": {
+  "🕳️": {
     "name": "Hole",
     "keywords": [
       "hole"
@@ -18035,7 +18284,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🗡": {
+  "🗡️": {
     "name": "Dagger",
     "keywords": [
       "dagger",
@@ -18084,7 +18333,7 @@
     "has-skin-tone-support": false,
     "version": "13.0"
   },
-  "⛏": {
+  "⛏️": {
     "name": "Pick",
     "keywords": [
       "hammer",
@@ -18153,7 +18402,7 @@
     "has-skin-tone-support": false,
     "version": "11.0"
   },
-  "🛢": {
+  "🛢️": {
     "name": "Oil drum",
     "keywords": [
       "drum",
@@ -18205,7 +18454,7 @@
     "has-skin-tone-support": false,
     "version": "11.0"
   },
-  "🕯": {
+  "🕯️": {
     "name": "Candle",
     "keywords": [
       "candle",
@@ -18370,6 +18619,24 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "💲": {
+    "name": "Heavy dollar sign",
+    "keywords": [
+      "billion",
+      "cash",
+      "charge",
+      "currency",
+      "dollar",
+      "heavy",
+      "heavy dollar sign",
+      "million",
+      "money",
+      "pay",
+      "sign"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.6"
+  },
   "💶": {
     "name": "Euro banknote",
     "keywords": [
@@ -18404,6 +18671,18 @@
     ],
     "has-skin-tone-support": false,
     "version": "1.0"
+  },
+  "💱": {
+    "name": "Currency exchange",
+    "keywords": [
+      "bank",
+      "currency",
+      "currency exchange",
+      "exchange",
+      "money"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.6"
   },
   "💳": {
     "name": "Credit card",
@@ -18482,7 +18761,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🈂": {
+  "🈂️": {
     "name": "Japanese “service charge” button",
     "keywords": [
       "button",
@@ -18495,7 +18774,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🈷": {
+  "🈷️": {
     "name": "Japanese “monthly amount” button",
     "keywords": [
       "amount",
@@ -18518,6 +18797,26 @@
       "japanese",
       "japanese “not free of charge” button",
       "not"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.6"
+  },
+  "💹": {
+    "name": "Chart increasing with yen",
+    "keywords": [
+      "bank",
+      "chart",
+      "chart increasing with yen",
+      "currency",
+      "graph",
+      "growth",
+      "increasing",
+      "market",
+      "money",
+      "rise",
+      "trend",
+      "upward",
+      "yen"
     ],
     "has-skin-tone-support": false,
     "version": "0.6"
@@ -18684,6 +18983,34 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
+  "🔯": {
+    "name": "Dotted six-pointed star",
+    "keywords": [
+      "dotted",
+      "dotted six-pointed star",
+      "fortune",
+      "jewish",
+      "judaism",
+      "six-pointed",
+      "star"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.6"
+  },
+  "🕎": {
+    "name": "Menorah",
+    "keywords": [
+      "candelabrum",
+      "candlestick",
+      "hanukkah",
+      "jewish",
+      "judaism",
+      "menorah",
+      "religion"
+    ],
+    "has-skin-tone-support": false,
+    "version": "1.0"
+  },
   "🪯": {
     "name": "Khanda",
     "keywords": [
@@ -18791,7 +19118,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🕉": {
+  "🕉️": {
     "name": "Om",
     "keywords": [
       "hindu",
@@ -19471,6 +19798,17 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "🔘": {
+    "name": "Radio button",
+    "keywords": [
+      "button",
+      "geometric",
+      "radio",
+      "radio button"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.6"
+  },
   "♦️": {
     "name": "Diamond suit",
     "keywords": [
@@ -19538,7 +19876,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🗺": {
+  "🗺️": {
     "name": "World map",
     "keywords": [
       "map",
@@ -19585,7 +19923,7 @@
     "has-skin-tone-support": false,
     "version": "13.0"
   },
-  "🛎": {
+  "🛎️": {
     "name": "Bellhop bell",
     "keywords": [
       "bell",
@@ -19778,7 +20116,7 @@
     "has-skin-tone-support": false,
     "version": "13.0"
   },
-  "🖼": {
+  "🖼️": {
     "name": "Framed picture",
     "keywords": [
       "art",
@@ -20012,7 +20350,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🗳": {
+  "🗳️": {
     "name": "Ballot box with ballot",
     "keywords": [
       "ballot",
@@ -20041,7 +20379,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🖋": {
+  "🖋️": {
     "name": "Fountain pen",
     "keywords": [
       "fountain",
@@ -20051,7 +20389,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🖊": {
+  "🖊️": {
     "name": "Pen",
     "keywords": [
       "ballpoint",
@@ -20060,7 +20398,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🖌": {
+  "🖌️": {
     "name": "Paintbrush",
     "keywords": [
       "paintbrush",
@@ -20069,7 +20407,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🖍": {
+  "🖍️": {
     "name": "Crayon",
     "keywords": [
       "crayon"
@@ -20096,7 +20434,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🗓": {
+  "🗓️": {
     "name": "Spiral calendar",
     "keywords": [
       "calendar",
@@ -20173,7 +20511,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🖇": {
+  "🖇️": {
     "name": "Linked paperclips",
     "keywords": [
       "link",
@@ -20215,7 +20553,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🗃": {
+  "🗃️": {
     "name": "Card file box",
     "keywords": [
       "box",
@@ -20226,7 +20564,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🗄": {
+  "🗄️": {
     "name": "File cabinet",
     "keywords": [
       "cabinet",
@@ -20238,7 +20576,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🗑": {
+  "🗑️": {
     "name": "Wastebasket",
     "keywords": [
       "can",
@@ -20314,7 +20652,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🗝": {
+  "🗝️": {
     "name": "Old key",
     "keywords": [
       "clue",
@@ -20349,7 +20687,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🛠": {
+  "🛠️": {
     "name": "Hammer and wrench",
     "keywords": [
       "hammer",
@@ -20361,7 +20699,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🛡": {
+  "🛡️": {
     "name": "Shield",
     "keywords": [
       "shield",
@@ -20418,7 +20756,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🗜": {
+  "🗜️": {
     "name": "Clamp",
     "keywords": [
       "clamp",
@@ -20467,7 +20805,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "⛓": {
+  "⛓️": {
     "name": "Chains",
     "keywords": [
       "chain",
@@ -20591,7 +20929,7 @@
     "has-skin-tone-support": false,
     "version": "13.0"
   },
-  "🛏": {
+  "🛏️": {
     "name": "Bed",
     "keywords": [
       "bed",
@@ -20601,7 +20939,7 @@
     "has-skin-tone-support": false,
     "version": "0.7"
   },
-  "🛋": {
+  "🛋️": {
     "name": "Couch and lamp",
     "keywords": [
       "couch",
@@ -20722,6 +21060,54 @@
     ],
     "has-skin-tone-support": false,
     "version": "11.0"
+  },
+  "🍴": {
+    "name": "Fork and knife",
+    "keywords": [
+      "breakfast",
+      "breaky",
+      "cooking",
+      "cutlery",
+      "delicious",
+      "dinner",
+      "eat",
+      "feed",
+      "food",
+      "fork",
+      "fork and knife",
+      "hungry",
+      "knife",
+      "lunch",
+      "restaurant",
+      "yum",
+      "yummy"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.6"
+  },
+  "🍽️": {
+    "name": "Fork and knife with plate",
+    "keywords": [
+      "cooking",
+      "dinner",
+      "eat",
+      "fork",
+      "fork and knife with plate",
+      "knife",
+      "plate"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.7"
+  },
+  "🥄": {
+    "name": "Spoon",
+    "keywords": [
+      "eat",
+      "spoon",
+      "tableware"
+    ],
+    "has-skin-tone-support": false,
+    "version": "3.0"
   },
   "🪧": {
     "name": "Placard",
@@ -20850,7 +21236,20 @@
     "has-skin-tone-support": false,
     "version": "2.0"
   },
-  "🗯": {
+  "🗨️": {
+    "name": "Left speech bubble",
+    "keywords": [
+      "balloon",
+      "bubble",
+      "dialog",
+      "left",
+      "left speech bubble",
+      "speech"
+    ],
+    "has-skin-tone-support": false,
+    "version": "2.0"
+  },
+  "🗯️": {
     "name": "Right anger bubble",
     "keywords": [
       "anger",
@@ -20903,7 +21302,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "♨": {
+  "♨️": {
     "name": "Hot springs",
     "keywords": [
       "hot",
@@ -21295,6 +21694,15 @@
     "has-skin-tone-support": false,
     "version": "11.0"
   },
+  "⚜️": {
+    "name": "Fleur-de-lis",
+    "keywords": [
+      "fleur-de-lis",
+      "knights"
+    ],
+    "has-skin-tone-support": false,
+    "version": "1.0"
+  },
   "📛": {
     "name": "Name badge",
     "keywords": [
@@ -21543,6 +21951,17 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "〰️": {
+    "name": "Wavy dash",
+    "keywords": [
+      "dash",
+      "punctuation",
+      "wavy",
+      "wavy dash"
+    ],
+    "has-skin-tone-support": false,
+    "version": "0.6"
+  },
   "©️": {
     "name": "Copyright",
     "keywords": [
@@ -21581,6 +22000,15 @@
     ],
     "has-skin-tone-support": false,
     "version": "0.6"
+  },
+  "*️⃣": {
+    "name": "Keycap: *",
+    "keywords": [
+      "keycap",
+      "keycap: *"
+    ],
+    "has-skin-tone-support": false,
+    "version": "2.0"
   },
   "0️⃣": {
     "name": "Keycap: 0",
@@ -21925,7 +22353,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "㊙": {
+  "㊙️": {
     "name": "Japanese “secret” button",
     "keywords": [
       "button",
@@ -21963,7 +22391,7 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
-  "🗣": {
+  "🗣️": {
     "name": "Speaking head",
     "keywords": [
       "face",
@@ -22078,7 +22506,7 @@
     "has-skin-tone-support": false,
     "version": "1.0"
   },
-  "🏳": {
+  "🏳️": {
     "name": "White flag",
     "keywords": [
       "flag",

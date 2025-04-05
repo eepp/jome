@@ -445,3 +445,7 @@ athletics | ball | catch | chuck | handball | hurl | lob | pitch | playing | spo
 🤾‍♂️
 Man playing handball
 athletics | ball | catch | chuck | handball | hurl | lob | man | man playing handball | pitch | playing | sport | throw | toss
+
+⚕️
+Medical symbol
+aesculapius | medical | medical symbol | medicine | staff | symbol

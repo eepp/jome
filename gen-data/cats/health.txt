@@ -4,6 +4,7 @@
 💉 Syringe
 🩸 Drop of Blood
 💊 Pill
+⚕️ Medical symbol
 🩹 Adhesive Bandage
 🩼 Crutch
 🩺 Stethoscope
@@ -13,7 +14,7 @@
 🧬 DNA
 🔬 Microscope
 ⚗️ Alembic
-🌡 Thermometer
+🌡️ Thermometer
 💫 Dizzy
 ☢️ Radioactive
 ☣️ Biohazard
@@ -25,10 +26,10 @@
 🤧 Sneezing Face
 🥵 Hot Face
 🥶 Cold Face
-🅰 A Button (Blood Type)
-🅱 B Button (Blood Type)
+🅰️ A Button (Blood Type)
+🅱️ B Button (Blood Type)
 🆎 AB Button (Blood Type)
-🅾 O Button (Blood Type)
+🅾️ O Button (Blood Type)
 🧑‍⚕️ Health Worker
 👨‍⚕️ Man Health Worker
 👩‍⚕️ Woman Health Worker

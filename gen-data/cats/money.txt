@@ -4,15 +4,19 @@
 💸 Money With Wings
 💴 Yen Banknote
 💵 Dollar Banknote
+💲 Heavy dollar sign
 💶 Euro Banknote
 💷 Pound Banknote
+💱 Currency exchange
 💳 Credit Card
 🧾 Receipt
+🛒 Shopping cart
 🏧 ATM Sign
 🆓 Free Button
 🉐 Japanese “Bargain” Button
 🈹 Japanese “Discount” Button
 🈚 Japanese “Free of Charge” Button
-🈂 Japanese “Service Charge” Button
-🈷 Japanese “Monthly Amount” Button
+🈂️ Japanese “Service Charge” Button
+🈷️ Japanese “Monthly Amount” Button
 🈶 Japanese “Not Free of Charge” Button
+💹 Chart increasing with yen

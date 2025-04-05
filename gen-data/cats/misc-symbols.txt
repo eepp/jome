@@ -6,11 +6,12 @@
 💢 Anger Symbol
 💬 Speech Balloon
 👁️‍🗨️ Eye in Speech Bubble
-🗯 Right Anger Bubble
+🗨️ Left speech bubble
+🗯️ Right Anger Bubble
 💭 Thought Balloon
 💤 Zzz
 💮 White Flower
-♨ Hot Springs
+♨️ Hot Springs
 💈 Barber Pole
 🛑 Stop Sign
 🌀 Cyclone
@@ -40,9 +41,11 @@
 🚯 No Littering
 🚱 Non-Potable Water
 🚷 No Pedestrians
+📵 No mobile phones
 🔞 No One Under Eighteen
 ☢️ Radioactive
 ☣️ Biohazard
+⚕️ Medical symbol
 🔃 Clockwise Vertical Arrows
 🔄 Counterclockwise Arrows Button
 ⚛️ Atom Symbol
@@ -58,6 +61,7 @@
 ⚧️ Transgender Symbol
 ♾️ Infinity
 ♻️ Recycling Symbol
+⚜️ Fleur-de-lis
 🔱 Trident Emblem
 📛 Name Badge
 🔰 Japanese Symbol for Beginner
@@ -84,10 +88,14 @@
 ❔ White Question Mark
 ❕ White Exclamation Mark
 ❗ Exclamation Mark
+〰️ Wavy dash
+💱 Currency exchange
+💲 Heavy dollar sign
 ©️ Copyright
 ®️ Registered
 ™️ Trade Mark
 #️⃣ Keycap Number Sign
+*️⃣ Keycap: *
 0️⃣ Keycap Digit Zero
 1️⃣ Keycap Digit One
 2️⃣ Keycap Digit Two
@@ -104,10 +112,10 @@
 🔢 Input Numbers
 🔣 Input Symbols
 🔤 Input Latin Letters
-🅰 A Button (Blood Type)
+🅰️ A Button (Blood Type)
 🆎 AB Button (Blood Type)
-🅱 B Button (Blood Type)
-🅾 O Button (Blood Type)
+🅱️ B Button (Blood Type)
+🅾️ O Button (Blood Type)
 🆑 CL Button
 🆒 Cool Button
 🆓 Free Button
@@ -117,13 +125,13 @@
 🆕 New Button
 🆖 NG Button
 🆗 OK Button
-🅿 P Button
+🅿️ P Button
 🆘 SOS Button
 🆙 Up! Button
 🆚 Vs Button
 🈁 Japanese “Here” Button
-🈂 Japanese “Service Charge” Button
-🈷 Japanese “Monthly Amount” Button
+🈂️ Japanese “Service Charge” Button
+🈷️ Japanese “Monthly Amount” Button
 🈶 Japanese “Not Free of Charge” Button
 🈯 Japanese “Reserved” Button
 🉐 Japanese “Bargain” Button
@@ -134,10 +142,11 @@
 🈸 Japanese “Application” Button
 🈴 Japanese “Passing Grade” Button
 🈳 Japanese “Vacancy” Button
-㊗ Japanese “Congratulations” Button
-㊙ Japanese “Secret” Button
+㊗️ Japanese “Congratulations” Button
+㊙️ Japanese “Secret” Button
 🈺 Japanese “Open for Business” Button
 🈵 Japanese “No Vacancy” Button
+💹 Chart increasing with yen
 🔴 Red Circle
 🟠 Orange Circle
 🟡 Yellow Circle
@@ -169,9 +178,10 @@
 🔺 Red Triangle Pointed Up
 🔻 Red Triangle Pointed Down
 💠 Diamond With a Dot
+🔘 Radio button
 🔳 White Square Button
 🔲 Black Square Button
-🗣 Speaking Head
+🗣️ Speaking Head
 👤 Bust in Silhouette
 👥 Busts in Silhouette
 🫂 People Hugging

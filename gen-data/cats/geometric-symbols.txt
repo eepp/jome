@@ -30,6 +30,7 @@
 🔸 Small Orange Diamond
 🔹 Small Blue Diamond
 💠 Diamond With a Dot
+🔘 Radio button
 ♦️ Diamond Suit
 🔺 Red Triangle Pointed Up
 🔻 Red Triangle Pointed Down

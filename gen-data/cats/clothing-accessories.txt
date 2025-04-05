@@ -23,12 +23,12 @@
 🩴 Thong Sandal
 🧳 Luggage
 💼 Briefcase
-🛍 Shopping Bags
+🛍️ Shopping Bags
 🌂 Closed Umbrella
-⛱ Umbrella on Ground
+⛱️ Umbrella on Ground
 ☂️ Umbrella
 👓 Glasses
-🕶 Sunglasses
+🕶️ Sunglasses
 🥽 Goggles
 🤿 Diving Mask
 👞 Man’s Shoe
@@ -46,7 +46,7 @@
 🎓 Graduation Cap
 🧢 Billed Cap
 🪖 Military Helmet
-⛑ Rescue Worker’s Helmet
+⛑️ Rescue Worker’s Helmet
 💄 Lipstick
 💍 Ring
 🧸 Teddy Bear

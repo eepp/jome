@@ -1,10 +1,10 @@
-🕳 Hole
+🕳️ Hole
 🔪 Kitchen Knife
-🗡 Dagger
+🗡️ Dagger
 ⚔️ Crossed Swords
 🪓 Axe
 🪚 Carpentry Saw
-⛏ Pick
+⛏️ Pick
 ✂️ Scissors
 🪒 Razor
 📌 Pushpin
@@ -12,12 +12,12 @@
 💉 Syringe
 🪡 Sewing Needle
 🧷 Safety Pin
-🛢 Oil Drum
+🛢️ Oil Drum
 💣 Bomb
 💥 Collision
 🧨 Firecracker
 🔥 Fire
-🕯 Candle
+🕯️ Candle
 🚬 Cigarette
 🧯 Fire Extinguisher
 🔫 Pistol

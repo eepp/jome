@@ -1,27 +1,27 @@
 💌 Love Letter
-🕳 Hole
+🕳️ Hole
 💣 Bomb
 🔪 Kitchen Knife
 🫙 Jar
 🏺 Amphora
-🗺 World Map
+🗺️ World Map
 🧭 Compass
 🧱 Brick
 🪨 Rock
 🪵 Wood
 💈 Barber Pole
-🛢 Oil Drum
-🛎 Bellhop Bell
+🛢️ Oil Drum
+🛎️ Bellhop Bell
 🧳 Luggage
 ⌛ Hourglass Done
 ⏳ Hourglass Not Done
 ⌚ Watch
 ⏰ Alarm Clock
-⏱ Stopwatch
-⏲ Timer Clock
-🕰 Mantelpiece Clock
-🌡 Thermometer
-⛱ Umbrella on Ground
+⏱️ Stopwatch
+⏲️ Timer Clock
+🕰️ Mantelpiece Clock
+🌡️ Thermometer
+⛱️ Umbrella on Ground
 🧨 Firecracker
 🎈 Balloon
 🎉 Party Popper
@@ -36,21 +36,21 @@
 🪄 Magic Wand
 🧿 Nazar Amulet
 🪬 Hamsa
-🕹 Joystick
+🕹️ Joystick
 🧸 Teddy Bear
 🪅 Piñata
 🪩 Mirror ball
 🪆 Nesting Dolls
-🖼 Framed Picture
+🖼️ Framed Picture
 🧵 Thread
 🧶 Yarn
-🛍 Shopping Bags
+🛍️ Shopping Bags
 📿 Prayer Beads
 💎 Gem Stone
 📯 Postal Horn
-🎙 Studio Microphone
-🎚 Level Slider
-🎛 Control Knobs
+🎙️ Studio Microphone
+🎚️ Level Slider
+🎛️ Control Knobs
 📻 Radio
 📱 Mobile Phone
 📲 Mobile Phone With Arrow
@@ -62,19 +62,19 @@
 🪫 Low battery
 🔌 Electric Plug
 💻 Laptop Computer
-🖥 Desktop Computer
-🖨 Printer
+🖥️ Desktop Computer
+🖨️ Printer
 ⌨️ Keyboard
-🖱 Computer Mouse
-🖲 Trackball
+🖱️ Computer Mouse
+🖲️ Trackball
 💽 Computer Disk
 💾 Floppy Disk
 💿 Optical Disk
 📀 DVD
 🧮 Abacus
 🎥 Movie Camera
-🎞 Film Frames
-📽 Film Projector
+🎞️ Film Frames
+📽️ Film Projector
 📺 Television
 📷 Camera
 📸 Camera With Flash
@@ -82,7 +82,7 @@
 📼 Videocassette
 🔍 Magnifying Glass Tilted Left
 🔎 Magnifying Glass Tilted Right
-🕯 Candle
+🕯️ Candle
 💡 Light Bulb
 🔦 Flashlight
 🏮 Red Paper Lantern
@@ -95,14 +95,15 @@
 📙 Orange Book
 📚 Books
 📓 Notebook
+📒 Ledger
 📃 Page With Curl
 📜 Scroll
 📄 Page Facing Up
 📰 Newspaper
-🗞 Rolled-Up Newspaper
+🗞️ Rolled-Up Newspaper
 📑 Bookmark Tabs
 🔖 Bookmark
-🏷 Label
+🏷️ Label
 💰 Money Bag
 🪙 Coin
 💴 Yen Banknote
@@ -124,21 +125,21 @@
 📬 Open Mailbox With Raised Flag
 📭 Open Mailbox With Lowered Flag
 📮 Postbox
-🗳 Ballot Box With Ballot
+🗳️ Ballot Box With Ballot
 ✏️ Pencil
 ✒️ Black Nib
-🖋 Fountain Pen
-🖊 Pen
-🖌 Paintbrush
-🖍 Crayon
+🖋️ Fountain Pen
+🖊️ Pen
+🖌️ Paintbrush
+🖍️ Crayon
 📝 Memo
 📁 File Folder
 📂 Open File Folder
-🗂 Card Index Dividers
+🗂️ Card Index Dividers
 📅 Calendar
 📆 Tear-Off Calendar
-🗒 Spiral Notepad
-🗓 Spiral Calendar
+🗒️ Spiral Notepad
+🗓️ Spiral Calendar
 📇 Card Index
 📈 Chart Increasing
 📉 Chart Decreasing
@@ -147,39 +148,39 @@
 📌 Pushpin
 📍 Round Pushpin
 📎 Paperclip
-🖇 Linked Paperclips
+🖇️ Linked Paperclips
 📏 Straight Ruler
 📐 Triangular Ruler
 ✂️ Scissors
-🗃 Card File Box
-🗄 File Cabinet
-🗑 Wastebasket
+🗃️ Card File Box
+🗄️ File Cabinet
+🗑️ Wastebasket
 🔒 Locked
 🔓 Unlocked
 🔏 Locked With Pen
 🔐 Locked With Key
 🔑 Key
-🗝 Old Key
+🗝️ Old Key
 🔨 Hammer
 🪓 Axe
-⛏ Pick
+⛏️ Pick
 ⚒️ Hammer and Pick
-🛠 Hammer and Wrench
-🗡 Dagger
+🛠️ Hammer and Wrench
+🗡️ Dagger
 ⚔️ Crossed Swords
 🔫 Pistol
 🪃 Boomerang
-🛡 Shield
+🛡️ Shield
 🪚 Carpentry Saw
 🔧 Wrench
 🪛 Screwdriver
 🔩 Nut and Bolt
 ⚙️ Gear
-🗜 Clamp
+🗜️ Clamp
 ⚖️ Balance Scale
 🦯 White Cane
 🔗 Link
-⛓ Chains
+⛓️ Chains
 ⛓️‍💥 Broken chain
 🪝 Hook
 🧰 Toolbox
@@ -203,8 +204,8 @@
 🛗 Elevator
 🪞 Mirror
 🪟 Window
-🛏 Bed
-🛋 Couch and Lamp
+🛏️ Bed
+🛋️ Couch and Lamp
 🪑 Chair
 🚽 Toilet
 🪠 Plunger
@@ -222,8 +223,13 @@
 🫧 Bubbles
 🪥 Toothbrush
 🧽 Sponge
+🍴 Fork and knife
+🍽️ Fork and knife with plate
+🥄 Spoon
+🥢 Chopsticks
 🧯 Fire Extinguisher
 🚬 Cigarette
+🛒 Shopping cart
 ⚰️ Coffin
 🪦 Headstone
 ⚱️ Funeral Urn

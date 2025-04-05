@@ -11,21 +11,26 @@
 🎤 Microphone
 🎧 Headphone
 🎼 Musical Score
-🎙 Studio Microphone
-🎚 Level Slider
-🎛 Control Knobs
+🎙️ Studio Microphone
+🎚️ Level Slider
+🎛️ Control Knobs
 📻 Radio
 💿 Optical Disk
 🔀 Shuffle Tracks Button
 🔁 Repeat Button
 🔂 Repeat Single Button
 ▶️ Play Button
+⏸️ Pause button
+⏯️ Play or pause button
+⏺️ Record button
 ⏩ Fast-Forward Button
+⏭️ Next track button
 ◀️ Reverse Button
 ⏪ Fast Reverse Button
+⏮️ Last track button
 🔼 Upwards Button
 ⏫ Fast Up Button
 🔽 Downwards Button
 ⏬ Fast Down Button
-⏹ Stop Button
+⏹️ Stop Button
 ⏏️ Eject Button

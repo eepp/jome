@@ -2,12 +2,12 @@
 💧 Droplet
 🌊 Water Wave
 🧊 Ice
-⛈ Cloud With Lightning and Rain
-🌦 Sun Behind Rain Cloud
-🌧 Cloud With Rain
-🌨 Cloud With Snow
+⛈️ Cloud With Lightning and Rain
+🌦️ Sun Behind Rain Cloud
+🌧️ Cloud With Rain
+🌨️ Cloud With Snow
 ☔ Umbrella With Rain Drops
-⛱ Umbrella on Ground
+⛱️ Umbrella on Ground
 ☂️ Umbrella
 🚽 Toilet
 🚿 Shower
@@ -18,8 +18,8 @@
 👙 Bikini
 🧼 Soap
 🫧 Bubbles
-🏖 Beach With Umbrella
-🏝 Desert Island
+🏖️ Beach With Umbrella
+🏝️ Desert Island
 🏄 Person Surfing
 🏄‍♂️ Man Surfing
 🏄‍♀️ Woman Surfing
@@ -51,8 +51,9 @@
 🎣 Fishing Pole
 ⚓ Anchor
 ⛵ Sailboat
+🛶 Canoe
 🚤 Speedboat
-🛳 Passenger Ship
-⛴ Ferry
-🛥 Motor Boat
+🛳️ Passenger Ship
+⛴️ Ferry
+🛥️ Motor Boat
 🚢 Ship

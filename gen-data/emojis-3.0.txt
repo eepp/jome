@@ -257,3 +257,31 @@ food | shellfish | shrimp | small
 🦑
 Squid
 animal | food | mollusk | squid
+
+🤺
+Person fencing
+fencer | fencing | person | person fencing | sword
+
+🦌
+Deer
+animal | deer
+
+🥚
+Egg
+breakfast | egg | food
+
+🥄
+Spoon
+eat | spoon | tableware
+
+🛶
+Canoe
+boat | canoe
+
+🥅
+Goal net
+goal | goal net | net
+
+🛒
+Shopping cart
+cart | shopping | shopping cart | trolley

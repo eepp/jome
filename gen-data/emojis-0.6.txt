@@ -190,7 +190,7 @@ clothing | drop | drops | rain | umbrella | umbrella with rain drops | weather
 Hot beverage
 beverage | cafe | caffeine | chai | coffee | drink | hot | hot beverage | morning | steaming | tea
 
-☝
+☝️
 Index pointing up
 finger | hand | index | index pointing up | point | pointing | this | up
 
@@ -262,7 +262,7 @@ card | emotion | game | heart | heart suit | hearts | suit
 Diamond suit
 card | diamond | diamond suit | game | suit
 
-♨
+♨️
 Hot springs
 hot | hot springs | hotsprings | springs | steaming
 
@@ -350,7 +350,7 @@ cut | cutting | paper | scissors | tool
 Check mark button
 button | check | check mark button | checked | checkmark | complete | completed | done | fixed | mark | tick | ✓
 
-✈
+✈️
 Airplane
 aeroplane | airplane | fly | flying | jet | plane | travel
 
@@ -366,7 +366,7 @@ clenched | fist | hand | punch | raised | raised fist | solidarity
 Raised hand
 5 | five | hand | high | raised | raised hand | stop
 
-✌
+✌️
 Victory hand
 hand | peace | v | victory | victory hand
 
@@ -494,11 +494,11 @@ circle | heavy | hollow | hollow red circle | large | o | red
 Part alternation mark
 alternation | mark | part | part alternation mark
 
-㊗
+㊗️
 Japanese “congratulations” button
 button | congratulations | ideograph | japanese | japanese “congratulations” button
 
-㊙
+㊙️
 Japanese “secret” button
 button | ideograph | japanese | japanese “secret” button | secret
 
@@ -510,19 +510,19 @@ dragon | game | mahjong | mahjong red dragon | red
 Joker
 card | game | joker | wildcard
 
-🅰
+🅰️
 A button (blood type)
 a button (blood type) | blood | button | type
 
-🅱
+🅱️
 B button (blood type)
 b | b button (blood type) | blood | button | type
 
-🅾
+🅾️
 O button (blood type)
 blood | button | o | o button (blood type) | type
 
-🅿
+🅿️
 P button
 button | p | p button | parking
 
@@ -614,7 +614,7 @@ flag | flag: united states
 Japanese “here” button
 button | here | japanese | japanese “here” button | katakana
 
-🈂
+🈂️
 Japanese “service charge” button
 button | charge | japanese | japanese “service charge” button | katakana | service
 
@@ -646,7 +646,7 @@ button | ideograph | japanese | japanese “no vacancy” button | no | vacancy
 Japanese “not free of charge” button
 button | charge | free | ideograph | japanese | japanese “not free of charge” button | not
 
-🈷
+🈷️
 Japanese “monthly amount” button
 amount | button | ideograph | japanese | japanese “monthly amount” button | monthly
 
@@ -1472,7 +1472,7 @@ animal | cat | cat face | face | kitten | kitty | pet
 
 🐲
 Dragon face
-animal | dragon | dragon face | face | fairy | fairytale | tale
+animal | dragon | dragon face | face | fairytale | tale
 
 🐳
 Spouting whale
@@ -2841,3 +2841,39 @@ bathroom | closet | lavatory | restroom | toilet | water | water closet | wc
 🛀
 Person taking bath
 bath | bathtub | person | person taking bath | taking | tub
+
+🍴
+Fork and knife
+breakfast | breaky | cooking | cutlery | delicious | dinner | eat | feed | food | fork | fork and knife | hungry | knife | lunch | restaurant | yum | yummy
+
+🚙
+Sport utility vehicle
+car | drive | recreational | sport | sport utility vehicle | sportutility | utility | vehicle
+
+📒
+Ledger
+ledger | notebook
+
+💹
+Chart increasing with yen
+bank | chart | chart increasing with yen | currency | graph | growth | increasing | market | money | rise | trend | upward | yen
+
+🔯
+Dotted six-pointed star
+dotted | dotted six-pointed star | fortune | jewish | judaism | six-pointed | star
+
+〰️
+Wavy dash
+dash | punctuation | wavy | wavy dash
+
+💱
+Currency exchange
+bank | currency | currency exchange | exchange | money
+
+💲
+Heavy dollar sign
+billion | cash | charge | currency | dollar | heavy | heavy dollar sign | million | money | pay | sign
+
+🔘
+Radio button
+button | geometric | radio | radio button

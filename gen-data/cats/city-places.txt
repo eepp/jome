@@ -1,9 +1,9 @@
-🏟 Stadium
-🏛 Classical Building
-🏗 Building Construction
+🏟️ Stadium
+🏛️ Classical Building
+🏗️ Building Construction
 🛖 Hut
-🏘 Houses
-🏚 Derelict House
+🏘️ Houses
+🏚️ Derelict House
 🏠 House
 🏡 House With Garden
 🏢 Office Building
@@ -25,9 +25,9 @@
 ⛪ Church
 🕌 Mosque
 🕍 Synagogue
-⛩ Shinto Shrine
+⛩️ Shinto Shrine
 🕋 Kaaba
-🏙 Cityscape
+🏙️ Cityscape
 ⛲ Fountain
 🌁 Foggy
 🌃 Night With Stars

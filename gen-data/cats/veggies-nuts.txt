@@ -6,7 +6,7 @@
 🥔 Potato
 🥕 Carrot
 🌽 Ear of Corn
-🌶 Hot Pepper
+🌶️ Hot Pepper
 🫑 Bell Pepper
 🥒 Cucumber
 🥬 Leafy Green

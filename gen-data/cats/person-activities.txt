@@ -1,10 +1,11 @@
 🧗 Person Climbing
 🧗‍♂️ Man Climbing
 🧗‍♀️ Woman Climbing
+🤺 Person fencing
 🏇 Horse Racing
-⛷ Skier
+⛷️ Skier
 🏂 Snowboarder
-🏌 Person Golfing
+🏌️ Person Golfing
 🏌️‍♂️ Man Golfing
 🏌️‍♀️ Woman Golfing
 🏄 Person Surfing
@@ -16,10 +17,10 @@
 🏊 Person Swimming
 🏊‍♂️ Man Swimming
 🏊‍♀️ Woman Swimming
-⛹ Person Bouncing Ball
+⛹️ Person Bouncing Ball
 ⛹️‍♂️ Man Bouncing Ball
 ⛹️‍♀️ Woman Bouncing Ball
-🏋 Person Lifting Weights
+🏋️ Person Lifting Weights
 🏋️‍♂️ Man Lifting Weights
 🏋️‍♀️ Woman Lifting Weights
 🚴 Person Biking
@@ -93,7 +94,7 @@
 🏃‍♀️‍➡️ Woman running facing right
 💃 Woman Dancing
 🕺 Man Dancing
-🕴 Man in Suit Levitating
+🕴️ Man in Suit Levitating
 👯 People With Bunny Ears
 👯‍♂️ Men With Bunny Ears
 👯‍♀️ Women With Bunny Ears

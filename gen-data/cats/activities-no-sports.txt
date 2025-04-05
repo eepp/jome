@@ -1,6 +1,6 @@
 🎪 Circus Tent
-🎗 Reminder Ribbon
-🎟 Admission Tickets
+🎗️ Reminder Ribbon
+🎟️ Admission Tickets
 🎫 Ticket
 🎯 Direct Hit
 🪀 Yo-Yo
@@ -26,7 +26,7 @@
 🎢 Roller Coaster
 🤳 Selfie
 ⛺ Tent
-🕹 Joystick
+🕹️ Joystick
 🎃 Jack-o'-lantern
 🎆 Fireworks
 🎇 Sparkler

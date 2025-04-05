@@ -1,6 +1,6 @@
 👋 Waving Hand
 🤚 Raised Back of Hand
-🖐 Hand With Fingers Splayed
+🖐️ Hand With Fingers Splayed
 ✋ Raised Hand
 🖖 Vulcan Salute
 🫱 Rightwards hand
@@ -12,7 +12,7 @@
 👌 OK Hand
 🤌 Pinched Fingers
 🤏 Pinching Hand
-✌ Victory Hand
+✌️ Victory Hand
 🤞 Crossed Fingers
 🫰 Hand with index finger and thumb crossed
 🤟 Love-You Gesture
@@ -23,7 +23,7 @@
 👆 Backhand Index Pointing Up
 🖕 Middle Finger
 👇 Backhand Index Pointing Down
-☝ Index Pointing Up
+☝️ Index Pointing Up
 🫵 Index pointing at the viewer
 👍 Thumbs Up
 👎 Thumbs Down
@@ -38,5 +38,5 @@
 🤲 Palms Up Together
 🤝 Handshake
 🙏 Folded Hands
-✍ Writing Hand
+✍️ Writing Hand
 💅 Nail Polish

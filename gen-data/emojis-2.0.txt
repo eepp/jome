@@ -1065,3 +1065,19 @@ boy | child | family | family: woman, woman, girl, boy | girl | woman
 👩‍👩‍👧‍👧
 Family: woman, woman, girl, girl
 child | family | family: woman, woman, girl, girl | girl | woman
+
+*️⃣
+Keycap: *
+keycap | keycap: *
+
+🗨️
+Left speech bubble
+balloon | bubble | dialog | left | left speech bubble | speech
+
+👩‍❤️‍💋‍👨
+Kiss: woman, man
+anniversary | babe | bae | couple | date | dating | heart | kiss | kiss: woman, man | love | man | mwah | person | romance | together | woman | xoxo
+
+👩‍❤️‍👨
+Couple with heart: woman, man
+anniversary | babe | bae | couple | couple with heart: woman, man | dating | heart | kiss | love | man | person | relationship | romance | together | woman | you

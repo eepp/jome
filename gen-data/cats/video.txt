@@ -1,10 +1,10 @@
 📺 Television
 🎥 Movie Camera
-📽 Film Projector
+📽️ Film Projector
 📷 Camera
 📸 Camera With Flash
 📹 Video Camera
-🎞 Film Frames
+🎞️ Film Frames
 📼 Videocassette
 📀 DVD
 🎦 Cinema

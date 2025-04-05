@@ -20,6 +20,7 @@
 🌯 Burrito
 🫔 Tamale
 🥙 Stuffed Flatbread
+🥚 Egg
 🧆 Falafel
 🍳 Cooking
 🥘 Shallow Pan of Food

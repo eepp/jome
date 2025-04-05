@@ -1,4 +1,4 @@
-⏹
+⏹️
 Stop button
 button | square | stop | stop button
 
@@ -26,51 +26,51 @@ buddhist | dharma | religion | wheel | wheel of dharma
 Frowning face
 face | frown | frowning | frowning face | sad
 
-⛈
+⛈️
 Cloud with lightning and rain
 cloud | cloud with lightning and rain | lightning | rain | thunder | thunderstorm
 
-⛏
+⛏️
 Pick
 hammer | mining | pick | tool
 
-⛑
+⛑️
 Rescue worker's helmet
 aid | cross | face | hat | helmet | rescue | rescue worker's helmet | worker's
 
-⛓
+⛓️
 Chains
 chain | chains
 
-⛩
+⛩️
 Shinto shrine
 religion | shinto | shinto shrine | shrine
 
-⛰
+⛰️
 Mountain
 mountain
 
-⛱
+⛱️
 Umbrella on ground
 ground | rain | sun | umbrella | umbrella on ground
 
-⛴
+⛴️
 Ferry
 boat | ferry | passenger
 
-⛷
+⛷️
 Skier
 ski | skier | snow
 
-⛸
+⛸️
 Ice skate
 ice | ice skate | skate | skating
 
-⛹
+⛹️
 Person bouncing ball
 athletic | ball | basketball | bouncing | championship | dribble | net | person | person bouncing ball | player | throw
 
-✍
+✍️
 Writing hand
 hand | write | writing | writing hand
 
@@ -94,151 +94,151 @@ americas | earth | globe | globe showing americas | showing | world
 Last quarter moon face
 dreams | face | last | last quarter moon face | moon | quarter
 
-🌡
+🌡️
 Thermometer
 thermometer | weather
 
-🌤
+🌤️
 Sun behind small cloud
 behind | cloud | sun | sun behind small cloud | weather
 
-🌥
+🌥️
 Sun behind large cloud
 behind | cloud | sun | sun behind large cloud | weather
 
-🌦
+🌦️
 Sun behind rain cloud
 behind | cloud | rain | sun | sun behind rain cloud | weather
 
-🌧
+🌧️
 Cloud with rain
 cloud | cloud with rain | rain | weather
 
-🌨
+🌨️
 Cloud with snow
 cloud | cloud with snow | cold | snow | weather
 
-🌩
+🌩️
 Cloud with lightning
 cloud | cloud with lightning | lightning | weather
 
-🌪
+🌪️
 Tornado
 cloud | tornado | weather | whirlwind
 
-🌫
+🌫️
 Fog
 cloud | fog | weather
 
-🌬
+🌬️
 Wind face
 blow | cloud | face | wind | wind face
 
-🌶
+🌶️
 Hot pepper
 hot | hot pepper | pepper
 
-🎖
+🎖️
 Military medal
 award | celebration | medal | military | military medal
 
-🎗
+🎗️
 Reminder ribbon
 celebration | reminder | reminder ribbon | ribbon
 
-🎙
+🎙️
 Studio microphone
 mic | microphone | music | studio | studio microphone
 
-🎚
+🎚️
 Level slider
 level | level slider | music | slider
 
-🎛
+🎛️
 Control knobs
 control | control knobs | knobs | music
 
-🎞
+🎞️
 Film frames
 cinema | film | film frames | frames | movie
 
-🎟
+🎟️
 Admission tickets
 admission | admission tickets | ticket | tickets
 
-🏋
+🏋️
 Person lifting weights
 barbell | bodybuilder | deadlift | lifter | lifting | person | person lifting weights | powerlifting | weight | weightlifter | weights | workout
 
-🏌
+🏌️
 Person golfing
 ball | birdie | caddy | driving | golf | golfing | green | person | person golfing | pga | putt | range | tee
 
-🏍
+🏍️
 Motorcycle
 motorcycle | racing
 
-🏎
+🏎️
 Racing car
 car | racing | racing car | zoom
 
-🏔
+🏔️
 Snow-capped mountain
 cold | mountain | snow | snow-capped | snow-capped mountain
 
-🏕
+🏕️
 Camping
 camping
 
-🏖
+🏖️
 Beach with umbrella
 beach | beach with umbrella | umbrella
 
-🏗
+🏗️
 Building construction
 building | building construction | construction | crane
 
-🏘
+🏘️
 Houses
 house | houses
 
-🏙
+🏙️
 Cityscape
 city | cityscape
 
-🏚
+🏚️
 Derelict house
 derelict | derelict house | home | house
 
-🏛
+🏛️
 Classical building
 building | classical | classical building
 
-🏜
+🏜️
 Desert
 desert
 
-🏝
+🏝️
 Desert island
 desert | desert island | island
 
-🏞
+🏞️
 National park
 national | national park | park
 
-🏟
+🏟️
 Stadium
 stadium
 
-🏳
+🏳️
 White flag
 flag | waving | white | white flag
 
-🏵
+🏵️
 Rosette
 plant | rosette
 
-🏷
+🏷️
 Label
 label | tag
 
@@ -250,11 +250,11 @@ animal | animals | cat | cats | kitten | pet
 Dog
 animal | animals | dog | dogs | pet
 
-🐿
+🐿️
 Chipmunk
 animal | chipmunk | squirrel
 
-👁
+👁️
 Eye
 1 | body | eye | one
 
@@ -266,7 +266,7 @@ flag | mail | mailbox | open | open mailbox with raised flag | postbox | raised
 Open mailbox with lowered flag
 flag | lowered | mail | mailbox | open | open mailbox with lowered flag | postbox
 
-📽
+📽️
 Film projector
 cinema | film | film projector | movie | projector | video
 
@@ -274,11 +274,11 @@ cinema | film | film projector | movie | projector | video
 Speaker low volume
 low | soft | sound | speaker | speaker low volume | volume
 
-🕉
+🕉️
 Om
 hindu | om | religion
 
-🕊
+🕊️
 Dove
 bird | dove | fly | ornithology | peace
 
@@ -330,139 +330,139 @@ Eleven-thirty
 Twelve-thirty
 12 | 12:30 | 30 | clock | thirty | time | twelve | twelve-thirty
 
-🕯
+🕯️
 Candle
 candle | light
 
-🕰
+🕰️
 Mantelpiece clock
 clock | mantelpiece | mantelpiece clock | time
 
-🕳
+🕳️
 Hole
 hole
 
-🕴
+🕴️
 Person in suit levitating
 business | levitating | person | person in suit levitating | suit
 
-🕵
+🕵️
 Detective
 detective | sleuth | spy
 
-🕶
+🕶️
 Sunglasses
 dark | eye | eyewear | glasses | sunglasses
 
-🕷
+🕷️
 Spider
 animal | insect | spider
 
-🕸
+🕸️
 Spider web
 spider | spider web | web
 
-🕹
+🕹️
 Joystick
 game | joystick | video | videogame
 
-🖇
+🖇️
 Linked paperclips
 link | linked | linked paperclips | paperclip | paperclips
 
-🖊
+🖊️
 Pen
 ballpoint | pen
 
-🖋
+🖋️
 Fountain pen
 fountain | fountain pen | pen
 
-🖌
+🖌️
 Paintbrush
 paintbrush | painting
 
-🖍
+🖍️
 Crayon
 crayon
 
-🖐
+🖐️
 Hand with fingers splayed
 finger | fingers | hand | hand with fingers splayed | raised | splayed | stop
 
-🖥
+🖥️
 Desktop computer
 computer | desktop | desktop computer | monitor
 
-🖨
+🖨️
 Printer
 computer | printer
 
-🖱
+🖱️
 Computer mouse
 computer | computer mouse | mouse
 
-🖲
+🖲️
 Trackball
 computer | trackball
 
-🖼
+🖼️
 Framed picture
 art | frame | framed | framed picture | museum | painting | picture
 
-🗂
+🗂️
 Card index dividers
 card | card index dividers | dividers | index
 
-🗃
+🗃️
 Card file box
 box | card | card file box | file
 
-🗄
+🗄️
 File cabinet
 cabinet | file | file cabinet | filing | paper
 
-🗑
+🗑️
 Wastebasket
 can | garbage | trash | waste | wastebasket
 
-🗒
+🗒️
 Spiral notepad
 note | notepad | pad | spiral | spiral notepad
 
-🗓
+🗓️
 Spiral calendar
 calendar | pad | spiral | spiral calendar
 
-🗜
+🗜️
 Clamp
 clamp | compress | tool | vice
 
-🗝
+🗝️
 Old key
 clue | key | lock | old | old key
 
-🗞
+🗞️
 Rolled-up newspaper
 news | newspaper | paper | rolled | rolled-up | rolled-up newspaper
 
-🗡
+🗡️
 Dagger
 dagger | knife | weapon
 
-🗣
+🗣️
 Speaking head
 face | head | silhouette | speak | speaking | speaking head
 
-🗯
+🗯️
 Right anger bubble
 anger | angry | balloon | bubble | mad | right | right anger bubble
 
-🗳
+🗳️
 Ballot box with ballot
 ballot | ballot box with ballot | box
 
-🗺
+🗺️
 World map
 map | world | world map
 
@@ -482,50 +482,74 @@ car | oncoming | oncoming police car | police
 Oncoming automobile
 automobile | car | cars | drove | oncoming | oncoming automobile | vehicle
 
-🛋
+🛋️
 Couch and lamp
 couch | couch and lamp | hotel | lamp
 
-🛍
+🛍️
 Shopping bags
 bag | bags | hotel | shopping | shopping bags
 
-🛎
+🛎️
 Bellhop bell
 bell | bellhop | bellhop bell | hotel
 
-🛏
+🛏️
 Bed
 bed | hotel | sleep
 
-🛠
+🛠️
 Hammer and wrench
 hammer | hammer and wrench | spanner | tool | wrench
 
-🛡
+🛡️
 Shield
 shield | weapon
 
-🛢
+🛢️
 Oil drum
 drum | oil | oil drum
 
-🛤
+🛤️
 Railway track
 railway | railway track | track | train
 
-🛥
+🛥️
 Motor boat
 boat | motor | motor boat | motorboat
 
-🛩
+🛩️
 Small airplane
 aeroplane | airplane | plane | small | small airplane
 
-🛰
+🛰️
 Satellite
 satellite | space
 
-🛳
+🛳️
 Passenger ship
 passenger | passenger ship | ship
+
+🍽️
+Fork and knife with plate
+cooking | dinner | eat | fork | fork and knife with plate | knife | plate
+
+🛣️
+Motorway
+highway | motorway | road
+
+⏭️
+Next track button
+arrow | button | next | next track button | scene | track | triangle
+
+⏮️
+Last track button
+arrow | button | last | last track button | previous | scene | track | triangle
+
+⏸️
+Pause button
+bar | button | double | pause | pause button | vertical
+
+⏺️
+Record button
+button | circle | record | record button
