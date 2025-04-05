@@ -29,6 +29,10 @@ categories.
 
 jome is currently only tested on 🐧.
 
+ifdef::env-github[]
+toc::[]
+endif::env-github[]
+
 
 == Preview
 
