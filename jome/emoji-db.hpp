@@ -209,7 +209,6 @@ public:
     }
 
 private:
-    nlohmann::json _loadJson(const std::string& dir, const std::string& file);
     void _createEmojis(const std::string& dir);
     void _createCats(const std::string& dir);
     void _createEmojiPngLocations(const std::string& dir);

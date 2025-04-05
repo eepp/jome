@@ -121,7 +121,9 @@ EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize) :
     this->_createEmojiPngLocations(dir);
 }
 
-nlohmann::json EmojiDb::_loadJson(const std::string& dir, const std::string& file)
+namespace {
+
+nlohmann::json loadJson(const std::string& dir, const std::string& file)
 {
     std::ifstream f {dir + '/' + file};
     nlohmann::json json;
@@ -130,9 +132,11 @@ nlohmann::json EmojiDb::_loadJson(const std::string& dir, const std::string& fil
     return json;
 }
 
+} // namespace
+
 void EmojiDb::_createEmojis(const std::string& dir)
 {
-    const auto jsonEmojis = this->_loadJson(dir, "emojis.json");
+    const auto jsonEmojis = loadJson(dir, "emojis.json");
 
     for (auto& emojiKeyJsonValPair : jsonEmojis.items()) {
         auto emoji = call([&emojiKeyJsonValPair] {
@@ -206,7 +210,7 @@ void EmojiDb::_createCats(const std::string& dir)
     _cats.push_back(std::make_unique<EmojiCat>("recent", "Recent"));
     _recentEmojisCat = _cats.back().get();
 
-    const auto jsonCats = this->_loadJson(dir, "cats.json");
+    const auto jsonCats = loadJson(dir, "cats.json");
 
     for (auto& jsonCat : jsonCats) {
         _cats.push_back(call([this, &jsonCat] {
@@ -227,7 +231,7 @@ void EmojiDb::_createCats(const std::string& dir)
 void EmojiDb::_createEmojiPngLocations(const std::string& dir)
 {
     const auto fileName = fmt::format("emojis-png-locations-{}.json", this->emojiSizeInt());
-    const auto pngLocationsJson = this->_loadJson(dir, fileName);
+    const auto pngLocationsJson = loadJson(dir, fileName);
 
     for (auto& keyJsonValPair : pngLocationsJson.items()) {
         auto& jsonLoc = keyJsonValPair.value();
