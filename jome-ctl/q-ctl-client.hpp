@@ -13,7 +13,7 @@
 
 namespace jome {
 
-class QCtlClient :
+class QCtlClient final :
     public QObject
 {
     Q_OBJECT
