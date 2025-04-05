@@ -195,6 +195,11 @@ public:
         return *_emojis.at(str);
     }
 
+    bool hasEmoji(const std::string& str) const
+    {
+        return _emojis.count(str) >= 1;
+    }
+
     const std::unordered_set<std::string>& keywords() const noexcept
     {
         return _keywords;

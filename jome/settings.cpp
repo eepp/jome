@@ -33,7 +33,13 @@ void updateRecentEmojisFromSettings(EmojiDb& db)
         const auto byteArray = emojiStrVar.toString().toUtf8();
         const auto emojiStr = byteArray.constData();
 
-        recentEmojis.push_back(&db.emojiForStr(emojiStr));
+        /*
+         * Silently ignore invalid emoji: this may happen when
+         * `emojis.json` is fixed between releases.
+         */
+        if (db.hasEmoji(emojiStr)) {
+            recentEmojis.push_back(&db.emojiForStr(emojiStr));
+        }
     }
 
     db.recentEmojis(std::move(recentEmojis));
