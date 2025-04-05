@@ -15,6 +15,7 @@
 👚 Woman’s Clothes
 🧤 Gloves
 🧦 Socks
+🪭 Folding hand fan
 👛 Purse
 👜 Handbag
 👝 Clutch Bag
@@ -38,6 +39,7 @@
 👡 Woman’s Sandal
 🩰 Ballet Shoes
 👢 Woman’s Boot
+🪮 Hair pick
 👑 Crown
 👒 Woman’s Hat
 🎩 Top Hat

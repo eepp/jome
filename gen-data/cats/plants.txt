@@ -9,6 +9,7 @@
 🌻 Sunflower
 🌼 Blossom
 🌷 Tulip
+🪻 Hyacinth
 🌱 Seedling
 🪴 Potted Plant
 🌲 Evergreen Tree

@@ -50,6 +50,7 @@
 🔅 Dim Button
 🔆 Bright Button
 📶 Antenna Bars
+🛜 Wireless
 📳 Vibration Mode
 📴 Mobile Phone Off
 ♀️ Female Sign

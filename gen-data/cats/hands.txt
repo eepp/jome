@@ -7,6 +7,8 @@
 🫲 Leftwards hand
 🫳 Palm down hand
 🫴 Palm up hand
+🫷 Leftwards pushing hand
+🫸 Rightwards pushing hand
 👌 OK Hand
 🤌 Pinched Fingers
 🤏 Pinching Hand

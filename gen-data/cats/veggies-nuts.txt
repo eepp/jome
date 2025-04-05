@@ -11,8 +11,10 @@
 🥒 Cucumber
 🥬 Leafy Green
 🥦 Broccoli
+🫛 Pea pod
 🧄 Garlic
 🧅 Onion
+🫚 Ginger root
 🍄 Mushroom
 🥜 Peanuts
 🫘 Beans

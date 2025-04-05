@@ -10,6 +10,7 @@
 🐈‍⬛ Black Cat
 🐅 Tiger
 🐆 Leopard
+🫏 Donkey
 🐎 Horse
 🦓 Zebra
 🦬 Bison
@@ -50,6 +51,7 @@
 🐤 Baby Chick
 🐥 Front-Facing Baby Chick
 🐦 Bird
+🐦‍⬛ Black bird
 🪹 Empty Nest
 🪺 Nest with Eggs
 🐧 Penguin
@@ -57,12 +59,14 @@
 🦅 Eagle
 🦆 Duck
 🦢 Swan
+🪿 Goose
 🦉 Owl
 🦤 Dodo
 🪶 Feather
 🦩 Flamingo
 🦚 Peacock
 🦜 Parrot
+🪽 Wing
 🐊 Crocodile
 🐢 Turtle
 🦎 Lizard
@@ -81,6 +85,7 @@
 🐙 Octopus
 🐚 Spiral Shell
 🪸 Coral
+🪼 Jellyfish
 🦀 Crab
 🦞 Lobster
 🦐 Shrimp

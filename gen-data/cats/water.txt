@@ -47,6 +47,7 @@
 🦦 Otter
 🐚 Spiral Shell
 🪸 Coral
+🪼 Jellyfish
 🎣 Fishing Pole
 ⚓ Anchor
 ⛵ Sailboat

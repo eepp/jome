@@ -32,6 +32,7 @@ enum class EmojiVersion
     V_13_0,
     V_13_1,
     V_14_0,
+    V_15_0,
 };
 
 class Emoji final

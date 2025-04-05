@@ -296,3 +296,5 @@
 🫅 Person with Crown
 🫃 Pregnant Man
 🫄 Pregnant Person
+🫷 Leftwards pushing hand
+🫸 Rightwards pushing hand

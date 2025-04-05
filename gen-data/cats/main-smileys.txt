@@ -47,6 +47,7 @@
 😬 Grimacing Face
 😮‍💨 Face Exhaling
 🤥 Lying Face
+🫨 Shaking face
 😌 Relieved Face
 😔 Pensive Face
 😪 Sleepy Face

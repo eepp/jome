@@ -9,10 +9,12 @@
 🪗 Accordion
 🎺 Trumpet
 📯 Postal Horn
+🪈 Flute
 🎻 Violin
 🪕 Banjo
 🥁 Drum
 🪘 Long Drum
+🪇 Maracas
 🧑‍🎤 Singer
 👨‍🎤 Man Singer
 👩‍🎤 Woman Singer
