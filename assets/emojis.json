@@ -2511,6 +2511,25 @@
     "has-skin-tone-support": true,
     "version": "14.0"
   },
+  "🫰": {
+    "name": "Hand with index finger and thumb crossed",
+    "keywords": [
+      "&lt;3",
+      "crossed",
+      "expensive",
+      "finger",
+      "hand",
+      "hand with index finger and thumb crossed",
+      "heart",
+      "index",
+      "love",
+      "money",
+      "snap",
+      "thumb"
+    ],
+    "has-skin-tone-support": true,
+    "version": "14.0"
+  },
   "💏": {
     "name": "Kiss",
     "keywords": [
@@ -3224,25 +3243,6 @@
     ],
     "has-skin-tone-support": true,
     "version": "3.0"
-  },
-  "🫰": {
-    "name": "Hand with index finger and thumb crossed",
-    "keywords": [
-      "&lt;3",
-      "crossed",
-      "expensive",
-      "finger",
-      "hand",
-      "hand with index finger and thumb crossed",
-      "heart",
-      "index",
-      "love",
-      "money",
-      "snap",
-      "thumb"
-    ],
-    "has-skin-tone-support": true,
-    "version": "14.0"
   },
   "🤟": {
     "name": "Love-you gesture",
