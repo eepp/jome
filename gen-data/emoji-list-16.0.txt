@@ -646,7 +646,7 @@ U+1F4A8
 dashing away
 away | cloud | comic | dash | dashing | fart | fast | go | gone | gotta | running | smoke
 
-U+1F573
+U+1F573 U+FE0F
 hole
 hole
 
@@ -658,11 +658,11 @@ U+1F441 U+FE0F U+200D U+1F5E8 U+FE0F
 eye in speech bubble
 balloon | bubble | eye | speech | witness
 
-U+1F5E8
+U+1F5E8 U+FE0F
 left speech bubble
 balloon | bubble | dialog | left | speech
 
-U+1F5EF
+U+1F5EF U+FE0F
 right anger bubble
 anger | angry | balloon | bubble | mad | right
 
@@ -682,7 +682,7 @@ U+1F91A
 raised back of hand
 back | backhand | hand | raised
 
-U+1F590
+U+1F590 U+FE0F
 hand with fingers splayed
 finger | fingers | hand | raised | splayed | stop
 
@@ -730,7 +730,7 @@ U+1F90F
 pinching hand
 amount | bit | fingers | hand | little | pinching | small | sort
 
-U+270C
+U+270C U+FE0F
 victory hand
 hand | peace | v | victory
 
@@ -774,7 +774,7 @@ U+1F447
 backhand index pointing down
 backhand | down | finger | hand | index | point | pointing
 
-U+261D
+U+261D U+FE0F
 index pointing up
 finger | hand | index | point | pointing | this | up
 
@@ -834,7 +834,7 @@ U+1F64F
 folded hands
 appreciate | ask | beg | blessed | bow | cmon | five | folded | gesture | hand | high | please | pray | thanks | thx
 
-U+270D
+U+270D U+FE0F
 writing hand
 hand | write | writing
 
@@ -902,7 +902,7 @@ U+1F440
 eyes
 body | eye | eyes | face | googly | look | looking | omg | peep | see | seeing
 
-U+1F441
+U+1F441 U+FE0F
 eye
 1 | body | eye | one
 
@@ -1354,7 +1354,7 @@ U+1F46E U+200D U+2640 U+FE0F
 woman police officer
 apprehend | arrest | citation | cop | law | officer | over | police | pulled | undercover | woman
 
-U+1F575
+U+1F575 U+FE0F
 detective
 detective | sleuth | spy
 
@@ -1794,7 +1794,7 @@ U+1F57A
 man dancing
 dance | dancer | dancing | elegant | festive | flair | flamenco | groove | let's | man | salsa | tango
 
-U+1F574
+U+1F574 U+FE0F
 person in suit levitating
 business | levitating | person | suit
 
@@ -1842,7 +1842,7 @@ U+1F3C7
 horse racing
 horse | jockey | racehorse | racing | riding | sport
 
-U+26F7
+U+26F7 U+FE0F
 skier
 ski | skier | snow
 
@@ -1850,7 +1850,7 @@ U+1F3C2
 snowboarder
 ski | snow | snowboard | snowboarder | sport
 
-U+1F3CC
+U+1F3CC U+FE0F
 person golfing
 ball | birdie | caddy | driving | golf | golfing | green | person | pga | putt | range | tee
 
@@ -1898,7 +1898,7 @@ U+1F3CA U+200D U+2640 U+FE0F
 woman swimming
 freestyle | man | sport | swim | swimmer | swimming | triathlon
 
-U+26F9
+U+26F9 U+FE0F
 person bouncing ball
 athletic | ball | basketball | bouncing | championship | dribble | net | person | player | throw
 
@@ -1910,7 +1910,7 @@ U+26F9 U+FE0F U+200D U+2640 U+FE0F
 woman bouncing ball
 athletic | ball | basketball | bouncing | championship | dribble | net | player | throw | woman
 
-U+1F3CB
+U+1F3CB U+FE0F
 person lifting weights
 barbell | bodybuilder | deadlift | lifter | lifting | person | powerlifting | weight | weightlifter | weights | workout
 
@@ -2174,7 +2174,7 @@ U+1F469 U+200D U+1F467 U+200D U+1F467
 family: woman, girl, girl
 child | family | girl | woman
 
-U+1F5E3
+U+1F5E3 U+FE0F
 speaking head
 face | head | silhouette | speak | speaking
 
@@ -2442,7 +2442,7 @@ U+1F407
 rabbit
 animal | bunny | pet | rabbit
 
-U+1F43F
+U+1F43F U+FE0F
 chipmunk
 animal | chipmunk | squirrel
 
@@ -2530,7 +2530,7 @@ U+1F427
 penguin
 animal | antarctica | bird | ornithology | penguin
 
-U+1F54A
+U+1F54A U+FE0F
 dove
 bird | dove | fly | ornithology | peace
 
@@ -2608,7 +2608,7 @@ animal | bearer | Ophiuchus | serpent | snake | zodiac
 
 U+1F432
 dragon face
-animal | dragon | face | fairy | fairytale | tale
+animal | dragon | face | fairytale | tale
 
 U+1F409
 dragon
@@ -2726,11 +2726,11 @@ U+1FAB3
 cockroach
 animal | cockroach | insect | pest | roach
 
-U+1F577
+U+1F577 U+FE0F
 spider
 animal | insect | spider
 
-U+1F578
+U+1F578 U+FE0F
 spider web
 spider | web
 
@@ -2770,7 +2770,7 @@ U+1FAB7
 lotus
 beauty | Buddhism | calm | flower | Hinduism | lotus | peace | purity | serenity
 
-U+1F3F5
+U+1F3F5 U+FE0F
 rosette
 plant | rosette
 
@@ -2834,7 +2834,7 @@ U+1F33F
 herb
 herb | leaf | plant
 
-U+2618
+U+2618 U+FE0F
 shamrock
 irish | plant | shamrock
 
@@ -2970,7 +2970,7 @@ U+1F33D
 ear of corn
 corn | crops | ear | farm | maize | maze
 
-U+1F336
+U+1F336 U+FE0F
 hot pepper
 hot | pepper
 
@@ -3370,7 +3370,7 @@ U+1F962
 chopsticks
 chopsticks | hashi | jeotgarak | kuaizi
 
-U+1F37D
+U+1F37D U+FE0F
 fork and knife with plate
 cooking | dinner | eat | fork | knife | plate
 
@@ -3410,7 +3410,7 @@ U+1F310
 globe with meridians
 earth | globe | internet | meridians | web | world | worldwide
 
-U+1F5FA
+U+1F5FA U+FE0F
 world map
 map | world
 
@@ -3422,11 +3422,11 @@ U+1F9ED
 compass
 compass | direction | magnetic | navigation | orienteering
 
-U+1F3D4
+U+1F3D4 U+FE0F
 snow-capped mountain
 cold | mountain | snow | snow-capped
 
-U+26F0
+U+26F0 U+FE0F
 mountain
 mountain
 
@@ -3438,35 +3438,35 @@ U+1F5FB
 mount fuji
 fuji | mount | mountain | nature
 
-U+1F3D5
+U+1F3D5 U+FE0F
 camping
 camping
 
-U+1F3D6
+U+1F3D6 U+FE0F
 beach with umbrella
 beach | umbrella
 
-U+1F3DC
+U+1F3DC U+FE0F
 desert
 desert
 
-U+1F3DD
+U+1F3DD U+FE0F
 desert island
 desert | island
 
-U+1F3DE
+U+1F3DE U+FE0F
 national park
 national | park
 
-U+1F3DF
+U+1F3DF U+FE0F
 stadium
 stadium
 
-U+1F3DB
+U+1F3DB U+FE0F
 classical building
 building | classical
 
-U+1F3D7
+U+1F3D7 U+FE0F
 building construction
 building | construction | crane
 
@@ -3486,11 +3486,11 @@ U+1F6D6
 hut
 home | house | hut | roundhouse | shelter | yurt
 
-U+1F3D8
+U+1F3D8 U+FE0F
 houses
 house | houses
 
-U+1F3DA
+U+1F3DA U+FE0F
 derelict house
 derelict | home | house
 
@@ -3582,7 +3582,7 @@ U+1F54D
 synagogue
 Jew | Jewish | judaism | religion | synagogue | temple
 
-U+26E9
+U+26E9 U+FE0F
 shinto shrine
 religion | shinto | shrine
 
@@ -3606,7 +3606,7 @@ U+1F303
 night with stars
 night | star | stars
 
-U+1F3D9
+U+1F3D9 U+FE0F
 cityscape
 city | cityscape
 
@@ -3630,7 +3630,7 @@ U+1F309
 bridge at night
 at | bridge | night
 
-U+2668
+U+2668 U+FE0F
 hot springs
 hot | hotsprings | springs | steaming
 
@@ -3774,11 +3774,11 @@ U+1F69C
 tractor
 tractor | vehicle
 
-U+1F3CE
+U+1F3CE U+FE0F
 racing car
 car | racing | zoom
 
-U+1F3CD
+U+1F3CD U+FE0F
 motorcycle
 motorcycle | racing
 
@@ -3818,15 +3818,15 @@ U+1F68F
 bus stop
 bus | busstop | stop
 
-U+1F6E3
+U+1F6E3 U+FE0F
 motorway
 highway | motorway | road
 
-U+1F6E4
+U+1F6E4 U+FE0F
 railway track
 railway | track | train
 
-U+1F6E2
+U+1F6E2 U+FE0F
 oil drum
 drum | oil
 
@@ -3878,15 +3878,15 @@ U+1F6A4
 speedboat
 billionaire | boat | lake | luxury | millionaire | speedboat | summer | travel
 
-U+1F6F3
+U+1F6F3 U+FE0F
 passenger ship
 passenger | ship
 
-U+26F4
+U+26F4 U+FE0F
 ferry
 boat | ferry | passenger
 
-U+1F6E5
+U+1F6E5 U+FE0F
 motor boat
 boat | motor | motorboat
 
@@ -3894,11 +3894,11 @@ U+1F6A2
 ship
 boat | passenger | ship | travel
 
-U+2708
+U+2708 U+FE0F
 airplane
 aeroplane | airplane | fly | flying | jet | plane | travel
 
-U+1F6E9
+U+1F6E9 U+FE0F
 small airplane
 aeroplane | airplane | plane | small
 
@@ -3934,7 +3934,7 @@ U+1F6A1
 aerial tramway
 aerial | cable | car | gondola | ropeway | tramway
 
-U+1F6F0
+U+1F6F0 U+FE0F
 satellite
 satellite | space
 
@@ -3946,7 +3946,7 @@ U+1F6F8
 flying saucer
 aliens | extra | flying | saucer | terrestrial | UFO
 
-U+1F6CE
+U+1F6CE U+FE0F
 bellhop bell
 bell | bellhop | hotel
 
@@ -3970,15 +3970,15 @@ U+23F0
 alarm clock
 alarm | clock | hours | hrs | late | time | waiting
 
-U+23F1
+U+23F1 U+FE0F
 stopwatch
 clock | stopwatch | time
 
-U+23F2
+U+23F2 U+FE0F
 timer clock
 clock | timer
 
-U+1F570
+U+1F570 U+FE0F
 mantelpiece clock
 clock | mantelpiece | time
 
@@ -4126,7 +4126,7 @@ U+1F31C
 last quarter moon face
 dreams | face | last | moon | quarter
 
-U+1F321
+U+1F321 U+FE0F
 thermometer
 thermometer | weather
 
@@ -4170,43 +4170,43 @@ U+26C5
 sun behind cloud
 behind | cloud | cloudy | sun | weather
 
-U+26C8
+U+26C8 U+FE0F
 cloud with lightning and rain
 cloud | lightning | rain | thunder | thunderstorm
 
-U+1F324
+U+1F324 U+FE0F
 sun behind small cloud
 behind | cloud | sun | weather
 
-U+1F325
+U+1F325 U+FE0F
 sun behind large cloud
 behind | cloud | sun | weather
 
-U+1F326
+U+1F326 U+FE0F
 sun behind rain cloud
 behind | cloud | rain | sun | weather
 
-U+1F327
+U+1F327 U+FE0F
 cloud with rain
 cloud | rain | weather
 
-U+1F328
+U+1F328 U+FE0F
 cloud with snow
 cloud | cold | snow | weather
 
-U+1F329
+U+1F329 U+FE0F
 cloud with lightning
 cloud | lightning | weather
 
-U+1F32A
+U+1F32A U+FE0F
 tornado
 cloud | tornado | weather | whirlwind
 
-U+1F32B
+U+1F32B U+FE0F
 fog
 cloud | fog | weather
 
-U+1F32C
+U+1F32C U+FE0F
 wind face
 blow | cloud | face | wind
 
@@ -4230,7 +4230,7 @@ U+2614
 umbrella with rain drops
 clothing | drop | drops | rain | umbrella | weather
 
-U+26F1
+U+26F1 U+FE0F
 umbrella on ground
 ground | rain | sun | umbrella
 
@@ -4338,11 +4338,11 @@ U+1F381
 wrapped gift
 birthday | bow | box | celebration | christmas | gift | present | surprise | wrapped
 
-U+1F397
+U+1F397 U+FE0F
 reminder ribbon
 celebration | reminder | ribbon
 
-U+1F39F
+U+1F39F U+FE0F
 admission tickets
 admission | ticket | tickets
 
@@ -4350,7 +4350,7 @@ U+1F3AB
 ticket
 admission | stub | ticket
 
-U+1F396
+U+1F396 U+FE0F
 military medal
 award | celebration | medal | military
 
@@ -4454,7 +4454,7 @@ U+26F3
 flag in hole
 flag | golf | hole | sport
 
-U+26F8
+U+26F8 U+FE0F
 ice skate
 ice | skate | skating
 
@@ -4514,7 +4514,7 @@ U+1F3AE
 video game
 controller | entertainment | game | video
 
-U+1F579
+U+1F579 U+FE0F
 joystick
 game | joystick | video | videogame
 
@@ -4582,7 +4582,7 @@ U+1F3AD
 performing arts
 actor | actress | art | arts | entertainment | mask | performing | theater | theatre | thespian
 
-U+1F5BC
+U+1F5BC U+FE0F
 framed picture
 art | frame | framed | museum | painting | picture
 
@@ -4610,7 +4610,7 @@ U+1F453
 glasses
 clothing | eye | eyeglasses | eyewear | glasses
 
-U+1F576
+U+1F576 U+FE0F
 sunglasses
 dark | eye | eyewear | glasses | sunglasses
 
@@ -4702,7 +4702,7 @@ U+1F45D
 clutch bag
 bag | clothes | clothing | clutch | dress | handbag | pouch | purse
 
-U+1F6CD
+U+1F6CD U+FE0F
 shopping bags
 bag | bags | hotel | shopping
 
@@ -4774,7 +4774,7 @@ U+1FA96
 military helmet
 army | helmet | military | soldier | war | warrior
 
-U+26D1
+U+26D1 U+FE0F
 rescue worker's helmet
 aid | cross | face | hat | helmet | rescue | worker's
 
@@ -4842,15 +4842,15 @@ U+1F3B6
 musical notes
 music | musical | note | notes | sound
 
-U+1F399
+U+1F399 U+FE0F
 studio microphone
 mic | microphone | music | studio
 
-U+1F39A
+U+1F39A U+FE0F
 level slider
 level | music | slider
 
-U+1F39B
+U+1F39B U+FE0F
 control knobs
 control | knobs | music
 
@@ -4954,11 +4954,11 @@ U+1F4BB
 laptop
 computer | laptop | office | pc | personal
 
-U+1F5A5
+U+1F5A5 U+FE0F
 desktop computer
 computer | desktop | monitor
 
-U+1F5A8
+U+1F5A8 U+FE0F
 printer
 computer | printer
 
@@ -4966,11 +4966,11 @@ U+2328 U+FE0F
 keyboard
 computer | keyboard
 
-U+1F5B1
+U+1F5B1 U+FE0F
 computer mouse
 computer | mouse
 
-U+1F5B2
+U+1F5B2 U+FE0F
 trackball
 computer | trackball
 
@@ -4998,11 +4998,11 @@ U+1F3A5
 movie camera
 bollywood | camera | cinema | film | hollywood | movie | record
 
-U+1F39E
+U+1F39E U+FE0F
 film frames
 cinema | film | frames | movie
 
-U+1F4FD
+U+1F4FD U+FE0F
 film projector
 cinema | film | movie | projector | video
 
@@ -5038,7 +5038,7 @@ U+1F50E
 magnifying glass tilted right
 contact | glass | lab | magnifying | right | right-pointing | science | search | tilted | tool
 
-U+1F56F
+U+1F56F U+FE0F
 candle
 candle | light
 
@@ -5110,7 +5110,7 @@ U+1F4F0
 newspaper
 communication | news | newspaper | paper
 
-U+1F5DE
+U+1F5DE U+FE0F
 rolled-up newspaper
 news | newspaper | paper | rolled | rolled-up
 
@@ -5122,7 +5122,7 @@ U+1F516
 bookmark
 bookmark | mark
 
-U+1F3F7
+U+1F3F7 U+FE0F
 label
 label | tag
 
@@ -5214,7 +5214,7 @@ U+1F4EE
 postbox
 mail | mailbox | postbox
 
-U+1F5F3
+U+1F5F3 U+FE0F
 ballot box with ballot
 ballot | box
 
@@ -5226,19 +5226,19 @@ U+2712 U+FE0F
 black nib
 black | nib | pen
 
-U+1F58B
+U+1F58B U+FE0F
 fountain pen
 fountain | pen
 
-U+1F58A
+U+1F58A U+FE0F
 pen
 ballpoint | pen
 
-U+1F58C
+U+1F58C U+FE0F
 paintbrush
 paintbrush | painting
 
-U+1F58D
+U+1F58D U+FE0F
 crayon
 crayon
 
@@ -5258,7 +5258,7 @@ U+1F4C2
 open file folder
 file | folder | open
 
-U+1F5C2
+U+1F5C2 U+FE0F
 card index dividers
 card | dividers | index
 
@@ -5270,11 +5270,11 @@ U+1F4C6
 tear-off calendar
 calendar | tear-off
 
-U+1F5D2
+U+1F5D2 U+FE0F
 spiral notepad
 note | notepad | pad | spiral
 
-U+1F5D3
+U+1F5D3 U+FE0F
 spiral calendar
 calendar | pad | spiral
 
@@ -5310,7 +5310,7 @@ U+1F4CE
 paperclip
 paperclip
 
-U+1F587
+U+1F587 U+FE0F
 linked paperclips
 link | linked | paperclip | paperclips
 
@@ -5326,15 +5326,15 @@ U+2702 U+FE0F
 scissors
 cut | cutting | paper | scissors | tool
 
-U+1F5C3
+U+1F5C3 U+FE0F
 card file box
 box | card | file
 
-U+1F5C4
+U+1F5C4 U+FE0F
 file cabinet
 cabinet | file | filing | paper
 
-U+1F5D1
+U+1F5D1 U+FE0F
 wastebasket
 can | garbage | trash | waste | wastebasket
 
@@ -5358,7 +5358,7 @@ U+1F511
 key
 key | keys | lock | major | password | unlock
 
-U+1F5DD
+U+1F5DD U+FE0F
 old key
 clue | key | lock | old
 
@@ -5370,7 +5370,7 @@ U+1FA93
 axe
 ax | axe | chop | hatchet | split | wood
 
-U+26CF
+U+26CF U+FE0F
 pick
 hammer | mining | pick | tool
 
@@ -5378,11 +5378,11 @@ U+2692 U+FE0F
 hammer and pick
 hammer | pick | tool
 
-U+1F6E0
+U+1F6E0 U+FE0F
 hammer and wrench
 hammer | spanner | tool | wrench
 
-U+1F5E1
+U+1F5E1 U+FE0F
 dagger
 dagger | knife | weapon
 
@@ -5402,7 +5402,7 @@ U+1F3F9
 bow and arrow
 archer | archery | arrow | bow | Sagittarius | tool | weapon | zodiac
 
-U+1F6E1
+U+1F6E1 U+FE0F
 shield
 shield | weapon
 
@@ -5426,7 +5426,7 @@ U+2699 U+FE0F
 gear
 cog | cogwheel | gear | tool
 
-U+1F5DC
+U+1F5DC U+FE0F
 clamp
 clamp | compress | tool | vice
 
@@ -5446,7 +5446,7 @@ U+26D3 U+FE0F U+200D U+1F4A5
 broken chain
 break | breaking | broken | chain | cuffs | freedom
 
-U+26D3
+U+26D3 U+FE0F
 chains
 chain | chains
 
@@ -5542,11 +5542,11 @@ U+1FA9F
 window
 air | frame | fresh | opening | transparent | view | window
 
-U+1F6CF
+U+1F6CF U+FE0F
 bed
 bed | hotel | sleep
 
-U+1F6CB
+U+1F6CB U+FE0F
 couch and lamp
 couch | hotel | lamp
 
@@ -5858,7 +5858,7 @@ U+269B U+FE0F
 atom symbol
 atheist | atom | symbol
 
-U+1F549
+U+1F549 U+FE0F
 om
 Hindu | om | religion
 
@@ -5974,11 +5974,11 @@ U+23E9
 fast-forward button
 arrow | button | double | fast | fast-forward | forward
 
-U+23ED
+U+23ED U+FE0F
 next track button
 arrow | button | next | scene | track | triangle
 
-U+23EF
+U+23EF U+FE0F
 play or pause button
 arrow | button | pause | play | right | triangle
 
@@ -5990,7 +5990,7 @@ U+23EA
 fast reverse button
 arrow | button | double | fast | reverse | rewind
 
-U+23EE
+U+23EE U+FE0F
 last track button
 arrow | button | last | previous | scene | track | triangle
 
@@ -6010,15 +6010,15 @@ U+23EC
 fast down button
 arrow | button | double | down | fast
 
-U+23F8
+U+23F8 U+FE0F
 pause button
 bar | button | double | pause | vertical
 
-U+23F9
+U+23F9 U+FE0F
 stop button
 button | square | stop
 
-U+23FA
+U+23FA U+FE0F
 record button
 button | circle | record
 
@@ -6114,7 +6114,7 @@ U+2757
 red exclamation mark
 ! | exclamation | mark | punctuation | red
 
-U+3030
+U+3030 U+FE0F
 wavy dash
 dash | punctuation | wavy
 
@@ -6126,7 +6126,7 @@ U+1F4B2
 heavy dollar sign
 billion | cash | charge | currency | dollar | heavy | million | money | pay | sign
 
-U+2695
+U+2695 U+FE0F
 medical symbol
 aesculapius | medical | medicine | staff | symbol
 
@@ -6134,7 +6134,7 @@ U+267B U+FE0F
 recycling symbol
 recycle | recycling | symbol
 
-U+269C
+U+269C U+FE0F
 fleur-de-lis
 fleur-de-lis | knights
 
@@ -6286,7 +6286,7 @@ U+1F524
 input latin letters
 abc | alphabet | input | latin | letters
 
-U+1F170
+U+1F170 U+FE0F
 A button (blood type)
 blood | button | type
 
@@ -6294,7 +6294,7 @@ U+1F18E
 AB button (blood type)
 AB | blood | button | type
 
-U+1F171
+U+1F171 U+FE0F
 B button (blood type)
 B | blood | button | type
 
@@ -6330,7 +6330,7 @@ U+1F196
 NG button
 button | NG
 
-U+1F17E
+U+1F17E U+FE0F
 O button (blood type)
 blood | button | O | type
 
@@ -6338,7 +6338,7 @@ U+1F197
 OK button
 button | OK | okay
 
-U+1F17F
+U+1F17F U+FE0F
 P button
 button | P | parking
 
@@ -6358,11 +6358,11 @@ U+1F201
 Japanese “here” button
 button | here | Japanese | katakana
 
-U+1F202
+U+1F202 U+FE0F
 Japanese “service charge” button
 button | charge | Japanese | katakana | service
 
-U+1F237
+U+1F237 U+FE0F
 Japanese “monthly amount” button
 amount | button | ideograph | Japanese | monthly
 
@@ -6406,11 +6406,11 @@ U+1F233
 Japanese “vacancy” button
 button | ideograph | Japanese | vacancy
 
-U+3297
+U+3297 U+FE0F
 Japanese “congratulations” button
 button | congratulations | ideograph | Japanese
 
-U+3299
+U+3299 U+FE0F
 Japanese “secret” button
 button | ideograph | Japanese | secret
 
@@ -6574,7 +6574,7 @@ U+1F3F4
 black flag
 black | flag | waving
 
-U+1F3F3
+U+1F3F3 U+FE0F
 white flag
 flag | waving | white
 
