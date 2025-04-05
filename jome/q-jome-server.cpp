@@ -61,10 +61,10 @@ void QJomeServer::_socketReadyRead()
 
         if (byte == '\0') {
             if (_tmpData == "pick") {
-                emit clientRequested(Command::PICK);
+                emit clientRequested(Command::Pick);
                 _tmpData.clear();
             } else if (_tmpData == "quit") {
-                emit clientRequested(Command::QUIT);
+                emit clientRequested(Command::Quit);
                 _tmpData.clear();
             }
 

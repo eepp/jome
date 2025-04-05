@@ -22,8 +22,8 @@ class QJomeServer final :
 public:
     enum class Command
     {
-        PICK,
-        QUIT,
+        Pick,
+        Quit,
     };
 
 public:

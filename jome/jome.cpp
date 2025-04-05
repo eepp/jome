@@ -306,7 +306,7 @@ int main(int argc, char **argv)
 
         QObject::connect(server.get(), &jome::QJomeServer::clientRequested,
                          [&server, &win, &db](const jome::QJomeServer::Command cmd) {
-            if (cmd == jome::QJomeServer::Command::QUIT) {
+            if (cmd == jome::QJomeServer::Command::Quit) {
                 // reply to client, then quit
                 server->sendToClient("");
 
