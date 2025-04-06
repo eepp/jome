@@ -154,6 +154,9 @@ name to scroll to this emoji category.
 +
 The first category, _Recent_, is a special category with the recently
 accepted emojis.
++
+Use the <<opt-H,`-H`{nbsp}option>> to override the maximum number
+of recently accepted emojis.
 
 Emoji info text (⬇️)::
     Name, Unicode codepoints, and Emoji version of the selected or
@@ -377,6 +380,10 @@ same{nbsp}⏲.
 `_PERIOD_`{nbsp}ms (greater than or equal to 32).
 
 The selection square doesn't flash by default.
+
+|[[opt-H]]`-H _COUNT_`
+|Set the maximum number of recently accepted emojis
+to{nbsp}``__COUNT__`` instead of 30.
 |===
 
 
