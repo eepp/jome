@@ -347,6 +347,10 @@ $ jome -f cp -p U -c 'xdotool key --delay 20'
 |When you accept an emoji, copy the UTF-8 emoji or the Unicode
 codepoints (depending on the <<opt-f,`-f`{nbsp}option>>) to the 📋.
 
+WARNING: This uses
+https://doc.qt.io/qt-5/qclipboard.html[`QClipboard`] and is known
+not to always work, depending on your 🪟 🧑‍💼.
+
 |[[opt-q]]`-q`
 |Do not quit when you <<accept-emoji,accept>> an emoji.
 
