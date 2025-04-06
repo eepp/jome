@@ -3013,7 +3013,7 @@
       "splayed",
       "stop"
     ],
-    "has-skin-tone-support": false,
+    "has-skin-tone-support": true,
     "version": "0.7"
   },
   "✋": {
@@ -3227,7 +3227,7 @@
       "victory",
       "victory hand"
     ],
-    "has-skin-tone-support": false,
+    "has-skin-tone-support": true,
     "version": "0.6"
   },
   "🤞": {
@@ -3370,7 +3370,7 @@
       "this",
       "up"
     ],
-    "has-skin-tone-support": false,
+    "has-skin-tone-support": true,
     "version": "0.6"
   },
   "🫵": {
@@ -3598,7 +3598,7 @@
       "writing",
       "writing hand"
     ],
-    "has-skin-tone-support": false,
+    "has-skin-tone-support": true,
     "version": "0.7"
   },
   "💅": {
@@ -5467,7 +5467,7 @@
       "sleuth",
       "spy"
     ],
-    "has-skin-tone-support": false,
+    "has-skin-tone-support": true,
     "version": "0.7"
   },
   "🕵️‍♂️": {
@@ -6494,7 +6494,7 @@
       "skier",
       "snow"
     ],
-    "has-skin-tone-support": false,
+    "has-skin-tone-support": true,
     "version": "0.7"
   },
   "🏂": {
@@ -6526,7 +6526,7 @@
       "range",
       "tee"
     ],
-    "has-skin-tone-support": false,
+    "has-skin-tone-support": true,
     "version": "0.7"
   },
   "🏌️‍♂️": {
@@ -6743,7 +6743,7 @@
       "player",
       "throw"
     ],
-    "has-skin-tone-support": false,
+    "has-skin-tone-support": true,
     "version": "0.7"
   },
   "⛹️‍♂️": {
@@ -6798,7 +6798,7 @@
       "weights",
       "workout"
     ],
-    "has-skin-tone-support": false,
+    "has-skin-tone-support": true,
     "version": "0.7"
   },
   "🏋️‍♂️": {
@@ -8001,7 +8001,7 @@
       "person in suit levitating",
       "suit"
     ],
-    "has-skin-tone-support": false,
+    "has-skin-tone-support": true,
     "version": "0.7"
   },
   "👯": {
