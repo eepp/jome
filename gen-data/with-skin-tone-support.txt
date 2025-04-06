@@ -6,11 +6,11 @@
 👃 Nose
 👋 Waving Hand
 🤚 Raised Back of Hand
-🖐 Hand With Fingers Splayed
+🖐️ Hand With Fingers Splayed
 ✋ Raised Hand
 🖖 Vulcan Salute
 👌 OK Hand
-✌ Victory Hand
+✌️ Victory Hand
 🤞 Crossed Fingers
 🤟 Love-You Gesture
 🤘 Sign of the Horns
@@ -20,7 +20,7 @@
 👆 Backhand Index Pointing Up
 🖕 Middle Finger
 👇 Backhand Index Pointing Down
-☝ Index Pointing Up
+☝️ Index Pointing Up
 👍 Thumbs Up
 👎 Thumbs Down
 ✊ Raised Fist
@@ -33,7 +33,7 @@
 🤲 Palms Up Together
 🤝 Handshake
 🙏 Folded Hands
-✍ Writing Hand
+✍️ Writing Hand
 💅 Nail Polish
 👶 Baby
 👼 Baby Angel
@@ -62,9 +62,9 @@
 🧗‍♂️ Man Climbing
 🧗‍♀️ Woman Climbing
 🏇 Horse Racing
-⛷ Skier
+⛷️ Skier
 🏂 Snowboarder
-🏌 Person Golfing
+🏌️ Person Golfing
 🏌️‍♂️ Man Golfing
 🏌️‍♀️ Woman Golfing
 🏄 Person Surfing
@@ -76,10 +76,10 @@
 🏊 Person Swimming
 🏊‍♂️ Man Swimming
 🏊‍♀️ Woman Swimming
-⛹ Person Bouncing Ball
+⛹️ Person Bouncing Ball
 ⛹️‍♂️ Man Bouncing Ball
 ⛹️‍♀️ Woman Bouncing Ball
-🏋 Person Lifting Weights
+🏋️ Person Lifting Weights
 🏋️‍♂️ Man Lifting Weights
 🏋️‍♀️ Woman Lifting Weights
 🚴 Person Biking
@@ -120,7 +120,7 @@
 🏃‍♀️ Woman Running
 💃 Woman Dancing
 🕺 Man Dancing
-🕴 Man in Suit Levitating
+🕴️ Man in Suit Levitating
 👯 People With Bunny Ears
 👯‍♂️ Men With Bunny Ears
 👯‍♀️ Women With Bunny Ears
@@ -191,7 +191,7 @@
 👮 Police Officer
 👮‍♂️ Man Police Officer
 👮‍♀️ Woman Police Officer
-🕵 Detective
+🕵️ Detective
 🕵️‍♂️ Man Detective
 🕵️‍♀️ Woman Detective
 💂 Guard
