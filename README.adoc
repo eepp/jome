@@ -313,6 +313,17 @@ U+1f645 U+200d U+2642 U+fe0f
 |`-n`
 |Do not 🖨 a newline after 🖨 the emoji or codepoints.
 
+|[[opt-V]]`-V`
+|Do not 🖨
+https://emojipedia.org/variation-selector-16[Variation Selector-16]
+(VS-16) codepoints.
+
+VS-16 is a suffix codepoint which specifies that the preceding character
+should be displayed with emoji presentation. For example, ♥ (which
+predates Unicode emojis) followed with VS-16 becomes{nbsp}♥️.
+
+There are applications/fonts which don't like VS-16.
+
 |[[opt-c]]`-c _CMD_`
 |When you accept an emoji, execute command `_CMD_` 20{nbsp}ms
 _after_ closing the jome 🪟.
