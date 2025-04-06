@@ -42,6 +42,7 @@ struct Params final
     jome::EmojiDb::EmojiSize emojiSize;
     boost::optional<unsigned int> selectedEmojiFlashPeriod;
     unsigned int maxRecentEmojis;
+    bool removeVs16;
 };
 
 namespace {
@@ -65,6 +66,7 @@ Params parseArgs(QApplication& app)
     const QCommandLineOption emojiWidthOpt {"w", "Set emoji width to <WIDTH> px (16, 24, 32, 40, or 48).", "WIDTH"};
     const QCommandLineOption selectedEmojiFlashPeriodOpt {"P", "Set selected emoji flashing period to <PERIOD> ms.", "PERIOD"};
     const QCommandLineOption maxRecentEmojisOpt {"H", "Set maximum number of recently accepted emojis to <COUNT>.", "COUNT"};
+    const QCommandLineOption removeVs16Opt {"V", "Remove VS-16 codepoints."};
 
     parser.addOption(formatOpt);
     parser.addOption(serverNameOpt);
@@ -77,6 +79,7 @@ Params parseArgs(QApplication& app)
     parser.addOption(emojiWidthOpt);
     parser.addOption(selectedEmojiFlashPeriodOpt);
     parser.addOption(maxRecentEmojisOpt);
+    parser.addOption(removeVs16Opt);
     parser.process(app);
 
     Params params;
@@ -85,6 +88,7 @@ Params parseArgs(QApplication& app)
     params.noHide = parser.isSet(noHideOpt);
     params.darkBg = parser.isSet(darkBgOpt);
     params.copyToClipboard = parser.isSet(copyToClipboardOpt);
+    params.removeVs16 = parser.isSet(removeVs16Opt);
 
     {
         const auto fmt = parser.value(formatOpt);
@@ -178,7 +182,7 @@ void execCommand(const std::string& cmd, const std::string& arg)
 
 std::string formatEmoji(const jome::Emoji& emoji,
                         const boost::optional<jome::Emoji::SkinTone>& skinTone, const Format fmt,
-                        const std::string& cpPrefix, const bool noNl)
+                        const std::string& cpPrefix, const bool noNl, const bool removeVs16)
 {
     std::string output;
 
@@ -186,9 +190,9 @@ std::string formatEmoji(const jome::Emoji& emoji,
     case Format::Utf8:
     {
         if (skinTone && emoji.hasSkinToneSupport()) {
-            output = emoji.strWithSkinTone(*skinTone);
+            output = emoji.str(*skinTone, !removeVs16);
         } else {
-            output = emoji.str();
+            output = emoji.str(boost::none, !removeVs16);
         }
 
         break;
@@ -196,11 +200,11 @@ std::string formatEmoji(const jome::Emoji& emoji,
 
     case Format::CodepointsHex:
     {
-        const auto codepoints = jome::call([skinTone, &emoji] {
+        const auto codepoints = jome::call([skinTone, &emoji, &removeVs16] {
             if (skinTone && emoji.hasSkinToneSupport()) {
-                return emoji.codepointsWithSkinTone(*skinTone);
+                return emoji.codepoints(*skinTone, !removeVs16);
             } else {
-                return emoji.codepoints();
+                return emoji.codepoints(boost::none, !removeVs16);
             }
         });
 
@@ -262,7 +266,7 @@ int main(int argc, char **argv)
     QObject::connect(&win, &jome::QJomeWindow::emojiChosen,
                      [&](const auto& emoji, const auto& skinTone) {
         const auto emojiStr = formatEmoji(emoji, skinTone, params.fmt, params.cpPrefix,
-                                          params.noNewline || params.cmd);
+                                          params.noNewline || params.cmd, params.removeVs16);
 
         if (server) {
             // send response to client

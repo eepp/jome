@@ -47,49 +47,51 @@ const std::string& Emoji::lcName() const
     return _lcName;
 }
 
-std::string Emoji::strWithSkinTone(const SkinTone skinTone) const
+std::string Emoji::str(const boost::optional<SkinTone>& skinTone,
+                       const bool withVs16) const
 {
-    assert(_hasSkinToneSupport);
-    return QString::fromUcs4(this->codepointsWithSkinTone(skinTone).data()).toStdString();
+    const auto codepoints = this->codepoints(skinTone, withVs16);
+
+    return QString::fromUcs4(codepoints.data(), codepoints.size()).toStdString();
 }
 
-Emoji::Codepoints Emoji::codepointsWithSkinTone(const SkinTone skinTone) const
-{
-    assert(_hasSkinToneSupport);
-
-    auto codepoints = this->codepoints();
-
-    codepoints.insert(codepoints.begin() + 1, call([skinTone] {
-        switch (skinTone) {
-        case SkinTone::Light:
-            return 0x1f3fb;
-
-        case SkinTone::MediumLight:
-            return 0x1f3fc;
-
-        case SkinTone::Medium:
-            return 0x1f3fd;
-
-        case SkinTone::MediumDark:
-            return 0x1f3fe;
-
-        case SkinTone::Dark:
-            return 0x1f3ff;
-
-        default:
-            std::abort();
-        }
-    }));
-
-    return codepoints;
-}
-
-Emoji::Codepoints Emoji::codepoints() const
+Emoji::Codepoints Emoji::codepoints(const boost::optional<SkinTone>& skinTone,
+                                    const bool withVs16) const
 {
     Codepoints codepoints;
 
     for (const auto qcp : QString::fromStdString(_str).toUcs4()) {
+        if (!withVs16 && qcp == 0xfe0f) {
+            continue;
+        }
+
         codepoints.push_back(qcp);
+    }
+
+    if (skinTone) {
+        assert(_hasSkinToneSupport);
+
+        codepoints.insert(codepoints.begin() + 1, call([&skinTone] {
+            switch (*skinTone) {
+            case SkinTone::Light:
+                return 0x1f3fb;
+
+            case SkinTone::MediumLight:
+                return 0x1f3fc;
+
+            case SkinTone::Medium:
+                return 0x1f3fd;
+
+            case SkinTone::MediumDark:
+                return 0x1f3fe;
+
+            case SkinTone::Dark:
+                return 0x1f3ff;
+
+            default:
+                std::abort();
+            }
+        }));
     }
 
     return codepoints;

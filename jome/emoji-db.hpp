@@ -8,6 +8,7 @@
 #ifndef _JOME_EMOJI_DB_HPP
 #define _JOME_EMOJI_DB_HPP
 
+#include <boost/optional/optional.hpp>
 #include <vector>
 #include <string>
 #include <memory>
@@ -57,15 +58,13 @@ public:
                    std::unordered_set<std::string>&& keywords, bool hasSkinToneSupport,
                    EmojiVersion version);
 
-    Codepoints codepoints() const;
-    Codepoints codepointsWithSkinTone(SkinTone skinTone) const;
-    std::string strWithSkinTone(SkinTone skinTone) const;
-    const std::string& lcName() const;
+    std::string str(const boost::optional<SkinTone>& skinTone = boost::none,
+                    bool withVs16 = true) const;
 
-    const std::string& str() const noexcept
-    {
-        return _str;
-    }
+    Codepoints codepoints(const boost::optional<SkinTone>& skinTone = boost::none,
+                          bool withVs16 = true) const;
+
+    const std::string& lcName() const;
 
     const std::string& name() const noexcept
     {
