@@ -38,6 +38,8 @@ endif::env-github[]
 
 image::screenshots/all.png[]
 
+image::screenshots/animals.png[]
+
 image::screenshots/palm.png[]
 
 image::screenshots/wom.png[]

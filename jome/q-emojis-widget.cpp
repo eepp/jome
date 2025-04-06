@@ -89,7 +89,7 @@ QGraphicsPixmapItem *QEmojisWidget::_createSelectedGraphicsItem()
 
     graphicsItem->hide();
     graphicsItem->setEnabled(false);
-    graphicsItem->setZValue(1000.);
+    graphicsItem->setZValue(-5.);
     return graphicsItem;
 }
 
