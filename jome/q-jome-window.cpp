@@ -121,7 +121,7 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj, QEvent * const even
     return true;
 }
 
-QJomeWindow::QJomeWindow(const EmojiDb& emojiDb, const bool darkBg,
+QJomeWindow::QJomeWindow(const EmojiDb& emojiDb, const bool darkBg, const bool noCatList,
                          const boost::optional<unsigned int>& selectedEmojiFlashPeriod) :
     _emojiDb {&emojiDb}
 {
@@ -129,7 +129,7 @@ QJomeWindow::QJomeWindow(const EmojiDb& emojiDb, const bool darkBg,
     this->setWindowTitle("jome");
     this->resize(800, 600);
     this->_setMainStyleSheet();
-    this->_buildUi(darkBg, selectedEmojiFlashPeriod);
+    this->_buildUi(darkBg, noCatList, selectedEmojiFlashPeriod);
 }
 
 void QJomeWindow::_setMainStyleSheet()
@@ -194,7 +194,7 @@ QListWidget *QJomeWindow::_createCatListWidget()
     return listWidget;
 }
 
-void QJomeWindow::_buildUi(const bool darkBg,
+void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList,
                            const boost::optional<unsigned int>& selectedEmojiFlashPeriod)
 {
     _wSearchBox = new QLineEdit;
@@ -261,6 +261,10 @@ void QJomeWindow::_buildUi(const bool darkBg,
         emojisHbox->addWidget(_wEmojis);
         emojisHbox->addWidget(_wCatList);
         mainVbox->addLayout(emojisHbox);
+    }
+
+    if (noCatList) {
+        this->_wCatList->hide();
     }
 
     {
