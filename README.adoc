@@ -13,11 +13,11 @@ endif::env-github[]
 Philippe Proulx <eepp.ca>
 5 April 2025
 
-**jome** (_joh_·_mee_) is a ⌨️ centric emoji picker 🖥 application.
+**jome** (_joh_·_mee_) is a ⌨️ centric emoji picker 🖥️ application.
 
-You can also pick an emoji with the 🖱, don't worry.
+You can also pick an emoji with the 🖱️, don't worry.
 
-jome has most of the interesting emojis of up to
+jome has most of the interesting emojis of ⬆️ to
 https://emojipedia.org/emoji-15.1/[Emoji{nbsp}15.1].
 
 I'm not a fan of the usual very broad categories of emojis which do not
@@ -97,30 +97,30 @@ $ yay -Sy jome-git
 
 jome's purpose is to help you _pick_ an emoji.
 
-When you <<accept-emoji,accept>> an emoji (with the ⌨️ or with the 🖱),
-jome 🖨 the UTF-8 emoji or the Unicode codepoints (see the
-<<opt-f,`-f`{nbsp}option>>), with an optional prefix (see the
+When you <<accept-emoji,✅>> an emoji (with the ⌨️ or with the 🖱️),
+jome 🖨️ the UTF-8 emoji or the Unicode codepoints (👀 the
+<<opt-f,`-f`{nbsp}option>>), with an optional prefix (👀 the
 <<opt-p,`-p`{nbsp}option>>) for each codepoint, to the standard output.
 Additionally, jome can:
 
-* Copy the UTF-8 emoji or the Unicode codepoints to the clipboard. See
+* Copy the UTF-8 emoji or the Unicode codepoints to the 📋. 👀
   the <<opt-b,`-b`{nbsp}option>>.
 
-* Execute a custom command which receives the UTF-8 emoji or the Unicode
+* Execute a custom command which 📨 the UTF-8 emoji or the Unicode
   codepoints, with an optional prefix for each codepoint, as its
-  last argument(s). See the <<opt-c,`-c`{nbsp}option>>.
+  last argument(s). 👀 the <<opt-c,`-c`{nbsp}option>>.
 
 * Send the UTF-8 emoji or the Unicode codepoints, with an optional
   prefix for each codepoint, in response to a client which requested
-  picking an emoji. See the <<opt-s,`-s`{nbsp}option>>.
+  picking an emoji. 👀 the <<opt-s,`-s`{nbsp}option>>.
 
 If you close the 🪟 (you can 👇 **Escape** or **Ctrl**pass:[+]**C**
-to do this), then jome 🖨 nothing to the standard output
+to do this), then jome 🖨️ nothing to the standard output
 and executes nothing.
 
 If you don't start jome in <<server-mode,server mode>>
 (<<opt-s,`-s`{nbsp}option>>) and you don't specify the
-<<opt-q,`-q`{nbsp}option>>, then jome immediately quits after you accept
+<<opt-q,`-q`{nbsp}option>>, then jome immediately 👋 after you ✅
 an emoji or close the 🪟.
 
 
@@ -137,28 +137,28 @@ Emojis::
     All emojis (with an empty 🔍 box) or 🔍 results.
 +
 When there's at least 1️⃣ emoji, there's always a selected emoji with a
-🔴 box around it.
+🔲 box around it.
 +
-🖱 an emoji to accept it.
+🖱️ an emoji to ✅ it.
 +
 Hover an emoji to update the ⬇️ emoji info text temporarily.
 +
 Use the <<opt-d,`-d`{nbsp}option>> to make the background behind emojis
 dark.
 
-Category list::
-    List of available categories.
+Category 📜::
+    📜 of available categories.
 +
-When all emojis are 👁 (the 🔍 box is empty), 🖱 a category
+When all emojis are 👁️ (the 🔍 box is empty), 🖱️ a category
 name to scroll to this emoji category.
 +
 The first category, _Recent_, is a special category with the recently
-accepted emojis.
+✅ emojis.
 +
 Use the <<opt-H,`-H`{nbsp}option>> to override the maximum number
-of recently accepted emojis.
+of recently ✅ emojis.
 +
-Hide the whole category list with the <<opt-C,`-C`{nbsp}option>>.
+🙈 the whole category 📜 with the <<opt-C,`-C`{nbsp}option>>.
 
 Emoji info text (⬇️)::
     Name, Unicode codepoints, and Emoji version of the selected or
@@ -172,7 +172,7 @@ The power of jome is its <<find-box,🔍 box>>.
 
 When you launch jome, the 🔍 box is focused, and it should stay
 focused unless you browse emojis manually with the intention of
-accepting one with the 🖱.
+✅ one with the 🖱️.
 
 The format of a query is 1️⃣ of:
 
@@ -186,14 +186,14 @@ where:
     Partial name of categories in which to 🔍.
 
 `_TERMS_`::
-    Space-separated list of 🔍 terms.
+    Space-separated 📜 of 🔍 terms.
 +
 For an emoji to be part of the results, at least 1️⃣ of its keywords
 must contain _all_ the 🔍 terms.
 
 
 [[select]]
-=== Select and accept an emoji
+=== Select and ✅ an emoji
 
 To select an emoji, use the following ⌨️:
 
@@ -212,18 +212,18 @@ To select an emoji, use the following ⌨️:
 **End**::
     Go to the last emoji.
 
-[[accept-emoji]]To accept the selected emoji, 👇:
+[[accept-emoji]]To ✅ the selected emoji, 👇:
 
 **Enter**::
-    Accept the selected emoji with the default skin tone
+    ✅ the selected emoji with the default skin tone
     (if applicable).
 
 **F1**, **F2**, **F3**, **F4**, **F5**::
-    If the selected emoji supports skin tones, accept the selected
+    If the selected emoji supports skin tones, ✅ the selected
     emoji with a light, medium-light, medium, medium-dark, or dark
     skin tone.
 
-To cancel, 👇 **Escape** or **Ctrl**pass:[+]**C**, or close the 🪟.
+To ❌, 👇 **Escape** or **Ctrl**pass:[+]**C**, or close the 🪟.
 
 
 === Go to Emojipedia page
@@ -231,16 +231,16 @@ To cancel, 👇 **Escape** or **Ctrl**pass:[+]**C**, or close the 🪟.
 To go to the https://emojipedia.org/[Emojipedia] 🌐 of the
 <<select,selected>> emoji, 👇 **F12**.
 
-To go to the Emojipedia 🌐 of any emoji with the 🖱, right-click it and
+To go to the Emojipedia 🌐 of any emoji with the 🖱️, right-click it and
 click "`Go to Emojipedia page`".
 
 
-=== User-defined emoji keywords
+=== 👤-defined emoji keywords
 
-You can either replace or ➕ the built-in list of keywords which
+You can either replace or ➕ the built-in 📜 of keywords which
 jome searches when 🔍 emojis.
 
-To set user-defined keywords, create an `emojis.json` 📄 within:
+To set 👤-defined keywords, create an `emojis.json` 📄 within:
 
 [horizontal]
 On 🐧::
@@ -315,10 +315,10 @@ U+1f645 U+200d U+2642 U+fe0f
 ----
 
 |`-n`
-|Do not 🖨 a newline after 🖨 the emoji or codepoints.
+|Do not 🖨️ a newline after 🖨️ the emoji or codepoints.
 
 |[[opt-V]]`-V`
-|Do not 🖨
+|Do not 🖨️
 https://emojipedia.org/variation-selector-16[Variation Selector-16]
 (VS-16) codepoints.
 
@@ -329,12 +329,12 @@ predates Unicode emojis) followed with VS-16 becomes{nbsp}♥️.
 There are applications/fonts which don't like VS-16.
 
 |[[opt-c]]`-c _CMD_`
-|When you accept an emoji, execute command `_CMD_` 20{nbsp}ms
+|When you ✅ an emoji, execute command `_CMD_` 20{nbsp}ms
 _after_ closing the jome 🪟.
 
 jome interprets `_CMD_` like a 🐚 does, so you can have arguments too.
 
-`_CMD_` receives the UTF-8 emoji or the Unicode codepoints (depending on
+`_CMD_` 📨 the UTF-8 emoji or the Unicode codepoints (depending on
 the <<opt-f,`-f`{nbsp}option>>) with their optional prefix as its last
 argument(s).
 
@@ -346,7 +346,7 @@ $ jome -f cp -p U -c 'xdotool key --delay 20'
 ----
 
 |[[opt-b]]`-b`
-|When you accept an emoji, copy the UTF-8 emoji or the Unicode
+|When you ✅ an emoji, copy the UTF-8 emoji or the Unicode
 codepoints (depending on the <<opt-f,`-f`{nbsp}option>>) to the 📋.
 
 WARNING: This uses
@@ -354,26 +354,26 @@ https://doc.qt.io/qt-5/qclipboard.html[`QClipboard`] and is known
 not to always work, depending on your 🪟 🧑‍💼.
 
 |[[opt-q]]`-q`
-|Do not quit when you <<accept-emoji,accept>> an emoji.
+|Do not 👋 when you <<accept-emoji,✅>> an emoji.
 
-By default, when you accept an emoji (with the ⌨️ or with the 🖱), jome:
+By default, when you ✅ an emoji (with the ⌨️ or with the 🖱️), jome:
 
-. 🖨 the accepted emoji or its codepoints to the standard output.
-. Hides its 🪟.
-. **Optional**: Copies the accepted emoji/codepoints to the
-  clipboard (see the <<opt-b,`-b`{nbsp}option>>).
-. **Optional**: Executes a command (see the <<opt-c,`-c`{nbsp}option>>)
+. 🖨️ the ✅ emoji or its codepoints to the standard output.
+. 🙈 its 🪟.
+. **Optional**: Copies the ✅ emoji/codepoints to the
+  📋 (👀 the <<opt-b,`-b`{nbsp}option>>).
+. **Optional**: Executes a command (👀 the <<opt-c,`-c`{nbsp}option>>)
   after 20{nbsp}ms.
-. **If not running in server mode**, quits (see the
+. **If not running in server mode**, 👋 (👀 the
   <<opt-s,`-s`{nbsp}option>>).
 
-With the `-q`{nbsp}option, jome does not hide its 🪟 and does not quit
-when you accept an emoji so that you can make it 🖨 multiple emojis
-and/or execute a command multiple ⏲ with multiple emojis without
+With the `-q`{nbsp}option, jome does not 🙈 its 🪟 and does not 👋
+when you ✅ an emoji so that you can make it 🖨️ multiple emojis
+and/or execute a command multiple ⌚ with multiple emojis without
 restarting the application.
 
 You cannot specify the `-q` and <<opt-s,`-s`>>{nbsp}options at the
-same{nbsp}⏲.
+same{nbsp}⌚.
 
 |[[opt-s]]`-s _NAME_`
 |Start jome in <<server-mode,server mode>> and set the server name
@@ -383,13 +383,13 @@ On Unix, this creates the socket 📄 `/tmp/_NAME_` which must _not exist_
 before you start jome.
 
 You cannot specify the `-s` and <<opt-q,`-q`>>{nbsp}options at the
-same{nbsp}⏲.
+same{nbsp}⌚.
 
 |[[opt-d]]`-d`
-|Use a dark background for emojis.
+|Use a 🌚 background for emojis.
 
 |[[opt-C]]`-C`
-|Hide the category list.
+|🙈 the category 📜.
 
 |[[opt-w]]`-w _WIDTH_`
 |Set the width of individual emojis to `_WIDTH_`{nbsp}pixels, amongst
@@ -402,7 +402,7 @@ same{nbsp}⏲.
 The selection square doesn't flash by default.
 
 |[[opt-H]]`-H _COUNT_`
-|Set the maximum number of recently accepted emojis
+|Set the maximum number of recently ✅ emojis
 to{nbsp}``__COUNT__`` instead of 30.
 |===
 
@@ -411,8 +411,8 @@ to{nbsp}``__COUNT__`` instead of 30.
 === Server mode
 
 jome features a server mode to avoid creating a process (a Qt 🪟 can
-be quite long to create) every ⏲ you need to pick an emoji. With this
-mode, you can 👁 the jome 🪟 instantaneously.
+be quite long to create) every ⌚ you need to pick an emoji. With this
+mode, you can 👁️ the jome 🪟 instantaneously.
 
 To start jome in server mode, use the <<opt-s,`-s`{nbsp}option>> to
 specify the server name:
@@ -435,31 +435,31 @@ $ jome -s mein-server
 ----
 --
 
-When jome starts in server mode, it does not 👁 its 🪟. Instead,
-it ⌛ for a command sent by the client, `jome-ctl`. To 👁 the
+When jome starts in server mode, it does not 👁️ its 🪟. Instead,
+it ⌛ for a command sent by the client, `jome-ctl`. To 👁️ the
 🪟:
 
 ----
 $ jome-ctl mein-server
 ----
 
-When you <<accept-emoji,accept>> an emoji, `jome-ctl` 🖨 what jome
-also 🖨 to the standard output and quits with exit code 0️⃣.
+When you <<accept-emoji,✅>> an emoji, `jome-ctl` 🖨️ what jome
+also 🖨️ to the standard output and 👋 with exit code 0️⃣.
 Therefore, the output format of `jome-ctl` is 🎛 by the
 <<cl-options,options>> passed to `jome`.
 
-If you cancel jome (👇 **Escape** or **Ctrl**pass:[+]**C**, or
-close the 🪟), `jome-ctl` 🖨 nothing and returns with exit code 1️⃣.
+If you ❌ jome (👇 **Escape** or **Ctrl**pass:[+]**C**, or
+close the 🪟), `jome-ctl` 🖨️ nothing and returns with exit code 1️⃣.
 
-In server mode, jome does not quit once you accept an emoji or cancel:
-it hides the 🪟 and keeps 👂. To make it quit gracefully,
+In server mode, jome does not 👋 once you ✅ an emoji or ❌:
+it 🙈 the 🪟 and keeps 👂. To make it 👋 gracefully,
 which also removes the socket 📄:
 
 ----
 $ jome-ctl mein-server quit
 ----
 
-You don't need to use what `jome-ctl` 🖨 to the standard output. You can
+You don't need to use what `jome-ctl` 🖨️ to the standard output. You can
 use jome in server mode with the <<opt-c,`-c`{nbsp}option>> to make jome
 execute a command itself. For example:
 
@@ -475,9 +475,9 @@ $ jome-ctl mein-server
 ----
 
 
-== ⌨️ the accepted emoji
+== ⌨️ the ✅ emoji
 
-Here are Bash 📜 to ⌨️ the accepted emoji with
+Here are Bash 📜 to ⌨️ the ✅ emoji with
 https://www.semicomplete.com/projects/xdotool/[xdotool].
 
 
