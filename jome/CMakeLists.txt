@@ -20,6 +20,7 @@ FetchContent_Declare (nlohmann URL https://github.com/nlohmann/json/releases/dow
 FetchContent_MakeAvailable (nlohmann)
 
 # {fmt}
+set (FMT_INSTALL OFF)
 FetchContent_Declare (fmt URL https://github.com/fmtlib/fmt/releases/download/11.1.4/fmt-11.1.4.zip)
 FetchContent_MakeAvailable (fmt)
 
