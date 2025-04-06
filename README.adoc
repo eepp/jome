@@ -155,6 +155,8 @@ accepted emojis.
 +
 Use the <<opt-H,`-H`{nbsp}option>> to override the maximum number
 of recently accepted emojis.
++
+Hide the whole category list with the <<opt-C,`-C`{nbsp}option>>.
 
 Emoji info text (⬇️)::
     Name, Unicode codepoints, and Emoji version of the selected or
@@ -379,6 +381,9 @@ same{nbsp}⏲.
 
 |[[opt-d]]`-d`
 |Use a dark background for emojis.
+
+|[[opt-C]]`-C`
+|Hide the category list.
 
 |[[opt-w]]`-w _WIDTH_`
 |Set the width of individual emojis to `_WIDTH_`{nbsp}pixels, amongst
