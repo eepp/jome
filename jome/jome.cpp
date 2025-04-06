@@ -41,6 +41,7 @@ struct Params final
     std::string cpPrefix;
     jome::EmojiDb::EmojiSize emojiSize;
     boost::optional<unsigned int> selectedEmojiFlashPeriod;
+    unsigned int maxRecentEmojis;
 };
 
 namespace {
@@ -62,7 +63,8 @@ Params parseArgs(QApplication& app)
     const QCommandLineOption noHideOpt {"q", "Do not quit when accepting."};
     const QCommandLineOption darkBgOpt {"d", "Use dark emoji background."};
     const QCommandLineOption emojiWidthOpt {"w", "Set emoji width to <WIDTH> px (16, 24, 32, 40, or 48).", "WIDTH"};
-    const QCommandLineOption selectedEmojiFlashPeriod {"P", "Set selected emoji flashing period to <PERIOD> ms.", "PERIOD"};
+    const QCommandLineOption selectedEmojiFlashPeriodOpt {"P", "Set selected emoji flashing period to <PERIOD> ms.", "PERIOD"};
+    const QCommandLineOption maxRecentEmojisOpt {"H", "Set maximum number of recently accepted emojis to <COUNT>.", "COUNT"};
 
     parser.addOption(formatOpt);
     parser.addOption(serverNameOpt);
@@ -73,7 +75,8 @@ Params parseArgs(QApplication& app)
     parser.addOption(noHideOpt);
     parser.addOption(darkBgOpt);
     parser.addOption(emojiWidthOpt);
-    parser.addOption(selectedEmojiFlashPeriod);
+    parser.addOption(selectedEmojiFlashPeriodOpt);
+    parser.addOption(maxRecentEmojisOpt);
     parser.process(app);
 
     Params params;
@@ -135,9 +138,9 @@ Params parseArgs(QApplication& app)
         }
     }
 
-    if (parser.isSet(selectedEmojiFlashPeriod)) {
+    if (parser.isSet(selectedEmojiFlashPeriodOpt)) {
         bool ok;
-        const auto strVal = parser.value(selectedEmojiFlashPeriod);
+        const auto strVal = parser.value(selectedEmojiFlashPeriodOpt);
         const auto val = strVal.toUInt(&ok);
 
         if (!ok || val < 32) {
@@ -147,6 +150,22 @@ Params parseArgs(QApplication& app)
         }
 
         params.selectedEmojiFlashPeriod = val;
+    }
+
+    params.maxRecentEmojis = 30;
+
+    if (parser.isSet(maxRecentEmojisOpt)) {
+        bool ok;
+        const auto strVal = parser.value(maxRecentEmojisOpt);
+        const auto val = strVal.toUInt(&ok);
+
+        if (!ok || val < 1) {
+            std::cerr << "Command-line error: unexpected value for `-H`: `" <<
+                         strVal.toUtf8().constData() << "`.\n";
+            std::exit(1);
+        }
+
+        params.maxRecentEmojis = val;
     }
 
     return params;
@@ -222,10 +241,10 @@ int main(int argc, char **argv)
     app.setApplicationVersion(JOME_VERSION);
 
     const auto params = parseArgs(app);
-    jome::EmojiDb db {JOME_DATA_DIR, params.emojiSize};
+    jome::EmojiDb db {JOME_DATA_DIR, params.emojiSize, params.maxRecentEmojis};
     jome::QJomeWindow win {db, params.darkBg, params.selectedEmojiFlashPeriod};
 
-    QObject::connect(&win, &jome::QJomeWindow::canceled, [&app, &server]() {
+    QObject::connect(&win, &jome::QJomeWindow::canceled, [&app, &server, &db]() {
         if (server) {
             // reply to the client at least
             server->sendToClient("");
@@ -233,7 +252,8 @@ int main(int argc, char **argv)
 
         if (!server) {
             // TODO: make sure the message is sent before quitting
-            QTimer::singleShot(0, [&app]() {
+            QTimer::singleShot(0, [&app, &db]() {
+                jome::updateSettings(db);
                 app.exit(1);
             });
         }

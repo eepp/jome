@@ -152,7 +152,8 @@ public:
     };
 
 public:
-    explicit EmojiDb(const std::string& dir, EmojiSize emojiSize);
+    explicit EmojiDb(const std::string& dir, EmojiSize emojiSize,
+                     unsigned int maxRecentEmojis);
 
     void findEmojis(const std::string& cat, const std::string& needles,
                     std::vector<const Emoji *>& results) const;
@@ -231,6 +232,7 @@ private:
     mutable std::vector<std::string> _tmpNeedles;
     mutable std::unordered_set<const Emoji *> _tmpFoundEmojis;
     EmojiCat *_recentEmojisCat = nullptr;
+    unsigned int _maxRecentEmojis;
 };
 
 } // namespace jome

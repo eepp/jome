@@ -119,9 +119,11 @@ const std::string& EmojiCat::lcName() const
     return _lcName;
 }
 
-EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize) :
+EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize,
+                 const unsigned int maxRecentEmojis) :
     _emojiSize {emojiSize},
-    _emojisPngPath {fmt::format("{}/emojis-{}.png", dir, this->emojiSizeInt())}
+    _emojisPngPath {fmt::format("{}/emojis-{}.png", dir, this->emojiSizeInt())},
+    _maxRecentEmojis {maxRecentEmojis}
 {
     this->_createEmojis(dir);
     this->_createCats(dir);
@@ -465,6 +467,10 @@ void EmojiDb::recentEmojis(std::vector<const Emoji *>&& emojis)
 {
     assert(_recentEmojisCat);
     _recentEmojisCat->emojis() = std::move(emojis);
+
+    if (_recentEmojisCat->emojis().size() > _maxRecentEmojis) {
+        _recentEmojisCat->emojis().resize(_maxRecentEmojis);
+    }
 }
 
 void EmojiDb::addRecentEmoji(const Emoji& emoji)
@@ -485,10 +491,8 @@ void EmojiDb::addRecentEmoji(const Emoji& emoji)
 
     emojis.insert(emojis.begin(), &emoji);
 
-    static constexpr auto maxRecentEmojis = 30U;
-
-    if (emojis.size() > maxRecentEmojis) {
-        emojis.resize(maxRecentEmojis);
+    if (emojis.size() > _maxRecentEmojis) {
+        emojis.resize(_maxRecentEmojis);
     }
 }
 
