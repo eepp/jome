@@ -393,17 +393,17 @@ same{nbsp}⌚.
 
 |[[opt-w]]`-w _WIDTH_`
 |Set the width of individual emojis to `_WIDTH_`{nbsp}pixels, amongst
-16, 24, 32 (default), 40, or 48.
+16, 24, 32 (default), 40, or{nbsp}48.
 
 |[[opt-P]]`-P _PERIOD_`
-|Set the flashing period of the selection square to
-`_PERIOD_`{nbsp}ms (greater than or equal to 32).
+|Set the flashing period of the selection 🔲 to
+`_PERIOD_`{nbsp}ms (greater than or equal to{nbsp}32).
 
-The selection square doesn't flash by default.
+The selection 🔲 doesn't flash by default.
 
 |[[opt-H]]`-H _COUNT_`
 |Set the maximum number of recently ✅ emojis
-to{nbsp}``__COUNT__`` instead of 30.
+to{nbsp}``__COUNT__`` instead of{nbsp}30.
 |===
 
 
