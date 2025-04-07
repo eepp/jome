@@ -13,6 +13,7 @@
 #include <QScrollBar>
 #include <QListWidget>
 #include <QLabel>
+#include <QStringList>
 #include <QGraphicsTextItem>
 #include <QKeyEvent>
 #include <boost/algorithm/string.hpp>
@@ -493,19 +494,46 @@ void QJomeWindow::_updateBottomLabels(const Emoji * const emoji)
     this->_updateVersionLabel(emoji);
 }
 
+namespace {
+
+QString spanInfoLabelText(const std::string& text, const char * const hexColor,
+                          const char * const addStyle = "")
+{
+    return qFmtFormat("<span style=\"color: #{};{}\">{}</span>", hexColor, addStyle, text);
+}
+
+QString normInfoLabelText(const std::string& text, const char * const addStyle = "")
+{
+    return spanInfoLabelText(text, "707070", addStyle);
+}
+
+} // namespace
+
 void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
 {
     QString text;
 
     if (emoji) {
-        text += qFmtFormat("<b>{}</b> <span style=\"color: #999\">(", emoji->name().c_str());
+        text = qFmtFormat("<b>{}</b> ", emoji->name()) +
+               normInfoLabelText("(") +
+               call([emoji] {
+                   QStringList lst;
 
-        for (const auto codepoint : emoji->codepoints()) {
-            text += qFmtFormat("{:x}, ", codepoint);
-        }
+                   for (const auto codepoint : emoji->codepoints()) {
+                       static constexpr auto italicCss = "font-style: italic;";
 
-        text.truncate(text.size() - 2);
-        text += ")</span>";
+                           if (codepoint == 0x200d) {
+                               lst.append(normInfoLabelText("ZWJ", italicCss));
+                           } else if (codepoint == 0xfe0f) {
+                               lst.append(normInfoLabelText("VS-16", italicCss));
+                           } else {
+                               lst.append(spanInfoLabelText(fmt::format("U+{:X}", codepoint), "a0a0a0"));
+                           }
+                       }
+
+                   return lst;
+               }).join(normInfoLabelText(", ")) +
+               normInfoLabelText(")");
     }
 
     _wInfoLabel->setText(text);
