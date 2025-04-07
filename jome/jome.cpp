@@ -298,10 +298,10 @@ int main(int argc, char **argv)
     });
 
     QObject::connect(&win, &jome::QJomeWindow::emojiChosen,
-                     [&](const auto& emoji, const auto& skinTone) {
+                     [&](const auto& emoji, const auto& skinTone, const bool removeVs16) {
         const auto emojiStr = formatEmoji(emoji, skinTone, params.defSkinTone, params.fmt,
                                           params.cpPrefix, params.noNewline || params.cmd,
-                                          params.removeVs16);
+                                          removeVs16 || params.removeVs16);
 
         if (server) {
             // send response to client

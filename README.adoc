@@ -225,10 +225,30 @@ Without the <<opt-t,`-t`{nbsp}option>>:::
 With the `-t` option:::
     The default skin tone (value of `-t`).
 
-**F1**, **F2**, **F3**, **F4**, **F5**::
+**Shift**pass:[+]**Enter**::
+    Like **Enter**, but do not 🖨️
+    https://emojipedia.org/variation-selector-16[VS-16] codepoints.
++
+See the <<opt-V,`-V`{nbsp}option>> option.
+
+**F1**::
+**F2**::
+**F3**::
+**F4**::
+**F5**::
     If the selected emoji supports skin tones, ✅ the selected
     emoji with a light, medium-light, medium, medium-dark, or dark
     skin tone, overriding the <<opt-k,`-t`{nbsp}option>> (if any).
+
+**Shift**pass:[+]**F1**::
+**Shift**pass:[+]**F2**::
+**Shift**pass:[+]**F3**::
+**Shift**pass:[+]**F4**::
+**Shift**pass:[+]**F5**::
+    Like **F1** to **F5**, but do not 🖨️
+    https://emojipedia.org/variation-selector-16[VS-16] codepoints.
++
+See the <<opt-V,`-V`{nbsp}option>> option.
 
 To ❌, 👇 **Escape** or **Ctrl**pass:[+]**C**, or close the 🪟.
 

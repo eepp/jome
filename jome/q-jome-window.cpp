@@ -40,6 +40,7 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj, QEvent * const even
 
     const auto keyEvent = static_cast<const QKeyEvent *>(event);
     const bool withCtrl = keyEvent->modifiers() & Qt::ControlModifier;
+    const bool withShift = keyEvent->modifiers() & Qt::ShiftModifier;
 
     switch (keyEvent->key()) {
     case Qt::Key_Up:
@@ -59,23 +60,23 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj, QEvent * const even
         break;
 
     case Qt::Key_F1:
-        emit this->f1KeyPressed();
+        emit this->f1KeyPressed(withShift);
         break;
 
     case Qt::Key_F2:
-        emit this->f2KeyPressed();
+        emit this->f2KeyPressed(withShift);
         break;
 
     case Qt::Key_F3:
-        emit this->f3KeyPressed();
+        emit this->f3KeyPressed(withShift);
         break;
 
     case Qt::Key_F4:
-        emit this->f4KeyPressed();
+        emit this->f4KeyPressed(withShift);
         break;
 
     case Qt::Key_F5:
-        emit this->f5KeyPressed();
+        emit this->f5KeyPressed(withShift);
         break;
 
     case Qt::Key_F12:
@@ -100,7 +101,7 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj, QEvent * const even
 
     case Qt::Key_Enter:
     case Qt::Key_Return:
-        emit this->enterKeyPressed();
+        emit this->enterKeyPressed(withShift);
         break;
 
     case Qt::Key_Escape:
@@ -436,34 +437,34 @@ void QJomeWindow::_searchBoxEscapeKeyPressed()
     emit this->canceled();
 }
 
-void QJomeWindow::_searchBoxEnterKeyPressed()
+void QJomeWindow::_searchBoxEnterKeyPressed(const bool withShift)
 {
-    this->_acceptSelectedEmoji(boost::none);
+    this->_acceptSelectedEmoji(boost::none, withShift);
 }
 
-void QJomeWindow::_searchBoxF1KeyPressed()
+void QJomeWindow::_searchBoxF1KeyPressed(const bool withShift)
 {
-    this->_acceptSelectedEmoji(Emoji::SkinTone::Light);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::Light, withShift);
 }
 
-void QJomeWindow::_searchBoxF2KeyPressed()
+void QJomeWindow::_searchBoxF2KeyPressed(const bool withShift)
 {
-    this->_acceptSelectedEmoji(Emoji::SkinTone::MediumLight);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::MediumLight, withShift);
 }
 
-void QJomeWindow::_searchBoxF3KeyPressed()
+void QJomeWindow::_searchBoxF3KeyPressed(const bool withShift)
 {
-    this->_acceptSelectedEmoji(Emoji::SkinTone::Medium);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::Medium, withShift);
 }
 
-void QJomeWindow::_searchBoxF4KeyPressed()
+void QJomeWindow::_searchBoxF4KeyPressed(const bool withShift)
 {
-    this->_acceptSelectedEmoji(Emoji::SkinTone::MediumDark);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::MediumDark, withShift);
 }
 
-void QJomeWindow::_searchBoxF5KeyPressed()
+void QJomeWindow::_searchBoxF5KeyPressed(const bool withShift)
 {
-    this->_acceptSelectedEmoji(Emoji::SkinTone::Dark);
+    this->_acceptSelectedEmoji(Emoji::SkinTone::Dark, withShift);
 }
 
 void QJomeWindow::_searchBoxF12KeyPressed()
@@ -479,7 +480,7 @@ void QJomeWindow::_emojiSelectionChanged(const Emoji * const emoji)
 
 void QJomeWindow::_emojiClicked(const Emoji& emoji)
 {
-    this->_acceptEmoji(emoji, boost::none);
+    this->_acceptEmoji(emoji, boost::none, false);
 }
 
 void QJomeWindow::_emojiHoverEntered(const Emoji& emoji)
@@ -492,21 +493,23 @@ void QJomeWindow::_emojiHoverLeaved(const Emoji&)
     this->_updateBottomLabels(_selectedEmoji);
 }
 
-void QJomeWindow::_acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone)
+void QJomeWindow::_acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone,
+                                       const bool removeVs16)
 {
     if (_selectedEmoji) {
-        this->_acceptEmoji(*_selectedEmoji, skinTone);
+        this->_acceptEmoji(*_selectedEmoji, skinTone, removeVs16);
     }
 }
 
 void QJomeWindow::_acceptEmoji(const Emoji& emoji,
-                               const boost::optional<Emoji::SkinTone>& skinTone)
+                               const boost::optional<Emoji::SkinTone>& skinTone,
+                               const bool removeVs16)
 {
     if (skinTone && !emoji.hasSkinToneSupport()) {
         return;
     }
 
-    emit this->emojiChosen(emoji, skinTone);
+    emit this->emojiChosen(emoji, skinTone, removeVs16);
 }
 
 void QJomeWindow::_requestSelectedEmojiInfo()

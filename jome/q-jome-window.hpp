@@ -41,12 +41,12 @@ signals:
     void rightKeyPressed(bool withCtrl);
     void downKeyPressed();
     void leftKeyPressed(bool withCtrl);
-    void enterKeyPressed();
-    void f1KeyPressed();
-    void f2KeyPressed();
-    void f3KeyPressed();
-    void f4KeyPressed();
-    void f5KeyPressed();
+    void enterKeyPressed(bool withShift);
+    void f1KeyPressed(bool withShift);
+    void f2KeyPressed(bool withShift);
+    void f3KeyPressed(bool withShift);
+    void f4KeyPressed(bool withShift);
+    void f5KeyPressed(bool withShift);
     void f12KeyPressed();
     void pgUpKeyPressed();
     void pgDownKeyPressed();
@@ -65,7 +65,8 @@ public:
                          const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
 
 signals:
-    void emojiChosen(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone);
+    void emojiChosen(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone,
+                     bool removeVs16);
     void canceled();
 
 public slots:
@@ -83,8 +84,9 @@ private:
     void _updateVersionLabel(const Emoji *emoji);
     void _updateKwLabel(const Emoji *emoji);
     void _findEmojis(const std::string& cat, const std::string& needles);
-    void _acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone);
-    void _acceptEmoji(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone);
+    void _acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone, bool removeVs16);
+    void _acceptEmoji(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone,
+                      bool removeVs16);
     void _requestSelectedEmojiInfo();
     void _requestEmojiInfo(const Emoji& emoji);
 
@@ -96,12 +98,12 @@ private slots:
     void _searchBoxRightKeyPressed(bool withCtrl);
     void _searchBoxDownKeyPressed();
     void _searchBoxLeftKeyPressed(bool withCtrl);
-    void _searchBoxEnterKeyPressed();
-    void _searchBoxF1KeyPressed();
-    void _searchBoxF2KeyPressed();
-    void _searchBoxF3KeyPressed();
-    void _searchBoxF4KeyPressed();
-    void _searchBoxF5KeyPressed();
+    void _searchBoxEnterKeyPressed(bool withShift);
+    void _searchBoxF1KeyPressed(bool withShift);
+    void _searchBoxF2KeyPressed(bool withShift);
+    void _searchBoxF3KeyPressed(bool withShift);
+    void _searchBoxF4KeyPressed(bool withShift);
+    void _searchBoxF5KeyPressed(bool withShift);
     void _searchBoxF12KeyPressed();
     void _searchBoxPgUpKeyPressed();
     void _searchBoxPgDownKeyPressed();
