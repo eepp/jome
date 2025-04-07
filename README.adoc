@@ -217,13 +217,18 @@ To select an emoji, use the following ⌨️:
 [[accept-emoji]]To ✅ the selected emoji, 👇:
 
 **Enter**::
-    ✅ the selected emoji with the default skin tone
-    (if applicable).
+    ✅ the selected emoji with, if applicable:
+
+Without the <<opt-t,`-t`{nbsp}option>>:::
+    No skin tone (🟡).
+
+With the `-t` option:::
+    The default skin tone (value of `-t`).
 
 **F1**, **F2**, **F3**, **F4**, **F5**::
     If the selected emoji supports skin tones, ✅ the selected
     emoji with a light, medium-light, medium, medium-dark, or dark
-    skin tone.
+    skin tone, overriding the <<opt-k,`-t`{nbsp}option>> (if any).
 
 To ❌, 👇 **Escape** or **Ctrl**pass:[+]**C**, or close the 🪟.
 
@@ -329,6 +334,19 @@ should be displayed with emoji presentation. For example, ♥ (which
 predates Unicode emojis) followed with VS-16 becomes{nbsp}♥️.
 
 There are applications/fonts which don't like VS-16.
+
+|[[opt-t]]`-t _TONE_`
+|Set the default skin tone to `_TONE_` instead of none:
+
+[horizontal]
+`L`:: Light.
+`ML`:: Medium-light.
+`M`:: Medium.
+`MD`:: Medium-dark.
+`D`:: Dark.
+
+The **F1** to **F5** keys still <<accept-emoji,✅>> an emoji
+with a specific skin tone.
 
 |[[opt-c]]`-c _CMD_`
 |When you ✅ an emoji, execute command `_CMD_` 20{nbsp}ms

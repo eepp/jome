@@ -45,6 +45,7 @@ struct Params final
     bool removeVs16;
     bool noCatList;
     bool noKwList;
+    boost::optional<jome::Emoji::SkinTone> defSkinTone;
 };
 
 namespace {
@@ -61,6 +62,7 @@ Params parseArgs(QApplication& app)
     const QCommandLineOption cpPrefixOpt {"p", "Set codepoint prefix to <CPPREFIX>.", "CPPREFIX"};
     const QCommandLineOption noNlOpt {"n", "Do not output newline."};
     const QCommandLineOption removeVs16Opt {"V", "Remove VS-16 codepoints."};
+    const QCommandLineOption defSkinToneOpt {"t", "Set default skin tone to <TONE> (`L`, `ML`, `M`, `MD`, or `D`).", "TONE"};
     const QCommandLineOption cmdOpt {"c", "Execute external command <CMD> with accepted emoji.", "CMD"};
     const QCommandLineOption copyToClipboardOpt {"b", "Copy the accepted emoji to the clipboard."};
     const QCommandLineOption noHideOpt {"q", "Do not quit when accepting."};
@@ -86,6 +88,7 @@ Params parseArgs(QApplication& app)
     parser.addOption(removeVs16Opt);
     parser.addOption(noCatListOpt);
     parser.addOption(noKwListOpt);
+    parser.addOption(defSkinToneOpt);
     parser.process(app);
 
     Params params;
@@ -180,6 +183,26 @@ Params parseArgs(QApplication& app)
         params.maxRecentEmojis = val;
     }
 
+    if (parser.isSet(defSkinToneOpt)) {
+        const auto val = parser.value(defSkinToneOpt).toUpper();
+
+        if (val == "L") {
+            params.defSkinTone = jome::Emoji::SkinTone::Light;
+        } else if (val == "ML") {
+            params.defSkinTone = jome::Emoji::SkinTone::MediumLight;
+        } else if (val == "M") {
+            params.defSkinTone = jome::Emoji::SkinTone::Medium;
+        } else if (val == "MD") {
+            params.defSkinTone = jome::Emoji::SkinTone::MediumDark;
+        } else if (val == "D") {
+            params.defSkinTone = jome::Emoji::SkinTone::Dark;
+        } else {
+            std::cerr << "Command-line error: unexpected value for `-t`: `" <<
+                         parser.value(defSkinToneOpt).toUtf8().constData() << "`.\n";
+            std::exit(1);
+        }
+    }
+
     return params;
 }
 
@@ -189,16 +212,19 @@ void execCommand(const std::string& cmd, const std::string& arg)
 }
 
 std::string formatEmoji(const jome::Emoji& emoji,
-                        const boost::optional<jome::Emoji::SkinTone>& skinTone, const Format fmt,
+                        const boost::optional<jome::Emoji::SkinTone>& skinTone,
+                        const boost::optional<jome::Emoji::SkinTone>& defSkinTone,
+                        const Format fmt,
                         const std::string& cpPrefix, const bool noNl, const bool removeVs16)
 {
     std::string output;
+    const auto realSkinTone = skinTone ? skinTone : defSkinTone;
 
     switch (fmt) {
     case Format::Utf8:
     {
-        if (skinTone && emoji.hasSkinToneSupport()) {
-            output = emoji.str(*skinTone, !removeVs16);
+        if (realSkinTone && emoji.hasSkinToneSupport()) {
+            output = emoji.str(*realSkinTone, !removeVs16);
         } else {
             output = emoji.str(boost::none, !removeVs16);
         }
@@ -208,9 +234,9 @@ std::string formatEmoji(const jome::Emoji& emoji,
 
     case Format::CodepointsHex:
     {
-        const auto codepoints = jome::call([skinTone, &emoji, &removeVs16] {
-            if (skinTone && emoji.hasSkinToneSupport()) {
-                return emoji.codepoints(*skinTone, !removeVs16);
+        const auto codepoints = jome::call([realSkinTone, &emoji, &removeVs16] {
+            if (realSkinTone && emoji.hasSkinToneSupport()) {
+                return emoji.codepoints(*realSkinTone, !removeVs16);
             } else {
                 return emoji.codepoints(boost::none, !removeVs16);
             }
@@ -273,8 +299,9 @@ int main(int argc, char **argv)
 
     QObject::connect(&win, &jome::QJomeWindow::emojiChosen,
                      [&](const auto& emoji, const auto& skinTone) {
-        const auto emojiStr = formatEmoji(emoji, skinTone, params.fmt, params.cpPrefix,
-                                          params.noNewline || params.cmd, params.removeVs16);
+        const auto emojiStr = formatEmoji(emoji, skinTone, params.defSkinTone, params.fmt,
+                                          params.cpPrefix, params.noNewline || params.cmd,
+                                          params.removeVs16);
 
         if (server) {
             // send response to client
