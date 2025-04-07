@@ -61,7 +61,7 @@ Params parseArgs(QApplication& app)
     const QCommandLineOption formatOpt {"f", "Set output format to <FORMAT> (`utf-8` or `cp`)", "FORMAT", "utf-8"};
     const QCommandLineOption cpPrefixOpt {"p", "Set codepoint prefix to <CPPREFIX>.", "CPPREFIX"};
     const QCommandLineOption noNlOpt {"n", "Do not output newline."};
-    const QCommandLineOption removeVs16Opt {"V", "Remove VS-16 codepoints."};
+    const QCommandLineOption removeVs16Opt {"V", "Do not output VS-16 codepoints."};
     const QCommandLineOption defSkinToneOpt {"t", "Set default skin tone to <TONE> (`L`, `ML`, `M`, `MD`, or `D`).", "TONE"};
     const QCommandLineOption cmdOpt {"c", "Execute external command <CMD> with accepted emoji.", "CMD"};
     const QCommandLineOption copyToClipboardOpt {"b", "Copy the accepted emoji to the clipboard."};
