@@ -75,20 +75,20 @@ Params parseArgs(QApplication& app)
     const QCommandLineOption maxRecentEmojisOpt {"H", "Set maximum number of recently accepted emojis to <COUNT>.", "COUNT"};
 
     parser.addOption(formatOpt);
-    parser.addOption(serverNameOpt);
-    parser.addOption(cmdOpt);
-    parser.addOption(copyToClipboardOpt);
     parser.addOption(cpPrefixOpt);
     parser.addOption(noNlOpt);
+    parser.addOption(removeVs16Opt);
+    parser.addOption(defSkinToneOpt);
+    parser.addOption(cmdOpt);
+    parser.addOption(copyToClipboardOpt);
     parser.addOption(noHideOpt);
+    parser.addOption(serverNameOpt);
     parser.addOption(darkBgOpt);
+    parser.addOption(noCatListOpt);
+    parser.addOption(noKwListOpt);
     parser.addOption(emojiWidthOpt);
     parser.addOption(selectedEmojiFlashPeriodOpt);
     parser.addOption(maxRecentEmojisOpt);
-    parser.addOption(removeVs16Opt);
-    parser.addOption(noCatListOpt);
-    parser.addOption(noKwListOpt);
-    parser.addOption(defSkinToneOpt);
     parser.process(app);
 
     Params params;
