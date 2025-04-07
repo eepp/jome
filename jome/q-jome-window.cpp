@@ -300,7 +300,7 @@ void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool n
         infoHbox->addWidget(_wInfoLabel);
         _wVersionLabel = new QLabel {""};
         setQLabelFgColor(*_wVersionLabel, "#2ecc71");
-        _wVersionLabel->setFixedWidth(80);
+        _wVersionLabel->setFixedWidth(150);
         _wVersionLabel->setAlignment(Qt::AlignRight);
         infoHbox->addWidget(_wVersionLabel);
         mainVbox->addLayout(infoHbox);
@@ -582,61 +582,111 @@ void QJomeWindow::_updateVersionLabel(const Emoji * const emoji)
         QString text;
 
         if (emoji) {
-            text += "Emoji <b>";
+            text += QString {"Emoji <b>"} +
+                    call([emoji] {
+                        switch (emoji->version()) {
+                        case EmojiVersion::V_0_6:
+                            return "0.6&nbsp;";
 
-            text += call([emoji] {
-                switch (emoji->version()) {
-                case EmojiVersion::V_0_6:
-                    return "0.6";
+                        case EmojiVersion::V_0_7:
+                            return "0.7&nbsp;";
 
-                case EmojiVersion::V_0_7:
-                    return "0.7";
+                        case EmojiVersion::V_1_0:
+                            return "1.0&nbsp;";
 
-                case EmojiVersion::V_1_0:
-                    return "1.0";
+                        case EmojiVersion::V_2_0:
+                            return "2.0&nbsp;";
 
-                case EmojiVersion::V_2_0:
-                    return "2.0";
+                        case EmojiVersion::V_3_0:
+                            return "3.0&nbsp;";
 
-                case EmojiVersion::V_3_0:
-                    return "3.0";
+                        case EmojiVersion::V_4_0:
+                            return "4.0&nbsp;";
 
-                case EmojiVersion::V_4_0:
-                    return "4.0";
+                        case EmojiVersion::V_5_0:
+                            return "5.0&nbsp;";
 
-                case EmojiVersion::V_5_0:
-                    return "5.0";
+                        case EmojiVersion::V_11_0:
+                            return "11.0";
 
-                case EmojiVersion::V_11_0:
-                    return "11.0";
+                        case EmojiVersion::V_12_0:
+                            return "12.0";
 
-                case EmojiVersion::V_12_0:
-                    return "12.0";
+                        case EmojiVersion::V_12_1:
+                            return "12.1";
 
-                case EmojiVersion::V_12_1:
-                    return "12.1";
+                        case EmojiVersion::V_13_0:
+                            return "13.0";
 
-                case EmojiVersion::V_13_0:
-                    return "13.0";
+                        case EmojiVersion::V_13_1:
+                            return "13.1";
 
-                case EmojiVersion::V_13_1:
-                    return "13.1";
+                        case EmojiVersion::V_14_0:
+                            return "14.0";
 
-                case EmojiVersion::V_14_0:
-                    return "14.0";
+                        case EmojiVersion::V_15_0:
+                            return "15.0";
 
-                case EmojiVersion::V_15_0:
-                    return "15.0";
+                        case EmojiVersion::V_15_1:
+                            return "15.1";
 
-                case EmojiVersion::V_15_1:
-                    return "15.1";
+                        default:
+                            std::abort();
+                        }
+                    }) +
+                    "</b>&nbsp;(<i>" +
+                    call([emoji] {
+                        switch (emoji->version()) {
+                        case EmojiVersion::V_0_6:
+                            return "Oct 2010";
 
-                default:
-                    std::abort();
-                }
-            });
+                        case EmojiVersion::V_0_7:
+                            return "Jun 2014";
 
-            text += "</b>";
+                        case EmojiVersion::V_1_0:
+                            return "Aug 2015";
+
+                        case EmojiVersion::V_2_0:
+                            return "Nov 2015";
+
+                        case EmojiVersion::V_3_0:
+                            return "Jun 2016";
+
+                        case EmojiVersion::V_4_0:
+                            return "Nov 2016";
+
+                        case EmojiVersion::V_5_0:
+                            return "May 2017";
+
+                        case EmojiVersion::V_11_0:
+                            return "Jun 2018";
+
+                        case EmojiVersion::V_12_0:
+                            return "Mar 2019";
+
+                        case EmojiVersion::V_12_1:
+                            return "Oct 2019";
+
+                        case EmojiVersion::V_13_0:
+                            return "Mar 2020";
+
+                        case EmojiVersion::V_13_1:
+                            return "Sep 2020";
+
+                        case EmojiVersion::V_14_0:
+                            return "Sep 2021";
+
+                        case EmojiVersion::V_15_0:
+                            return "Sep 2022";
+
+                        case EmojiVersion::V_15_1:
+                            return "Sep 2023";
+
+                        default:
+                            std::abort();
+                        }
+                    }) +
+                    "</i>)";
         }
 
         return text;
