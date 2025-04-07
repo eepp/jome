@@ -11,7 +11,7 @@ endif::env-github[]
 
 = jome 😏
 Philippe Proulx <eepp.ca>
-5 April 2025
+7 April 2025
 
 **jome** (_joh_·_mee_) is a ⌨️ centric emoji picker 🖥️ application.
 
@@ -161,8 +161,10 @@ of recently ✅ emojis.
 🙈 the whole category 📜 with the <<opt-C,`-C`{nbsp}option>>.
 
 Emoji info text (⬇️)::
-    Name, Unicode codepoints, and Emoji version of the selected or
-    hovered emoji.
+    Name, Unicode codepoints, Emoji standard version, and keywords of the
+    selected or hovered emoji.
++
+🙈 the keyword list 📜 with the <<opt-k,`-k`{nbsp}option>>.
 
 
 [[find-emojis]]
@@ -390,6 +392,9 @@ same{nbsp}⌚.
 
 |[[opt-C]]`-C`
 |🙈 the category 📜.
+
+|[[opt-k]]`-k`
+|🙈 the keyword 📜.
 
 |[[opt-w]]`-w _WIDTH_`
 |Set the width of individual emojis to `_WIDTH_`{nbsp}pixels, amongst

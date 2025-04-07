@@ -61,7 +61,7 @@ class QJomeWindow final :
     Q_OBJECT
 
 public:
-    explicit QJomeWindow(const EmojiDb& emojiDb, bool darkBg, bool noCatList,
+    explicit QJomeWindow(const EmojiDb& emojiDb, bool darkBg, bool noCatList, bool noKwList,
                          const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
 
 signals:
@@ -75,12 +75,13 @@ private:
     void closeEvent(QCloseEvent *event) override;
     void showEvent(QShowEvent *event) override;
     void _setMainStyleSheet();
-    void _buildUi(bool darkBg, const bool noCatList,
+    void _buildUi(bool darkBg, bool noCatList, bool noKwList,
                   const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
     QListWidget *_createCatListWidget();
     void _updateBottomLabels(const Emoji *emoji);
     void _updateInfoLabel(const Emoji *emoji);
     void _updateVersionLabel(const Emoji *emoji);
+    void _updateKwLabel(const Emoji *emoji);
     void _findEmojis(const std::string& cat, const std::string& needles);
     void _acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone);
     void _acceptEmoji(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone);
@@ -118,6 +119,7 @@ private:
     QListWidget *_wCatList = nullptr;
     QLabel *_wInfoLabel = nullptr;
     QLabel *_wVersionLabel = nullptr;
+    QLabel *_wKwLabel = nullptr;
     QLineEdit *_wSearchBox = nullptr;
     bool _emojisWidgetBuilt = false;
     const Emoji *_selectedEmoji = nullptr;

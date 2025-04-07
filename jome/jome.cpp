@@ -44,6 +44,7 @@ struct Params final
     unsigned int maxRecentEmojis;
     bool removeVs16;
     bool noCatList;
+    bool noKwList;
 };
 
 namespace {
@@ -69,6 +70,7 @@ Params parseArgs(QApplication& app)
     const QCommandLineOption maxRecentEmojisOpt {"H", "Set maximum number of recently accepted emojis to <COUNT>.", "COUNT"};
     const QCommandLineOption removeVs16Opt {"V", "Remove VS-16 codepoints."};
     const QCommandLineOption noCatListOpt {"C", "Hide category list."};
+    const QCommandLineOption noKwListOpt {"k", "Hide keyword list."};
 
     parser.addOption(formatOpt);
     parser.addOption(serverNameOpt);
@@ -83,6 +85,7 @@ Params parseArgs(QApplication& app)
     parser.addOption(maxRecentEmojisOpt);
     parser.addOption(removeVs16Opt);
     parser.addOption(noCatListOpt);
+    parser.addOption(noKwListOpt);
     parser.process(app);
 
     Params params;
@@ -93,6 +96,7 @@ Params parseArgs(QApplication& app)
     params.copyToClipboard = parser.isSet(copyToClipboardOpt);
     params.removeVs16 = parser.isSet(removeVs16Opt);
     params.noCatList = parser.isSet(noCatListOpt);
+    params.noKwList = parser.isSet(noKwListOpt);
 
     {
         const auto fmt = parser.value(formatOpt);
@@ -250,7 +254,7 @@ int main(int argc, char **argv)
 
     const auto params = parseArgs(app);
     jome::EmojiDb db {JOME_DATA_DIR, params.emojiSize, params.maxRecentEmojis};
-    jome::QJomeWindow win {db, params.darkBg, params.noCatList, params.selectedEmojiFlashPeriod};
+    jome::QJomeWindow win {db, params.darkBg, params.noCatList, params.noKwList, params.selectedEmojiFlashPeriod};
 
     QObject::connect(&win, &jome::QJomeWindow::canceled, [&app, &server, &db]() {
         if (server) {

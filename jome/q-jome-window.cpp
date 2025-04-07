@@ -16,6 +16,7 @@
 #include <QStringList>
 #include <QGraphicsTextItem>
 #include <QKeyEvent>
+#include <QPalette>
 #include <boost/algorithm/string.hpp>
 #include <boost/optional/optional.hpp>
 
@@ -123,6 +124,7 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj, QEvent * const even
 }
 
 QJomeWindow::QJomeWindow(const EmojiDb& emojiDb, const bool darkBg, const bool noCatList,
+                         const bool noKwList,
                          const boost::optional<unsigned int>& selectedEmojiFlashPeriod) :
     _emojiDb {&emojiDb}
 {
@@ -130,7 +132,7 @@ QJomeWindow::QJomeWindow(const EmojiDb& emojiDb, const bool darkBg, const bool n
     this->setWindowTitle("jome");
     this->resize(800, 600);
     this->_setMainStyleSheet();
-    this->_buildUi(darkBg, noCatList, selectedEmojiFlashPeriod);
+    this->_buildUi(darkBg, noCatList, noKwList, selectedEmojiFlashPeriod);
 }
 
 void QJomeWindow::_setMainStyleSheet()
@@ -175,9 +177,6 @@ void QJomeWindow::_setMainStyleSheet()
         "QScrollBar::add-line:vertical,"
         "QScrollBar::sub-line:vertical {"
         "  height: 0;"
-        "}"
-        "QLabel {"
-        "  color: #ff3366;"
         "}";
 
     this->setStyleSheet(styleSheet);
@@ -200,7 +199,19 @@ QListWidget *QJomeWindow::_createCatListWidget()
     return listWidget;
 }
 
-void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList,
+namespace {
+
+void setQLabelFgColor(QLabel& widget, const QColor& color)
+{
+    auto palette = widget.palette();
+
+    palette.setColor(QPalette::WindowText, color);
+    widget.setPalette(palette);
+}
+
+} // namespace
+
+void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool noKwList,
                            const boost::optional<unsigned int>& selectedEmojiFlashPeriod)
 {
     _wSearchBox = new QLineEdit;
@@ -280,15 +291,32 @@ void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList,
         this->setCentralWidget(centralWidget);
     }
 
-    const auto infoHbox = new QHBoxLayout;
+    {
+        const auto infoHbox = new QHBoxLayout;
 
-    _wInfoLabel = new QLabel {""};
-    infoHbox->addWidget(_wInfoLabel);
-    _wVersionLabel = new QLabel {""};
-    _wVersionLabel->setFixedWidth(80);
-    _wVersionLabel->setAlignment(Qt::AlignRight);
-    infoHbox->addWidget(_wVersionLabel);
-    mainVbox->addLayout(infoHbox);
+        _wInfoLabel = new QLabel {""};
+        setQLabelFgColor(*_wInfoLabel, "#ff3366");
+        infoHbox->addWidget(_wInfoLabel);
+        _wVersionLabel = new QLabel {""};
+        setQLabelFgColor(*_wVersionLabel, "#2ecc71");
+        _wVersionLabel->setFixedWidth(80);
+        _wVersionLabel->setAlignment(Qt::AlignRight);
+        infoHbox->addWidget(_wVersionLabel);
+        mainVbox->addLayout(infoHbox);
+    }
+
+    {
+        _wKwLabel = new QLabel {""};
+        setQLabelFgColor(*_wKwLabel, "#f39c12");
+        _wKwLabel->setWordWrap(false);
+        _wKwLabel->setTextInteractionFlags(Qt::NoTextInteraction);
+        _wKwLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
+        mainVbox->addWidget(_wKwLabel);
+
+        if (noKwList) {
+            _wKwLabel->hide();
+        }
+    }
 }
 
 void QJomeWindow::showEvent(QShowEvent * const event)
@@ -497,6 +525,7 @@ void QJomeWindow::_updateBottomLabels(const Emoji * const emoji)
 {
     this->_updateInfoLabel(emoji);
     this->_updateVersionLabel(emoji);
+    this->_updateKwLabel(emoji);
 }
 
 namespace {
@@ -550,7 +579,7 @@ void QJomeWindow::_updateVersionLabel(const Emoji * const emoji)
         QString text;
 
         if (emoji) {
-            text += "<span style=\"color: #2ecc71\">Emoji <b>";
+            text += "Emoji <b>";
 
             text += call([emoji] {
                 switch (emoji->version()) {
@@ -604,11 +633,30 @@ void QJomeWindow::_updateVersionLabel(const Emoji * const emoji)
                 }
             });
 
-            text += "</b></span>";
+            text += "</b>";
         }
 
         return text;
     }));
+}
+
+void QJomeWindow::_updateKwLabel(const Emoji * const emoji)
+{
+
+    QString text;
+
+    if (emoji) {
+        QStringList kws;
+
+        for (auto& kw : emoji->keywords()) {
+            kws.append(QString::fromStdString(kw));
+        }
+
+        kws.sort();
+        text = kws.join(normInfoLabelText(", "));
+    }
+
+    _wKwLabel->setText(text);
 }
 
 void QJomeWindow::emojiDbChanged()
