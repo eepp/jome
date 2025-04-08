@@ -23,6 +23,11 @@ install (
         sel-32.png
         sel-40.png
         sel-48.png
+        sel-dark-16.png
+        sel-dark-24.png
+        sel-dark-32.png
+        sel-dark-40.png
+        sel-dark-48.png
     DESTINATION
         share/jome/data
 )

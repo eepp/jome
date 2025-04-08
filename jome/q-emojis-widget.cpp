@@ -85,7 +85,8 @@ QGraphicsPixmapItem *QEmojisWidget::_createSelectedGraphicsItem()
 {
     auto graphicsItem = new QGraphicsPixmapItem {
         QPixmap::fromImage(QImage {
-            qFmtFormat("{}/sel-{}.png", JOME_DATA_DIR, _emojiDb->emojiSizeInt())
+            qFmtFormat("{}/sel{}-{}.png", JOME_DATA_DIR, _darkBg ? "-dark" : "",
+                       _emojiDb->emojiSizeInt())
         })
     };
 
