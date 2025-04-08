@@ -1,0 +1,540 @@
+= vlttng(1)
+:revdate: 8 April 2025
+:docdate: {revdate}
+:doctype: manpage
+:manmanual: JOME
+:mansource: JOME
+:man-linkstyle: bold
+
+== Name
+
+jome - a keyboard centric desktop emoji picker
+
+== Synopsis
+
+[verse]
+**jome** [**-f** `cp` [**-p** __PREFIX__]] [**-n**] [**-V**] [**-t** (**L** | **ML** | **M** | **MD** | **D**)]
+     [**-c** __CMD__] [**-b**] [**-q** | **-s** __NAME__]
+     [**-d**] [**-C**] [**-L**] [**-R**] [**-k**]
+     [**-w** (**16** | **24** | **32** | **40** | **48**)] [**-P**] [**-H** __COUNT__]
+
+== Description
+
+**jome** (joh·mee) is a keyboard centric emoji picker desktop
+application.
+
+jome's sole purpose is to help you _pick_ an emoji. In other words,
+it doesn't really care what you do with the chosen emoji afterwards:
+you can leverage tools such as **xdotool**(1) to "`type`" it or
+**xsel**(1) to copy it to the clipboard. See the
+"`Type the accepted emoji`" section below and the **-c**{nbsp}option for
+a starting point.
+
+When you accept an emoji (with the keyboard or with the mouse), jome
+prints the UTF-8 emoji or the Unicode codepoints (see the **-f**
+option), with an optional prefix (see the **-p**{nbsp}option) for each
+codepoint, to the standard output.
+
+Additionally, jome can:
+
+* Copy the UTF-8 emoji or the Unicode codepoints to the clipboard.
++
+See the **-b**{nbsp}option.
+
+* Execute a custom command which sends the UTF-8 emoji or the Unicode
+  codepoints, with an optional prefix for each codepoint, as its last
+  argument(s).
++
+See the **-c**{nbsp}option.
+
+* Send the UTF-8 emoji or the Unicode codepoints, with an optional
+  prefix for each codepoint, in response to a client which requested
+  picking an emoji.
++
+See the "`Server mode`" section below.
+
+If you close the window (you can press **Escape** or **Ctrl**+**C** to
+do this), then jome prints nothing to the standard output, executes
+nothing, and exits with status{nbsp}1.
+
+If you don't start jome in server mode (**-s**{nbsp}option) and you
+don't specify the **-q**{nbsp}option, then jome immediately exits
+with status{nbsp}0 after you accept an emoji or close the window.
+
+=== Graphical interface
+
+There are four sections:
+
+Find box (top)::
+    Input box where you can type a query to find emojis.
+
+Emoji grid::
+    All emojis (with an empty find box) or find results.
++
+When there's at least one emoji, there's always a selected emoji with a
+square box around it.
++
+Click an emoji to accept it. Press **Shift** when clicking to not print
+VS-16 codepoints (see the **-V**{nbsp}option).
++
+Hover an emoji to update the bottom emoji info text temporarily.
++
+Make the background behind emojis dark with the **-d**{nbsp}option.
++
+Hide the category labels with the **-L**{nbsp}option.
++
+Hide the "`Recent`" category with the **-R**{nbsp}option.
+
+Category list (right)::
+    List of available categories.
++
+When all emojis are viewed (the find box is empty), click a category
+name to scroll to this emoji category.
++
+The first category, "`Recent`", is a special category with the recently
+accepted emojis.
++
+Override the maximum number of recently accepted emojis with
+the **-H**{nbsp}option.
++
+Hide the "`Recent`" category with the **-R**{nbsp}option.
++
+Hide the whole category list with the **-C**{nbsp}option.
+
+Emoji info text (bottom)::
+    Name, Unicode codepoints, Emoji standard version, and keywords of
+    the selected or hovered emoji.
++
+Hide the keyword list with the **-k**{nbsp}option.
+
+=== Find emojis
+
+The power of jome is its _find box_ (top).
+
+When you launch jome, the find box is focused, and it should stay
+focused unless you browse emojis manually with the intention of
+accepting one with the mouse.
+
+The format of a query is one of:
+
+* __TERMS__
+* __CAT__/
+* __CAT__/__TERMS__
+
+where:
+
+__CAT__::
+    Partial name of categories in which to find.
+
+__TERMS__::
+    Space-separated list of search terms.
++
+For an emoji to be part of the results, at least one of its keywords
+must contain ALL the searched terms.
+
+=== Select and accept an emoji
+
+To select an emoji, use the following keys:
+
+**←**, **→**, **↑**, **↓**::
+    Go left/right/up/down.
+
+**Ctrl**pass:[+]**←**, **Ctrl**pass:[+]**→**::
+    Go left/right five emojis.
+
+**Page ↑**, **Page ↓**::
+    Go up/down ten rows.
+
+**Home**::
+    Go to the first emoji.
+
+**End**::
+    Go to the last emoji.
+
+To accept the selected emoji, press:
+
+**Enter**::
+    Accept the selected emoji with, if applicable:
+
+Without the **-t** option:::
+    No skin tone ("`yellow`").
+
+With the **-t** option:::
+    The default skin tone (value of **-t**).
+
+**Shift**pass:[+]**Enter**::
+    Like **Enter**, but do not print VS-16 codepoints.
++
+See the **-V** option option.
+
+**F1** to **F5**::
+    If the selected emoji supports skin tones, accept the selected emoji
+    with a light, medium-light, medium, medium-dark, or dark skin tone,
+    overriding the **-t** option (if any).
+
+**Shift**pass:[+]**F1** to **Shift**pass:[+]**F5**::
+    Like **F1** to **F5**, but do not print VS-16 codepoints.
++
+See the **-V** option option.
+
+To cancel, press **Escape** or **Ctrl**pass:[+]**C**, or close the
+window.
+
+=== Go to Emojipedia page
+
+To go to the https://emojipedia.org/[Emojipedia] page of the selected
+emoji, press **F12**.
+
+To go to the Emojipedia page of any emoji with the mouse, right-click it
+and click "`Go to Emojipedia page`".
+
+=== User-defined emoji keywords
+
+You can either replace or augment the built-in list of keywords which
+jome searches when you find emojis.
+
+To set user-defined keywords, create an **emojis.json** file within
+**pass:[~]/.config/jome/**.
+
+**emojis.json** must contain a JSON object where keys are emojis and
+values are objects. Each value may contain one of:
+
+**keywords**::
+    An array of keywords which replaces the built-in keywords entirely
+    for this emoji.
+
+**extra-keywords**::
+    An array of keywords which augments either the built-in keywords or
+    the keywords of the keywords entry for this emoji.
+
+Example:
+
+[source,json]
+----
+{
+  "🍁": {
+    "extra-keywords": ["canada", "laurentides"]
+  },
+  "😃": {
+    "keywords": ["yay", "hourra"]
+  },
+  "🚬": {
+    "extra-keywords": ["claude poirier"]
+  },
+  "🫚": {
+    "extra-keywords": ["canada dry", "martin deschamps"]
+  }
+}
+----
+
+=== Server mode
+
+jome features a server mode to avoid creating a process (a Qt window can
+be quite long to create) every time you need to pick an emoji. With this
+mode, you can view the jome window instantaneously.
+
+To start jome in server mode, use the **-s**{nbsp}option to specify the
+server name:
+
+----
+$ jome -s mein-server
+----
+
+This creates a local server named **mein-server**. On Unix, it creates
+the socket file **/tmp/mein-server**.
+
+[IMPORTANT]
+====
+On Unix, the server mode won't work if the socket file
+already exists. Remove the file before you start jome in server mode:
+
+----
+$ rm -f /tmp/mein-server
+$ jome -s mein-server
+----
+====
+
+When jome starts in server mode, it doesn't show its window. Instead,
+it waits for a command sent by the client, **jome-ctl**(1). To show the
+window:
+
+----
+$ jome-ctl mein-server
+----
+
+When you accept an emoji, **jome-ctl**(1) prints what jome also prints
+to the standard output and quits with exit code{nbsp}0. Therefore, the
+options passed to **jome**(1) control the output
+format of **jome-ctl**(1).
+
+If you cancel jome (press **Escape** or **Ctrl**+**C**, or close the
+window), **jome-ctl**(1) prints nothing and returns with exit
+code{nbsp}1.
+
+In server mode, jome doesn't quit once you accept an emoji or cancel: it
+hides the window and keeps listening. To make it quits gracefully, which
+also removes the socket file:
+
+----
+$ jome-ctl mein-server quit
+----
+
+You don't need to use what **jome-ctl**(1) prints to the standard
+output. You can use jome in server mode with the **-c**{nbsp}option to
+make jome execute a command itself. For example:
+
+----
+$ rm -f /tmp/mein-server
+$ jome -s mein-server -c 'xdotool type'
+----
+
+Then, bind a keyboard shortcut to:
+
+----
+$ jome-ctl mein-server
+----
+
+=== Type the accepted emoji
+
+Here are Bash scripts to type the accepted emoji with **xdotool**(1).
+
+Direct mode:: {empty}
+
+With **xdotool key**::: {empty}
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+codepoints=$(jome -f cp -p U)
+
+if (($? != 0)); then
+    exit 1
+fi
+
+xdotool key --delay 20 "$codepoints"
+----
+
+With **xdotool type**::: {empty}
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+emoji=$(jome)
+
+if (($? != 0)); then
+    exit 1
+fi
+
+xdotool type "$emoji"
+----
+
+Server mode:: {empty}
+
+With **xdotool key**::: {empty}
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+socket_name=jome.socket.$(id -u)
+
+if [[ ! -e "/tmp/$socket_name" ]]; then
+    jome -s "$socket_name" -n -w48 -f cp -p U & disown
+
+    until [[ -e "/tmp/$socket_name" ]]; do
+        sleep .1
+    done
+fi
+
+codepoints=$(jome-ctl "$socket_name")
+
+if (($? == 0)); then
+    sleep .02
+    xdotool key --delay 20 "$codepoints"
+fi
+----
+
+With **xdotool type**::: {empty}
++
+----
+#!/usr/bin/bash
+
+socket_name=jome.socket.$(id -u)
+
+if [[ ! -e "/tmp/$socket_name" ]]; then
+    jome -s "$socket_name" -n -w48 & disown
+
+    until [[ -e "/tmp/$socket_name" ]]; do
+        sleep .1
+    done
+fi
+
+emoji=$(jome-ctl "$socket_name")
+
+if (($? == 0)); then
+    sleep .02
+    xdotool type "$emoji"
+fi
+----
+
+== Options
+
+=== Output
+
+**-f** __FMT__::
+    Set the output format to __FMT__:
+
+**utf-8** (default):::
+    UTF-8 emoji.
+
+**cp**:::
+    Space-separated Unicode codepoints (hexadecimal).
++
+Example: **1f645 200d 2642 fe0f**
++
+Prepend a prefix to each codepoint with the **-p**{nbsp}option.
+
+**-p** __PREFIX__::
+    Set the prefix to be prepended to each Unicode codepoint with
+    **-f**{nbsp}**cp**.
++
+For example, with **-f**{nbsp}**cp** and **-p**{nbsp}**U+**:
++
+----
+U+1f645 U+200d U+2642 U+fe0f
+----
+
+**-n**::
+    Do not print a newline after printing the emoji or codepoints.
+
+**-V**::
+    Do not print
+    https://emojipedia.org/variation-selector-16[Variation Selector-16]
+    (VS-16) codepoints.
++
+VS-16 is a suffix codepoint which specifies that the preceding character
+should be displayed with emoji presentation. For example, ♥ (which
+predates Unicode emojis) followed with VS-16 becomes a red heart.
++
+There are applications/fonts which don't like VS-16.
+
+**-t** __TONE__::
+    Set the default skin tone to __TONE__ instead of none:
++
+--
+**L**:: Light.
+**ML**:: Medium-light.
+**M**:: Medium.
+**MD**:: Medium-dark.
+**D**:: Dark.
+--
++
+The **F1** to **F5** keys still acept an emoji with a
+specific skin tone.
+
+=== Action
+
+**-c** __CMD__::
+    When you accept an emoji, execute the command __CMD__ 20{nbsp}ms
+    after closing the jome window.
++
+jome interprets __CMD__ like a shell does, so you can have arguments
+too.
++
+__CMD__ receives the UTF-8 emoji or the Unicode codepoints (depending on
+the **-f** option) with their optional prefix as its last argument(s).
++
+Examples with xdotool:
++
+----
+$ jome -c 'xdotool type'
+$ jome -f cp -p U -c 'xdotool key --delay 20'
+----
+
+**-b**::
+    When you accept an emoji, copy the UTF-8 emoji or the Unicode
+    codepoints (depending on the **-f**{nbsp}option) to the clipboard.
++
+WARNING: This uses **QClipboard** and is known not to always work,
+depending on your window manager.
+
+**-q**::
+    Do not quit when you accept an emoji.
++
+By default, when you accept an emoji (with the keyboard or with the
+mouse), jome:
++
+--
+. Prints the accept emoji or its codepoints to the standard output.
+. Hides its window.
+. **Optional**: Copies the accept emoji/codepoints to the clipboard
+  (see the **-b**{nbsp}option).
+. **Optional**: Executes a command (see the **-c**{nbsp}option)
+  after 20{nbsp}ms.
+. If not running in server mode, quits (see the **-s** option).
+--
++
+With the **-q** option, jome doesn't hide its window and doesn't quit
+when you accept an emoji so that you can make it print multiple emojis
+and/or execute a command multiple time with multiple emojis without
+restarting the application.
++
+You cannot specify the **-q** and **-s** options together.
+
+**-s** __NAME__::
+    Start jome in server mode and set the server name to __NAME__.
++
+On Unix, this creates the socket file **/tmp/**__NAME__ which must NOT
+exist before you start jome.
++
+You cannot specify the **-s** and **-q** options together.
+
+=== User interface
+
+**-d**::
+    Use a dark background for emojis.
+
+**-C**::
+    Hide the category list.
+
+**-L**::
+    Hide the category labels in the emoji grid.
+
+**-R**::
+    Hide the "`Recent`" category.
+
+**-k**::
+    Hide the keyword list.
+
+**-w** __WIDTH__::
+    Set the width of individual emojis to __WIDTH__ pixels, amongst
+    16, 24, 32 (default), 40, or{nbsp}48.
+
+**-P** __PERIOD__::
+    Set the flashing period of the selection box to __PERIOD__{nbsp}ms
+    (greater than or equal to{nbsp}32).
++
+The selection box doesn't flash by default.
+
+**-H** __COUNT__::
+    Set the maximum number of recently accepted emojis to __COUNT__
+    instead of{nbsp}30.
+
+== Files
+
+**pass:[~]/.config/jome/emojis.json**::
+    User-defined emoji keywords.
++
+See the "`User-defined emoji keywords`" section above.
+
+== Exit status
+
+**0** when you accept an emoji or **1** otherwise.
+
+include::about.adoc[]
+
+== See also
+
+**jome-ctl**(1)

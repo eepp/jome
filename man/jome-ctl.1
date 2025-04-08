@@ -1,0 +1,79 @@
+'\" t
+.\"     Title: vlttng
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.23
+.\"      Date: 8 April 2025
+.\"    Manual: JOME
+.\"    Source: JOME
+.\"  Language: English
+.\"
+.TH "JOME\-CTL" "1" "8 April 2025" "JOME" "JOME"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE bold
+.\}
+.SH "NAME"
+jome-ctl \- control a jome server
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBjome\-ctl\fP \fISERVER\-NAME\fP [\fBpick\fP | \fBquit\fP]
+.fi
+.br
+.SH "DESCRIPTION"
+.sp
+\fBjome\-ctl\fP controls the \fBjome\fP(1) server named \fISERVER\-NAME\fP.
+.sp
+See the \(lqServer mode\(rq section and \fB\-s\fP\~option of
+\fBjome\fP(1) to learn more.
+.sp
+On Unix, \fBjome\-ctl\fP reads from and writes to the socket file
+\fB/tmp/\fP\fISERVER\-NAME\fP.
+.sp
+The two available commands are:
+.sp
+\fBpick\fP (default)
+.RS 4
+Show the window of the jome server \fISERVER\-NAME\fP to pick an emoji.
+.sp
+If you accept an emoji, then jome closes its window and sends what
+it prints to the standard output to \fBjome\-ctl\fP which prints it as is
+and exits with status\~0.
+.sp
+If you cancel (press \fBEscape\fP or \fBCtrl\fP+\fBC\fP, or close the
+window), then \fBjome\-ctl\fP doesn\(cqt print anything and exits with
+status\~1.
+.RE
+.sp
+\fBquit\fP
+.RS 4
+Terminate the jome server \fISERVER\-NAME\fP, also removing the
+associated socket file.
+.RE
+.SH "EXIT STATUS"
+.sp
+\fB0\fP when the jome server accepts an emoji or \fB1\fP otherwise.
+.SH "ABOUT"
+.sp
+\fBjome\fP was originally written by and is maintained by, as of jome
+1.2.0, Philippe Proulx (\fBeepp\fP).
+.sp
+GitHub project: ⟨https://github.com/eepp/jome⟩.
+.SH "SEE ALSO"
+.sp
+\fBjome\fP(1)

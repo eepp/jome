@@ -1,0 +1,838 @@
+'\" t
+.\"     Title: vlttng
+.\"    Author: [see the "AUTHOR(S)" section]
+.\" Generator: Asciidoctor 2.0.23
+.\"      Date: 8 April 2025
+.\"    Manual: JOME
+.\"    Source: JOME
+.\"  Language: English
+.\"
+.TH "JOME" "1" "8 April 2025" "JOME" "JOME"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE bold
+.\}
+.SH "NAME"
+jome \- a keyboard centric desktop emoji picker
+.SH "SYNOPSIS"
+.sp
+.nf
+\fBjome\fP [\fB\-f\fP \f(CRcp\fP [\fB\-p\fP \fIPREFIX\fP]] [\fB\-n\fP] [\fB\-V\fP] [\fB\-t\fP (\fBL\fP | \fBML\fP | \fBM\fP | \fBMD\fP | \fBD\fP)]
+     [\fB\-c\fP \fICMD\fP] [\fB\-b\fP] [\fB\-q\fP | \fB\-s\fP \fINAME\fP]
+     [\fB\-d\fP] [\fB\-C\fP] [\fB\-L\fP] [\fB\-R\fP] [\fB\-k\fP]
+     [\fB\-w\fP (\fB16\fP | \fB24\fP | \fB32\fP | \fB40\fP | \fB48\fP)] [\fB\-P\fP] [\fB\-H\fP \fICOUNT\fP]
+.fi
+.br
+.SH "DESCRIPTION"
+.sp
+\fBjome\fP (joh·mee) is a keyboard centric emoji picker desktop
+application.
+.sp
+jome\(cqs sole purpose is to help you \fIpick\fP an emoji. In other words,
+it doesn\(cqt really care what you do with the chosen emoji afterwards:
+you can leverage tools such as \fBxdotool\fP(1) to \(lqtype\(rq it or
+\fBxsel\fP(1) to copy it to the clipboard. See the
+\(lqType the accepted emoji\(rq section below and the \fB\-c\fP\~option for
+a starting point.
+.sp
+When you accept an emoji (with the keyboard or with the mouse), jome
+prints the UTF\-8 emoji or the Unicode codepoints (see the \fB\-f\fP
+option), with an optional prefix (see the \fB\-p\fP\~option) for each
+codepoint, to the standard output.
+.sp
+Additionally, jome can:
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+Copy the UTF\-8 emoji or the Unicode codepoints to the clipboard.
+.sp
+See the \fB\-b\fP\~option.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+Execute a custom command which sends the UTF\-8 emoji or the Unicode
+codepoints, with an optional prefix for each codepoint, as its last
+argument(s).
+.sp
+See the \fB\-c\fP\~option.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+Send the UTF\-8 emoji or the Unicode codepoints, with an optional
+prefix for each codepoint, in response to a client which requested
+picking an emoji.
+.sp
+See the \(lqServer mode\(rq section below.
+.RE
+.sp
+If you close the window (you can press \fBEscape\fP or \fBCtrl\fP+\fBC\fP to
+do this), then jome prints nothing to the standard output, executes
+nothing, and exits with status\~1.
+.sp
+If you don\(cqt start jome in server mode (\fB\-s\fP\~option) and you
+don\(cqt specify the \fB\-q\fP\~option, then jome immediately exits
+with status\~0 after you accept an emoji or close the window.
+.SS "Graphical interface"
+.sp
+There are four sections:
+.sp
+Find box (top)
+.RS 4
+Input box where you can type a query to find emojis.
+.RE
+.sp
+Emoji grid
+.RS 4
+All emojis (with an empty find box) or find results.
+.sp
+When there\(cqs at least one emoji, there\(cqs always a selected emoji with a
+square box around it.
+.sp
+Click an emoji to accept it. Press \fBShift\fP when clicking to not print
+VS\-16 codepoints (see the \fB\-V\fP\~option).
+.sp
+Hover an emoji to update the bottom emoji info text temporarily.
+.sp
+Make the background behind emojis dark with the \fB\-d\fP\~option.
+.sp
+Hide the category labels with the \fB\-L\fP\~option.
+.sp
+Hide the \(lqRecent\(rq category with the \fB\-R\fP\~option.
+.RE
+.sp
+Category list (right)
+.RS 4
+List of available categories.
+.sp
+When all emojis are viewed (the find box is empty), click a category
+name to scroll to this emoji category.
+.sp
+The first category, \(lqRecent\(rq, is a special category with the recently
+accepted emojis.
+.sp
+Override the maximum number of recently accepted emojis with
+the \fB\-H\fP\~option.
+.sp
+Hide the \(lqRecent\(rq category with the \fB\-R\fP\~option.
+.sp
+Hide the whole category list with the \fB\-C\fP\~option.
+.RE
+.sp
+Emoji info text (bottom)
+.RS 4
+Name, Unicode codepoints, Emoji standard version, and keywords of
+the selected or hovered emoji.
+.sp
+Hide the keyword list with the \fB\-k\fP\~option.
+.RE
+.SS "Find emojis"
+.sp
+The power of jome is its \fIfind box\fP (top).
+.sp
+When you launch jome, the find box is focused, and it should stay
+focused unless you browse emojis manually with the intention of
+accepting one with the mouse.
+.sp
+The format of a query is one of:
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+\fITERMS\fP
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+\fICAT\fP/
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+\fICAT\fP/\fITERMS\fP
+.RE
+.sp
+where:
+.sp
+\fICAT\fP
+.RS 4
+Partial name of categories in which to find.
+.RE
+.sp
+\fITERMS\fP
+.RS 4
+Space\-separated list of search terms.
+.sp
+For an emoji to be part of the results, at least one of its keywords
+must contain ALL the searched terms.
+.RE
+.SS "Select and accept an emoji"
+.sp
+To select an emoji, use the following keys:
+.sp
+\fB←\fP, \fB→\fP, \fB↑\fP, \fB↓\fP
+.RS 4
+Go left/right/up/down.
+.RE
+.sp
+\fBCtrl\fP+\fB←\fP, \fBCtrl\fP+\fB→\fP
+.RS 4
+Go left/right five emojis.
+.RE
+.sp
+\fBPage ↑\fP, \fBPage ↓\fP
+.RS 4
+Go up/down ten rows.
+.RE
+.sp
+\fBHome\fP
+.RS 4
+Go to the first emoji.
+.RE
+.sp
+\fBEnd\fP
+.RS 4
+Go to the last emoji.
+.RE
+.sp
+To accept the selected emoji, press:
+.sp
+\fBEnter\fP
+.RS 4
+Accept the selected emoji with, if applicable:
+.sp
+Without the \fB\-t\fP option
+.RS 4
+No skin tone (\(lqyellow\(rq).
+.RE
+.sp
+With the \fB\-t\fP option
+.RS 4
+The default skin tone (value of \fB\-t\fP).
+.RE
+.RE
+.sp
+\fBShift\fP+\fBEnter\fP
+.RS 4
+Like \fBEnter\fP, but do not print VS\-16 codepoints.
+.sp
+See the \fB\-V\fP option option.
+.RE
+.sp
+\fBF1\fP to \fBF5\fP
+.RS 4
+If the selected emoji supports skin tones, accept the selected emoji
+with a light, medium\-light, medium, medium\-dark, or dark skin tone,
+overriding the \fB\-t\fP option (if any).
+.RE
+.sp
+\fBShift\fP+\fBF1\fP to \fBShift\fP+\fBF5\fP
+.RS 4
+Like \fBF1\fP to \fBF5\fP, but do not print VS\-16 codepoints.
+.sp
+See the \fB\-V\fP option option.
+.RE
+.sp
+To cancel, press \fBEscape\fP or \fBCtrl\fP+\fBC\fP, or close the
+window.
+.SS "Go to Emojipedia page"
+.sp
+To go to the \c
+.URL "https://emojipedia.org/" "Emojipedia" ""
+page of the selected
+emoji, press \fBF12\fP.
+.sp
+To go to the Emojipedia page of any emoji with the mouse, right\-click it
+and click \(lqGo to Emojipedia page\(rq.
+.SS "User\-defined emoji keywords"
+.sp
+You can either replace or augment the built\-in list of keywords which
+jome searches when you find emojis.
+.sp
+To set user\-defined keywords, create an \fBemojis.json\fP file within
+\fB~/.config/jome/\fP.
+.sp
+\fBemojis.json\fP must contain a JSON object where keys are emojis and
+values are objects. Each value may contain one of:
+.sp
+\fBkeywords\fP
+.RS 4
+An array of keywords which replaces the built\-in keywords entirely
+for this emoji.
+.RE
+.sp
+\fBextra\-keywords\fP
+.RS 4
+An array of keywords which augments either the built\-in keywords or
+the keywords of the keywords entry for this emoji.
+.RE
+.sp
+Example:
+.sp
+.if n .RS 4
+.nf
+.fam C
+{
+  "🍁": {
+    "extra\-keywords": ["canada", "laurentides"]
+  },
+  "😃": {
+    "keywords": ["yay", "hourra"]
+  },
+  "🚬": {
+    "extra\-keywords": ["claude poirier"]
+  },
+  "🫚": {
+    "extra\-keywords": ["canada dry", "martin deschamps"]
+  }
+}
+.fam
+.fi
+.if n .RE
+.SS "Server mode"
+.sp
+jome features a server mode to avoid creating a process (a Qt window can
+be quite long to create) every time you need to pick an emoji. With this
+mode, you can view the jome window instantaneously.
+.sp
+To start jome in server mode, use the \fB\-s\fP\~option to specify the
+server name:
+.sp
+.if n .RS 4
+.nf
+.fam C
+$ jome \-s mein\-server
+.fam
+.fi
+.if n .RE
+.sp
+This creates a local server named \fBmein\-server\fP. On Unix, it creates
+the socket file \fB/tmp/mein\-server\fP.
+.if n .sp
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+.B Important
+.ps -1
+.br
+.sp
+On Unix, the server mode won\(cqt work if the socket file
+already exists. Remove the file before you start jome in server mode:
+.sp
+.if n .RS 4
+.nf
+.fam C
+$ rm \-f /tmp/mein\-server
+$ jome \-s mein\-server
+.fam
+.fi
+.if n .RE
+.sp .5v
+.RE
+.sp
+When jome starts in server mode, it doesn\(cqt show its window. Instead,
+it waits for a command sent by the client, \fBjome\-ctl\fP(1). To show the
+window:
+.sp
+.if n .RS 4
+.nf
+.fam C
+$ jome\-ctl mein\-server
+.fam
+.fi
+.if n .RE
+.sp
+When you accept an emoji, \fBjome\-ctl\fP(1) prints what jome also prints
+to the standard output and quits with exit code\~0. Therefore, the
+options passed to \fBjome\fP(1) control the output
+format of \fBjome\-ctl\fP(1).
+.sp
+If you cancel jome (press \fBEscape\fP or \fBCtrl\fP+\fBC\fP, or close the
+window), \fBjome\-ctl\fP(1) prints nothing and returns with exit
+code\~1.
+.sp
+In server mode, jome doesn\(cqt quit once you accept an emoji or cancel: it
+hides the window and keeps listening. To make it quits gracefully, which
+also removes the socket file:
+.sp
+.if n .RS 4
+.nf
+.fam C
+$ jome\-ctl mein\-server quit
+.fam
+.fi
+.if n .RE
+.sp
+You don\(cqt need to use what \fBjome\-ctl\fP(1) prints to the standard
+output. You can use jome in server mode with the \fB\-c\fP\~option to
+make jome execute a command itself. For example:
+.sp
+.if n .RS 4
+.nf
+.fam C
+$ rm \-f /tmp/mein\-server
+$ jome \-s mein\-server \-c \*(Aqxdotool type\*(Aq
+.fam
+.fi
+.if n .RE
+.sp
+Then, bind a keyboard shortcut to:
+.sp
+.if n .RS 4
+.nf
+.fam C
+$ jome\-ctl mein\-server
+.fam
+.fi
+.if n .RE
+.SS "Type the accepted emoji"
+.sp
+Here are Bash scripts to type the accepted emoji with \fBxdotool\fP(1).
+.sp
+Direct mode
+.RS 4
+
+.sp
+With \fBxdotool key\fP
+.RS 4
+
+.sp
+.if n .RS 4
+.nf
+.fam C
+#!/usr/bin/bash
+
+codepoints=$(jome \-f cp \-p U)
+
+if (($? != 0)); then
+    exit 1
+fi
+
+xdotool key \-\-delay 20 "$codepoints"
+.fam
+.fi
+.if n .RE
+.RE
+.sp
+With \fBxdotool type\fP
+.RS 4
+
+.sp
+.if n .RS 4
+.nf
+.fam C
+#!/usr/bin/bash
+
+emoji=$(jome)
+
+if (($? != 0)); then
+    exit 1
+fi
+
+xdotool type "$emoji"
+.fam
+.fi
+.if n .RE
+.RE
+.RE
+.sp
+Server mode
+.RS 4
+
+.sp
+With \fBxdotool key\fP
+.RS 4
+
+.sp
+.if n .RS 4
+.nf
+.fam C
+#!/usr/bin/bash
+
+socket_name=jome.socket.$(id \-u)
+
+if [[ ! \-e "/tmp/$socket_name" ]]; then
+    jome \-s "$socket_name" \-n \-w48 \-f cp \-p U & disown
+
+    until [[ \-e "/tmp/$socket_name" ]]; do
+        sleep .1
+    done
+fi
+
+codepoints=$(jome\-ctl "$socket_name")
+
+if (($? == 0)); then
+    sleep .02
+    xdotool key \-\-delay 20 "$codepoints"
+fi
+.fam
+.fi
+.if n .RE
+.RE
+.sp
+With \fBxdotool type\fP
+.RS 4
+
+.sp
+.if n .RS 4
+.nf
+.fam C
+#!/usr/bin/bash
+
+socket_name=jome.socket.$(id \-u)
+
+if [[ ! \-e "/tmp/$socket_name" ]]; then
+    jome \-s "$socket_name" \-n \-w48 & disown
+
+    until [[ \-e "/tmp/$socket_name" ]]; do
+        sleep .1
+    done
+fi
+
+emoji=$(jome\-ctl "$socket_name")
+
+if (($? == 0)); then
+    sleep .02
+    xdotool type "$emoji"
+fi
+.fam
+.fi
+.if n .RE
+.RE
+.RE
+.SH "OPTIONS"
+.SS "Output"
+.sp
+\fB\-f\fP \fIFMT\fP
+.RS 4
+Set the output format to \fIFMT\fP:
+.sp
+\fButf\-8\fP (default)
+.RS 4
+UTF\-8 emoji.
+.RE
+.sp
+\fBcp\fP
+.RS 4
+Space\-separated Unicode codepoints (hexadecimal).
+.sp
+Example: \fB1f645 200d 2642 fe0f\fP
+.sp
+Prepend a prefix to each codepoint with the \fB\-p\fP\~option.
+.RE
+.RE
+.sp
+\fB\-p\fP \fIPREFIX\fP
+.RS 4
+Set the prefix to be prepended to each Unicode codepoint with
+\fB\-f\fP\~\fBcp\fP.
+.sp
+For example, with \fB\-f\fP\~\fBcp\fP and \fB\-p\fP\~\fBU+\fP:
+.sp
+.if n .RS 4
+.nf
+.fam C
+U+1f645 U+200d U+2642 U+fe0f
+.fam
+.fi
+.if n .RE
+.RE
+.sp
+\fB\-n\fP
+.RS 4
+Do not print a newline after printing the emoji or codepoints.
+.RE
+.sp
+\fB\-V\fP
+.RS 4
+Do not print
+\c
+.URL "https://emojipedia.org/variation\-selector\-16" "Variation Selector\-16"
+(VS\-16) codepoints.
+.sp
+VS\-16 is a suffix codepoint which specifies that the preceding character
+should be displayed with emoji presentation. For example, ♥ (which
+predates Unicode emojis) followed with VS\-16 becomes a red heart.
+.sp
+There are applications/fonts which don\(cqt like VS\-16.
+.RE
+.sp
+\fB\-t\fP \fITONE\fP
+.RS 4
+Set the default skin tone to \fITONE\fP instead of none:
+.sp
+\fBL\fP
+.RS 4
+Light.
+.RE
+.sp
+\fBML\fP
+.RS 4
+Medium\-light.
+.RE
+.sp
+\fBM\fP
+.RS 4
+Medium.
+.RE
+.sp
+\fBMD\fP
+.RS 4
+Medium\-dark.
+.RE
+.sp
+\fBD\fP
+.RS 4
+Dark.
+.RE
+.sp
+The \fBF1\fP to \fBF5\fP keys still acept an emoji with a
+specific skin tone.
+.RE
+.SS "Action"
+.sp
+\fB\-c\fP \fICMD\fP
+.RS 4
+When you accept an emoji, execute the command \fICMD\fP 20\~ms
+after closing the jome window.
+.sp
+jome interprets \fICMD\fP like a shell does, so you can have arguments
+too.
+.sp
+\fICMD\fP receives the UTF\-8 emoji or the Unicode codepoints (depending on
+the \fB\-f\fP option) with their optional prefix as its last argument(s).
+.sp
+Examples with xdotool:
+.sp
+.if n .RS 4
+.nf
+.fam C
+$ jome \-c \*(Aqxdotool type\*(Aq
+$ jome \-f cp \-p U \-c \*(Aqxdotool key \-\-delay 20\*(Aq
+.fam
+.fi
+.if n .RE
+.RE
+.sp
+\fB\-b\fP
+.RS 4
+When you accept an emoji, copy the UTF\-8 emoji or the Unicode
+codepoints (depending on the \fB\-f\fP\~option) to the clipboard.
+.if n .sp
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+.B Warning
+.ps -1
+.br
+.sp
+This uses \fBQClipboard\fP and is known not to always work,
+depending on your window manager.
+.sp .5v
+.RE
+.RE
+.sp
+\fB\-q\fP
+.RS 4
+Do not quit when you accept an emoji.
+.sp
+By default, when you accept an emoji (with the keyboard or with the
+mouse), jome:
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 1.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 1." 4.2
+.\}
+Prints the accept emoji or its codepoints to the standard output.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 2.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 2." 4.2
+.\}
+Hides its window.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 3.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 3." 4.2
+.\}
+\fBOptional\fP: Copies the accept emoji/codepoints to the clipboard
+(see the \fB\-b\fP\~option).
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 4.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 4." 4.2
+.\}
+\fBOptional\fP: Executes a command (see the \fB\-c\fP\~option)
+after 20\~ms.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 5.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 5." 4.2
+.\}
+If not running in server mode, quits (see the \fB\-s\fP option).
+.RE
+.sp
+With the \fB\-q\fP option, jome doesn\(cqt hide its window and doesn\(cqt quit
+when you accept an emoji so that you can make it print multiple emojis
+and/or execute a command multiple time with multiple emojis without
+restarting the application.
+.sp
+You cannot specify the \fB\-q\fP and \fB\-s\fP options together.
+.RE
+.sp
+\fB\-s\fP \fINAME\fP
+.RS 4
+Start jome in server mode and set the server name to \fINAME\fP.
+.sp
+On Unix, this creates the socket file \fB/tmp/\fP\fINAME\fP which must NOT
+exist before you start jome.
+.sp
+You cannot specify the \fB\-s\fP and \fB\-q\fP options together.
+.RE
+.SS "User interface"
+.sp
+\fB\-d\fP
+.RS 4
+Use a dark background for emojis.
+.RE
+.sp
+\fB\-C\fP
+.RS 4
+Hide the category list.
+.RE
+.sp
+\fB\-L\fP
+.RS 4
+Hide the category labels in the emoji grid.
+.RE
+.sp
+\fB\-R\fP
+.RS 4
+Hide the \(lqRecent\(rq category.
+.RE
+.sp
+\fB\-k\fP
+.RS 4
+Hide the keyword list.
+.RE
+.sp
+\fB\-w\fP \fIWIDTH\fP
+.RS 4
+Set the width of individual emojis to \fIWIDTH\fP pixels, amongst
+16, 24, 32 (default), 40, or\~48.
+.RE
+.sp
+\fB\-P\fP \fIPERIOD\fP
+.RS 4
+Set the flashing period of the selection box to \fIPERIOD\fP\~ms
+(greater than or equal to\~32).
+.sp
+The selection box doesn\(cqt flash by default.
+.RE
+.sp
+\fB\-H\fP \fICOUNT\fP
+.RS 4
+Set the maximum number of recently accepted emojis to \fICOUNT\fP
+instead of\~30.
+.RE
+.SH "FILES"
+.sp
+\fB~/.config/jome/emojis.json\fP
+.RS 4
+User\-defined emoji keywords.
+.sp
+See the \(lqUser\-defined emoji keywords\(rq section above.
+.RE
+.SH "EXIT STATUS"
+.sp
+\fB0\fP when you accept an emoji or \fB1\fP otherwise.
+.SH "ABOUT"
+.sp
+\fBjome\fP was originally written by and is maintained by, as of jome
+1.2.0, Philippe Proulx (\fBeepp\fP).
+.sp
+GitHub project: ⟨https://github.com/eepp/jome⟩.
+.SH "SEE ALSO"
+.sp
+\fBjome\-ctl\fP(1)

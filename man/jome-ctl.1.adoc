@@ -1,0 +1,53 @@
+= vlttng(1)
+:revdate: 8 April 2025
+:docdate: {revdate}
+:doctype: manpage
+:manmanual: JOME
+:mansource: JOME
+:man-linkstyle: bold
+
+== Name
+
+jome-ctl - control a jome server
+
+== Synopsis
+
+[verse]
+**jome-ctl** __SERVER-NAME__ [**pick** | **quit**]
+
+== Description
+
+**jome-ctl** controls the **jome**(1) server named __SERVER-NAME__.
+
+See the "`Server mode`" section and **-s**{nbsp}option of
+**jome**(1) to learn more.
+
+On Unix, **jome-ctl** reads from and writes to the socket file
+**/tmp/**__SERVER-NAME__.
+
+The two available commands are:
+
+**pick** (default)::
+    Show the window of the jome server __SERVER-NAME__ to pick an emoji.
++
+If you accept an emoji, then jome closes its window and sends what
+it prints to the standard output to **jome-ctl** which prints it as is
+and exits with status{nbsp}0.
++
+If you cancel (press **Escape** or **Ctrl**+**C**, or close the
+window), then **jome-ctl** doesn't print anything and exits with
+status{nbsp}1.
+
+**quit**::
+    Terminate the jome server __SERVER-NAME__, also removing the
+    associated socket file.
+
+== Exit status
+
+**0** when the jome server accepts an emoji or **1** otherwise.
+
+include::about.adoc[]
+
+== See also
+
+**jome**(1)

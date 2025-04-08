@@ -1,0 +1,6 @@
+== About
+
+**jome** was originally written by and is maintained by, as of jome
+{revnumber}, Philippe Proulx (**eepp**).
+
+GitHub project: ⟨https://github.com/eepp/jome⟩.

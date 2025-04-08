@@ -15,5 +15,6 @@ set (CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # jome
 add_subdirectory (assets)
+add_subdirectory (man)
 add_subdirectory (jome)
 add_subdirectory (jome-ctl)
