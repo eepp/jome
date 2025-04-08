@@ -36,27 +36,57 @@ endif::env-github[]
 
 == Preview
 
+Default view:: {empty}
++
 image::screenshots/all.png[]
 
+🌚 mode:: {empty}
++
 image::screenshots/dark.png[]
 
+Specific category:: {empty}
++
 image::screenshots/animals.png[]
 
+🔍 emojis matching "`palm`":: {empty}
++
 image::screenshots/palm.png[]
 
+🔍 emojis matching "`wom`":: {empty}
++
 image::screenshots/wom.png[]
 
+🔍 emojis matching "`wom`" _and_ "`fact`":: {empty}
++
 image::screenshots/wom-fact.png[]
 
+🔍 all emojis of the transportation category:: {empty}
++
 image::screenshots/transp-cat.png[]
 
+🔍 emojis matching "`car`" within the transportation category:: {empty}
++
 image::screenshots/transp-cat-car.png[]
 
+🔍 emojis matching "`car`" _and_ "`lig`" within the transportation category:: {empty}
++
 image::screenshots/transp-cat-car-lig.png[]
 
+If you prefer a minimal look:: {empty}
++
+image::screenshots/minimal.png[]
++
+This is
++
+----
+$ jome -dCLRkw16
+----
++
+Options: <<opt-d,`-d`>>, <<opt-C,`-C`>>, <<opt-L,`-L`>>,
+<<opt-R,`-R`>>, <<opt-k,`-k`>>, and <<opt-w,`-w`>>.
 
 [[build]]
-== 🏗
+== 🏗 jome
 
 You need:
 
