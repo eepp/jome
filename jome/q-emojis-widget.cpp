@@ -45,6 +45,7 @@ QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb, con
     this->setAlignment(Qt::AlignLeft | Qt::AlignTop);
     this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    this->setFocusPolicy(Qt::NoFocus);
 
     // margins, 6 emojis, and scrollbar
     this->setMinimumWidth(static_cast<int>(_gutter * 4 +
