@@ -27,7 +27,7 @@ QEmojiGraphicsItem::QEmojiGraphicsItem(const Emoji& emoji, const QPixmap& pixmap
 void QEmojiGraphicsItem::mousePressEvent(QGraphicsSceneMouseEvent * const event)
 {
     if (event->button() == Qt::LeftButton) {
-        _emojisWidget->_emojiGraphicsItemClicked(*this);
+        _emojisWidget->_emojiGraphicsItemClicked(*this, event->modifiers() & Qt::ShiftModifier);
     }
 
     QGraphicsPixmapItem::mousePressEvent(event);

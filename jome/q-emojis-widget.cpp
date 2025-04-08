@@ -214,9 +214,9 @@ void QEmojisWidget::_emojiGraphicsItemHoverLeaved(const QEmojiGraphicsItem& item
     emit this->emojiHoverLeaved(item.emoji());
 }
 
-void QEmojisWidget::_emojiGraphicsItemClicked(const QEmojiGraphicsItem& item)
+void QEmojisWidget::_emojiGraphicsItemClicked(const QEmojiGraphicsItem& item, const bool withShift)
 {
-    emit this->emojiClicked(item.emoji());
+    emit this->emojiClicked(item.emoji(), withShift);
 }
 
 void QEmojisWidget::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& index)

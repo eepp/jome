@@ -479,9 +479,9 @@ void QJomeWindow::_emojiSelectionChanged(const Emoji * const emoji)
     this->_updateBottomLabels(emoji);
 }
 
-void QJomeWindow::_emojiClicked(const Emoji& emoji)
+void QJomeWindow::_emojiClicked(const Emoji& emoji, const bool withShift)
 {
-    this->_acceptEmoji(emoji, boost::none, false);
+    this->_acceptEmoji(emoji, boost::none, withShift);
 }
 
 void QJomeWindow::_emojiHoverEntered(const Emoji& emoji)

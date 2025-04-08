@@ -11,7 +11,7 @@ endif::env-github[]
 
 = jome 😏
 Philippe Proulx <eepp.ca>
-7 April 2025
+8 April 2025
 
 **jome** (_joh_·_mee_) is a ⌨️ centric emoji picker 🖥️ application.
 
@@ -144,7 +144,9 @@ Emojis::
 When there's at least 1️⃣ emoji, there's always a selected emoji with a
 🔲 box around it.
 +
-🖱️ an emoji to ✅ it.
+🖱️ an emoji to ✅ it. Press **Shift** when clicking to don't 🖨️
+https://emojipedia.org/variation-selector-16[VS-16]
+codepoints (see the <<opt-V,`-V`{nbsp}option>>).
 +
 Hover an emoji to update the ⬇️ emoji info text temporarily.
 +

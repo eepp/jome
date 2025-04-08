@@ -55,7 +55,7 @@ signals:
     void selectionChanged(const Emoji *emoji);
     void emojiHoverEntered(const Emoji& emoji);
     void emojiHoverLeaved(const Emoji& emoji);
-    void emojiClicked(const Emoji& emoji);
+    void emojiClicked(const Emoji& emoji, bool withShift);
 
 private:
     void resizeEvent(QResizeEvent *event) override;
@@ -64,7 +64,7 @@ private:
     void _setGraphicsSceneStyle(QGraphicsScene& gs);
     void _emojiGraphicsItemHoverEntered(const QEmojiGraphicsItem& item);
     void _emojiGraphicsItemHoverLeaved(const QEmojiGraphicsItem& item);
-    void _emojiGraphicsItemClicked(const QEmojiGraphicsItem& item);
+    void _emojiGraphicsItemClicked(const QEmojiGraphicsItem& item, bool withShift);
     void _addRoundedRectToScene(QGraphicsScene& gs, qreal y, qreal height);
 
 private slots:

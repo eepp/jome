@@ -112,7 +112,7 @@ private slots:
     void _searchBoxEndKeyPressed();
     void _searchBoxEscapeKeyPressed();
     void _emojiSelectionChanged(const Emoji *emoji);
-    void _emojiClicked(const Emoji& emoji);
+    void _emojiClicked(const Emoji& emoji, bool withShift);
     void _emojiHoverEntered(const Emoji& emoji);
     void _emojiHoverLeaved(const Emoji& emoji);
 
