@@ -45,6 +45,7 @@ struct Params final
     bool removeVs16;
     bool noCatList;
     bool noCatLabels;
+    bool noRecentCat;
     bool noKwList;
     boost::optional<jome::Emoji::SkinTone> defSkinTone;
 };
@@ -71,6 +72,7 @@ Params parseArgs(QApplication& app)
     const QCommandLineOption darkBgOpt {"d", "Use dark emoji background."};
     const QCommandLineOption noCatListOpt {"C", "Hide category list."};
     const QCommandLineOption noCatLabelsOpt {"L", "Hide category labels."};
+    const QCommandLineOption noRecentCatOpt {"R", "Hide \"Recent\" category."};
     const QCommandLineOption noKwListOpt {"k", "Hide keyword list."};
     const QCommandLineOption emojiWidthOpt {"w", "Set emoji width to <WIDTH> px (16, 24, 32, 40, or 48).", "WIDTH"};
     const QCommandLineOption selectedEmojiFlashPeriodOpt {"P", "Set selected emoji flashing period to <PERIOD> ms.", "PERIOD"};
@@ -88,6 +90,7 @@ Params parseArgs(QApplication& app)
     parser.addOption(darkBgOpt);
     parser.addOption(noCatListOpt);
     parser.addOption(noCatLabelsOpt);
+    parser.addOption(noRecentCatOpt);
     parser.addOption(noKwListOpt);
     parser.addOption(emojiWidthOpt);
     parser.addOption(selectedEmojiFlashPeriodOpt);
@@ -103,6 +106,7 @@ Params parseArgs(QApplication& app)
     params.removeVs16 = parser.isSet(removeVs16Opt);
     params.noCatList = parser.isSet(noCatListOpt);
     params.noCatLabels = parser.isSet(noCatLabelsOpt);
+    params.noRecentCat = parser.isSet(noRecentCatOpt);
     params.noKwList = parser.isSet(noKwListOpt);
 
     {
@@ -283,7 +287,7 @@ int main(int argc, char **argv)
     app.setApplicationVersion(JOME_VERSION);
 
     const auto params = parseArgs(app);
-    jome::EmojiDb db {JOME_DATA_DIR, params.emojiSize, params.maxRecentEmojis};
+    jome::EmojiDb db {JOME_DATA_DIR, params.emojiSize, params.maxRecentEmojis, params.noRecentCat};
     jome::QJomeWindow win {db, params.darkBg, params.noCatList, params.noCatLabels,
                            params.noKwList, params.selectedEmojiFlashPeriod};
 

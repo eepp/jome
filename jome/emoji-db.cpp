@@ -122,13 +122,13 @@ const std::string& EmojiCat::lcName() const
 }
 
 EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize,
-                 const unsigned int maxRecentEmojis) :
+                 const unsigned int maxRecentEmojis, const bool noRecentCat) :
     _emojiSize {emojiSize},
     _emojisPngPath {fmt::format("{}/emojis-{}.png", dir, this->emojiSizeInt())},
     _maxRecentEmojis {maxRecentEmojis}
 {
     this->_createEmojis(dir);
-    this->_createCats(dir);
+    this->_createCats(dir, noRecentCat);
     this->_createEmojiPngLocations(dir);
 }
 
@@ -358,11 +358,13 @@ void EmojiDb::_createEmojis(const std::string& dir)
     }
 }
 
-void EmojiDb::_createCats(const std::string& dir)
+void EmojiDb::_createCats(const std::string& dir, const bool noRecentCat)
 {
-    // first, special category: recent emojis
-    _cats.push_back(std::make_unique<EmojiCat>("recent", "Recent"));
-    _recentEmojisCat = _cats.back().get();
+    if (!noRecentCat) {
+        // first, special category: recent emojis
+        _cats.push_back(std::make_unique<EmojiCat>("recent", "Recent"));
+        _recentEmojisCat = _cats.back().get();
+    }
 
     const auto jsonCats = loadJson(dir, "cats.json");
 
@@ -467,7 +469,10 @@ void EmojiDb::findEmojis(const std::string& cat, const std::string& needlesStr,
 
 void EmojiDb::recentEmojis(std::vector<const Emoji *>&& emojis)
 {
-    assert(_recentEmojisCat);
+    if (!_recentEmojisCat) {
+        return;
+    }
+
     _recentEmojisCat->emojis() = std::move(emojis);
 
     if (_recentEmojisCat->emojis().size() > _maxRecentEmojis) {
@@ -477,7 +482,9 @@ void EmojiDb::recentEmojis(std::vector<const Emoji *>&& emojis)
 
 void EmojiDb::addRecentEmoji(const Emoji& emoji)
 {
-    assert(_recentEmojisCat);
+    if (!_recentEmojisCat) {
+        return;
+    }
 
     auto& emojis = _recentEmojisCat->emojis();
 

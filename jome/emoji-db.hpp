@@ -152,7 +152,7 @@ public:
 
 public:
     explicit EmojiDb(const std::string& dir, EmojiSize emojiSize,
-                     unsigned int maxRecentEmojis);
+                     unsigned int maxRecentEmojis, bool noRecentCat);
 
     void findEmojis(const std::string& cat, const std::string& needles,
                     std::vector<const Emoji *>& results) const;
@@ -185,9 +185,9 @@ public:
         return _emojis;
     }
 
-    const EmojiCat& recentEmojisCat() const noexcept
+    const EmojiCat *recentEmojisCat() const noexcept
     {
-        return *_recentEmojisCat;
+        return _recentEmojisCat;
     }
 
     const Emoji& emojiForStr(const std::string& str) const
@@ -217,7 +217,7 @@ public:
 
 private:
     void _createEmojis(const std::string& dir);
-    void _createCats(const std::string& dir);
+    void _createCats(const std::string& dir, bool noRecentCat);
     void _createEmojiPngLocations(const std::string& dir);
 
 private:

@@ -15,6 +15,10 @@ namespace jome {
 
 void updateRecentEmojisFromSettings(EmojiDb& db)
 {
+    if (!db.recentEmojisCat()) {
+        return;
+    }
+
     QSettings settings;
     const auto recentEmojisVar = settings.value("recent-emojis");
 
@@ -47,10 +51,14 @@ void updateRecentEmojisFromSettings(EmojiDb& db)
 
 void updateSettings(const EmojiDb& db)
 {
+    if (!db.recentEmojisCat()) {
+        return;
+    }
+
     const auto emojiList = call([&db] {
         QList<QVariant> emojiList;
 
-        for (const auto emoji : db.recentEmojisCat().emojis()) {
+        for (const auto emoji : db.recentEmojisCat()->emojis()) {
             const auto emojiStr = QString::fromStdString(emoji->str());
 
             emojiList.append(emojiStr);

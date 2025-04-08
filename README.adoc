@@ -152,6 +152,8 @@ Make the background behind emojis 🌚 with the
 <<opt-d,`-d`{nbsp}option>>.
 +
 🙈 the category 🏷️ with the <<opt-L,`-L`{nbsp}option>>.
++
+🙈 the "`Recent`" category with the <<opt-R,`-R`{nbsp}option>>.
 
 Category 📜::
     📜 of available categories.
@@ -164,6 +166,8 @@ The first category, _Recent_, is a special category with the recently
 +
 Use the <<opt-H,`-H`{nbsp}option>> to override the maximum number
 of recently ✅ emojis.
++
+🙈 the "`Recent`" category with the <<opt-R,`-R`{nbsp}option>>.
 +
 🙈 the whole category 📜 with the <<opt-C,`-C`{nbsp}option>>.
 
@@ -440,6 +444,9 @@ same{nbsp}⌚.
 
 |[[opt-L]]`-L`
 |🙈 the category 🏷️ in the emoji grid.
+
+|[[opt-R]]`-R`
+|🙈 the "`Recent`" category.
 
 |[[opt-k]]`-k`
 |🙈 the keyword 📜.
