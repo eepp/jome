@@ -13,9 +13,6 @@ set (CMAKE_CXX_EXTENSIONS OFF)
 set (CMAKE_CXX_STANDARD 14)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# data build path
-set (JOME-DATA-DIR "${CMAKE_CURRENT_BINARY_DIR}/data")
-
 # jome
 add_subdirectory (assets)
 add_subdirectory (jome)
