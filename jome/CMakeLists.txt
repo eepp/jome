@@ -16,12 +16,20 @@ find_package (Boost 1.70 REQUIRED)
 
 # JSON for Modern C++
 include (FetchContent)
-FetchContent_Declare (nlohmann URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz)
-FetchContent_MakeAvailable (nlohmann)
+FetchContent_Declare (
+	nlohmann_json
+	URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz
+	FIND_PACKAGE_ARGS
+)
+FetchContent_MakeAvailable (nlohmann_json)
 
 # {fmt}
 set (FMT_INSTALL OFF)
-FetchContent_Declare (fmt URL https://github.com/fmtlib/fmt/releases/download/11.1.4/fmt-11.1.4.zip)
+FetchContent_Declare (
+	fmt URL
+	https://github.com/fmtlib/fmt/releases/download/11.1.4/fmt-11.1.4.zip
+	FIND_PACKAGE_ARGS
+)
 FetchContent_MakeAvailable (fmt)
 
 # jome program
