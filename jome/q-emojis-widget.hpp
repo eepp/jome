@@ -65,6 +65,7 @@ private:
     void _emojiGraphicsItemHoverEntered(const QEmojiGraphicsItem& item);
     void _emojiGraphicsItemHoverLeaved(const QEmojiGraphicsItem& item);
     void _emojiGraphicsItemClicked(const QEmojiGraphicsItem& item);
+    void _addRoundedRectToScene(QGraphicsScene& gs, qreal y, qreal height);
 
 private slots:
     void _selectedItemFlashTimerTimeout();
@@ -72,12 +73,12 @@ private slots:
 private:
     qreal _rowFirstEmojiX(const QGraphicsScene& gs) const
     {
-        const auto availWidth = gs.width() - 8. * 2.;
-        const auto rowEmojiCount = std::floor((availWidth + 8.) / (_emojiDb->emojiSizeInt() + 8.));
+        const auto availWidth = gs.width() - _gutter * 4;
+        const auto rowEmojiCount = std::floor((availWidth + _gutter) / (_emojiDb->emojiSizeInt() + _gutter));
         const auto emojisTotalWidth = rowEmojiCount * _emojiDb->emojiSizeInt() +
-                                      (rowEmojiCount - 1) * 8.;
+                                      (rowEmojiCount - 1) * _gutter;
 
-        return std::floor((availWidth - emojisTotalWidth) / 2.) + 8.;
+        return std::floor((availWidth - emojisTotalWidth) / 2.) + _gutter * 2;
     }
 
     template <typename ContainerT>
@@ -87,7 +88,7 @@ private:
     {
         qreal col = 0.;
         const auto rowFirstEmojiX = this->_rowFirstEmojiX(gs);
-        const auto emojiWidthAndMargin = _emojiDb->emojiSizeInt() + 8.;
+        const auto emojiWidthAndMargin = _emojiDb->emojiSizeInt() + _gutter;
 
         for (auto& emoji : emojis) {
             auto emojiGraphicsItem = new QEmojiGraphicsItem {
@@ -108,7 +109,12 @@ private:
         if (col != 0.) {
             y += emojiWidthAndMargin;
         }
+
+        y -= _gutter;
     }
+
+private:
+    static constexpr qreal _gutter = 8.;
 
 private:
     const EmojiDb * const _emojiDb;

@@ -45,7 +45,9 @@ QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb, con
     this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     // margins, 6 emojis, and scrollbar
-    this->setMinimumWidth(8 + (_emojiDb->emojiSizeInt() + 8) * 7 + 8 + 1);
+    this->setMinimumWidth(static_cast<int>(_gutter * 4 +
+                                           (_emojiDb->emojiSizeInt() + _gutter) * 6 +
+                                           _gutter + 1));
 }
 
 QEmojisWidget::~QEmojisWidget()
@@ -76,7 +78,7 @@ void QEmojisWidget::_selectedItemFlashTimerTimeout()
 
 void QEmojisWidget::_setGraphicsSceneStyle(QGraphicsScene& gs)
 {
-    gs.setBackgroundBrush(QColor {_darkBg ? "#202020" : "#f8f8f8"});
+    gs.setBackgroundBrush(QColor {_darkBg ? "#404040" : "#d0d0d0"});
 }
 
 QGraphicsPixmapItem *QEmojisWidget::_createSelectedGraphicsItem()
@@ -93,6 +95,20 @@ QGraphicsPixmapItem *QEmojisWidget::_createSelectedGraphicsItem()
     return graphicsItem;
 }
 
+void QEmojisWidget::_addRoundedRectToScene(QGraphicsScene& gs, const qreal y, const qreal height)
+{
+    QPainterPath path;
+
+    path.addRoundedRect(QRectF(0., 0., gs.width() - _gutter * 2, height), _gutter, _gutter);
+
+    const auto item = gs.addPath(path);
+
+    item->setPos(_gutter, y);
+    item->setPen(Qt::NoPen);
+    item->setBrush(QColor {_darkBg ? "#202020" : "#f8f8f8"});
+    item->setZValue(-2000.);
+}
+
 void QEmojisWidget::rebuild()
 {
     if (_allEmojisGraphicsSceneSelectedItem->scene()) {
@@ -103,27 +119,38 @@ void QEmojisWidget::rebuild()
     _allEmojisGraphicsScene.addItem(_allEmojisGraphicsSceneSelectedItem);
     _allEmojiGraphicsItems.clear();
     _catVertPositions.clear();
-    _allEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - 8., 0.);
+
+    // scene width: width of this widget minus scrollbar width
+    _allEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - _gutter, 0.);
 
     const auto rowFirstEmojiX = this->_rowFirstEmojiX(_allEmojisGraphicsScene);
-    qreal y = 8.;
+    qreal y = _gutter;
 
     for (const auto& cat : _emojiDb->cats()) {
-        auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()),
-                                                    QFont {"Hack, DejaVu Sans Mono, monospace",
-                                                           10, QFont::Bold});
-
-        item->setDefaultTextColor(QColor {_darkBg ? "#f8f8f8" : "#202020"});
-        item->setPos(rowFirstEmojiX, y);
         _catVertPositions[cat.get()] = y;
-        y += 24.;
+
+        const auto rectBeginY = y;
+
+        y += _gutter;
+
+        {
+            auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()),
+                                                        QFont {"Hack, DejaVu Sans Mono, monospace",
+                                                               10, QFont::Bold});
+
+            item->setDefaultTextColor(QColor {_darkBg ? "#f8f8f8" : "#202020"});
+            item->setPos(rowFirstEmojiX, y);
+        }
+
+        y += 32.;
         this->_addEmojisToGraphicsScene(cat->emojis(), _allEmojiGraphicsItems,
                                         _allEmojisGraphicsScene, y);
-        y += 8.;
+        y += _gutter;
+        this->_addRoundedRectToScene(_allEmojisGraphicsScene, rectBeginY, y - rectBeginY);
+        y += _gutter;
     }
 
-    y -= 8.;
-    _allEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - 8., y);
+    _allEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - _gutter, y);
 }
 
 void QEmojisWidget::showAllEmojis()
@@ -142,14 +169,23 @@ void QEmojisWidget::showFindResults(const std::vector<const Emoji *>& results)
     _findEmojisGraphicsScene.clear();
     _findEmojisGraphicsScene.addItem(_findEmojisGraphicsSceneSelectedItem);
     _curEmojiGraphicsItems.clear();
-    _findEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - 8., 0.);
+
+    // scene width: width of this widget minus scrollbar width
+    _findEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - _gutter, 0.);
 
     qreal y = 0.;
 
     if (!results.empty()) {
-        y = 8.;
+        y = _gutter;
+
+        const auto rectBeginY = y;
+
+        y += _gutter;
         this->_addEmojisToGraphicsScene(results, _curEmojiGraphicsItems,
                                         _findEmojisGraphicsScene, y);
+        y += _gutter;
+        this->_addRoundedRectToScene(_findEmojisGraphicsScene, rectBeginY, y - rectBeginY);
+        y += _gutter;
     }
 
     _findEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - 8., y);
