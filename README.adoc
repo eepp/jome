@@ -17,8 +17,9 @@ Philippe Proulx <eepp.ca>
 
 You can also pick an emoji with the 🖱️, don't worry.
 
-jome has most of the interesting emojis of ⬆️ to
-https://emojipedia.org/emoji-15.1/[Emoji{nbsp}15.1].
+jome has all the emojis of ⬆️ to
+https://emojipedia.org/emoji-15.1/[Emoji{nbsp}15.1], including
+with skin tones.
 
 I'm not a fan of the usual very broad categories of emojis which do not
 intersect so I made my own categories. A given emoji can be found in
