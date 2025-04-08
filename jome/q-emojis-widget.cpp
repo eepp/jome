@@ -39,7 +39,8 @@ QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb, con
     if (selectedEmojiFlashPeriod) {
         QObject::connect(&_selectedItemFlashTimer, &QTimer::timeout,
                          this, &QEmojisWidget::_selectedItemFlashTimerTimeout);
-        _selectedItemFlashTimer.start(*selectedEmojiFlashPeriod / 2);
+        _selectedItemFlashTimer.setInterval(*selectedEmojiFlashPeriod / 2);
+        _selectedItemFlashTimer.start();
     }
 
     this->setAlignment(Qt::AlignLeft | Qt::AlignTop);
@@ -235,6 +236,7 @@ void QEmojisWidget::_selectEmojiGraphicsItem(const boost::optional<unsigned int>
     _selectedEmojiGraphicsItemIndex = index;
 
     if (!index) {
+        _selectedItemFlashTimer.stop();
         selectedItem->hide();
         emit this->selectionChanged(nullptr);
         return;
@@ -245,6 +247,7 @@ void QEmojisWidget::_selectEmojiGraphicsItem(const boost::optional<unsigned int>
     const auto& emojiGraphicsItem = *_curEmojiGraphicsItems[*index];
 
     selectedItem->show();
+    _selectedItemFlashTimer.start();
     selectedItem->setPos(emojiGraphicsItem.pos().x() - 4.,
                          emojiGraphicsItem.pos().y() - 4.);
 
