@@ -145,8 +145,10 @@ When there's at least 1️⃣ emoji, there's always a selected emoji with a
 +
 Hover an emoji to update the ⬇️ emoji info text temporarily.
 +
-Use the <<opt-d,`-d`{nbsp}option>> to make the background behind emojis
-dark.
+Make the background behind emojis 🌚 with the
+<<opt-d,`-d`{nbsp}option>>.
++
+🙈 the category 🏷️ with the <<opt-L,`-L`{nbsp}option>>.
 
 Category 📜::
     📜 of available categories.
@@ -432,6 +434,9 @@ same{nbsp}⌚.
 
 |[[opt-C]]`-C`
 |🙈 the category 📜.
+
+|[[opt-L]]`-L`
+|🙈 the category 🏷️ in the emoji grid.
 
 |[[opt-k]]`-k`
 |🙈 the keyword 📜.

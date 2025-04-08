@@ -61,7 +61,8 @@ class QJomeWindow final :
     Q_OBJECT
 
 public:
-    explicit QJomeWindow(const EmojiDb& emojiDb, bool darkBg, bool noCatList, bool noKwList,
+    explicit QJomeWindow(const EmojiDb& emojiDb, bool darkBg, bool noCatList, bool noCatLabels,
+                         bool noKwList,
                          const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
 
 signals:
@@ -76,7 +77,7 @@ private:
     void closeEvent(QCloseEvent *event) override;
     void showEvent(QShowEvent *event) override;
     void _setMainStyleSheet();
-    void _buildUi(bool darkBg, bool noCatList, bool noKwList,
+    void _buildUi(bool darkBg, bool noCatList, bool noCatLabels, bool noKwList,
                   const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
     QListWidget *_createCatListWidget();
     void _updateBottomLabels(const Emoji *emoji);

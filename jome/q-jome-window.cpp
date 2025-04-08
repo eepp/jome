@@ -125,7 +125,7 @@ bool QSearchBoxEventFilter::eventFilter(QObject * const obj, QEvent * const even
 }
 
 QJomeWindow::QJomeWindow(const EmojiDb& emojiDb, const bool darkBg, const bool noCatList,
-                         const bool noKwList,
+                         const bool noCatLabels, const bool noKwList,
                          const boost::optional<unsigned int>& selectedEmojiFlashPeriod) :
     _emojiDb {&emojiDb}
 {
@@ -133,7 +133,7 @@ QJomeWindow::QJomeWindow(const EmojiDb& emojiDb, const bool darkBg, const bool n
     this->setWindowTitle("jome");
     this->resize(800, 600);
     this->_setMainStyleSheet();
-    this->_buildUi(darkBg, noCatList, noKwList, selectedEmojiFlashPeriod);
+    this->_buildUi(darkBg, noCatList, noCatLabels, noKwList, selectedEmojiFlashPeriod);
 }
 
 void QJomeWindow::_setMainStyleSheet()
@@ -212,7 +212,8 @@ void setQLabelFgColor(QLabel& widget, const QColor& color)
 
 } // namespace
 
-void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool noKwList,
+void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool noCatLabels,
+                           const bool noKwList,
                            const boost::optional<unsigned int>& selectedEmojiFlashPeriod)
 {
     _wSearchBox = new QLineEdit;
@@ -260,7 +261,7 @@ void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool n
     mainVbox->setMargin(8);
     mainVbox->setSpacing(8);
     mainVbox->addWidget(_wSearchBox);
-    _wEmojis = new QEmojisWidget {nullptr, *_emojiDb, darkBg, selectedEmojiFlashPeriod};
+    _wEmojis = new QEmojisWidget {nullptr, *_emojiDb, darkBg, noCatLabels, selectedEmojiFlashPeriod};
     QObject::connect(_wEmojis, &QEmojisWidget::selectionChanged, this,
                      &QJomeWindow::_emojiSelectionChanged);
     QObject::connect(_wEmojis, &QEmojisWidget::emojiClicked, this, &QJomeWindow::_emojiClicked);

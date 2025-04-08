@@ -44,6 +44,7 @@ struct Params final
     unsigned int maxRecentEmojis;
     bool removeVs16;
     bool noCatList;
+    bool noCatLabels;
     bool noKwList;
     boost::optional<jome::Emoji::SkinTone> defSkinTone;
 };
@@ -69,6 +70,7 @@ Params parseArgs(QApplication& app)
     const QCommandLineOption serverNameOpt {"s", "Set server name to <NAME>.", "NAME"};
     const QCommandLineOption darkBgOpt {"d", "Use dark emoji background."};
     const QCommandLineOption noCatListOpt {"C", "Hide category list."};
+    const QCommandLineOption noCatLabelsOpt {"L", "Hide category labels."};
     const QCommandLineOption noKwListOpt {"k", "Hide keyword list."};
     const QCommandLineOption emojiWidthOpt {"w", "Set emoji width to <WIDTH> px (16, 24, 32, 40, or 48).", "WIDTH"};
     const QCommandLineOption selectedEmojiFlashPeriodOpt {"P", "Set selected emoji flashing period to <PERIOD> ms.", "PERIOD"};
@@ -85,6 +87,7 @@ Params parseArgs(QApplication& app)
     parser.addOption(serverNameOpt);
     parser.addOption(darkBgOpt);
     parser.addOption(noCatListOpt);
+    parser.addOption(noCatLabelsOpt);
     parser.addOption(noKwListOpt);
     parser.addOption(emojiWidthOpt);
     parser.addOption(selectedEmojiFlashPeriodOpt);
@@ -99,6 +102,7 @@ Params parseArgs(QApplication& app)
     params.copyToClipboard = parser.isSet(copyToClipboardOpt);
     params.removeVs16 = parser.isSet(removeVs16Opt);
     params.noCatList = parser.isSet(noCatListOpt);
+    params.noCatLabels = parser.isSet(noCatLabelsOpt);
     params.noKwList = parser.isSet(noKwListOpt);
 
     {
@@ -280,7 +284,8 @@ int main(int argc, char **argv)
 
     const auto params = parseArgs(app);
     jome::EmojiDb db {JOME_DATA_DIR, params.emojiSize, params.maxRecentEmojis};
-    jome::QJomeWindow win {db, params.darkBg, params.noCatList, params.noKwList, params.selectedEmojiFlashPeriod};
+    jome::QJomeWindow win {db, params.darkBg, params.noCatList, params.noCatLabels,
+                           params.noKwList, params.selectedEmojiFlashPeriod};
 
     QObject::connect(&win, &jome::QJomeWindow::canceled, [&app, &server, &db]() {
         if (server) {

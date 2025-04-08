@@ -35,7 +35,7 @@ public:
 
 public:
     explicit QEmojisWidget(QWidget *parent, const EmojiDb& emojiDb,
-                           bool darkBg,
+                           bool darkBg, bool noCatLabels,
                            const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
 
     ~QEmojisWidget();
@@ -129,6 +129,7 @@ private:
     QGraphicsPixmapItem *_findEmojisGraphicsSceneSelectedItem = nullptr;
     QTimer _selectedItemFlashTimer;
     bool _darkBg;
+    bool _noCatLabels;
 };
 
 } // namespace jome

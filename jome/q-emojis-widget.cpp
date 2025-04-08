@@ -23,11 +23,13 @@
 namespace jome {
 
 QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb, const bool darkBg,
+                             const bool noCatLabels,
                              const boost::optional<unsigned int>& selectedEmojiFlashPeriod) :
     QGraphicsView {parent},
     _emojiDb {&emojiDb},
     _emojiImages {emojiDb},
-    _darkBg {darkBg}
+    _darkBg {darkBg},
+    _noCatLabels {noCatLabels}
 {
     _allEmojisGraphicsSceneSelectedItem = this->_createSelectedGraphicsItem();
     _findEmojisGraphicsSceneSelectedItem = this->_createSelectedGraphicsItem();
@@ -134,16 +136,19 @@ void QEmojisWidget::rebuild()
 
         y += _gutter;
 
-        {
-            auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()),
-                                                        QFont {"Hack, DejaVu Sans Mono, monospace",
-                                                               10, QFont::Bold});
+        if (!_noCatLabels) {
+            {
+                auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()),
+                                                            QFont {"Hack, DejaVu Sans Mono, monospace",
+                                                                   10, QFont::Bold});
 
-            item->setDefaultTextColor(QColor {_darkBg ? "#f8f8f8" : "#202020"});
-            item->setPos(rowFirstEmojiX, y);
+                item->setDefaultTextColor(QColor {_darkBg ? "#f8f8f8" : "#202020"});
+                item->setPos(rowFirstEmojiX, y);
+            }
+
+            y += 32.;
         }
 
-        y += 32.;
         this->_addEmojisToGraphicsScene(cat->emojis(), _allEmojiGraphicsItems,
                                         _allEmojisGraphicsScene, y);
         y += _gutter;
