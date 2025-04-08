@@ -298,6 +298,9 @@ void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool n
 
         _wInfoLabel = new QLabel {""};
         setQLabelFgColor(*_wInfoLabel, "#ff3366");
+        _wInfoLabel->setWordWrap(false);
+        _wInfoLabel->setTextInteractionFlags(Qt::NoTextInteraction);
+        _wInfoLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
         infoHbox->addWidget(_wInfoLabel);
         _wVersionLabel = new QLabel {""};
         setQLabelFgColor(*_wVersionLabel, "#2ecc71");
