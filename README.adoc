@@ -88,11 +88,14 @@ $ sudo make install
 == Install on Arch Linux
 
 To install on Arch Linux from the
-https://aur.archlinux.org/packages/jome-git[jome-git] AUR package:
+https://aur.archlinux.org/packages/jome[`jome`] AUR package:
 
 ----
-$ yay -Sy jome-git
+$ yay -Sy jome
 ----
+
+NOTE: https://aur.archlinux.org/packages/jome-git[`jome-git`] is
+also available.
 
 
 == Usage
