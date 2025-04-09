@@ -418,94 +418,6 @@ Then, bind a ⌨️ shortcut to:
 $ jome-ctl mein-server
 ----
 
-[[type]]
-== ⌨️ the ✅ emoji
-
-Here are Bash 📜 to ⌨️ the ✅ emoji with
-https://www.semicomplete.com/projects/xdotool/[xdotool].
-
-=== Direct mode
-
-With `xdotool key`::
-+
-[source,bash]
-----
-#!/usr/bin/bash
-
-codepoints=$(jome -f cp -p U)
-
-if (($? != 0)); then
-    exit 1
-fi
-
-xdotool key --delay 20 $codepoints
-----
-
-With `xdotool type`::
-+
-[source,bash]
-----
-#!/usr/bin/bash
-
-emoji=$(jome)
-
-if (($? != 0)); then
-    exit 1
-fi
-
-xdotool type "$emoji"
-----
-
-=== Server mode
-
-With `xdotool key`::
-+
-[source,bash]
-----
-#!/usr/bin/bash
-
-socket_name=jome.socket.$(id -u)
-
-if [[ ! -e "/tmp/$socket_name" ]]; then
-    jome -s "$socket_name" -n -w48 -f cp -p U & disown
-
-    until [[ -e "/tmp/$socket_name" ]]; do
-        sleep .1
-    done
-fi
-
-emoji=$(jome-ctl "$socket_name")
-
-if (($? == 0)); then
-    sleep .02
-    xdotool key --delay 20 "$emoji"
-fi
-----
-
-With `xdotool type`::
-+
-[source,bash]
-----
-#!/usr/bin/bash
-
-socket_name=jome.socket.$(id -u)
-
-if [[ ! -e "/tmp/$socket_name" ]]; then
-    jome -s "$socket_name" -n -w48 & disown
-
-    until [[ -e "/tmp/$socket_name" ]]; do
-        sleep .1
-    done
-fi
-
-emoji=$(jome-ctl "$socket_name")
-
-if (($? == 0)); then
-    sleep .02
-    xdotool type "$emoji"
-fi
-----
-
 [[cl-options]]
 === Command-line options
 
@@ -649,3 +561,91 @@ The selection 🔲 doesn't flash by default.
 |Set the maximum number of recently ✅ emojis
 to{nbsp}``__COUNT__`` instead of{nbsp}30.
 |===
+
+[[type]]
+== ⌨️ the ✅ emoji
+
+Here are Bash 📜 to ⌨️ the ✅ emoji with
+https://www.semicomplete.com/projects/xdotool/[xdotool].
+
+=== Direct mode
+
+With `xdotool key`::
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+codepoints=$(jome -f cp -p U)
+
+if (($? != 0)); then
+    exit 1
+fi
+
+xdotool key --delay 20 "$codepoints"
+----
+
+With `xdotool type`::
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+emoji=$(jome)
+
+if (($? != 0)); then
+    exit 1
+fi
+
+xdotool type "$emoji"
+----
+
+=== Server mode
+
+With `xdotool key`::
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+socket_name=jome.socket.$(id -u)
+
+if [[ ! -e "/tmp/$socket_name" ]]; then
+    jome -s "$socket_name" -n -w48 -f cp -p U & disown
+
+    until [[ -e "/tmp/$socket_name" ]]; do
+        sleep .1
+    done
+fi
+
+codepoints=$(jome-ctl "$socket_name")
+
+if (($? == 0)); then
+    sleep .02
+    xdotool key --delay 20 "$codepoints"
+fi
+----
+
+With `xdotool type`::
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+socket_name=jome.socket.$(id -u)
+
+if [[ ! -e "/tmp/$socket_name" ]]; then
+    jome -s "$socket_name" -n -w48 & disown
+
+    until [[ -e "/tmp/$socket_name" ]]; do
+        sleep .1
+    done
+fi
+
+emoji=$(jome-ctl "$socket_name")
+
+if (($? == 0)); then
+    sleep .02
+    xdotool type "$emoji"
+fi
+----
