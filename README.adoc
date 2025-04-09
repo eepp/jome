@@ -13,6 +13,12 @@ endif::env-github[]
 Philippe Proulx <eepp.ca>
 8 April 2025
 
+https://github.com/eepp/jome/releases/tag/v1.2.1[image:https://img.shields.io/github/v/release/eepp/jome?display_name=release[GitHub Release]]
+https://aur.archlinux.org/packages/jome[image:https://img.shields.io/aur/version/jome?&label=AUR[AUR Version]]
+image:https://img.shields.io/github/license/eepp/jome[GitHub License]
+https://github.com/eepp/jome/stargazers[image:https://img.shields.io/github/stars/eepp/jome?style=flat&label=GH%20stars[GitHub Repo stars]]
+
+[.lead]
 **jome** (_joh_·_mee_) is a ⌨️ centric emoji picker 🖥️ application.
 
 You can also pick an emoji with the 🖱️, don't worry.
