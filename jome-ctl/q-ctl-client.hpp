@@ -32,6 +32,7 @@ public:
 signals:
     void error();
     void serverReplied(const std::string& str);
+    void serverCancelled();
 
 private slots:
     void _socketConnected();

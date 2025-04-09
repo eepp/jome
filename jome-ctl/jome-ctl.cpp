@@ -81,6 +81,17 @@ int main(int argc, char **argv)
         QTimer::singleShot(0, &app, &QCoreApplication::quit);
     });
 
+    QObject::connect(&client, &jome::QCtlClient::serverCancelled, [&params, &app]() {
+        QTimer::singleShot(0, &app, [&params, &app] {
+            if (params.cmd == jome::QCtlClient::Command::Pick) {
+                app.exit(1);
+                return;
+            }
+
+            app.exit(0);
+        });
+    });
+
     QObject::connect(&client, &jome::QCtlClient::error, [&app]() {
         // just quit
         QTimer::singleShot(0, &app, [&app]() {

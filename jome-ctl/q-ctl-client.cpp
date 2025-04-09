@@ -64,7 +64,12 @@ void QCtlClient::_socketReadyRead()
 
         if (byte == '\0') {
             // end of message
-            emit this->serverReplied(_tmpData);
+            if (_tmpData.empty()) {
+                emit this->serverCancelled();
+            } else {
+                emit this->serverReplied(_tmpData);
+            }
+
             _tmpData.clear();
         } else {
             _tmpData += byte;
