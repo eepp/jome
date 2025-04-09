@@ -6,7 +6,7 @@
 cmake_minimum_required (VERSION 3.30.0 FATAL_ERROR)
 
 # project and version
-project (jome VERSION 1.2.0)
+project (jome VERSION 1.2.1)
 
 # configure compiler globally for C++14
 set (CMAKE_CXX_EXTENSIONS OFF)
