@@ -34,7 +34,6 @@ ifdef::env-github[]
 toc::[]
 endif::env-github[]
 
-
 == Preview
 
 Default view:: {empty}
@@ -95,9 +94,9 @@ You need:
 * A {cpp}14 compiler
 * http://www.boost.org/[Boost] ≥ 1.70 (only to 🏗)
 * https://json.nlohmann.me/[JSON for Modern C++] (only to 🏗,
-  automatically 📥 by CMake)
+  automatically 📥 by CMake if not found locally)
 * https://fmt.dev/[pass:[{fmt}]] (only to 🏗,
-  automatically 📥 by CMake)
+  automatically 📥 by CMake if not found locally)
 * Qt 5 (_Core_, _GUI_, _Widgets_, and _Network_ modules)
 
 .🏗 jome
@@ -115,7 +114,6 @@ don't want to install it on your system, use
 $ sudo make install
 ----
 
-
 == Install on Arch Linux
 
 To install on Arch Linux from the
@@ -128,10 +126,13 @@ $ yay -Sy jome
 NOTE: https://aur.archlinux.org/packages/jome-git[`jome-git`] is
 also available.
 
-
 == Usage
 
-jome's purpose is to help you _pick_ an emoji.
+jome's purpose is to help you _pick_ an emoji. In other words, it
+doesn't really care what you do with the chosen emoji afterwards: you
+can leverage 🛠️ such as **xdotool**(1) to "`type`" it or **xsel**(1)
+to copy it to the 📋. See <<type,⌨️ the ✅ emoji>>
+and the <<opt-c,`-c`{nbsp}option>> for a starting point.
 
 When you <<accept-emoji,✅>> an emoji (with the ⌨️ or with the 🖱️),
 jome 🖨️ the UTF-8 emoji or the Unicode codepoints (👀 the
@@ -159,7 +160,6 @@ If you don't start jome in <<server-mode,server mode>>
 <<opt-q,`-q`{nbsp}option>>, then jome immediately 👋 after you ✅
 an emoji or close the 🪟.
 
-
 === Graphical interface
 
 image::screenshots/all.png[]
@@ -169,7 +169,7 @@ There are 4️⃣ sections:
 [[find-box]]🔍 box (⬆️)::
     Input box where you can ⌨️ a query to <<find-emojis,🔍 emojis>>.
 
-Emojis::
+Emoji grid::
     All emojis (with an empty 🔍 box) or 🔍 results.
 +
 When there's at least 1️⃣ emoji, there's always a selected emoji with a
@@ -194,7 +194,7 @@ Category 📜::
 When all emojis are 👁️ (the 🔍 box is empty), 🖱️ a category
 name to scroll to this emoji category.
 +
-The first category, _Recent_, is a special category with the recently
+The first category, "`Recent`", is a special category with the recently
 ✅ emojis.
 +
 Use the <<opt-H,`-H`{nbsp}option>> to override the maximum number
@@ -205,11 +205,10 @@ of recently ✅ emojis.
 🙈 the whole category 📜 with the <<opt-C,`-C`{nbsp}option>>.
 
 Emoji info text (⬇️)::
-    Name, Unicode codepoints, Emoji standard version, and keywords of the
-    selected or hovered emoji.
+    Name, Unicode codepoints, Emoji standard version, and keywords of
+    the selected or hovered emoji.
 +
 🙈 the keyword list 📜 with the <<opt-k,`-k`{nbsp}option>>.
-
 
 [[find-emojis]]
 === 🔍 emojis
@@ -236,7 +235,6 @@ where:
 +
 For an emoji to be part of the results, at least 1️⃣ of its keywords
 must contain _all_ the 🔍 terms.
-
 
 [[select]]
 === Select and ✅ an emoji
@@ -296,7 +294,6 @@ See the <<opt-V,`-V`{nbsp}option>> option.
 
 To ❌, 👇 **Escape** or **Ctrl**pass:[+]**C**, or close the 🪟.
 
-
 === Go to Emojipedia page
 
 To go to the https://emojipedia.org/[Emojipedia] 🌐 of the
@@ -304,7 +301,6 @@ To go to the https://emojipedia.org/[Emojipedia] 🌐 of the
 
 To go to the Emojipedia 🌐 of any emoji with the 🖱️, right-click it and
 click "`Go to Emojipedia page`".
-
 
 === 👤-defined emoji keywords
 
@@ -353,6 +349,161 @@ Example:
     "extra-keywords": ["canada dry", "martin deschamps"]
   }
 }
+----
+
+[[server-mode]]
+=== Server mode
+
+jome features a server mode to avoid creating a process (a Qt 🪟 can
+be quite long to create) every ⌚ you need to pick an emoji. With this
+mode, you can 👁️ the jome 🪟 instantaneously.
+
+To start jome in server mode, use the <<opt-s,`-s`{nbsp}option>> to
+specify the server name:
+
+----
+$ jome -s mein-server
+----
+
+This creates a local server named `mein-server`. On Unix, it creates the
+socket 📄 `/tmp/mein-server`.
+
+[IMPORTANT]
+--
+On Unix, the server mode won't work if the socket 📄
+already exists. Remove the 📄 before you start jome in server mode:
+
+----
+$ rm -f /tmp/mein-server
+$ jome -s mein-server
+----
+--
+
+When jome starts in server mode, it doesn't 👁️ its 🪟. Instead,
+it ⌛ for a command sent by the client, `jome-ctl`. To 👁️ the
+🪟:
+
+----
+$ jome-ctl mein-server
+----
+
+When you <<accept-emoji,✅>> an emoji, `jome-ctl` 🖨️ what jome
+also 🖨️ to the standard output and 👋 with exit code 0️⃣.
+Therefore, the output format of `jome-ctl` is 🎛 by the
+<<cl-options,options>> passed to `jome`.
+
+If you ❌ jome (👇 **Escape** or **Ctrl**pass:[+]**C**, or
+close the 🪟), `jome-ctl` 🖨️ nothing and returns with exit code 1️⃣.
+
+In server mode, jome doesn't 👋 once you ✅ an emoji or ❌:
+it 🙈 the 🪟 and keeps 👂. To make it 👋 gracefully,
+which also removes the socket 📄:
+
+----
+$ jome-ctl mein-server quit
+----
+
+You don't need to use what `jome-ctl` 🖨️ to the standard output. You can
+use jome in server mode with the <<opt-c,`-c`{nbsp}option>> to make jome
+execute a command itself. For example:
+
+----
+$ rm -f /tmp/mein-server
+$ jome -s mein-server -c 'xdotool type'
+----
+
+Then, bind a ⌨️ shortcut to:
+
+----
+$ jome-ctl mein-server
+----
+
+[[type]]
+== ⌨️ the ✅ emoji
+
+Here are Bash 📜 to ⌨️ the ✅ emoji with
+https://www.semicomplete.com/projects/xdotool/[xdotool].
+
+=== Direct mode
+
+With `xdotool key`::
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+codepoints=$(jome -f cp -p U)
+
+if (($? != 0)); then
+    exit 1
+fi
+
+xdotool key --delay 20 $codepoints
+----
+
+With `xdotool type`::
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+emoji=$(jome)
+
+if (($? != 0)); then
+    exit 1
+fi
+
+xdotool type "$emoji"
+----
+
+=== Server mode
+
+With `xdotool key`::
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+socket_name=jome.socket.$(id -u)
+
+if [[ ! -e "/tmp/$socket_name" ]]; then
+    jome -s "$socket_name" -n -w48 -f cp -p U & disown
+
+    until [[ -e "/tmp/$socket_name" ]]; do
+        sleep .1
+    done
+fi
+
+emoji=$(jome-ctl "$socket_name")
+
+if (($? == 0)); then
+    sleep .02
+    xdotool key --delay 20 "$emoji"
+fi
+----
+
+With `xdotool type`::
++
+[source,bash]
+----
+#!/usr/bin/bash
+
+socket_name=jome.socket.$(id -u)
+
+if [[ ! -e "/tmp/$socket_name" ]]; then
+    jome -s "$socket_name" -n -w48 & disown
+
+    until [[ -e "/tmp/$socket_name" ]]; do
+        sleep .1
+    done
+fi
+
+emoji=$(jome-ctl "$socket_name")
+
+if (($? == 0)); then
+    sleep .02
+    xdotool type "$emoji"
+fi
 ----
 
 [[cl-options]]
@@ -413,7 +564,7 @@ The **F1** to **F5** keys still <<accept-emoji,✅>> an emoji
 with a specific skin tone.
 
 |[[opt-c]]`-c _CMD_`
-|When you ✅ an emoji, execute command `_CMD_` 20{nbsp}ms
+|When you ✅ an emoji, execute the command `_CMD_` 20{nbsp}ms
 _after_ closing the jome 🪟.
 
 jome interprets `_CMD_` like a 🐚 does, so you can have arguments too.
@@ -451,7 +602,7 @@ By default, when you ✅ an emoji (with the ⌨️ or with the 🖱️), jome:
 . **If not running in server mode**, 👋 (👀 the
   <<opt-s,`-s`{nbsp}option>>).
 
-With the `-q`{nbsp}option, jome does not 🙈 its 🪟 and does not 👋
+With the `-q`{nbsp}option, jome doesn't 🙈 its 🪟 and doesn't 👋
 when you ✅ an emoji so that you can make it 🖨️ multiple emojis
 and/or execute a command multiple ⌚ with multiple emojis without
 restarting the application.
@@ -498,161 +649,3 @@ The selection 🔲 doesn't flash by default.
 |Set the maximum number of recently ✅ emojis
 to{nbsp}``__COUNT__`` instead of{nbsp}30.
 |===
-
-
-[[server-mode]]
-=== Server mode
-
-jome features a server mode to avoid creating a process (a Qt 🪟 can
-be quite long to create) every ⌚ you need to pick an emoji. With this
-mode, you can 👁️ the jome 🪟 instantaneously.
-
-To start jome in server mode, use the <<opt-s,`-s`{nbsp}option>> to
-specify the server name:
-
-----
-$ jome -s mein-server
-----
-
-This creates a local server named `mein-server`. On Unix, it creates the
-socket 📄 `/tmp/mein-server`.
-
-[IMPORTANT]
---
-On Unix, the server mode won't work if the socket 📄
-already exists. Remove the 📄 before you start jome in server mode:
-
-----
-$ rm -f /tmp/mein-server
-$ jome -s mein-server
-----
---
-
-When jome starts in server mode, it does not 👁️ its 🪟. Instead,
-it ⌛ for a command sent by the client, `jome-ctl`. To 👁️ the
-🪟:
-
-----
-$ jome-ctl mein-server
-----
-
-When you <<accept-emoji,✅>> an emoji, `jome-ctl` 🖨️ what jome
-also 🖨️ to the standard output and 👋 with exit code 0️⃣.
-Therefore, the output format of `jome-ctl` is 🎛 by the
-<<cl-options,options>> passed to `jome`.
-
-If you ❌ jome (👇 **Escape** or **Ctrl**pass:[+]**C**, or
-close the 🪟), `jome-ctl` 🖨️ nothing and returns with exit code 1️⃣.
-
-In server mode, jome does not 👋 once you ✅ an emoji or ❌:
-it 🙈 the 🪟 and keeps 👂. To make it 👋 gracefully,
-which also removes the socket 📄:
-
-----
-$ jome-ctl mein-server quit
-----
-
-You don't need to use what `jome-ctl` 🖨️ to the standard output. You can
-use jome in server mode with the <<opt-c,`-c`{nbsp}option>> to make jome
-execute a command itself. For example:
-
-----
-$ rm -f mein-server
-$ jome -s mein-server -c 'xdotool type'
-----
-
-Then, bind a ⌨️ shortcut to:
-
-----
-$ jome-ctl mein-server
-----
-
-
-== ⌨️ the ✅ emoji
-
-Here are Bash 📜 to ⌨️ the ✅ emoji with
-https://www.semicomplete.com/projects/xdotool/[xdotool].
-
-
-=== Direct mode
-
-With `xdotool key`::
-+
-[source,bash]
-----
-#!/usr/bin/bash
-
-codepoints=$(jome -f cp -p U)
-
-if (($? != 0)); then
-    exit 1
-fi
-
-xdotool key --delay 20 $codepoints
-----
-
-With `xdotool type`::
-+
-[source,bash]
-----
-#!/usr/bin/bash
-
-emoji=$(jome)
-
-if (($? != 0)); then
-    exit 1
-fi
-
-xdotool type "$emoji"
-----
-
-
-=== Server mode
-
-With `xdotool key`::
-+
-[source,bash]
-----
-#!/usr/bin/bash
-
-socket_name=jome.socket.$(id -u)
-
-if [[ ! -e "/tmp/$socket_name" ]]; then
-    jome -s "$socket_name" -n -w48 -f cp -p U & disown
-
-    until [[ -e "/tmp/$socket_name" ]]; do
-        sleep .1
-    done
-fi
-
-emoji=$(jome-ctl "$socket_name")
-
-if (($? == 0)); then
-    sleep .02
-    xdotool key --delay 20 "$emoji"
-fi
-----
-
-With `xdotool type`::
-+
-[source,bash]
-----
-#!/usr/bin/bash
-
-socket_name=jome.socket.$(id -u)
-
-if [[ ! -e "/tmp/$socket_name" ]]; then
-    jome -s "$socket_name" -n -w48 & disown
-
-    until [[ -e "/tmp/$socket_name" ]]; do
-        sleep .1
-    done
-fi
-
-emoji=$(jome-ctl "$socket_name")
-
-if (($? == 0)); then
-    sleep .02
-    xdotool type "$emoji"
-fi
-----
