@@ -399,7 +399,7 @@ void EmojiDb::_createEmojiPngLocations(const std::string& dir)
     }
 }
 
-void EmojiDb::findEmojis(const std::string& cat, const std::string& needlesStr,
+void EmojiDb::findEmojis(const std::string& catName, const std::string& needlesStr,
                          std::vector<const Emoji *>& results) const
 {
     // split needles string into individual needles
@@ -412,23 +412,23 @@ void EmojiDb::findEmojis(const std::string& cat, const std::string& needlesStr,
     }
 
     // trim category
-    const auto catTrimmed = call([&cat] {
-        std::string catTrimmed {cat};
+    const auto catNameTrimmed = call([&catName] {
+        std::string catNameTrimmed {catName};
 
-        boost::trim(catTrimmed);
-        return catTrimmed;
+        boost::trim(catNameTrimmed);
+        return catNameTrimmed;
     });
 
     // this is to avoid duplicate entries in `results`
     _tmpFoundEmojis.clear();
 
     for (auto& cat : _cats) {
-        if (!catTrimmed.empty() && cat->lcName().find(catTrimmed) == std::string::npos) {
+        if (!catNameTrimmed.empty() && cat->lcName().find(catNameTrimmed) == std::string::npos) {
             // we don't want to search this category
             continue;
         }
 
-        for (auto& emoji : cat->emojis()) {
+        for (auto emoji : cat->emojis()) {
             auto select = true;
 
             for (auto& keyword : emoji->keywords()) {
@@ -440,7 +440,7 @@ void EmojiDb::findEmojis(const std::string& cat, const std::string& needlesStr,
                     }
 
                     if (keyword.find(needle) == std::string::npos) {
-                        // this keyword does not this needle
+                        // this keyword does not contain this needle
                         select = false;
                         break;
                     }
