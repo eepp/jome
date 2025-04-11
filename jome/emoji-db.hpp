@@ -206,11 +206,6 @@ public:
         return _emojis.count(str) >= 1;
     }
 
-    const std::unordered_set<QString>& keywords() const noexcept
-    {
-        return _keywords;
-    }
-
     const std::unordered_map<const Emoji *, EmojisPngLocation>& emojiPngLocations() const noexcept
     {
         return _emojiPngLocations;
@@ -243,7 +238,6 @@ private:
     const QString _emojisPngPath;
     std::vector<std::unique_ptr<EmojiCat>> _cats;
     std::unordered_map<QString, std::unique_ptr<const Emoji>> _emojis;
-    std::unordered_set<QString> _keywords;
     std::unordered_map<const Emoji *, EmojisPngLocation> _emojiPngLocations;
     mutable std::set<_FindResult> _tmpFindResults;
     mutable std::set<const Emoji *> _tmpFindResultEmojis;
