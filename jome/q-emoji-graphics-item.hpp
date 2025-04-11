@@ -10,7 +10,6 @@
 
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
-#include <functional>
 
 #include "emoji-db.hpp"
 
@@ -21,9 +20,6 @@ class QEmojisWidget;
 class QEmojiGraphicsItem final :
     public QGraphicsPixmapItem
 {
-public:
-    using SelectEmojiFunc = std::function<void (const Emoji& emoji)>;
-
 public:
     explicit QEmojiGraphicsItem(const Emoji& emoji, const QPixmap& pixmap,
                                 QEmojisWidget& emojisWidget);
