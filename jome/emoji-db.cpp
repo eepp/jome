@@ -341,19 +341,6 @@ void EmojiDb::_createEmojis(const std::string& dir)
                                                  }));
         });
 
-        for (auto& keyword : emoji->keywords()) {
-            _keywords.insert(keyword);
-
-            auto it = _keywordEmojis.find(keyword);
-
-            if (it == _keywordEmojis.end()) {
-                it = _keywordEmojis.insert(std::make_pair(keyword,
-                                                          decltype(_keywordEmojis)::mapped_type {})).first;
-            }
-
-            it->second.insert(emoji.get());
-        }
-
         _emojis[emoji->str()] = std::move(emoji);
     }
 }

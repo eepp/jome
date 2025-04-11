@@ -210,10 +210,6 @@ public:
         return _emojiPngLocations;
     }
 
-    const std::unordered_set<const Emoji *>& emojisForKeyword(const std::string& keyword) const
-    {
-        return _keywordEmojis.find(keyword)->second;
-    }
 
 private:
     void _createEmojis(const std::string& dir);
@@ -225,7 +221,6 @@ private:
     const std::string _emojisPngPath;
     std::vector<std::unique_ptr<EmojiCat>> _cats;
     std::unordered_map<std::string, std::unique_ptr<const Emoji>> _emojis;
-    std::unordered_map<std::string, std::unordered_set<const Emoji *>> _keywordEmojis;
     std::unordered_set<std::string> _keywords;
     std::unordered_map<const Emoji *, EmojisPngLocation> _emojiPngLocations;
     mutable std::vector<std::string> _tmpNeedles;
