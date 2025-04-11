@@ -70,13 +70,13 @@ image::screenshots/wom-fact.png[]
 +
 image::screenshots/transp-cat.png[]
 
-🔍 emojis matching "`car`" within the transportation category:: {empty}
+🔍 emojis matching "`boa`" within the transportation category:: {empty}
 +
-image::screenshots/transp-cat-car.png[]
+image::screenshots/transp-cat-boa.png[]
 
-🔍 emojis matching "`car`" _and_ "`lig`" within the transportation category:: {empty}
+🔍 emojis matching "`boa`" _and_ "`sa`" within the transportation category:: {empty}
 +
-image::screenshots/transp-cat-car-lig.png[]
+image::screenshots/transp-cat-boa-sa.png[]
 
 If you prefer a minimal look:: {empty}
 +
@@ -239,8 +239,8 @@ where:
 `_TERMS_`::
     Space-separated 📜 of 🔍 terms.
 +
-For an emoji to be part of the results, at least 1️⃣ of its keywords
-must contain _all_ the 🔍 terms.
+For an emoji to be part of the results, its name and keywords must
+contain _all_ the 🔍 terms.
 
 [[select]]
 === Select and ✅ an emoji

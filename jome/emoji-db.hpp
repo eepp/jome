@@ -13,6 +13,7 @@
 #include <memory>
 #include <unordered_map>
 #include <unordered_set>
+#include <set>
 #include <QString>
 #include <nlohmann/json.hpp>
 
@@ -69,6 +70,11 @@ public:
         return _name;
     }
 
+    const QString& lcName() const noexcept
+    {
+        return _lcName;
+    }
+
     const std::unordered_set<QString>& keywords() const noexcept
     {
         return _keywords;
@@ -87,6 +93,7 @@ public:
 private:
     const QString _str;
     const QString _name;
+    const QString _lcName;
     const std::unordered_set<QString> _keywords;
     const bool _hasSkinToneSupport;
     const EmojiVersion _version;
@@ -109,6 +116,11 @@ public:
         return _name;
     }
 
+    const QString& lcName() const noexcept
+    {
+        return _lcName;
+    }
+
     std::vector<const Emoji *>& emojis() noexcept
     {
         return _emojis;
@@ -122,6 +134,7 @@ public:
 private:
     const QString _id;
     const QString _name;
+    const QString _lcName;
     std::vector<const Emoji *> _emojis;
 };
 
@@ -204,6 +217,23 @@ public:
     }
 
 private:
+    struct _FindResult final
+    {
+        unsigned int score;
+        unsigned int pos;
+        const Emoji *emoji;
+
+        bool operator<(const _FindResult& other) const noexcept
+        {
+            if (score == other.score) {
+                return pos < other.pos;
+            }
+
+            return score < other.score;
+        }
+    };
+
+private:
     void _createEmojis(const QString& dir);
     void _createCats(const QString& dir, bool noRecentCat);
     void _createEmojiPngLocations(const QString& dir);
@@ -215,7 +245,8 @@ private:
     std::unordered_map<QString, std::unique_ptr<const Emoji>> _emojis;
     std::unordered_set<QString> _keywords;
     std::unordered_map<const Emoji *, EmojisPngLocation> _emojiPngLocations;
-    mutable std::unordered_set<const Emoji *> _tmpFoundEmojis;
+    mutable std::set<_FindResult> _tmpFindResults;
+    mutable std::set<const Emoji *> _tmpFindResultEmojis;
     EmojiCat *_recentEmojisCat = nullptr;
     unsigned int _maxRecentEmojis;
 };

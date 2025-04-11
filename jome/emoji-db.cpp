@@ -14,11 +14,10 @@
 #include <QStandardPaths>
 #include <QtDebug>
 #include <QFile>
+#include <algorithm>
 #include <boost/algorithm/string.hpp>
 #include <nlohmann/json.hpp>
 #include <fmt/format.h>
-#include <qglobal.h>
-#include <qstandardpaths.h>
 
 #include "nlohmann/json_fwd.hpp"
 #include "utils.hpp"
@@ -31,6 +30,7 @@ Emoji::Emoji(QString str, QString name,
              const EmojiVersion version) :
     _str {std::move(str)},
     _name {std::move(name)},
+    _lcName {_name.toLower()},
     _keywords {std::move(keywords)},
     _hasSkinToneSupport {hasSkinToneSupport},
     _version {version}
@@ -90,13 +90,15 @@ Emoji::Codepoints Emoji::codepoints(const boost::optional<SkinTone>& skinTone,
 EmojiCat::EmojiCat(QString id, QString name, std::vector<const Emoji *>&& emojis) :
     _id {std::move(id)},
     _name {std::move(name)},
+    _lcName {_name.toLower()},
     _emojis {std::move(emojis)}
 {
 }
 
 EmojiCat::EmojiCat(QString id, QString name) :
     _id {std::move(id)},
-    _name {std::move(name)}
+    _name {std::move(name)},
+    _lcName {_name.toLower()}
 {
 }
 
@@ -371,59 +373,80 @@ void EmojiDb::findEmojis(QString catName, const QString& needlesStr,
                          std::vector<const Emoji *>& results) const
 {
     // split `needlesStr` into individual needles
-    const auto needles = needlesStr.trimmed().toLower().split(" +");
-
-    if (needles.isEmpty()) {
-        // nothing to search
-        return;
-    }
+    const auto needles = needlesStr.toLower().split(QRegExp {" +"}, Qt::SkipEmptyParts);
 
     // trim category
     catName = catName.trimmed();
 
     // clear temporary results
-    _tmpFoundEmojis.clear();
+    _tmpFindResults.clear();
+    _tmpFindResultEmojis.clear();
+
+    auto pos = 0U;
 
     for (auto& cat : _cats) {
-        if (!catName.isEmpty() && !cat->name().toLower().contains(catName)) {
-            // we don't want to search this category
+        if (cat->id() == "recent") {
+            // exclude "Recent" category
+            continue;
+        }
+
+        if (!catName.isEmpty() && !cat->lcName().contains(catName)) {
+            // we don't even want to search this category
             continue;
         }
 
         for (auto emoji : cat->emojis()) {
-            auto select = true;
+            auto score = 0U;
 
-            for (auto& keyword : emoji->keywords()) {
-                select = true;
+            for (auto& needle : needles) {
+                auto needleScore = 0U;
 
-                for (auto& needle : needles) {
-                    assert(!needle.isEmpty());
+                if (emoji->lcName() == needle) {
+                    needleScore = 100;
+                } else if (emoji->lcName().startsWith(needle)) {
+                    needleScore = 80;
+                } else if (emoji->lcName().contains(needle)) {
+                    needleScore = 60;
+                }
 
-                    if (!keyword.contains(needle)) {
-                        // this keyword does not contain this needle
-                        select = false;
+                auto addToNeedleScore = 0U;
+
+                for (auto& keyword : emoji->keywords()) {
+                    if (keyword == needle) {
+                        addToNeedleScore = 40;
                         break;
+                    }
+
+                    if (keyword.startsWith(needle)) {
+                        addToNeedleScore = std::max(addToNeedleScore, 30U);
+                    } else if (keyword.contains(needle)) {
+                        addToNeedleScore = std::max(addToNeedleScore, 20U);
                     }
                 }
 
-                if (select) {
+                needleScore += addToNeedleScore;
+
+                if (needleScore == 0) {
+                    score = 0;
                     break;
+                }
+
+                score += needleScore;
+            }
+
+            if (needles.isEmpty() || score > 0) {
+                if (_tmpFindResultEmojis.count(emoji) == 0) {
+                    _tmpFindResults.insert({score, pos, emoji});
+                    _tmpFindResultEmojis.insert(emoji);
                 }
             }
 
-            if (!select) {
-                // not selected: next emoji
-                continue;
-            }
-
-            if (_tmpFoundEmojis.find(emoji) != _tmpFoundEmojis.end()) {
-                // we already have it: next emoji
-                continue;
-            }
-
-            results.push_back(emoji);
-            _tmpFoundEmojis.insert(emoji);
+            ++pos;
         }
+    }
+
+    for (auto it = _tmpFindResults.crbegin(); it != _tmpFindResults.crend(); ++it) {
+        results.push_back(it->emoji);
     }
 }
 
