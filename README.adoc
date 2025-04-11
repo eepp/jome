@@ -431,8 +431,8 @@ $ jome-ctl mein-server
 |===
 |Option |Description
 
-|[[opt-f]]`-f _FMT_`
-|Set the output format to `_FMT_`:
+|`-f _FMT_`
+|[[opt-f]]Set the output format to `_FMT_`:
 
 `utf-8` (default)::
     UTF-8 emoji.
@@ -444,8 +444,8 @@ Example: `1f645 200d 2642 fe0f`
 +
 Prepend a prefix to each codepoint with <<opt-p,`-p`>>.
 
-|[[opt-p]]`-p _PREFIX_`
-|Set the prefix to be prepended to each Unicode codepoint with
+|`-p _PREFIX_`
+|[[opt-p]]Set the prefix to be prepended to each Unicode codepoint with
 `-f cp`.
 
 For example, with `-f cp` and `-p U+`:
@@ -457,8 +457,8 @@ U+1f645 U+200d U+2642 U+fe0f
 |`-n`
 |Do not 🖨️ a newline after 🖨️ the emoji or codepoints.
 
-|[[opt-V]]`-V`
-|Do not 🖨️
+|`-V`
+|[[opt-V]]Do not 🖨️
 https://emojipedia.org/variation-selector-16[Variation Selector-16]
 (VS-16) codepoints.
 
@@ -468,8 +468,8 @@ predates Unicode emojis) followed with VS-16 becomes{nbsp}♥️.
 
 There are applications/fonts which don't like VS-16.
 
-|[[opt-t]]`-t _TONE_`
-|Set the default skin tone to `_TONE_` instead of none:
+|`-t _TONE_`
+|[[opt-t]]Set the default skin tone to `_TONE_` instead of none:
 
 [horizontal]
 `L`:: Light.
@@ -481,8 +481,8 @@ There are applications/fonts which don't like VS-16.
 The **F1** to **F5** keys still <<accept-emoji,✅>> an emoji
 with a specific skin tone.
 
-|[[opt-c]]`-c _CMD_`
-|When you ✅ an emoji, execute the command `_CMD_` 20{nbsp}ms
+|`-c _CMD_`
+|[[opt-c]]When you ✅ an emoji, execute the command `_CMD_` 20{nbsp}ms
 _after_ closing the jome 🪟.
 
 jome interprets `_CMD_` like a 🐚 does, so you can have arguments too.
@@ -498,16 +498,16 @@ $ jome -c 'xdotool type'
 $ jome -f cp -p U -c 'xdotool key --delay 20'
 ----
 
-|[[opt-b]]`-b`
-|When you ✅ an emoji, copy the UTF-8 emoji or the Unicode
+|`-b`
+|[[opt-b]]When you ✅ an emoji, copy the UTF-8 emoji or the Unicode
 codepoints (depending on the <<opt-f,`-f`{nbsp}option>>) to the 📋.
 
 WARNING: This uses
 https://doc.qt.io/qt-5/qclipboard.html[`QClipboard`] and is known
 not to always work, depending on your 🪟 🧑‍💼.
 
-|[[opt-q]]`-q`
-|Do not 👋 when you <<accept-emoji,✅>> an emoji.
+|`-q`
+|[[opt-q]]Do not 👋 when you <<accept-emoji,✅>> an emoji.
 
 By default, when you ✅ an emoji (with the ⌨️ or with the 🖱️), jome:
 
@@ -528,8 +528,8 @@ restarting the application.
 You cannot specify the `-q` and <<opt-s,`-s`>>{nbsp}options at the
 same{nbsp}⌚.
 
-|[[opt-s]]`-s _NAME_`
-|Start jome in <<server-mode,server mode>> and set the server name
+|`-s _NAME_`
+|[[opt-s]]Start jome in <<server-mode,server mode>> and set the server name
 to `_NAME_`.
 
 On Unix, this creates the socket 📄 `/tmp/_NAME_` which must _not exist_
@@ -538,33 +538,33 @@ before you start jome.
 You cannot specify the `-s` and <<opt-q,`-q`>>{nbsp}options at the
 same{nbsp}⌚.
 
-|[[opt-d]]`-d`
-|Use a 🌚 background for emojis.
+|`-d`
+|[[opt-d]]Use a 🌚 background for emojis.
 
-|[[opt-C]]`-C`
-|🙈 the category 📜.
+|`-C`
+|[[opt-C]]🙈 the category 📜.
 
-|[[opt-L]]`-L`
-|🙈 the category 🏷️ in the emoji grid.
+|`-L`
+|[[opt-L]]🙈 the category 🏷️ in the emoji grid.
 
-|[[opt-R]]`-R`
-|🙈 the "`Recent`" category.
+|`-R`
+|[[opt-R]]🙈 the "`Recent`" category.
 
-|[[opt-k]]`-k`
-|🙈 the keyword 📜.
+|`-k`
+|[[opt-k]]🙈 the keyword 📜.
 
-|[[opt-w]]`-w _WIDTH_`
-|Set the width of individual emojis to `_WIDTH_`{nbsp}pixels, amongst
+|`-w _WIDTH_`
+|[[opt-w]]Set the width of individual emojis to `_WIDTH_`{nbsp}pixels, amongst
 16, 24, 32 (default), 40, or{nbsp}48.
 
-|[[opt-P]]`-P _PERIOD_`
-|Set the flashing period of the selection 🔲 to
+|`-P _PERIOD_`
+|[[opt-P]]Set the flashing period of the selection 🔲 to
 `_PERIOD_`{nbsp}ms (greater than or equal to{nbsp}32).
 
 The selection 🔲 doesn't flash by default.
 
-|[[opt-H]]`-H _COUNT_`
-|Set the maximum number of recently ✅ emojis
+|`-H _COUNT_`
+|[[opt-H]]Set the maximum number of recently ✅ emojis
 to{nbsp}``__COUNT__`` instead of{nbsp}30.
 |===
 
