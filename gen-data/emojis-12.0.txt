@@ -1,299 +1,299 @@
 🥱
 Yawning face
-bedtime | bored | face | goodnight | nap | night | sleep | sleepy | tired | whatever | yawn | yawning | yawning face | zzz
+bedtime | bored | goodnight | nap | night | sleep | sleepy | tired | whatever | zzz
 
 🤎
 Brown heart
-143 | brown | brown heart | heart
+143
 
 🤍
 White heart
-143 | heart | white | white heart
+143
 
 🤏
 Pinching hand
-amount | bit | fingers | hand | little | pinching | pinching hand | small | sort
+amount | bit | fingers | little | small | sort
 
 🦾
 Mechanical arm
-accessibility | arm | mechanical | mechanical arm | prosthetic
+accessibility | prosthetic
 
 🦿
 Mechanical leg
-accessibility | leg | mechanical | mechanical leg | prosthetic
+accessibility | prosthetic
 
 🦻
 Ear with hearing aid
-accessibility | aid | ear | ear with hearing aid | hard | hearing
+accessibility | hard
 
 🧏
 Deaf person
-accessibility | deaf | deaf person | ear | gesture | hear | person
+accessibility | ear | gesture | hear
 
 🧏‍♂️
 Deaf man
-accessibility | deaf | deaf man | ear | gesture | hear | man
+accessibility | ear | gesture | hear
 
 🧏‍♀️
 Deaf woman
-accessibility | deaf | deaf woman | ear | gesture | hear | woman
+accessibility | ear | gesture | hear
 
 🧍
 Person standing
-person | person standing | stand | standing
+standing
 
 🧍‍♂️
 Man standing
-man | man standing | stand | standing
+standing
 
 🧍‍♀️
 Woman standing
-stand | standing | woman | woman standing
+woman
 
 🧎
 Person kneeling
-kneel | kneeling | knees | person | person kneeling
+knees
 
 🧎‍♂️
 Man kneeling
-kneel | kneeling | knees | man | man kneeling
+knees
 
 🧎‍♀️
 Woman kneeling
-kneel | kneeling | knees | woman | woman kneeling
+knees
 
 👨‍🦯
 Man with white cane
-accessibility | blind | cane | man | man with white cane | probing | white
+accessibility | blind | probing
 
 👩‍🦯
 Woman with white cane
-accessibility | blind | cane | probing | white | woman | woman with white cane
+accessibility | blind | probing
 
 👨‍🦼
 Man in motorized wheelchair
-accessibility | man | man in motorized wheelchair | motorized | wheelchair
+accessibility
 
 👩‍🦼
 Woman in motorized wheelchair
-accessibility | motorized | wheelchair | woman | woman in motorized wheelchair
+accessibility
 
 👨‍🦽
 Man in manual wheelchair
-accessibility | man | man in manual wheelchair | manual | wheelchair
+accessibility
 
 👩‍🦽
 Woman in manual wheelchair
-accessibility | manual | wheelchair | woman | woman in manual wheelchair
+accessibility
 
 🧑‍🤝‍🧑
 People holding hands
-bae | bestie | bff | couple | dating | flirt | friends | hand | hold | people | people holding hands | twins
+bae | bestie | bff | couple | dating | flirt | friends | twins
 
 🦧
 Orangutan
-animal | ape | monkey | orangutan
+animal | ape | monkey
 
 🦮
 Guide dog
-accessibility | animal | blind | dog | guide | guide dog
+accessibility | animal | blind
 
 🐕‍🦺
 Service dog
-accessibility | animal | assistance | dog | service | service dog
+accessibility | animal | assistance
 
 🦥
 Sloth
-lazy | sloth | slow
+lazy | slow
 
 🦦
 Otter
-animal | fishing | otter | playful
+animal | fishing | playful
 
 🦨
 Skunk
-animal | skunk | stink
+animal | stink
 
 🦩
 Flamingo
-animal | bird | flamboyant | flamingo | ornithology | tropical
+animal | bird | flamboyant | ornithology | tropical
 
 🧄
 Garlic
-flavoring | garlic
+flavoring
 
 🧅
 Onion
-flavoring | onion
+flavoring
 
 🧇
 Waffle
-breakfast | indecisive | iron | waffle
+breakfast | indecisive | iron
 
 🧆
 Falafel
-chickpea | falafel | meatball
+chickpea | meatball
 
 🧈
 Butter
-butter | dairy
+dairy
 
 🦪
 Oyster
-diving | oyster | pearl
+diving | pearl
 
 🧃
 Beverage box
-beverage | beverage box | box | juice | straw | sweet
+juice | straw | sweet
 
 🧉
 Mate
-drink | mate
+drink
 
 🧊
 Ice
-cold | cube | ice | iceberg
+cold | cube | iceberg
 
 🛕
 Hindu temple
-hindu | hindu temple | temple
+temple
 
 🦽
 Manual wheelchair
-accessibility | manual | manual wheelchair | wheelchair
+accessibility
 
 🦼
 Motorized wheelchair
-accessibility | motorized | motorized wheelchair | wheelchair
+accessibility
 
 🛺
 Auto rickshaw
-auto | auto rickshaw | rickshaw | tuk
+tuk
 
 🪂
 Parachute
-hang-glide | parachute | parasail | skydive
+hang-glide | parasail | skydive
 
 🪐
 Ringed planet
-planet | ringed | ringed planet | saturn | saturnine
+saturn | saturnine
 
 🤿
 Diving mask
-diving | diving mask | mask | scuba | snorkeling
+scuba | snorkeling
 
 🪀
 Yo-yo
-fluctuate | toy | yo-yo
+fluctuate | toy
 
 🪁
 Kite
-fly | kite | soar
+fly | soar
 
 🦺
 Safety vest
-emergency | safety | safety vest | vest
+emergency
 
 🥻
 Sari
-clothing | dress | sari
+clothing | dress
 
 🩱
 One-piece swimsuit
-bathing | one-piece | one-piece swimsuit | suit | swimsuit
+bathing
 
 🩲
 Briefs
-bathing | briefs | one-piece | suit | swimsuit | underwear
+bathing | one-piece | suit | swimsuit | underwear
 
 🩳
 Shorts
-bathing | pants | shorts | suit | swimsuit | underwear
+bathing | pants | suit | swimsuit | underwear
 
 🩰
 Ballet shoes
-ballet | ballet shoes | dance | shoes
+dance
 
 🪕
 Banjo
-banjo | music | stringed
+music | stringed
 
 🪔
 Diya lamp
-diya | diya lamp | lamp | light | oil
+light | oil
 
 🪓
 Axe
-ax | axe | chop | hatchet | split | wood
+chop | hatchet | split | wood
 
 🦯
 White cane
-accessibility | blind | cane | probing | white | white cane
+accessibility | blind | probing
 
 🩸
 Drop of blood
-bleed | blood | donation | drop | drop of blood | injury | medicine | menstruation
+bleed | donation | injury | medicine | menstruation
 
 🩹
 Adhesive bandage
-adhesive | adhesive bandage | bandage
+bandage
 
 🩺
 Stethoscope
-doctor | heart | medicine | stethoscope
+doctor | heart | medicine
 
 🪑
 Chair
-chair | seat | sit
+seat | sit
 
 🪒
 Razor
-razor | sharp | shave
+sharp | shave
 
 🟠
 Orange circle
-circle | orange | orange circle
+orange
 
 🟡
 Yellow circle
-circle | yellow | yellow circle
+yellow
 
 🟢
 Green circle
-circle | green | green circle
+green
 
 🟣
 Purple circle
-circle | purple | purple circle
+purple
 
 🟤
 Brown circle
-brown | brown circle | circle
+circle
 
 🟥
 Red square
-card | penalty | red | red square | square
+card | penalty
 
 🟧
 Orange square
-orange | orange square | square
+square
 
 🟨
 Yellow square
-card | penalty | square | yellow | yellow square
+card | penalty
 
 🟩
 Green square
-green | green square | square
+square
 
 🟦
 Blue square
-blue | blue square | square
+square
 
 🟪
 Purple square
-purple | purple square | square
+square
 
 🟫
 Brown square
-brown | brown square | square
+square

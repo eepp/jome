@@ -1,307 +1,307 @@
 ♟️
 Chess pawn
-chess | chess pawn | dupe | expendable | pawn
+dupe | expendable
 
 ♾️
 Infinity
-forever | infinity | unbounded | universal
+forever | unbounded | universal
 
 🏴‍☠️
 Pirate flag
-flag | jolly | pirate | pirate flag | plunder | roger | treasure
+jolly | plunder | roger | treasure
 
 👨‍🦰
 Man: red hair
-adult | bro | man | man: red hair | red hair
+adult | bro
 
 👨‍🦱
 Man: curly hair
-adult | bro | curly hair | man | man: curly hair
+adult | bro
 
 👨‍🦲
 Man: bald
-adult | bald | bro | man | man: bald
+adult | bro
 
 👨‍🦳
 Man: white hair
-adult | bro | man | man: white hair | white hair
+adult | bro
 
 👩‍🦰
 Woman: red hair
-adult | lady | red hair | woman | woman: red hair
+adult | lady
 
 👩‍🦱
 Woman: curly hair
-adult | curly hair | lady | woman | woman: curly hair
+adult | lady
 
 👩‍🦲
 Woman: bald
-adult | bald | lady | woman | woman: bald
+adult | lady
 
 👩‍🦳
 Woman: white hair
-adult | lady | white hair | woman | woman: white hair
+adult | lady
 
 🛹
 Skateboard
-board | skate | skateboard | skater | wheels
+skater | wheels
 
 🥍
 Lacrosse
-ball | goal | lacrosse | sports | stick
+ball | goal | sports | stick
 
 🥎
 Softball
-ball | glove | softball | sports | underarm
+glove | sports | underarm
 
 🥏
 Flying disc
-disc | flying | flying disc | ultimate
+ultimate
 
 🥬
 Leafy green
-bok | burgers | cabbage | choy | green | kale | leafy | leafy green | lettuce | salad
+bok | burgers | cabbage | choy | kale | lettuce | salad
 
 🥭
 Mango
-food | fruit | mango | tropical
+food | fruit | tropical
 
 🥮
 Moon cake
-autumn | cake | festival | moon | moon cake | yuèbǐng
+autumn | festival | yuèbǐng
 
 🥯
 Bagel
-bagel | bakery | bread | breakfast | schmear
+bakery | bread | breakfast | schmear
 
 🥰
 Smiling face with hearts
-3 | adore | crush | face | heart | hearts | ily | love | romance | smile | smiling | smiling face with hearts | you
+3 | adore | crush | ily | love | romance | smile | you
 
 🥳
 Partying face
-bday | birthday | celebrate | celebration | excited | face | happy | hat | hooray | horn | party | partying | partying face
+bday | birthday | celebrate | celebration | excited | happy | hat | hooray | horn
 
 🥴
 Woozy face
-dizzy | drunk | eyes | face | intoxicated | mouth | tipsy | uneven | wavy | woozy | woozy face
+dizzy | drunk | eyes | intoxicated | mouth | tipsy | uneven | wavy
 
 🥵
 Hot face
-dying | face | feverish | heat | hot | hot face | panting | red-faced | stroke | sweating | tongue
+dying | feverish | heat | panting | red-faced | stroke | sweating | tongue
 
 🥶
 Cold face
-blue | blue-faced | cold | cold face | face | freezing | frostbite | icicles | subzero | teeth
+blue | blue-faced | freezing | frostbite | icicles | subzero | teeth
 
 🥺
 Pleading face
-begging | big | eyes | face | mercy | not | pleading | pleading face | please | pretty | puppy | sad | why
+begging | big | eyes | mercy | not | please | pretty | puppy | sad | why
 
 🥼
 Lab coat
-clothes | coat | doctor | dr | experiment | jacket | lab | lab coat | scientist | white
+clothes | doctor | dr | experiment | jacket | scientist | white
 
 🥽
 Goggles
-dive | eye | goggles | protection | scuba | swimming | welding
+dive | eye | protection | scuba | swimming | welding
 
 🥾
 Hiking boot
-backpacking | boot | brown | camping | hiking | hiking boot | outdoors | shoe
+backpacking | brown | camping | outdoors | shoe
 
 🥿
 Flat shoe
-ballet | comfy | flat | flat shoe | flats | shoe | slip-on | slipper
+ballet | comfy | flats | slip-on | slipper
 
 🦘
 Kangaroo
-animal | joey | jump | kangaroo | marsupial
+animal | joey | jump | marsupial
 
 🦙
 Llama
-alpaca | animal | guanaco | llama | vicuña | wool
+alpaca | animal | guanaco | vicuña | wool
 
 🦚
 Peacock
-animal | bird | colorful | ornithology | ostentatious | peacock | peahen | pretty | proud
+animal | bird | colorful | ornithology | ostentatious | peahen | pretty | proud
 
 🦛
 Hippopotamus
-animal | hippo | hippopotamus
+animal
 
 🦜
 Parrot
-animal | bird | ornithology | parrot | pirate | talk
+animal | bird | ornithology | pirate | talk
 
 🦝
 Raccoon
-animal | curious | raccoon | sly
+animal | curious | sly
 
 🦞
 Lobster
-animal | bisque | claws | lobster | seafood
+animal | bisque | claws | seafood
 
 🦟
 Mosquito
-bite | disease | fever | insect | malaria | mosquito | pest | virus
+bite | disease | fever | insect | malaria | pest | virus
 
 🦠
 Microbe
-amoeba | bacteria | microbe | science | virus
+amoeba | bacteria | science | virus
 
 🦡
 Badger
-animal | badger | honey | pester
+animal | honey | pester
 
 🦢
 Swan
-animal | bird | cygnet | duckling | ornithology | swan | ugly
+animal | bird | cygnet | duckling | ornithology | ugly
 
 🦴
 Bone
-bone | bones | dog | skeleton | wishbone
+bones | dog | skeleton | wishbone
 
 🦵
 Leg
-bent | foot | kick | knee | leg | limb
+bent | foot | kick | knee | limb
 
 🦶
 Foot
-ankle | feet | foot | kick | stomp
+ankle | feet | kick | stomp
 
 🦷
 Tooth
-dentist | pearly | teeth | tooth | white
+dentist | pearly | teeth | white
 
 🦸
 Superhero
-good | hero | superhero | superpower
+good | superpower
 
 🦸‍♀️
 Woman superhero
-good | hero | heroine | superhero | superpower | woman | woman superhero
+good | heroine | superpower
 
 🦸‍♂️
 Man superhero
-good | hero | man | man superhero | superhero | superpower
+good | superpower
 
 🦹
 Supervillain
-bad | criminal | evil | superpower | supervillain | villain
+bad | criminal | evil | superpower
 
 🦹‍♀️
 Woman supervillain
-bad | criminal | evil | superpower | supervillain | villain | woman | woman supervillain
+bad | criminal | evil | superpower
 
 🦹‍♂️
 Man supervillain
-bad | criminal | evil | man | man supervillain | superpower | supervillain | villain
+bad | criminal | evil | superpower
 
 🧁
 Cupcake
-bakery | cupcake | dessert | sprinkles | sugar | sweet | treat
+bakery | dessert | sprinkles | sugar | sweet | treat
 
 🧂
 Salt
-condiment | flavor | mad | salt | salty | shaker | taste | upset
+condiment | flavor | mad | salty | shaker | taste | upset
 
 🧧
 Red envelope
-envelope | gift | good | hóngbāo | lai | luck | money | red | red envelope | see
+gift | good | hóngbāo | lai | luck | money | see
 
 🧨
 Firecracker
-dynamite | explosive | fire | firecracker | fireworks | light | pop | popping | spark
+dynamite | explosive | fireworks | light | pop | popping | spark
 
 🧩
 Puzzle piece
-clue | interlocking | jigsaw | piece | puzzle | puzzle piece
+clue | interlocking | jigsaw
 
 🧪
 Test tube
-chemist | chemistry | experiment | lab | science | test | test tube | tube
+chemist | chemistry | experiment | lab | science
 
 🧫
 Petri dish
-bacteria | biologist | biology | culture | dish | lab | petri | petri dish
+bacteria | biologist | biology | culture | lab
 
 🧬
 Dna
-biologist | dna | evolution | gene | genetics | life
+biologist | evolution | gene | genetics | life
 
 🧭
 Compass
-compass | direction | magnetic | navigation | orienteering
+direction | magnetic | navigation | orienteering
 
 🧮
 Abacus
-abacus | calculation | calculator
+calculation | calculator
 
 🧯
 Fire extinguisher
-extinguish | extinguisher | fire | fire extinguisher | quench
+quench
 
 🧰
 Toolbox
-box | chest | mechanic | red | tool | toolbox
+chest | mechanic | red
 
 🧱
 Brick
-brick | bricks | clay | mortar | wall
+bricks | clay | mortar | wall
 
 🧲
 Magnet
-attraction | horseshoe | magnet | magnetic | negative | positive | shape | u
+attraction | horseshoe | magnetic | negative | positive | shape | u
 
 🧳
 Luggage
-bag | luggage | packing | roller | suitcase | travel
+bag | packing | roller | suitcase | travel
 
 🧴
 Lotion bottle
-bottle | lotion | lotion bottle | moisturizer | shampoo | sunscreen
+moisturizer | shampoo | sunscreen
 
 🧵
 Thread
-needle | sewing | spool | string | thread
+needle | sewing | spool | string
 
 🧶
 Yarn
-ball | crochet | knit | yarn
+ball | crochet | knit
 
 🧷
 Safety pin
-diaper | pin | punk | rock | safety | safety pin
+diaper | punk | rock
 
 🧸
 Teddy bear
-bear | plaything | plush | stuffed | teddy | teddy bear | toy
+plaything | plush | stuffed | toy
 
 🧹
 Broom
-broom | cleaning | sweeping | witch
+cleaning | sweeping | witch
 
 🧺
 Basket
-basket | farming | laundry | picnic
+farming | laundry | picnic
 
 🧻
 Roll of paper
-paper | roll | roll of paper | toilet | towels
+toilet | towels
 
 🧼
 Soap
-bar | bathing | clean | cleaning | lather | soap | soapdish
+bar | bathing | clean | cleaning | lather | soapdish
 
 🧽
 Sponge
-absorbing | cleaning | porous | soak | sponge
+absorbing | cleaning | porous | soak
 
 🧾
 Receipt
-accounting | bookkeeping | evidence | invoice | proof | receipt
+accounting | bookkeeping | evidence | invoice | proof
 
 🧿
 Nazar amulet
-amulet | bead | blue | charm | evil-eye | nazar | nazar amulet | talisman
+bead | blue | charm | evil-eye | talisman

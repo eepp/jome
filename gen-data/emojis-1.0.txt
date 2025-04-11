@@ -1,679 +1,679 @@
 ⌨️
 Keyboard
-computer | keyboard
+computer
 
 ⏏️
 Eject button
-button | eject | eject button
+eject
 
 ⏱️
 Stopwatch
-clock | stopwatch | time
+clock | time
 
 ⏲️
 Timer clock
-clock | timer | timer clock
+timer
 
 ☄️
 Comet
-comet | space
+space
 
 ☘️
 Shamrock
-irish | plant | shamrock
+irish | plant
 
 ☠️
 Skull and crossbones
-bone | crossbones | dead | death | face | monster | skull | skull and crossbones
+dead | death | face | monster
 
 ☢️
 Radioactive
-radioactive | sign
+sign
 
 ☣️
 Biohazard
-biohazard | sign
+sign
 
 ☦️
 Orthodox cross
-christian | cross | orthodox | orthodox cross | religion
+christian | religion
 
 ☮️
 Peace symbol
-healing | peace | peace symbol | peaceful | symbol
+healing | peaceful
 
 ⚒️
 Hammer and pick
-hammer | hammer and pick | pick | tool
+tool
 
 ⚔️
 Crossed swords
-crossed | crossed swords | swords | weapon
+weapon
 
 ⚖️
 Balance scale
-balance | balance scale | justice | libra | scale | scales | tool | weight | zodiac
+justice | libra | scales | tool | weight | zodiac
 
 ⚗️
 Alembic
-alembic | chemistry | tool
+chemistry | tool
 
 ⚙️
 Gear
-cog | cogwheel | gear | tool
+cog | cogwheel | tool
 
 ⚛️
 Atom symbol
-atheist | atom | atom symbol | symbol
+atheist
 
 ⚰️
 Coffin
-coffin | dead | death | vampire
+dead | death | vampire
 
 ⚱️
 Funeral urn
-ashes | death | funeral | funeral urn | urn
+ashes | death
 
 ❣️
 Heart exclamation
-exclamation | heart | heart exclamation | heavy | mark | punctuation
+heavy | mark | punctuation
 
 ➿
 Double curly loop
-curl | curly | double | double curly loop | loop
+loop
 
 🌐
 Globe with meridians
-earth | globe | globe with meridians | internet | meridians | web | world | worldwide
+earth | internet | web | world | worldwide
 
 🌒
 Waxing crescent moon
-crescent | dreams | moon | space | waxing | waxing crescent moon
+dreams | space
 
 🌖
 Waning gibbous moon
-gibbous | moon | space | waning | waning gibbous moon
+space
 
 🌗
 Last quarter moon
-last | last quarter moon | moon | quarter | space
+space
 
 🌘
 Waning crescent moon
-crescent | moon | space | waning | waning crescent moon
+space
 
 🌚
 New moon face
-face | moon | new | new moon face | space
+space
 
 🌝
 Full moon face
-bright | face | full | full moon face | moon
+bright
 
 🌞
 Sun with face
-beach | bright | day | face | heat | shine | sun | sun with face | sunny | sunshine | weather
+beach | bright | day | heat | shine | sunny | sunshine | weather
 
 🌭
 Hot dog
-dog | frankfurter | hot | hot dog | hotdog | sausage
+frankfurter | hotdog | sausage
 
 🌮
 Taco
-mexican | taco
+mexican
 
 🌯
 Burrito
-burrito | mexican | wrap
+mexican | wrap
 
 🌲
 Evergreen tree
-christmas | evergreen | evergreen tree | forest | pine | tree
+christmas | forest | pine
 
 🌳
 Deciduous tree
-deciduous | deciduous tree | forest | green | habitat | shedding | tree
+forest | green | habitat | shedding
 
 🍋
 Lemon
-citrus | fruit | lemon | sour
+citrus | fruit | sour
 
 🍐
 Pear
-fruit | pear
+fruit
 
 🍼
 Baby bottle
-babies | baby | baby bottle | birth | born | bottle | drink | infant | milk | newborn
+babies | birth | born | drink | infant | milk | newborn
 
 🍾
 Bottle with popping cork
-bar | bottle | bottle with popping cork | cork | drink | popping
+bar | drink
 
 🍿
 Popcorn
-corn | movie | pop | popcorn
+movie
 
 🏅
 Sports medal
-award | gold | medal | sports | sports medal | winner
+award | gold | winner
 
 🏇
 Horse racing
-horse | horse racing | jockey | racehorse | racing | riding | sport
+jockey | racehorse | riding | sport
 
 🏉
 Rugby football
-ball | football | rugby | rugby football | sport
+sport
 
 🏏
 Cricket game
-ball | bat | cricket | cricket game | game
+ball | bat
 
 🏐
 Volleyball
-ball | game | volleyball
+game
 
 🏑
 Field hockey
-ball | field | field hockey | game | hockey | stick
+ball | game | stick
 
 🏒
 Ice hockey
-game | hockey | ice | ice hockey | puck | stick
+game | puck | stick
 
 🏓
 Ping pong
-ball | bat | game | paddle | ping | ping pong | pingpong | pong | table | tennis
+ball | bat | game | paddle | pingpong | table | tennis
 
 🏤
 Post office
-building | european | office | post | post office
+building | european
 
 🏴
 Black flag
-black | black flag | flag | waving
+waving
 
 🏸
 Badminton
-badminton | birdie | game | racquet | shuttlecock
+birdie | game | racquet | shuttlecock
 
 🏹
 Bow and arrow
-archer | archery | arrow | bow | bow and arrow | sagittarius | tool | weapon | zodiac
+archer | archery | sagittarius | tool | weapon | zodiac
 
 🏺
 Amphora
-amphora | aquarius | cooking | drink | jug | tool | weapon | zodiac
+aquarius | cooking | drink | jug | tool | weapon | zodiac
 
 🐀
 Rat
-animal | rat
+animal
 
 🐁
 Mouse
-animal | animals | mouse
+animal | animals
 
 🐂
 Ox
-animal | animals | bull | farm | ox | taurus | zodiac
+animal | animals | bull | farm | taurus | zodiac
 
 🐃
 Water buffalo
-animal | buffalo | water | water buffalo | zoo
+animal | zoo
 
 🐄
 Cow
-animal | animals | cow | farm | milk | moo
+animal | animals | farm | milk | moo
 
 🐅
 Tiger
-animal | big | cat | predator | tiger | zoo
+animal | big | cat | predator | zoo
 
 🐆
 Leopard
-animal | big | cat | leopard | predator | zoo
+animal | big | cat | predator | zoo
 
 🐇
 Rabbit
-animal | bunny | pet | rabbit
+animal | bunny | pet
 
 🐉
 Dragon
-animal | dragon | fairy | fairytale | knights | tale
+animal | fairy | fairytale | knights | tale
 
 🐊
 Crocodile
-animal | crocodile | zoo
+animal | zoo
 
 🐋
 Whale
-animal | beach | ocean | whale
+animal | beach | ocean
 
 🐏
 Ram
-animal | aries | horns | male | ram | sheep | zodiac | zoo
+animal | aries | horns | male | sheep | zodiac | zoo
 
 🐐
 Goat
-animal | capricorn | farm | goat | milk | zodiac
+animal | capricorn | farm | milk | zodiac
 
 🐓
 Rooster
-animal | bird | ornithology | rooster
+animal | bird | ornithology
 
 🐖
 Pig
-animal | bacon | farm | pig | pork | sow
+animal | bacon | farm | pork | sow
 
 🐪
 Camel
-animal | camel | desert | dromedary | hump | one
+animal | desert | dromedary | hump | one
 
 👥
 Busts in silhouette
-bff | bust | busts | busts in silhouette | everyone | friend | friends | people | silhouette
+bff | everyone | friend | friends | people
 
 👬
 Men holding hands
-bae | bestie | bff | boys | brothers | couple | dating | flirt | friends | hand | hold | men | men holding hands | twins
+bae | bestie | bff | boys | brothers | couple | dating | flirt | friends | twins
 
 👭
 Women holding hands
-bae | bestie | bff | couple | dating | flirt | friends | girls | hand | hold | sisters | twins | women | women holding hands
+bae | bestie | bff | couple | dating | flirt | friends | girls | sisters | twins
 
 😈
 Smiling face with horns
-demon | devil | evil | face | fairy | fairytale | fantasy | horns | purple | shade | smile | smiling | smiling face with horns | tale
+demon | devil | evil | fairy | fairytale | fantasy | purple | shade | smile | tale
 
 💭
 Thought balloon
-balloon | bubble | cartoon | cloud | comic | daydream | decisions | dream | idea | invent | invention | realize | think | thought balloon | thoughts | wonder
+bubble | cartoon | cloud | comic | daydream | decisions | dream | idea | invent | invention | realize | think | thoughts | wonder
 
 💶
 Euro banknote
-100 | bank | banknote | bill | currency | euro | euro banknote | money | note | rich
+100 | bill | currency | money | rich
 
 💷
 Pound banknote
-bank | banknote | bill | billion | cash | currency | money | note | pound | pound banknote | pounds
+bill | billion | cash | currency | money | pounds
 
 📯
 Postal horn
-horn | post | postal | postal horn
+postal
 
 📸
 Camera with flash
-camera | camera with flash | flash | video
+video
 
 📿
 Prayer beads
-beads | clothing | necklace | prayer | prayer beads | religion
+clothing | necklace | religion
 
 🔀
 Shuffle tracks button
-arrow | button | crossed | shuffle | shuffle tracks button | tracks
+arrow | crossed
 
 🔁
 Repeat button
-arrow | button | clockwise | repeat | repeat button
+arrow | clockwise
 
 🔂
 Repeat single button
-arrow | button | clockwise | once | repeat | repeat single button | single
+arrow | clockwise | once
 
 🔄
 Counterclockwise arrows button
-again | anticlockwise | arrow | arrows | button | counterclockwise | counterclockwise arrows button | deja | refresh | rewindershins | vu
+again | anticlockwise | deja | refresh | rewindershins | vu
 
 🔅
 Dim button
-brightness | button | dim | dim button | low
+brightness | low
 
 🔆
 Bright button
-bright | bright button | brightness | button | light
+brightness | light
 
 🔇
 Muted speaker
-mute | muted | muted speaker | quiet | silent | sound | speaker
+quiet | silent | sound
 
 🔉
 Speaker medium volume
-medium | sound | speaker | speaker medium volume | volume
+sound
 
 🔕
 Bell with slash
-bell | bell with slash | forbidden | mute | no | not | prohibited | quiet | silent | slash | sound
+forbidden | mute | no | not | prohibited | quiet | silent | sound
 
 🔬
 Microscope
-experiment | lab | microscope | science | tool
+experiment | lab | science | tool
 
 🔭
 Telescope
-contact | extraterrestrial | science | telescope | tool
+contact | extraterrestrial | science | tool
 
 🕋
 Kaaba
-hajj | islam | kaaba | muslim | religion | umrah
+hajj | islam | muslim | religion | umrah
 
 🕌
 Mosque
-islam | masjid | mosque | muslim | religion
+islam | masjid | muslim | religion
 
 🕍
 Synagogue
-jew | jewish | judaism | religion | synagogue | temple
+jew | jewish | judaism | religion | temple
 
 🖕
 Middle finger
-finger | hand | middle | middle finger
+hand
 
 🖖
 Vulcan salute
-finger | hand | hands | salute | vulcan | vulcan salute
+finger | hand | hands
 
 😀
 Grinning face
-cheerful | cheery | face | grin | grinning | grinning face | happy | laugh | nice | smile | smiling | teeth
+cheerful | cheery | happy | laugh | nice | smile | smiling | teeth
 
 😇
 Smiling face with halo
-angel | angelic | angels | blessed | face | fairy | fairytale | fantasy | halo | happy | innocent | peaceful | smile | smiling | smiling face with halo | spirit | tale
+angel | angelic | angels | blessed | fairy | fairytale | fantasy | happy | innocent | peaceful | smile | spirit | tale
 
 😎
 Smiling face with sunglasses
-awesome | beach | bright | bro | chilling | cool | face | rad | relaxed | shades | slay | smile | smiling face with sunglasses | style | sunglasses | swag | win
+awesome | beach | bright | bro | chilling | cool | rad | relaxed | shades | slay | smile | style | swag | win
 
 😑
 Expressionless face
-awkward | dead | expressionless | expressionless face | face | fine | inexpressive | jealous | meh | not | oh | omg | straight | uh | unhappy | unimpressed | whatever
+awkward | dead | fine | inexpressive | jealous | meh | not | oh | omg | straight | uh | unhappy | unimpressed | whatever
 
 😕
 Confused face
-befuddled | confused | confused face | confusing | dunno | face | frown | hm | meh | not | sad | sorry | sure
+befuddled | confusing | dunno | frown | hm | meh | not | sad | sorry | sure
 
 😗
 Kissing face
-143 | date | dating | face | flirt | ily | kiss | kissing face | love | smooch | smooches | xoxo | you
+143 | date | dating | flirt | ily | love | smooch | smooches | xoxo | you
 
 😙
 Kissing face with smiling eyes
-143 | closed | date | dating | eye | eyes | face | flirt | ily | kiss | kisses | kissing | kissing face with smiling eyes | love | night | smile | smiling
+143 | closed | date | dating | flirt | ily | kisses | love | night | smile
 
 😛
 Face with tongue
-awesome | cool | face | face with tongue | nice | party | stuck-out | sweet | tongue
+awesome | cool | nice | party | stuck-out | sweet
 
 😟
 Worried face
-anxious | butterflies | face | nerves | nervous | sad | stress | stressed | surprised | worried | worried face | worry
+anxious | butterflies | nerves | nervous | sad | stress | stressed | surprised | worry
 
 😦
 Frowning face with open mouth
-caught | face | frown | frowning | frowning face with open mouth | guard | mouth | open | scared | scary | surprise | what | wow
+caught | guard | scared | scary | surprise | what | wow
 
 😧
 Anguished face
-anguished | anguished face | face | forgot | scared | scary | stressed | surprise | unhappy | what | wow
+forgot | scared | scary | stressed | surprise | unhappy | what | wow
 
 😬
 Grimacing face
-awk | awkward | dentist | face | grimace | grimacing | grimacing face | grinning | smile | smiling
+awk | awkward | dentist | grimace | grinning | smile | smiling
 
 😮
 Face with open mouth
-believe | face | face with open mouth | forgot | mouth | omg | open | shocked | surprised | sympathy | unbelievable | unreal | whoa | wow | you
+believe | forgot | omg | shocked | surprised | sympathy | unbelievable | unreal | whoa | wow | you
 
 😯
 Hushed face
-epic | face | hushed | hushed face | omg | stunned | surprised | whoa | woah
+epic | omg | stunned | surprised | whoa | woah
 
 😴
 Sleeping face
-bed | bedtime | face | good | goodnight | nap | night | sleep | sleeping | sleeping face | tired | whatever | yawn | zzz
+bed | bedtime | good | goodnight | nap | night | tired | whatever | yawn | zzz
 
 😶
 Face without mouth
-awkward | blank | expressionless | face | face without mouth | mouth | mouthless | mute | quiet | secret | silence | silent | speechless
+awkward | blank | expressionless | mouthless | mute | quiet | secret | silence | silent | speechless
 
 🙁
 Slightly frowning face
-face | frown | frowning | sad | slightly | slightly frowning face
+sad
 
 🙂
 Slightly smiling face
-face | happy | slightly | slightly smiling face | smile | smiling
+happy | smile
 
 🙃
 Upside-down face
-face | hehe | smile | upside-down | upside-down face
+hehe | smile
 
 🙄
 Face with rolling eyes
-eyeroll | eyes | face | face with rolling eyes | rolling | shade | ugh | whatever
+eyeroll | shade | ugh | whatever
 
 🚁
 Helicopter
-copter | helicopter | roflcopter | travel | vehicle
+roflcopter | travel | vehicle
 
 🚂
 Locomotive
-caboose | engine | locomotive | railway | steam | train | trains | travel
+caboose | engine | railway | steam | train | trains | travel
 
 🚆
 Train
-arrived | choo | railway | train
+arrived | choo | railway
 
 🚈
 Light rail
-arrived | light | light rail | monorail | rail | railway
+arrived | monorail | railway
 
 🚊
 Tram
-tram | trolleybus
+trolleybus
 
 🚋
 Tram car
-bus | car | tram | tram car | trolley | trolleybus
+bus | trolley | trolleybus
 
 🚎
 Trolleybus
-bus | tram | trolley | trolleybus
+tram
 
 🚐
 Minibus
-bus | drive | minibus | van | vehicle
+drive | van | vehicle
 
 🚖
 Oncoming taxi
-cab | cabbie | cars | drove | hail | oncoming | oncoming taxi | taxi | yellow
+cab | cabbie | cars | drove | hail | yellow
 
 🚛
 Articulated lorry
-articulated | articulated lorry | car | drive | lorry | move | semi | truck | vehicle
+car | drive | move | semi | truck | vehicle
 
 🚜
 Tractor
-tractor | vehicle
+vehicle
 
 🚝
 Monorail
-monorail | vehicle
+vehicle
 
 🚞
 Mountain railway
-car | mountain | mountain railway | railway | trip
+car | trip
 
 🚟
 Suspension railway
-railway | suspension | suspension railway
+suspension
 
 🚠
 Mountain cableway
-cable | cableway | gondola | lift | mountain | mountain cableway | ski
+gondola | lift | ski
 
 🚡
 Aerial tramway
-aerial | aerial tramway | cable | car | gondola | ropeway | tramway
+cable | car | gondola | ropeway
 
 🚣
 Person rowing boat
-boat | canoe | cruise | fishing | lake | oar | paddle | person | person rowing boat | raft | river | row | rowboat | rowing
+canoe | cruise | fishing | lake | oar | paddle | raft | river | rowboat
 
 🚦
 Vertical traffic light
-drove | intersection | light | signal | stop | stoplight | traffic | vertical | vertical traffic light
+drove | intersection | signal | stop | stoplight
 
 🚮
 Litter in bin sign
-bin | litter | litter in bin sign | litterbin | sign
+litterbin
 
 🚯
 No littering
-forbidden | litter | littering | no | no littering | not | prohibited
+forbidden | not | prohibited
 
 🚰
 Potable water
-drinking | potable | potable water | water
+drinking
 
 🚱
 Non-potable water
-dry | non-drinking | non-potable | non-potable water | prohibited | water
+dry | non-drinking | prohibited
 
 🚳
 No bicycles
-bicycle | bicycles | bike | forbidden | no | no bicycles | not | prohibited
+bike | forbidden | not | prohibited
 
 🚴
 Person biking
-bicycle | bicyclist | bike | biking | cycle | cyclist | person | person biking | riding | sport
+bicycle | bicyclist | bike | cycle | cyclist | riding | sport
 
 🚵
 Person mountain biking
-bicycle | bicyclist | bike | biking | cycle | cyclist | mountain | person | person mountain biking | riding | sport
+bicycle | bicyclist | bike | cycle | cyclist | riding | sport
 
 🚷
 No pedestrians
-forbidden | no | no pedestrians | not | pedestrian | pedestrians | prohibited
+forbidden | not | prohibited
 
 🚸
 Children crossing
-child | children | children crossing | crossing | pedestrian | traffic
+pedestrian | traffic
 
 🚿
 Shower
-shower | water
+water
 
 🛁
 Bathtub
-bath | bathtub
+bath
 
 🛂
 Passport control
-control | passport | passport control
+passport
 
 🛃
 Customs
-customs | packing
+packing
 
 🛄
 Baggage claim
-arrived | baggage | baggage claim | bags | case | checked | claim | journey | packing | plane | ready | travel | trip
+arrived | bags | case | checked | journey | packing | plane | ready | travel | trip
 
 🛅
 Left luggage
-baggage | case | left | left luggage | locker | luggage
+baggage | case | locker
 
 🛌
 Person in bed
-bed | bedtime | good | goodnight | hotel | nap | night | person | person in bed | sleep | tired | zzz
+bedtime | good | goodnight | hotel | nap | night | sleep | tired | zzz
 
 🛐
 Place of worship
-place | place of worship | pray | religion | worship
+pray | religion
 
 🛫
 Airplane departure
-aeroplane | airplane | airplane departure | check-in | departure | departures | plane
+aeroplane | check-in | departures
 
 🛬
 Airplane arrival
-aeroplane | airplane | airplane arrival | arrival | arrivals | arriving | landing | plane
+aeroplane | arrivals | arriving | landing
 
 🤐
 Zipper-mouth face
-face | keep | mouth | quiet | secret | shut | zip | zipper | zipper-mouth | zipper-mouth face
+keep | quiet | secret | shut
 
 🤑
 Money-mouth face
-face | money | money-mouth | money-mouth face | mouth | paid
+paid
 
 🤒
 Face with thermometer
-face | face with thermometer | ill | sick | thermometer
+ill | sick
 
 🤓
 Nerd face
-brainy | clever | expert | face | geek | gifted | glasses | intelligent | nerd | nerd face | smart
+brainy | clever | expert | geek | gifted | glasses | intelligent | smart
 
 🤔
 Thinking face
-chin | consider | face | hmm | ponder | pondering | thinking | thinking face | wondering
+chin | consider | hmm | ponder | pondering | wondering
 
 🤕
 Face with head-bandage
-bandage | face | face with head-bandage | head-bandage | hurt | injury | ouch
+hurt | injury | ouch
 
 🤖
 Robot
-face | monster | robot
+face | monster
 
 🤗
 Smiling face with open hands
-face | hands | hug | hugging | open | smiling | smiling face with open hands
+hug | hugging
 
 🤘
 Sign of the horns
-finger | hand | horns | rock-on | sign | sign of the horns
+finger | hand | rock-on
 
 🦀
 Crab
-cancer | crab | zodiac
+cancer | zodiac
 
 🦁
 Lion
-alpha | animal | face | leo | lion | mane | order | rawr | roar | safari | strong | zodiac
+alpha | animal | face | leo | mane | order | rawr | roar | safari | strong | zodiac
 
 🦂
 Scorpion
-scorpio | scorpion | scorpius | zodiac
+scorpius | zodiac
 
 🦃
 Turkey
-bird | gobble | thanksgiving | turkey
+bird | gobble | thanksgiving
 
 🦄
 Unicorn
-face | unicorn
+face
 
 🧀
 Cheese wedge
-cheese | cheese wedge | wedge
+wedge
 
 📵
 No mobile phones
-cell | forbidden | mobile | no | no mobile phones | not | phone | phones | prohibited | telephone
+cell | forbidden | not | prohibited | telephone
 
 🕎
 Menorah
-candelabrum | candlestick | hanukkah | jewish | judaism | menorah | religion
+candelabrum | candlestick | hanukkah | jewish | judaism | religion
 
 ⏯️
 Play or pause button
-arrow | button | pause | play | play or pause button | right | triangle
+arrow | right | triangle
 
 ⚜️
 Fleur-de-lis
-fleur-de-lis | knights
+knights

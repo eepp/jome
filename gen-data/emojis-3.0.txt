@@ -1,287 +1,287 @@
 🕺
 Man dancing
-dance | dancer | dancing | elegant | festive | flair | flamenco | groove | let's | man | man dancing | salsa | tango
+dance | dancer | elegant | festive | flair | flamenco | groove | let's | salsa | tango
 
 🖤
 Black heart
-black | black heart | evil | heart | wicked
+evil | wicked
 
 🛑
 Stop sign
-octagonal | sign | stop | stop sign
+octagonal
 
 🛴
 Kick scooter
-kick | kick scooter | scooter
+scooter
 
 🛵
 Motor scooter
-motor | motor scooter | scooter
+scooter
 
 🤙
 Call me hand
-call | call me hand | hand | hang | loose | me | shaka
+hang | loose | shaka
 
 🤚
 Raised back of hand
-back | backhand | hand | raised | raised back of hand
+backhand
 
 🤛
 Left-facing fist
-fist | left-facing | left-facing fist | leftwards
+leftwards
 
 🤜
 Right-facing fist
-fist | right-facing | right-facing fist | rightwards
+rightwards
 
 🤝
 Handshake
-agreement | deal | hand | handshake | meeting | shake
+agreement | deal | meeting
 
 🤞
 Crossed fingers
-cross | crossed | crossed fingers | finger | fingers | hand | luck
+hand | luck
 
 🤠
 Cowboy hat face
-cowboy | cowboy hat face | cowgirl | face | hat
+cowgirl
 
 🤡
 Clown face
-clown | clown face | face
+face
 
 🤢
 Nauseated face
-face | gross | nasty | nauseated | nauseated face | sick | vomit
+gross | nasty | sick | vomit
 
 🤣
 Rolling on the floor laughing
-crying | face | floor | funny | haha | happy | hehe | hilarious | joy | laugh | lmao | lol | rofl | roflmao | rolling | rolling on the floor laughing | tear
+crying | face | funny | haha | happy | hehe | hilarious | joy | lmao | lol | rofl | roflmao | tear
 
 🤤
 Drooling face
-drooling | drooling face | face
+face
 
 🤥
 Lying face
-face | liar | lie | lying | lying face | pinocchio
+liar | lie | pinocchio
 
 🤦
 Person facepalming
-again | bewilder | disbelief | exasperation | facepalm | no | not | oh | omg | person | person facepalming | shock | smh
+again | bewilder | disbelief | exasperation | no | not | oh | omg | shock | smh
 
 🤧
 Sneezing face
-face | fever | flu | gesundheit | sick | sneeze | sneezing | sneezing face
+fever | flu | gesundheit | sick | sneeze
 
 🤰
 Pregnant woman
-pregnant | pregnant woman | woman
+woman
 
 🤳
 Selfie
-camera | phone | selfie
+camera | phone
 
 🤴
 Prince
-crown | fairy | fairytale | fantasy | king | prince | royal | royalty | tale
+crown | fairy | fairytale | fantasy | king | royal | royalty | tale
 
 🤵
 Person in tuxedo
-formal | person | person in tuxedo | tuxedo | wedding
+formal | wedding
 
 🤶
 Mrs. Claus
-celebration | christmas | claus | fairy | fantasy | holiday | merry | mother | mrs | mrs. claus | santa | tale | xmas
+celebration | christmas | fairy | fantasy | holiday | merry | mother | santa | tale | xmas
 
 🤷
 Person shrugging
-doubt | dunno | guess | idk | ignorance | indifference | knows | maybe | person | person shrugging | shrug | shrugging | whatever | who
+doubt | dunno | guess | idk | ignorance | indifference | knows | maybe | whatever | who
 
 🤸
 Person cartwheeling
-active | cartwheel | cartwheeling | excited | flip | gymnastics | happy | person | person cartwheeling | somersault
+active | excited | flip | gymnastics | happy | somersault
 
 🤹
 Person juggling
-act | balance | balancing | handle | juggle | juggling | manage | multitask | person | person juggling | skill
+act | balance | balancing | handle | juggle | manage | multitask | skill
 
 🤼
 People wrestling
-combat | duel | grapple | people | people wrestling | ring | tournament | wrestle | wrestling
+combat | duel | grapple | ring | tournament | wrestle
 
 🤽
 Person playing water polo
-person | person playing water polo | playing | polo | sport | swimming | water | waterpolo
+sport | swimming | waterpolo
 
 🤾
 Person playing handball
-athletics | ball | catch | chuck | handball | hurl | lob | person | person playing handball | pitch | playing | sport | throw | toss
+athletics | catch | chuck | hurl | lob | pitch | sport | throw | toss
 
 🥀
 Wilted flower
-dying | flower | wilted | wilted flower
+dying
 
 🥁
 Drum
-drum | drumsticks | music
+drumsticks | music
 
 🥂
 Clinking glasses
-celebrate | clink | clinking | clinking glasses | drink | glass | glasses
+celebrate | drink
 
 🥃
 Tumbler glass
-glass | liquor | scotch | shot | tumbler | tumbler glass | whiskey | whisky
+liquor | scotch | shot | whiskey | whisky
 
 🥇
 1st place medal
-1st | 1st place medal | first | gold | medal | place
+first | gold
 
 🥈
 2nd place medal
-2nd | 2nd place medal | medal | place | second | silver
+second | silver
 
 🥉
 3rd place medal
-3rd | 3rd place medal | bronze | medal | place | third
+bronze | third
 
 🥊
 Boxing glove
-boxing | boxing glove | glove
+glove
 
 🥋
 Martial arts uniform
-arts | judo | karate | martial | martial arts uniform | taekwondo | uniform
+judo | karate | taekwondo
 
 🥐
 Croissant
-bread | breakfast | crescent | croissant | food | french | roll
+bread | breakfast | crescent | food | french | roll
 
 🥑
 Avocado
-avocado | food | fruit
+food | fruit
 
 🥒
 Cucumber
-cucumber | food | pickle | vegetable
+food | pickle | vegetable
 
 🥓
 Bacon
-bacon | breakfast | food | meat
+breakfast | food | meat
 
 🥔
 Potato
-food | potato | vegetable
+food | vegetable
 
 🥕
 Carrot
-carrot | food | vegetable
+food | vegetable
 
 🥖
 Baguette bread
-baguette | baguette bread | bread | food | french
+food | french
 
 🥗
 Green salad
-food | green | green salad | salad
+food
 
 🥘
 Shallow pan of food
-casserole | food | paella | pan | shallow | shallow pan of food
+casserole | paella
 
 🥙
 Stuffed flatbread
-falafel | flatbread | food | gyro | kebab | stuffed | stuffed flatbread
+falafel | food | gyro | kebab
 
 🥛
 Glass of milk
-drink | glass | glass of milk | milk
+drink
 
 🥜
 Peanuts
-food | nut | peanut | peanuts | vegetable
+food | vegetable
 
 🥝
 Kiwi fruit
-food | fruit | kiwi | kiwi fruit
+food
 
 🥞
 Pancakes
-breakfast | crêpe | food | hotcake | pancake | pancakes
+breakfast | crêpe | food | hotcake
 
 🦅
 Eagle
-animal | bird | eagle | ornithology
+animal | bird | ornithology
 
 🦆
 Duck
-animal | bird | duck | ornithology
+animal | bird | ornithology
 
 🦇
 Bat
-animal | bat | vampire
+animal | vampire
 
 🦈
 Shark
-animal | fish | shark
+animal | fish
 
 🦉
 Owl
-animal | bird | ornithology | owl | wise
+animal | bird | ornithology | wise
 
 🦊
 Fox
-animal | face | fox
+animal | face
 
 🦋
 Butterfly
-butterfly | insect | pretty
+insect | pretty
 
 🦍
 Gorilla
-animal | gorilla
+animal
 
 🦎
 Lizard
-animal | lizard | reptile
+animal | reptile
 
 🦏
 Rhinoceros
-animal | rhinoceros
+animal
 
 🦐
 Shrimp
-food | shellfish | shrimp | small
+food | shellfish | small
 
 🦑
 Squid
-animal | food | mollusk | squid
+animal | food | mollusk
 
 🤺
 Person fencing
-fencer | fencing | person | person fencing | sword
+fencer | sword
 
 🦌
 Deer
-animal | deer
+animal
 
 🥚
 Egg
-breakfast | egg | food
+breakfast | food
 
 🥄
 Spoon
-eat | spoon | tableware
+eat | tableware
 
 🛶
 Canoe
-boat | canoe
+boat
 
 🥅
 Goal net
-goal | goal net | net
+net
 
 🛒
 Shopping cart
-cart | shopping | shopping cart | trolley
+trolley

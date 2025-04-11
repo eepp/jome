@@ -1,267 +1,267 @@
 🥲
 Smiling face with tear
-face | glad | grateful | happy | joy | pain | proud | relieved | smile | smiley | smiling | smiling face with tear | tear | touched
+glad | grateful | happy | joy | pain | proud | relieved | smile | smiley | touched
 
 🥸
 Disguised face
-disguise | disguised face | eyebrow | face | glasses | incognito | moustache | mustache | nose | person | spy | tache | tash
+eyebrow | glasses | incognito | moustache | mustache | nose | person | spy | tache | tash
 
 🤌
 Pinched fingers
-fingers | gesture | hand | hold | huh | interrogation | patience | pinched | pinched fingers | relax | sarcastic | ugh | what | zip
+gesture | hand | hold | huh | interrogation | patience | relax | sarcastic | ugh | what | zip
 
 🫀
 Anatomical heart
-anatomical | anatomical heart | beat | cardiology | heart | heartbeat | organ | pulse | real | red
+beat | cardiology | heartbeat | organ | pulse | real | red
 
 🫁
 Lungs
-breath | breathe | exhalation | inhalation | lung | lungs | organ | respiration
+breath | breathe | exhalation | inhalation | organ | respiration
 
 🥷
 Ninja
-assassin | fight | fighter | hidden | ninja | person | secret | skills | sly | soldier | stealth | war
+assassin | fight | fighter | hidden | person | secret | skills | sly | soldier | stealth | war
 
 🤵‍♂️
 Man in tuxedo
-formal | groom | man | man in tuxedo | tuxedo | wedding
+formal | groom | wedding
 
 🤵‍♀️
 Woman in tuxedo
-formal | tuxedo | wedding | woman | woman in tuxedo
+formal | wedding
 
 👰‍♂️
 Man with veil
-man | man with veil | veil | wedding
+wedding
 
 👰‍♀️
 Woman with veil
-bride | veil | wedding | woman | woman with veil
+bride | wedding
 
 👩‍🍼
 Woman feeding baby
-baby | feed | feeding | mom | mother | nanny | newborn | nursing | woman | woman feeding baby
+mom | mother | nanny | newborn | nursing
 
 👨‍🍼
 Man feeding baby
-baby | dad | father | feed | feeding | man | man feeding baby | nanny | newborn | nursing
+dad | father | nanny | newborn | nursing
 
 🧑‍🍼
 Person feeding baby
-baby | feed | feeding | nanny | newborn | nursing | parent | person feeding baby
+nanny | newborn | nursing | parent
 
 🧑‍🎄
 Mx Claus
-celebration | christmas | claus | fairy | fantasy | holiday | merry | mx | mx claus | santa | tale | xmas
+celebration | christmas | fairy | fantasy | holiday | merry | santa | tale | xmas
 
 🫂
 People hugging
-comfort | embrace | farewell | friendship | goodbye | hello | hug | hugging | love | people | people hugging | thanks
+comfort | embrace | farewell | friendship | goodbye | hello | love | thanks
 
 🐈‍⬛
 Black cat
-animal | black | black cat | cat | feline | halloween | meow | unlucky
+animal | feline | halloween | meow | unlucky
 
 🦬
 Bison
-animal | bison | buffalo | herd | wisent
+animal | buffalo | herd | wisent
 
 🦣
 Mammoth
-animal | extinction | large | mammoth | tusk | wooly
+animal | extinction | large | tusk | wooly
 
 🦫
 Beaver
-animal | beaver | dam | teeth
+animal | dam | teeth
 
 🐻‍❄️
 Polar bear
-animal | arctic | bear | polar | polar bear | white
+animal | arctic | white
 
 🦤
 Dodo
-animal | bird | dodo | extinction | large | ornithology
+animal | bird | extinction | large | ornithology
 
 🪶
 Feather
-bird | feather | flight | light | plumage
+bird | flight | light | plumage
 
 🦭
 Seal
-animal | lion | ocean | sea | seal
+animal | lion | ocean
 
 🪲
 Beetle
-animal | beetle | bug | insect
+animal | bug | insect
 
 🪳
 Cockroach
-animal | cockroach | insect | pest | roach
+animal | insect | pest
 
 🪰
 Fly
-animal | disease | fly | insect | maggot | pest | rotting
+animal | disease | insect | maggot | pest | rotting
 
 🪱
 Worm
-animal | annelid | earthworm | parasite | worm
+animal | annelid | earthworm | parasite
 
 🪴
 Potted plant
-decor | grow | house | nurturing | plant | pot | potted | potted plant
+decor | grow | house | nurturing
 
 🫐
 Blueberries
-berries | berry | bilberry | blue | blueberries | blueberry | food | fruit
+berry | bilberry | blueberry | food | fruit
 
 🫒
 Olive
-food | olive
+food
 
 🫑
 Bell pepper
-bell | bell pepper | capsicum | food | pepper | vegetable
+capsicum | food | vegetable
 
 🫓
 Flatbread
-arepa | bread | flatbread | food | gordita | lavash | naan | pita
+arepa | food | gordita | lavash | naan | pita
 
 🫔
 Tamale
-food | mexican | pamonha | tamale | wrapped
+food | mexican | pamonha | wrapped
 
 🫕
 Fondue
-cheese | chocolate | fondue | food | melted | pot | ski
+cheese | chocolate | food | melted | pot | ski
 
 🫖
 Teapot
-brew | drink | food | pot | tea | teapot
+brew | drink | food
 
 🧋
 Bubble tea
-boba | bubble | bubble tea | food | milk | pearl | tea
+boba | food | milk | pearl
 
 🪨
 Rock
-boulder | heavy | rock | solid | stone | tough
+boulder | heavy | solid | stone | tough
 
 🪵
 Wood
-log | lumber | timber | wood
+log | lumber | timber
 
 🛖
 Hut
-home | house | hut | roundhouse | shelter | yurt
+home | house | roundhouse | shelter | yurt
 
 🛻
 Pickup truck
-automobile | car | flatbed | pick-up | pickup | pickup truck | transportation | truck
+automobile | car | flatbed | pick-up | transportation
 
 🛼
 Roller skate
-blades | roller | roller skate | skate | skates | sport
+blades | skates | sport
 
 🪄
 Magic wand
-magic | magic wand | magician | wand | witch | wizard
+magician | witch | wizard
 
 🪅
 Piñata
-candy | celebrate | celebration | cinco | de | festive | mayo | party | pinada | pinata | piñata
+candy | celebrate | celebration | cinco | de | festive | mayo | party | pinada | pinata
 
 🪆
 Nesting dolls
-babooshka | baboushka | babushka | doll | dolls | matryoshka | nesting | nesting dolls | russia
+babooshka | baboushka | babushka | matryoshka | russia
 
 🪡
 Sewing needle
-embroidery | needle | sew | sewing | sewing needle | stitches | sutures | tailoring | thread
+embroidery | stitches | sutures | tailoring | thread
 
 🪢
 Knot
-cord | knot | rope | tangled | tie | twine | twist
+cord | rope | tangled | tie | twine | twist
 
 🩴
 Thong sandal
-beach | flip | flop | sandal | sandals | shoe | thong | thong sandal | thongs | zōri
+beach | flip | flop | sandals | shoe | thongs | zōri
 
 🪖
 Military helmet
-army | helmet | military | military helmet | soldier | war | warrior
+army | soldier | war | warrior
 
 🪗
 Accordion
-accordion | box | concertina | instrument | music | squeeze | squeezebox
+box | concertina | instrument | music | squeeze | squeezebox
 
 🪘
 Long drum
-beat | conga | drum | instrument | long | long drum | rhythm
+beat | conga | instrument | rhythm
 
 🪙
 Coin
-coin | dollar | euro | gold | metal | money | rich | silver | treasure
+dollar | euro | gold | metal | money | rich | silver | treasure
 
 🪃
 Boomerang
-boomerang | rebound | repercussion | weapon
+rebound | repercussion | weapon
 
 🪚
 Carpentry saw
-carpenter | carpentry | carpentry saw | cut | lumber | saw | tool | trim
+carpenter | cut | lumber | tool | trim
 
 🪛
 Screwdriver
-flathead | handy | screw | screwdriver | tool
+flathead | handy | tool
 
 🪝
 Hook
-catch | crook | curve | ensnare | hook | point | selling
+catch | crook | curve | ensnare | point | selling
 
 🪜
 Ladder
-climb | ladder | rung | step
+climb | rung | step
 
 🛗
 Elevator
-accessibility | elevator | hoist | lift
+accessibility | hoist | lift
 
 🪞
 Mirror
-makeup | mirror | reflection | reflector | speculum
+makeup | reflection | reflector | speculum
 
 🪟
 Window
-air | frame | fresh | opening | transparent | view | window
+air | frame | fresh | opening | transparent | view
 
 🪠
 Plunger
-cup | force | plumber | plunger | poop | suction | toilet
+cup | force | plumber | poop | suction | toilet
 
 🪤
 Mouse trap
-bait | cheese | lure | mouse | mouse trap | mousetrap | snare | trap
+bait | cheese | lure | mousetrap | snare
 
 🪣
 Bucket
-bucket | cask | pail | vat
+cask | pail | vat
 
 🪥
 Toothbrush
-bathroom | brush | clean | dental | hygiene | teeth | toiletry | toothbrush
+bathroom | clean | dental | hygiene | teeth | toiletry
 
 🪦
 Headstone
-cemetery | dead | grave | graveyard | headstone | memorial | rip | tomb | tombstone
+cemetery | dead | grave | graveyard | memorial | rip | tomb | tombstone
 
 🪧
 Placard
-card | demonstration | notice | picket | placard | plaque | protest | sign
+demonstration | notice | picket | plaque | protest | sign
 
 ⚧️
 Transgender symbol
-symbol | transgender | transgender symbol
+transgender
 
 🏳️‍⚧️
 Transgender flag
-blue | flag | light | pink | transgender | transgender flag | white
+blue | light | pink | white

@@ -1,147 +1,147 @@
 🫠
 Melting face
-disappear | dissolve | embarrassed | face | haha | heat | hot | liquid | lol | melt | melting | melting face | sarcasm | sarcastic
+disappear | dissolve | embarrassed | haha | heat | hot | liquid | lol | sarcasm | sarcastic
 
 🫢
 Face with open eyes and hand over mouth
-amazement | awe | disbelief | embarrass | eyes | face | face with open eyes and hand over mouth | gasp | hand | mouth | omg | open | over | quiet | scared | shock | surprise
+amazement | awe | disbelief | embarrass | gasp | omg | quiet | scared | shock | surprise
 
 🫣
 Face with peeking eye
-captivated | embarrass | eye | face | face with peeking eye | hide | hiding | peek | peeking | peep | scared | shy | stare
+captivated | embarrass | hide | hiding | peep | scared | shy | stare
 
 🫡
 Saluting face
-face | good | luck | ma'am | ok | respect | salute | saluting | saluting face | sir | troops | yes
+good | luck | ma'am | ok | respect | salute | sir | troops | yes
 
 🫥
 Dotted line face
-depressed | disappear | dotted | dotted line face | face | hidden | hide | introvert | invisible | line | meh | whatever | wtv
+depressed | disappear | hidden | hide | introvert | invisible | meh | whatever | wtv
 
 🫤
 Face with diagonal mouth
-confused | confusion | diagonal | disappointed | doubt | doubtful | face | face with diagonal mouth | frustrated | frustration | meh | mouth | skeptical | unsure | whatever | wtv
+confused | confusion | disappointed | doubt | doubtful | frustrated | frustration | meh | skeptical | unsure | whatever | wtv
 
 🥹
 Face holding back tears
-admiration | aww | back | cry | embarrassed | face | face holding back tears | feelings | grateful | gratitude | holding | joy | please | proud | resist | sad | tears
+admiration | aww | cry | embarrassed | feelings | grateful | gratitude | joy | please | proud | resist | sad
 
 🫱
 Rightwards hand
-hand | handshake | hold | reach | right | rightward | rightwards | rightwards hand | shake
+handshake | hold | reach | shake
 
 🫲
 Leftwards hand
-hand | handshake | hold | left | leftward | leftwards | leftwards hand | reach | shake
+handshake | hold | reach | shake
 
 🫳
 Palm down hand
-dismiss | down | drop | dropped | hand | palm | palm down hand | pick | shoo | up
+dismiss | drop | dropped | pick | shoo | up
 
 🫴
 Palm up hand
-beckon | catch | come | hand | hold | know | lift | me | offer | palm | palm up hand | tell
+beckon | catch | come | hold | know | lift | me | offer | tell
 
 🫰
 Hand with index finger and thumb crossed
-<3 | crossed | expensive | finger | hand | hand with index finger and thumb crossed | heart | index | love | money | snap | thumb
+<3 | expensive | heart | love | money | snap
 
 🫵
 Index pointing at the viewer
-at | finger | hand | index | index pointing at the viewer | pointing | poke | viewer | you
+finger | hand | poke | you
 
 🫶
 Heart hands
-<3 | hands | heart | heart hands | love | you
+<3 | love | you
 
 🫦
 Biting lip
-anxious | bite | biting | biting lip | fear | flirt | flirting | kiss | lip | lipstick | nervous | sexy | uncomfortable | worried | worry
+anxious | bite | fear | flirt | flirting | kiss | lipstick | nervous | sexy | uncomfortable | worried | worry
 
 🫅
 Person with crown
-crown | monarch | noble | person | person with crown | regal | royal | royalty
+monarch | noble | regal | royal | royalty
 
 🫃
 Pregnant man
-belly | bloated | full | man | overeat | pregnant | pregnant man
+belly | bloated | full | overeat
 
 🫄
 Pregnant person
-belly | bloated | full | overeat | person | pregnant | pregnant person | stuffed
+belly | bloated | full | overeat | stuffed
 
 🧌
 Troll
-fairy | fantasy | monster | tale | troll | trolling
+fairy | fantasy | monster | tale | trolling
 
 🪸
 Coral
-change | climate | coral | ocean | reef | sea
+change | climate | ocean | reef | sea
 
 🪷
 Lotus
-beauty | buddhism | calm | flower | hinduism | lotus | peace | purity | serenity
+beauty | buddhism | calm | flower | hinduism | peace | purity | serenity
 
 🪹
 Empty nest
-branch | empty | empty nest | home | nest | nesting
+branch | home | nesting
 
 🪺
 Nest with eggs
-bird | branch | egg | eggs | nest | nest with eggs | nesting
+bird | branch | nesting
 
 🫘
 Beans
-beans | food | kidney | legume | small
+food | kidney | legume | small
 
 🫗
 Pouring liquid
-accident | drink | empty | glass | liquid | oops | pour | pouring | pouring liquid | spill | water
+accident | drink | empty | glass | oops | spill | water
 
 🫙
 Jar
-condiment | container | empty | jar | nothing | sauce | store
+condiment | container | empty | nothing | sauce | store
 
 🛝
 Playground slide
-amusement | park | play | playground | playground slide | playing | slide | sliding | theme
+amusement | park | playing | sliding | theme
 
 🛞
 Wheel
-car | circle | tire | turn | vehicle | wheel
+car | circle | tire | turn | vehicle
 
 🛟
 Ring buoy
-buoy | float | life | lifesaver | preserver | rescue | ring | ring buoy | safety | save | saver | swim
+float | life | lifesaver | preserver | rescue | safety | save | saver | swim
 
 🪬
 Hamsa
-amulet | fatima | fortune | guide | hamsa | hand | mary | miriam | palm | protect | protection
+amulet | fatima | fortune | guide | hand | mary | miriam | palm | protect | protection
 
 🪩
 Mirror ball
-ball | dance | disco | glitter | mirror | mirror ball | party
+dance | disco | glitter | party
 
 🪫
 Low battery
-battery | drained | electronic | energy | low | low battery | power
+drained | electronic | energy | power
 
 🩼
 Crutch
-aid | cane | crutch | disability | help | hurt | injured | mobility | stick
+aid | cane | disability | help | hurt | injured | mobility | stick
 
 🩻
 X-ray
-bones | doctor | medical | skeleton | skull | x-ray | xray
+bones | doctor | medical | skeleton | skull | xray
 
 🫧
 Bubbles
-bubble | bubbles | burp | clean | floating | pearl | soap | underwater
+burp | clean | floating | pearl | soap | underwater
 
 🪪
 Identification card
-card | credentials | document | id | identification | identification card | license | security
+credentials | document | license | security
 
 🟰
 Heavy equals sign
-answer | equal | equality | equals | heavy | heavy equals sign | math | sign
+answer | equality | math

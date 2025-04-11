@@ -1,111 +1,111 @@
 🙂‍↔️
 Head shaking horizontally
-head | head shaking horizontally | horizontally | no | shake | shaking
+no | shake
 
 🙂‍↕️
 Head shaking vertically
-head | head shaking vertically | nod | shaking | vertically | yes
+nod | yes
 
 🚶‍➡️
 Person walking facing right
-amble | gait | hike | man | pace | pedestrian | person | person walking facing right | stride | stroll | walk | walking
+amble | gait | hike | man | pace | pedestrian | stride | stroll
 
 🚶‍♀️‍➡️
 Woman walking facing right
-amble | gait | hike | man | pace | pedestrian | stride | stroll | walk | walking | woman | woman walking facing right
+amble | gait | hike | pace | pedestrian | stride | stroll
 
 🚶‍♂️‍➡️
 Man walking facing right
-amble | gait | hike | man | man walking facing right | pace | pedestrian | stride | stroll | walk | walking
+amble | gait | hike | pace | pedestrian | stride | stroll
 
 🧎‍➡️
 Person kneeling facing right
-kneel | kneeling | knees | person | person kneeling facing right
+knees
 
 🧎‍♀️‍➡️
 Woman kneeling facing right
-kneel | kneeling | knees | woman | woman kneeling facing right
+knees
 
 🧎‍♂️‍➡️
 Man kneeling facing right
-kneel | kneeling | knees | man | man kneeling facing right
+knees
 
 🧑‍🦯‍➡️
 Person with white cane facing right
-accessibility | blind | cane | person | person with white cane facing right | probing | white
+accessibility | blind | probing
 
 👨‍🦯‍➡️
 Man with white cane facing right
-accessibility | blind | cane | man | man with white cane facing right | probing | white
+accessibility | blind | probing
 
 👩‍🦯‍➡️
 Woman with white cane facing right
-accessibility | blind | cane | probing | white | woman | woman with white cane facing right
+accessibility | blind | probing
 
 🧑‍🦼‍➡️
 Person in motorized wheelchair facing right
-accessibility | motorized | person | person in motorized wheelchair facing right | wheelchair
+accessibility
 
 👨‍🦼‍➡️
 Man in motorized wheelchair facing right
-accessibility | man | man in motorized wheelchair facing right | motorized | wheelchair
+accessibility
 
 👩‍🦼‍➡️
 Woman in motorized wheelchair facing right
-accessibility | motorized | wheelchair | woman | woman in motorized wheelchair facing right
+accessibility
 
 🧑‍🦽‍➡️
 Person in manual wheelchair facing right
-accessibility | manual | person | person in manual wheelchair facing right | wheelchair
+accessibility
 
 👨‍🦽‍➡️
 Man in manual wheelchair facing right
-accessibility | man | man in manual wheelchair facing right | manual | wheelchair
+accessibility
 
 👩‍🦽‍➡️
 Woman in manual wheelchair facing right
-accessibility | manual | wheelchair | woman | woman in manual wheelchair facing right
+accessibility
 
 🏃‍➡️
 Person running facing right
-fast | hurry | marathon | move | person | person running facing right | quick | race | racing | run | rush | speed
+fast | hurry | marathon | move | quick | race | racing | rush | speed
 
 🏃‍♀️‍➡️
 Woman running facing right
-fast | hurry | marathon | move | quick | race | racing | run | rush | speed | woman | woman running facing right
+fast | hurry | marathon | move | quick | race | racing | rush | speed
 
 🏃‍♂️‍➡️
 Man running facing right
-fast | hurry | man | man running facing right | marathon | move | quick | race | racing | run | rush | speed
+fast | hurry | marathon | move | quick | race | racing | rush | speed
 
 🧑‍🧑‍🧒
 Family: adult, adult, child
-adult | child | family | family: adult, adult, child
+family
 
 🧑‍🧑‍🧒‍🧒
 Family: adult, adult, child, child
-adult | child | family | family: adult, adult, child, child
+family
 
 🧑‍🧒
 Family: adult, child
-adult | child | family | family: adult, child
+family
 
 🧑‍🧒‍🧒
 Family: adult, child, child
-adult | child | family | family: adult, child, child
+family
 
 🐦‍🔥
 Phoenix
-ascend | ascension | emerge | fantasy | firebird | glory | immortal | phoenix | rebirth | reincarnation | reinvent | renewal | revival | revive | rise | transform
+ascend | ascension | emerge | fantasy | firebird | glory | immortal | rebirth | reincarnation | reinvent | renewal | revival | revive | rise | transform
 
 🍋‍🟩
 Lime
-acidity | citrus | cocktail | fruit | garnish | key | lime | margarita | mojito | refreshing | salsa | sour | tangy | tequila | tropical | zest
+acidity | citrus | cocktail | fruit | garnish | key | margarita | mojito | refreshing | salsa | sour | tangy | tequila | tropical | zest
 
 🍄‍🟫
 Brown mushroom
-brown mushroom | food | fungi | fungus | mushroom | nature | pizza | portobello | shiitake | shroom | spore | sprout | toppings | truffle | vegetable | vegetarian | veggie
+food | fungi | fungus | nature | pizza | portobello | shiitake | spore | sprout | toppings | truffle | vegetable | vegetarian | veggie
 
 ⛓️‍💥
 Broken chain
-break | breaking | broken | broken chain | chain | cuffs | freedom
+break | breaking | cuffs | freedom

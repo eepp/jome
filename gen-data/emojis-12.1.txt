@@ -1,91 +1,91 @@
 🧑‍🦰
 Person: red hair
-adult | person | person: red hair | red hair
+adult
 
 🧑‍🦱
 Person: curly hair
-adult | curly hair | person | person: curly hair
+adult
 
 🧑‍🦳
 Person: white hair
-adult | person | person: white hair | white hair
+adult
 
 🧑‍🦲
 Person: bald
-adult | bald | person | person: bald
+adult
 
 🧑‍⚕️
 Health worker
-doctor | health | health worker | healthcare | nurse | therapist | worker
+doctor | healthcare | nurse | therapist
 
 🧑‍🎓
 Student
-graduate | student
+graduate
 
 🧑‍🏫
 Teacher
-instructor | lecturer | professor | teacher
+instructor | lecturer | professor
 
 🧑‍⚖️
 Judge
-judge | justice | law | scales
+justice | law | scales
 
 🧑‍🌾
 Farmer
-farmer | gardener | rancher
+gardener | rancher
 
 🧑‍🍳
 Cook
-chef | cook
+chef
 
 🧑‍🔧
 Mechanic
-electrician | mechanic | plumber | tradesperson
+electrician | plumber | tradesperson
 
 🧑‍🏭
 Factory worker
-assembly | factory | factory worker | industrial | worker
+assembly | industrial
 
 🧑‍💼
 Office worker
-architect | business | manager | office | office worker | white-collar | worker
+architect | business | manager | white-collar
 
 🧑‍🔬
 Scientist
-biologist | chemist | engineer | mathematician | physicist | scientist
+biologist | chemist | engineer | mathematician | physicist
 
 🧑‍💻
 Technologist
-coder | computer | developer | inventor | software | technologist
+coder | computer | developer | inventor | software
 
 🧑‍🎤
 Singer
-actor | entertainer | rock | rockstar | singer | star
+actor | entertainer | rock | rockstar | star
 
 🧑‍🎨
 Artist
-artist | palette
+palette
 
 🧑‍✈️
 Pilot
-pilot | plane
+plane
 
 🧑‍🚀
 Astronaut
-astronaut | rocket | space
+rocket | space
 
 🧑‍🚒
 Firefighter
-fire | firefighter | firetruck
+firetruck
 
 🧑‍🦯
 Person with white cane
-accessibility | blind | cane | person | person with white cane | probing | white
+accessibility | blind | probing
 
 🧑‍🦼
 Person in motorized wheelchair
-accessibility | motorized | person | person in motorized wheelchair | wheelchair
+accessibility
 
 🧑‍🦽
 Person in manual wheelchair
-accessibility | manual | person | person in manual wheelchair | wheelchair
+accessibility

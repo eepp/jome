@@ -1,315 +1,315 @@
 🏴󠁧󠁢󠁥󠁮󠁧󠁿
 Flag: England
-flag: england | flag
+flag
 
 🏴󠁧󠁢󠁳󠁣󠁴󠁿
 Flag: Scotland
-flag | flag: scotland
+flag
 
 🏴󠁧󠁢󠁷󠁬󠁳󠁿
 Flag: Wales
-flag | flag: wales
+flag
 
 🛷
 Sled
-luge | sled | sledge | sleigh | snow | toboggan
+luge | sledge | sleigh | snow | toboggan
 
 🛸
 Flying saucer
-aliens | extra | flying | flying saucer | saucer | terrestrial | ufo
+aliens | extra | terrestrial | ufo
 
 🤟
 Love-you gesture
-fingers | gesture | hand | ily | love | love-you | love-you gesture | three | you
+fingers | hand | ily | three
 
 🤨
 Face with raised eyebrow
-disapproval | disbelief | distrust | emoji | eyebrow | face | face with raised eyebrow | hmm | mild | mild surprise | raised | scepticism | skeptic | skeptical | skepticism | surprise | what
+disapproval | disbelief | distrust | emoji | hmm | mild | mild surprise | scepticism | skeptic | skeptical | skepticism | surprise | what
 
 🤩
 Star-struck
-excited | eyes | face | grinning | smile | star | star-struck | starry-eyed | wow
+excited | eyes | face | grinning | smile | starry-eyed | wow
 
 🤪
 Zany face
-crazy | eye | eyes | face | goofy | large | small | zany | zany face
+crazy | eye | eyes | goofy | large | small
 
 🤫
 Shushing face
-face | quiet | shh | shush | shushing | shushing face
+quiet | shh
 
 🤬
 Face with symbols on mouth
-censor | cursing | cussing | face | face with symbols on mouth | mad | mouth | pissed | swearing | symbols
+censor | cursing | cussing | mad | pissed | swearing
 
 🤭
 Face with hand over mouth
-face | face with hand over mouth | giggle | giggling | hand | mouth | oops | realization | secret | shock | sudden | sudden realization | surprise | whoops
+giggle | giggling | oops | realization | secret | shock | sudden | sudden realization | surprise | whoops
 
 🤮
 Face vomiting
-barf | ew | face | face vomiting | gross | puke | sick | spew | throw | up | vomit | vomiting
+barf | ew | gross | puke | sick | spew | throw | up
 
 🤯
 Exploding head
-blown | explode | exploding | exploding head | head | mind | mindblown | no | shocked | way
+blown | explode | mind | mindblown | no | shocked | way
 
 🤱
 Breast-feeding
-baby | breast | breast-feeding | feeding | mom | mother | nursing | woman
+baby | mom | mother | nursing | woman
 
 🤲
 Palms up together
-cupped | cupped hands | dua | hands | palms | palms up together | pray | prayer | together | up | wish
+cupped | cupped hands | dua | hands | pray | prayer | wish
 
 🥌
 Curling stone
-curling | curling stone | game | rock | stone
+game | rock
 
 🥟
 Dumpling
-dumpling | empanada | gyōza | jiaozi | pierogi | potsticker
+empanada | gyōza | jiaozi | pierogi | potsticker
 
 🥠
 Fortune cookie
-cookie | fortune | fortune cookie | prophecy
+prophecy
 
 🥡
 Takeout box
-box | chopsticks | delivery | food | oyster | pail | takeout | takeout box
+chopsticks | delivery | food | oyster | pail
 
 🥣
 Bowl with spoon
-bowl | bowl with spoon | breakfast | cereal | congee | oatmeal | porridge | spoon
+breakfast | cereal | congee | oatmeal | porridge
 
 🥤
 Cup with straw
-cup | cup with straw | drink | juice | malt | soda | soft | soft drink | straw | water
+drink | juice | malt | soda | soft | soft drink | water
 
 🥥
 Coconut
-coconut | colada | palm | piña
+colada | palm | piña
 
 🥦
 Broccoli
-broccoli | cabbage | wild
+cabbage | wild
 
 🥧
 Pie
-apple | filling | fruit | meat | pastry | pie | pumpkin | slice
+apple | filling | fruit | meat | pastry | pumpkin | slice
 
 🥨
 Pretzel
-convoluted | pretzel | twisted
+convoluted | twisted
 
 🥩
 Cut of meat
-chop | cut | cut of meat | lambchop | meat | porkchop | red | steak
+chop | lambchop | porkchop | red | steak
 
 🥪
 Sandwich
-bread | sandwich
+bread
 
 🥫
 Canned food
-can | canned | canned food | food
+food
 
 🦒
 Giraffe
-animal | giraffe | spots
+animal | spots
 
 🦓
 Zebra
-animal | stripe | zebra
+animal | stripe
 
 🦔
 Hedgehog
-animal | hedgehog | spiny
+animal | spiny
 
 🦕
 Sauropod
-brachiosaurus | brontosaurus | dinosaur | diplodocus | sauropod
+brachiosaurus | brontosaurus | dinosaur | diplodocus
 
 🦖
 T-Rex
-dinosaur | rex | t | t-rex | tyrannosaurus | tyrannosaurus rex
+dinosaur | tyrannosaurus | tyrannosaurus rex
 
 🦗
 Cricket
-animal | bug | cricket | grasshopper | insect | orthoptera
+animal | bug | grasshopper | insect | orthoptera
 
 🧐
 Face with monocle
-classy | face | face with monocle | fancy | monocle | rich | stuffy | wealthy
+classy | fancy | rich | stuffy | wealthy
 
 🧑
 Person
-adult | person
+adult
 
 🧒
 Child
-bright-eyed | child | grandchild | kid | young | younger
+bright-eyed | grandchild | kid | young | younger
 
 🧓
 Older person
-adult | elderly | grandparent | old | older person | person | wise
+adult | elderly | grandparent | wise
 
 🧔
 Person: beard
-beard | bearded | bewhiskered | person | person: beard | whiskers
+bearded | bewhiskered | whiskers
 
 🧕
 Woman with headscarf
-bandana | head | head kerchief | headscarf | hijab | kerchief | mantilla | tichel | woman | woman with headscarf
+bandana | head kerchief | hijab | kerchief | mantilla | tichel
 
 🧖
 Person in steamy room
-day | hamam | luxurious | pamper | person | person in steamy room | relax | room | sauna | spa | steam | steam room | steambath | unwind
+day | hamam | luxurious | pamper | relax | sauna | spa | steam room | steambath | unwind
 
 🧖‍♀️
 Woman in steamy room
-day | luxurious | pamper | relax | room | sauna | spa | steam | steambath | unwind | woman | woman in steamy room
+day | luxurious | pamper | relax | sauna | spa | steambath | unwind
 
 🧖‍♂️
 Man in steamy room
-day | luxurious | man | man in steamy room | pamper | relax | room | sauna | spa | steam | steambath | unwind
+day | luxurious | pamper | relax | sauna | spa | steambath | unwind
 
 🧗
 Person climbing
-climb | climber | climbing | mountain | person | person climbing | rock | scale | up
+climber | mountain | rock | scale | up
 
 🧗‍♀️
 Woman climbing
-climb | climber | climbing | mountain | rock | scale | up | woman | woman climbing
+climber | mountain | rock | scale | up
 
 🧗‍♂️
 Man climbing
-climb | climber | climbing | man | man climbing | mountain | rock | scale | up
+climber | mountain | rock | scale | up
 
 🧘
 Person in lotus position
-cross | legged | legs | lotus | meditation | peace | person | person in lotus position | position | relax | serenity | yoga | yogi | zen
+cross | legged | legs | meditation | peace | relax | serenity | yoga | yogi | zen
 
 🧘‍♀️
 Woman in lotus position
-cross | legged | legs | lotus | meditation | peace | position | relax | serenity | woman | woman in lotus position | yoga | yogi | zen
+cross | legged | legs | meditation | peace | relax | serenity | yoga | yogi | zen
 
 🧘‍♂️
 Man in lotus position
-cross | legged | legs | lotus | man | man in lotus position | meditation | peace | position | relax | serenity | yoga | yogi | zen
+cross | legged | legs | meditation | peace | relax | serenity | yoga | yogi | zen
 
 🧙
 Mage
-fantasy | mage | magic | play | sorcerer | sorceress | sorcery | spell | summon | witch | wizard
+fantasy | magic | play | sorcerer | sorceress | sorcery | spell | summon | witch | wizard
 
 🧙‍♀️
 Woman mage
-fantasy | mage | magic | play | sorcerer | sorceress | sorcery | spell | summon | witch | wizard | woman | woman mage
+fantasy | magic | play | sorcerer | sorceress | sorcery | spell | summon | witch | wizard
 
 🧙‍♂️
 Man mage
-fantasy | mage | magic | man | man mage | play | sorcerer | sorceress | sorcery | spell | summon | witch | wizard
+fantasy | magic | play | sorcerer | sorceress | sorcery | spell | summon | witch | wizard
 
 🧚
 Fairy
-fairy | fairytale | fantasy | myth | person | pixie | tale | wings
+fairytale | fantasy | myth | person | pixie | tale | wings
 
 🧚‍♀️
 Woman fairy
-fairy | fairytale | fantasy | myth | person | pixie | tale | titania | wings | woman | woman fairy
+fairytale | fantasy | myth | person | pixie | tale | titania | wings
 
 🧚‍♂️
 Man fairy
-fairy | fairytale | fantasy | man | man fairy | myth | oberon | person | pixie | puck | tale | wings
+fairytale | fantasy | myth | oberon | person | pixie | puck | tale | wings
 
 🧛
 Vampire
-blood | dracula | fangs | halloween | scary | supernatural | teeth | undead | vampire
+blood | dracula | fangs | halloween | scary | supernatural | teeth | undead
 
 🧛‍♀️
 Woman vampire
-blood | fangs | halloween | scary | supernatural | teeth | undead | vampire | woman | woman vampire
+blood | fangs | halloween | scary | supernatural | teeth | undead
 
 🧛‍♂️
 Man vampire
-blood | fangs | halloween | man | man vampire | scary | supernatural | teeth | undead | vampire
+blood | fangs | halloween | scary | supernatural | teeth | undead
 
 🧜
 Merperson
-creature | fairytale | folklore | mermaid | merman | merperson | ocean | sea | siren | trident
+creature | fairytale | folklore | mermaid | merman | ocean | sea | siren | trident
 
 🧜‍♀️
 Mermaid
-creature | fairytale | folklore | mermaid | merwoman | ocean | sea | siren | trident
+creature | fairytale | folklore | merwoman | ocean | sea | siren | trident
 
 🧜‍♂️
 Merman
-creature | fairytale | folklore | merman | neptune | ocean | poseidon | sea | siren | trident | triton
+creature | fairytale | folklore | neptune | ocean | poseidon | sea | siren | trident | triton
 
 🧝
 Elf
-elf | elves | enchantment | fantasy | folklore | lotr style | magic | magical | myth
+elves | enchantment | fantasy | folklore | lotr style | magic | magical | myth
 
 🧝‍♀️
 Woman elf
-elf | elves | enchantment | fantasy | folklore | magic | magical | myth | woman | woman elf
+elves | enchantment | fantasy | folklore | magic | magical | myth
 
 🧝‍♂️
 Man elf
-elf | elves | enchantment | fantasy | folklore | magic | magical | man | man elf | myth
+elves | enchantment | fantasy | folklore | magic | magical | myth
 
 🧞
 Genie
-(non-human color) | djinn | fantasy | genie | jinn | lamp | myth | rub | wishes
+(non-human color) | djinn | fantasy | jinn | lamp | myth | rub | wishes
 
 🧞‍♀️
 Woman genie
-djinn | fantasy | genie | jinn | lamp | myth | rub | wishes | woman | woman genie
+djinn | fantasy | jinn | lamp | myth | rub | wishes
 
 🧞‍♂️
 Man genie
-djinn | fantasy | genie | jinn | lamp | man | man genie | myth | rub | wishes
+djinn | fantasy | jinn | lamp | myth | rub | wishes
 
 🧟
 Zombie
-(non-human color) | apocalypse | dead | halloween | horror | scary | undead | walking | zombie
+(non-human color) | apocalypse | dead | halloween | horror | scary | undead | walking
 
 🧟‍♀️
 Woman zombie
-apocalypse | dead | halloween | horror | scary | undead | walking | woman | woman zombie | zombie
+apocalypse | dead | halloween | horror | scary | undead | walking
 
 🧟‍♂️
 Man zombie
-apocalypse | dead | halloween | horror | man | man zombie | scary | undead | walking | zombie
+apocalypse | dead | halloween | horror | scary | undead | walking
 
 🧠
 Brain
-brain | intelligent | smart
+intelligent | smart
 
 🧡
 Orange heart
-143 | heart | orange | orange heart
+143
 
 🧢
 Billed cap
-baseball | baseball cap | bent | billed | billed cap | cap | dad | hat
+baseball | baseball cap | bent | dad | hat
 
 🧣
 Scarf
-bundle | cold | neck | scarf | up
+bundle | cold | neck | up
 
 🧤
 Gloves
-gloves | hand
+hand
 
 🧥
 Coat
-brr | bundle | coat | cold | jacket | up
+brr | bundle | cold | jacket | up
 
 🧦
 Socks
-socks | stocking
+stocking
 
 🥢
 Chopsticks
-chopsticks | hashi | jeotgarak | kuaizi
+hashi | jeotgarak | kuaizi
