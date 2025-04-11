@@ -26,8 +26,8 @@
 
 namespace jome {
 
-Emoji::Emoji(std::string str, std::string name,
-             std::unordered_set<std::string>&& keywords, const bool hasSkinToneSupport,
+Emoji::Emoji(QString str, QString name,
+             std::unordered_set<QString>&& keywords, const bool hasSkinToneSupport,
              const EmojiVersion version) :
     _str {std::move(str)},
     _name {std::move(name)},
@@ -37,22 +37,12 @@ Emoji::Emoji(std::string str, std::string name,
 {
 }
 
-const std::string& Emoji::lcName() const
-{
-    if (_lcName.empty()) {
-        _lcName = _name;
-        boost::algorithm::to_lower(_lcName);
-    }
-
-    return _lcName;
-}
-
-std::string Emoji::str(const boost::optional<SkinTone>& skinTone,
-                       const bool withVs16) const
+QString Emoji::str(const boost::optional<SkinTone>& skinTone,
+                   const bool withVs16) const
 {
     const auto codepoints = this->codepoints(skinTone, withVs16);
 
-    return QString::fromUcs4(codepoints.data(), codepoints.size()).toStdString();
+    return QString::fromUcs4(codepoints.data(), codepoints.size());
 }
 
 Emoji::Codepoints Emoji::codepoints(const boost::optional<SkinTone>& skinTone,
@@ -60,7 +50,7 @@ Emoji::Codepoints Emoji::codepoints(const boost::optional<SkinTone>& skinTone,
 {
     Codepoints codepoints;
 
-    for (const auto qcp : QString::fromStdString(_str).toUcs4()) {
+    for (const auto qcp : _str.toUcs4()) {
         if (!withVs16 && qcp == 0xfe0f) {
             continue;
         }
@@ -97,34 +87,23 @@ Emoji::Codepoints Emoji::codepoints(const boost::optional<SkinTone>& skinTone,
     return codepoints;
 }
 
-EmojiCat::EmojiCat(std::string id, std::string name,
-                   std::vector<const Emoji *>&& emojis) :
+EmojiCat::EmojiCat(QString id, QString name, std::vector<const Emoji *>&& emojis) :
     _id {std::move(id)},
     _name {std::move(name)},
     _emojis {std::move(emojis)}
 {
 }
 
-EmojiCat::EmojiCat(std::string id, std::string name) :
+EmojiCat::EmojiCat(QString id, QString name) :
     _id {std::move(id)},
     _name {std::move(name)}
 {
 }
 
-const std::string& EmojiCat::lcName() const
-{
-    if (_lcName.empty()) {
-        _lcName = _name;
-        boost::algorithm::to_lower(_lcName);
-    }
-
-    return _lcName;
-}
-
-EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize,
+EmojiDb::EmojiDb(const QString& dir, const EmojiSize emojiSize,
                  const unsigned int maxRecentEmojis, const bool noRecentCat) :
     _emojiSize {emojiSize},
-    _emojisPngPath {fmt::format("{}/emojis-{}.png", dir, this->emojiSizeInt())},
+    _emojisPngPath {qFmtFormat("{}/emojis-{}.png", dir.toStdString(), this->emojiSizeInt())},
     _maxRecentEmojis {maxRecentEmojis}
 {
     this->_createEmojis(dir);
@@ -134,23 +113,23 @@ EmojiDb::EmojiDb(const std::string& dir, const EmojiSize emojiSize,
 
 namespace {
 
-nlohmann::json loadJson(const std::string& path)
+nlohmann::json loadJson(const QString& path)
 {
-    std::ifstream f {path};
+    std::ifstream f {path.toStdString()};
     nlohmann::json json;
 
     f >> json;
     return json;
 }
 
-nlohmann::json loadJson(const std::string& dir, const std::string& file)
+nlohmann::json loadJson(const QString& dir, const QString& file)
 {
-    return loadJson(fmt::format("{}/{}", dir, file));
+    return loadJson(qFmtFormat("{}/{}", dir.toStdString(), file.toStdString()));
 }
 
-void warnNoUserEmojiKeywords(const QString& path, const std::string& msg)
+void warnNoUserEmojiKeywords(const QString& path, const QString& msg)
 {
-    qWarning().noquote() << qFmtFormat("{}: {}", path.toStdString(), msg);
+    qWarning().noquote() << qFmtFormat("{}: {}", path.toStdString(), msg.toStdString());
     qWarning() << "jome will continue without user emoji keywords";
 }
 
@@ -167,9 +146,9 @@ nlohmann::json loadUserEmojisJson()
 
     auto jsonUserEmojis = call([&path]() -> boost::optional<nlohmann::json> {
         try {
-            return loadJson(path.toStdString());
+            return loadJson(path);
         } catch (const nlohmann::json::exception& exc) {
-            warnNoUserEmojiKeywords(path, fmt::format("failed to load JSON file: {}", exc.what()));
+            warnNoUserEmojiKeywords(path, qFmtFormat("failed to load JSON file: {}", exc.what()));
             return boost::none;
         }
     });
@@ -186,8 +165,8 @@ nlohmann::json loadUserEmojisJson()
 
     for (const auto& keyJsonValPair : jsonUserEmojis->items()) {
         if (!keyJsonValPair.value().is_object()) {
-            warnNoUserEmojiKeywords(path, fmt::format("emoji `{}`: expecting an object",
-                                                      keyJsonValPair.key()));
+            warnNoUserEmojiKeywords(path, qFmtFormat("emoji `{}`: expecting an object",
+                                                     keyJsonValPair.key()));
             return nlohmann::json::object();
         }
 
@@ -199,15 +178,15 @@ nlohmann::json loadUserEmojisJson()
             }
 
             if (!it->is_array()) {
-                warnNoUserEmojiKeywords(path, fmt::format("emoji `{}`: `{}`: expecting an array",
-                                                          keyJsonValPair.key(), key));
+                warnNoUserEmojiKeywords(path, qFmtFormat("emoji `{}`: `{}`: expecting an array",
+                                                         keyJsonValPair.key(), key));
                 return false;
             }
 
             for (const auto& jsonKeyword : *it) {
                 if (!jsonKeyword.is_string()) {
-                    warnNoUserEmojiKeywords(path, fmt::format("emoji `{}`: `{}`: expecting an array of strings",
-                                                              keyJsonValPair.key(), key));
+                    warnNoUserEmojiKeywords(path, qFmtFormat("emoji `{}`: `{}`: expecting an array of strings",
+                                                             keyJsonValPair.key(), key));
                     return false;
                 }
             }
@@ -227,25 +206,25 @@ nlohmann::json loadUserEmojisJson()
     return *jsonUserEmojis;
 }
 
-std::unordered_set<std::string> strSetFromJsonStrArray(const nlohmann::json& jsonArray)
+std::unordered_set<QString> qStrSetFromJsonStrArray(const nlohmann::json& jsonArray)
 {
     assert(jsonArray.is_array());
 
-    std::unordered_set<std::string> set;
+    std::unordered_set<QString> set;
 
     for (auto& jsonStr : jsonArray) {
         assert(jsonStr.is_string());
-        set.insert(jsonStr);
+        set.insert(QString::fromStdString(jsonStr));
     }
 
     return set;
 }
 
-std::unordered_set<std::string> effectiveEmojiKeywords(const std::string& emojiStr,
-                                                       const nlohmann::json& jsonKeywords,
-                                                       const nlohmann::json& jsonUserEmojis)
+std::unordered_set<QString> effectiveEmojiKeywords(const QString& emojiStr,
+                                                   const nlohmann::json& jsonKeywords,
+                                                   const nlohmann::json& jsonUserEmojis)
 {
-    const auto it = jsonUserEmojis.find(emojiStr);
+    const auto it = jsonUserEmojis.find(emojiStr.toStdString());
     auto jsonUserKeywords = nlohmann::json::array();
     auto jsonUserExtraKeywords = nlohmann::json::array();
 
@@ -267,18 +246,18 @@ std::unordered_set<std::string> effectiveEmojiKeywords(const std::string& emojiS
         }
     }
 
-    std::unordered_set<std::string> keywords;
+    std::unordered_set<QString> keywords;
 
     if (jsonUserKeywords.empty()) {
         // start with default keywords
-        keywords = strSetFromJsonStrArray(jsonKeywords);
+        keywords = qStrSetFromJsonStrArray(jsonKeywords);
     } else {
         // start with user keywords
-        keywords = strSetFromJsonStrArray(jsonUserKeywords);
+        keywords = qStrSetFromJsonStrArray(jsonUserKeywords);
     }
 
     {
-        const auto userExtraKeywords = strSetFromJsonStrArray(jsonUserExtraKeywords);
+        const auto userExtraKeywords = qStrSetFromJsonStrArray(jsonUserExtraKeywords);
 
         keywords.insert(userExtraKeywords.begin(), userExtraKeywords.end());
     }
@@ -288,18 +267,19 @@ std::unordered_set<std::string> effectiveEmojiKeywords(const std::string& emojiS
 
 } // namespace
 
-void EmojiDb::_createEmojis(const std::string& dir)
+void EmojiDb::_createEmojis(const QString& dir)
 {
     const auto jsonEmojis = loadJson(dir, "emojis.json");
     const auto jsonUserEmojis = loadUserEmojisJson();
 
     for (auto& emojiKeyJsonValPair : jsonEmojis.items()) {
         auto emoji = call([&emojiKeyJsonValPair, &jsonUserEmojis] {
+            const auto emojiStr = QString::fromStdString(emojiKeyJsonValPair.key());
             auto& jsonVal = emojiKeyJsonValPair.value();
 
-            return std::make_unique<const Emoji>(emojiKeyJsonValPair.key(),
-                                                 jsonVal.at("name"),
-                                                 effectiveEmojiKeywords(emojiKeyJsonValPair.key(),
+            return std::make_unique<const Emoji>(emojiStr,
+                                                 QString::fromStdString(jsonVal.at("name")),
+                                                 effectiveEmojiKeywords(emojiStr,
                                                                         jsonVal.at("keywords"),
                                                                         jsonUserEmojis),
                                                  jsonVal.at("has-skin-tone-support"),
@@ -345,7 +325,7 @@ void EmojiDb::_createEmojis(const std::string& dir)
     }
 }
 
-void EmojiDb::_createCats(const std::string& dir, const bool noRecentCat)
+void EmojiDb::_createCats(const QString& dir, const bool noRecentCat)
 {
     if (!noRecentCat) {
         // first, special category: recent emojis
@@ -357,12 +337,13 @@ void EmojiDb::_createCats(const std::string& dir, const bool noRecentCat)
 
     for (auto& jsonCat : jsonCats) {
         _cats.push_back(call([this, &jsonCat] {
-            return std::make_unique<EmojiCat>(jsonCat.at("id"), jsonCat.at("name"),
+            return std::make_unique<EmojiCat>(QString::fromStdString(jsonCat.at("id")),
+                                              QString::fromStdString(jsonCat.at("name")),
                                               call([this, &jsonCat] {
                                                   std::vector<const Emoji *> emojis;
 
                                                   for (auto& jsonEmoji : jsonCat.at("emojis")) {
-                                                      emojis.push_back(_emojis[jsonEmoji].get());
+                                                      emojis.push_back(_emojis[QString::fromStdString(jsonEmoji)].get());
                                                   }
 
                                                   return emojis;
@@ -371,46 +352,40 @@ void EmojiDb::_createCats(const std::string& dir, const bool noRecentCat)
     }
 }
 
-void EmojiDb::_createEmojiPngLocations(const std::string& dir)
+void EmojiDb::_createEmojiPngLocations(const QString& dir)
 {
-    const auto fileName = fmt::format("emojis-png-locations-{}.json", this->emojiSizeInt());
-    const auto pngLocationsJson = loadJson(dir, fileName);
+    const auto pngLocationsJson = loadJson(dir,
+                                           qFmtFormat("emojis-png-locations-{}.json", this->emojiSizeInt()));
 
     for (auto& keyJsonValPair : pngLocationsJson.items()) {
         auto& jsonLoc = keyJsonValPair.value();
 
-        _emojiPngLocations[_emojis[keyJsonValPair.key()].get()] = {
+        _emojiPngLocations[_emojis[QString::fromStdString(keyJsonValPair.key())].get()] = {
             static_cast<unsigned int>(jsonLoc.at(0)),
             static_cast<unsigned int>(jsonLoc.at(1))
         };
     }
 }
 
-void EmojiDb::findEmojis(const std::string& catName, const std::string& needlesStr,
+void EmojiDb::findEmojis(QString catName, const QString& needlesStr,
                          std::vector<const Emoji *>& results) const
 {
-    // split needles string into individual needles
-    _tmpNeedles.clear();
-    boost::split(_tmpNeedles, needlesStr, boost::is_any_of(" "));
+    // split `needlesStr` into individual needles
+    const auto needles = needlesStr.trimmed().toLower().split(" +");
 
-    if (_tmpNeedles.empty()) {
+    if (needles.isEmpty()) {
         // nothing to search
         return;
     }
 
     // trim category
-    const auto catNameTrimmed = call([&catName] {
-        std::string catNameTrimmed {catName};
+    catName = catName.trimmed();
 
-        boost::trim(catNameTrimmed);
-        return catNameTrimmed;
-    });
-
-    // this is to avoid duplicate entries in `results`
+    // clear temporary results
     _tmpFoundEmojis.clear();
 
     for (auto& cat : _cats) {
-        if (!catNameTrimmed.empty() && cat->lcName().find(catNameTrimmed) == std::string::npos) {
+        if (!catName.isEmpty() && !cat->name().toLower().contains(catName)) {
             // we don't want to search this category
             continue;
         }
@@ -421,12 +396,10 @@ void EmojiDb::findEmojis(const std::string& catName, const std::string& needlesS
             for (auto& keyword : emoji->keywords()) {
                 select = true;
 
-                for (auto& needle : _tmpNeedles) {
-                    if (needle.empty()) {
-                        continue;
-                    }
+                for (auto& needle : needles) {
+                    assert(!needle.isEmpty());
 
-                    if (keyword.find(needle) == std::string::npos) {
+                    if (!keyword.contains(needle)) {
                         // this keyword does not contain this needle
                         select = false;
                         break;

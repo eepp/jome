@@ -11,10 +11,10 @@
 
 namespace jome {
 
-QCtlClient::QCtlClient(QObject * const parent, const std::string& name) :
+QCtlClient::QCtlClient(QObject * const parent, const QString& name) :
     QObject {parent}
 {
-    _socket.setServerName(QString::fromStdString(name));
+    _socket.setServerName(name);
     QObject::connect(&_socket, &QLocalSocket::connected, this, &QCtlClient::_socketConnected);
     QObject::connect(&_socket, &QLocalSocket::readyRead, this, &QCtlClient::_socketReadyRead);
     QObject::connect(&_socket, QOverload<QLocalSocket::LocalSocketError>::of(&QLocalSocket::error),
@@ -32,9 +32,11 @@ void QCtlClient::ctl(const Command cmd)
     this->_connectToServer();
 }
 
-void QCtlClient::_sendString(const std::string& str)
+void QCtlClient::_sendString(const QString& str)
 {
-    _socket.write(str.c_str(), str.size() + 1);
+    const auto stdStr = str.toStdString();
+
+    _socket.write(stdStr.data(), stdStr.size() + 1);
 }
 
 void QCtlClient::_socketConnected()
@@ -67,12 +69,12 @@ void QCtlClient::_socketReadyRead()
             if (_tmpData.empty()) {
                 emit this->serverCancelled();
             } else {
-                emit this->serverReplied(_tmpData);
+                emit this->serverReplied(QString::fromUtf8(_tmpData.data(), _tmpData.size()));
             }
 
             _tmpData.clear();
         } else {
-            _tmpData += byte;
+            _tmpData.push_back(byte);
         }
     }
 }

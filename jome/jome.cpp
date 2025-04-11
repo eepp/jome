@@ -36,9 +36,9 @@ struct Params final
     bool noHide;
     bool darkBg;
     bool copyToClipboard;
-    boost::optional<std::string> serverName;
-    boost::optional<std::string> cmd;
-    std::string cpPrefix;
+    boost::optional<QString> serverName;
+    boost::optional<QString> cmd;
+    QString cpPrefix;
     jome::EmojiDb::EmojiSize emojiSize;
     boost::optional<unsigned int> selectedEmojiFlashPeriod;
     unsigned int maxRecentEmojis;
@@ -214,18 +214,18 @@ Params parseArgs(QApplication& app)
     return params;
 }
 
-void execCommand(const std::string& cmd, const std::string& arg)
+void execCommand(const QString& cmd, const QString& arg)
 {
-    static_cast<void>(QProcess::execute(jome::qFmtFormat("{} {}", cmd, arg)));
+    static_cast<void>(QProcess::execute(cmd + ' ' + arg));
 }
 
-std::string formatEmoji(const jome::Emoji& emoji,
-                        const boost::optional<jome::Emoji::SkinTone>& skinTone,
-                        const boost::optional<jome::Emoji::SkinTone>& defSkinTone,
-                        const Format fmt,
-                        const std::string& cpPrefix, const bool noNl, const bool removeVs16)
+QString formatEmoji(const jome::Emoji& emoji,
+                    const boost::optional<jome::Emoji::SkinTone>& skinTone,
+                    const boost::optional<jome::Emoji::SkinTone>& defSkinTone,
+                    const Format fmt,
+                    const QString& cpPrefix, const bool noNl, const bool removeVs16)
 {
-    std::string output;
+    QString output;
     const auto realSkinTone = skinTone ? skinTone : defSkinTone;
 
     switch (fmt) {
@@ -251,7 +251,7 @@ std::string formatEmoji(const jome::Emoji& emoji,
         });
 
         for (const auto codepoint : codepoints) {
-            output += fmt::format("{}{:x} ", cpPrefix, codepoint);
+            output += jome::qFmtFormat("{}{:x} ", cpPrefix.toStdString(), codepoint);
         }
 
         // remove trailing space
@@ -318,11 +318,11 @@ int main(int argc, char **argv)
         }
 
         // print result
-        std::cout << emojiStr;
+        std::cout << emojiStr.toStdString();
         std::cout.flush();
 
         if (params.copyToClipboard) {
-            QGuiApplication::clipboard()->setText(QString::fromStdString(emojiStr));
+            QGuiApplication::clipboard()->setText(emojiStr);
         }
 
         if (params.cmd) {

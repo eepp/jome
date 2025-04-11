@@ -16,7 +16,7 @@ EmojiImages::EmojiImages(const EmojiDb& db)
 
 void EmojiImages::_createPixmaps(const EmojiDb& db)
 {
-    auto emojisPixmap = QPixmap::fromImage(QImage {QString::fromStdString(db.emojisPngPath())});
+    auto emojisPixmap = QPixmap::fromImage(QImage {db.emojisPngPath()});
 
     for (auto& emojiPngLocation : db.emojiPngLocations()) {
         auto& pngLoc = emojiPngLocation.second;

@@ -27,8 +27,8 @@ public:
     };
 
 public:
-    explicit QJomeServer(QObject *parent, const std::string& name);
-    void sendToClient(const std::string& str);
+    explicit QJomeServer(QObject *parent, const QString& name);
+    void sendToClient(const QString& str);
 
 signals:
     void clientRequested(Command cmd);
@@ -41,7 +41,7 @@ private slots:
 private:
     QLocalServer _server;
     QLocalSocket *_socket = nullptr;
-    std::string _tmpData;
+    QString _tmpData;
 };
 
 } // namespace jome

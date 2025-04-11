@@ -16,7 +16,7 @@
 struct Params final
 {
     jome::QCtlClient::Command cmd = jome::QCtlClient::Command::Pick;
-    std::string serverName;
+    QString serverName;
 };
 
 namespace {
@@ -40,7 +40,7 @@ Params parseArgs(QCoreApplication& app)
         std::exit(1);
     }
 
-    params.serverName = parser.positionalArguments().first().toUtf8().constData();
+    params.serverName = parser.positionalArguments().first();
 
     if (posArgs.size() >= 2) {
         auto& cmd = posArgs[1];
@@ -71,9 +71,9 @@ int main(int argc, char **argv)
     jome::QCtlClient client {nullptr, params.serverName};
 
     QObject::connect(&client, &jome::QCtlClient::serverReplied,
-                     [&params, &app](const std::string& str) {
+                     [&params, &app](const QString& str) {
         if (params.cmd == jome::QCtlClient::Command::Pick) {
-            std::cout << str;
+            std::cout << str.toStdString();
             std::cout.flush();
         }
 

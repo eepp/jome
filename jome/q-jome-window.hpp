@@ -84,7 +84,7 @@ private:
     void _updateInfoLabel(const Emoji *emoji);
     void _updateVersionLabel(const Emoji *emoji);
     void _updateKwLabel(const Emoji *emoji);
-    void _findEmojis(const std::string& cat, const std::string& needles);
+    void _findEmojis(const QString& cat, const QString& needles);
     void _acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone, bool removeVs16);
     void _acceptEmoji(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone,
                       bool removeVs16);

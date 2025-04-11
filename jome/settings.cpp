@@ -59,7 +59,7 @@ void updateSettings(const EmojiDb& db)
         QList<QVariant> emojiList;
 
         for (const auto emoji : db.recentEmojisCat()->emojis()) {
-            const auto emojiStr = QString::fromStdString(emoji->str());
+            const auto emojiStr = emoji->str();
 
             emojiList.append(emojiStr);
         }

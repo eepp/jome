@@ -11,11 +11,11 @@
 
 namespace jome {
 
-QJomeServer::QJomeServer(QObject * const parent, const std::string& name) :
+QJomeServer::QJomeServer(QObject * const parent, const QString& name) :
     QObject {parent}
 {
     QObject::connect(&_server, &QLocalServer::newConnection, this, &QJomeServer::_newConnection);
-    _server.listen(QString::fromStdString(name));
+    _server.listen(name);
 }
 
 void QJomeServer::_newConnection()
@@ -75,13 +75,15 @@ void QJomeServer::_socketReadyRead()
     }
 }
 
-void QJomeServer::sendToClient(const std::string& str)
+void QJomeServer::sendToClient(const QString& str)
 {
     if (!_socket || _socket->state() != QLocalSocket::ConnectedState) {
         return;
     }
 
-    _socket->write(str.c_str(), str.size() + 1);
+    const auto stdStr = str.toStdString();
+
+    _socket->write(stdStr.data(), stdStr.size() + 1);
 }
 
 } // namespace jome

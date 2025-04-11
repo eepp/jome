@@ -345,7 +345,7 @@ void QJomeWindow::closeEvent(QCloseEvent * const event)
     emit this->canceled();
 }
 
-void QJomeWindow::_findEmojis(const std::string& cat, const std::string& needles)
+void QJomeWindow::_findEmojis(const QString& cat, const QString& needles)
 {
     std::vector<const Emoji *> results;
 
@@ -360,13 +360,10 @@ void QJomeWindow::_searchTextChanged(const QString& text)
         return;
     }
 
-    std::vector<std::string> parts;
-    const std::string textStr {text.toUtf8().constData()};
-
-    boost::split(parts, textStr, boost::is_any_of("/"));
+    const auto parts = text.split("/");
 
     if (parts.size() != 2) {
-        this->_findEmojis("", textStr);
+        this->_findEmojis("", text);
         return;
     }
 
@@ -537,13 +534,14 @@ void QJomeWindow::_updateBottomLabels(const Emoji * const emoji)
 
 namespace {
 
-QString spanInfoLabelText(const std::string& text, const char * const hexColor,
+QString spanInfoLabelText(const QString& text, const char * const hexColor,
                           const char * const addStyle = "")
 {
-    return qFmtFormat("<span style=\"color: #{};{}\">{}</span>", hexColor, addStyle, text);
+    return qFmtFormat("<span style=\"color: #{};{}\">{}</span>", hexColor, addStyle,
+                      text.toStdString());
 }
 
-QString normInfoLabelText(const std::string& text, const char * const addStyle = "")
+QString normInfoLabelText(const QString& text, const char * const addStyle = "")
 {
     return spanInfoLabelText(text, "707070", addStyle);
 }
@@ -555,7 +553,7 @@ void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
     QString text;
 
     if (emoji) {
-        text = qFmtFormat("<b>{}</b> ", emoji->name()) +
+        text = qFmtFormat("<b>{}</b> ", emoji->name().toStdString()) +
                normInfoLabelText("(") +
                call([emoji] {
                    QStringList lst;
@@ -568,7 +566,7 @@ void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
                            } else if (codepoint == 0xfe0f) {
                                lst.append(normInfoLabelText("VS-16", italicCss));
                            } else {
-                               lst.append(spanInfoLabelText(fmt::format("U+{:X}", codepoint), "a0a0a0"));
+                               lst.append(spanInfoLabelText(qFmtFormat("U+{:X}", codepoint), "a0a0a0"));
                            }
                        }
 
@@ -706,7 +704,7 @@ void QJomeWindow::_updateKwLabel(const Emoji * const emoji)
         QStringList kws;
 
         for (auto& kw : emoji->keywords()) {
-            kws.append(QString::fromStdString(kw));
+            kws.append(kw);
         }
 
         kws.sort();

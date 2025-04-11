@@ -10,10 +10,10 @@
 
 #include <boost/optional/optional.hpp>
 #include <vector>
-#include <string>
 #include <memory>
 #include <unordered_map>
 #include <unordered_set>
+#include <QString>
 #include <nlohmann/json.hpp>
 
 namespace jome {
@@ -54,24 +54,22 @@ public:
     };
 
 public:
-    explicit Emoji(std::string str, std::string name,
-                   std::unordered_set<std::string>&& keywords, bool hasSkinToneSupport,
+    explicit Emoji(QString str, QString name,
+                   std::unordered_set<QString>&& keywords, bool hasSkinToneSupport,
                    EmojiVersion version);
 
-    std::string str(const boost::optional<SkinTone>& skinTone = boost::none,
-                    bool withVs16 = true) const;
+    QString str(const boost::optional<SkinTone>& skinTone = boost::none,
+                bool withVs16 = true) const;
 
     Codepoints codepoints(const boost::optional<SkinTone>& skinTone = boost::none,
                           bool withVs16 = true) const;
 
-    const std::string& lcName() const;
-
-    const std::string& name() const noexcept
+    const QString& name() const noexcept
     {
         return _name;
     }
 
-    const std::unordered_set<std::string>& keywords() const noexcept
+    const std::unordered_set<QString>& keywords() const noexcept
     {
         return _keywords;
     }
@@ -87,10 +85,9 @@ public:
     }
 
 private:
-    const std::string _str;
-    const std::string _name;
-    mutable std::string _lcName;
-    const std::unordered_set<std::string> _keywords;
+    const QString _str;
+    const QString _name;
+    const std::unordered_set<QString> _keywords;
     const bool _hasSkinToneSupport;
     const EmojiVersion _version;
 };
@@ -98,19 +95,16 @@ private:
 class EmojiCat final
 {
 public:
-    explicit EmojiCat(std::string id, std::string name);
+    explicit EmojiCat(QString id, QString name);
 
-    explicit EmojiCat(std::string id, std::string name,
-                      std::vector<const Emoji *>&& emojis);
+    explicit EmojiCat(QString id, QString name, std::vector<const Emoji *>&& emojis);
 
-    const std::string& lcName() const;
-
-    const std::string& id() const noexcept
+    const QString& id() const noexcept
     {
         return _id;
     }
 
-    const std::string& name() const noexcept
+    const QString& name() const noexcept
     {
         return _name;
     }
@@ -126,9 +120,8 @@ public:
     }
 
 private:
-    const std::string _id;
-    const std::string _name;
-    mutable std::string _lcName;
+    const QString _id;
+    const QString _name;
     std::vector<const Emoji *> _emojis;
 };
 
@@ -151,10 +144,10 @@ public:
     };
 
 public:
-    explicit EmojiDb(const std::string& dir, EmojiSize emojiSize,
+    explicit EmojiDb(const QString& dir, EmojiSize emojiSize,
                      unsigned int maxRecentEmojis, bool noRecentCat);
 
-    void findEmojis(const std::string& cat, const std::string& needles,
+    void findEmojis(QString cat, const QString& needles,
                     std::vector<const Emoji *>& results) const;
 
     void recentEmojis(std::vector<const Emoji *>&& emojis);
@@ -170,7 +163,7 @@ public:
         return static_cast<unsigned int>(_emojiSize);
     }
 
-    const std::string& emojisPngPath() const noexcept
+    const QString& emojisPngPath() const noexcept
     {
         return _emojisPngPath;
     }
@@ -180,7 +173,7 @@ public:
         return _cats;
     }
 
-    const std::unordered_map<std::string, std::unique_ptr<const Emoji>>& emojis() const noexcept
+    const std::unordered_map<QString, std::unique_ptr<const Emoji>>& emojis() const noexcept
     {
         return _emojis;
     }
@@ -190,17 +183,17 @@ public:
         return _recentEmojisCat;
     }
 
-    const Emoji& emojiForStr(const std::string& str) const
+    const Emoji& emojiForStr(const QString& str) const
     {
         return *_emojis.at(str);
     }
 
-    bool hasEmoji(const std::string& str) const
+    bool hasEmoji(const QString& str) const
     {
         return _emojis.count(str) >= 1;
     }
 
-    const std::unordered_set<std::string>& keywords() const noexcept
+    const std::unordered_set<QString>& keywords() const noexcept
     {
         return _keywords;
     }
@@ -210,20 +203,18 @@ public:
         return _emojiPngLocations;
     }
 
-
 private:
-    void _createEmojis(const std::string& dir);
-    void _createCats(const std::string& dir, bool noRecentCat);
-    void _createEmojiPngLocations(const std::string& dir);
+    void _createEmojis(const QString& dir);
+    void _createCats(const QString& dir, bool noRecentCat);
+    void _createEmojiPngLocations(const QString& dir);
 
 private:
     const EmojiSize _emojiSize;
-    const std::string _emojisPngPath;
+    const QString _emojisPngPath;
     std::vector<std::unique_ptr<EmojiCat>> _cats;
-    std::unordered_map<std::string, std::unique_ptr<const Emoji>> _emojis;
-    std::unordered_set<std::string> _keywords;
+    std::unordered_map<QString, std::unique_ptr<const Emoji>> _emojis;
+    std::unordered_set<QString> _keywords;
     std::unordered_map<const Emoji *, EmojisPngLocation> _emojiPngLocations;
-    mutable std::vector<std::string> _tmpNeedles;
     mutable std::unordered_set<const Emoji *> _tmpFoundEmojis;
     EmojiCat *_recentEmojisCat = nullptr;
     unsigned int _maxRecentEmojis;

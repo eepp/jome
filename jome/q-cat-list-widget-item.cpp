@@ -12,7 +12,7 @@ namespace jome {
 QCatListWidgetItem::QCatListWidgetItem(const EmojiCat& cat) :
     _cat {&cat}
 {
-    this->setText(QString::fromStdString(cat.name()));
+    this->setText(cat.name());
 }
 
 } // namespace jome

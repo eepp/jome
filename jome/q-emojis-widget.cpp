@@ -140,7 +140,7 @@ void QEmojisWidget::rebuild()
 
         if (!_noCatLabels) {
             {
-                auto item = _allEmojisGraphicsScene.addText(QString::fromStdString(cat->name()),
+                auto item = _allEmojisGraphicsScene.addText(cat->name(),
                                                             QFont {"Hack, DejaVu Sans Mono, monospace",
                                                                    10, QFont::Bold});
 

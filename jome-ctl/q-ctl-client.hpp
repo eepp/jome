@@ -26,12 +26,12 @@ public:
     };
 
 public:
-    explicit QCtlClient(QObject *parent, const std::string& name);
+    explicit QCtlClient(QObject *parent, const QString& name);
     void ctl(Command cmd);
 
 signals:
     void error();
-    void serverReplied(const std::string& str);
+    void serverReplied(const QString& str);
     void serverCancelled();
 
 private slots:
@@ -41,12 +41,12 @@ private slots:
 
 private:
     void _connectToServer();
-    void _sendString(const std::string& str);
+    void _sendString(const QString& str);
 
 private:
     QLocalSocket _socket;
     Command _curCmd;
-    std::string _tmpData;
+    std::vector<char> _tmpData;
 };
 
 } // namespace jome
