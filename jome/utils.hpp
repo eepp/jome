@@ -27,6 +27,9 @@ auto call(FuncT func, ArgTs&&...args) -> decltype(std::ref(func)(std::forward<Ar
     return std::ref(func)(std::forward<ArgTs>(args)...);
 }
 
+/*
+ * Like fmt::format(), but returns a `QString`.
+ */
 template <typename... ArgTs>
 QString qFmtFormat(fmt::format_string<ArgTs...> fmt, ArgTs&&... args)
 {

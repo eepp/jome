@@ -49,6 +49,7 @@ void QJomeServer::_socketReadyRead()
 {
     assert(_socket);
 
+    // receive one byte at a time until the null terminator
     while (_socket->bytesAvailable() > 0) {
         char byte;
 
@@ -78,6 +79,7 @@ void QJomeServer::_socketReadyRead()
 void QJomeServer::sendToClient(const QString& str)
 {
     if (!_socket || _socket->state() != QLocalSocket::ConnectedState) {
+        // not connected for some reason
         return;
     }
 

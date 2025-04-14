@@ -16,17 +16,32 @@
 
 namespace jome {
 
+/*
+ * All the emoji images.
+ *
+ * An `EmojiImages` instance holds a map of emoji to
+ * corresponding `QPixmap`.
+ */
 class EmojiImages final
 {
 public:
+    /*
+     * Builds all the emoji images from the database `db`.
+     */
     explicit EmojiImages(const EmojiDb& db);
 
+    /*
+     * Returns the image of the emoji `emoji`.
+     */
     const QPixmap& pixmapForEmoji(const Emoji& emoji) const
     {
         return *_emojiPixmaps.at(&emoji);
     }
 
 private:
+    /*
+     * Fills `_emojiPixmaps` from the database `db`.
+     */
     void _createPixmaps(const EmojiDb& db);
 
 private:

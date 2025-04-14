@@ -21,19 +21,23 @@
 #include <boost/optional.hpp>
 
 #include "emoji-db.hpp"
-#include "q-emojis-widget.hpp"
+#include "q-emoji-grid-widget.hpp"
 
 namespace jome {
 
-class QSearchBoxEventFilter final :
+/*
+ * An event filter for the find box which emits signals when the
+ * user presses special navigation and action keys.
+ */
+class QFindBoxEventFilter final :
     public QObject
 {
     Q_OBJECT
 
 public:
-    explicit QSearchBoxEventFilter(QObject *parent);
+    explicit QFindBoxEventFilter(QObject *parent);
 
-protected:
+private:
     bool eventFilter(QObject *obj, QEvent *event) override;
 
 signals:
@@ -55,22 +59,65 @@ signals:
     void escapeKeyPressed();
 };
 
+/*
+ * The actual jome window.
+ *
+ * It has a pointer to the database to deal with initial emoji grid
+ * construction and to find emojis.
+ *
+ * Once you build the window, the only relevant outcomes are:
+ *
+ * emojiChosen() signal:
+ *     An emoji was chosen.
+ *
+ * cancelled() signal:
+ *     The emoji picking operation was cancelled.
+ *
+ * Call emojiDbChanged() whenever you update the linked emoji database.
+ */
 class QJomeWindow final :
     public QMainWindow
 {
     Q_OBJECT
 
 public:
+    /*
+     * Builds a jome window to display the emojis of `emojiDb` with:
+     *
+     * • A dark background if `darkBg` is true.
+     *
+     * • No category list if `noCatList` is true.
+     *
+     * • No category labels within the emoji grid if `noCatLabels`
+     *   is true.
+     *
+     * • No keyword list at the bottom if `noKwList` is true.
+     *
+     * • A selection square flashing period of
+     *   `*selectedEmojiFlashPeriod` is set.
+     */
     explicit QJomeWindow(const EmojiDb& emojiDb, bool darkBg, bool noCatList, bool noCatLabels,
                          bool noKwList,
                          const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
 
 signals:
+    /*
+     * Emoji `emoji` was chosen, possibly with the skin tone `skinTone`,
+     * and with a forced removal of VS-16 codepoints if `removeVs16`
+     * is true.
+     */
     void emojiChosen(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone,
                      bool removeVs16);
-    void canceled();
+
+    /*
+     * Emoji picking operation was cancelled.
+     */
+    void cancelled();
 
 public slots:
+    /*
+     * The linked emoji database changed behind the scenes.
+     */
     void emojiDbChanged();
 
 private:
@@ -118,12 +165,12 @@ private slots:
 
 private:
     const EmojiDb * const _emojiDb;
-    QEmojisWidget *_wEmojis = nullptr;
+    QEmojiGridWidget *_wEmojiGrid = nullptr;
     QListWidget *_wCatList = nullptr;
     QLabel *_wInfoLabel = nullptr;
     QLabel *_wVersionLabel = nullptr;
     QLabel *_wKwLabel = nullptr;
-    QLineEdit *_wSearchBox = nullptr;
+    QLineEdit *_wFindBox = nullptr;
     bool _emojisWidgetBuilt = false;
     const Emoji *_selectedEmoji = nullptr;
 };

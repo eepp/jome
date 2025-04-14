@@ -5,8 +5,8 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-#ifndef _JOME_Q_EMOJIS_WIDGET_HPP
-#define _JOME_Q_EMOJIS_WIDGET_HPP
+#ifndef _JOME_Q_EMOJI_GRID_WIDGET_HPP
+#define _JOME_Q_EMOJI_GRID_WIDGET_HPP
 
 #include <QObject>
 #include <QEvent>
@@ -23,7 +23,49 @@
 
 namespace jome {
 
-class QEmojisWidget final :
+/*
+ * Emoji grid widget.
+ *
+ * This is the main widget of jome where the user can select an emoji
+ * and navigate the emojis, either all of them by category or the
+ * current find results.
+ *
+ * An emoji grid widget is connected to an emoji database to know what
+ * to present. It handles resize events gracefully, ensuring a minimum
+ * width of six emojis plus any required padding.
+ *
+ * Behind the scenes, an emoji grid widget is a Qt graphics view. Each
+ * emoji is a graphics item of class `QEmojiGraphicsItem` simply showing
+ * a pixmap which is a section of the selected big emoji image (see
+ * `EmojiDb::emojisPngPath`). The selection squares are also their own
+ * graphics items (`_allEmojisGraphicsSceneSelectedItem`
+ * and `_findEmojisGraphicsSceneSelectedItem`).
+ *
+ * When you build an emoji grid widget, it shows all the emojis by
+ * category by default. This is equivalent to calling showAllEmojis(),
+ * and showingAllEmojis() returns true. Show find results with a given
+ * list of emojis with showFindResults().
+ *
+ * All the select*() methods are navigation operations.
+ *
+ * Scroll to a specific category when showing all the emojis
+ * with scrollToCat().
+ *
+ * Your signals of interest are:
+ *
+ * selectionChanged():
+ *     The permanent selection changed to a given emoji.
+ *
+ * emojiHoverEntered():
+ *     The cursor entered a given emoji.
+ *
+ * emojiHoverLeaved():
+ *     The cursor leaved a given emoji.
+ *
+ * emojiClicked():
+ *     The user clicked a given emoji.
+ */
+class QEmojiGridWidget final :
     public QGraphicsView
 {
     Q_OBJECT
@@ -34,11 +76,11 @@ public:
     using CatVerticalPositions = std::unordered_map<const EmojiCat *, qreal>;
 
 public:
-    explicit QEmojisWidget(QWidget *parent, const EmojiDb& emojiDb,
-                           bool darkBg, bool noCatLabels,
-                           const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
+    explicit QEmojiGridWidget(QWidget *parent, const EmojiDb& emojiDb,
+                              bool darkBg, bool noCatLabels,
+                              const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
 
-    ~QEmojisWidget();
+    ~QEmojiGridWidget();
     void rebuild();
     void showAllEmojis();
     void showFindResults(const std::vector<const Emoji *>& results);
@@ -114,24 +156,44 @@ private:
     }
 
 private:
+    // padding used throughout
     static constexpr qreal _gutter = 8.;
 
 private:
+    // linked emoji database
     const EmojiDb * const _emojiDb;
+
+    // emoji images
     const EmojiImages _emojiImages;
+
+    // graphics scenes for all emojis and find results
     QGraphicsScene _allEmojisGraphicsScene;
     QGraphicsScene _findEmojisGraphicsScene;
+
+    // vertical positions for each category
     CatVerticalPositions _catVertPositions;
-    std::vector<QEmojiGraphicsItem *> _curEmojiGraphicsItems;
+
+    // current graphics items for all emojis and find results
     std::vector<QEmojiGraphicsItem *> _allEmojiGraphicsItems;
+    std::vector<QEmojiGraphicsItem *> _curEmojiGraphicsItems;
+
+    // index of the selected emoji graphics item
     boost::optional<unsigned int> _selectedEmojiGraphicsItemIndex;
+
+    // selection square graphics items for all emojis and find results
     QGraphicsPixmapItem *_allEmojisGraphicsSceneSelectedItem = nullptr;
     QGraphicsPixmapItem *_findEmojisGraphicsSceneSelectedItem = nullptr;
+
+    // timer to make the selection square flash if requested
     QTimer _selectedItemFlashTimer;
+
+    // true to use a dark background
     bool _darkBg;
+
+    // true to hide category labels when showing all emojis
     bool _noCatLabels;
 };
 
 } // namespace jome
 
-#endif // _JOME_Q_EMOJIS_WIDGET_HPP
+#endif // _JOME_Q_EMOJI_GRID_WIDGET_HPP

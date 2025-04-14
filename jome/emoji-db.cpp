@@ -50,6 +50,7 @@ Emoji::Codepoints Emoji::codepoints(const boost::optional<SkinTone>& skinTone,
 {
     Codepoints codepoints;
 
+    // get codepoints of `_str`, optionally removing VS-16 codepoints
     for (const auto qcp : _str.toUcs4()) {
         if (!withVs16 && qcp == 0xfe0f) {
             continue;
@@ -58,6 +59,13 @@ Emoji::Codepoints Emoji::codepoints(const boost::optional<SkinTone>& skinTone,
         codepoints.push_back(qcp);
     }
 
+    /*
+     * Optionally add skin tone modifier.
+     *
+     * We blindly add it after the first codepoint because jome doesn't
+     * support multiple codepoint modifiers (couples and families,
+     * for example).
+     */
     if (skinTone) {
         assert(_hasSkinToneSupport);
 
@@ -115,6 +123,9 @@ EmojiDb::EmojiDb(const QString& dir, const EmojiSize emojiSize,
 
 namespace {
 
+/*
+ * Returns the root JSON value of the JSON file `path`.
+ */
 nlohmann::json loadJson(const QString& path)
 {
     std::ifstream f {path.toStdString()};
@@ -124,17 +135,30 @@ nlohmann::json loadJson(const QString& path)
     return json;
 }
 
+/*
+ * Returns the root JSON value of the JSON file `file` within `dir`.
+ */
 nlohmann::json loadJson(const QString& dir, const QString& file)
 {
     return loadJson(qFmtFormat("{}/{}", dir.toStdString(), file.toStdString()));
 }
 
+/*
+ * Warns that user-defined emoji keywords will be disabled because the
+ * JSON file `path` is invalid.
+ *
+ * Print `msg` as the reason.
+ */
 void warnNoUserEmojiKeywords(const QString& path, const QString& msg)
 {
     qWarning().noquote() << qFmtFormat("{}: {}", path.toStdString(), msg.toStdString());
     qWarning() << "jome will continue without user emoji keywords";
 }
 
+/*
+ * Loads the user-defined emoji keywords, validates the JSON object,
+ * and returns it or an empty object if invalid.
+ */
 nlohmann::json loadUserEmojisJson()
 {
     const auto path = qFmtFormat("{}/{}",
@@ -208,6 +232,10 @@ nlohmann::json loadUserEmojisJson()
     return *jsonUserEmojis;
 }
 
+/*
+ * Returns a set of strings from the JSON array of JSON
+ * strings `jsonArray`.
+ */
 std::unordered_set<QString> qStrSetFromJsonStrArray(const nlohmann::json& jsonArray)
 {
     assert(jsonArray.is_array());
@@ -222,6 +250,15 @@ std::unordered_set<QString> qStrSetFromJsonStrArray(const nlohmann::json& jsonAr
     return set;
 }
 
+/*
+ * Returns the set of effective emoji keywords of the emoji having the
+ * string `emojiStr` given:
+ *
+ * • The built-in keywords `jsonKeywords`.
+ *
+ * • The user-defined emoji keywords `jsonUserEmojis` (the
+ *   whole object).
+ */
 std::unordered_set<QString> effectiveEmojiKeywords(const QString& emojiStr,
                                                    const nlohmann::json& jsonKeywords,
                                                    const nlohmann::json& jsonUserEmojis)
@@ -271,9 +308,13 @@ std::unordered_set<QString> effectiveEmojiKeywords(const QString& emojiStr,
 
 void EmojiDb::_createEmojis(const QString& dir)
 {
+    // load jome's emoji database
     const auto jsonEmojis = loadJson(dir, "emojis.json");
+
+    // load user-defined emoji keywords
     const auto jsonUserEmojis = loadUserEmojisJson();
 
+    // build each emoji object
     for (auto& emojiKeyJsonValPair : jsonEmojis.items()) {
         auto emoji = call([&emojiKeyJsonValPair, &jsonUserEmojis] {
             const auto emojiStr = QString::fromStdString(emojiKeyJsonValPair.key());
@@ -335,8 +376,10 @@ void EmojiDb::_createCats(const QString& dir, const bool noRecentCat)
         _recentEmojisCat = _cats.back().get();
     }
 
+    // load jome's category database
     const auto jsonCats = loadJson(dir, "cats.json");
 
+    // build each category
     for (auto& jsonCat : jsonCats) {
         _cats.push_back(call([this, &jsonCat] {
             return std::make_unique<EmojiCat>(QString::fromStdString(jsonCat.at("id")),
@@ -356,9 +399,11 @@ void EmojiDb::_createCats(const QString& dir, const bool noRecentCat)
 
 void EmojiDb::_createEmojiPngLocations(const QString& dir)
 {
+    // load jome's PNG locations
     const auto pngLocationsJson = loadJson(dir,
                                            qFmtFormat("emojis-png-locations-{}.json", this->emojiSizeInt()));
 
+    // assign each emoji to its PNG location
     for (auto& keyJsonValPair : pngLocationsJson.items()) {
         auto& jsonLoc = keyJsonValPair.value();
 
@@ -453,12 +498,14 @@ void EmojiDb::findEmojis(QString catName, const QString& needlesStr,
 void EmojiDb::recentEmojis(std::vector<const Emoji *>&& emojis)
 {
     if (!_recentEmojisCat) {
+        // no "Recent" category: return
         return;
     }
 
     _recentEmojisCat->emojis() = std::move(emojis);
 
     if (_recentEmojisCat->emojis().size() > _maxRecentEmojis) {
+        // clip
         _recentEmojisCat->emojis().resize(_maxRecentEmojis);
     }
 }
@@ -466,11 +513,13 @@ void EmojiDb::recentEmojis(std::vector<const Emoji *>&& emojis)
 void EmojiDb::addRecentEmoji(const Emoji& emoji)
 {
     if (!_recentEmojisCat) {
+        // no "Recent" category: return
         return;
     }
 
     auto& emojis = _recentEmojisCat->emojis();
 
+    // remove from current list
     while (true) {
         auto existingIt = std::find(emojis.begin(), emojis.end(), &emoji);
 
@@ -481,9 +530,11 @@ void EmojiDb::addRecentEmoji(const Emoji& emoji)
         emojis.erase(existingIt);
     }
 
+    // insert at the beginning
     emojis.insert(emojis.begin(), &emoji);
 
     if (emojis.size() > _maxRecentEmojis) {
+        // clip
         emojis.resize(_maxRecentEmojis);
     }
 }

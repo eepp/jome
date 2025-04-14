@@ -17,14 +17,14 @@
 #include <QKeyEvent>
 #include <boost/algorithm/string.hpp>
 
-#include "q-emojis-widget.hpp"
+#include "q-emoji-grid-widget.hpp"
 #include "utils.hpp"
 
 namespace jome {
 
-QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb, const bool darkBg,
-                             const bool noCatLabels,
-                             const boost::optional<unsigned int>& selectedEmojiFlashPeriod) :
+QEmojiGridWidget::QEmojiGridWidget(QWidget * const parent, const EmojiDb& emojiDb, const bool darkBg,
+                                   const bool noCatLabels,
+                                   const boost::optional<unsigned int>& selectedEmojiFlashPeriod) :
     QGraphicsView {parent},
     _emojiDb {&emojiDb},
     _emojiImages {emojiDb},
@@ -38,7 +38,7 @@ QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb, con
 
     if (selectedEmojiFlashPeriod) {
         QObject::connect(&_selectedItemFlashTimer, &QTimer::timeout,
-                         this, &QEmojisWidget::_selectedItemFlashTimerTimeout);
+                         this, &QEmojiGridWidget::_selectedItemFlashTimerTimeout);
         _selectedItemFlashTimer.setInterval(*selectedEmojiFlashPeriod / 2);
         _selectedItemFlashTimer.start();
     }
@@ -54,7 +54,7 @@ QEmojisWidget::QEmojisWidget(QWidget * const parent, const EmojiDb& emojiDb, con
                                            _gutter + 1));
 }
 
-QEmojisWidget::~QEmojisWidget()
+QEmojiGridWidget::~QEmojiGridWidget()
 {
     /*
      * Those "selected" graphics scene items could be out of the
@@ -69,7 +69,7 @@ QEmojisWidget::~QEmojisWidget()
     }
 }
 
-void QEmojisWidget::_selectedItemFlashTimerTimeout()
+void QEmojiGridWidget::_selectedItemFlashTimerTimeout()
 {
     if (_allEmojisGraphicsSceneSelectedItem) {
         _allEmojisGraphicsSceneSelectedItem->setVisible(!_allEmojisGraphicsSceneSelectedItem->isVisible());
@@ -80,12 +80,12 @@ void QEmojisWidget::_selectedItemFlashTimerTimeout()
     }
 }
 
-void QEmojisWidget::_setGraphicsSceneStyle(QGraphicsScene& gs)
+void QEmojiGridWidget::_setGraphicsSceneStyle(QGraphicsScene& gs)
 {
     gs.setBackgroundBrush(QColor {_darkBg ? "#404040" : "#d0d0d0"});
 }
 
-QGraphicsPixmapItem *QEmojisWidget::_createSelectedGraphicsItem()
+QGraphicsPixmapItem *QEmojiGridWidget::_createSelectedGraphicsItem()
 {
     auto graphicsItem = new QGraphicsPixmapItem {
         QPixmap::fromImage(QImage {
@@ -100,7 +100,7 @@ QGraphicsPixmapItem *QEmojisWidget::_createSelectedGraphicsItem()
     return graphicsItem;
 }
 
-void QEmojisWidget::_addRoundedRectToScene(QGraphicsScene& gs, const qreal y, const qreal height)
+void QEmojiGridWidget::_addRoundedRectToScene(QGraphicsScene& gs, const qreal y, const qreal height)
 {
     QPainterPath path;
 
@@ -114,7 +114,7 @@ void QEmojisWidget::_addRoundedRectToScene(QGraphicsScene& gs, const qreal y, co
     item->setZValue(-2000.);
 }
 
-void QEmojisWidget::rebuild()
+void QEmojiGridWidget::rebuild()
 {
     if (_allEmojisGraphicsSceneSelectedItem->scene()) {
         _allEmojisGraphicsScene.removeItem(_allEmojisGraphicsSceneSelectedItem);
@@ -161,14 +161,14 @@ void QEmojisWidget::rebuild()
     _allEmojisGraphicsScene.setSceneRect(0., 0., static_cast<qreal>(this->width()) - _gutter, y);
 }
 
-void QEmojisWidget::showAllEmojis()
+void QEmojiGridWidget::showAllEmojis()
 {
     _curEmojiGraphicsItems = _allEmojiGraphicsItems;
     this->setScene(&_allEmojisGraphicsScene);
     this->_selectEmojiGraphicsItem(0);
 }
 
-void QEmojisWidget::showFindResults(const std::vector<const Emoji *>& results)
+void QEmojiGridWidget::showFindResults(const std::vector<const Emoji *>& results)
 {
     if (_findEmojisGraphicsSceneSelectedItem->scene()) {
         _findEmojisGraphicsScene.removeItem(_findEmojisGraphicsSceneSelectedItem);
@@ -206,22 +206,23 @@ void QEmojisWidget::showFindResults(const std::vector<const Emoji *>& results)
     }
 }
 
-void QEmojisWidget::_emojiGraphicsItemHoverEntered(const QEmojiGraphicsItem& item)
+void QEmojiGridWidget::_emojiGraphicsItemHoverEntered(const QEmojiGraphicsItem& item)
 {
     emit this->emojiHoverEntered(item.emoji());
 }
 
-void QEmojisWidget::_emojiGraphicsItemHoverLeaved(const QEmojiGraphicsItem& item)
+void QEmojiGridWidget::_emojiGraphicsItemHoverLeaved(const QEmojiGraphicsItem& item)
 {
     emit this->emojiHoverLeaved(item.emoji());
 }
 
-void QEmojisWidget::_emojiGraphicsItemClicked(const QEmojiGraphicsItem& item, const bool withShift)
+void QEmojiGridWidget::_emojiGraphicsItemClicked(const QEmojiGraphicsItem& item,
+                                                 const bool withShift)
 {
     emit this->emojiClicked(item.emoji(), withShift);
 }
 
-void QEmojisWidget::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& index)
+void QEmojiGridWidget::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& index)
 {
     const auto selectedItem = call([this] {
         if (this->showingAllEmojis()) {
@@ -264,7 +265,7 @@ void QEmojisWidget::_selectEmojiGraphicsItem(const boost::optional<unsigned int>
     emit this->selectionChanged(&emojiGraphicsItem.emoji());
 }
 
-void QEmojisWidget::scrollToCat(const EmojiCat& cat)
+void QEmojiGridWidget::scrollToCat(const EmojiCat& cat)
 {
     if (_catVertPositions.empty()) {
         return;
@@ -274,7 +275,7 @@ void QEmojisWidget::scrollToCat(const EmojiCat& cat)
                                                                   _catVertPositions[&cat] - 8)));
 }
 
-void QEmojisWidget::selectNext(const unsigned int count)
+void QEmojiGridWidget::selectNext(const unsigned int count)
 {
     if (!_selectedEmojiGraphicsItemIndex) {
         return;
@@ -289,7 +290,7 @@ void QEmojisWidget::selectNext(const unsigned int count)
     }
 }
 
-void QEmojisWidget::selectPrevious(const unsigned int count)
+void QEmojiGridWidget::selectPrevious(const unsigned int count)
 {
     if (!_selectedEmojiGraphicsItemIndex) {
         return;
@@ -304,7 +305,7 @@ void QEmojisWidget::selectPrevious(const unsigned int count)
     }
 }
 
-void QEmojisWidget::selectPreviousRow(const unsigned int count)
+void QEmojiGridWidget::selectPreviousRow(const unsigned int count)
 {
     if (!_selectedEmojiGraphicsItemIndex) {
         return;
@@ -328,7 +329,7 @@ void QEmojisWidget::selectPreviousRow(const unsigned int count)
     this->_selectEmojiGraphicsItem(index);
 }
 
-void QEmojisWidget::selectNextRow(const unsigned int count)
+void QEmojiGridWidget::selectNextRow(const unsigned int count)
 {
     if (!_selectedEmojiGraphicsItemIndex) {
         return;
@@ -352,7 +353,7 @@ void QEmojisWidget::selectNextRow(const unsigned int count)
     this->_selectEmojiGraphicsItem(index);
 }
 
-void QEmojisWidget::selectFirst()
+void QEmojiGridWidget::selectFirst()
 {
     if (_curEmojiGraphicsItems.empty()) {
         return;
@@ -361,7 +362,7 @@ void QEmojisWidget::selectFirst()
     this->_selectEmojiGraphicsItem(0);
 }
 
-void QEmojisWidget::selectLast()
+void QEmojiGridWidget::selectLast()
 {
     if (_curEmojiGraphicsItems.empty()) {
         return;
@@ -370,12 +371,12 @@ void QEmojisWidget::selectLast()
     this->_selectEmojiGraphicsItem(_curEmojiGraphicsItems.size() - 1);
 }
 
-bool QEmojisWidget::showingAllEmojis()
+bool QEmojiGridWidget::showingAllEmojis()
 {
     return this->scene() == &_allEmojisGraphicsScene;
 }
 
-void QEmojisWidget::resizeEvent(QResizeEvent * const event)
+void QEmojiGridWidget::resizeEvent(QResizeEvent * const event)
 {
     QGraphicsView::resizeEvent(event);
 

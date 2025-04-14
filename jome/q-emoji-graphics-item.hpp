@@ -15,15 +15,28 @@
 
 namespace jome {
 
-class QEmojisWidget;
+class QEmojiGridWidget;
 
+/*
+ * A scene item for a specific emoji.
+ *
+ * Takes care of changing the opacity when hovering and creating a
+ * context menu when right-clicking.
+ */
 class QEmojiGraphicsItem final :
     public QGraphicsPixmapItem
 {
 public:
+    /*
+     * Builds an emoji item for the emoji `emoji` using the image
+     * `pixmap` within the emoji grid widget `QEmojisWidget`.
+     */
     explicit QEmojiGraphicsItem(const Emoji& emoji, const QPixmap& pixmap,
-                                QEmojisWidget& emojisWidget);
+                                QEmojiGridWidget& emojisWidget);
 
+    /*
+     * Corresponding emoji of this item.
+     */
     const Emoji& emoji() const noexcept
     {
         return *_emoji;
@@ -37,7 +50,7 @@ private:
 
 private:
     const Emoji * const _emoji;
-    QEmojisWidget * const _emojisWidget;
+    QEmojiGridWidget * const _emojiGridWidget;
 };
 
 } // namespace jome

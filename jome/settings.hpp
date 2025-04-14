@@ -14,7 +14,14 @@
 
 namespace jome {
 
+/*
+ * Updates the recent emojis of `db` from the settings.
+ */
 void updateRecentEmojisFromSettings(EmojiDb& db);
+
+/*
+ * Updates the settings from the recent emojis of `db`.
+ */
 void updateSettings(const EmojiDb& db);
 
 } // namespace jome

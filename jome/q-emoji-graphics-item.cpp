@@ -9,16 +9,16 @@
 #include <QMenu>
 
 #include "q-emoji-graphics-item.hpp"
-#include "q-emojis-widget.hpp"
+#include "q-emoji-grid-widget.hpp"
 #include "emojipedia.hpp"
 
 namespace jome {
 
 QEmojiGraphicsItem::QEmojiGraphicsItem(const Emoji& emoji, const QPixmap& pixmap,
-                                       QEmojisWidget& emojisWidget) :
+                                       QEmojiGridWidget& emojiGridWidget) :
     QGraphicsPixmapItem {pixmap},
     _emoji {&emoji},
-    _emojisWidget {&emojisWidget}
+    _emojiGridWidget {&emojiGridWidget}
 {
     this->setAcceptHoverEvents(true);
     this->setShapeMode(QGraphicsPixmapItem::BoundingRectShape);
@@ -27,7 +27,7 @@ QEmojiGraphicsItem::QEmojiGraphicsItem(const Emoji& emoji, const QPixmap& pixmap
 void QEmojiGraphicsItem::mousePressEvent(QGraphicsSceneMouseEvent * const event)
 {
     if (event->button() == Qt::LeftButton) {
-        _emojisWidget->_emojiGraphicsItemClicked(*this, event->modifiers() & Qt::ShiftModifier);
+        _emojiGridWidget->_emojiGraphicsItemClicked(*this, event->modifiers() & Qt::ShiftModifier);
     }
 
     QGraphicsPixmapItem::mousePressEvent(event);
@@ -36,14 +36,14 @@ void QEmojiGraphicsItem::mousePressEvent(QGraphicsSceneMouseEvent * const event)
 void QEmojiGraphicsItem::hoverEnterEvent(QGraphicsSceneHoverEvent * const event)
 {
     this->setOpacity(.5);
-    _emojisWidget->_emojiGraphicsItemHoverEntered(*this);
+    _emojiGridWidget->_emojiGraphicsItemHoverEntered(*this);
     QGraphicsPixmapItem::hoverEnterEvent(event);
 }
 
 void QEmojiGraphicsItem::hoverLeaveEvent(QGraphicsSceneHoverEvent * const event)
 {
     this->setOpacity(1.);
-    _emojisWidget->_emojiGraphicsItemHoverLeaved(*this);
+    _emojiGridWidget->_emojiGraphicsItemHoverLeaved(*this);
     QGraphicsPixmapItem::hoverLeaveEvent(event);
 }
 

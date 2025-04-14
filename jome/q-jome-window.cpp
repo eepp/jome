@@ -27,12 +27,12 @@
 
 namespace jome {
 
-QSearchBoxEventFilter::QSearchBoxEventFilter(QObject * const parent) :
+QFindBoxEventFilter::QFindBoxEventFilter(QObject * const parent) :
     QObject {parent}
 {
 }
 
-bool QSearchBoxEventFilter::eventFilter(QObject * const obj, QEvent * const event)
+bool QFindBoxEventFilter::eventFilter(QObject * const obj, QEvent * const event)
 {
     if (event->type() != QEvent::KeyPress) {
         return QObject::eventFilter(obj, event);
@@ -216,58 +216,60 @@ void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool n
                            const bool noKwList,
                            const boost::optional<unsigned int>& selectedEmojiFlashPeriod)
 {
-    _wSearchBox = new QLineEdit;
-    QObject::connect(_wSearchBox, &QLineEdit::textChanged,
+    _wFindBox = new QLineEdit;
+    QObject::connect(_wFindBox, &QLineEdit::textChanged,
                      this, &QJomeWindow::_searchTextChanged);
 
-    auto eventFilter = new QSearchBoxEventFilter {this};
+    auto eventFilter = new QFindBoxEventFilter {this};
 
-    _wSearchBox->installEventFilter(eventFilter);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::upKeyPressed, this,
+    _wFindBox->installEventFilter(eventFilter);
+    QObject::connect(eventFilter, &QFindBoxEventFilter::upKeyPressed, this,
                      &QJomeWindow::_searchBoxUpKeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::rightKeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::rightKeyPressed, this,
                      &QJomeWindow::_searchBoxRightKeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::downKeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::downKeyPressed, this,
                      &QJomeWindow::_searchBoxDownKeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::leftKeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::leftKeyPressed, this,
                      &QJomeWindow::_searchBoxLeftKeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::enterKeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::enterKeyPressed, this,
                      &QJomeWindow::_searchBoxEnterKeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::f1KeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::f1KeyPressed, this,
                      &QJomeWindow::_searchBoxF1KeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::f2KeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::f2KeyPressed, this,
                      &QJomeWindow::_searchBoxF2KeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::f3KeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::f3KeyPressed, this,
                      &QJomeWindow::_searchBoxF3KeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::f4KeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::f4KeyPressed, this,
                      &QJomeWindow::_searchBoxF4KeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::f5KeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::f5KeyPressed, this,
                      &QJomeWindow::_searchBoxF5KeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::f12KeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::f12KeyPressed, this,
                      &QJomeWindow::_searchBoxF12KeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::pgUpKeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::pgUpKeyPressed, this,
                      &QJomeWindow::_searchBoxPgUpKeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::pgDownKeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::pgDownKeyPressed, this,
                      &QJomeWindow::_searchBoxPgDownKeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::homeKeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::homeKeyPressed, this,
                      &QJomeWindow::_searchBoxHomeKeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::endKeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::endKeyPressed, this,
                      &QJomeWindow::_searchBoxEndKeyPressed);
-    QObject::connect(eventFilter, &QSearchBoxEventFilter::escapeKeyPressed, this,
+    QObject::connect(eventFilter, &QFindBoxEventFilter::escapeKeyPressed, this,
                      &QJomeWindow::_searchBoxEscapeKeyPressed);
 
     auto mainVbox = new QVBoxLayout;
 
     mainVbox->setMargin(8);
     mainVbox->setSpacing(8);
-    mainVbox->addWidget(_wSearchBox);
-    _wEmojis = new QEmojisWidget {nullptr, *_emojiDb, darkBg, noCatLabels, selectedEmojiFlashPeriod};
-    QObject::connect(_wEmojis, &QEmojisWidget::selectionChanged, this,
+    mainVbox->addWidget(_wFindBox);
+    _wEmojiGrid = new QEmojiGridWidget {
+        nullptr, *_emojiDb, darkBg, noCatLabels, selectedEmojiFlashPeriod
+    };
+    QObject::connect(_wEmojiGrid, &QEmojiGridWidget::selectionChanged, this,
                      &QJomeWindow::_emojiSelectionChanged);
-    QObject::connect(_wEmojis, &QEmojisWidget::emojiClicked, this, &QJomeWindow::_emojiClicked);
-    QObject::connect(_wEmojis, &QEmojisWidget::emojiHoverEntered, this,
+    QObject::connect(_wEmojiGrid, &QEmojiGridWidget::emojiClicked, this, &QJomeWindow::_emojiClicked);
+    QObject::connect(_wEmojiGrid, &QEmojiGridWidget::emojiHoverEntered, this,
                      &QJomeWindow::_emojiHoverEntered);
-    QObject::connect(_wEmojis, &QEmojisWidget::emojiHoverLeaved, this,
+    QObject::connect(_wEmojiGrid, &QEmojiGridWidget::emojiHoverLeaved, this,
                      &QJomeWindow::_emojiHoverLeaved);
     _wCatList = this->_createCatListWidget();
     this->_wCatList->setCurrentRow(0);
@@ -277,7 +279,7 @@ void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool n
 
         emojisHbox->setMargin(0);
         emojisHbox->setSpacing(8);
-        emojisHbox->addWidget(_wEmojis);
+        emojisHbox->addWidget(_wEmojiGrid);
         emojisHbox->addWidget(_wCatList);
         mainVbox->addLayout(emojisHbox);
     }
@@ -329,20 +331,20 @@ void QJomeWindow::showEvent(QShowEvent * const event)
     QMainWindow::showEvent(event);
 
     if (!_emojisWidgetBuilt) {
-        _wEmojis->rebuild();
+        _wEmojiGrid->rebuild();
         _emojisWidgetBuilt = true;
     }
 
-    _wEmojis->showAllEmojis();
-    _wSearchBox->clear();
-    _wSearchBox->setFocus();
+    _wEmojiGrid->showAllEmojis();
+    _wFindBox->clear();
+    _wFindBox->setFocus();
 }
 
 void QJomeWindow::closeEvent(QCloseEvent * const event)
 {
     event->ignore();
     this->hide();
-    emit this->canceled();
+    emit this->cancelled();
 }
 
 void QJomeWindow::_findEmojis(const QString& cat, const QString& needles)
@@ -350,13 +352,13 @@ void QJomeWindow::_findEmojis(const QString& cat, const QString& needles)
     std::vector<const Emoji *> results;
 
     _emojiDb->findEmojis(cat, needles, results);
-    _wEmojis->showFindResults(results);
+    _wEmojiGrid->showFindResults(results);
 }
 
 void QJomeWindow::_searchTextChanged(const QString& text)
 {
     if (text.isEmpty()) {
-        _wEmojis->showAllEmojis();
+        _wEmojiGrid->showAllEmojis();
         return;
     }
 
@@ -372,7 +374,7 @@ void QJomeWindow::_searchTextChanged(const QString& text)
 
 void QJomeWindow::_catListItemSelectionChanged()
 {
-    if (!_wEmojis->showingAllEmojis()) {
+    if (!_wEmojiGrid->showingAllEmojis()) {
         return;
     }
 
@@ -384,7 +386,7 @@ void QJomeWindow::_catListItemSelectionChanged()
 
     const auto& item = static_cast<const QCatListWidgetItem&>(*selectedItems[0]);
 
-    _wEmojis->scrollToCat(item.cat());
+    _wEmojiGrid->scrollToCat(item.cat());
 }
 
 void QJomeWindow::_catListItemClicked(QListWidgetItem * const)
@@ -394,48 +396,48 @@ void QJomeWindow::_catListItemClicked(QListWidgetItem * const)
 
 void QJomeWindow::_searchBoxUpKeyPressed()
 {
-    _wEmojis->selectPreviousRow();
+    _wEmojiGrid->selectPreviousRow();
 }
 
 void QJomeWindow::_searchBoxRightKeyPressed(const bool withCtrl)
 {
-    _wEmojis->selectNext(withCtrl ? 5 : 1);
+    _wEmojiGrid->selectNext(withCtrl ? 5 : 1);
 }
 
 void QJomeWindow::_searchBoxDownKeyPressed()
 {
-    _wEmojis->selectNextRow();
+    _wEmojiGrid->selectNextRow();
 }
 
 void QJomeWindow::_searchBoxLeftKeyPressed(const bool withCtrl)
 {
-    _wEmojis->selectPrevious(withCtrl ? 5 : 1);
+    _wEmojiGrid->selectPrevious(withCtrl ? 5 : 1);
 }
 
 void QJomeWindow::_searchBoxPgUpKeyPressed()
 {
-    _wEmojis->selectPreviousRow(10);
+    _wEmojiGrid->selectPreviousRow(10);
 }
 
 void QJomeWindow::_searchBoxPgDownKeyPressed()
 {
-    _wEmojis->selectNextRow(10);
+    _wEmojiGrid->selectNextRow(10);
 }
 
 void QJomeWindow::_searchBoxHomeKeyPressed()
 {
-    _wEmojis->selectFirst();
+    _wEmojiGrid->selectFirst();
 }
 
 void QJomeWindow::_searchBoxEndKeyPressed()
 {
-    _wEmojis->selectLast();
+    _wEmojiGrid->selectLast();
 }
 
 void QJomeWindow::_searchBoxEscapeKeyPressed()
 {
     this->hide();
-    emit this->canceled();
+    emit this->cancelled();
 }
 
 void QJomeWindow::_searchBoxEnterKeyPressed(const bool withShift)
@@ -716,8 +718,8 @@ void QJomeWindow::_updateKwLabel(const Emoji * const emoji)
 
 void QJomeWindow::emojiDbChanged()
 {
-    _wEmojis->rebuild();
-    _wEmojis->showAllEmojis();
+    _wEmojiGrid->rebuild();
+    _wEmojiGrid->showAllEmojis();
 }
 
 } // namespace jome

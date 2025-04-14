@@ -39,7 +39,7 @@ add_executable (
     q-jome-window.cpp
     q-cat-list-widget-item.cpp
     q-emoji-graphics-item.cpp
-    q-emojis-widget.cpp
+    q-emoji-grid-widget.cpp
     q-jome-server.cpp
     emoji-images.cpp
     emoji-db.cpp

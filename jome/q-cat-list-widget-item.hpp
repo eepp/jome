@@ -14,6 +14,11 @@
 
 namespace jome {
 
+/*
+ * An entry within the list of categories.
+ *
+ * Contains a category pointer.
+ */
 class QCatListWidgetItem final :
     public QListWidgetItem
 {

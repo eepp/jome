@@ -23,12 +23,18 @@
 #include "settings.hpp"
 #include "utils.hpp"
 
+/*
+ * Output format.
+ */
 enum class Format
 {
     Utf8,
     CodepointsHex,
 };
 
+/*
+ * Command-line parameters in no particular order.
+ */
 struct Params final
 {
     Format fmt;
@@ -214,11 +220,27 @@ Params parseArgs(QApplication& app)
     return params;
 }
 
+/*
+ * Executes the command `cmd` with the arguments `arg` (shell context).
+ */
 void execCommand(const QString& cmd, const QString& arg)
 {
     static_cast<void>(QProcess::execute(cmd + ' ' + arg));
 }
 
+/*
+ * Formats the emoji `emoji` with the format `fmt` and returns
+ * the string.
+ *
+ * Adds a skin tone modifier depending on `skinTone` and `defSkinTone`.
+ *
+ * If `fmt` is `Format::CodepointsHex`, prepends `cpPrefix` to each
+ * hexadecimal codepoint.
+ *
+ * Removes VS-16 codepoints if `removeVs16` is true.
+ *
+ * Adds a newline if `noNl` is false.
+ */
 QString formatEmoji(const jome::Emoji& emoji,
                     const boost::optional<jome::Emoji::SkinTone>& skinTone,
                     const boost::optional<jome::Emoji::SkinTone>& defSkinTone,
@@ -267,6 +289,11 @@ QString formatEmoji(const jome::Emoji& emoji,
     return output;
 }
 
+/*
+ * Shows the jome window working with the database `db`.
+ *
+ * Also updates the "Recent" category, if any, from the settings.
+ */
 void showWindow(jome::QJomeWindow& win, jome::EmojiDb& db)
 {
     jome::updateRecentEmojisFromSettings(db);
@@ -276,22 +303,31 @@ void showWindow(jome::QJomeWindow& win, jome::EmojiDb& db)
 
 } // namespace
 
-int main(int argc, char **argv)
+int main(int argc, char ** const argv)
 {
+    // create Qt app
     QApplication app {argc, argv};
-    std::unique_ptr<jome::QJomeServer> server;
 
     app.setApplicationDisplayName("jome");
     app.setOrganizationName("jome");
     app.setApplicationName("jome");
     app.setApplicationVersion(JOME_VERSION);
 
+    // parse command-line parameters
     const auto params = parseArgs(app);
+
+    // create emoji database
     jome::EmojiDb db {JOME_DATA_DIR, params.emojiSize, params.maxRecentEmojis, params.noRecentCat};
+
+    // create window (not visible yet)
     jome::QJomeWindow win {db, params.darkBg, params.noCatList, params.noCatLabels,
                            params.noKwList, params.selectedEmojiFlashPeriod};
 
-    QObject::connect(&win, &jome::QJomeWindow::canceled, [&app, &server, &db]() {
+    // possible server
+    std::unique_ptr<jome::QJomeServer> server;
+
+    // `QJomeWindow::cancelled` signal
+    QObject::connect(&win, &jome::QJomeWindow::cancelled, [&app, &server, &db]() {
         if (server) {
             // reply to the client at least
             server->sendToClient("");
@@ -306,18 +342,20 @@ int main(int argc, char **argv)
         }
     });
 
+    // `QJomeWindow::emojiChosen` signal
     QObject::connect(&win, &jome::QJomeWindow::emojiChosen,
                      [&](const auto& emoji, const auto& skinTone, const bool removeVs16) {
+        // format emoji
         const auto emojiStr = formatEmoji(emoji, skinTone, params.defSkinTone, params.fmt,
                                           params.cpPrefix, params.noNewline || params.cmd,
                                           removeVs16 || params.removeVs16);
 
         if (server) {
-            // send response to client
+            // send formatted emoji to connected client
             server->sendToClient(emojiStr);
         }
 
-        // print result
+        // always print the formatted emoji
         std::cout << emojiStr.toStdString();
         std::cout.flush();
 
@@ -342,7 +380,7 @@ int main(int argc, char **argv)
             }
         }
 
-        // always hide when accepting
+        // always hide when accepting, except with `-q`
         if (!params.noHide) {
             win.hide();
         }
@@ -370,8 +408,10 @@ int main(int argc, char **argv)
     });
 
     if (params.serverName) {
+        // create server
         server = std::make_unique<jome::QJomeServer>(nullptr, *params.serverName);
 
+        // connect `QJomeServer::clientRequested` signal
         QObject::connect(server.get(), &jome::QJomeServer::clientRequested,
                          [&server, &win, &db](const jome::QJomeServer::Command cmd) {
             if (cmd == jome::QJomeServer::Command::Quit) {
@@ -381,14 +421,17 @@ int main(int argc, char **argv)
                 // TODO: make sure the message is sent before quitting
                 QTimer::singleShot(10, &QApplication::quit);
             } else {
+                assert(cmd == jome::QJomeServer::Command::Pick);
                 showWindow(win, db);
             }
         });
     }
 
     if (!server) {
+        // direct mode: time to show the window
         showWindow(win, db);
     }
 
+    // start app
     return app.exec();
 }
