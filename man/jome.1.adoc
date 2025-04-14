@@ -513,6 +513,13 @@ You cannot specify the **-s** and **-q** options together.
 **-R**::
     Hide the "`Recent`" category.
 
+**-r**::
+    Include the recently accepted emojis in the results when
+    finding emojis.
++
+In this case, jome shows the recently accepted emojis first within the
+result grid.
+
 **-k**::
     Hide the keyword list.
 

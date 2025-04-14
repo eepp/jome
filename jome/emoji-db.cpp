@@ -126,10 +126,12 @@ EmojiCat::EmojiCat(QString id, QString name) :
 }
 
 EmojiDb::EmojiDb(const QString& dir, const EmojiSize emojiSize,
-                 const unsigned int maxRecentEmojis, const bool noRecentCat) :
+                 const unsigned int maxRecentEmojis, const bool noRecentCat,
+                 const bool incRecentInFindResults) :
     _emojiSize {emojiSize},
     _emojisPngPath {qFmtFormat("{}/emojis-{}.png", dir.toStdString(), this->emojiSizeInt())},
-    _maxRecentEmojis {maxRecentEmojis}
+    _maxRecentEmojis {maxRecentEmojis},
+    _incRecentInFindResults {incRecentInFindResults}
 {
     this->_createEmojis(dir);
     this->_createCats(dir, noRecentCat);
@@ -445,12 +447,17 @@ void EmojiDb::findEmojis(QString catName, const QString& needlesStr,
     // handle specific codepoint search
     if (needles.size() == 1 && needles.first().size() >= 3 && needles.first().startsWith("u+")) {
         for (auto& cat : _cats) {
-            if (cat->isRecent()) {
-                // exclude "Recent" category
+            if (!catName.isEmpty() && cat->isRecent()) {
+                // invalid
                 continue;
             }
 
-            if (!catName.isEmpty() && !cat->lcName().contains(catName)) {
+            if (cat->isRecent()) {
+                if (!_incRecentInFindResults) {
+                    // exclude "Recent" category
+                    continue;
+                }
+            } else if (!catName.isEmpty() && !cat->lcName().contains(catName)) {
                 // we don't even want to search this category
                 continue;
             }
@@ -470,18 +477,28 @@ void EmojiDb::findEmojis(QString catName, const QString& needlesStr,
     auto pos = 0U;
 
     for (auto& cat : _cats) {
-        if (cat->isRecent()) {
-            // exclude "Recent" category
+        auto initScore = 0U;
+
+        if (!catName.isEmpty() && cat->isRecent()) {
+            // invalid
             continue;
         }
 
-        if (!catName.isEmpty() && !cat->lcName().contains(catName)) {
+        if (cat->isRecent()) {
+            if (_incRecentInFindResults) {
+                // boost to get them before the other categories
+                initScore = 1000;
+            } else {
+                // exclude "Recent" category
+                continue;
+            }
+        } else if (!catName.isEmpty() && !cat->lcName().contains(catName)) {
             // we don't even want to search this category
             continue;
         }
 
         for (auto emoji : cat->emojis()) {
-            auto score = 0U;
+            auto score = initScore;
 
             for (auto& needle : needles) {
                 auto needleScore = 0U;

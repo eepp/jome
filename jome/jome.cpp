@@ -54,6 +54,7 @@ struct Params final
     bool noRecentCat;
     bool noKwList;
     boost::optional<jome::Emoji::SkinTone> defSkinTone;
+    bool incRecentInFindResults;
 };
 
 namespace {
@@ -71,6 +72,7 @@ Params parseArgs(QApplication& app)
     const QCommandLineOption noNlOpt {"n", "Do not output newline."};
     const QCommandLineOption removeVs16Opt {"V", "Do not output VS-16 codepoints."};
     const QCommandLineOption defSkinToneOpt {"t", "Set default skin tone to <TONE> (`L`, `ML`, `M`, `MD`, or `D`).", "TONE"};
+    const QCommandLineOption incRecentInFindResultsOpt {"r", "Include recently accepted emojis in find results."};
     const QCommandLineOption cmdOpt {"c", "Execute external command <CMD> with accepted emoji.", "CMD"};
     const QCommandLineOption copyToClipboardOpt {"b", "Copy the accepted emoji to the clipboard."};
     const QCommandLineOption noHideOpt {"q", "Do not quit when accepting."};
@@ -89,6 +91,7 @@ Params parseArgs(QApplication& app)
     parser.addOption(noNlOpt);
     parser.addOption(removeVs16Opt);
     parser.addOption(defSkinToneOpt);
+    parser.addOption(incRecentInFindResultsOpt);
     parser.addOption(cmdOpt);
     parser.addOption(copyToClipboardOpt);
     parser.addOption(noHideOpt);
@@ -114,6 +117,7 @@ Params parseArgs(QApplication& app)
     params.noCatLabels = parser.isSet(noCatLabelsOpt);
     params.noRecentCat = parser.isSet(noRecentCatOpt);
     params.noKwList = parser.isSet(noKwListOpt);
+    params.incRecentInFindResults = parser.isSet(incRecentInFindResultsOpt);
 
     {
         const auto fmt = parser.value(formatOpt);
@@ -317,7 +321,10 @@ int main(int argc, char ** const argv)
     const auto params = parseArgs(app);
 
     // create emoji database
-    jome::EmojiDb db {JOME_DATA_DIR, params.emojiSize, params.maxRecentEmojis, params.noRecentCat};
+    jome::EmojiDb db {
+        JOME_DATA_DIR, params.emojiSize, params.maxRecentEmojis, params.noRecentCat,
+        params.incRecentInFindResults
+    };
 
     // create window (not visible yet)
     jome::QJomeWindow win {db, params.darkBg, params.noCatList, params.noCatLabels,

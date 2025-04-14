@@ -557,6 +557,13 @@ same{nbsp}⌚.
 |`-R`
 |[[opt-R]]🙈 the "`Recent`" category.
 
+|`-r`
+|[[opt-r]]Include the recently accepted emojis in the results
+when 🔍 emojis.
+
+In this 💼, jome 👁️ the recently accepted emojis first within the
+result grid.
+
 |`-k`
 |[[opt-k]]🙈 the keyword 📜.
 

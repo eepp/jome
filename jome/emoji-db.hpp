@@ -303,7 +303,8 @@ public:
      * `noRecentCat` is false.
      */
     explicit EmojiDb(const QString& dir, EmojiSize emojiSize,
-                     unsigned int maxRecentEmojis, bool noRecentCat);
+                     unsigned int maxRecentEmojis, bool noRecentCat,
+                     bool incRecentInFindResults);
 
     /*
      * Appends the emojis found with the partial category name `cat` and
@@ -463,6 +464,7 @@ private:
     mutable std::set<const Emoji *> _tmpFindResultEmojis;
     EmojiCat *_recentEmojisCat = nullptr;
     unsigned int _maxRecentEmojis;
+    bool _incRecentInFindResults;
 };
 
 } // namespace jome
