@@ -11,7 +11,7 @@ endif::env-github[]
 
 = jome 😏
 Philippe Proulx <eepp.ca>
-8 April 2025
+14 April 2025
 
 https://github.com/eepp/jome/releases/tag/v1.2.1[image:https://img.shields.io/github/v/release/eepp/jome?display_name=release[GitHub Release]]
 https://aur.archlinux.org/packages/jome[image:https://img.shields.io/aur/version/jome?&label=AUR[AUR Version]]
@@ -230,6 +230,8 @@ The format of a query is 1️⃣ of:
 * `_TERMS_`
 * `_CAT_/`
 * `_CAT_/_TERMS_`
+* `_CODEPOINT_`
+* `_CAT_/_CODEPOINT_`
 
 where:
 
@@ -241,6 +243,11 @@ where:
 +
 For an emoji to be part of the results, its name and keywords must
 contain _all_ the 🔍 terms.
+
+`_CODEPOINT_`::
+    A single Unicode codepoint using the standard `U+__ABCD__` notation.
+
+Everything is 💼-insensitive.
 
 [[select]]
 === Select and ✅ an emoji

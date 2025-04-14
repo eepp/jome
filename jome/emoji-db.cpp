@@ -24,6 +24,20 @@
 #include "emoji-db.hpp"
 
 namespace jome {
+namespace {
+
+QString cpStr(const Emoji::Codepoints& codepoints)
+{
+    QStringList parts;
+
+    for (const auto cp : codepoints) {
+        parts.append(qFmtFormat("u+{:x}", cp));
+    }
+
+    return parts.join(' ');
+}
+
+} // namespace
 
 Emoji::Emoji(QString str, QString name,
              std::unordered_set<QString>&& keywords, const bool hasSkinToneSupport,
@@ -31,6 +45,7 @@ Emoji::Emoji(QString str, QString name,
     _str {std::move(str)},
     _name {std::move(name)},
     _lcName {_name.toLower()},
+    _cpStr {cpStr(this->codepoints())},
     _keywords {std::move(keywords)},
     _hasSkinToneSupport {hasSkinToneSupport},
     _version {version}
@@ -426,6 +441,31 @@ void EmojiDb::findEmojis(QString catName, const QString& needlesStr,
     // clear temporary results
     _tmpFindResults.clear();
     _tmpFindResultEmojis.clear();
+
+    // handle specific codepoint search
+    if (needles.size() == 1 && needles.first().size() >= 3 && needles.first().startsWith("u+")) {
+        for (auto& cat : _cats) {
+            if (cat->isRecent()) {
+                // exclude "Recent" category
+                continue;
+            }
+
+            if (!catName.isEmpty() && !cat->lcName().contains(catName)) {
+                // we don't even want to search this category
+                continue;
+            }
+
+            for (auto emoji : cat->emojis()) {
+                if (emoji->codepointStr().contains(needles.first()) &&
+                        _tmpFindResultEmojis.count(emoji) == 0) {
+                    results.push_back(emoji);
+                    _tmpFindResultEmojis.insert(emoji);
+                }
+            }
+        }
+
+        return;
+    }
 
     auto pos = 0U;
 

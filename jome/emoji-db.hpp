@@ -121,6 +121,19 @@ public:
     }
 
     /*
+     * Codepoint string (lowercase).
+     *
+     * For example: `u+2600 u+fe0f`.
+     *
+     * The purpose of this string is to be able to find an emoji quickly
+     * by codepoint with the `U+ABCD` notation.
+     */
+    const QString& codepointStr() const noexcept
+    {
+        return _cpStr;
+    }
+
+    /*
      * Keywords of this emoji.
      */
     const std::unordered_set<QString>& keywords() const noexcept
@@ -148,6 +161,7 @@ private:
     const QString _str;
     const QString _name;
     const QString _lcName;
+    const QString _cpStr;
     const std::unordered_set<QString> _keywords;
     const bool _hasSkinToneSupport;
     const EmojiVersion _version;

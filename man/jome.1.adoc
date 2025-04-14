@@ -1,5 +1,5 @@
 = vlttng(1)
-:revdate: 8 April 2025
+:revdate: 14 April 2025
 :docdate: {revdate}
 :doctype: manpage
 :manmanual: JOME
@@ -120,6 +120,8 @@ The format of a query is one of:
 * __TERMS__
 * __CAT__/
 * __CAT__/__TERMS__
+* __CODEPOINT__
+* __CAT__/__CODEPOINT__
 
 where:
 
@@ -131,6 +133,12 @@ __TERMS__::
 +
 For an emoji to be part of the results, its name and keywords
 must contain ALL the searched terms.
+
+__CODEPOINT__::
+    A single Unicode codepoint using the standard **U**+__ABCD__
+    notation.
+
+Everything is case-insensitive.
 
 === Select and accept an emoji
 

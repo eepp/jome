@@ -2,12 +2,12 @@
 .\"     Title: vlttng
 .\"    Author: [see the "AUTHOR(S)" section]
 .\" Generator: Asciidoctor 2.0.23
-.\"      Date: 8 April 2025
+.\"      Date: 14 April 2025
 .\"    Manual: JOME
 .\"    Source: JOME
 .\"  Language: English
 .\"
-.TH "JOME" "1" "8 April 2025" "JOME" "JOME"
+.TH "JOME" "1" "14 April 2025" "JOME" "JOME"
 .ie \n(.g .ds Aq \(aq
 .el       .ds Aq '
 .ss \n[.ss] 0
@@ -203,6 +203,28 @@ The format of a query is one of:
 \fICAT\fP/\fITERMS\fP
 .RE
 .sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+\fICODEPOINT\fP
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+\fICAT\fP/\fICODEPOINT\fP
+.RE
+.sp
 where:
 .sp
 \fICAT\fP
@@ -217,6 +239,14 @@ Space\-separated list of search terms.
 For an emoji to be part of the results, its name and keywords
 must contain ALL the searched terms.
 .RE
+.sp
+\fICODEPOINT\fP
+.RS 4
+A single Unicode codepoint using the standard \fBU\fP+\fIABCD\fP
+notation.
+.RE
+.sp
+Everything is case\-insensitive.
 .SS "Select and accept an emoji"
 .sp
 To select an emoji, use the following keys:
