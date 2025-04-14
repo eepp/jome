@@ -430,7 +430,7 @@ void EmojiDb::findEmojis(QString catName, const QString& needlesStr,
     auto pos = 0U;
 
     for (auto& cat : _cats) {
-        if (cat->id() == "recent") {
+        if (cat->isRecent()) {
             // exclude "Recent" category
             continue;
         }

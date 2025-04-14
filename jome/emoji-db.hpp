@@ -189,6 +189,14 @@ public:
     }
 
     /*
+     * True if this is the "Recent" category.
+     */
+    bool isRecent() const noexcept
+    {
+        return _id == "recent";
+    }
+
+    /*
      * Name of this category.
      */
     const QString& name() const noexcept
