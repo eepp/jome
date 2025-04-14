@@ -34,9 +34,10 @@ void QCtlClient::ctl(const Command cmd)
 
 void QCtlClient::_sendString(const QString& str)
 {
-    const auto stdStr = str.toStdString();
+    const auto utf8Data = str.toUtf8();
 
-    _socket.write(stdStr.data(), stdStr.size() + 1);
+    _socket.write(utf8Data.constData(), utf8Data.size());
+    _socket.write(QByteArray {1, '\0'}, 1);
 }
 
 void QCtlClient::_socketConnected()
