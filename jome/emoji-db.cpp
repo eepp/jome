@@ -374,9 +374,11 @@ void EmojiDb::_createEmojis(const QString& dir)
                                                          return EmojiVersion::V_14_0;
                                                      } else if (str == "15.0") {
                                                          return EmojiVersion::V_15_0;
-                                                     } else {
-                                                         assert(str == "15.1");
+                                                     } else if (str == "15.1") {
                                                          return EmojiVersion::V_15_1;
+                                                     } else {
+                                                         assert(str == "16.0");
+                                                         return EmojiVersion::V_16_0;
                                                      }
                                                  }));
         });

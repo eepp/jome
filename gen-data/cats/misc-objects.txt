@@ -131,6 +131,7 @@
 🖋️ Fountain Pen
 🖊️ Pen
 🖌️ Paintbrush
+🫟 Splatter
 🖍️ Crayon
 📝 Memo
 📁 File Folder
@@ -186,6 +187,7 @@
 🧰 Toolbox
 🧲 Magnet
 🪜 Ladder
+🪏 Shovel
 ⚗️ Alembic
 🧪 Test Tube
 🧫 Petri Dish

@@ -10,6 +10,7 @@
 🎺 Trumpet
 📯 Postal Horn
 🪈 Flute
+🪉 Harp
 🎻 Violin
 🪕 Banjo
 🥁 Drum

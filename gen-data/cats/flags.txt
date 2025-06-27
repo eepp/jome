@@ -206,6 +206,7 @@
 🇷🇺 Flag: Russia
 🇷🇼 Flag: Rwanda
 🇸🇦 Flag: Saudi Arabia
+🇨🇶 Flag: Sark
 🇸🇧 Flag: Solomon Islands
 🇸🇨 Flag: Seychelles
 🇸🇩 Flag: Sudan
