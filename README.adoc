@@ -11,7 +11,7 @@ endif::env-github[]
 
 = jome 😏
 Philippe Proulx <eepp.ca>
-14 April 2025
+26 June 2025
 
 https://github.com/eepp/jome/releases/tag/v1.3.0[image:https://img.shields.io/github/v/release/eepp/jome?display_name=release[GitHub Release]]
 https://aur.archlinux.org/packages/jome[image:https://img.shields.io/aur/version/jome?&label=AUR[AUR Version]]
@@ -24,7 +24,7 @@ https://github.com/eepp/jome/stargazers[image:https://img.shields.io/github/star
 You can also pick an emoji with the 🖱️, don't worry.
 
 jome has all the emojis of ⬆️ to
-https://emojipedia.org/emoji-15.1/[Emoji{nbsp}15.1], including
+https://emojipedia.org/emoji-16.0/[Emoji{nbsp}16.0], including
 with skin tones.
 
 I'm not a fan of the usual very broad categories of emojis which do not

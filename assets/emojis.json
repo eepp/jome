@@ -824,6 +824,20 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "🫩": {
+    "name": "Face with bags under eyes",
+    "keywords": [
+      "bored",
+      "exhausted",
+      "fatigued",
+      "late",
+      "sleepy",
+      "tired",
+      "weary"
+    ],
+    "has-skin-tone-support": false,
+    "version": "16.0"
+  },
   "🤤": {
     "name": "Drooling face",
     "keywords": [
@@ -2958,6 +2972,22 @@
     ],
     "has-skin-tone-support": false,
     "version": "0.6"
+  },
+  "🫆": {
+    "name": "Fingerprint",
+    "keywords": [
+      "clue",
+      "crime",
+      "detective",
+      "forensics",
+      "identity",
+      "mystery",
+      "print",
+      "safety",
+      "trace"
+    ],
+    "has-skin-tone-support": false,
+    "version": "16.0"
   },
   "👂": {
     "name": "Ear",
@@ -8474,6 +8504,21 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "🪾": {
+    "name": "Leafless tree",
+    "keywords": [
+      "bare",
+      "barren",
+      "branches",
+      "dead",
+      "drought",
+      "trunk",
+      "winter",
+      "wood"
+    ],
+    "has-skin-tone-support": false,
+    "version": "16.0"
+  },
   "🪵": {
     "name": "Wood",
     "keywords": [
@@ -9379,6 +9424,20 @@
     ],
     "has-skin-tone-support": false,
     "version": "3.0"
+  },
+  "🫜": {
+    "name": "Root vegetable",
+    "keywords": [
+      "beet",
+      "food",
+      "garden",
+      "radish",
+      "salad",
+      "turnip",
+      "vegetarian"
+    ],
+    "has-skin-tone-support": false,
+    "version": "16.0"
   },
   "🌽": {
     "name": "Ear of corn",
@@ -12261,6 +12320,21 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "🫟": {
+    "name": "Splatter",
+    "keywords": [
+      "drip",
+      "holi",
+      "ink",
+      "liquid",
+      "mess",
+      "paint",
+      "spill",
+      "stain"
+    ],
+    "has-skin-tone-support": false,
+    "version": "16.0"
+  },
   "🧵": {
     "name": "Thread",
     "keywords": [
@@ -13563,6 +13637,18 @@
     ],
     "has-skin-tone-support": false,
     "version": "15.0"
+  },
+  "🪉": {
+    "name": "Harp",
+    "keywords": [
+      "cupid",
+      "instrument",
+      "love",
+      "music",
+      "orchestra"
+    ],
+    "has-skin-tone-support": false,
+    "version": "16.0"
   },
   "🎻": {
     "name": "Violin",
@@ -16749,6 +16835,21 @@
     ],
     "has-skin-tone-support": false,
     "version": "13.0"
+  },
+  "🪏": {
+    "name": "Shovel",
+    "keywords": [
+      "bury",
+      "dig",
+      "garden",
+      "hole",
+      "plant",
+      "scoop",
+      "snow",
+      "spade"
+    ],
+    "has-skin-tone-support": false,
+    "version": "16.0"
   },
   "🚪": {
     "name": "Door",

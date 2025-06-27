@@ -634,6 +634,9 @@ void QJomeWindow::_updateVersionLabel(const Emoji * const emoji)
                         case EmojiVersion::V_15_1:
                             return "15.1";
 
+                        case EmojiVersion::V_16_0:
+                            return "16.0";
+
                         default:
                             std::abort();
                         }
@@ -685,6 +688,9 @@ void QJomeWindow::_updateVersionLabel(const Emoji * const emoji)
 
                         case EmojiVersion::V_15_1:
                             return "Sep 2023";
+
+                        case EmojiVersion::V_16_0:
+                            return "Sep 2024";
 
                         default:
                             std::abort();

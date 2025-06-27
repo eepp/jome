@@ -17,6 +17,7 @@
 🌳 Deciduous Tree
 🌴 Palm Tree
 🎋 Tanabata Tree
+🪾 Leafless tree
 🪵 Wood
 🎍 Pine Decoration
 🌵 Cactus

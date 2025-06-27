@@ -53,6 +53,7 @@
 😌 Relieved Face
 😔 Pensive Face
 😪 Sleepy Face
+🫩 Face with bags under eyes
 🤤 Drooling Face
 😴 Sleeping Face
 🥱 Yawning Face

@@ -6,6 +6,7 @@
 🦵 Leg
 🦶 Foot
 👣 Footprints
+🫆 Fingerprint
 👂 Ear
 🦻 Ear with Hearing Aid
 👃 Nose
