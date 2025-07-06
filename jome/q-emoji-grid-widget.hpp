@@ -185,7 +185,7 @@ private:
     QGraphicsPixmapItem *_findEmojisGraphicsSceneSelectedItem = nullptr;
 
     // timer to make the selection square flash if requested
-    QTimer _selectedItemFlashTimer;
+    QTimer *_selectedItemFlashTimer = nullptr;
 
     // true to use a dark background
     bool _darkBg;
