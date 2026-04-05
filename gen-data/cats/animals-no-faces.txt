@@ -1,6 +1,7 @@
 🐒 Monkey
 🦍 Gorilla
 🦧 Orangutan
+🫈 Hairy Creature
 🐕 Dog
 🦮 Guide Dog
 🐕‍🦺 Service Dog
@@ -78,6 +79,7 @@
 🦖 T-Rex
 🐳 Spouting Whale
 🐋 Whale
+🫍 Orca
 🐬 Dolphin
 🦭 Seal
 🐟 Fish

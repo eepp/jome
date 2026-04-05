@@ -1,6 +1,7 @@
 💌 Love Letter
 🕳️ Hole
 💣 Bomb
+🫯 Fight Cloud
 🔪 Kitchen Knife
 🫙 Jar
 🏺 Amphora
@@ -47,6 +48,7 @@
 🛍️ Shopping Bags
 📿 Prayer Beads
 💎 Gem Stone
+🪎 Treasure Chest
 📯 Postal Horn
 🎙️ Studio Microphone
 🎚️ Level Slider

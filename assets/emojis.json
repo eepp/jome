@@ -1025,6 +1025,19 @@
     "has-skin-tone-support": false,
     "version": "13.1"
   },
+  "🫪": {
+    "name": "Distorted face",
+    "keywords": [
+      "anxiety",
+      "bloated",
+      "panic",
+      "shocked",
+      "surprised",
+      "vulnerable"
+    ],
+    "has-skin-tone-support": false,
+    "version": "17.0"
+  },
   "🤯": {
     "name": "Exploding head",
     "keywords": [
@@ -6364,6 +6377,18 @@
     "has-skin-tone-support": true,
     "version": "3.0"
   },
+  "🧑‍🩰": {
+    "name": "Ballet dancer",
+    "keywords": [
+      "ballet",
+      "dancer",
+      "graceful",
+      "perform",
+      "twirl"
+    ],
+    "has-skin-tone-support": true,
+    "version": "17.0"
+  },
   "🕴️": {
     "name": "Person in suit levitating",
     "keywords": [
@@ -7113,6 +7138,21 @@
     ],
     "has-skin-tone-support": false,
     "version": "12.0"
+  },
+  "🫈": {
+    "name": "Hairy creature",
+    "keywords": [
+      "bigfoot",
+      "cryptid",
+      "forest",
+      "giant",
+      "hairy",
+      "sasquatch",
+      "woodwose",
+      "yeti"
+    ],
+    "has-skin-tone-support": false,
+    "version": "17.0"
   },
   "🐕": {
     "name": "Dog",
@@ -7959,6 +7999,18 @@
     ],
     "has-skin-tone-support": false,
     "version": "1.0"
+  },
+  "🫍": {
+    "name": "Orca",
+    "keywords": [
+      "killer whale",
+      "marine",
+      "ocean",
+      "orca",
+      "whale"
+    ],
+    "has-skin-tone-support": false,
+    "version": "17.0"
   },
   "🐬": {
     "name": "Dolphin",
@@ -10879,6 +10931,21 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "🛘": {
+    "name": "Landslide",
+    "keywords": [
+      "avalanche",
+      "danger",
+      "debris",
+      "disaster",
+      "mountain",
+      "mudslide",
+      "rockfall",
+      "rocks"
+    ],
+    "has-skin-tone-support": false,
+    "version": "17.0"
+  },
   "🗻": {
     "name": "Mount fuji",
     "keywords": [
@@ -13620,6 +13687,20 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "🪊": {
+    "name": "Trombone",
+    "keywords": [
+      "brass",
+      "instrument",
+      "jazz",
+      "music",
+      "sad",
+      "slide",
+      "trombone"
+    ],
+    "has-skin-tone-support": false,
+    "version": "17.0"
+  },
   "🪈": {
     "name": "Flute",
     "keywords": [
@@ -15022,6 +15103,24 @@
     "has-skin-tone-support": false,
     "version": "0.6"
   },
+  "🪎": {
+    "name": "Treasure chest",
+    "keywords": [
+      "gem",
+      "gold",
+      "jewels",
+      "loot",
+      "money",
+      "pirate",
+      "prize",
+      "silver",
+      "treasure",
+      "valuables",
+      "wealth"
+    ],
+    "has-skin-tone-support": false,
+    "version": "17.0"
+  },
   "🪙": {
     "name": "Coin",
     "keywords": [
@@ -16003,6 +16102,20 @@
     ],
     "has-skin-tone-support": false,
     "version": "0.6"
+  },
+  "🫯": {
+    "name": "Fight cloud",
+    "keywords": [
+      "argument",
+      "brawl",
+      "debate",
+      "disagreement",
+      "fight",
+      "ruckus",
+      "wrestle"
+    ],
+    "has-skin-tone-support": false,
+    "version": "17.0"
   },
   "🫙": {
     "name": "Jar",

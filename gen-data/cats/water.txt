@@ -37,6 +37,7 @@
 🧜‍♀️ Mermaid
 🐳 Spouting Whale
 🐋 Whale
+🫍 Orca
 🐬 Dolphin
 🦭 Seal
 🐟 Fish

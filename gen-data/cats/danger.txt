@@ -17,6 +17,7 @@
 💥 Collision
 🧨 Firecracker
 🔥 Fire
+🛘 Landslide
 🕯️ Candle
 🚬 Cigarette
 🧯 Fire Extinguisher
