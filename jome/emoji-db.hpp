@@ -46,8 +46,8 @@ enum class EmojiVersion
 /*
  * A single emoji.
  *
- * Contains its string, name, keywords, Emoji version, and whether or
- * not it supports skin tone modifiers.
+ * Contains its string, name, keywords, Emoji version, and emoji
+ * modifier base codepoint indexes for skin tone support.
  *
  * str() and codepoints() provide the UTF-8 string and codepoints with
  * optional skin tone and VS-16 removal.
@@ -74,14 +74,16 @@ public:
 public:
     /*
      * Builds an emoji having the string `str`, the name `name`, the
-     * keywords `keywords`, the Emoji version `version`, and skin tone
-     * support if `hasSkinToneSupport` is true.
+     * keywords `keywords`, the Emoji version `version`, and the
+     * emoji modifier base codepoint indexes `modBaseIndexes` (empty
+     * if this emoji doesn't support skin tone modifiers).
      *
      * `str` may contain VS-16 codepoints: str() and codepoints()
      * remove them on demand.
      */
     explicit Emoji(QString str, QString name,
-                   std::unordered_set<QString>&& keywords, bool hasSkinToneSupport,
+                   std::unordered_set<QString>&& keywords,
+                   std::unordered_set<unsigned int>&& modBaseIndexes,
                    EmojiVersion version);
 
     /*
@@ -148,7 +150,7 @@ public:
      */
     bool hasSkinToneSupport() const noexcept
     {
-        return _hasSkinToneSupport;
+        return !_modBaseIndexes.empty();
     }
 
     /*
@@ -165,7 +167,7 @@ private:
     const QString _lcName;
     const QString _cpStr;
     const std::unordered_set<QString> _keywords;
-    const bool _hasSkinToneSupport;
+    const std::unordered_set<unsigned int> _modBaseIndexes;
     const EmojiVersion _version;
 };
 

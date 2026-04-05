@@ -40,14 +40,15 @@ QString cpStr(const Emoji::Codepoints& codepoints)
 } // namespace
 
 Emoji::Emoji(QString str, QString name,
-             std::unordered_set<QString>&& keywords, const bool hasSkinToneSupport,
+             std::unordered_set<QString>&& keywords,
+             std::unordered_set<unsigned int>&& modBaseIndexes,
              const EmojiVersion version) :
     _str {std::move(str)},
     _name {std::move(name)},
     _lcName {_name.toLower()},
     _cpStr {cpStr(this->codepoints())},
     _keywords {std::move(keywords)},
-    _hasSkinToneSupport {hasSkinToneSupport},
+    _modBaseIndexes {std::move(modBaseIndexes)},
     _version {version}
 {
 }
@@ -65,46 +66,60 @@ Emoji::Codepoints Emoji::codepoints(const boost::optional<SkinTone>& skinTone,
 {
     Codepoints codepoints;
 
-    // get codepoints of `_str`, optionally removing VS-16 codepoints
+    // skin tone modifier codepoint, if needed
+    const auto skinToneCp = call([&skinTone]() -> Codepoint {
+        if (!skinTone) {
+            return 0;
+        }
+
+        switch (*skinTone) {
+        case SkinTone::Light:
+            return 0x1f3fb;
+
+        case SkinTone::MediumLight:
+            return 0x1f3fc;
+
+        case SkinTone::Medium:
+            return 0x1f3fd;
+
+        case SkinTone::MediumDark:
+            return 0x1f3fe;
+
+        case SkinTone::Dark:
+            return 0x1f3ff;
+
+        default:
+            std::abort();
+        }
+    });
+
+    /*
+     * Build the final codepoint sequence, optionally:
+     *
+     * • Removing VS-16 (U+FE0F) codepoints.
+     *
+     * • Inserting a skin tone modifier after each emoji modifier base
+     *   codepoint (identified by its index in the original sequence).
+     */
+    unsigned int origIdx = 0;
+
     for (const auto qcp : _str.toUcs4()) {
         if (!withVs16 && qcp == 0xfe0f) {
+            ++origIdx;
             continue;
         }
 
         codepoints.push_back(qcp);
-    }
 
-    /*
-     * Optionally add skin tone modifier.
-     *
-     * We blindly add it after the first codepoint because jome doesn't
-     * support multiple codepoint modifiers (couples and families,
-     * for example).
-     */
-    if (skinTone) {
-        assert(_hasSkinToneSupport);
+        if (skinTone) {
+            assert(!_modBaseIndexes.empty());
 
-        codepoints.insert(codepoints.begin() + 1, call([&skinTone] {
-            switch (*skinTone) {
-            case SkinTone::Light:
-                return 0x1f3fb;
-
-            case SkinTone::MediumLight:
-                return 0x1f3fc;
-
-            case SkinTone::Medium:
-                return 0x1f3fd;
-
-            case SkinTone::MediumDark:
-                return 0x1f3fe;
-
-            case SkinTone::Dark:
-                return 0x1f3ff;
-
-            default:
-                std::abort();
+            if (_modBaseIndexes.count(origIdx) > 0) {
+                codepoints.push_back(skinToneCp);
             }
-        }));
+        }
+
+        ++origIdx;
     }
 
     return codepoints;
@@ -342,7 +357,18 @@ void EmojiDb::_createEmojis(const QString& dir)
                                                  effectiveEmojiKeywords(emojiStr,
                                                                         jsonVal.at("keywords"),
                                                                         jsonUserEmojis),
-                                                 jsonVal.at("has-skin-tone-support"),
+                                                 call([&jsonVal] {
+                                                     std::unordered_set<unsigned int> indexes;
+                                                     const auto it = jsonVal.find("mod-base-indexes");
+
+                                                     if (it != jsonVal.end()) {
+                                                         for (const auto& idx : *it) {
+                                                             indexes.insert(idx.get<unsigned int>());
+                                                         }
+                                                     }
+
+                                                     return indexes;
+                                                 }),
                                                  call([&jsonVal] {
                                                      const auto str = jsonVal.at("version").get<std::string>();
 

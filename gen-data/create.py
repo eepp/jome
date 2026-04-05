@@ -14,11 +14,11 @@ import os.path
 
 
 class _EmojiDescriptor:
-    def __init__(self, emoji, name, keywords, has_skin_tone_support, version):
+    def __init__(self, emoji, name, keywords, mod_base_indexes, version):
         self._emoji = emoji
         self._name = name
         self._keywords = keywords
-        self._has_skin_tone_support = has_skin_tone_support
+        self._mod_base_indexes = mod_base_indexes
         self._version = version
 
     @property
@@ -34,8 +34,8 @@ class _EmojiDescriptor:
         return self._keywords
 
     @property
-    def has_skin_tone_support(self):
-        return self._has_skin_tone_support
+    def mod_base_indexes(self):
+        return self._mod_base_indexes
 
     @property
     def version(self):
@@ -90,9 +90,39 @@ def _extract_cat_emojis(cat_id):
     return _extract_emojis_from_file('cats/{}.txt'.format(cat_id))
 
 
-def _get_emoji_descriptors(version):
-    emojis_with_skin_tone_support = set(_extract_emojis_from_file('with-skin-tone-support.txt'))
+def _get_mod_base_codepoints():
+    mod_base_cps = set()
 
+    for emoji_str in _extract_emojis_from_file('emoji-modifier-bases.txt'):
+        assert len(emoji_str) == 1
+        mod_base_cps.add(ord(emoji_str))
+
+    return mod_base_cps
+
+
+def _get_mod_base_indexes(emoji, name, mod_base_cps):
+    # Family emojis don't support skin tone modifiers
+    if name.startswith('Family:'):
+        return set()
+
+    codepoints = [ord(c) for c in emoji]
+    has_zwj = 0x200d in codepoints
+    indexes = set()
+
+    for i, cp in enumerate(codepoints):
+        if cp in mod_base_cps:
+            # Skip "Handshake" (U+1F91D) in ZWJ sequences: "People
+            # Holding Hands" has "Handshake" in the middle but only the
+            # person codepoints should get skin tones.
+            if cp == 0x1F91D and has_zwj:
+                continue
+
+            indexes.add(i)
+
+    return indexes
+
+
+def _get_emoji_descriptors(version, mod_base_cps):
     with open(f'emojis-{version}.txt') as f:
         emojis_txt = f.read()
 
@@ -111,13 +141,14 @@ def _get_emoji_descriptors(version):
         name = lines[1].strip()
         kws = [kw.strip() for kw in lines[2].split('|')]
         emoji_descrs[emoji] = _EmojiDescriptor(emoji, name, kws,
-                                               emoji in emojis_with_skin_tone_support,
+                                               _get_mod_base_indexes(emoji, name, mod_base_cps),
                                                version)
 
     return emoji_descrs
 
 
 def _get_all_emoji_descriptors():
+    mod_base_cps = _get_mod_base_codepoints()
     emoji_descrs = {}
     versions = [
         '0.6',
@@ -140,7 +171,7 @@ def _get_all_emoji_descriptors():
     ]
 
     for version in versions:
-        emoji_descrs.update(_get_emoji_descriptors(version))
+        emoji_descrs.update(_get_emoji_descriptors(version, mod_base_cps))
 
     return emoji_descrs
 
@@ -154,12 +185,16 @@ def _gen_emojis_json(output_dir, emoji_descriptors):
     emojis_json = {}
 
     for emoji_descriptor in emoji_descriptors:
-        emojis_json[emoji_descriptor.emoji] = {
+        entry = {
             'name': emoji_descriptor.name,
             'keywords': emoji_descriptor.keywords,
-            'has-skin-tone-support': emoji_descriptor.has_skin_tone_support,
             'version': emoji_descriptor.version,
         }
+
+        if emoji_descriptor.mod_base_indexes:
+            entry['mod-base-indexes'] = sorted(emoji_descriptor.mod_base_indexes)
+
+        emojis_json[emoji_descriptor.emoji] = entry
 
     with open(os.path.join(output_dir, 'emojis.json'), 'w') as f:
         json.dump(emojis_json, f, ensure_ascii=False, indent=2)
