@@ -129,6 +129,7 @@ private:
     QListWidget *_createCatListWidget();
     void _updateBottomLabels(const Emoji *emoji);
     void _updateInfoLabel(const Emoji *emoji);
+    void _updateSkinToneLabel(const Emoji *emoji);
     void _updateVersionLabel(const Emoji *emoji);
     void _updateKwLabel(const Emoji *emoji);
     void _findEmojis(const QString& cat, const QString& needles);
@@ -168,6 +169,7 @@ private:
     QEmojiGridWidget *_wEmojiGrid = nullptr;
     QListWidget *_wCatList = nullptr;
     QLabel *_wInfoLabel = nullptr;
+    QLabel *_wSkinToneLabel = nullptr;
     QLabel *_wVersionLabel = nullptr;
     QLabel *_wKwLabel = nullptr;
     QLineEdit *_wFindBox = nullptr;

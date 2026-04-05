@@ -303,10 +303,14 @@ void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool n
         _wInfoLabel->setWordWrap(false);
         _wInfoLabel->setTextInteractionFlags(Qt::NoTextInteraction);
         _wInfoLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
-        infoHbox->addWidget(_wInfoLabel);
+        infoHbox->addWidget(_wInfoLabel, 1);
+        _wSkinToneLabel = new QLabel {""};
+        setQLabelFgColor(*_wSkinToneLabel, "#cdacda");
+        _wSkinToneLabel->setAlignment(Qt::AlignRight);
+        infoHbox->addWidget(_wSkinToneLabel, 0);
+        infoHbox->addSpacing(16);
         _wVersionLabel = new QLabel {""};
         setQLabelFgColor(*_wVersionLabel, "#2ecc71");
-        _wVersionLabel->setFixedWidth(150);
         _wVersionLabel->setAlignment(Qt::AlignRight);
         infoHbox->addWidget(_wVersionLabel);
         mainVbox->addLayout(infoHbox);
@@ -530,6 +534,7 @@ void QJomeWindow::_requestEmojiInfo(const Emoji& emoji)
 void QJomeWindow::_updateBottomLabels(const Emoji * const emoji)
 {
     this->_updateInfoLabel(emoji);
+    this->_updateSkinToneLabel(emoji);
     this->_updateVersionLabel(emoji);
     this->_updateKwLabel(emoji);
 }
@@ -578,6 +583,16 @@ void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
     }
 
     _wInfoLabel->setText(text);
+}
+
+void QJomeWindow::_updateSkinToneLabel(const Emoji * const emoji)
+{
+    if (emoji && emoji->hasSkinToneSupport()) {
+        _wSkinToneLabel->setText("Supports skin tone");
+        _wSkinToneLabel->show();
+    } else {
+        _wSkinToneLabel->hide();
+    }
 }
 
 void QJomeWindow::_updateVersionLabel(const Emoji * const emoji)
