@@ -98,10 +98,9 @@ You need:
 
 * https://cmake.org/[CMake] ≥ 3.30.0
 * A {cpp}17 compiler
-* http://www.boost.org/[Boost] ≥ 1.70 (only to 🏗)
-* https://json.nlohmann.me/[JSON for Modern C++] (only to 🏗,
+* https://json.nlohmann.me/[JSON for Modern {cpp}] (only to 🏗;
   automatically 📥 by CMake if not found locally)
-* https://fmt.dev/[pass:[{fmt}]] (only to 🏗,
+* https://fmt.dev/[pass:[{fmt}]] (only to 🏗;
   automatically 📥 by CMake if not found locally)
 * Qt 6 (_Core_, _GUI_, _Widgets_, and _Network_ modules)
 

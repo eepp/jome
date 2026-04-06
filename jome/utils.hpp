@@ -9,23 +9,10 @@
 #define _JOME_UTILS_HPP
 
 #include <QString>
-#include <functional>
 #include <utility>
 #include <fmt/format.h>
 
 namespace jome {
-
-/*
- * Partial implementation of INVOKE.
- *
- * As found in
- * <https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0312r1.html>.
- */
-template <typename FuncT, typename... ArgTs>
-auto call(FuncT func, ArgTs&&...args) -> decltype(std::ref(func)(std::forward<ArgTs>(args)...))
-{
-    return std::ref(func)(std::forward<ArgTs>(args)...);
-}
 
 /*
  * Like fmt::format(), but returns a `QString`.

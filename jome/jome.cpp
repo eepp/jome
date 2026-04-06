@@ -14,7 +14,8 @@
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
-#include <boost/optional.hpp>
+#include <optional>
+#include <functional>
 #include <fmt/format.h>
 
 #include "emoji-db.hpp"
@@ -42,18 +43,18 @@ struct Params final
     bool noHide;
     bool darkBg;
     bool copyToClipboard;
-    boost::optional<QString> serverName;
-    boost::optional<QString> cmd;
+    std::optional<QString> serverName;
+    std::optional<QString> cmd;
     QString cpPrefix;
     jome::EmojiDb::EmojiSize emojiSize;
-    boost::optional<unsigned int> selectedEmojiFlashPeriod;
+    std::optional<unsigned int> selectedEmojiFlashPeriod;
     unsigned int maxRecentEmojis;
     bool removeVs16;
     bool noCatList;
     bool noCatLabels;
     bool noRecentCat;
     bool noKwList;
-    boost::optional<jome::Emoji::SkinTone> defSkinTone;
+    std::optional<jome::Emoji::SkinTone> defSkinTone;
     bool incRecentInFindResults;
 };
 
@@ -119,17 +120,13 @@ Params parseArgs(QApplication& app)
     params.noKwList = parser.isSet(noKwListOpt);
     params.incRecentInFindResults = parser.isSet(incRecentInFindResultsOpt);
 
-    {
-        const auto fmt = parser.value(formatOpt);
-
-        if (fmt == "utf-8") {
-            params.fmt = Format::Utf8;
-        } else if (fmt == "cp") {
-            params.fmt = Format::CodepointsHex;
-        } else {
-            std::cerr << "Command-line error: unknown format `" << fmt.toUtf8().constData() << "`.\n";
-            std::exit(1);
-        }
+    if (const auto fmt = parser.value(formatOpt); fmt == "utf-8") {
+        params.fmt = Format::Utf8;
+    } else if (fmt == "cp") {
+        params.fmt = Format::CodepointsHex;
+    } else {
+        std::cerr << "Command-line error: unknown format `" << fmt.toUtf8().constData() << "`.\n";
+        std::exit(1);
     }
 
     if (parser.isSet(serverNameOpt)) {
@@ -152,9 +149,7 @@ Params parseArgs(QApplication& app)
     params.emojiSize = jome::EmojiDb::EmojiSize::Size32;
 
     if (parser.isSet(emojiWidthOpt)) {
-        const auto val = parser.value(emojiWidthOpt);
-
-        if (val == "16") {
+        if (const auto val = parser.value(emojiWidthOpt); val == "16") {
             params.emojiSize = jome::EmojiDb::EmojiSize::Size16;
         } else if (val == "24") {
             params.emojiSize = jome::EmojiDb::EmojiSize::Size24;
@@ -202,9 +197,7 @@ Params parseArgs(QApplication& app)
     }
 
     if (parser.isSet(defSkinToneOpt)) {
-        const auto val = parser.value(defSkinToneOpt).toUpper();
-
-        if (val == "L") {
+        if (const auto val = parser.value(defSkinToneOpt).toUpper(); val == "L") {
             params.defSkinTone = jome::Emoji::SkinTone::Light;
         } else if (val == "ML") {
             params.defSkinTone = jome::Emoji::SkinTone::MediumLight;
@@ -246,8 +239,8 @@ void execCommand(const QString& cmd, const QString& arg)
  * Adds a newline if `noNl` is false.
  */
 QString formatEmoji(const jome::Emoji& emoji,
-                    const boost::optional<jome::Emoji::SkinTone>& skinTone,
-                    const boost::optional<jome::Emoji::SkinTone>& defSkinTone,
+                    std::optional<jome::Emoji::SkinTone> skinTone,
+                    std::optional<jome::Emoji::SkinTone> defSkinTone,
                     const Format fmt,
                     const QString& cpPrefix, const bool noNl, const bool removeVs16)
 {
@@ -260,7 +253,7 @@ QString formatEmoji(const jome::Emoji& emoji,
         if (realSkinTone && emoji.hasSkinToneSupport()) {
             output = emoji.str(*realSkinTone, !removeVs16);
         } else {
-            output = emoji.str(boost::none, !removeVs16);
+            output = emoji.str(std::nullopt, !removeVs16);
         }
 
         break;
@@ -268,11 +261,11 @@ QString formatEmoji(const jome::Emoji& emoji,
 
     case Format::CodepointsHex:
     {
-        const auto codepoints = jome::call([realSkinTone, &emoji, &removeVs16] {
+        const auto codepoints = std::invoke([realSkinTone, &emoji, &removeVs16] {
             if (realSkinTone && emoji.hasSkinToneSupport()) {
                 return emoji.codepoints(*realSkinTone, !removeVs16);
             } else {
-                return emoji.codepoints(boost::none, !removeVs16);
+                return emoji.codepoints(std::nullopt, !removeVs16);
             }
         });
 

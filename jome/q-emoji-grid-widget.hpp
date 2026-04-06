@@ -14,7 +14,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QTimer>
-#include <boost/optional.hpp>
+#include <optional>
 #include <cmath>
 
 #include "emoji-db.hpp"
@@ -78,7 +78,7 @@ public:
 public:
     explicit QEmojiGridWidget(QWidget *parent, const EmojiDb& emojiDb,
                               bool darkBg, bool noCatLabels,
-                              const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
+                              std::optional<unsigned int> selectedEmojiFlashPeriod);
 
     ~QEmojiGridWidget();
     void rebuild();
@@ -101,7 +101,7 @@ signals:
 
 private:
     void resizeEvent(QResizeEvent *event) override;
-    void _selectEmojiGraphicsItem(const boost::optional<unsigned int>& index);
+    void _selectEmojiGraphicsItem(std::optional<unsigned int> index);
     QGraphicsPixmapItem *_createSelectedGraphicsItem();
     void _setGraphicsSceneStyle(QGraphicsScene& gs);
     void _emojiGraphicsItemHoverEntered(const QEmojiGraphicsItem& item);
@@ -178,7 +178,7 @@ private:
     std::vector<QEmojiGraphicsItem *> _curEmojiGraphicsItems;
 
     // index of the selected emoji graphics item
-    boost::optional<unsigned int> _selectedEmojiGraphicsItemIndex;
+    std::optional<unsigned int> _selectedEmojiGraphicsItemIndex;
 
     // selection square graphics items for all emojis and find results
     QGraphicsPixmapItem *_allEmojisGraphicsSceneSelectedItem = nullptr;

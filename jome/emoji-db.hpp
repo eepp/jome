@@ -8,7 +8,7 @@
 #ifndef _JOME_EMOJI_DB_HPP
 #define _JOME_EMOJI_DB_HPP
 
-#include <boost/optional/optional.hpp>
+#include <optional>
 #include <vector>
 #include <memory>
 #include <unordered_map>
@@ -92,7 +92,7 @@ public:
      * • If `skinTone` is set, the skin tone modifier for `*skinTone`.
      * • If `withVs16` is false, without any VS-16 codepoint.
      */
-    QString str(const boost::optional<SkinTone>& skinTone = boost::none,
+    QString str(std::optional<SkinTone> skinTone = std::nullopt,
                 bool withVs16 = true) const;
 
     /*
@@ -105,7 +105,7 @@ public:
      *
      * • If `withVs16` is false, without any VS-16 codepoint.
      */
-    Codepoints codepoints(const boost::optional<SkinTone>& skinTone = boost::none,
+    Codepoints codepoints(std::optional<SkinTone> skinTone = std::nullopt,
                           bool withVs16 = true) const;
 
     /*

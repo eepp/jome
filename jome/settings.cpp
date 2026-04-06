@@ -7,9 +7,9 @@
 
 #include <QSettings>
 #include <vector>
+#include <functional>
 
 #include "settings.hpp"
-#include "utils.hpp"
 
 namespace jome {
 
@@ -55,7 +55,7 @@ void updateSettings(const EmojiDb& db)
         return;
     }
 
-    const auto emojiList = call([&db] {
+    const auto emojiList = std::invoke([&db] {
         QList<QVariant> emojiList;
 
         for (const auto emoji : db.recentEmojisCat()->emojis()) {

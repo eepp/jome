@@ -18,7 +18,7 @@
 #include <QPixmap>
 #include <QGraphicsScene>
 #include <QGraphicsView>
-#include <boost/optional.hpp>
+#include <optional>
 
 #include "emoji-db.hpp"
 #include "q-emoji-grid-widget.hpp"
@@ -98,7 +98,7 @@ public:
      */
     explicit QJomeWindow(const EmojiDb& emojiDb, bool darkBg, bool noCatList, bool noCatLabels,
                          bool noKwList,
-                         const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
+                         std::optional<unsigned int> selectedEmojiFlashPeriod);
 
 signals:
     /*
@@ -106,7 +106,7 @@ signals:
      * and with a forced removal of VS-16 codepoints if `removeVs16`
      * is true.
      */
-    void emojiChosen(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone,
+    void emojiChosen(const Emoji& emoji, std::optional<Emoji::SkinTone> skinTone,
                      bool removeVs16);
 
     /*
@@ -125,7 +125,7 @@ private:
     void showEvent(QShowEvent *event) override;
     void _setMainStyleSheet();
     void _buildUi(bool darkBg, bool noCatList, bool noCatLabels, bool noKwList,
-                  const boost::optional<unsigned int>& selectedEmojiFlashPeriod);
+                  std::optional<unsigned int> selectedEmojiFlashPeriod);
     QListWidget *_createCatListWidget();
     void _updateBottomLabels(const Emoji *emoji);
     void _updateInfoLabel(const Emoji *emoji);
@@ -133,8 +133,8 @@ private:
     void _updateVersionLabel(const Emoji *emoji);
     void _updateKwLabel(const Emoji *emoji);
     void _findEmojis(const QString& cat, const QString& needles);
-    void _acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone, bool removeVs16);
-    void _acceptEmoji(const Emoji& emoji, const boost::optional<Emoji::SkinTone>& skinTone,
+    void _acceptSelectedEmoji(std::optional<Emoji::SkinTone> skinTone, bool removeVs16);
+    void _acceptEmoji(const Emoji& emoji, std::optional<Emoji::SkinTone> skinTone,
                       bool removeVs16);
     void _requestSelectedEmojiInfo();
     void _requestEmojiInfo(const Emoji& emoji);

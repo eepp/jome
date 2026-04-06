@@ -15,8 +15,7 @@
 #include <QLabel>
 #include <QGraphicsTextItem>
 #include <QKeyEvent>
-#include <boost/algorithm/string.hpp>
-
+#include <functional>
 #include "q-emoji-grid-widget.hpp"
 #include "utils.hpp"
 
@@ -24,7 +23,7 @@ namespace jome {
 
 QEmojiGridWidget::QEmojiGridWidget(QWidget * const parent, const EmojiDb& emojiDb, const bool darkBg,
                                    const bool noCatLabels,
-                                   const boost::optional<unsigned int>& selectedEmojiFlashPeriod) :
+                                   const std::optional<unsigned int> selectedEmojiFlashPeriod) :
     QGraphicsView {parent},
     _emojiDb {&emojiDb},
     _emojiImages {emojiDb},
@@ -201,7 +200,7 @@ void QEmojiGridWidget::showFindResults(const std::vector<const Emoji *>& results
     this->setScene(&_findEmojisGraphicsScene);
 
     if (results.empty()) {
-        this->_selectEmojiGraphicsItem(boost::none);
+        this->_selectEmojiGraphicsItem(std::nullopt);
     } else {
         this->_selectEmojiGraphicsItem(0);
     }
@@ -223,9 +222,9 @@ void QEmojiGridWidget::_emojiGraphicsItemClicked(const QEmojiGraphicsItem& item,
     emit this->emojiClicked(item.emoji(), withShift);
 }
 
-void QEmojiGridWidget::_selectEmojiGraphicsItem(const boost::optional<unsigned int>& index)
+void QEmojiGridWidget::_selectEmojiGraphicsItem(const std::optional<unsigned int> index)
 {
-    const auto selectedItem = call([this] {
+    const auto selectedItem = std::invoke([this] {
         if (this->showingAllEmojis()) {
             return _allEmojisGraphicsSceneSelectedItem;
         } else {

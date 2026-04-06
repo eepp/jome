@@ -11,9 +11,6 @@ find_package (Qt6Widgets CONFIG REQUIRED)
 find_package (Qt6Gui CONFIG REQUIRED)
 find_package (Qt6Network CONFIG REQUIRED)
 
-# Boost
-find_package (Boost 1.70 REQUIRED)
-
 # JSON for Modern C++
 include (FetchContent)
 FetchContent_Declare (
@@ -51,7 +48,6 @@ target_link_libraries (
     Qt6::Widgets
     Qt6::Gui
     Qt6::Network
-    Boost::boost
     nlohmann_json::nlohmann_json
     fmt::fmt
 )

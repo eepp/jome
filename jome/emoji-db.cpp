@@ -5,7 +5,8 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-#include <boost/optional/optional.hpp>
+#include <optional>
+#include <functional>
 #include <fstream>
 #include <cstdlib>
 #include <cassert>
@@ -15,7 +16,6 @@
 #include <QtDebug>
 #include <QFile>
 #include <algorithm>
-#include <boost/algorithm/string.hpp>
 #include <nlohmann/json.hpp>
 #include <fmt/format.h>
 
@@ -53,7 +53,7 @@ Emoji::Emoji(QString str, QString name,
 {
 }
 
-QString Emoji::str(const boost::optional<SkinTone>& skinTone,
+QString Emoji::str(const std::optional<SkinTone> skinTone,
                    const bool withVs16) const
 {
     const auto codepoints = this->codepoints(skinTone, withVs16);
@@ -61,13 +61,13 @@ QString Emoji::str(const boost::optional<SkinTone>& skinTone,
     return QString::fromUcs4(codepoints.data(), codepoints.size());
 }
 
-Emoji::Codepoints Emoji::codepoints(const boost::optional<SkinTone>& skinTone,
+Emoji::Codepoints Emoji::codepoints(const std::optional<SkinTone> skinTone,
                                     const bool withVs16) const
 {
     Codepoints codepoints;
 
     // skin tone modifier codepoint, if needed
-    const auto skinToneCp = call([&skinTone]() -> Codepoint {
+    const auto skinToneCp = std::invoke([&skinTone] {
         if (!skinTone) {
             return 0;
         }
@@ -202,12 +202,12 @@ nlohmann::json loadUserEmojisJson()
         return nlohmann::json::object();
     }
 
-    auto jsonUserEmojis = call([&path]() -> boost::optional<nlohmann::json> {
+    auto jsonUserEmojis = std::invoke([&path]() -> std::optional<nlohmann::json> {
         try {
             return loadJson(path);
         } catch (const nlohmann::json::exception& exc) {
             warnNoUserEmojiKeywords(path, qFmtFormat("failed to load JSON file: {}", exc.what()));
-            return boost::none;
+            return std::nullopt;
         }
     });
 
@@ -295,25 +295,16 @@ std::unordered_set<QString> effectiveEmojiKeywords(const QString& emojiStr,
                                                    const nlohmann::json& jsonKeywords,
                                                    const nlohmann::json& jsonUserEmojis)
 {
-    const auto it = jsonUserEmojis.find(emojiStr.toStdString());
     auto jsonUserKeywords = nlohmann::json::array();
     auto jsonUserExtraKeywords = nlohmann::json::array();
 
-    if (it != jsonUserEmojis.end()) {
-        {
-            const auto jsonKeywordsIt = it->find("keywords");
-
-            if (jsonKeywordsIt != it->end()) {
-                jsonUserKeywords = *jsonKeywordsIt;
-            }
+    if (const auto it = jsonUserEmojis.find(emojiStr.toStdString()); it != jsonUserEmojis.end()) {
+        if (const auto jsonKeywordsIt = it->find("keywords"); jsonKeywordsIt != it->end()) {
+            jsonUserKeywords = *jsonKeywordsIt;
         }
 
-        {
-            const auto jsonKeywordsIt = it->find("extra-keywords");
-
-            if (jsonKeywordsIt != it->end()) {
-                jsonUserExtraKeywords = *jsonKeywordsIt;
-            }
+        if (const auto jsonKeywordsIt = it->find("extra-keywords"); jsonKeywordsIt != it->end()) {
+            jsonUserExtraKeywords = *jsonKeywordsIt;
         }
     }
 
@@ -348,7 +339,7 @@ void EmojiDb::_createEmojis(const QString& dir)
 
     // build each emoji object
     for (auto& emojiKeyJsonValPair : jsonEmojis.items()) {
-        auto emoji = call([&emojiKeyJsonValPair, &jsonUserEmojis] {
+        auto emoji = std::invoke([&emojiKeyJsonValPair, &jsonUserEmojis] {
             const auto emojiStr = QString::fromStdString(emojiKeyJsonValPair.key());
             auto& jsonVal = emojiKeyJsonValPair.value();
 
@@ -357,11 +348,10 @@ void EmojiDb::_createEmojis(const QString& dir)
                                                  effectiveEmojiKeywords(emojiStr,
                                                                         jsonVal.at("keywords"),
                                                                         jsonUserEmojis),
-                                                 call([&jsonVal] {
+                                                 std::invoke([&jsonVal] {
                                                      std::unordered_set<unsigned int> indexes;
-                                                     const auto it = jsonVal.find("mod-base-indexes");
 
-                                                     if (it != jsonVal.end()) {
+                                                     if (const auto it = jsonVal.find("mod-base-indexes"); it != jsonVal.end()) {
                                                          for (const auto& idx : *it) {
                                                              indexes.insert(idx.get<unsigned int>());
                                                          }
@@ -369,10 +359,8 @@ void EmojiDb::_createEmojis(const QString& dir)
 
                                                      return indexes;
                                                  }),
-                                                 call([&jsonVal] {
-                                                     const auto str = jsonVal.at("version").get<std::string>();
-
-                                                     if (str == "0.6") {
+                                                 std::invoke([&jsonVal] {
+                                                     if (const auto str = jsonVal.at("version").get<std::string>(); str == "0.6") {
                                                          return EmojiVersion::V_0_6;
                                                      } else if (str == "0.7") {
                                                          return EmojiVersion::V_0_7;
@@ -428,10 +416,10 @@ void EmojiDb::_createCats(const QString& dir, const bool noRecentCat)
 
     // build each category
     for (auto& jsonCat : jsonCats) {
-        _cats.push_back(call([this, &jsonCat] {
+        _cats.push_back(std::invoke([this, &jsonCat] {
             return std::make_unique<EmojiCat>(QString::fromStdString(jsonCat.at("id")),
                                               QString::fromStdString(jsonCat.at("name")),
-                                              call([this, &jsonCat] {
+                                              std::invoke([this, &jsonCat] {
                                                   std::vector<const Emoji *> emojis;
 
                                                   for (auto& jsonEmoji : jsonCat.at("emojis")) {
@@ -451,10 +439,8 @@ void EmojiDb::_createEmojiPngLocations(const QString& dir)
                                            qFmtFormat("emojis-png-locations-{}.json", this->emojiSizeInt()));
 
     // assign each emoji to its PNG location
-    for (auto& keyJsonValPair : pngLocationsJson.items()) {
-        auto& jsonLoc = keyJsonValPair.value();
-
-        _emojiPngLocations[_emojis[QString::fromStdString(keyJsonValPair.key())].get()] = {
+    for (auto& [key, jsonLoc] : pngLocationsJson.items()) {
+        _emojiPngLocations[_emojis[QString::fromStdString(key)].get()] = {
             static_cast<unsigned int>(jsonLoc.at(0)),
             static_cast<unsigned int>(jsonLoc.at(1))
         };

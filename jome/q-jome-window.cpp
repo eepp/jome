@@ -17,8 +17,7 @@
 #include <QGraphicsTextItem>
 #include <QKeyEvent>
 #include <QPalette>
-#include <boost/algorithm/string.hpp>
-#include <boost/optional/optional.hpp>
+#include <functional>
 
 #include "q-jome-window.hpp"
 #include "q-cat-list-widget-item.hpp"
@@ -126,7 +125,7 @@ bool QFindBoxEventFilter::eventFilter(QObject * const obj, QEvent * const event)
 
 QJomeWindow::QJomeWindow(const EmojiDb& emojiDb, const bool darkBg, const bool noCatList,
                          const bool noCatLabels, const bool noKwList,
-                         const boost::optional<unsigned int>& selectedEmojiFlashPeriod) :
+                         const std::optional<unsigned int> selectedEmojiFlashPeriod) :
     _emojiDb {&emojiDb}
 {
     this->setWindowIcon(QIcon {qFmtFormat("{}/icon.png", JOME_DATA_DIR)});
@@ -214,7 +213,7 @@ void setQLabelFgColor(QLabel& widget, const QColor& color)
 
 void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool noCatLabels,
                            const bool noKwList,
-                           const boost::optional<unsigned int>& selectedEmojiFlashPeriod)
+                           const std::optional<unsigned int> selectedEmojiFlashPeriod)
 {
     _wFindBox = new QLineEdit;
     QObject::connect(_wFindBox, &QLineEdit::textChanged,
@@ -446,7 +445,7 @@ void QJomeWindow::_searchBoxEscapeKeyPressed()
 
 void QJomeWindow::_searchBoxEnterKeyPressed(const bool withShift)
 {
-    this->_acceptSelectedEmoji(boost::none, withShift);
+    this->_acceptSelectedEmoji(std::nullopt, withShift);
 }
 
 void QJomeWindow::_searchBoxF1KeyPressed(const bool withShift)
@@ -487,7 +486,7 @@ void QJomeWindow::_emojiSelectionChanged(const Emoji * const emoji)
 
 void QJomeWindow::_emojiClicked(const Emoji& emoji, const bool withShift)
 {
-    this->_acceptEmoji(emoji, boost::none, withShift);
+    this->_acceptEmoji(emoji, std::nullopt, withShift);
 }
 
 void QJomeWindow::_emojiHoverEntered(const Emoji& emoji)
@@ -500,7 +499,7 @@ void QJomeWindow::_emojiHoverLeaved(const Emoji&)
     this->_updateBottomLabels(_selectedEmoji);
 }
 
-void QJomeWindow::_acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& skinTone,
+void QJomeWindow::_acceptSelectedEmoji(const std::optional<Emoji::SkinTone> skinTone,
                                        const bool removeVs16)
 {
     if (_selectedEmoji) {
@@ -509,7 +508,7 @@ void QJomeWindow::_acceptSelectedEmoji(const boost::optional<Emoji::SkinTone>& s
 }
 
 void QJomeWindow::_acceptEmoji(const Emoji& emoji,
-                               const boost::optional<Emoji::SkinTone>& skinTone,
+                               const std::optional<Emoji::SkinTone> skinTone,
                                const bool removeVs16)
 {
     if (skinTone && !emoji.hasSkinToneSupport()) {
@@ -562,7 +561,7 @@ void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
     if (emoji) {
         text = qFmtFormat("<b>{}</b> ", emoji->name().toStdString()) +
                normInfoLabelText("(") +
-               call([emoji] {
+               std::invoke([emoji] {
                    QStringList lst;
 
                    for (const auto codepoint : emoji->codepoints()) {
@@ -597,12 +596,12 @@ void QJomeWindow::_updateSkinToneLabel(const Emoji * const emoji)
 
 void QJomeWindow::_updateVersionLabel(const Emoji * const emoji)
 {
-    _wVersionLabel->setText(call([emoji] {
+    _wVersionLabel->setText(std::invoke([emoji] {
         QString text;
 
         if (emoji) {
             text += QString {"Emoji <b>"} +
-                    call([emoji] {
+                    std::invoke([emoji] {
                         switch (emoji->version()) {
                         case EmojiVersion::V_0_6:
                             return "0.6&nbsp;";
@@ -660,7 +659,7 @@ void QJomeWindow::_updateVersionLabel(const Emoji * const emoji)
                         }
                     }) +
                     "</b>&nbsp;(<i>" +
-                    call([emoji] {
+                    std::invoke([emoji] {
                         switch (emoji->version()) {
                         case EmojiVersion::V_0_6:
                             return "Oct 2010";
