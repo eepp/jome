@@ -17,8 +17,7 @@ QCtlClient::QCtlClient(QObject * const parent, const QString& name) :
     _socket.setServerName(name);
     QObject::connect(&_socket, &QLocalSocket::connected, this, &QCtlClient::_socketConnected);
     QObject::connect(&_socket, &QLocalSocket::readyRead, this, &QCtlClient::_socketReadyRead);
-    QObject::connect(&_socket, QOverload<QLocalSocket::LocalSocketError>::of(&QLocalSocket::error),
-                     this, &QCtlClient::_socketError);
+    QObject::connect(&_socket, &QLocalSocket::errorOccurred, this, &QCtlClient::_socketError);
 }
 
 void QCtlClient::_connectToServer()

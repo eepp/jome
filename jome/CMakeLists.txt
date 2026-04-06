@@ -3,13 +3,13 @@
 # This software may be modified and distributed under the terms
 # of the MIT license. See the LICENSE file for details.
 
-# Qt 5
+# Qt 6
 set (CMAKE_INCLUDE_CURRENT_DIR ON)
 set (CMAKE_AUTOMOC ON)
 set (CMAKE_AUTOUIC ON)
-find_package (Qt5Widgets CONFIG REQUIRED)
-find_package (Qt5Gui CONFIG REQUIRED)
-find_package (Qt5Network CONFIG REQUIRED)
+find_package (Qt6Widgets CONFIG REQUIRED)
+find_package (Qt6Gui CONFIG REQUIRED)
+find_package (Qt6Network CONFIG REQUIRED)
 
 # Boost
 find_package (Boost 1.70 REQUIRED)
@@ -48,9 +48,9 @@ add_executable (
 )
 target_link_libraries (
     jome
-    Qt5::Widgets
-    Qt5::Gui
-    Qt5::Network
+    Qt6::Widgets
+    Qt6::Gui
+    Qt6::Network
     Boost::boost
     nlohmann_json::nlohmann_json
     fmt::fmt

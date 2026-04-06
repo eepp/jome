@@ -3,11 +3,11 @@
 # This software may be modified and distributed under the terms
 # of the MIT license. See the LICENSE file for details.
 
-# Qt5
+# Qt 6
 set (CMAKE_INCLUDE_CURRENT_DIR ON)
 set (CMAKE_AUTOMOC ON)
 set (CMAKE_AUTOUIC ON)
-find_package (Qt5Network CONFIG REQUIRED)
+find_package (Qt6Network CONFIG REQUIRED)
 
 # jome-ctl program
 add_executable (
@@ -17,7 +17,7 @@ add_executable (
 )
 target_link_libraries (
     jome-ctl
-    Qt5::Network
+    Qt6::Network
 )
 target_compile_definitions (
     jome-ctl PRIVATE

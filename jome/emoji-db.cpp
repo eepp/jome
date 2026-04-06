@@ -10,7 +10,7 @@
 #include <cstdlib>
 #include <cassert>
 #include <QString>
-#include <QVector>
+#include <QRegularExpression>
 #include <QStandardPaths>
 #include <QtDebug>
 #include <QFile>
@@ -465,7 +465,7 @@ void EmojiDb::findEmojis(QString catName, const QString& needlesStr,
                          std::vector<const Emoji *>& results) const
 {
     // split `needlesStr` into individual needles
-    const auto needles = needlesStr.toLower().split(QRegExp {" +"}, Qt::SkipEmptyParts);
+    const auto needles = needlesStr.toLower().split(QRegularExpression {" +"}, Qt::SkipEmptyParts);
 
     // trim category
     catName = catName.trimmed();

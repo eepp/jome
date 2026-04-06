@@ -11,7 +11,7 @@ endif::env-github[]
 
 = jome 😏
 Philippe Proulx <eepp.ca>
-5 April 2026
+6 April 2026
 
 https://github.com/eepp/jome/releases/tag/v1.5.0[image:https://img.shields.io/github/v/release/eepp/jome?display_name=release[GitHub Release]]
 https://aur.archlinux.org/packages/jome[image:https://img.shields.io/aur/version/jome?&label=AUR[AUR Version]]
@@ -97,13 +97,13 @@ Options: <<opt-d,`-d`>>, <<opt-C,`-C`>>, <<opt-L,`-L`>>,
 You need:
 
 * https://cmake.org/[CMake] ≥ 3.30.0
-* A {cpp}14 compiler
+* A {cpp}17 compiler
 * http://www.boost.org/[Boost] ≥ 1.70 (only to 🏗)
 * https://json.nlohmann.me/[JSON for Modern C++] (only to 🏗,
   automatically 📥 by CMake if not found locally)
 * https://fmt.dev/[pass:[{fmt}]] (only to 🏗,
   automatically 📥 by CMake if not found locally)
-* Qt 5 (_Core_, _GUI_, _Widgets_, and _Network_ modules)
+* Qt 6 (_Core_, _GUI_, _Widgets_, and _Network_ modules)
 
 .🏗 jome
 ----

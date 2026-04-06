@@ -258,7 +258,7 @@ void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool n
 
     auto mainVbox = new QVBoxLayout;
 
-    mainVbox->setMargin(8);
+    mainVbox->setContentsMargins(8, 8, 8, 8);
     mainVbox->setSpacing(8);
     mainVbox->addWidget(_wFindBox);
     _wEmojiGrid = new QEmojiGridWidget {
@@ -277,7 +277,7 @@ void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool n
     {
         const auto emojisHbox = new QHBoxLayout;
 
-        emojisHbox->setMargin(0);
+        emojisHbox->setContentsMargins(0, 0, 0, 0);
         emojisHbox->setSpacing(8);
         emojisHbox->addWidget(_wEmojiGrid);
         emojisHbox->addWidget(_wCatList);
