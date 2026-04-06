@@ -107,7 +107,8 @@ private:
     void _emojiGraphicsItemHoverEntered(const QEmojiGraphicsItem& item);
     void _emojiGraphicsItemHoverLeaved(const QEmojiGraphicsItem& item);
     void _emojiGraphicsItemClicked(const QEmojiGraphicsItem& item, bool withShift);
-    void _addRoundedRectToScene(QGraphicsScene& gs, qreal y, qreal height);
+    void _addRoundedRectToScene(QGraphicsScene& gs, qreal y, qreal height,
+                                bool isRecent = false);
 
 private slots:
     void _selectedItemFlashTimerTimeout();

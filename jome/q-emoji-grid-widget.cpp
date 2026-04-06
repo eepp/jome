@@ -100,7 +100,8 @@ QGraphicsPixmapItem *QEmojiGridWidget::_createSelectedGraphicsItem()
     return graphicsItem;
 }
 
-void QEmojiGridWidget::_addRoundedRectToScene(QGraphicsScene& gs, const qreal y, const qreal height)
+void QEmojiGridWidget::_addRoundedRectToScene(QGraphicsScene& gs, const qreal y, const qreal height,
+                                              const bool isRecent)
 {
     QPainterPath path;
 
@@ -110,7 +111,13 @@ void QEmojiGridWidget::_addRoundedRectToScene(QGraphicsScene& gs, const qreal y,
 
     item->setPos(_gutter, y);
     item->setPen(Qt::NoPen);
-    item->setBrush(QColor {_darkBg ? "#202020" : "#f8f8f8"});
+
+    if (isRecent) {
+        item->setBrush(QColor {_darkBg ? "#2d1520" : "#ffe3ec"});
+    } else {
+        item->setBrush(QColor {_darkBg ? "#202020" : "#f8f8f8"});
+    }
+
     item->setZValue(-2000.);
 }
 
@@ -144,7 +151,9 @@ void QEmojiGridWidget::rebuild()
                                                             QFont {"Hack, DejaVu Sans Mono, monospace",
                                                                    10, QFont::Bold});
 
-                item->setDefaultTextColor(QColor {_darkBg ? "#f8f8f8" : "#202020"});
+                item->setDefaultTextColor(QColor {
+                    cat->isRecent() ? "#ff3366" : (_darkBg ? "#f8f8f8" : "#202020")
+                });
                 item->setPos(rowFirstEmojiX, y);
             }
 
@@ -154,7 +163,8 @@ void QEmojiGridWidget::rebuild()
         this->_addEmojisToGraphicsScene(cat->emojis(), _allEmojiGraphicsItems,
                                         _allEmojisGraphicsScene, y);
         y += _gutter;
-        this->_addRoundedRectToScene(_allEmojisGraphicsScene, rectBeginY, y - rectBeginY);
+        this->_addRoundedRectToScene(_allEmojisGraphicsScene, rectBeginY, y - rectBeginY,
+                                     cat->isRecent());
         y += _gutter;
     }
 
