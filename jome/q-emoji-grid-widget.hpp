@@ -11,6 +11,7 @@
 #include <QObject>
 #include <QEvent>
 #include <QPixmap>
+#include <QPointF>
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QTimer>
@@ -104,6 +105,8 @@ private:
     void _selectEmojiGraphicsItem(std::optional<unsigned int> index);
     QGraphicsPixmapItem *_createSelectedGraphicsItem();
     void _setGraphicsSceneStyle(QGraphicsScene& gs);
+    void _moveSelectedItemToEmojiItem(QGraphicsPixmapItem& selectedItem,
+                                      const QEmojiGraphicsItem& emojiItem);
     void _emojiGraphicsItemHoverEntered(const QEmojiGraphicsItem& item);
     void _emojiGraphicsItemHoverLeaved(const QEmojiGraphicsItem& item);
     void _emojiGraphicsItemClicked(const QEmojiGraphicsItem& item, bool withShift);
@@ -193,6 +196,10 @@ private:
 
     // true to hide category labels when showing all emojis
     bool _noCatLabels;
+
+    // saved selection rect state during hover
+    std::optional<QPointF> _savedSelectedItemPos;
+    bool _savedSelectedItemVisible = false;
 };
 
 } // namespace jome

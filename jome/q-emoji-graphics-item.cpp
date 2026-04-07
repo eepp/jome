@@ -35,14 +35,12 @@ void QEmojiGraphicsItem::mousePressEvent(QGraphicsSceneMouseEvent * const event)
 
 void QEmojiGraphicsItem::hoverEnterEvent(QGraphicsSceneHoverEvent * const event)
 {
-    this->setOpacity(.5);
     _emojiGridWidget->_emojiGraphicsItemHoverEntered(*this);
     QGraphicsPixmapItem::hoverEnterEvent(event);
 }
 
 void QEmojiGraphicsItem::hoverLeaveEvent(QGraphicsSceneHoverEvent * const event)
 {
-    this->setOpacity(1.);
     _emojiGridWidget->_emojiGraphicsItemHoverLeaved(*this);
     QGraphicsPixmapItem::hoverLeaveEvent(event);
 }

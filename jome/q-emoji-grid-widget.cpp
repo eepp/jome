@@ -216,13 +216,40 @@ void QEmojiGridWidget::showFindResults(const std::vector<const Emoji *>& results
     }
 }
 
+void QEmojiGridWidget::_moveSelectedItemToEmojiItem(QGraphicsPixmapItem& selectedItem,
+                                                    const QEmojiGraphicsItem& emojiItem)
+{
+    selectedItem.setPos(emojiItem.pos().x() - 4., emojiItem.pos().y() - 4.);
+}
+
 void QEmojiGridWidget::_emojiGraphicsItemHoverEntered(const QEmojiGraphicsItem& item)
 {
+    // temporarily move the selection rect to the hovered emoji
+    const auto selectedItem = this->showingAllEmojis() ? _allEmojisGraphicsSceneSelectedItem :
+                                                         _findEmojisGraphicsSceneSelectedItem;
+
+    if (selectedItem && selectedItem->scene()) {
+        _savedSelectedItemPos = selectedItem->pos();
+        _savedSelectedItemVisible = selectedItem->isVisible();
+        this->_moveSelectedItemToEmojiItem(*selectedItem, item);
+        selectedItem->show();
+    }
+
     emit this->emojiHoverEntered(item.emoji());
 }
 
 void QEmojiGridWidget::_emojiGraphicsItemHoverLeaved(const QEmojiGraphicsItem& item)
 {
+    // restore the selection rect to its original position
+    const auto selectedItem = this->showingAllEmojis() ? _allEmojisGraphicsSceneSelectedItem :
+                                                         _findEmojisGraphicsSceneSelectedItem;
+
+    if (selectedItem && selectedItem->scene() && _savedSelectedItemPos) {
+        selectedItem->setPos(*_savedSelectedItemPos);
+        selectedItem->setVisible(_savedSelectedItemVisible);
+        _savedSelectedItemPos = std::nullopt;
+    }
+
     emit this->emojiHoverLeaved(item.emoji());
 }
 
@@ -266,8 +293,7 @@ void QEmojiGridWidget::_selectEmojiGraphicsItem(const std::optional<unsigned int
         _selectedItemFlashTimer->start();
     }
 
-    selectedItem->setPos(emojiGraphicsItem.pos().x() - 4.,
-                         emojiGraphicsItem.pos().y() - 4.);
+    this->_moveSelectedItemToEmojiItem(*selectedItem, emojiGraphicsItem);
 
     if (*index == 0) {
         this->verticalScrollBar()->setValue(0);
