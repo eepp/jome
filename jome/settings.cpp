@@ -6,6 +6,7 @@
  */
 
 #include <QSettings>
+#include <QMainWindow>
 #include <vector>
 #include <functional>
 
@@ -72,6 +73,26 @@ void updateSettings(const EmojiDb& db)
 
     settings.setValue("recent-emojis", emojiList);
     settings.sync();
+}
+
+void saveWindowGeometry(const QMainWindow& window)
+{
+    QSettings settings;
+
+    settings.setValue("window-geometry", window.saveGeometry());
+    settings.sync();
+}
+
+bool restoreWindowGeometry(QMainWindow& window)
+{
+    QSettings settings;
+    const auto geometry = settings.value("window-geometry");
+
+    if (!geometry.canConvert<QByteArray>()) {
+        return false;
+    }
+
+    return window.restoreGeometry(geometry.toByteArray());
 }
 
 } // namespace jome

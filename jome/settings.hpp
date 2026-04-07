@@ -12,6 +12,8 @@
 
 #include "emoji-db.hpp"
 
+class QMainWindow;
+
 namespace jome {
 
 /*
@@ -23,6 +25,18 @@ void updateRecentEmojisFromSettings(EmojiDb& db);
  * Updates the settings from the recent emojis of `db`.
  */
 void updateSettings(const EmojiDb& db);
+
+/*
+ * Saves the geometry of `window` to the settings.
+ */
+void saveWindowGeometry(const QMainWindow& window);
+
+/*
+ * Restores the geometry of `window` from the settings.
+ *
+ * Returns true if geometry was restored, false otherwise.
+ */
+bool restoreWindowGeometry(QMainWindow& window);
 
 } // namespace jome
 

@@ -22,6 +22,7 @@
 #include "q-jome-window.hpp"
 #include "q-cat-list-widget-item.hpp"
 #include "emojipedia.hpp"
+#include "settings.hpp"
 #include "utils.hpp"
 
 namespace jome {
@@ -343,6 +344,7 @@ void QJomeWindow::showEvent(QShowEvent * const event)
     QMainWindow::showEvent(event);
 
     if (!_emojisWidgetBuilt) {
+        restoreWindowGeometry(*this);
         _wEmojiGrid->rebuild();
         _emojisWidgetBuilt = true;
     }
@@ -357,6 +359,12 @@ void QJomeWindow::closeEvent(QCloseEvent * const event)
     event->ignore();
     this->hide();
     emit this->cancelled();
+}
+
+void QJomeWindow::hideEvent(QHideEvent * const event)
+{
+    saveWindowGeometry(*this);
+    QMainWindow::hideEvent(event);
 }
 
 void QJomeWindow::_findEmojis(const QString& cat, const QString& needles)

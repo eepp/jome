@@ -123,6 +123,7 @@ public slots:
 private:
     void closeEvent(QCloseEvent *event) override;
     void showEvent(QShowEvent *event) override;
+    void hideEvent(QHideEvent *event) override;
     void _setMainStyleSheet();
     void _buildUi(bool darkBg, bool noCatList, bool noCatLabels, bool noKwList,
                   std::optional<unsigned int> selectedEmojiFlashPeriod);
