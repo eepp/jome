@@ -559,7 +559,7 @@ void QJomeWindow::_updateInfoLabel(const Emoji * const emoji)
     QString text;
 
     if (emoji) {
-        text = qFmtFormat("<b>{}</b> ", emoji->name().toStdString()) +
+        text = qFmtFormat("<b>{}</b> ", emoji->name().toHtmlEscaped().toStdString()) +
                normInfoLabelText("(") +
                std::invoke([emoji] {
                    QStringList lst;
@@ -732,7 +732,7 @@ void QJomeWindow::_updateKwLabel(const Emoji * const emoji)
         QStringList kws;
 
         for (auto& kw : emoji->keywords()) {
-            kws.append(kw);
+            kws.append(kw.toHtmlEscaped());
         }
 
         kws.sort();
