@@ -148,7 +148,6 @@ void QJomeWindow::_setMainStyleSheet()
         "}"
         "QLineEdit {"
         "  background-color: rgba(0, 0, 0, 0.2);"
-        "  color: #f0f0f0;"
         "  font-weight: bold;"
         "  font-size: 14px;"
         "  border-bottom: 2px solid #ff3366;"
@@ -216,6 +215,16 @@ void QJomeWindow::_buildUi(const bool darkBg, const bool noCatList, const bool n
                            const std::optional<unsigned int> selectedEmojiFlashPeriod)
 {
     _wFindBox = new QLineEdit;
+    _wFindBox->setPlaceholderText("Find emojis");
+
+    {
+        auto palette = _wFindBox->palette();
+
+        palette.setColor(QPalette::Text, QColor {"#f0f0f0"});
+        palette.setColor(QPalette::PlaceholderText, QColor {"#555"});
+        _wFindBox->setPalette(palette);
+    }
+
     QObject::connect(_wFindBox, &QLineEdit::textChanged,
                      this, &QJomeWindow::_searchTextChanged);
 
